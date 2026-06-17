@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use MaDI-Bench, please cite the following work."
+title: "MaDI-Bench: An End-to-End Data Integration Benchmark"
+abstract: >-
+  MaDI-Bench is the first public benchmark for the end-to-end integration of
+  relational tables, covering schema matching, value normalization, entity
+  blocking, entity matching, and data fusion. It provides 20 integration tasks
+  across five domains (Games, Companies, Music, Products, Scientific Papers)
+  with ground truth for every step and for the integrated output, plus a
+  variant-generation method for deriving easy, medium, and hard variants.
+type: software
+authors:
+  - family-names: Steiner
+    given-names: Aaron
+    affiliation: "Data and Web Science Group, University of Mannheim"
+  - family-names: Peeters
+    given-names: Ralph
+    affiliation: "Data and Web Science Group, University of Mannheim"
+  - family-names: Bizer
+    given-names: Christian
+    affiliation: "Data and Web Science Group, University of Mannheim"
+repository-code: "https://github.com/wbsg-uni-mannheim/MaDI-Bench"
+url: "https://wbsg-uni-mannheim.github.io/MaDI-Bench/"
+keywords:
+  - data integration
+  - schema matching
+  - entity matching
+  - data fusion
+  - end-to-end evaluation
+  - large language models
+# TODO: add publication venue, year, and DOI once available, and a
+# preferred-citation block pointing to the paper.

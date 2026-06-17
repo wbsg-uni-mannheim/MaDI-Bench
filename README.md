@@ -4,7 +4,7 @@
 Data and Web Science Group, University of Mannheim, Germany
 *\*These authors contributed equally to this work.*
 
-🌐 **Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ · 🧰 **Pipeline framework (PyDI):** https://github.com/wbsg-uni-mannheim/PyDI
+🌐 **Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ · **Pipeline framework (PyDI):** https://github.com/wbsg-uni-mannheim/PyDI
 
 ---
 
@@ -46,7 +46,7 @@ The tasks build on and are evaluated with **[PyDI](https://github.com/wbsg-uni-m
 | [`knobs/`](knobs/) | Specification of the eight difficulty knobs used to generate the task variants. |
 | [`difficulty_dimensions.md`](difficulty_dimensions.md) | The underlying per-stage difficulty dimensions the knobs operationalize. |
 | [`usecases_synthetic/`](usecases_synthetic/) | Code, configuration, and tests for the variant-generation pipeline. |
-| [`website/`](website/) | Source of the project website (deployed via GitHub Pages). |
+
 
 ### `use cases/` — the benchmark tasks
 
@@ -83,17 +83,6 @@ The human-engineered pipeline (P1) is the silver reference; its outputs are stor
 
 ---
 
-## The three reference pipelines
-
-MaDI-Bench is validated with three pipelines that span the design space from hand-built to fully automated:
-
-1. **Human-engineered pipeline (P1)** — domain-specific workflows built on PyDI by data engineers. Scores 100% on the base tasks and serves as the *silver* reference.
-2. **Best-of-breed pipeline (P2)** — chains the strongest available method per step (e.g., COMA and Magneto for schema matching; Ditto and Magellan for entity matching; truth-discovery and PyDI heuristics for fusion), selected on the validation set.
-3. **LLM-based pipeline (P3)** — an LLM configures each integration step, building its own machine-labeled training data, so the pipeline scales while staying automatic.
-
-The validation reports both **step-level metrics** (schema-matching F1; blocking pair completeness and reduction ratio; entity-matching F1; fusion accuracy) and **end-to-end metrics** organized along three quality dimensions (Coverage, Consistency, Correctness) and three reference levels (reference-free, silver, ground-truth).
-
----
 
 ## Getting started
 
@@ -119,11 +108,3 @@ If you use MaDI-Bench, please cite:
   note      = {Data and Web Science Group, University of Mannheim}
 }
 ```
-
-> **Note:** publication venue and full citation details to be added once available.
-
----
-
-## License
-
-See [`LICENSE`](LICENSE). <!-- TODO: add a license file (see notes below). -->

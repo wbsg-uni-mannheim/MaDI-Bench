@@ -1,8 +1,8 @@
 # usecases_synthetic
 
-Workspace for the synthetic use-case generation prototype (see [../plan.md](../plan.md)).
+Code, configuration, and tests for the variant-generation pipeline that derives the *easy*, *medium*, and *hard* task variants from the base tasks.
 
-All code and data artifacts created during the prototyping stage live here, kept separate from the existing real use cases in [../usecases/](../usecases/) and [../usecases_new/](../usecases_new/).
+The generated tasks themselves live in [../use cases/](../use%20cases/); this directory holds the generator that produces them. See [OVERVIEW.md](OVERVIEW.md) for the design.
 
 **Start here:** [PIPELINE.md](PIPELINE.md) — the ordered, status-tracked list of scripts to run in sequence. Read that file first; it's the runbook and the source of truth for what's built vs. planned.
 
@@ -21,7 +21,7 @@ usecases_synthetic/
 
 ## Scope (v1 prototype)
 
-- **Domains covered:** companies, games, music. Movies (single-source pool) and products (no pool yet) are deferred per [../plan.md](../plan.md) Step 4.
+- **Domains covered:** companies, games, music, products, and papers.
 - **Pool sources (reuse only, no new matching runs):**
   1. **PLM-based pipeline** — `automatic-data-integration/scripts/output/<domain>_0302/entity_resolution/matching/`
   2. **Human-baseline pipeline** — `usecases_new/output/<domain>/cluster_analysis/detailed_cluster_info.json`

@@ -1,8 +1,8 @@
 # Knobs — Difficulty Generation Spec
 
-Final deliverable from the brainstorm in [../plan_brainstorm.md](../plan_brainstorm.md). Each knob is its own card; this README is the index and the verification artifacts (back-mapping, canonical order, ablations cross-link).
+Specification of the eight difficulty knobs used to derive the *easy*, *medium*, and *hard* task variants from the base tasks. Each knob is its own card; this README is the index and the verification artifacts (back-mapping, canonical order, ablations cross-link).
 
-For the brainstorm history, per-step notes, measured baselines, and rationale, see [../summary_perstep_brainstorm.md](../summary_perstep_brainstorm.md). For the underlying dimensions, see [../difficulty_dimensions.md](../difficulty_dimensions.md). For cross-cutting policies that apply to every knob (committee mechanism, profile model, provenance schema, test-set treatment), see [cross_cutting.md](cross_cutting.md).
+For the underlying dimensions, see [../difficulty_dimensions.md](../difficulty_dimensions.md). For cross-cutting policies that apply to every knob (committee mechanism, profile model, provenance schema, test-set treatment), see [cross_cutting.md](cross_cutting.md).
 
 ## Knob index
 

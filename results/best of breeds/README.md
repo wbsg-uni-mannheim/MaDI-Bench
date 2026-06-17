@@ -1,44 +1,25 @@
 # Best-of-Breed Results
 
-This directory contains the best-of-breed pipeline outputs copied from
-`/Users/aaronsteiner/Documents/GitHub/PyDI/pipelines`.
+Outputs of the **best-of-breed pipeline (P2)**, one of the three reference pipelines used to validate MaDI-Bench. At each integration step, P2 runs a committee of competing methods from the literature, scores them on the validation set, and chains the per-step winners into a single pipeline.
 
-Layout:
+## Layout
 
 ```text
 results/best of breeds/<domain>/<variant>/
 ```
 
-Domains: `companies`, `games`, `music`, `papers`, `products`.
-Variants: `baseline`, `easy`, `medium`, `hard`.
+- **Domains:** `companies`, `games`, `music`, `papers`, `products`.
+- **Variants:** `baseline`, `easy`, `medium`, `hard` (`baseline` is the base task).
 
-Each run directory preserves the PyDI result artifacts for that domain and
-variant, including the fused output table (`fused.csv`), predicted
-correspondences (`correspondences.csv`), per-stage scores
-(`per_stage_summary.csv`), stage-selection JSON files, the run `summary.md`,
-and available end-to-end panel outputs.
+Each run directory keeps the result artifacts for that domain and variant:
 
-Source run mapping:
-
-| Domain | Variant | PyDI source run |
-|---|---|---|
-| companies | baseline | `pipelines/companies/run_slurm_baseline_255975` |
-| companies | easy | `pipelines/companies/run_slurm_easy_255976` |
-| companies | medium | `pipelines/companies/run_slurm_medium_255977` |
-| companies | hard | `pipelines/companies/run_slurm_hard_255978` |
-| games | baseline | `pipelines/games/run_slurm_baseline_255979` |
-| games | easy | `pipelines/games/run_slurm_easy_255980` |
-| games | medium | `pipelines/games/run_slurm_medium_255981` |
-| games | hard | `pipelines/games/run_slurm_hard_255982` |
-| music | baseline | `pipelines/music/run_slurm_baseline_255983` |
-| music | easy | `pipelines/music/run_slurm_easy_255984` |
-| music | medium | `pipelines/music/run_slurm_medium_255985` |
-| music | hard | `pipelines/music/run_slurm_hard_255986` |
-| papers | baseline | `pipelines/papers/run_slurm_baseline_256772` |
-| papers | easy | `pipelines/papers/run_slurm_easy_256553` |
-| papers | medium | `pipelines/papers/run_slurm_medium_256543` |
-| papers | hard | `pipelines/papers/run_slurm_hard_256557` |
-| products | baseline | `pipelines/products/run_slurm_baseline_255987` |
-| products | easy | `pipelines/products/run_slurm_easy_255988` |
-| products | medium | `pipelines/products/run_slurm_medium_255989` |
-| products | hard | `pipelines/products/run_slurm_hard_255990` |
+| Artifact | Contents |
+|---|---|
+| `fused.csv` | The fused output table. |
+| `correspondences.csv` | Predicted schema correspondences. |
+| `per_stage_summary.csv` | Per-stage scores for the run. |
+| `stage_*_selection.json` | The method selected at each pipeline stage (schema matching, normalization, blocking, matching, refinement, fusion). |
+| `effective_committees/` | The committee members evaluated per stage. |
+| `em_per_pair_test_f1.json` | Entity-matching F1 on the test pairs. |
+| `e2e_panel/`, `e2e_panel_sr/`, `e2e_panel_fixed/` | End-to-end metric panels (reference-free, silver-reference, and ground-truth views). |
+| `summary.md` | Human-readable run summary. |
