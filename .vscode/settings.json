@@ -1,0 +1,29 @@
+{
+  "files.exclude": {
+    "**/results/**": true,
+    "**/use cases/**/base/output/**": true,
+    "**/use cases/**/output/provenance/**": true
+  },
+  "git.autofetch": false,
+  "git.autorefresh": false,
+  "files.watcherExclude": {
+    "**/results/**": true,
+    "**/use cases/**/input/data/**": true,
+    "**/use cases/**/base/output/**": true,
+    "**/use cases/**/output/provenance/**": true,
+    "**/*.csv.gz": true,
+    "**/*.jsonl": true,
+    "**/*.log": true,
+    "**/*.ndjson": true
+  },
+  "search.exclude": {
+    "**/results/**": true,
+    "**/use cases/**/input/data/**": true,
+    "**/use cases/**/base/output/**": true,
+    "**/use cases/**/output/provenance/**": true,
+    "**/*.csv.gz": true,
+    "**/*.jsonl": true,
+    "**/*.log": true,
+    "**/*.ndjson": true
+  }
+}
