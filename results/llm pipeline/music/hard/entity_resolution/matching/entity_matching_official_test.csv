@@ -1,0 +1,3 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+discogs,musicbrainz,discogs__musicbrainz,MLBasedMatcher,0.3,0.8246445497630331,0.9720670391061452,0.7160493827160493,775,243,532,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/entitymatching/musicbrainz_2_discogs_test_corner_filled.csv
+lastfm,musicbrainz,lastfm__musicbrainz,RuleBasedMatcher,0.3,0.9357798165137615,0.9732824427480916,0.901060070671378,812,283,529,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/entitymatching/musicbrainz_2_lastfm_test_corner_filled.csv

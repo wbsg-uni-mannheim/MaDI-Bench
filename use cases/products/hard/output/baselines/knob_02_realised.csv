@@ -1,0 +1,2 @@
+level,baseline_ratio,target_ratio,final_ratio,operator,removed,interpolated,interp_attempted,drop_corner_planned,drop_corner_simulated_final_ratio,drop_corner_cap_bound,non_corner_refill_attempts,non_corner_refill_committed,drop_corner_skip_protected,drop_corner_skip_collision_last,drop_corner_skip_isolated,drop_corner_skip_empty_pool,drop_corner_skip_counterproductive
+hard,0.8295,0.8,0.8195121951219512,drop_corner_touching_refilled,13,0,0,13,0.8195121951219512,False,13,13,0,0,0,0,1

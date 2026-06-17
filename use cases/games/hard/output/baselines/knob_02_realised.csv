@@ -1,0 +1,2 @@
+level,baseline_ratio,target_ratio,final_ratio,operator,removed,interpolated,interp_attempted,rejected_contamination_collision_with_real_entity,drop_corner_planned,drop_corner_simulated_final_ratio,drop_corner_cap_bound,non_corner_refill_attempts,non_corner_refill_committed,drop_corner_skip_protected,drop_corner_skip_collision_last,drop_corner_skip_isolated,drop_corner_skip_empty_pool,drop_corner_skip_counterproductive
+hard,0.668,0.8,0.6683391871550427,interpolate_paired_drop,89,89,132,43,0,0.0,False,0,0,0,0,0,0,0

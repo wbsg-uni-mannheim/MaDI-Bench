@@ -1,0 +1,24 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "ESRB": "favour_sources",
+    "criticScore": "favour_sources",
+    "developer": "favour_sources",
+    "genres": "most_complete",
+    "name": "favour_sources",
+    "platform": "favour_sources",
+    "publisher": "most_complete",
+    "releaseYear": "favour_sources",
+    "series": "most_complete",
+    "units_sold_mm": "median",
+    "userScore": "favour_sources"
+  },
+  "strategy_name": "heuristic_stats_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.0,
+    "metacritic": 2.8205173156627517,
+    "sales": 3.0
+  }
+}

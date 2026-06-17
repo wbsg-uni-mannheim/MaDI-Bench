@@ -1,0 +1,3 @@
+entity_id,source,attribute,original_value,attempted_format,reason,knob,level
+metacritic_11701,metacritic,year_published,0001-01-01,iso,roundtrip_parse_fail,5,easy
+metacritic_13260,metacritic,year_published,0001-01-01,iso,roundtrip_parse_fail,5,easy

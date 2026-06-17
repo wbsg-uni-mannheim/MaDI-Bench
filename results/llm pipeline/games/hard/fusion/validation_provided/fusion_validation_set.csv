@@ -1,0 +1,584 @@
+entity_id,dataset_ids,attribute,correct_value,source_values,reasoning
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",name,The Legend of Zelda: Twilight Princess HD,"{""dbpedia"": ""The Legend of Zelda: Twilight Princess"", ""metacritic"": ""The Legend of Zelda: Twilight Princess HD""}",from provided validation set
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",releaseYear,2016-03-04 00:00:00,"{""dbpedia"": ""2006-01-01 00:00:00"", ""metacritic"": ""2016-01-01 00:00:00""}",from provided validation set
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",developer,Nintendo Entertainment Planning and Development,"{""dbpedia"": ""Tantalus Media"", ""metacritic"": ""Tantalus,Tantatus,Nintendo""}",from provided validation set
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",platform,Wii U,"{""metacritic"": ""Wii U""}",from provided validation set
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",criticScore,86.0,"{""metacritic"": 86.0}",from provided validation set
+entity_0,"{""dbpedia"": ""dbpedia_57913"", ""metacritic"": ""metacritic_1593""}",userScore,8.5,"{""metacritic"": 8.6}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",name,Plants vs Zombies: Garden Warfare 2,"{""dbpedia"": ""Plants vs. Zombies: Garden Warfare 2"", ""metacritic"": ""Plants vs Zombies: Garden Warfare 2"", ""sales"": ""Plants vs. Zombies: Garden Warfare 2""}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",releaseYear,2016-02-23 00:00:00,"{""dbpedia"": ""2016-01-01 00:00:00"", ""metacritic"": ""2016-01-01 00:00:00"", ""sales"": ""2016-01-01 00:00:00""}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",developer,PopCap,"{""dbpedia"": ""PopCap Games"", ""metacritic"": ""PopCap"", ""sales"": ""PopCap""}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",publisher,Electronic Arts,"{""sales"": ""Arts""}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",platform,PlayStation 4,"{""metacritic"": ""PlayStation 4"", ""sales"": ""Xbox One""}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",criticScore,81.0,"{""metacritic"": 81.0, ""sales"": 80.0}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",userScore,7.9,"{""metacritic"": 7.9, ""sales"": 8.1}",from provided validation set
+entity_1,"{""dbpedia"": ""dbpedia_51413"", ""metacritic"": ""metacritic_3698"", ""sales"": ""sales_2598""}",ESRB,E10+,"{""sales"": ""E10+""}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",name,Persona 4 Arena Ultimax,"{""dbpedia"": ""Persona 4 Arena Ultimax"", ""metacritic"": ""Persona 4 Arena Ultimax""}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",releaseYear,2014-09-30 00:00:00,"{""dbpedia"": ""2013-01-01 00:00:00"", ""metacritic"": ""2014-01-01 00:00:00""}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",developer,Arc System Works,"{""dbpedia"": ""P-Studio"", ""metacritic"": ""Arc 5ystcm Works""}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",platform,PlayStation 3,"{""dbpedia"": ""PlayStation 3"", ""metacritic"": ""PlayStation 3""}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",criticScore,84.0,"{""metacritic"": 84.0}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",userScore,7.6,"{""metacritic"": 5.2}",from provided validation set
+entity_2,"{""dbpedia"": ""dbpedia_31418"", ""metacritic"": ""metacritic_2046""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",name,Metal Gear Solid 3: Snake Eater,"{""metacritic"": ""Metal Gear Solid 3: Snake Eater"", ""sales"": ""Metal Gear Solid 3: Snake Eater"", ""dbpedia"": ""Metal Gear Solid Snake 3: Eater""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",releaseYear,2004-11-17 00:00:00,"{""metacritic"": ""2004-01-01 00:00:00"", ""dbpedia"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",developer,KCEJ,"{""metacritic"": ""KCEJ"", ""sales"": ""KCEJ""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",publisher,Konami Digital Entertainment,"{""sales"": ""Konami Digital Entertainment""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",criticScore,91.0,"{""metacritic"": 91.0, ""sales"": ""9 1""}",from provided validation set
+entity_3,"{""metacritic"": ""metacritic_238"", ""sales"": ""sales_185"", ""dbpedia"": ""dbpedia_46911""}",userScore,9.3,"{""metacritic"": 8.1, ""sales"": 9.3}",from provided validation set
+entity_4,"{""metacritic"": ""metacritic_1695""}",name,Final Fantasy X-2,"{""metacritic"": ""Final Fantasy X-2""}",from provided validation set
+entity_4,"{""metacritic"": ""metacritic_1695""}",releaseYear,2003-11-18 00:00:00,"{""metacritic"": ""2003-01-01 00:00:00""}",from provided validation set
+entity_4,"{""metacritic"": ""metacritic_1695""}",developer,SquareSoft,"{""metacritic"": ""UNCHANGED""}",from provided validation set
+entity_4,"{""metacritic"": ""metacritic_1695""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2""}",from provided validation set
+entity_4,"{""metacritic"": ""metacritic_1695""}",criticScore,85.0,"{""metacritic"": 85.0}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",name,NBA 2K12,"{""metacritic"": ""NBA 2K12""}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",releaseYear,2011-10-04 00:00:00,"{""metacritic"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",developer,Visual Concepts,"{""metacritic"": ""Visual Concepts Entertainment""}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",platform,PlayStation 3,"{""metacritic"": ""PlayStation 3""}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",criticScore,90.0,"{""metacritic"": 90.0}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",userScore,6.8,"{""metacritic"": 6.8}",from provided validation set
+entity_5,"{""metacritic"": ""metacritic_336""}",ESRB,T,"{""metacritic"": ""E""}",from provided validation set
+entity_6,"{""metacritic"": ""metacritic_474""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360""}",from provided validation set
+entity_6,"{""metacritic"": ""metacritic_474""}",criticScore,90.0,"{""metacritic"": 90.0}",from provided validation set
+entity_6,"{""metacritic"": ""metacritic_474""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",name,Colin McRae Rally 04,"{""sales"": ""Colin McRae Rally 04"", ""metacritic"": ""Colin McRae Rally 04"", ""dbpedia"": ""Colin McRae Rally 04""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",releaseYear,2004-03-02 00:00:00,"{""sales"": ""2004-01-01 00:00:00"", ""metacritic"": ""2004-01-01 00:00:00"", ""dbpedia"": ""2003-01-01 00:00:00""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",developer,Codemasters,"{""sales"": ""Codemasters"", ""metacritic"": ""Codemasters"", ""dbpedia"": ""Codemasters""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",publisher,Codemasters,"{""sales"": ""CodemastErs""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",platform,Xbox,"{""sales"": ""Xbox"", ""metacritic"": ""Xbox"", ""dbpedia"": ""Xbox""}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",criticScore,84.0,"{""sales"": 84.0, ""metacritic"": 84.0}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",userScore,8.2,"{""metacritic"": 8.3}",from provided validation set
+entity_7,"{""sales"": ""sales_5812"", ""metacritic"": ""metacritic_2186"", ""dbpedia"": ""dbpedia_31269""}",ESRB,E,"{""sales"": ""E"", ""metacritic"": ""E""}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",name,Need for Speed: Nitro,"{""metacritic"": ""Need for Speed: Nitro"", ""dbpedia"": ""Need for Speed: Nitro""}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",releaseYear,2009-11-03 00:00:00,"{""metacritic"": ""2009-01-01 00:00:00"", ""dbpedia"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",developer,Firebrand Games,"{""metacritic"": ""Firebrand Games"", ""dbpedia"": ""Firebrand Vqjes""}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS"", ""dbpedia"": ""Nintendo DS""}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",criticScore,71.0,"{""metacritic"": 70.0}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",userScore,7.0,"{""metacritic"": 6.4}",from provided validation set
+entity_8,"{""metacritic"": ""metacritic_11984"", ""dbpedia"": ""dbpedia_42715""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",name,Sacred Citadel,"{""metacritic"": ""Sacred Citadel"", ""dbpedia"": ""Sacred Citadel""}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",releaseYear,2013-04-17 00:00:00,"{""metacritic"": ""2013-01-01 00:00:00"", ""dbpedia"": ""2013-01-01 00:00:00""}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",developer,Southend Interactive,"{""metacritic"": ""Southend Interactive"", ""dbpedia"": ""Southend Interactive""}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""dbpedia"": ""Windows PC""}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",criticScore,65.0,"{""metacritic"": 63.0}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",userScore,6.5,"{""metacritic"": 6.3}",from provided validation set
+entity_9,"{""metacritic"": ""metacritic_15609"", ""dbpedia"": ""dbpedia_7460""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",name,Insurgency: Sandstorm,"{""dbpedia"": ""Insurgency: Sandstorm"", ""metacritic"": ""Insurgency: Sandstorm""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",releaseYear,2021-12-12 00:00:00,"{""dbpedia"": ""2018-01-01 00:00:00"", ""metacritic"": ""2021-01-01 00:00:00""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",developer,New World Interactive,"{""dbpedia"": ""Interactive World New"", ""metacritic"": ""New World Interactive Studio""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",platform,Xbox One,"{""dbpedia"": ""Windows PC"", ""metacritic"": ""Xbox One""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",criticScore,80.0,"{""metacritic"": 83.0}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",userScore,7.7,"{""metacritic"": ""y.t""}",from provided validation set
+entity_10,"{""dbpedia"": ""dbpedia_64182"", ""metacritic"": ""metacritic_2669""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",name,Carmen Sandiego: The Secret of the Stolen Drums,"{""sales"": ""Carmen Sandiego: The Secret of the Stolen Drums"", ""metacritic"": ""Carmen Stolen The Secret of the Sandiego: Drums"", ""dbpedia"": ""Carmen Sandiego: The Secret of the Stolen Drums""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",releaseYear,2004-09-01 00:00:00,"{""sales"": ""2004-01-01 00:00:00"", ""metacritic"": ""2004-01-01 00:00:00"", ""dbpedia"": ""2004-01-01 00:00:00""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",developer,Artificial Mind and Movement,"{""sales"": ""Artificial Mind and Movement"", ""metacritic"": ""Artificial Mind and MoveMent"", ""dbpedia"": ""Artificial Mind and Movement""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",publisher,BAM! Entertainment,"{""sales"": ""BAM! Entertainment""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",platform,Nintendo GameCube,"{""sales"": ""Nintendo GameCube"", ""metacritic"": ""Nintendo GameCube"", ""dbpedia"": ""Nintendo GameCube""}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",criticScore,58.0,"{""sales"": 57.0, ""metacritic"": 57.0}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",userScore,6.3,"{""metacritic"": 7.8}",from provided validation set
+entity_11,"{""sales"": ""sales_7547"", ""metacritic"": ""metacritic_17762"", ""dbpedia"": ""dbpedia_55590""}",ESRB,E,"{""sales"": ""E"", ""metacritic"": ""E""}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",name,Goat Simulator,"{""metacritic"": ""Goat Simulator"", ""dbpedia"": ""Goat Simulator""}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",releaseYear,2014-04-01 00:00:00,"{""metacritic"": ""2015-01-01 00:00:00"", ""dbpedia"": ""2014-01-01 00:00:00""}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",developer,Coffee Stain Studios,"{""metacritic"": ""Coffee Stain Studios"", ""dbpedia"": ""Coffee Stain Studios""}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",platform,PlayStation 4,"{""metacritic"": ""PlayStation 4"", ""dbpedia"": ""Nintendo Switch""}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",criticScore,61.0,"{""metacritic"": 58.0}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",userScore,5.9,"{""metacritic"": 5.0}",from provided validation set
+entity_12,"{""metacritic"": ""metacritic_17545"", ""dbpedia"": ""dbpedia_23235""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",name,X-Men Legends II: Rise of Apocalypse,"{""metacritic"": ""X-Men Legends II: Rise of Apocalypse"", ""dbpedia"": ""X-Men Legends II: Rise of Apocalypse"", ""sales"": ""X-Men Legends II: Rise of Apocalypse""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",releaseYear,2005-09-20 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00"", ""dbpedia"": ""2005-01-01 00:00:00"", ""sales"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",developer,Raven Software,"{""metacritic"": ""Vicarious Visions""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",publisher,Activision,"{""sales"": ""Activision""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)"", ""dbpedia"": ""PlayStation Portable (PSP)"", ""sales"": ""Nintendo GameCube""}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",criticScore,82.0,"{""metacritic"": 84.0, ""sales"": 82.0}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",userScore,7.8,"{""metacritic"": 8.4, ""sales"": 6.2}",from provided validation set
+entity_13,"{""metacritic"": ""metacritic_2331"", ""dbpedia"": ""dbpedia_36513"", ""sales"": ""sales_3963""}",ESRB,T,"{""metacritic"": ""T"", ""sales"": ""T""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",name,Sherlock Holmes: The Devil's Daughter,"{""sales"": ""Sherlock Holmes: The Devil's Daughter"", ""metacritic"": ""Sherlock Holmes: The Devil's Daughter"", ""dbpedia"": ""Sherlock Holmes: The Devil's Daughter""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",releaseYear,2016-06-10 00:00:00,"{""sales"": ""2016-01-01 00:00:00"", ""metacritic"": ""2016-01-01 00:00:00"", ""dbpedia"": ""2016-01-01 00:00:00""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",developer,Frogwares,"{""sales"": ""Frogwares"", ""metacritic"": ""Frogwares"", ""dbpedia"": ""Frogwares""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",publisher,Frogwares,"{""sales"": ""Bigben Interactive""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",platform,Xbox One,"{""metacritic"": ""Xbox One"", ""dbpedia"": ""Nintendo Switch""}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",criticScore,71.0,"{""metacritic"": 66.0}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",userScore,7.2,"{""sales"": ""u.e"", ""metacritic"": 6.4}",from provided validation set
+entity_14,"{""sales"": ""sales_7793"", ""metacritic"": ""metacritic_14495"", ""dbpedia"": ""dbpedia_53223""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",name,Battles of Prince of Persia,"{""metacritic"": ""Battles of Prince of Persia"", ""dbpedia"": ""Prince of Persia: The Two Thrones""}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",releaseYear,2005-12-06 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00"", ""dbpedia"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",developer,Ubisoft Entertainment,"{""metacritic"": ""UBI Montreal"", ""dbpedia"": ""Ubisoft Montreal""}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",criticScore,64.0,"{""metacritic"": 64.0}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",userScore,6.6,"{""metacritic"": 7.8}",from provided validation set
+entity_15,"{""metacritic"": ""metacritic_15092"", ""dbpedia"": ""dbpedia_963""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",name,Delta Force: Black Hawk Down,"{""metacritic"": ""Delta Force: Black Hawk Down"", ""dbpedia"": ""Delta Force: Black Hawk Down"", ""sales"": ""Delta Force: Black Hawk Down""}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",releaseYear,2005-07-27 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00"", ""sales"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",developer,Climax Group,"{""metacritic"": ""Climax Group"", ""dbpedia"": ""NovaLogic"", ""sales"": ""Climax Group""}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",platform,Xbox,"{""metacritic"": ""Xbox"", ""sales"": ""Xbox""}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",criticScore,72.0,"{""metacritic"": 61.0, ""sales"": 61.0}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",userScore,7.0,"{""metacritic"": 6.6}",from provided validation set
+entity_16,"{""metacritic"": ""metacritic_16614"", ""dbpedia"": ""dbpedia_62228"", ""sales"": ""sales_3296""}",ESRB,T,"{""metacritic"": ""T"", ""sales"": ""T""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",name,Arcana Heart 3,"{""metacritic"": ""Arcana Heart 3"", ""dbpedia"": ""Arcana Heart 3""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",releaseYear,2011-01-13 00:00:00,"{""metacritic"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",developer,Examu,"{""metacritic"": ""Examu"", ""dbpedia"": ""Examu""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",platform,PlayStation 3,"{""metacritic"": ""PlayStation 3"", ""dbpedia"": ""PlayStation 3""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",criticScore,71.0,"{""metacritic"": ""73.O""}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",userScore,6.9,"{""metacritic"": 6.8}",from provided validation set
+entity_17,"{""metacritic"": ""metacritic_9859"", ""dbpedia"": ""dbpedia_23399""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",name,Silent Hunter III,"{""metacritic"": ""Silent Hunter III""}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",releaseYear,2005-03-15 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",developer,Ubisoft,"{""metacritic"": ""Ubisoft""}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",platform,Windows PC,"{""metacritic"": ""Windows PC""}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",userScore,8.5,"{""metacritic"": 7.8}",from provided validation set
+entity_18,"{""metacritic"": ""metacritic_423""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",name,South Park: The Fractured But Whole,"{""metacritic"": ""South Park: The Fractured But Whole""}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",releaseYear,2017-10-17 00:00:00,"{""metacritic"": ""2017-01-01 00:00:00""}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",developer,Ubisoft San Francisco,"{""metacritic"": ""Ubisoft San Francisco""}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",platform,Xbox One,"{""metacritic"": ""Xbox One""}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",criticScore,81.0,"{""metacritic"": 84.0}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",userScore,7.9,"{""metacritic"": 8.1}",from provided validation set
+entity_19,"{""metacritic"": ""metacritic_2068""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",name,Dig Dug: Digging Strike,"{""metacritic"": ""Dig Dug: Digging Strike""}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",releaseYear,2005-09-08 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",developer,Bullets,"{""metacritic"": ""Bullets""}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",criticScore,60.0,"{""metacritic"": 65.0}",from provided validation set
+entity_20,"{""metacritic"": ""metacritic_14981""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",name,Destiny 2: Shadowkeep,"{""metacritic"": ""Destiny 2: Shadowkeep"", ""dbpedia"": ""Destiny 2: Shadowkeep""}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",releaseYear,2019-10-01 00:00:00,"{""metacritic"": ""2019-01-01 00:00:00"", ""dbpedia"": ""2019-01-01 00:00:00""}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",developer,Bungie,"{""metacritic"": ""Njngi3"", ""dbpedia"": ""Bungie""}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",platform,PlayStation 4,"{""metacritic"": ""PlayStation 4"", ""dbpedia"": ""PlayStation 4""}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",criticScore,79.0,"{""metacritic"": 73.0}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",userScore,7.7,"{""metacritic"": 5.7}",from provided validation set
+entity_21,"{""metacritic"": ""metacritic_9873"", ""dbpedia"": ""dbpedia_20631""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",name,NHL 2K8,"{""metacritic"": ""NHL 2K8""}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",releaseYear,2007-09-11 00:00:00,"{""metacritic"": ""2007-01-01 00:00:00""}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",developer,Kush Games,"{""metacritic"": ""Kush Games""}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",platform,PlayStation 3,"{""metacritic"": ""PlayStation 3""}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",criticScore,71.0,"{""metacritic"": 74.0}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",userScore,7.0,"{""metacritic"": 7.0}",from provided validation set
+entity_22,"{""metacritic"": ""metacritic_9351""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",name,Transformers: Fall of Cybertron,"{""dbpedia"": ""Transformers: Fall of Cybertron"", ""sales"": ""Transformers: Fall of Cybertron"", ""metacritic"": ""Transformers: Fall of Cybertron""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",releaseYear,2012-08-21 00:00:00,"{""dbpedia"": ""2012-01-01 00:00:00"", ""metacritic"": ""2012-01-01 00:00:00""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",developer,High Moon Studios,"{""dbpedia"": ""High Moon Studios"", ""sales"": ""High Moon Studios, Mercenary Technologies"", ""metacritic"": ""High Moon""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",publisher,Activision,"{""sales"": ""Activision""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",platform,Xbox 360,"{""dbpedia"": ""Xbox 360"", ""sales"": ""Windows PC"", ""metacritic"": ""Xbox 360""}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",criticScore,80.0,"{""sales"": 78.0, ""metacritic"": 79.0}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",userScore,8.0,"{""sales"": 7.9, ""metacritic"": 8.4}",from provided validation set
+entity_23,"{""dbpedia"": ""dbpedia_2375"", ""sales"": ""sales_7860"", ""metacritic"": ""metacritic_5275""}",ESRB,T,"{""sales"": ""T"", ""metacritic"": ""T""}",from provided validation set
+entity_24,"{""metacritic"": ""metacritic_8007""}",name,Resident Evil Archives: Resident Evil,"{""metacritic"": ""Resident Evil Archives: Resident Evil""}",from provided validation set
+entity_24,"{""metacritic"": ""metacritic_8007""}",releaseYear,2008-06-26 00:00:00,"{""metacritic"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_24,"{""metacritic"": ""metacritic_8007""}",developer,Capcom,"{""metacritic"": ""CaPcom""}",from provided validation set
+entity_24,"{""metacritic"": ""metacritic_8007""}",platform,Wii,"{""metacritic"": ""Wii""}",from provided validation set
+entity_24,"{""metacritic"": ""metacritic_8007""}",criticScore,86.0,"{""metacritic"": 76.0}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",name,Night at the Museum: Battle of the Smithsonian,"{""metacritic"": ""Night at the Museum: Battle of the Smithsonian""}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",releaseYear,2009-05-13 00:00:00,"{""metacritic"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",developer,"Pipeworks Software, Inc.","{""metacritic"": ""Pipeworks Software, Inc.""}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",platform,Wii,"{""metacritic"": ""Wii""}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",criticScore,57.0,"{""metacritic"": 54.0}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",userScore,6.1,"{""metacritic"": 6.8}",from provided validation set
+entity_25,"{""metacritic"": ""metacritic_18448""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",name,Pimp My Ride,"{""dbpedia"": ""Pimp My Ride (video game)"", ""metacritic"": ""Pimp My Ride""}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",releaseYear,2006-12-05 00:00:00,"{""dbpedia"": ""2007-01-01 00:00:00"", ""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",developer,Eutechnyx,"{""dbpedia"": ""Eutechnyx"", ""metacritic"": ""Eutechnyx""}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",platform,Xbox 360,"{""dbpedia"": ""PlayStation Portable (PSP)"", ""metacritic"": ""Xbox 360""}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",criticScore,38.0,"{""metacritic"": 38.0}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",userScore,5.2,"{""metacritic"": 3.9}",from provided validation set
+entity_26,"{""dbpedia"": ""dbpedia_59845"", ""metacritic"": ""metacritic_20093""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",name,Mega Man Anniversary Collection,"{""metacritic"": ""Mega Man Anniversary Collection"", ""dbpedia"": ""Mega Man Anniversary Collection"", ""sales"": ""Mega Man Anniversary Collection""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",releaseYear,2004-06-22 00:00:00,"{""metacritic"": ""2004-01-01 00:00:00"", ""dbpedia"": ""2004-01-01 00:00:00"", ""sales"": ""2004-01-01 00:00:00""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",developer,Atomic Planet Entertainment,"{""metacritic"": ""Atomic Planet Entertainment"", ""dbpedia"": ""Atomic Planet Entertainment"", ""sales"": ""Atomic Planet Entertainment""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",publisher,Capcom,"{""sales"": ""Capcom""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",platform,Nintendo GameCube,"{""metacritic"": ""Nintendo GameCube"", ""dbpedia"": ""Nintendo GameCube"", ""sales"": ""Nintendo GameCube""}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",criticScore,82.0,"{""metacritic"": 81.0}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",userScore,7.6,"{""metacritic"": 7.5, ""sales"": 8.8}",from provided validation set
+entity_27,"{""metacritic"": ""metacritic_3893"", ""dbpedia"": ""dbpedia_48711"", ""sales"": ""sales_2879""}",ESRB,E,"{""metacritic"": ""E"", ""sales"": ""E""}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",name,Burnout 2: Point of Impact,"{""metacritic"": ""Burnout 2: Point of Impact""}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",releaseYear,2002-10-01 00:00:00,"{""metacritic"": ""2002-01-01 00:00:00""}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",developer,Criterion Games,"{""metacritic"": ""Crifeejon Games""}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2""}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",criticScore,88.0,"{""metacritic"": 86.0}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",userScore,8.2,"{""metacritic"": 8.3}",from provided validation set
+entity_28,"{""metacritic"": ""metacritic_1478""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",name,Metroid Prime Trilogy,"{""metacritic"": ""Metroid Prime Trilogy"", ""dbpedia"": ""Metroid Prime""}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",releaseYear,2009-08-24 00:00:00,"{""metacritic"": ""2009-01-01 00:00:00"", ""dbpedia"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",developer,Retro Studios,"{""metacritic"": ""Rctro 5tudios"", ""dbpedia"": ""Retro Studios""}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",platform,Wii,"{""metacritic"": ""Wii""}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",criticScore,90.0,"{""metacritic"": 91.0}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",userScore,8.9,"{""metacritic"": 9.2}",from provided validation set
+entity_29,"{""metacritic"": ""metacritic_230"", ""dbpedia"": ""dbpedia_15283""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",name,Gretzky NHL,"{""metacritic"": ""Gretzky NHL""}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",releaseYear,2005-01-01 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",developer,Page 44 Studios,"{""metacritic"": ""Page 44 Studios""}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)""}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",criticScore,59.0,"{""metacritic"": 61.0}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",userScore,6.2,"{""metacritic"": 7.4}",from provided validation set
+entity_30,"{""metacritic"": ""metacritic_16466""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",name,Dead Space 2,"{""sales"": ""Dead Space 2"", ""metacritic"": ""Dead Space 2"", ""dbpedia"": ""Dead Space 2""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",releaseYear,2011-01-25 00:00:00,"{""sales"": ""2011-01-01 00:00:00"", ""metacritic"": ""2011-01-01 00:00:00"", ""dbpedia"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",developer,Visceral Games,"{""sales"": ""Visceral Games"", ""metacritic"": ""Visceral Games"", ""dbpedia"": ""Visceral Games""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",publisher,Electronic Arts,"{""sales"": ""Electronic Arts""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",platform,PlayStation 3,"{""sales"": ""PlayStation 3"", ""metacritic"": ""PlayStation 3"", ""dbpedia"": ""PlayStation 3""}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",criticScore,88.0,"{""sales"": 89.0, ""metacritic"": 89.0}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",userScore,8.5,"{""sales"": 8.4, ""metacritic"": 8.6}",from provided validation set
+entity_31,"{""sales"": ""sales_879"", ""metacritic"": ""metacritic_658"", ""dbpedia"": ""dbpedia_38072""}",ESRB,M,"{""sales"": ""M"", ""metacritic"": ""M""}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",name,NFL Street 2,"{""dbpedia"": ""NFL Street 2"", ""metacritic"": ""NFL Street 2""}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",releaseYear,2004-12-22 00:00:00,"{""dbpedia"": ""2004-01-01 00:00:00"", ""metacritic"": ""2004-01-01 00:00:00""}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",developer,EA Tiburon,"{""dbpedia"": ""EA Tiburon"", ""metacritic"": ""EA Tiburon""}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",platform,Nintendo GameCube,"{""dbpedia"": ""PlayStation Portable (PSP)"", ""metacritic"": ""Nintendo GameCube""}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",criticScore,77.0,"{""metacritic"": 77.0}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",userScore,7.6,"{""metacritic"": 7.6}",from provided validation set
+entity_32,"{""dbpedia"": ""dbpedia_54380"", ""metacritic"": ""metacritic_6562""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",name,Murdered: Soul Suspect,"{""dbpedia"": ""Murdered: Soul Suspect"", ""sales"": ""Murdered: Soul Suspect"", ""metacritic"": ""Murdered: Soul Suspect""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",releaseYear,2014-06-03 00:00:00,"{""dbpedia"": ""2014-01-01 00:00:00"", ""metacritic"": ""2014-01-01 00:00:00""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",developer,Airtight Games,"{""dbpedia"": ""Airtight Games"", ""sales"": ""Air-tight Games"", ""metacritic"": ""Airtight Games""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",publisher,Square Enix,"{""sales"": ""Square Enix""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",platform,PlayStation 4,"{""dbpedia"": ""Xbox One"", ""sales"": ""Xbox One"", ""metacritic"": ""PlayStation 4""}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",criticScore,60.0,"{""sales"": 51.0, ""metacritic"": 59.0}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",userScore,6.7,"{""metacritic"": 7.0}",from provided validation set
+entity_33,"{""dbpedia"": ""dbpedia_39830"", ""sales"": ""sales_4887"", ""metacritic"": ""metacritic_17264""}",ESRB,M,"{""sales"": ""M"", ""metacritic"": ""M""}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",name,Star Wars: Starfighter,"{""metacritic"": ""Star Wars: Starfighter"", ""dbpedia"": ""Star Wars: Starfighter""}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",releaseYear,2001-01-21 00:00:00,"{""metacritic"": ""2001-01-01 00:00:00"", ""dbpedia"": ""2001-01-01 00:00:00""}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",developer,LucasArts,"{""metacritic"": ""LucasArts""}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2"", ""dbpedia"": ""PlayStation 2""}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",criticScore,77.0,"{""metacritic"": 84.0}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",userScore,7.4,"{""metacritic"": 8.4}",from provided validation set
+entity_34,"{""metacritic"": ""metacritic_2081"", ""dbpedia"": ""dbpedia_775""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",name,Terminator 3: The Redemption,"{""metacritic"": ""Terminator 3: The Redemption""}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",releaseYear,2004-09-09 00:00:00,"{""metacritic"": ""2004-01-01 00:00:00""}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",developer,Paradigm Entertainment,"{""metacritic"": ""Paradigm Entertainment""}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",platform,Nintendo GameCube,"{""metacritic"": ""Nintendo GameCube""}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",criticScore,72.0,"{""metacritic"": 68.0}",from provided validation set
+entity_35,"{""metacritic"": ""metacritic_13257""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",name,Super Monkey Ball: Banana Blitz,"{""metacritic"": ""Super Monkey Ball: Banana Blitz""}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",releaseYear,2006-11-19 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",developer,Sega,"{""metacritic"": ""Sega""}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",platform,Wii,"{""metacritic"": ""Wii""}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",criticScore,73.0,"{""metacritic"": 74.0}",from provided validation set
+entity_36,"{""metacritic"": ""metacritic_8948""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",name,MySims Kingdom,"{""dbpedia"": ""MySims Kingdom"", ""sales"": ""MySims Kingdom"", ""metacritic"": ""MySims Kingdom""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",releaseYear,2008-10-28 00:00:00,"{""metacritic"": ""2008-01-01 00:00:00""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",developer,Electronic Arts,"{""dbpedia"": ""EA Redwood Shores"", ""sales"": ""EA Redwood Shores"", ""metacritic"": ""TOSE""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",publisher,Electronic Arts,"{""sales"": ""Electronic Arts""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",platform,Nintendo DS,"{""dbpedia"": ""Wii"", ""sales"": ""Wii"", ""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",criticScore,74.0,"{""sales"": 76.0}",from provided validation set
+entity_37,"{""dbpedia"": ""dbpedia_25488"", ""sales"": ""sales_813"", ""metacritic"": ""metacritic_17482""}",ESRB,E,"{""sales"": ""E""}",from provided validation set
+entity_38,"{""metacritic"": ""metacritic_14606""}",name,Unchained Blades,"{""metacritic"": ""Unchained Blades""}",from provided validation set
+entity_38,"{""metacritic"": ""metacritic_14606""}",releaseYear,2011-07-14 00:00:00,"{""metacritic"": ""2013-01-01 00:00:00""}",from provided validation set
+entity_38,"{""metacritic"": ""metacritic_14606""}",developer,FuRyu,"{""metacritic"": ""FuRyu""}",from provided validation set
+entity_38,"{""metacritic"": ""metacritic_14606""}",criticScore,64.0,"{""metacritic"": 65.0}",from provided validation set
+entity_38,"{""metacritic"": ""metacritic_14606""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",name,Crash Bandicoot 4: It's About Time,"{""metacritic"": ""Crash Bandicoot 4: It's About Time"", ""dbpedia"": ""Crash Bandicoot 4: It's About Time""}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",releaseYear,2021-03-21 00:00:00,"{""metacritic"": ""2021-01-01 00:00:00"", ""dbpedia"": ""2020-01-01 00:00:00""}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",developer,Toys for Bob,"{""metacritic"": ""Toys for B"", ""dbpedia"": ""Toys for Bob""}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",platform,PlayStation 5,"{""metacritic"": ""PlayStation 5"", ""dbpedia"": ""Xbox Series X""}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",criticScore,85.0,"{""metacritic"": 86.0}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",userScore,8.3,"{""metacritic"": 7.9}",from provided validation set
+entity_39,"{""metacritic"": ""metacritic_1307"", ""dbpedia"": ""dbpedia_2560""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",name,Transformers: Rise of the Dark Spark,"{""metacritic"": ""Transformers: Rise of the Dark Spark"", ""dbpedia"": ""Transformers: Rise of the Dark Spark""}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",releaseYear,2014-06-24 00:00:00,"{""metacritic"": ""2014-01-01 00:00:00"", ""dbpedia"": ""2014-01-01 00:00:00""}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",developer,Edge of Reality,"{""metacritic"": ""Edge of Reality"", ""dbpedia"": ""Edge of Reality""}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""dbpedia"": ""Nintendo 3DS""}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",criticScore,50.0,"{""metacritic"": 44.0}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",userScore,6.7,"{""metacritic"": 5.3}",from provided validation set
+entity_40,"{""metacritic"": ""metacritic_19736"", ""dbpedia"": ""dbpedia_38007""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",name,Sonic Unleashed,"{""metacritic"": ""Sonic Unleashed""}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",releaseYear,2008-11-28 00:00:00,"{""metacritic"": ""2008-01-01 00:00:00""}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",developer,Sonic Team,"{""metacritic"": ""Sonic Team""}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",platform,Wii,"{""metacritic"": ""Wii""}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",criticScore,64.0,"{""metacritic"": 66.0}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",userScore,6.6,"{""metacritic"": 7.3}",from provided validation set
+entity_41,"{""metacritic"": ""metacritic_14509""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",name,Madden NFL 2004,"{""dbpedia"": ""Madden NFL 2004"", ""metacritic"": ""Madden NFL 2004"", ""sales"": ""Madden NFL 2004""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",releaseYear,2003-08-11 00:00:00,"{""metacritic"": ""2003-01-01 00:00:00"", ""sales"": ""2003-01-01 00:00:00""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",developer,EA Tiburon,"{""dbpedia"": ""EA Tiburon"", ""metacritic"": ""EA Tiburon""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",publisher,Electronic Arts,"{""sales"": ""Electronic Arts""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",platform,PlayStation 2,"{""dbpedia"": ""Nintendo GameCube"", ""metacritic"": ""PlayStation 2"", ""sales"": ""Nintendo GameCube""}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",criticScore,90.0,"{""metacritic"": 94.0, ""sales"": 94.0}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",userScore,8.1,"{""metacritic"": 8.2}",from provided validation set
+entity_42,"{""dbpedia"": ""dbpedia_18452"", ""metacritic"": ""metacritic_20420"", ""sales"": ""sales_2473""}",ESRB,E,"{""metacritic"": ""E"", ""sales"": ""E""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",name,Shantae and the Pirate's Curse,"{""dbpedia"": ""Shantae and the Pirate's Curse"", ""metacritic"": ""Shantae and the Pirate's Curse"", ""sales"": ""Shantae and the Pirate's Curse""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",releaseYear,2014-10-22 00:00:00,"{""dbpedia"": ""2014-01-01 00:00:00"", ""metacritic"": ""2014-01-01 00:00:00"", ""sales"": ""2015-01-01 00:00:00""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",developer,WayForward,"{""dbpedia"": ""WayForward"", ""metacritic"": ""WayForward"", ""sales"": ""WoyForword""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",publisher,"WayForward,Intergrow","{""sales"": ""Rising Star Games""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",platform,Nintendo 3DS,"{""dbpedia"": ""Wii U"", ""metacritic"": ""Nintendo 3DS"", ""sales"": ""Nintendo 3DS""}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",criticScore,87.0,"{""metacritic"": 82.0, ""sales"": 82.0}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",userScore,8.5,"{""metacritic"": 8.6, ""sales"": 8.5}",from provided validation set
+entity_43,"{""dbpedia"": ""dbpedia_34642"", ""metacritic"": ""metacritic_3279"", ""sales"": ""sales_7038""}",ESRB,E10+,"{""metacritic"": ""E10+"", ""sales"": ""E10+""}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",name,Rock of Ages 3: Make & Break,"{""dbpedia"": ""Rock of Ages 3: Make & Break"", ""metacritic"": ""Rock of Ages 3: Make & Break""}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",releaseYear,2020-07-20 00:00:00,"{""dbpedia"": ""2020-01-01 00:00:00"", ""metacritic"": ""2020-01-01 00:00:00""}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",developer,ACE Team,"{""dbpedia"": ""ACE Team"", ""metacritic"": ""ACE Team""}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",platform,PlayStation 4,"{""dbpedia"": ""Nintendo Switch"", ""metacritic"": ""PlayStation 4""}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",criticScore,72.0,"{""metacritic"": 65.0}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",userScore,7.2,"{""metacritic"": 5.5}",from provided validation set
+entity_44,"{""dbpedia"": ""dbpedia_4812"", ""metacritic"": ""metacritic_14859""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",name,Darksiders II,"{""metacritic"": ""Darksiders 2""}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",releaseYear,2012-08-14 00:00:00,"{""metacritic"": ""2012-01-01 00:00:00""}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",developer,Vigil Games,"{""metacritic"": ""Vigil Games""}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",platform,PlayStation 3,"{""metacritic"": ""PlayStation 3""}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",criticScore,84.0,"{""metacritic"": 84.0}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",userScore,8.2,"{""metacritic"": 7.5}",from provided validation set
+entity_45,"{""metacritic"": ""metacritic_2354""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",name,Ace Combat X: Skies of Deception,"{""metacritic"": ""Ace Combat X: Skies of Deception""}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",releaseYear,2006-10-24 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",developer,Project Aces,"{""metacritic"": ""Project Aces""}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)""}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",criticScore,77.0,"{""metacritic"": 75.0}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",userScore,7.6,"{""metacritic"": 8.3}",from provided validation set
+entity_46,"{""metacritic"": ""metacritic_8251""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",name,State of Emergency,"{""dbpedia"": ""SOS (1993 video game)"", ""metacritic"": ""State of Emergency""}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",releaseYear,2002-02-12 00:00:00,"{""dbpedia"": ""1993-01-01 00:00:00"", ""metacritic"": ""2002-01-01 00:00:00""}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",developer,VIS Entertainment,"{""dbpedia"": ""Entertainment"", ""metacritic"": ""VIS Entertainment""}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2""}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",criticScore,65.0,"{""metacritic"": 71.0}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",userScore,6.0,"{""metacritic"": 6.1}",from provided validation set
+entity_47,"{""dbpedia"": ""dbpedia_12303"", ""metacritic"": ""metacritic_11331""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",name,Warriors Orochi 2,"{""metacritic"": ""Warriors Orochi 2""}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",releaseYear,2008-04-03 00:00:00,"{""metacritic"": ""2008-01-01 00:00:00""}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",developer,Omega Force,"{""metacritic"": ""Omega Force""}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2""}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",criticScore,49.0,"{""metacritic"": 52.0}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",userScore,5.8,"{""metacritic"": 8.9}",from provided validation set
+entity_48,"{""metacritic"": ""metacritic_18845""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",name,World Soccer Winning Eleven 9,"{""metacritic"": ""World Soccer Winning Eleven 9""}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",releaseYear,2005-08-04 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",developer,Konami Digital Entertainment,"{""metacritic"": ""KCET""}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",platform,Xbox,"{""metacritic"": ""Xbox""}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",criticScore,90.0,"{""metacritic"": 89.0}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",userScore,8.3,"{""metacritic"": 7.1}",from provided validation set
+entity_49,"{""metacritic"": ""metacritic_592""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",name,Little Nightmares,"{""metacritic"": ""Little Nightmares"", ""dbpedia"": ""Little Nightmares""}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",releaseYear,2017-04-28 00:00:00,"{""metacritic"": ""2017-01-01 00:00:00""}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",developer,Tarsier Studios,"{""metacritic"": ""Tarsicr 5tudios"", ""dbpedia"": ""Tarsier Studios""}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",platform,Xbox One,"{""metacritic"": ""Xbox One"", ""dbpedia"": ""Xbox One""}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",criticScore,78.0,"{""metacritic"": 83.0}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",userScore,7.8,"{""metacritic"": 8.0}",from provided validation set
+entity_50,"{""metacritic"": ""metacritic_2900"", ""dbpedia"": ""dbpedia_14477""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",name,Gotham City Impostors,"{""metacritic"": ""Gotham City Impostors""}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",releaseYear,2012-02-07 00:00:00,"{""metacritic"": ""2012-01-01 00:00:00""}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",developer,Monolith Productions,"{""metacritic"": ""Monolith Productions""}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360""}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",criticScore,72.0,"{""metacritic"": 71.0}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",userScore,7.2,"{""metacritic"": 7.1}",from provided validation set
+entity_51,"{""metacritic"": ""metacritic_11573""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",name,Broken Sword: The Shadow of the Templars,"{""dbpedia"": ""Broken Sword: The Shadow of the Templars"", ""metacritic"": ""Broken Sword: The Shadow of the Templars""}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",releaseYear,2002-03-17 00:00:00,"{""dbpedia"": ""1998-01-01 00:00:00"", ""metacritic"": ""2002-01-01 00:00:00""}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",developer,Revolution Software,"{""dbpedia"": ""Revolution Software"", ""metacritic"": ""Revolution Software""}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",platform,Game Boy Advance,"{""dbpedia"": ""Game Boy Advance"", ""metacritic"": ""Game Boy Advance""}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",criticScore,80.0,"{""metacritic"": 80.0}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",userScore,8.1,"{""metacritic"": 8.1}",from provided validation set
+entity_52,"{""dbpedia"": ""dbpedia_51536"", ""metacritic"": ""metacritic_4478""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",name,DeathSpank,"{""dbpedia"": ""DeathSpank"", ""metacritic"": ""DeathSpank""}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",releaseYear,2010-07-13 00:00:00,"{""dbpedia"": ""2010-01-01 00:00:00"", ""metacritic"": ""2010-01-01 00:00:00""}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",developer,Hothead Games,"{""dbpedia"": ""Games Hothead"", ""metacritic"": ""Hothead Games""}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",platform,Xbox 360,"{""dbpedia"": ""macOS"", ""metacritic"": ""Xbox 360""}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",criticScore,77.0,"{""metacritic"": 79.0}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",userScore,7.6,"{""metacritic"": 8.2}",from provided validation set
+entity_53,"{""dbpedia"": ""dbpedia_16120"", ""metacritic"": ""metacritic_5330""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",name,Sins of a Solar Empire,"{""metacritic"": ""Sins of a Solar Empire""}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",releaseYear,2008-02-04 00:00:00,"{""metacritic"": ""2008-01-01 00:00:00""}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",developer,Ironclad Games,"{""metacritic"": ""Ironclad Games""}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",platform,Windows PC,"{""metacritic"": ""Windows PC""}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",criticScore,85.0,"{""metacritic"": 87.0}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",userScore,8.4,"{""metacritic"": 8.3}",from provided validation set
+entity_54,"{""metacritic"": ""metacritic_1031""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",name,Resistance: Fall of Man,"{""sales"": ""Resistance: Fall of Man"", ""dbpedia"": ""Resistance: Fall of Man"", ""metacritic"": ""Resistance: Fall of Man""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",releaseYear,2006-11-11 00:00:00,"{""dbpedia"": ""2006-01-01 00:00:00"", ""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",developer,Insomniac Games,"{""sales"": ""Insomniac Games"", ""dbpedia"": ""Insomniac Games"", ""metacritic"": ""Insomniac Games""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",publisher,Sony Computer Entertainment,"{""sales"": ""Sony Computer Entertainment Inc.""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",platform,PlayStation 3,"{""sales"": ""PlayStation 3"", ""dbpedia"": ""PlayStation 3"", ""metacritic"": ""PlayStation 3""}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",criticScore,85.0,"{""sales"": 86.0, ""metacritic"": 86.0}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",userScore,8.2,"{""sales"": 8.1, ""metacritic"": 8.0}",from provided validation set
+entity_55,"{""sales"": ""sales_179"", ""dbpedia"": ""dbpedia_35107"", ""metacritic"": ""metacritic_1313""}",ESRB,M,"{""sales"": ""M"", ""metacritic"": ""M""}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",name,The Unfinished Swan,"{""dbpedia"": ""The Unfinished Swan"", ""metacritic"": ""The Unfinished Swan""}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",releaseYear,2012-10-23 00:00:00,"{""dbpedia"": ""2012-01-01 00:00:00"", ""metacritic"": ""2012-01-01 00:00:00""}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",developer,Giant Sparrow,"{""dbpedia"": ""Giant Sparrow"", ""metacritic"": ""Giant Spar""}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",platform,PlayStation 3,"{""dbpedia"": ""Windows PC"", ""metacritic"": ""PlayStation""}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",criticScore,79.0,"{""metacritic"": 79.0}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",userScore,8.1,"{""metacritic"": 8.1}",from provided validation set
+entity_56,"{""dbpedia"": ""dbpedia_44671"", ""metacritic"": ""metacritic_5338""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",name,Senran Kagura 2: Deep Crimson,"{""metacritic"": ""Senran Kagura 2: Deep Crimson""}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",releaseYear,2015-07-08 00:00:00,"{""metacritic"": ""2015-01-01 00:00:00""}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",developer,Tamsoft,"{""metacritic"": ""Tamsoft""}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",platform,Nintendo 3DS,"{""metacritic"": ""Nintendo 3DS""}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",criticScore,59.0,"{""metacritic"": 58.0}",from provided validation set
+entity_57,"{""metacritic"": ""metacritic_17509""}",userScore,6.5,"{""metacritic"": 6.6}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",name,Turok: Dinosaur Hunter,"{""metacritic"": ""Turok: Dinosaur Hunter"", ""dbpedia"": ""Turok: Dinosaur Hunter""}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",releaseYear,1997-02-28 00:00:00,"{""metacritic"": ""1997-01-01 00:00:00""}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",developer,Iguana Entertainment,"{""metacritic"": ""Iguana Entertainment"", ""dbpedia"": ""Iguana Entertainment""}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",platform,Nintendo 64,"{""metacritic"": ""Nintendo 64"", ""dbpedia"": ""macOS""}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",criticScore,83.0,"{""metacritic"": 85.0}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",userScore,7.8,"{""metacritic"": 8.2}",from provided validation set
+entity_58,"{""metacritic"": ""metacritic_1947"", ""dbpedia"": ""dbpedia_52091""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_59,"{""dbpedia"": ""dbpedia_1948"", ""metacritic"": ""metacritic_9855""}",name,DiRT 2,"{""dbpedia"": ""Need for Speed: Undercover"", ""metacritic"": ""DiRT 2""}",from provided validation set
+entity_59,"{""dbpedia"": ""dbpedia_1948"", ""metacritic"": ""metacritic_9855""}",releaseYear,2007-06-15 00:00:00,"{""dbpedia"": ""2008-01-01 00:00:00"", ""metacritic"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_59,"{""dbpedia"": ""dbpedia_1948"", ""metacritic"": ""metacritic_9855""}",developer,Codemasters,"{""dbpedia"": ""Firebrand Games"", ""metacritic"": ""Firebrand Games""}",from provided validation set
+entity_59,"{""dbpedia"": ""dbpedia_1948"", ""metacritic"": ""metacritic_9855""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_59,"{""dbpedia"": ""dbpedia_1948"", ""metacritic"": ""metacritic_9855""}",criticScore,84.0,"{""metacritic"": 73.0}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",name,Mega Man X: Command Mission,"{""metacritic"": ""Mega Man X: Command Mission""}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",releaseYear,2004-07-29 00:00:00,"{""metacritic"": ""2004-01-01 00:00:00""}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",developer,Capcom,"{""metacritic"": ""Capcom""}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",platform,Nintendo GameCube,"{""metacritic"": ""Nintendo GameCube""}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",criticScore,67.0,"{""metacritic"": 67.0}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",userScore,6.5,"{""metacritic"": 6.5}",from provided validation set
+entity_60,"{""metacritic"": ""metacritic_13962""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",name,Knights of Honor,"{""metacritic"": ""Knights of Honor""}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",releaseYear,2005-10-01 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",platform,Windows PC,"{""metacritic"": ""Windows PC""}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",criticScore,79.0,"{""metacritic"": 77.0}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",userScore,7.7,"{""metacritic"": 8.9}",from provided validation set
+entity_61,"{""metacritic"": ""metacritic_6976""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",name,Dead Rising 2,"{""sales"": ""Dead Rising 2"", ""dbpedia"": ""Dead Rising 2"", ""metacritic"": ""Dead Rising 2""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",releaseYear,2010-09-24 00:00:00,"{""sales"": ""2010-01-01 00:00:00"", ""dbpedia"": ""2016-01-01 00:00:00"", ""metacritic"": ""2010-01-01 00:00:00""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",developer,Blue Castle Games,"{""sales"": ""Blue Castle Games"", ""dbpedia"": ""Blue Castle Games"", ""metacritic"": ""Blue Castle Games""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",publisher,Capcom,"{""sales"": ""Capcom""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",platform,Windows PC,"{""sales"": ""PlayStation 3"", ""dbpedia"": ""PlayStation 3"", ""metacritic"": ""Windows PC""}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",criticScore,80.0,"{""sales"": 80.0, ""metacritic"": 78.0}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",userScore,7.8,"{""sales"": 6.7}",from provided validation set
+entity_62,"{""sales"": ""sales_918"", ""dbpedia"": ""dbpedia_38457"", ""metacritic"": ""metacritic_5949""}",ESRB,M,"{""sales"": ""M"", ""metacritic"": ""M""}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",name,Grow Home,"{""metacritic"": ""Grow Home""}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",releaseYear,2015-09-01 00:00:00,"{""metacritic"": ""2015-01-01 00:00:00""}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",developer,Ubisoft Reflections,"{""metacritic"": ""Ubisoft Reflecti""}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",platform,PlayStation 4,"{""metacritic"": ""PlayStation 4""}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",criticScore,77.0,"{""metacritic"": 74.0}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",userScore,7.5,"{""metacritic"": 6.2}",from provided validation set
+entity_63,"{""metacritic"": ""metacritic_9178""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",name,Dave Mirra Freestyle BMX 2,"{""metacritic"": ""Dave Mirra Freestyle BMX 2""}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",releaseYear,2001-11-18 00:00:00,"{""metacritic"": ""2001-01-01 00:00:00""}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",developer,"Z-Axis, Ltd.","{""metacritic"": ""Z-Axis, L""}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",platform,Nintendo GameCube,"{""metacritic"": ""Nintendo GameCube""}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",criticScore,76.0,"{""metacritic"": 78.0}",from provided validation set
+entity_64,"{""metacritic"": ""metacritic_6542""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_65,"{""metacritic"": ""metacritic_13378"", ""dbpedia"": ""dbpedia_15538""}",name,Break 'Em All,"{""metacritic"": ""Break 'Em All""}",from provided validation set
+entity_65,"{""metacritic"": ""metacritic_13378"", ""dbpedia"": ""dbpedia_15538""}",releaseYear,2005-10-27 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00"", ""dbpedia"": ""2007-01-01 00:00:00""}",from provided validation set
+entity_65,"{""metacritic"": ""metacritic_13378"", ""dbpedia"": ""dbpedia_15538""}",developer,Warashi,"{""metacritic"": ""Warashi"", ""dbpedia"": ""Warashi""}",from provided validation set
+entity_65,"{""metacritic"": ""metacritic_13378"", ""dbpedia"": ""dbpedia_15538""}",platform,Nintendo DS,"{""dbpedia"": ""Arcade Cabinet""}",from provided validation set
+entity_65,"{""metacritic"": ""metacritic_13378"", ""dbpedia"": ""dbpedia_15538""}",criticScore,62.0,"{""metacritic"": 68.0}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",name,ModNation Racers,"{""metacritic"": ""ModNation Racers"", ""sales"": ""ModNation Racers"", ""dbpedia"": ""ModNation Racers""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",releaseYear,2010-05-25 00:00:00,"{""metacritic"": ""2010-01-01 00:00:00"", ""dbpedia"": ""2010-01-01 00:00:00""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",developer,SCEA San Diego Studios,"{""metacritic"": ""SCEA San Diego Studios"", ""sales"": ""SCEA\u2019s San Diego Studios"", ""dbpedia"": ""San Diego Studio""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",publisher,Sony Computer Entertainment,"{""sales"": ""Sony Computer Entertainment""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)"", ""sales"": ""PlayStation Portable (PSP)"", ""dbpedia"": ""PlayStation Portable (PSP)""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",criticScore,81.0,"{""metacritic"": 73.0, ""sales"": ""8e""}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",userScore,7.9,"{""metacritic"": 7.6, ""sales"": 7.7}",from provided validation set
+entity_66,"{""metacritic"": ""metacritic_10085"", ""sales"": ""sales_2406"", ""dbpedia"": ""dbpedia_21268""}",ESRB,E,"{""metacritic"": ""E"", ""sales"": ""E""}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",name,Conan Exiles,"{""dbpedia"": ""Conan Exiles"", ""metacritic"": ""Conan Exiles""}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",releaseYear,2018-01-30 00:00:00,"{""dbpedia"": ""2018-01-01 00:00:00"", ""metacritic"": ""2018-01-01 00:00:00""}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",developer,Funcom,"{""dbpedia"": ""F7mdom"", ""metacritic"": ""FuncOm""}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",platform,Xbox One,"{""dbpedia"": ""Xbox One"", ""metacritic"": ""Xbox One""}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",criticScore,70.0,"{""metacritic"": 64.0}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",userScore,6.9,"{""metacritic"": 5.3}",from provided validation set
+entity_67,"{""dbpedia"": ""dbpedia_5067"", ""metacritic"": ""metacritic_15141""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",name,Army of Two: The Devil's Cartel,"{""metacritic"": ""Army of Two: The Devil's Cartel"", ""dbpedia"": ""Army of Two: The Devil's Cartel""}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",releaseYear,2013-03-26 00:00:00,"{""metacritic"": ""2013-01-01 00:00:00"", ""dbpedia"": ""2013-01-01 00:00:00""}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",developer,Visceral Games,"{""metacritic"": ""Visceral Games"", ""dbpedia"": ""VisCeral Games""}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""dbpedia"": ""Xbox 360""}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",criticScore,51.0,"{""metacritic"": 54.0}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",userScore,5.8,"{""metacritic"": 6.3}",from provided validation set
+entity_68,"{""metacritic"": ""metacritic_18458"", ""dbpedia"": ""dbpedia_31934""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",name,Crackdown 2,"{""metacritic"": ""Crackdown 2""}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",releaseYear,2010-07-06 00:00:00,"{""metacritic"": ""2010-01-01 00:00:00""}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",developer,Ruffian Games,"{""metacritic"": ""Ruffian Games""}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360""}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",criticScore,69.0,"{""metacritic"": 70.0}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",userScore,6.9,"{""metacritic"": 6.1}",from provided validation set
+entity_69,"{""metacritic"": ""metacritic_11680""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",name,Over the Hedge,"{""metacritic"": ""DreamWorks Over the Hedge""}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",releaseYear,2006-05-09 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",developer,Edge of Reality,"{""metacritic"": ""Vicarious Visions""}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",userScore,6.2,"{""metacritic"": 6.5}",from provided validation set
+entity_70,"{""metacritic"": ""metacritic_11373""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",name,Pirates: Duels on the High Seas,"{""metacritic"": ""Pirates: Duels on the High Seas""}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",releaseYear,2009-05-14 00:00:00,"{""metacritic"": ""2009-01-01 00:00:00""}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",developer,Oxygen Interactive,"{""metacritic"": ""Oxygen Interactive""}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",criticScore,43.0,"{""metacritic"": 50.0}",from provided validation set
+entity_71,"{""metacritic"": ""metacritic_19089""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",name,BlazBlue: Continuum Shift,"{""metacritic"": ""BlazBlue: Continuum Shift"", ""dbpedia"": ""BlazBlue: Continuum Shift""}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",releaseYear,2010-07-27 00:00:00,"{""metacritic"": ""2010-01-01 00:00:00"", ""dbpedia"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",developer,Arc System Works,"{""metacritic"": ""Arc System Works"", ""dbpedia"": ""Arx System Worla""}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""dbpedia"": ""Xbox 360""}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",criticScore,84.0,"{""metacritic"": 85.0}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",userScore,7.9,"{""metacritic"": 8.7}",from provided validation set
+entity_72,"{""metacritic"": ""metacritic_1704"", ""dbpedia"": ""dbpedia_7668""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",name,Magic: The Gathering - Duels of the Planeswalkers 2012,"{""metacritic"": ""Magic: The Gathering - Duels of the Planeswalkers 2012"", ""dbpedia"": ""Magic: The Gathering \u2013 Duels of the Planeswalkers 2012""}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",releaseYear,2011-06-15 00:00:00,"{""metacritic"": ""2011-01-01 00:00:00"", ""dbpedia"": ""2011-01-01 00:00:00""}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",developer,Stainless Games,"{""metacritic"": ""Games"", ""dbpedia"": ""Stainless""}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""dbpedia"": ""Xbox 360""}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",criticScore,76.0,"{""metacritic"": 75.0}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",userScore,7.5,"{""metacritic"": 7.9}",from provided validation set
+entity_73,"{""metacritic"": ""metacritic_8351"", ""dbpedia"": ""dbpedia_9851""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",name,Serious Sam: The First Encounter,"{""metacritic"": ""Serious Sam: The First Encounter"", ""dbpedia"": ""Serious Sam: The First Encounter""}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",releaseYear,2001-03-21 00:00:00,"{""metacritic"": ""2001-01-01 00:00:00"", ""dbpedia"": ""2017-01-01 00:00:00""}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",developer,Croteam,"{""metacritic"": ""Crot eam"", ""dbpedia"": ""Croteam""}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",platform,Windows PC,"{""metacritic"": ""Windows PC"", ""dbpedia"": ""Windows PC""}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",criticScore,83.0,"{""metacritic"": 87.0}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",userScore,7.9,"{""metacritic"": 8.4}",from provided validation set
+entity_74,"{""metacritic"": ""metacritic_1147"", ""dbpedia"": ""dbpedia_23275""}",ESRB,M,"{""metacritic"": ""M""}",from provided validation set
+entity_75,"{""metacritic"": ""metacritic_20463"", ""dbpedia"": ""dbpedia_40981""}",name,Metal Gear Solid 2: Sons of Liberty,"{""metacritic"": ""Metal Gear Solid 2: Sons of Liberty"", ""dbpedia"": ""Metal Gear Solid 2: Sons of Liberty""}",from provided validation set
+entity_75,"{""metacritic"": ""metacritic_20463"", ""dbpedia"": ""dbpedia_40981""}",releaseYear,2001-11-12 00:00:00,"{""metacritic"": ""2001-01-01 00:00:00"", ""dbpedia"": ""2002-01-01 00:00:00""}",from provided validation set
+entity_75,"{""metacritic"": ""metacritic_20463"", ""dbpedia"": ""dbpedia_40981""}",developer,Konami Digital Entertainment,"{""metacritic"": ""KCEJ"", ""dbpedia"": ""Konami Computer Entertainment Japan""}",from provided validation set
+entity_75,"{""metacritic"": ""metacritic_20463"", ""dbpedia"": ""dbpedia_40981""}",platform,PlayStation 2,"{""metacritic"": ""PlayStation 2"", ""dbpedia"": ""PlayStation 2""}",from provided validation set
+entity_75,"{""metacritic"": ""metacritic_20463"", ""dbpedia"": ""dbpedia_40981""}",criticScore,94.0,"{""metacritic"": 96.0}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",name,Wakeboarding Unleashed Featuring Shaun Murray,"{""dbpedia"": ""Wakeboarding Unleashed Featuring Shaun Murray"", ""metacritic"": ""Wakeboarding Unleashed Featuring Shaun Murray""}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",developer,Shaba Games,"{""metacritic"": ""Shaba Games""}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",platform,Xbox,"{""dbpedia"": ""Xbox"", ""metacritic"": ""Xbox""}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",criticScore,79.0,"{""metacritic"": 80.0}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",userScore,7.9,"{""metacritic"": 7.4}",from provided validation set
+entity_76,"{""dbpedia"": ""dbpedia_16183"", ""metacritic"": ""metacritic_4551""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",name,Superman Returns,"{""metacritic"": ""Superman Returns"", ""dbpedia"": ""Superman Returns: Fortress of Solitude""}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",releaseYear,2006-12-20 00:00:00,"{""metacritic"": ""2006-01-01 00:00:00"", ""dbpedia"": ""2006-01-01 00:00:00""}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",developer,Santa Cruz Games,"{""metacritic"": ""EA Tiburon"", ""dbpedia"": ""Santa Cruz Games""}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS"", ""dbpedia"": ""Game Boy Advance""}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",criticScore,34.0,"{""metacritic"": 33.0}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",userScore,4.8,"{""metacritic"": 3.8}",from provided validation set
+entity_77,"{""metacritic"": ""metacritic_20267"", ""dbpedia"": ""dbpedia_35160""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",name,Final Fantasy Explorers,"{""dbpedia"": ""Final Fantasy Explorers"", ""metacritic"": ""Final Fantasy Explorer's"", ""sales"": ""Final Fantasy Explorers""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",releaseYear,2014-12-18 00:00:00,"{""dbpedia"": ""2014-01-01 00:00:00"", ""metacritic"": ""2016-01-01 00:00:00"", ""sales"": ""2014-01-01 00:00:00""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",developer,Racjin,"{""dbpedia"": ""Racjin"", ""metacritic"": ""Racjin"", ""sales"": ""Racjin""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",publisher,Square Enix,"{""sales"": ""Enix Square""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",platform,Nintendo 3DS,"{""dbpedia"": ""Nintendo 3DS"", ""metacritic"": ""Nintendo 3DS"", ""sales"": ""Nintendo 3DS""}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",criticScore,64.0,"{""metacritic"": 69.0}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",userScore,6.6,"{""metacritic"": 8.4, ""sales"": 7.0}",from provided validation set
+entity_78,"{""dbpedia"": ""dbpedia_12871"", ""metacritic"": ""metacritic_12357"", ""sales"": ""sales_2360""}",ESRB,E10+,"{""metacritic"": ""E10+"", ""sales"": ""E10+""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",name,Tomb Raider: Anniversary,"{""metacritic"": ""Tomb Raider: Anniversary"", ""sales"": ""Tomb Raider: Anniversary"", ""dbpedia"": ""Tomb Raider: Anniversary""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",releaseYear,2007-10-23 00:00:00,"{""metacritic"": ""2007-01-01 00:00:00"", ""sales"": ""2007-01-01 00:00:00"", ""dbpedia"": ""2008-01-01 00:00:00""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",developer,"Crystal Dynamics,Buzz Monkey Software","{""metacritic"": ""Crystal Dynamics"", ""sales"": ""Nixxes Software"", ""dbpedia"": ""Crystal Dynamics""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",publisher,"Feral Interactive,Eidos Interactive,Square Enix,Crystal Dynamics","{""sales"": ""Eidos Interactive""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360"", ""sales"": ""Windows PC"", ""dbpedia"": ""Xbox 360""}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",criticScore,82.0,"{""metacritic"": 77.0, ""sales"": 83.0}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",userScore,8.0,"{""metacritic"": 8.4, ""sales"": 8.1}",from provided validation set
+entity_79,"{""metacritic"": ""metacritic_6862"", ""sales"": ""sales_7224"", ""dbpedia"": ""dbpedia_29718""}",ESRB,T,"{""metacritic"": ""T"", ""sales"": ""T""}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",name,Tales of the World: Radiant Mythology,"{""metacritic"": ""Tales of the World: Radiant Mythology""}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",releaseYear,2006-12-21 00:00:00,"{""metacritic"": ""2007-01-01 00:00:00""}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",developer,Alfa System,"{""metacritic"": ""Alfa System""}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)""}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",criticScore,79.0,"{""metacritic"": 66.0}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",userScore,7.5,"{""metacritic"": 7.5}",from provided validation set
+entity_80,"{""metacritic"": ""metacritic_14137""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",name,Unchained Blades,"{""metacritic"": ""Unchained Blades""}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",releaseYear,2011-07-14 00:00:00,"{""metacritic"": ""2012-01-01 00:00:00""}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",developer,ART,"{""metacritic"": ""FuRyu""}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",platform,PlayStation Portable (PSP),"{""metacritic"": ""PlayStation Portable (PSP)""}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",criticScore,64.0,"{""metacritic"": 61.0}",from provided validation set
+entity_81,"{""metacritic"": ""metacritic_16460""}",ESRB,T,"{""metacritic"": ""T""}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",name,Disney Alice in Wonderland,"{""metacritic"": ""Disney Alice in Wonderland""}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",developer,Étranges Libellules S.A.,"{""metacritic"": ""Etranges Libellules""}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",platform,Nintendo DS,"{""metacritic"": ""Nintendo DS""}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",criticScore,78.0,"{""metacritic"": 78.0}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",userScore,7.3,"{""metacritic"": 7.9}",from provided validation set
+entity_82,"{""metacritic"": ""metacritic_6454""}",ESRB,E10+,"{""metacritic"": ""E10+""}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",name,Hexic HD,"{""metacritic"": ""Hexic HD""}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",releaseYear,2005-11-22 00:00:00,"{""metacritic"": ""2005-01-01 00:00:00""}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",developer,Carbonated Games,"{""metacritic"": ""Carbonated Games""}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",platform,Xbox 360,"{""metacritic"": ""Xbox 360""}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",criticScore,81.0,"{""metacritic"": 79.0}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",userScore,7.4,"{""metacritic"": 7.0}",from provided validation set
+entity_83,"{""metacritic"": ""metacritic_5368""}",ESRB,E,"{""metacritic"": ""E""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",name,NBA Live 08,"{""dbpedia"": ""NBA Live 08"", ""metacritic"": ""NBA Live 08"", ""sales"": ""NBA Live 08""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",releaseYear,2007-10-01 00:00:00,"{""dbpedia"": ""2007-01-01 00:00:00"", ""sales"": ""2007-01-01 00:00:00""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",developer,EA Canada,"{""dbpedia"": ""HB Studios"", ""metacritic"": ""EA Canada"", ""sales"": ""Electronic Arts Canada""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",publisher,Electronic Arts,"{""sales"": ""Electronic Arts""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",platform,Wii,"{""dbpedia"": ""Wii"", ""metacritic"": ""Wii"", ""sales"": ""Wii""}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",criticScore,46.0,"{""metacritic"": 52.0}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",userScore,5.3,"{""metacritic"": 7.1, ""sales"": 7.1}",from provided validation set
+entity_84,"{""dbpedia"": ""dbpedia_34013"", ""metacritic"": ""metacritic_18876"", ""sales"": ""sales_4898""}",ESRB,E,"{""sales"": ""E""}",from provided validation set

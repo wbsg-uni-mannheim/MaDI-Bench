@@ -1,0 +1,23 @@
+{
+  "dbpedia": {
+    "rows": 46580,
+    "mappings": 7,
+    "columns_normalized": 2,
+    "transformed": 84024,
+    "failed": 7317
+  },
+  "metacritic": {
+    "rows": 20494,
+    "mappings": 9,
+    "columns_normalized": 3,
+    "transformed": 59204,
+    "failed": 2
+  },
+  "sales": {
+    "rows": 7877,
+    "mappings": 10,
+    "columns_normalized": 3,
+    "transformed": 23631,
+    "failed": 0
+  }
+}

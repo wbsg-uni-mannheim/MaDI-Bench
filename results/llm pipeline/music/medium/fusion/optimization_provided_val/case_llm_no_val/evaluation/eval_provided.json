@@ -1,0 +1,39 @@
+{
+  "overall_accuracy": 0.6402116402116402,
+  "total_comparisons": 756,
+  "correct_comparisons": 484,
+  "per_attribute_accuracy": {
+    "label": {
+      "accuracy": 0.7682926829268293,
+      "total": 82
+    },
+    "release-country": {
+      "accuracy": 0.61,
+      "total": 100
+    },
+    "duration": {
+      "accuracy": 0.13131313131313133,
+      "total": 99
+    },
+    "tracks": {
+      "accuracy": 0.03125,
+      "total": 96
+    },
+    "artist": {
+      "accuracy": 0.9081632653061225,
+      "total": 98
+    },
+    "release-date": {
+      "accuracy": 0.9191919191919192,
+      "total": 99
+    },
+    "name": {
+      "accuracy": 0.85,
+      "total": 100
+    },
+    "genre": {
+      "accuracy": 0.9634146341463414,
+      "total": 82
+    }
+  }
+}

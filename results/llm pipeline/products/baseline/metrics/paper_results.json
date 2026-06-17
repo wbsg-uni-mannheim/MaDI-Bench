@@ -1,0 +1,74 @@
+[
+  {
+    "case": "products",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": null,
+    "source_file": "DI-Bench/usecases/products/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "products",
+    "category": "schema_matching",
+    "denominator": 100,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 100,
+    "source_file": "DI-Bench/usecases/products/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "products",
+    "category": "schema_matching",
+    "denominator": 100,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 100,
+    "source_file": "DI-Bench/usecases/products/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "products",
+    "category": "entity_matching",
+    "denominator": 3,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/products/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.6308866421846427
+  },
+  {
+    "case": "products",
+    "category": "fusion",
+    "denominator": 2085,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 910,
+    "source_file": "DI-Bench/runs/products/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.4364508393285372
+  },
+  {
+    "case": "products",
+    "category": "consistency",
+    "denominator": 40901,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 40871,
+    "source_file": "DI-Bench/runs/products/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.9992665216009389
+  }
+]

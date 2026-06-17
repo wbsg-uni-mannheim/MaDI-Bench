@@ -1,0 +1,24 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+,dbpedia,title,title,name,rename_up_from_mapping,"{""baseline_rung"": ""original"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,dbpedia,launch_yr,launch_yr,releaseYear,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,dbpedia,studio,studio,developer,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,dbpedia,system,system,platform,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,dbpedia,genre,genre,genres,rename_up_from_mapping,"{""baseline_rung"": ""original"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,dbpedia,franchise,franchise,series,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,game_title,game_title,name,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,year_published,year_published,releaseYear,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,made_by,made_by,developer,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,console,console,platform,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,press_rating,press_rating,criticScore,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,player_rating,player_rating,userScore,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,metacritic,age_rating,age_rating,ESRB,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,prod_title,prod_title,name,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,launch_dt,launch_dt,releaseYear,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,studio,studio,developer,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,dist,dist,publisher,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,hw,hw,platform,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,genre,genre,genres,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,press_score,press_score,criticScore,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,comm_rating,comm_rating,userScore,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,age_classification,age_classification,ESRB,rename_up_from_mapping,"{""baseline_rung"": ""original"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy
+,sales,units_sold_mm,units_sold_mm,globalSales,rename_up_from_mapping,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""descriptive"", ""oracle"": ""sm_mapping""}",8,easy

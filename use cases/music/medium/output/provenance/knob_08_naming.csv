@@ -1,0 +1,17 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+,lastfm,name,name,t_nm,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,artist,artist,ar_nm,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,release-date,release-date,rd,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,release-country,release-country,cc,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,duration,duration,dur_s,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,label,label,lb_nm,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,genre,genre,gn,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,lastfm,tracks,tracks,tnms,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,name,name,rel_nm,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,artist,artist,art,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,release-date,release-date,rel_dt,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,release-country,release-country,rel_ctry,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,duration,duration,dur,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,label,label,lbl,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,genre,genre,gnr,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium
+,musicbrainz,tracks,tracks,trks,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,medium

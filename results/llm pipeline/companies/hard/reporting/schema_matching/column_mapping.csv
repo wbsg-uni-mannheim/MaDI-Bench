@@ -1,0 +1,11 @@
+Target Column,Dbpedia,Forbes,Fullcontact
+id,id,id,id
+name,nm,co_nm,Attribute_2
+founded,ey,-,Attribute_6
+country,cn,region,Attribute_3
+city,hq,-,Attribute_4
+industry,sg,bus_seg,-
+assets,ta,ast_val,-
+revenue,ai,sls_fig,-
+keypeople,kpn,-,Attribute_5
+Mapped,9/9,6/9,6/9

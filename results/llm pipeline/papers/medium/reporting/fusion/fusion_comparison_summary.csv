@@ -1,0 +1,2 @@
+variant,case,validation_accuracy,test_accuracy,test_correct,test_total,acc_authors,acc_cited_by_count,acc_first_page,acc_issue,acc_journal,acc_keywords,acc_last_page,acc_publication_year,acc_publisher,acc_referenced_works_count,acc_title,acc_type,acc_volume
+provided,llm_no_val,0.6412213740458015,0.6227848101265823,738,1185,0.37,0.34065934065934067,0.7395833333333334,0.8076923076923077,0.6161616161616161,0.0,0.7446808510638298,1.0,0.15384615384615385,0.75,0.7,0.69,0.9340659340659341

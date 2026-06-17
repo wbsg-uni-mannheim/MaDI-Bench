@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+music-augmented-easy,heuristic,none,provided_validation,0.7013977128335451,552,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music-augmented-easy,llm_no_val,none,provided_validation,0.7115628970775095,560,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music-augmented-easy,llm_val,provided,provided_validation,0.6607369758576874,520,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music-augmented-easy,llm_val_stats,provided,provided_validation,0.6607369758576874,520,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music-augmented-easy,heuristic_stats,provided,provided_validation,0.6886912325285895,542,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music-augmented-easy,iterative,provided,provided_validation,0.6607369758576874,520,787,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

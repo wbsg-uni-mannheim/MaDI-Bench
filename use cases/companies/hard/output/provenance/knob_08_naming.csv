@@ -1,0 +1,13 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+,dbpedia,org_name,org_name,nm,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,established,established,ey,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,nation,nation,cn,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,headquarters,headquarters,hq,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,sector,sector,sg,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,keypeople_name,keypeople_name,kpn,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,total_assets_val,total_assets_val,ta,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,annual_income,annual_income,ai,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,forbes,company,company,co_nm,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,forbes,business_segment,business_segment,bus_seg,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,forbes,asset_value,asset_value,ast_val,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,forbes,sales_figure,sales_figure,sls_fig,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard

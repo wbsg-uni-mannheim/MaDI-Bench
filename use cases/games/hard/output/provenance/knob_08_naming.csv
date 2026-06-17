@@ -1,0 +1,18 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+,dbpedia,title,title,nm,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,launch_yr,launch_yr,ly,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,studio,studio,stu,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,system,system,sys,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,genre,genre,g,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,dbpedia,franchise,franchise,fran,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,metacritic,genres,genres,gnrs,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,sales,prod_title,prod_title,Attribute_2,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,launch_dt,launch_dt,Attribute_3,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,studio,studio,Attribute_4,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,dist,dist,Attribute_5,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,hw,hw,Attribute_6,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,genre,genre,Attribute_7,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,press_score,press_score,Attribute_8,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,comm_rating,comm_rating,Attribute_9,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,age_classification,age_classification,Attribute_10,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,sales,units_sold_mm,units_sold_mm,Attribute_11,rename_anonymize,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard

@@ -1,0 +1,80 @@
+{
+  "attribute_rules": {
+    "Attribute_11": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "ESRB": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "criticScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "developer": {
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "genres": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "platform": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publisher": {
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "releaseYear": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "series": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "userScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  },
+  "main_entity": "video game"
+}

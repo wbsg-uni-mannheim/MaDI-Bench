@@ -1,0 +1,84 @@
+{
+  "auto_generated": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_val__opt_provided",
+    "validation_accuracy": 0.4336448598130841,
+    "test_accuracy": 0.42333333333333334,
+    "rules": {
+      "assets": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "city": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact"
+          ]
+        }
+      },
+      "country": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes",
+            "fullcontact"
+          ]
+        }
+      },
+      "founded": {
+        "resolver": "earliest",
+        "kwargs": {}
+      },
+      "industry": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes",
+            "fullcontact"
+          ]
+        }
+      },
+      "keypeople": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "name": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "revenue": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "website": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact",
+            "dbpedia"
+          ]
+        }
+      }
+    }
+  }
+}

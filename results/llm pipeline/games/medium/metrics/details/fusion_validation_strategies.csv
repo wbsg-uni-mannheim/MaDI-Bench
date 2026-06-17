@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+games-augmented-medium,heuristic,none,provided_validation,0.8701854493580599,610,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-medium,llm_no_val,none,provided_validation,0.8131241084165478,570,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-medium,llm_val,provided,provided_validation,0.8402282453637661,589,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-medium,llm_val_stats,provided,provided_validation,0.8402282453637661,589,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-medium,heuristic_stats,provided,provided_validation,0.8402282453637661,589,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-medium,iterative,provided,provided_validation,0.8402282453637661,589,701,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

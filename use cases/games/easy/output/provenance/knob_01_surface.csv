@@ -1,0 +1,12 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+dbpedia_17767,dbpedia,system,Wii U,WiiU,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_27570,dbpedia,system,PlayStation Portable,Playstation Portable,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_27944,dbpedia,system,Wii U,WiiU,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_31474,dbpedia,system,PlayStation Portable,Playstation Portable,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_32432,dbpedia,system,Wii U,WiiU,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_34750,dbpedia,system,MacOS,PC,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_42208,dbpedia,system,PlayStation Portable,Playstation Portable,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_46081,dbpedia,system,Microsoft Windows,PC,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_51105,dbpedia,system,Wii U,WiiU,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_59074,dbpedia,system,PlayStation Portable,Playstation Portable,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+dbpedia_64991,dbpedia,system,PlayStation Portable,Playstation Portable,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy

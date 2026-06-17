@@ -1,0 +1,101 @@
+entity_id,source_ids,name,artist,release-date,release-country,duration,label,genre,tracks
+entity_0,"mbrainz_974, k04__fab__lastfm__discogs_4601, discogs_4601",musicbrainz,discogs,musicbrainz,LLM,LLM,lastfm,lastfm,LLM
+entity_1,"discogs_30299, mbrainz_1349, lastFM_3139",discogs,discogs,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_10,"lastFM_10255, mbrainz_4940",musicbrainz,LLM,musicbrainz,LLM,LLM,,,LLM
+entity_11,"discogs_102508, lastFM_46450, mbrainz_18926",discogs,discogs,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_12,"lastFM_75188, mbrainz_30104",musicbrainz,lastfm,musicbrainz,LLM,LLM,,,LLM
+entity_13,"mbrainz_1709, lastFM_8812, discogs_8119",musicbrainz,discogs,musicbrainz,discogs,LLM,discogs,discogs,LLM
+entity_14,"k04__fab__lastfm__discogs_29552, discogs_29552, mbrainz_6717",discogs,discogs,musicbrainz,LLM,LLM,lastfm,lastfm,LLM
+entity_15,"lastFM_7866, discogs_16218, mbrainz_3784",discogs,discogs,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_16,"discogs_83952, lastFM_8515, mbrainz_4109",discogs,discogs,discogs,LLM,LLM,discogs,discogs,LLM
+entity_17,"discogs_73108, mbrainz_15439",discogs,discogs,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_18,"discogs_32000, mbrainz_7166, lastFM_15260",discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_19,"lastFM_91, mbrainz_69, discogs_156",lastfm,discogs,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_2,"discogs_49539, mbrainz_2232, k04__fab__lastfm__discogs_49539",discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_20,"mbrainz_171, discogs_22225, k04__fab__lastfm__discogs_22225",musicbrainz,LLM,musicbrainz,LLM,LLM,lastfm,lastfm,LLM
+entity_21,"mbrainz_868, lastFM_2023, discogs_4039",musicbrainz,lastfm,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_22,"mbrainz_1160, discogs_169903, k04__fab__lastfm__discogs_14236",musicbrainz,LLM,musicbrainz,musicbrainz,LLM,lastfm,discogs,LLM
+entity_23,"mbrainz_1179, discogs_164179",musicbrainz,LLM,LLM,LLM,LLM,discogs,discogs,LLM
+entity_24,"mbrainz_1645, lastFM_46574, discogs_21829",musicbrainz,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_25,"k04__fab__lastfm__discogs_78472, mbrainz_7903, discogs_78472",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,lastfm,lastfm,lastfm
+entity_26,"discogs_16530, mbrainz_3860",discogs,discogs,discogs,discogs,LLM,discogs,discogs,LLM
+entity_27,"discogs_69127, k04__fab__lastfm__discogs_69127, mbrainz_14711",discogs,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,discogs
+entity_28,"k04__fab__lastfm__discogs_21313, discogs_21313, mbrainz_4965",discogs,discogs,discogs,musicbrainz,LLM,lastfm,lastfm,lastfm
+entity_29,"discogs_3431, mbrainz_745, lastFM_1755",discogs,discogs,discogs,discogs,LLM,discogs,discogs,discogs
+entity_3,"discogs_49995, mbrainz_6043",discogs,LLM,musicbrainz,LLM,LLM,LLM,discogs,LLM
+entity_30,"discogs_183539, mbrainz_17179",discogs,discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,LLM
+entity_31,"mbrainz_973, discogs_4591, lastFM_2258",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_32,"mbrainz_12941, lastFM_13996",musicbrainz,LLM,musicbrainz,musicbrainz,LLM,,,musicbrainz
+entity_33,"mbrainz_94, discogs_212, lastFM_124",musicbrainz,musicbrainz,LLM,discogs,LLM,discogs,discogs,musicbrainz
+entity_34,"discogs_79337, mbrainz_16115",discogs,discogs,discogs,discogs,LLM,discogs,discogs,discogs
+entity_35,"discogs_28649, mbrainz_6527",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,LLM
+entity_36,"mbrainz_8813, discogs_39611, lastFM_18786",musicbrainz,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_37,"k04__fab__lastfm__discogs_8192, mbrainz_1712, discogs_53717",lastfm,musicbrainz,musicbrainz,musicbrainz,LLM,lastfm,lastfm,LLM
+entity_38,"lastFM_13701, mbrainz_6492, discogs_28502",lastfm,lastfm,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_39,"discogs_2228, mbrainz_535",discogs,discogs,discogs,discogs,LLM,discogs,discogs,LLM
+entity_4,"mbrainz_6256, discogs_27404, lastFM_13196",musicbrainz,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_40,"discogs_42713, k04__fab__lastfm__discogs_42713, mbrainz_9508",discogs,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_41,"discogs_16289, mbrainz_3806, k04__fab__lastfm__discogs_16289",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,LLM
+entity_42,"mbrainz_739, discogs_3453, k04__fab__lastfm__discogs_3453",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_43,"lastFM_68, discogs_119, mbrainz_50",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,lastfm
+entity_44,"lastFM_1869, discogs_903, mbrainz_9390",discogs,discogs,LLM,musicbrainz,LLM,discogs,discogs,discogs
+entity_45,"k04__fab__lastfm__discogs_49037, discogs_49037, mbrainz_10780",discogs,lastfm,discogs,musicbrainz,LLM,lastfm,lastfm,musicbrainz
+entity_46,"lastFM_21063, mbrainz_9881, discogs_44494",lastfm,lastfm,LLM,musicbrainz,LLM,discogs,discogs,lastfm
+entity_47,"discogs_158524, mbrainz_27423, lastFM_68652",musicbrainz,discogs,LLM,discogs,LLM,discogs,discogs,discogs
+entity_48,"discogs_6659, lastFM_697, mbrainz_370",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_49,"discogs_12917, lastFM_6305, mbrainz_2984",discogs,discogs,LLM,musicbrainz,LLM,discogs,discogs,discogs
+entity_5,"discogs_93364, lastFM_42755, mbrainz_17820",discogs,LLM,discogs,LLM,LLM,LLM,LLM,LLM
+entity_50,"mbrainz_931, lastFM_2157, discogs_4345",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_51,"discogs_14145, mbrainz_3264, k04__fab__lastfm__discogs_14145",discogs,discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs
+entity_52,"discogs_24571, k04__fab__lastfm__discogs_24571, mbrainz_5639",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,discogs
+entity_53,"mbrainz_4341, k04__fab__lastfm__discogs_18532, discogs_46842",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,LLM,lastfm,musicbrainz
+entity_54,"lastFM_32080, mbrainz_14648, discogs_68724",musicbrainz,lastfm,musicbrainz,musicbrainz,LLM,discogs,discogs,lastfm
+entity_55,"discogs_16005, k04__fab__lastfm__discogs_16005, mbrainz_3736",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_56,"discogs_10717, k04__fab__lastfm__discogs_10717, mbrainz_2451",musicbrainz,discogs,discogs,musicbrainz,LLM,discogs,discogs,LLM
+entity_57,"mbrainz_8518, discogs_38301",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,LLM,musicbrainz
+entity_58,"discogs_70520, k04__fab__lastfm__discogs_70520, mbrainz_14952",discogs,discogs,discogs,discogs,LLM,discogs,discogs,LLM
+entity_59,"lastFM_5913, discogs_81975, mbrainz_2783",discogs,lastfm,LLM,LLM,LLM,LLM,discogs,discogs
+entity_6,"discogs_151725, mbrainz_19306",discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs,LLM
+entity_60,"discogs_49624, k04__fab__lastfm__discogs_49624, mbrainz_17081",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_61,"discogs_33982, lastFM_16171, mbrainz_7874",musicbrainz,discogs,LLM,discogs,LLM,discogs,discogs,discogs
+entity_62,"mbrainz_10569, discogs_47891, lastFM_22580",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_63,"mbrainz_1899, discogs_91642, k04__fab__lastfm__discogs_91642",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,discogs
+entity_64,"lastFM_61776, mbrainz_24408",lastfm,LLM,musicbrainz,musicbrainz,LLM,,,LLM
+entity_65,"mbrainz_435, lastFM_901, discogs_1635",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_66,"mbrainz_14320, discogs_66932, lastFM_31254",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_67,"discogs_70483, mbrainz_2868",musicbrainz,discogs,LLM,musicbrainz,LLM,LLM,discogs,LLM
+entity_68,"mbrainz_12282, k04__fab__lastfm__discogs_56309, discogs_56309",musicbrainz,discogs,LLM,musicbrainz,LLM,LLM,lastfm,musicbrainz
+entity_69,"mbrainz_2482, discogs_153046",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,LLM,discogs,LLM
+entity_7,"k04__fab__lastfm__discogs_106317, mbrainz_19346, discogs_106317",musicbrainz,discogs,musicbrainz,discogs,LLM,lastfm,lastfm,LLM
+entity_70,"discogs_11776, mbrainz_2702, k04__fab__lastfm__discogs_11776",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_71,"discogs_7737, mbrainz_1576",musicbrainz,discogs,discogs,discogs,LLM,discogs,discogs,discogs
+entity_72,"discogs_10575, k04__fab__lastfm__discogs_10575, mbrainz_2419",discogs,discogs,musicbrainz,musicbrainz,LLM,LLM,discogs,LLM
+entity_73,"k04__fab__lastfm__discogs_31408, mbrainz_7077, discogs_31408",musicbrainz,lastfm,musicbrainz,musicbrainz,LLM,lastfm,lastfm,lastfm
+entity_74,"mbrainz_9183, lastFM_19537",LLM,musicbrainz,musicbrainz,musicbrainz,LLM,,,LLM
+entity_75,"discogs_251, mbrainz_117, k04__fab__lastfm__discogs_251",discogs,discogs,musicbrainz,musicbrainz,,discogs,discogs,discogs
+entity_76,"mbrainz_2421, discogs_10580, k04__fab__lastfm__discogs_10580",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,discogs
+entity_77,"mbrainz_2604, discogs_13638",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_78,"lastFM_57669, mbrainz_299, discogs_900",musicbrainz,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_79,"discogs_3949, mbrainz_853",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_8,"lastFM_56810, mbrainz_22383, discogs_128073",lastfm,lastfm,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_80,"mbrainz_9680, lastFM_20598, discogs_43517",musicbrainz,musicbrainz,LLM,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_81,"discogs_39215, mbrainz_2936",discogs,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_82,"mbrainz_7383, k04__fab__lastfm__discogs_62046, discogs_62046",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,lastfm,lastfm,musicbrainz
+entity_83,"mbrainz_3841, discogs_7627, lastFM_7987",musicbrainz,musicbrainz,musicbrainz,discogs,LLM,discogs,discogs,musicbrainz
+entity_84,"mbrainz_14913, lastFM_32760, discogs_70310",musicbrainz,discogs,LLM,LLM,LLM,LLM,discogs,musicbrainz
+entity_85,"k04__fab__lastfm__discogs_10363, mbrainz_2359, discogs_10363",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,lastfm,lastfm,lastfm
+entity_86,"lastFM_35629, mbrainz_15890",lastfm,lastfm,LLM,musicbrainz,LLM,,,LLM
+entity_87,"k04__fab__lastfm__discogs_2785, discogs_2785, mbrainz_358",lastfm,LLM,discogs,musicbrainz,LLM,lastfm,lastfm,lastfm
+entity_88,"k04__fab__lastfm__discogs_182227, mbrainz_12085, discogs_182227",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,lastfm,lastfm,musicbrainz
+entity_89,"mbrainz_2028, discogs_53175",musicbrainz,discogs,LLM,musicbrainz,LLM,LLM,discogs,LLM
+entity_9,"mbrainz_2160, discogs_81571",discogs,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_90,"mbrainz_17408, discogs_89005, lastFM_40955",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,discogs,LLM
+entity_91,"mbrainz_3919, lastFM_8134, discogs_16729",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,discogs,LLM,musicbrainz
+entity_92,"discogs_156183, k04__fab__lastfm__discogs_156183, mbrainz_671",discogs,discogs,musicbrainz,musicbrainz,LLM,discogs,discogs,discogs
+entity_93,"discogs_7506, mbrainz_1535, k04__fab__lastfm__discogs_7506",discogs,discogs,discogs,musicbrainz,LLM,discogs,discogs,discogs
+entity_94,"lastFM_27285, mbrainz_12656, discogs_58199",lastfm,lastfm,musicbrainz,musicbrainz,LLM,discogs,discogs,musicbrainz
+entity_95,"mbrainz_757, lastFM_1777, discogs_3478",musicbrainz,musicbrainz,musicbrainz,discogs,LLM,discogs,discogs,musicbrainz
+entity_96,"discogs_5112, mbrainz_1074, lastFM_2484",discogs,discogs,LLM,musicbrainz,LLM,discogs,discogs,LLM
+entity_97,"discogs_25677, mbrainz_5885, lastFM_12409",discogs,discogs,discogs,musicbrainz,LLM,LLM,discogs,musicbrainz
+entity_98,"mbrainz_6620, lastFM_13985, discogs_29084",musicbrainz,musicbrainz,musicbrainz,musicbrainz,LLM,LLM,discogs,discogs
+entity_99,"lastFM_12057, mbrainz_5715, discogs_24900",lastfm,lastfm,musicbrainz,musicbrainz,LLM,discogs,discogs,discogs

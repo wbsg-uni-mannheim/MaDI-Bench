@@ -1,0 +1,8 @@
+step,runtime_sec,prompt_tokens,completion_tokens,embedding_tokens,total_tokens,cost_usd,requests,web_searches
+Step 2: Validation & Training,0.01,0,0,0,0,0.0,0,0
+Step 3: FAISS Candidate Generation,19.98,722,766,0,1488,0.0,2,0
+Step 4: Active Learning Training Construction,0.02,0,0,0,0,0.0,0,0
+Step 5: Matcher Optimization,0.01,0,0,0,0,0.0,0,0
+Step 7.8: Fusion Optimization (Provided Val),167.44,13423,6589,0,20012,0.0,5,0
+Step 7.6: End-to-End Metrics,0.17,0,0,0,0,0.0,0,0
+TOTAL,187.64,14145,7355,0,21500,0.0,7,0

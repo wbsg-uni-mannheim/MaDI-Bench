@@ -1,0 +1,63 @@
+{
+  "case_name": "llm_no_val",
+  "rules": {
+    "ESRB": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "criticScore": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "developer": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "genres": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "platform": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "publisher": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "releaseYear": {
+      "kwargs": {},
+      "resolver": "earliest"
+    },
+    "series": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "units_sold_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "userScore": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

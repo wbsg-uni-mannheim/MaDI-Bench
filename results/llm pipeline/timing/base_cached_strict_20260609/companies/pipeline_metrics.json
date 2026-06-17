@@ -1,0 +1,76 @@
+{
+  "steps": [
+    {
+      "name": "Step 2: Validation & Training",
+      "runtime_seconds": 0.00931096076965332,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 3: FAISS Candidate Generation",
+      "runtime_seconds": 16.555495023727417,
+      "prompt_tokens": 722,
+      "completion_tokens": 505,
+      "total_tokens": 1227,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 2,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 4: Active Learning Training Construction",
+      "runtime_seconds": 0.020608901977539062,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 5: Matcher Optimization",
+      "runtime_seconds": 0.013438940048217773,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 7.8: Fusion Optimization (Provided Val)",
+      "runtime_seconds": 177.0159707069397,
+      "prompt_tokens": 13414,
+      "completion_tokens": 7068,
+      "total_tokens": 20482,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 5,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 7.6: End-to-End Metrics",
+      "runtime_seconds": 0.16785526275634766,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    }
+  ]
+}

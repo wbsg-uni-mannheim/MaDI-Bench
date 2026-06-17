@@ -1,0 +1,38 @@
+################################################################################
+# ENTITY 0: {'metacritic': 'metacritic_3503', 'dbpedia': 'dbpedia_13882'}
+# Identifying columns: None
+################################################################################
+
+================================================================================
+ATTRIBUTE: name
+================================================================================
+
+>>> PROMPT:
+You are a fact-checker verifying data about an entity from multiple databases.
+
+ENTITY CONTEXT:
+[metacritic] name=Far Cry 3: Blood Dragon, releaseYear=2013-01-01, developer=Ubisoft Montreal, platform=PlayStation 3, genres=Action,Shooter,Shooter,First-Person,Modern,Modern,Arcade, criticScore=82.0, userScore=8.3, ESRB=M
+[dbpedia] name=Far Cry 3: Blood Dragon, releaseYear=2021-01-01, developer=Ubisoft Montreal, platform=Xbox One, genres=First-person shooter, series=Far Cry
+
+ATTRIBUTE TO VERIFY: "name"
+
+VALUES FROM OUR DATABASES:
+  - metacritic: 'Far Cry 3: Blood Dragon'
+  - dbpedia: 'Far Cry 3: Blood Dragon'
+
+INSTRUCTIONS:
+1. Use your knowledge to determine the correct value for this attribute
+2. Do NOT simply pick from database values - verify based on what you know to be factually correct
+3. You MUST provide a definitive answer - only respond "UNKNOWN" if the entity cannot be identified at all
+4. For values that change over time, use the most recent data in your knowledge
+5. Prefer authoritative knowledge (official facts) over uncertain information
+
+Respond in this exact format (two lines only):
+CORRECT_VALUE: <the correct value>
+REASONING: <brief explanation>
+
+
+>>> RESPONSE:
+CORRECT_VALUE: Far Cry 3: Blood Dragon
+REASONING: The entity is the Ubisoft Montreal-developed standalone expansion/spin-off in the Far Cry series, officially titled “Far Cry 3: Blood Dragon.”
+

@@ -1,0 +1,76 @@
+{
+  "attribute_rules": {
+    "ESRB": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "criticScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "developer": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "genres": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "platform": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publisher": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "releaseYear": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "series": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "units_sold_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "userScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  }
+}

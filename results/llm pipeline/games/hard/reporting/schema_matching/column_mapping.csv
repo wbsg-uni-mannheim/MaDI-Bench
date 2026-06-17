@@ -1,0 +1,13 @@
+Target Column,Dbpedia,Metacritic,Sales
+id,id,id,id
+name,nm,game_title,Attribute_2
+releaseYear,ly,year_published,Attribute_3
+developer,stu,made_by,Attribute_4
+genres,g,gnrs,Attribute_7
+publisher,-,-,Attribute_5
+platform,sys,console,Attribute_6
+criticScore,-,press_rating,Attribute_8
+userScore,-,player_rating,Attribute_9
+ESRB,-,age_rating,Attribute_10
+series,fran,-,-
+Mapped,7/11,9/11,10/11

@@ -1,0 +1,10 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+musicbrainz,id,Music Release,id,0.95,llm_based_matching
+musicbrainz,name,Music Release,name,0.95,llm_based_matching
+musicbrainz,artist,Music Release,artist,0.95,llm_based_matching
+musicbrainz,release-date,Music Release,release-date,0.95,llm_based_matching
+musicbrainz,release-country,Music Release,release-country,0.95,llm_based_matching
+musicbrainz,duration,Music Release,duration,0.95,llm_based_matching
+musicbrainz,label,Music Release,label,0.95,llm_based_matching
+musicbrainz,genre,Music Release,genre,0.95,llm_based_matching
+musicbrainz,tracks,Music Release,tracks,0.95,llm_based_matching

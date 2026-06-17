@@ -1,0 +1,49 @@
+{
+  "case_name": "llm_no_val",
+  "rules": {
+    "assets": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "city": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "country": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "founded": {
+      "resolver": "earliest",
+      "kwargs": {}
+    },
+    "industry": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "keypeople": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "name": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "revenue": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "website": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

@@ -1,0 +1,121 @@
+case,optimization_mode,attribute,resolver,kwargs
+heuristic,none,Attribute_2,most_complete,{}
+heuristic,none,Attribute_8,most_complete,{}
+heuristic,none,Attribute_9,union,"{""separator"": "",""}"
+heuristic,none,abstract_text,union,"{""separator"": "",""}"
+heuristic,none,authors,union,"{""separator"": "",""}"
+heuristic,none,cited_by_count,median,{}
+heuristic,none,dx,most_complete,{}
+heuristic,none,first_page,most_complete,{}
+heuristic,none,issue,median,{}
+heuristic,none,journal,most_complete,{}
+heuristic,none,kw,union,"{""separator"": "",""}"
+heuristic,none,kw_list,union,"{""separator"": "",""}"
+heuristic,none,last_page,most_complete,{}
+heuristic,none,pb,most_complete,{}
+heuristic,none,publ,most_complete,{}
+heuristic,none,publication_year,median,{}
+heuristic,none,referenced_works_count,median,{}
+heuristic,none,title,longest_string,{}
+heuristic,none,type,most_complete,{}
+heuristic,none,volume,median,{}
+llm_no_val,none,Attribute_2,voting,{}
+llm_no_val,none,Attribute_8,voting,{}
+llm_no_val,none,Attribute_9,union,"{""separator"": "",""}"
+llm_no_val,none,abstract_text,longest_string,{}
+llm_no_val,none,authors,union,"{""separator"": "",""}"
+llm_no_val,none,cited_by_count,maximum,{}
+llm_no_val,none,dx,voting,{}
+llm_no_val,none,first_page,most_complete,{}
+llm_no_val,none,issue,voting,{}
+llm_no_val,none,journal,voting,{}
+llm_no_val,none,kw,union,"{""separator"": "",""}"
+llm_no_val,none,kw_list,union,"{""separator"": "",""}"
+llm_no_val,none,last_page,most_complete,{}
+llm_no_val,none,pb,voting,{}
+llm_no_val,none,publ,voting,{}
+llm_no_val,none,publication_year,median,{}
+llm_no_val,none,referenced_works_count,median,{}
+llm_no_val,none,title,longest_string,{}
+llm_no_val,none,type,voting,{}
+llm_no_val,none,volume,voting,{}
+llm_val,provided,Attribute_2,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,Attribute_8,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,Attribute_9,union,"{""separator"": "",""}"
+llm_val,provided,abstract_text,most_complete,{}
+llm_val,provided,authors,favour_sources,"{""sources"": [""open_alex"", ""crossref"", ""dblp""]}"
+llm_val,provided,cited_by_count,maximum,{}
+llm_val,provided,dx,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,first_page,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,issue,favour_sources,"{""sources"": [""crossref"", ""dblp"", ""open_alex""]}"
+llm_val,provided,journal,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,kw,union,"{""separator"": "",""}"
+llm_val,provided,kw_list,union,"{""separator"": "",""}"
+llm_val,provided,last_page,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,pb,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,publ,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+llm_val,provided,publication_year,favour_sources,"{""sources"": [""crossref"", ""dblp"", ""open_alex""]}"
+llm_val,provided,referenced_works_count,median,{}
+llm_val,provided,title,longest_string,{}
+llm_val,provided,type,favour_sources,"{""sources"": [""crossref"", ""dblp"", ""open_alex""]}"
+llm_val,provided,volume,median,{}
+llm_val_stats,provided,Attribute_2,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,Attribute_8,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,Attribute_9,union,"{""separator"": "",""}"
+llm_val_stats,provided,abstract_text,longest_string,{}
+llm_val_stats,provided,authors,union,"{""separator"": "",""}"
+llm_val_stats,provided,cited_by_count,favour_sources,"{""sources"": [""open_alex""]}"
+llm_val_stats,provided,dx,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,first_page,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,issue,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,journal,longest_string,{}
+llm_val_stats,provided,kw,union,"{""separator"": "",""}"
+llm_val_stats,provided,kw_list,union,"{""separator"": "",""}"
+llm_val_stats,provided,last_page,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,pb,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,publ,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,publication_year,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,referenced_works_count,favour_sources,"{""sources"": [""crossref""]}"
+llm_val_stats,provided,title,longest_string,{}
+llm_val_stats,provided,type,favour_sources,"{""sources"": [""dblp""]}"
+llm_val_stats,provided,volume,favour_sources,"{""sources"": [""dblp""]}"
+heuristic_stats,provided,Attribute_2,most_complete,{}
+heuristic_stats,provided,Attribute_8,most_complete,{}
+heuristic_stats,provided,Attribute_9,union,"{""separator"": "",""}"
+heuristic_stats,provided,abstract_text,union,"{""separator"": "",""}"
+heuristic_stats,provided,authors,union,"{""separator"": "",""}"
+heuristic_stats,provided,cited_by_count,median,{}
+heuristic_stats,provided,dx,most_complete,{}
+heuristic_stats,provided,first_page,favour_sources,"{""sources"": [""crossref""]}"
+heuristic_stats,provided,issue,favour_sources,"{""sources"": [""crossref""]}"
+heuristic_stats,provided,journal,favour_sources,"{""sources"": [""open_alex""]}"
+heuristic_stats,provided,kw,union,"{""separator"": "",""}"
+heuristic_stats,provided,kw_list,union,"{""separator"": "",""}"
+heuristic_stats,provided,last_page,favour_sources,"{""sources"": [""crossref""]}"
+heuristic_stats,provided,pb,most_complete,{}
+heuristic_stats,provided,publ,most_complete,{}
+heuristic_stats,provided,publication_year,favour_sources,"{""sources"": [""crossref""]}"
+heuristic_stats,provided,referenced_works_count,favour_sources,"{""sources"": [""crossref""]}"
+heuristic_stats,provided,title,longest_string,{}
+heuristic_stats,provided,type,favour_sources,"{""sources"": [""dblp""]}"
+heuristic_stats,provided,volume,favour_sources,"{""sources"": [""dblp""]}"
+iterative,provided,Attribute_2,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,Attribute_8,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,Attribute_9,union,"{""separator"": "",""}"
+iterative,provided,abstract_text,longest_string,{}
+iterative,provided,authors,favour_sources,"{""sources"": [""open_alex"", ""crossref"", ""dblp""]}"
+iterative,provided,cited_by_count,favour_sources,"{""sources"": [""open_alex"", ""crossref"", ""dblp""]}"
+iterative,provided,dx,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,first_page,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,issue,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,journal,favour_sources,"{""sources"": [""open_alex"", ""crossref"", ""dblp""]}"
+iterative,provided,kw,union,"{""separator"": "",""}"
+iterative,provided,kw_list,union,"{""separator"": "",""}"
+iterative,provided,last_page,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,pb,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,publ,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,publication_year,favour_sources,"{""sources"": [""crossref"", ""dblp"", ""open_alex""]}"
+iterative,provided,referenced_works_count,favour_sources,"{""sources"": [""crossref"", ""open_alex"", ""dblp""]}"
+iterative,provided,title,longest_string,{}
+iterative,provided,type,favour_sources,"{""sources"": [""dblp"", ""crossref"", ""open_alex""]}"
+iterative,provided,volume,favour_sources,"{""sources"": [""dblp"", ""crossref"", ""open_alex""]}"

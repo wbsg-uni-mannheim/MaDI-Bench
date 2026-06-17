@@ -1,0 +1,27 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "abstract_text": "union",
+    "authors": "favour_sources",
+    "cited_by_count": "median",
+    "first_page": "favour_sources",
+    "issue": "favour_sources",
+    "journal": "favour_sources",
+    "last_page": "favour_sources",
+    "publication_year": "favour_sources",
+    "publisher_name": "longest_string",
+    "referenced_works_count": "favour_sources",
+    "title": "longest_string",
+    "topic_terms": "union",
+    "type": "favour_sources",
+    "volume": "favour_sources"
+  },
+  "strategy_name": "heuristic_stats_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "crossref": 2.738450019370863,
+    "dblp": 1.0,
+    "open_alex": 3.0
+  }
+}

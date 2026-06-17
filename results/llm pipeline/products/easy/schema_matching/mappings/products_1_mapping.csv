@@ -1,0 +1,27 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+products_1,id,Hardware Product,id,0.95,llm_based_matching
+products_1,brand,Hardware Product,brand,0.95,llm_based_matching
+products_1,title,Hardware Product,title,0.95,llm_based_matching
+products_1,description,Hardware Product,description,0.95,llm_based_matching
+products_1,price,Hardware Product,price,0.95,llm_based_matching
+products_1,priceCurrency,Hardware Product,priceCurrency,0.95,llm_based_matching
+products_1,product_url,Hardware Product,url,0.95,llm_based_matching
+products_1,title_description,Hardware Product,title_description,0.95,llm_based_matching
+products_1,model,Hardware Product,model,0.95,llm_based_matching
+products_1,model_number,Hardware Product,model_number,0.95,llm_based_matching
+products_1,product_type,Hardware Product,product_type,0.95,llm_based_matching
+products_1,chipset_name,Hardware Product,chipset_name,0.95,llm_based_matching
+products_1,vram_gb,Hardware Product,vram_gb,0.95,llm_based_matching
+products_1,storage_gb,Hardware Product,storage_gb,0.95,llm_based_matching
+products_1,read_speed_mb_s,Hardware Product,read_speed_mb_s,0.95,llm_based_matching
+products_1,write_speed_mb_s,Hardware Product,write_speed_mb_s,0.95,llm_based_matching
+products_1,bus_type,Hardware Product,bus_type,0.95,llm_based_matching
+products_1,interface_type,Hardware Product,interface_type,0.95,llm_based_matching
+products_1,width_mm,Hardware Product,width_mm,0.95,llm_based_matching
+products_1,length_mm,Hardware Product,length_mm,0.95,llm_based_matching
+products_1,height_mm,Hardware Product,height_mm,0.95,llm_based_matching
+products_1,weight_g,Hardware Product,weight_g,0.95,llm_based_matching
+products_1,storage_connection_type,Hardware Product,storage_connection_type,0.95,llm_based_matching
+products_1,memory_type,Hardware Product,memory_type,0.95,llm_based_matching
+products_1,color,Hardware Product,color,0.95,llm_based_matching
+products_1,form_factor,Hardware Product,form_factor,0.95,llm_based_matching

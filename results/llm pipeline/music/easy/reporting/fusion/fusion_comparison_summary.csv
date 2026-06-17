@@ -1,0 +1,2 @@
+variant,case,validation_accuracy,test_accuracy,test_correct,test_total,acc_artist,acc_duration,acc_genre,acc_label,acc_name,acc_release-country,acc_release-date,acc_tracks
+provided,llm_no_val,0.7115628970775095,0.7740259740259741,596,770,0.87,0.32,0.8831168831168831,0.8817204301075269,0.88,0.94,0.93,0.52

@@ -1,0 +1,74 @@
+[
+  {
+    "case": "companies",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": null,
+    "source_file": "DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 0.975609756097561
+  },
+  {
+    "case": "companies",
+    "category": "schema_matching",
+    "denominator": 20,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 20,
+    "source_file": "DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "companies",
+    "category": "schema_matching",
+    "denominator": 21,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 20,
+    "source_file": "DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 0.9523809523809523
+  },
+  {
+    "case": "companies",
+    "category": "entity_matching",
+    "denominator": 2,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/companies/entity_resolution/training/training_comparison",
+    "split": "official_test",
+    "value": 0.9068253255500673
+  },
+  {
+    "case": "companies",
+    "category": "fusion",
+    "denominator": 691,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 437,
+    "source_file": "DI-Bench/runs/companies/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.6324167872648335
+  },
+  {
+    "case": "companies",
+    "category": "consistency",
+    "denominator": 60650,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 60140,
+    "source_file": "DI-Bench/runs/companies/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.99159109645507
+  }
+]

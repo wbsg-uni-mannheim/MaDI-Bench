@@ -1,0 +1,16 @@
+case,metric,value,source_file
+music-augmented-hard,input_sources,3,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,total_input_records,35169,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,fused_output_records,32443,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,fusion_ratio,0.0775,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,row_gain_over_largest,10188,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,row_gain_percentage,45.78,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,merged_records,2202,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,input_columns_target_schema,13,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,fused_output_columns,14,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,average_input_density,0.4991,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,fused_data_density,0.5424,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,data_density_change,0.0433,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,largest_source_name,discogs,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,largest_source_density,0.8323,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json
+music-augmented-hard,density_change_vs_largest,-0.2899,DI-Bench/runs/augmented/music/hard/end_to_end_metrics.json

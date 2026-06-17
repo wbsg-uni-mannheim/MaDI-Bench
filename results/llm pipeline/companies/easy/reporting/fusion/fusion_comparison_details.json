@@ -1,0 +1,111 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_val__opt_provided",
+    "validation_accuracy": 0.4336448598130841,
+    "test_accuracy": 0.42333333333333334,
+    "per_attribute_accuracy": {
+      "founded": {
+        "accuracy": 0.48,
+        "total": 100
+      },
+      "assets": {
+        "accuracy": 0.0,
+        "total": 100
+      },
+      "revenue": {
+        "accuracy": 0.03,
+        "total": 100
+      },
+      "country": {
+        "accuracy": 0.88,
+        "total": 100
+      },
+      "name": {
+        "accuracy": 0.86,
+        "total": 100
+      },
+      "city": {
+        "accuracy": 0.29,
+        "total": 100
+      }
+    },
+    "rules": {
+      "assets": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "city": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact"
+          ]
+        }
+      },
+      "country": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes",
+            "fullcontact"
+          ]
+        }
+      },
+      "founded": {
+        "resolver": "earliest",
+        "kwargs": {}
+      },
+      "industry": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes",
+            "fullcontact"
+          ]
+        }
+      },
+      "keypeople": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "name": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "revenue": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "website": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact",
+            "dbpedia"
+          ]
+        }
+      }
+    }
+  }
+}

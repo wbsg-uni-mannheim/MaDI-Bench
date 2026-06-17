@@ -1,0 +1,7 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+forbes,id,Companies,id,0.95,llm_based_matching
+forbes,co_nm,Companies,name,0.95,llm_based_matching
+forbes,region,Companies,country,0.95,llm_based_matching
+forbes,bus_seg,Companies,industry,0.95,llm_based_matching
+forbes,ast_val,Companies,assets,0.95,llm_based_matching
+forbes,sls_fig,Companies,revenue,0.95,llm_based_matching

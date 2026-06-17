@@ -1,0 +1,23 @@
+{
+  "dbpedia": {
+    "rows": 10069,
+    "mappings": 9,
+    "columns_normalized": 3,
+    "transformed": 20551,
+    "failed": 1748
+  },
+  "forbes": {
+    "rows": 2107,
+    "mappings": 6,
+    "columns_normalized": 2,
+    "transformed": 3489,
+    "failed": 331
+  },
+  "fullcontact": {
+    "rows": 2004,
+    "mappings": 6,
+    "columns_normalized": 2,
+    "transformed": 2054,
+    "failed": 124
+  }
+}

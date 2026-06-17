@@ -1,0 +1,99 @@
+{
+  "best_case_key": "heuristic",
+  "best_case_name": "heuristic",
+  "best_validation_accuracy": 0.5932914046121593,
+  "best_test_accuracy": 0.5110470701248799,
+  "best_case_dir": "DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/case_heuristic",
+  "rules": {
+    "Attribute_2": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_8": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_9": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "abstract_text": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "authors": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "cited_by_count": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "dx": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "first_page": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "issue": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "journal": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "kw": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "kw_list": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "last_page": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "pb": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "publ": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "publication_year": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "referenced_works_count": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "title": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "volume": {
+      "resolver": "median",
+      "kwargs": {}
+    }
+  }
+}

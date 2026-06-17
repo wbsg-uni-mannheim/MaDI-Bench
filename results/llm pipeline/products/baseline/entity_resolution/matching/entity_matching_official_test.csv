@@ -1,0 +1,4 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+prod1,prod2,prod1__prod2,RuleBasedMatcher,0.5,0.5714285714285714,0.4736842105263157,0.72,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod2_test.csv
+prod1,prod3,prod1__prod3,RuleBasedMatcher,0.5,0.591304347826087,0.5230769230769231,0.68,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod3_test.csv
+prod1,prod4,prod1__prod4,RuleBasedMatcher,0.3,0.7299270072992701,0.5747126436781609,1.0,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod4_test.csv

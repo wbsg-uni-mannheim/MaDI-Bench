@@ -1,0 +1,77 @@
+{
+  "attribute_rules": {
+    "assets": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "city": {
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "country": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "founded": {
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "founders": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "industry": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "keypeople_name": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "revenue": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "url": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  },
+  "main_entity": "companies"
+}

@@ -1,0 +1,43 @@
+{
+  "average_input_density": 0.4972,
+  "data_density_change": 0.0596,
+  "density_change_vs_largest": 0.0383,
+  "fused_data_density": 0.5568,
+  "fused_output_columns": 28,
+  "fused_output_records": 998,
+  "fusion_ratio": 0.578,
+  "input_columns_target_schema": 27,
+  "input_sources": 4,
+  "largest_source_density": 0.5186,
+  "largest_source_name": "products_1",
+  "merged_records": 569,
+  "per_source_stats": [
+    {
+      "columns": 27,
+      "density": 0.4857,
+      "name": "products_4",
+      "rows": 496
+    },
+    {
+      "columns": 27,
+      "density": 0.5186,
+      "name": "products_1",
+      "rows": 653
+    },
+    {
+      "columns": 27,
+      "density": 0.4961,
+      "name": "products_2",
+      "rows": 635
+    },
+    {
+      "columns": 27,
+      "density": 0.4843,
+      "name": "products_3",
+      "rows": 581
+    }
+  ],
+  "row_gain_over_largest": 345,
+  "row_gain_percentage": 52.83,
+  "total_input_records": 2365
+}

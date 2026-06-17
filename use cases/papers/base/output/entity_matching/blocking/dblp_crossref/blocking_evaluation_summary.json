@@ -1,0 +1,10 @@
+{
+  "pair_completeness": 0.9717887154861945,
+  "pair_quality": 0.0018928853699486034,
+  "reduction_ratio": 0.999767632556119,
+  "total_candidates": 855308,
+  "total_possible_pairs": 3680842659,
+  "true_positives_found": 1619,
+  "total_true_pairs": 1666,
+  "evaluation_timestamp": "2026-06-09T18:23:07.143888"
+}

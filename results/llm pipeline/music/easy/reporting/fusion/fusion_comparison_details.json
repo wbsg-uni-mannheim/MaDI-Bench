@@ -1,0 +1,84 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_no_val",
+    "validation_accuracy": 0.7115628970775095,
+    "test_accuracy": 0.7740259740259741,
+    "per_attribute_accuracy": {
+      "label": {
+        "accuracy": 0.8817204301075269,
+        "total": 93
+      },
+      "release-date": {
+        "accuracy": 0.93,
+        "total": 100
+      },
+      "tracks": {
+        "accuracy": 0.52,
+        "total": 100
+      },
+      "name": {
+        "accuracy": 0.88,
+        "total": 100
+      },
+      "duration": {
+        "accuracy": 0.32,
+        "total": 100
+      },
+      "genre": {
+        "accuracy": 0.8831168831168831,
+        "total": 77
+      },
+      "artist": {
+        "accuracy": 0.87,
+        "total": 100
+      },
+      "release-country": {
+        "accuracy": 0.94,
+        "total": 100
+      }
+    },
+    "rules": {
+      "artist": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "duration": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "genre": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "label": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "name": {
+        "kwargs": {},
+        "resolver": "longest_string"
+      },
+      "release-country": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "release-date": {
+        "kwargs": {},
+        "resolver": "earliest"
+      },
+      "tracks": {
+        "kwargs": {
+          "separator": ","
+        },
+        "resolver": "union"
+      }
+    }
+  }
+}

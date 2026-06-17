@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+products,heuristic,official_test,0.4364508393285372,910,2085,DI-Bench/runs/products/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

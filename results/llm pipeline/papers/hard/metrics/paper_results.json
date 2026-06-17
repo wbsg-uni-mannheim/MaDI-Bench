@@ -1,0 +1,74 @@
+[
+  {
+    "case": "papers-augmented-hard",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": null,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 0.9166666666666666
+  },
+  {
+    "case": "papers-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 33,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 33,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "papers-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 39,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 33,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 0.8461538461538461
+  },
+  {
+    "case": "papers-augmented-hard",
+    "category": "entity_matching",
+    "denominator": 2,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/augmented/papers/hard/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.7812636595906558
+  },
+  {
+    "case": "papers-augmented-hard",
+    "category": "fusion",
+    "denominator": 1041,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 532,
+    "source_file": "DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.5110470701248799
+  },
+  {
+    "case": "papers-augmented-hard",
+    "category": "consistency",
+    "denominator": 772253,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 706937,
+    "source_file": "DI-Bench/runs/augmented/papers/hard/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.9154215004668159
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "case_name": "llm_val",
+  "rules": {
+    "assets": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "city": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      }
+    },
+    "country": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes",
+          "fullcontact"
+        ]
+      }
+    },
+    "founded": {
+      "resolver": "earliest",
+      "kwargs": {}
+    },
+    "industry": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes",
+          "fullcontact"
+        ]
+      }
+    },
+    "keypeople": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "revenue": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "website": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "fullcontact",
+          "dbpedia"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

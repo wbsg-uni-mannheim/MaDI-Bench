@@ -1,0 +1,23 @@
+{
+  "dblp": {
+    "rows": 60591,
+    "mappings": 10,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "crossref": {
+    "rows": 60749,
+    "mappings": 12,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "open_alex": {
+    "rows": 60719,
+    "mappings": 12,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  }
+}

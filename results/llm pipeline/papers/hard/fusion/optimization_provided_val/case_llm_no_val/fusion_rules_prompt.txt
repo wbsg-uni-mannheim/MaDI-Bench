@@ -1,0 +1,167 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) The main goal is to correctly identify list-like attributes and choose a list resolver (usually 'union').
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources, random_value
+
+Starting point (heuristic plan you can override):
+{
+  "Attribute_2": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "Attribute_8": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "Attribute_9": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "abstract_text": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "authors": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "cited_by_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "dx": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "first_page": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "issue": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "journal": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "kw": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "kw_list": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "last_page": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "pb": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "publ": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "publication_year": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "referenced_works_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "volume": {
+    "kwargs": {},
+    "resolver": "median"
+  }
+}
+
+Attribute diagnostics (to help spot list-like attributes and separators):
+             attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    sample_values
+           Attribute_2          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [10.1016/j.jcp.2018.10.045, 10.1093/nar/gky1106, 10.1609/aaai.v32i1.12328, 10.1145/3236009, 10.1016/j.artint.2018.07.007, 10.5220/0006639801080116, 10.1080/00207543.2018.1533261, 10.32614/rj-2018-017]
+           Attribute_8          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [WXK, Institution of Engineering and Technology (IET), Association for Computing Machinery (ACM), Association for Machinery (ACM), 2ioe7, MDPI AG, Springer Science and Business Media LLC, Association for Computing Machinery (ACM)]
+           Attribute_9           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [Partial Automatic differentiation, Physical law, Pride, Action Recognition, Graph traversal, Interpretability, Black box, Intuition,Artificial psychology, Traceability, R package, Ensemble Ensemble forecasting]
+         abstract_text           True                  ,             False             False          False            False [With the development of social networks and online mobile communities, group recommendation systems support users’ inter, To obtain information about foreign markets is a very complex task for small‐ and medium‐sized enterprises. This work’s , Quasi‐cyclic (QC) LDPC codes play an important role in 5G communications and have been chosen as the standard codes for , We investigate the increasingly common business setting in which companies face the possibility of both observed and uno, Human Immunodeficiency Virus (HIV) is a virus that attacks or infects cells in the immune system that causes immune decl, Search and Rescue Operations (SAR) take place in any emergency situation where people are involved and their lives are a, Persistent surveillance is one of the major tasks envisioned for unmanned aerial vehicles in that some regions of intere, In the fields of advanced driver assistance systems (ADAS) and Internet of Vehicles (IoV), predicting the vehicle state ]
+               authors           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                [['Hsuan Hsiao', 'Jason Helge Anderson'], ['Mark Clark', 'Avinash Kodi', 'Razvan C. Bunescu', 'Ahmed Louri'], ['Yu-Kai Chuang', 'Kuan-Jung Chen', 'Kun-Lin Lin', 'Shao-Yun Fang', 'Bing Li 0005', 'Ulf Schlichtmann'], Duy Thanh Nguyen, Nhut-Minh Ho, and Ik-Joon Chang, Xingchen Man, Leibo Liu, Jianfeng Zhu 0001, Shaojun Wei, ['Zihao Liu', 'Tao Liu 0023', 'Wujie Wen', 'Lei Jiang 0001', 'Jie Xu 0001', 'Yanzhi Wang', 'Gang Quan'], ['Fan Yang', 'Youyou Lu', 'Youmin Chen', 'Haiyu Mao', 'Jiwu Shu'], ['Jae-San Kim', 'Joon-Sung Yang']]
+        cited_by_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [17, 16, 24, 14, 12, 3e.o, 19, 21]
+                    dx          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [10.1145/3316781.3317924, 10.1109/DAC.2018.8465925, 10.1109/DAC.2018.8465775, 10.1145/3316781.3317915, 10.1109/DAC.2018.8465912, 10.1145/3316781.3317745, 10.1109/DAC.2018.8465809, 10.1145/3225209.3225210]
+            first_page          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [214, 702, 7.9, 12.0, 15, 512, 1,181, S.O]
+                 issue          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [1, 3, 2, 3, w, 1, 3, 1]
+               journal          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          [Comput. Optim. Appl., Comput. Optim. Appl., Conput. Optim. Apoo., Comput. Optim. Appl., Computational Optimization and Applications, Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl.]
+                    kw           True                  ,             False             False          False            False                                                        [Netlist, reverse engineering, transfer learning, formal equivalence checking, and semantic analysis, Transconductance, Signed multiplication, Integrated circuit design, Nikhilam algorithm, We study a decentralized learning problem in which a population of agents repeatedly solves a shared stochastic multi-ar, Cloud resource provisioning and load balancing both face volatile demand, where dispatching and scheduling decisions mus, Exploratory factor analysis, latent structure discovery, data mining, plant science, feature selection, cluster validati, Source code authorship, stylistic attribution, obfuscation, hybrid neural networks, plagiarism detection, software engin, Facial texture analysis, Ethnicity recognition, Landmark-based feature selection, Sparse sensing, Three-dimensional face, Datacenter operators need efficient methods to diagnose anomalous network behavior and performance stragglers across lar]
+               kw_list           True                  ,             False             False          False            False                                                         [Netlist, Reverse engineering, Transfer of learning, Formal equivalence checking, Semantic analysis, Transconductance, Signed multiplication, Integrated circuit design, Nikhilam algorithm, We study a decentralized learning problem in which a population of agents repeatedly solves a shared stochastic multi-ar, Cloud resource provisioning and load balancing both face volatile demand, where dispatching and scheduling decisions mus, Exploratory factor analysis, latent structure discovery, data mining, plant science, feature selection, cluster validati, Source code authorship, stylistic attribution, obfuscation, hybrid neural networks, plagiarism detection, software engin, Facial texture analysis, Ethnicity recognition, Landmark-based feature selection, Sparse sensing, Three-dimensional face, Datacenter operators need efficient methods to diagnose anomalous network behavior and performance stragglers across lar]
+             last_page          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [221, 713, 31.0, 38.0, 31, 529, 1 194, 31.0]
+                    pb          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [ACM, Institution of Engineering and Technology (IET), Association for Computing Machinery (ACM), Association for Computing Machinery, abbreviated ACM, Wiley, MDPI AG, Springer Science and Business Media LLC, Association for Computing Machinery (ACM)]
+                  publ          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [Wile y, Wiley, Association for Computational Linguistics, Assoxiafion for Computational Lihguistics, ACL Association for Computational Linguistics, ACM Press, ElsevierBV, Assoc. for Computational Linguistics]
+      publication_year          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2019, 2018, 2018, 2928, 2018, 2019, 2018, 2018]
+referenced_works_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [22, 31, 34, 34, 88, 34, 44, 68]
+                 title          False               None             False             False          False            False                                                                                                                                                                                                                                                                            [Thread Weaving: Static Resource Scheduling for Multithreaded High-Level Synthesis., LEAD: learning-enabled energy-aware dynamic voltage/frequency scaling in NoCs., PlanarONoC: concurrent placement and routing considering crossing minimization for optical networks-on-chip., St-DRC: Stretchable DRAM Refresh Controller with No Parity-overhead Error Correction Scheme for Energy-efficient DNNs., Runtime monitoring for safety of intelligent vehicles., A General Pattern-Based Dynamic Compilation Framework for Coarse-Grained Reconfigurable Architectures., DeepN-JPEG: a deep neural network favorable JPEG-based image compression framework., Fast and precise routability analysis with conditional design rules.]
+                  type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [inproceedings, ibprpceedimgs, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings]
+                volume          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [71, 73, 76, 72, 76, 71, 76, 7O]
+
+Dataset overview (trust_score may be missing; you can still use prefer_higher_trust if it makes sense):
+[
+  {
+    "dataset_name": "dblp",
+    "rows": 55958,
+    "columns": 15,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "crossref",
+    "rows": 40929,
+    "columns": 15,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "open_alex",
+    "rows": 39989,
+    "columns": 15,
+    "trust_score": null
+  }
+]
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.

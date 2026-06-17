@@ -1,0 +1,24 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "ESRB": "most_complete",
+    "criticScore": "median",
+    "developer": "most_complete",
+    "genres": "most_complete",
+    "globalSales": "median",
+    "name": "longest_string",
+    "platform": "most_complete",
+    "publisher": "most_complete",
+    "releaseYear": "prefer_higher_trust",
+    "series": "most_complete",
+    "userScore": "median"
+  },
+  "strategy_name": "heuristic_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.9332801653357894,
+    "metacritic": 3.0,
+    "sales": 1.0
+  }
+}

@@ -1,0 +1,10 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+name,1.0,31090,31090,0,False,{},{},False,
+artist,1.0,31090,31090,0,False,{},{},False,
+release-date,1.0,21835,21835,0,False,{},{},False,
+release-country,1.0,23236,23236,0,False,{},{},False,
+label,1.0,22627,22627,0,False,{},{},False,
+genre,1.0,22425,22425,0,False,{},"{""taxonomy"": {""exhaustive"": true, ""known_value_rate"": 1.0, ""membership_enforced"": true, ""n_known_values"": 22425, ""n_unknown_values"": 0, ""n_values_checked"": 22425}}",False,
+tracks,0.8217111611450627,31090,25547,5543,False,"{""items.minLength"": 357, ""maxItems"": 1, ""minItems"": 5185}",{},False,
+duration,0.9303992417959958,16882,15707,1175,False,"{""maximum"": 1, ""type"": 1174}",{},False,

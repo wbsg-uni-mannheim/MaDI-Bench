@@ -1,0 +1,16 @@
+case,metric,value,source_file
+papers,input_sources,3,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,total_input_records,182059,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,fused_output_records,83197,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,fusion_ratio,0.543,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,row_gain_over_largest,22448,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,row_gain_percentage,36.95,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,merged_records,54663,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,input_columns_target_schema,15,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,fused_output_columns,16,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,average_input_density,0.6875,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,fused_data_density,0.8174,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,data_density_change,0.1299,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,largest_source_name,crossref,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,largest_source_density,0.8693,DI-Bench/runs/papers/end_to_end_metrics.json
+papers,density_change_vs_largest,-0.0519,DI-Bench/runs/papers/end_to_end_metrics.json

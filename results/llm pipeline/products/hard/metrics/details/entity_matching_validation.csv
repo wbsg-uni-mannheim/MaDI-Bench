@@ -1,0 +1,4 @@
+case,pair,split,f1,precision,recall,matcher,threshold,source_file,note
+products-augmented-hard,products_1__products_2,pipeline_validation,0.6764705882352942,0.6634615384615384,0.69,MLBasedMatcher,0.4,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+products-augmented-hard,products_1__products_3,pipeline_validation,0.564885496183206,0.4567901234567901,0.74,MLBasedMatcher,0.3,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+products-augmented-hard,products_1__products_4,pipeline_validation,0.5901639344262295,0.5,0.72,MLBasedMatcher,0.3,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.

@@ -1,0 +1,4 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+products_1,products_2,products_1__products_2,MLBasedMatcher,0.3,0.4,0.5,0.3333333333333333,171,21,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/easy/input/entitymatching/products_1_2_products_2_test_corner_filled.csv
+products_1,products_3,products_1__products_3,RuleBasedMatcher,0.9,0.0,0.0,0.0,170,20,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/easy/input/entitymatching/products_1_2_products_3_test_corner_filled.csv
+products_1,products_4,products_1__products_4,MLBasedMatcher,0.3,0.42424242424242425,0.4666666666666667,0.3888888888888889,168,18,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/easy/input/entitymatching/products_1_2_products_4_test_corner_filled.csv

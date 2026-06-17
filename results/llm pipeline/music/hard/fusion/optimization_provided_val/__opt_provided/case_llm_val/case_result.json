@@ -1,0 +1,83 @@
+{
+  "case_name": "llm_val",
+  "rules": {
+    "Attribute_4": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_5": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_7": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_8": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "artist": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "discogs",
+          "lastfm"
+        ]
+      }
+    },
+    "duration": {
+      "resolver": "maximum",
+      "kwargs": {}
+    },
+    "genre": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "label": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "name": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "release-country": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "discogs"
+        ]
+      }
+    },
+    "release-date": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "discogs"
+        ]
+      }
+    },
+    "tracks": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

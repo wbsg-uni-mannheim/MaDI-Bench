@@ -1,0 +1,51 @@
+{
+  "overall_accuracy": 0.7984189723320159,
+  "total_comparisons": 1012,
+  "correct_comparisons": 808,
+  "per_attribute_accuracy": {
+    "authors": {
+      "accuracy": 0.55,
+      "total": 100
+    },
+    "journal": {
+      "accuracy": 0.6593406593406593,
+      "total": 91
+    },
+    "issue": {
+      "accuracy": 0.9875,
+      "total": 80
+    },
+    "last_page": {
+      "accuracy": 0.9770114942528736,
+      "total": 87
+    },
+    "first_page": {
+      "accuracy": 0.9770114942528736,
+      "total": 87
+    },
+    "title": {
+      "accuracy": 0.63,
+      "total": 100
+    },
+    "type": {
+      "accuracy": 0.77,
+      "total": 100
+    },
+    "referenced_works_count": {
+      "accuracy": 0.7640449438202247,
+      "total": 89
+    },
+    "cited_by_count": {
+      "accuracy": 0.5227272727272727,
+      "total": 88
+    },
+    "publication_year": {
+      "accuracy": 1.0,
+      "total": 100
+    },
+    "volume": {
+      "accuracy": 1.0,
+      "total": 90
+    }
+  }
+}

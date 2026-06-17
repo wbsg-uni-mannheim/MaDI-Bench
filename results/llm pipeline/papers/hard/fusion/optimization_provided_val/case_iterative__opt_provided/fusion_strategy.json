@@ -1,0 +1,33 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "Attribute_2": "favour_sources",
+    "Attribute_8": "favour_sources",
+    "Attribute_9": "union",
+    "abstract_text": "longest_string",
+    "authors": "favour_sources",
+    "cited_by_count": "favour_sources",
+    "dx": "favour_sources",
+    "first_page": "favour_sources",
+    "issue": "favour_sources",
+    "journal": "favour_sources",
+    "kw": "union",
+    "kw_list": "union",
+    "last_page": "favour_sources",
+    "pb": "favour_sources",
+    "publ": "favour_sources",
+    "publication_year": "favour_sources",
+    "referenced_works_count": "favour_sources",
+    "title": "longest_string",
+    "type": "favour_sources",
+    "volume": "favour_sources"
+  },
+  "strategy_name": "iterative_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "crossref": 2.879790205350197,
+    "dblp": 1.0,
+    "open_alex": 3.0
+  }
+}

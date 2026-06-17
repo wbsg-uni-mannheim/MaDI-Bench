@@ -1,0 +1,101 @@
+entity_id,source_ids,brand,title,description,price,priceCurrency,url,title_description,model,model_number,product_type,storage_gb,read_speed_mb_s,write_speed_mb_s,bus_type,interface_type,color,storage_connection_type,weight_g,width_mm,length_mm,height_mm,form_factor,memory_type,chipset_name,vram_gb
+entity_0,"27226970, 78086660, 66284906",prod2,LLM,prod3,prod1,prod2,prod1,LLM,LLM,prod3,prod2,prod1,prod3,prod3,prod2,LLM,LLM,,,,,,,,,
+entity_1,"73989902, 84077826, 94807470",prod2,prod1,LLM,prod1,prod1,prod1,LLM,prod1,prod1,prod2,prod1,LLM,LLM,prod2,,prod1,,,,,,,,,
+entity_10,"61123060, 61198101, 23694723, 94651152",prod2,prod1,LLM,LLM,prod1,LLM,LLM,prod4,prod3,prod2,prod3,,,prod2,LLM,prod1,prod1,,,,,,,,
+entity_11,"37065189, 52499748, 3957588, 31447687",prod2,LLM,prod3,prod1,prod1,prod3,prod3,prod2,,prod2,prod1,prod2,prod2,prod4,LLM,LLM,,,,,,,,,
+entity_12,"62044328, 8832468, 59082251, 2237933",prod4,LLM,LLM,prod1,prod1,LLM,LLM,prod1,LLM,prod4,prod4,,,prod4,,LLM,,,,,,,,,
+entity_13,"13600999, 21033405, 40478216, 56489331",prod1,prod1,LLM,LLM,prod1,prod1,LLM,LLM,prod1,prod1,prod1,,,LLM,LLM,,LLM,,,,,,,,
+entity_14,"18451047, 77838027, 43128365, 64818764",prod1,LLM,LLM,LLM,prod1,LLM,LLM,prod1,LLM,prod1,prod1,,,prod1,,,,,,,,,,,
+entity_15,"84278896, 4557639, 96863812",prod1,LLM,prod2,LLM,prod1,LLM,prod2,prod1,prod1,prod1,prod1,,,prod3,,prod3,,LLM,,,,,,,
+entity_16,"20551993, 29524279, 17471458, 70026799",prod4,prod3,LLM,prod1,prod2,prod4,prod1,prod4,prod4,prod4,prod4,prod1,,LLM,prod4,prod1,prod4,,,,,,,,
+entity_17,"19499147, 22158552, 9615620, 13163468",prod4,LLM,prod1,prod1,prod1,prod1,prod1,prod1,,prod4,prod1,,,prod4,LLM,,,,,,,,,,
+entity_18,"25774360, 12424905, 21730806",prod3,prod1,LLM,LLM,prod1,prod1,LLM,prod3,prod1,prod3,prod1,,,,,prod1,,,,,,,,,
+entity_19,"70525377, 15445522, 16849538, 42834782",prod4,LLM,LLM,prod1,prod4,LLM,LLM,prod1,LLM,prod4,prod2,prod1,prod1,LLM,prod1,LLM,prod1,LLM,LLM,LLM,LLM,,,,
+entity_2,"25980666, 97430094, 72380436, 91059944",LLM,LLM,LLM,prod1,prod4,prod1,LLM,,,prod4,,,,prod4,,,,,,,,,,,
+entity_20,"95303225, 69985226, 65837616, 89550243",prod4,prod1,prod1,prod2,prod1,prod1,prod1,prod1,,prod4,prod2,,,prod3,,LLM,,,,,,,,,
+entity_21,"69277053, 28872480, 12049659, 79116996",prod2,prod2,prod1,LLM,prod2,prod1,prod1,LLM,,prod2,LLM,,,prod2,LLM,,LLM,,,,,,,,
+entity_22,"86835292, 14149159, 71010886, 53357791",prod1,prod1,LLM,LLM,prod1,prod3,LLM,prod1,,prod1,prod1,,,prod1,prod1,prod1,prod1,,,,,,,,
+entity_23,"22646558, 1252810, 3708141, 60975501",prod3,prod2,LLM,prod1,prod3,prod4,LLM,prod1,,prod3,prod3,,,prod1,prod1,prod1,prod1,,,,,,,,
+entity_24,"40216773, 16588524, 51601254, 33848192",prod4,prod2,LLM,prod1,prod1,LLM,LLM,prod1,prod2,prod4,prod1,LLM,prod1,LLM,prod1,LLM,prod1,,,,,,,,
+entity_25,"31565713, 21663730, 18175862, 98647404",prod2,prod1,LLM,LLM,prod1,LLM,LLM,,,prod2,prod1,,,prod2,LLM,,prod1,,,,,prod2,,,
+entity_26,"50007186, 51893803, 14296399, 71126679",LLM,prod4,prod4,prod1,prod1,LLM,prod4,LLM,prod4,prod2,prod2,,,prod2,LLM,,prod4,,,,,prod2,,,
+entity_27,"83480659, 59145653, 21446102",prod2,LLM,LLM,prod1,prod1,LLM,LLM,prod2,,prod2,prod3,,,LLM,,prod2,,,,,,prod2,,,
+entity_28,"55471990, 29257602, 41915007, 71883742",prod2,prod1,prod3,LLM,prod4,prod1,LLM,prod2,LLM,prod2,prod3,,,prod2,prod2,,prod2,,,,,prod2,,,
+entity_29,"95573755, 50127391, 3427495, 52500972",prod1,prod1,LLM,LLM,prod1,LLM,LLM,prod1,prod1,prod1,prod1,,,prod1,prod1,,prod2,,,,,prod1,,,
+entity_3,"30783448, 24673290, 86677460, 80286980",prod1,prod1,prod1,prod1,prod3,prod1,prod1,LLM,,prod3,prod1,,,prod1,,,,,,,,,,,
+entity_30,"76507424, 47930825, 75172014",prod3,LLM,LLM,prod1,prod1,prod1,LLM,LLM,prod1,prod3,prod1,,,prod3,LLM,,prod3,,,,,prod3,,,
+entity_31,"20145889, 98624308, 83709832",prod3,LLM,prod1,prod1,prod3,prod1,prod1,prod1,prod1,prod3,prod3,,,prod3,prod3,LLM,prod1,,,,,prod3,,,
+entity_32,"97905619, 7284542, 36131796",prod1,LLM,LLM,LLM,prod1,prod1,LLM,LLM,LLM,prod1,prod1,,,prod1,prod1,,prod1,LLM,LLM,,LLM,prod1,,,
+entity_33,"48281373, 10397588, 68607451",prod1,LLM,LLM,LLM,prod1,prod1,LLM,prod4,prod1,prod1,prod1,,,prod1,LLM,,prod1,,,,,prod1,,,
+entity_34,"5623956, 18797711, 87572356, 7825926",prod2,prod2,LLM,LLM,prod1,LLM,LLM,,,prod2,prod2,,,prod2,LLM,,prod2,,,,,prod2,,,
+entity_35,82091590,LLM,LLM,LLM,LLM,prod1,prod1,LLM,,LLM,prod1,prod1,,,LLM,LLM,,LLM,,,,,prod1,,,
+entity_36,6557275,,LLM,prod1,prod1,prod1,LLM,LLM,prod1,,prod1,prod1,,,LLM,,,,,,,,,,,
+entity_37,"62148898, 42551174, 56782191",prod4,LLM,LLM,LLM,prod4,LLM,LLM,prod1,prod1,prod4,prod1,,,prod4,LLM,,LLM,,,,,prod1,,,
+entity_38,"3967869, 87067165, 31239709, 50853852",prod2,LLM,LLM,prod4,prod1,LLM,LLM,LLM,prod4,prod2,prod4,,,prod2,prod2,prod4,prod2,LLM,prod4,prod4,prod4,prod2,,,
+entity_39,"53672855, 57859900",prod1,prod1,prod1,LLM,prod1,prod4,prod1,prod1,,prod1,prod1,,,prod1,LLM,,LLM,prod1,prod1,prod1,prod1,prod1,,,
+entity_4,"73035052, 86852761, 1175526, 24048664",prod1,LLM,prod1,LLM,prod1,prod1,prod1,LLM,,prod1,LLM,,,LLM,,,,,,,,,,,
+entity_40,"20149069, 20024247, 47203114, 12601891",prod3,prod1,prod1,LLM,prod2,prod1,prod1,LLM,prod1,prod3,prod1,,,prod3,prod3,,prod3,,,,,prod3,,,
+entity_41,28606757,prod1,LLM,LLM,prod1,prod1,LLM,LLM,prod1,,prod1,prod1,,,LLM,prod1,prod1,,,,,,prod1,,,
+entity_42,"67818648, 83479410, 30923260, 59429009",prod1,LLM,LLM,prod1,prod4,LLM,LLM,LLM,prod1,prod4,prod1,,,prod1,LLM,,prod1,,,,,prod4,,,
+entity_43,"67831061, 79539273",,prod1,LLM,prod1,prod4,prod1,LLM,prod1,prod1,prod4,prod1,,,prod4,LLM,,prod1,,,,,prod1,,,
+entity_44,"87579134, 18406024",prod2,LLM,LLM,LLM,prod1,LLM,LLM,LLM,LLM,prod2,prod2,,,prod1,prod1,,prod1,,,,,prod2,,,
+entity_45,"18031980, 62181527, 70715850, 26311140",prod3,LLM,LLM,prod1,prod3,LLM,LLM,LLM,LLM,prod3,LLM,,,prod4,prod4,,LLM,,,,,prod3,,,
+entity_46,"32508960, 90222476, 37596121, 23418968",prod3,LLM,LLM,LLM,prod2,LLM,LLM,LLM,,prod3,prod3,,,LLM,LLM,,LLM,,,,,prod3,,,
+entity_47,"10634045, 4586576, 17899082",prod2,LLM,LLM,LLM,prod1,LLM,LLM,,LLM,prod2,prod1,,,prod2,LLM,,prod1,,,,,prod2,,,
+entity_48,"92213757, 63735890, 59252242",prod1,LLM,LLM,prod1,prod1,prod2,LLM,LLM,prod1,prod1,prod1,,,prod2,LLM,,prod2,,,,,prod2,,,
+entity_49,"72438434, 43926656, 65428261, 44551871",prod3,prod1,LLM,prod1,LLM,prod1,LLM,LLM,prod1,prod3,prod1,,,prod3,LLM,,prod3,,,,,prod3,,,
+entity_5,"82272597, 23846849, 16479164, 69971378",prod3,LLM,LLM,prod4,prod3,LLM,LLM,LLM,LLM,prod3,prod1,,,prod3,LLM,prod4,,,,,,,,,
+entity_50,"52586114, 57731827, 675322, 15742380",prod4,prod2,prod2,prod1,prod2,prod2,prod2,prod2,LLM,prod4,prod2,prod2,prod2,prod4,prod4,LLM,prod4,,,,,prod4,,,
+entity_51,"25541170, 88530378, 84153542, 54049265",prod1,LLM,prod1,LLM,prod1,prod1,prod1,LLM,prod1,prod1,prod1,prod1,prod1,LLM,LLM,,prod1,,prod4,prod4,LLM,prod1,,,
+entity_52,"36708398, 41200367, 4391771, 74615786",prod1,LLM,LLM,prod1,prod1,prod1,LLM,LLM,prod1,prod1,prod1,LLM,LLM,prod1,prod1,,prod1,,,,,prod1,,,
+entity_53,"58345950, 67813666, 21111016, 93635611",prod3,LLM,prod4,prod1,prod1,LLM,prod4,LLM,prod4,prod3,prod1,prod4,prod4,prod3,prod3,,prod1,,,,,prod3,,,
+entity_54,"98329230, 25370721",prod4,LLM,LLM,prod1,prod4,LLM,LLM,LLM,,prod4,prod1,prod1,prod1,LLM,LLM,,prod1,,,,,prod1,,,
+entity_55,"66179582, 44201512, 61786604, 44178154",prod4,prod1,LLM,LLM,prod3,LLM,LLM,LLM,,prod4,prod1,prod4,LLM,LLM,LLM,,prod4,prod1,prod1,prod1,LLM,prod3,,,
+entity_56,"40673968, 49739678, 72884596, 33923099",prod2,LLM,LLM,prod3,prod2,LLM,LLM,prod2,LLM,prod2,prod3,prod2,prod2,prod2,prod2,,prod2,,,,,prod2,,,
+entity_57,"62078047, 59568884, 40157515",prod1,prod1,prod1,prod1,prod1,prod1,prod1,LLM,prod1,prod1,prod1,prod2,prod2,prod1,prod1,,prod1,,,,,prod1,,,
+entity_58,"55562405, 26353099, 24911815, 55105128",prod2,prod2,prod1,prod1,prod1,prod1,prod1,prod2,prod2,prod2,prod2,prod3,LLM,LLM,LLM,,prod2,,,,,prod2,,,
+entity_59,"32738830, 35384524, 18140756",prod1,LLM,prod1,prod2,prod1,LLM,prod1,prod1,,prod1,prod1,prod2,prod2,prod1,prod1,,prod1,,,,prod1,prod1,,,
+entity_6,"22689923, 48184346, 27965637, 23589087",prod2,LLM,LLM,prod1,prod2,LLM,LLM,LLM,prod1,prod2,prod2,prod1,prod2,LLM,LLM,LLM,LLM,,,,,,,,
+entity_60,"47809685, 33116922, 20058002, 80641070",prod4,LLM,LLM,prod1,prod2,LLM,LLM,LLM,,prod4,prod4,prod4,prod4,LLM,LLM,,prod4,,,,,prod4,,,
+entity_61,"51924648, 84704597, 17756844",prod4,prod1,prod3,prod1,prod1,prod1,prod1,prod4,prod1,prod4,prod4,,,prod4,prod4,,prod4,,,,,prod4,,,
+entity_62,"2701720, 85936005, 15871125",prod3,LLM,LLM,prod1,prod3,LLM,LLM,prod1,prod1,prod3,prod1,prod1,prod1,LLM,LLM,,prod3,,prod2,prod2,prod2,prod3,,,
+entity_63,"11565762, 62156844, 34301207, 16521040",prod2,prod1,prod1,prod2,prod1,LLM,prod1,prod2,prod2,prod2,prod2,LLM,LLM,prod2,prod2,prod2,prod2,,,,,prod2,,,
+entity_64,"39947591, 82173957, 13012302, 10006478",prod2,prod4,LLM,prod1,prod1,prod1,LLM,prod4,LLM,prod4,prod4,prod4,prod4,prod4,prod4,,prod4,,,,,prod4,,,
+entity_65,"35859576, 705891, 569608, 73644160",prod3,prod1,prod1,LLM,prod1,LLM,prod1,LLM,prod1,prod3,prod1,prod1,prod1,LLM,LLM,,prod3,,,,,prod3,,,
+entity_66,"31663634, 33078127, 6540379, 2988772",prod1,LLM,prod1,LLM,prod1,LLM,prod1,LLM,,prod1,prod1,LLM,LLM,LLM,LLM,,prod1,,,,,prod1,,,
+entity_67,"79398825, 94264250, 68981088, 10565065",prod4,LLM,LLM,prod1,prod1,LLM,LLM,LLM,prod1,prod4,prod4,prod1,LLM,LLM,LLM,,prod4,prod1,prod4,prod4,LLM,prod4,,,
+entity_68,"17671245, 45835121, 48613311, 6186646",prod3,prod1,prod1,prod4,prod1,prod1,prod1,prod4,prod4,prod3,prod4,prod4,prod3,prod3,prod3,,prod3,,,,,prod3,,,
+entity_69,"8217265, 92228530, 3713348, 59583035",prod1,prod4,prod1,prod1,prod1,prod1,prod1,prod1,,prod1,prod1,prod1,prod1,LLM,LLM,,prod1,,,,,prod1,,,
+entity_7,"8387407, 24038266",prod4,LLM,LLM,prod4,prod1,LLM,LLM,LLM,prod4,prod4,prod4,,,prod4,,prod1,,,,,,,,,
+entity_70,"70539715, 61307663, 67784462, 64336682",prod1,LLM,LLM,LLM,prod4,prod1,LLM,LLM,prod1,prod4,prod4,prod4,LLM,LLM,,,,,,,,LLM,,,
+entity_71,"58196146, 33137302, 61433092",prod4,prod2,prod1,prod1,prod1,LLM,prod1,LLM,,prod4,prod4,prod2,prod1,prod2,prod2,,LLM,LLM,,,,LLM,,,
+entity_72,"67488123, 69750969, 53361087, 19453676",LLM,prod2,LLM,prod2,prod4,prod2,LLM,prod1,LLM,prod4,prod2,prod2,prod2,LLM,LLM,,prod4,,,,,prod4,,,
+entity_73,"14505369, 75907519, 1088849, 88684927",prod2,prod1,LLM,LLM,prod3,LLM,LLM,prod2,prod1,prod2,prod3,prod2,prod2,LLM,LLM,,prod2,prod3,prod3,prod3,prod3,prod2,,,
+entity_74,"13323054, 22323468, 74635538, 51366426",prod4,LLM,LLM,prod1,prod1,prod3,LLM,prod1,prod3,prod4,prod4,prod4,prod4,LLM,LLM,,prod4,LLM,LLM,prod2,LLM,prod4,,,
+entity_75,"81919883, 6817605, 45991513, 3552090",prod2,prod4,LLM,LLM,prod2,prod4,LLM,LLM,,prod2,,,,,,,,,,,,,prod2,LLM,prod1
+entity_76,"78715069, 2070043, 39143445, 9621025",prod2,LLM,LLM,LLM,prod1,LLM,LLM,LLM,prod1,prod2,,,,prod4,,LLM,,LLM,LLM,LLM,,LLM,prod2,LLM,prod2
+entity_77,"40530169, 64306530",prod1,prod1,prod1,prod2,prod1,prod2,prod1,LLM,prod1,prod1,,,,,,,,,,,,,prod2,LLM,prod1
+entity_78,"30022546, 52172790, 97231319, 37026032",prod2,LLM,prod4,prod4,prod2,prod1,prod4,prod3,,prod2,,,,,,,,,,,,,prod2,prod1,prod2
+entity_79,22055981,prod1,LLM,LLM,LLM,prod1,LLM,LLM,LLM,prod1,prod1,,,,,,,,,,,,prod1,prod1,LLM,prod1
+entity_8,"7871781, 52338887",prod1,prod2,prod1,LLM,prod1,prod2,prod1,LLM,prod1,prod1,prod1,,,prod1,,prod1,,,,,,,,,
+entity_80,"85884739, 85028460, 7179251, 3690175",prod3,prod1,LLM,LLM,prod4,prod1,LLM,LLM,prod1,prod3,,,,LLM,,,,,,,,,prod4,LLM,prod3
+entity_81,"8744844, 68277426, 7351682, 60658347",prod1,prod1,LLM,prod3,prod3,prod1,prod1,LLM,,prod2,,,,prod4,,,,,,,,,prod4,LLM,prod2
+entity_82,"66404124, 420268",prod1,LLM,LLM,prod1,prod1,prod1,LLM,LLM,,prod1,,,,LLM,,,,,,,,,prod1,LLM,prod1
+entity_83,"73093363, 72112341",prod4,prod1,prod1,prod1,prod4,prod1,prod1,LLM,prod1,prod4,,,,prod4,,,,,,,,,prod4,LLM,prod1
+entity_84,"54755582, 46100256, 59847012, 58630412",prod3,LLM,LLM,prod2,prod2,prod2,prod2,prod2,,prod3,,,,prod4,,,,,,,,,prod3,prod3,prod3
+entity_85,"28212814, 39418692, 40032101, 41953107",prod1,prod2,LLM,prod1,prod1,prod1,LLM,prod2,prod2,prod1,,,,,,,,,,,,,prod1,prod1,prod1
+entity_86,"46937084, 76673511, 87088183, 7695737",prod1,LLM,prod2,prod1,prod1,prod4,prod2,prod3,prod1,prod1,,,,LLM,,,,,,,,LLM,prod1,prod1,prod1
+entity_87,"98557440, 90054170, 84234838",prod1,prod1,LLM,prod1,prod1,LLM,LLM,LLM,prod1,prod1,,,,LLM,,,,,,,,,prod1,LLM,prod1
+entity_88,"75418922, 55013364, 63864528, 18374077",prod2,prod1,LLM,LLM,prod3,prod1,LLM,LLM,prod1,prod4,,,,prod1,,,,LLM,LLM,LLM,,LLM,prod4,LLM,prod4
+entity_89,"49389281, 26544937, 47815709, 25666817",prod4,LLM,LLM,LLM,prod1,prod1,LLM,LLM,prod1,prod4,,,,prod3,LLM,,,,,,,,prod1,LLM,prod1
+entity_9,85544471,,LLM,prod1,prod1,prod1,LLM,LLM,LLM,,prod1,prod1,,,prod1,,,,,,,,,,,
+entity_90,"82312103, 18402228, 66415332, 5371368",prod3,prod3,prod1,prod1,prod3,prod4,prod1,LLM,prod3,prod2,,,,LLM,,,,,,,,prod3,prod3,LLM,prod2
+entity_91,"47205216, 22326836, 23008303, 7730142",prod3,prod1,LLM,prod1,prod1,prod1,prod1,prod1,,prod3,,,,prod1,,,,,,,,,prod3,prod3,prod3
+entity_92,"21748908, 8904814, 5278516, 4210690",prod3,prod4,LLM,prod2,prod2,prod1,prod1,LLM,prod4,prod3,,,,prod3,,,,,,,,,prod3,LLM,prod3
+entity_93,"9569117, 56037532, 15708615, 98454606",prod3,prod2,LLM,prod1,prod1,prod2,LLM,LLM,,prod1,,,,prod1,,,,,,,,,prod3,LLM,prod1
+entity_94,"37481679, 47160280, 24614355",prod3,LLM,prod3,prod1,prod4,prod1,prod3,LLM,prod1,prod4,,,,prod4,,,,,,,,,prod4,LLM,prod4
+entity_95,"81078073, 93023962, 44678762, 79346122",prod2,LLM,LLM,LLM,LLM,LLM,LLM,LLM,,prod2,,,,prod4,,,,,,,,,prod2,LLM,prod2
+entity_96,"6737771, 93281278, 88228076, 19733045",prod2,prod1,prod3,prod1,prod4,prod1,LLM,LLM,prod3,prod2,,,,prod2,,,,,,,,,prod2,LLM,prod2
+entity_97,"19807424, 74675520, 8975311",prod1,LLM,LLM,prod2,prod2,prod1,prod1,prod1,prod2,prod1,,,,,,,,,,,,,prod2,prod1,prod1
+entity_98,"12207319, 74115015, 35479899, 34888275",prod2,LLM,LLM,LLM,prod1,LLM,LLM,LLM,,prod2,,,,LLM,,,,,,,,,prod2,LLM,prod2
+entity_99,"19001308, 40820934, 64154231, 16027111",prod1,LLM,LLM,prod1,prod1,LLM,prod1,LLM,,prod1,,,,,,,,,,LLM,,,prod1,LLM,prod1

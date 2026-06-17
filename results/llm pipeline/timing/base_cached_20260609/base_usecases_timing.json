@@ -1,0 +1,19 @@
+[
+  {
+    "case": "companies",
+    "status": "success",
+    "return_code": 0,
+    "started_at_utc": "2026-06-09T16:31:40+00:00",
+    "finished_at_utc": "2026-06-09T16:34:20+00:00",
+    "wall_seconds": 160.633,
+    "wall_hms": "2m 41s",
+    "pipeline_metric_total_seconds": 141.73,
+    "pipeline_metric_total_hms": "2m 22s",
+    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_20260609/companies",
+    "step_2_validation_&_training_seconds": 0.01,
+    "step_3_faiss_candidate_generation_seconds": 14.29,
+    "step_4_active_learning_training_construction_seconds": 83.77,
+    "step_5_matcher_optimization_seconds": 43.47,
+    "step_7_6_end_to_end_metrics_seconds": 0.18
+  }
+]

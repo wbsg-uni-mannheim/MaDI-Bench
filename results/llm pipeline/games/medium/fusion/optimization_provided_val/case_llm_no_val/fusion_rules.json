@@ -1,0 +1,56 @@
+{
+  "attribute_rules": {
+    "ESRB": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "criticScore": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "developer": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "genres": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "platform": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "publisher": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "releaseYear": {
+      "kwargs": {},
+      "resolver": "earliest"
+    },
+    "series": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "units_sold_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "userScore": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  }
+}

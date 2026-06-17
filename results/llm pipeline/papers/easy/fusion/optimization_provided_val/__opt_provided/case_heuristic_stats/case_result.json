@@ -1,0 +1,361 @@
+{
+  "case_name": "heuristic_stats",
+  "rules": {
+    "abstract_text": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "authors": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "cited_by_count": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "first_page": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "issue": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    },
+    "journal": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    },
+    "keywords": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "last_page": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    },
+    "publication_year": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    },
+    "publisher": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "referenced_works_count": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "title": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "type": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "volume": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": {
+    "type": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "type",
+        "correct": 63,
+        "total": 97,
+        "accuracy": 0.6495
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "type",
+        "correct": 78,
+        "total": 98,
+        "accuracy": 0.7959
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "type",
+        "correct": 79,
+        "total": 97,
+        "accuracy": 0.8144
+      }
+    },
+    "title": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "title",
+        "correct": 53,
+        "total": 100,
+        "accuracy": 0.53
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "title",
+        "correct": 67,
+        "total": 100,
+        "accuracy": 0.67
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "title",
+        "correct": 52,
+        "total": 100,
+        "accuracy": 0.52
+      }
+    },
+    "authors": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "authors",
+        "correct": 0,
+        "total": 94,
+        "accuracy": 0.0
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "authors",
+        "correct": 0,
+        "total": 95,
+        "accuracy": 0.0
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "authors",
+        "correct": 0,
+        "total": 96,
+        "accuracy": 0.0
+      }
+    },
+    "publication_year": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "publication_year",
+        "correct": 99,
+        "total": 99,
+        "accuracy": 1.0
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "publication_year",
+        "correct": 99,
+        "total": 99,
+        "accuracy": 1.0
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "publication_year",
+        "correct": 98,
+        "total": 98,
+        "accuracy": 1.0
+      }
+    },
+    "journal": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "journal",
+        "correct": 69,
+        "total": 73,
+        "accuracy": 0.9452
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "journal",
+        "correct": 0,
+        "total": 70,
+        "accuracy": 0.0
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "journal",
+        "correct": 64,
+        "total": 68,
+        "accuracy": 0.9412
+      }
+    },
+    "keywords": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "keywords",
+        "correct": 0,
+        "total": 71,
+        "accuracy": 0.0
+      }
+    },
+    "volume": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "volume",
+        "correct": 68,
+        "total": 68,
+        "accuracy": 1.0
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "volume",
+        "correct": 74,
+        "total": 74,
+        "accuracy": 1.0
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "volume",
+        "correct": 71,
+        "total": 72,
+        "accuracy": 0.9861
+      }
+    },
+    "issue": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "issue",
+        "correct": 37,
+        "total": 37,
+        "accuracy": 1.0
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "issue",
+        "correct": 37,
+        "total": 37,
+        "accuracy": 1.0
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "issue",
+        "correct": 28,
+        "total": 29,
+        "accuracy": 0.9655
+      }
+    },
+    "first_page": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "first_page",
+        "correct": 77,
+        "total": 79,
+        "accuracy": 0.9747
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "first_page",
+        "correct": 17,
+        "total": 18,
+        "accuracy": 0.9444
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "first_page",
+        "correct": 81,
+        "total": 83,
+        "accuracy": 0.9759
+      }
+    },
+    "last_page": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "last_page",
+        "correct": 78,
+        "total": 79,
+        "accuracy": 0.9873
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "last_page",
+        "correct": 80,
+        "total": 82,
+        "accuracy": 0.9756
+      },
+      "dblp": {
+        "source_name": "dblp",
+        "attribute": "last_page",
+        "correct": 15,
+        "total": 17,
+        "accuracy": 0.8824
+      }
+    },
+    "referenced_works_count": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "referenced_works_count",
+        "correct": 53,
+        "total": 84,
+        "accuracy": 0.631
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "referenced_works_count",
+        "correct": 74,
+        "total": 83,
+        "accuracy": 0.8916
+      }
+    },
+    "cited_by_count": {
+      "open_alex": {
+        "source_name": "open_alex",
+        "attribute": "cited_by_count",
+        "correct": 44,
+        "total": 81,
+        "accuracy": 0.5432
+      },
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "cited_by_count",
+        "correct": 36,
+        "total": 85,
+        "accuracy": 0.4235
+      }
+    },
+    "publisher": {
+      "crossref": {
+        "source_name": "crossref",
+        "attribute": "publisher",
+        "correct": 16,
+        "total": 62,
+        "accuracy": 0.2581
+      }
+    }
+  },
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

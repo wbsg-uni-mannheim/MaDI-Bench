@@ -1,0 +1,12 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+name,1.0,60347,60347,0,False,{},{},False,
+releaseYear,0.024259633342226628,52474,1273,51201,False,"{""date_range"": 20, ""format.date"": 51201, ""pattern"": 51201}",{},False,
+developer,1.0,53696,53696,0,False,{},{},False,
+genres,0.0,55149,0,55149,False,"{""type"": 55149}","{""taxonomy"": {""exhaustive"": false, ""known_value_rate"": 0.03423452827793795, ""membership_enforced"": false, ""n_known_values"": 1888, ""n_unknown_values"": 53261, ""n_values_checked"": 55149}}",False,
+publisher,1.0,7048,7048,0,False,{},{},False,
+platform,1.0,48921,48921,0,False,{},"{""taxonomy"": {""exhaustive"": false, ""known_value_rate"": 1.0, ""membership_enforced"": false, ""n_known_values"": 48921, ""n_unknown_values"": 0, ""n_values_checked"": 48921}}",False,
+criticScore,0.9848244220928181,22668,22324,344,False,"{""type"": 344}",{},False,
+userScore,0.9898139486539861,19242,19046,196,False,"{""type"": 196}",{},False,
+ESRB,1.0,20452,20452,0,False,{},"{""taxonomy"": {""exhaustive"": true, ""known_value_rate"": 1.0, ""membership_enforced"": true, ""n_known_values"": 20452, ""n_unknown_values"": 0, ""n_values_checked"": 20452}}",False,
+series,1.0,12824,12824,0,False,{},{},False,

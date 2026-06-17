@@ -1,0 +1,305 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "products-augmented-medium",
+    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/medium/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/augmented/products/medium/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.909903634041565,
+    "n_evaluated": 17226,
+    "n_consistent": 15674,
+    "n_inconsistent": 1552,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "brand": {
+        "consistency_score": 1.0,
+        "n_evaluated": 1342,
+        "n_consistent": 1342,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "title": {
+        "consistency_score": 1.0,
+        "n_evaluated": 1479,
+        "n_consistent": 1479,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "description": {
+        "consistency_score": 1.0,
+        "n_evaluated": 1479,
+        "n_consistent": 1479,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "price": {
+        "consistency_score": 0.9704016913319239,
+        "n_evaluated": 1419,
+        "n_consistent": 1377,
+        "n_inconsistent": 42,
+        "failure_counts": {
+          "type": 42
+        },
+        "excluded_from_dataset_score": false
+      },
+      "priceCurrency": {
+        "consistency_score": 0.9709013484740951,
+        "n_evaluated": 1409,
+        "n_consistent": 1368,
+        "n_inconsistent": 41,
+        "failure_counts": {
+          "currency_code": 30,
+          "pattern": 26
+        },
+        "excluded_from_dataset_score": false
+      },
+      "url": {
+        "consistency_score": 0.7377049180327869,
+        "n_evaluated": 1098,
+        "n_consistent": 810,
+        "n_inconsistent": 288,
+        "failure_counts": {
+          "pattern": 288
+        },
+        "excluded_from_dataset_score": false
+      },
+      "title_description": {
+        "consistency_score": 1.0,
+        "n_evaluated": 1479,
+        "n_consistent": 1479,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "model": {
+        "consistency_score": 1.0,
+        "n_evaluated": 1340,
+        "n_consistent": 1340,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "model_number": {
+        "consistency_score": 0.9975062344139651,
+        "n_evaluated": 802,
+        "n_consistent": 800,
+        "n_inconsistent": 2,
+        "failure_counts": {
+          "pattern": 2
+        },
+        "excluded_from_dataset_score": false
+      },
+      "product_type": {
+        "consistency_score": 0.7189728958630528,
+        "n_evaluated": 1402,
+        "n_consistent": 1008,
+        "n_inconsistent": 394,
+        "failure_counts": {
+          "enum": 394
+        },
+        "excluded_from_dataset_score": false
+      },
+      "chipset_name": {
+        "consistency_score": 0.3544018058690745,
+        "n_evaluated": 443,
+        "n_consistent": 157,
+        "n_inconsistent": 286,
+        "failure_counts": {
+          "field_applicability": 286
+        },
+        "excluded_from_dataset_score": false
+      },
+      "vram_gb": {
+        "consistency_score": 0.8652482269503546,
+        "n_evaluated": 141,
+        "n_consistent": 122,
+        "n_inconsistent": 19,
+        "failure_counts": {
+          "field_applicability": 11,
+          "type": 9
+        },
+        "excluded_from_dataset_score": false
+      },
+      "storage_gb": {
+        "consistency_score": 0.40998487140695916,
+        "n_evaluated": 661,
+        "n_consistent": 271,
+        "n_inconsistent": 390,
+        "failure_counts": {
+          "field_applicability": 58,
+          "minimum": 3,
+          "type": 339
+        },
+        "excluded_from_dataset_score": false
+      },
+      "read_speed_mb_s": {
+        "consistency_score": 0.5,
+        "n_evaluated": 112,
+        "n_consistent": 56,
+        "n_inconsistent": 56,
+        "failure_counts": {
+          "field_applicability": 3,
+          "type": 55
+        },
+        "excluded_from_dataset_score": false
+      },
+      "write_speed_mb_s": {
+        "consistency_score": 0.8617886178861789,
+        "n_evaluated": 123,
+        "n_consistent": 106,
+        "n_inconsistent": 17,
+        "failure_counts": {
+          "field_applicability": 3,
+          "type": 15
+        },
+        "excluded_from_dataset_score": false
+      },
+      "bus_type": {
+        "consistency_score": 1.0,
+        "n_evaluated": 783,
+        "n_consistent": 783,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "open_taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 783,
+            "n_expected_family_matches": 768,
+            "n_outside_expected_families": 15,
+            "expected_family_match_rate": 0.9808429118773946
+          }
+        }
+      },
+      "interface_type": {
+        "consistency_score": 1.0,
+        "n_evaluated": 442,
+        "n_consistent": 442,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "open_taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 442,
+            "n_expected_family_matches": 410,
+            "n_outside_expected_families": 32,
+            "expected_family_match_rate": 0.9276018099547512
+          }
+        }
+      },
+      "width_mm": {
+        "consistency_score": 1.0,
+        "n_evaluated": 42,
+        "n_consistent": 42,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "length_mm": {
+        "consistency_score": 0.975,
+        "n_evaluated": 40,
+        "n_consistent": 39,
+        "n_inconsistent": 1,
+        "failure_counts": {
+          "type": 1
+        },
+        "excluded_from_dataset_score": false
+      },
+      "height_mm": {
+        "consistency_score": 1.0,
+        "n_evaluated": 47,
+        "n_consistent": 47,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "weight_g": {
+        "consistency_score": 1.0,
+        "n_evaluated": 32,
+        "n_consistent": 32,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "storage_connection_type": {
+        "consistency_score": 0.9723502304147466,
+        "n_evaluated": 434,
+        "n_consistent": 422,
+        "n_inconsistent": 12,
+        "failure_counts": {
+          "field_applicability": 12
+        },
+        "excluded_from_dataset_score": false
+      },
+      "memory_type": {
+        "consistency_score": 0.9726027397260274,
+        "n_evaluated": 146,
+        "n_consistent": 142,
+        "n_inconsistent": 4,
+        "failure_counts": {
+          "field_applicability": 4
+        },
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "open_taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 146,
+            "n_expected_family_matches": 144,
+            "n_outside_expected_families": 2,
+            "expected_family_match_rate": 0.9863013698630136
+          }
+        }
+      },
+      "color": {
+        "consistency_score": 1.0,
+        "n_evaluated": 134,
+        "n_consistent": 134,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "form_factor": {
+        "consistency_score": 1.0,
+        "n_evaluated": 397,
+        "n_consistent": 397,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "open_taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 397,
+            "n_expected_family_matches": 384,
+            "n_outside_expected_families": 13,
+            "expected_family_match_rate": 0.9672544080604534
+          }
+        }
+      }
+    },
+    "columns_missing_from_dataframe": [],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources",
+      "cluster_id"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

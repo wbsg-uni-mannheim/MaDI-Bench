@@ -1,0 +1,115 @@
+{
+  "best_case_key": "llm_no_val",
+  "best_case_name": "llm_no_val",
+  "best_validation_accuracy": 0.3813186813186813,
+  "best_test_accuracy": 0.3408179631114675,
+  "best_case_dir": "DI-Bench/runs/augmented/products/hard/fusion/optimization_provided_val/case_llm_no_val",
+  "rules": {
+    "brand": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "bus_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "chipset_name": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "cluster_id": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "color": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "description": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "form_factor": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "height_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "interface_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "length_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "memory_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "model": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "model_number": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "price": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "priceCurrency": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "product_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "read_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "storage_connection_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "storage_gb": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "title_description": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "url": {
+      "kwargs": {
+        "separator": "|"
+      },
+      "resolver": "union"
+    },
+    "vram_gb": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "weight_g": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "width_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "write_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  }
+}

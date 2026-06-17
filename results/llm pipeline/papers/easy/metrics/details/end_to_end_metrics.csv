@@ -1,0 +1,16 @@
+case,metric,value,source_file
+papers-augmented-easy,input_sources,3,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,total_input_records,182213,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,fused_output_records,95133,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,fusion_ratio,0.4779,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,row_gain_over_largest,34315,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,row_gain_percentage,56.42,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,merged_records,50439,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,input_columns_target_schema,15,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,fused_output_columns,16,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,average_input_density,0.6348,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,fused_data_density,0.76,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,data_density_change,0.1251,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,largest_source_name,open_alex,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,largest_source_density,0.7696,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json
+papers-augmented-easy,density_change_vs_largest,-0.0097,DI-Bench/runs/augmented/papers/easy/end_to_end_metrics.json

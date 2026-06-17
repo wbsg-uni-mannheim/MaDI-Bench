@@ -1,0 +1,110 @@
+{
+  "attribute_rules": {
+    "brand": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "bus_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "chipset_name": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "cluster_id": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "color": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "description": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "form_factor": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "height_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "interface_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "length_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "memory_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "model": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "model_number": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "price": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "priceCurrency": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "product_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "read_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "storage_connection_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "storage_gb": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "title_description": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "url": {
+      "kwargs": {
+        "separator": "|"
+      },
+      "resolver": "union"
+    },
+    "vram_gb": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "weight_g": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "width_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "write_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  }
+}

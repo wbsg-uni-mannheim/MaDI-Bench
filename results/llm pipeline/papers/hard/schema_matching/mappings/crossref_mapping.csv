@@ -1,0 +1,13 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+crossref,id,Scholarly Paper,id,0.95,llm_based_matching
+crossref,typ,Scholarly Paper,type,0.95,llm_based_matching
+crossref,ttl,Scholarly Paper,title,0.95,llm_based_matching
+crossref,auth_list,Scholarly Paper,authors,0.95,llm_based_matching
+crossref,pub_year,Scholarly Paper,publication_year,0.95,llm_based_matching
+crossref,venue,Scholarly Paper,journal,0.95,llm_based_matching
+crossref,vol,Scholarly Paper,volume,0.95,llm_based_matching
+crossref,iss_no,Scholarly Paper,issue,0.95,llm_based_matching
+crossref,pg_first,Scholarly Paper,first_page,0.95,llm_based_matching
+crossref,pg_last,Scholarly Paper,last_page,0.95,llm_based_matching
+crossref,ref_count,Scholarly Paper,referenced_works_count,0.95,llm_based_matching
+crossref,cited_count,Scholarly Paper,cited_by_count,0.95,llm_based_matching

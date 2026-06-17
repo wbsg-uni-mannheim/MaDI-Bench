@@ -1,0 +1,107 @@
+{
+  "overall_accuracy": 0.4014388489208633,
+  "total_comparisons": 2085,
+  "correct_comparisons": 837,
+  "per_attribute_accuracy": {
+    "title_description": {
+      "accuracy": 0.32323232323232326,
+      "total": 99
+    },
+    "vram_gb": {
+      "accuracy": 0.88,
+      "total": 25
+    },
+    "product_type": {
+      "accuracy": 1.0,
+      "total": 100
+    },
+    "height_mm": {
+      "accuracy": 0.09183673469387756,
+      "total": 98
+    },
+    "weight_g": {
+      "accuracy": 0.06976744186046512,
+      "total": 86
+    },
+    "brand": {
+      "accuracy": 0.89,
+      "total": 100
+    },
+    "storage_connection_type": {
+      "accuracy": 0.4583333333333333,
+      "total": 72
+    },
+    "priceCurrency": {
+      "accuracy": 0.54,
+      "total": 100
+    },
+    "description": {
+      "accuracy": 0.31,
+      "total": 100
+    },
+    "write_speed_mb_s": {
+      "accuracy": 0.4126984126984127,
+      "total": 63
+    },
+    "read_speed_mb_s": {
+      "accuracy": 0.4857142857142857,
+      "total": 70
+    },
+    "width_mm": {
+      "accuracy": 0.09183673469387756,
+      "total": 98
+    },
+    "memory_type": {
+      "accuracy": 0.6875,
+      "total": 32
+    },
+    "url": {
+      "accuracy": 0.14,
+      "total": 100
+    },
+    "bus_type": {
+      "accuracy": 0.62,
+      "total": 100
+    },
+    "model": {
+      "accuracy": 0.26262626262626265,
+      "total": 99
+    },
+    "chipset_name": {
+      "accuracy": 0.28,
+      "total": 25
+    },
+    "interface_type": {
+      "accuracy": 0.2,
+      "total": 100
+    },
+    "title": {
+      "accuracy": 0.33,
+      "total": 100
+    },
+    "color": {
+      "accuracy": 0.265625,
+      "total": 64
+    },
+    "model_number": {
+      "accuracy": 0.5050505050505051,
+      "total": 99
+    },
+    "form_factor": {
+      "accuracy": 0.5,
+      "total": 82
+    },
+    "price": {
+      "accuracy": 0.4,
+      "total": 100
+    },
+    "storage_gb": {
+      "accuracy": 0.64,
+      "total": 75
+    },
+    "length_mm": {
+      "accuracy": 0.12244897959183673,
+      "total": 98
+    }
+  }
+}

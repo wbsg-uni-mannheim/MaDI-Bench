@@ -1,0 +1,200 @@
+# Knob 01 - Surface Augmentation Intensity - Products
+#
+# All four products_<n>.json sources share the same canonical schema
+# (id, title, brand, description, price, priceCurrency, cluster_id,
+# url). Post-2026-05-15 rewrite, the on-disk ``id`` column carries
+# source-prefixed string ids (``products_<n>_<original_int>``) that
+# are unambiguously cross-source unique.
+
+domain: products
+
+id_columns:
+  products_1: id
+  products_2: id
+  products_3: id
+  products_4: id
+
+attribute_classes:
+  products_1:
+    product_name: primary
+    manufacturer: key
+    product_description: secondary
+    list_price: secondary
+    name_and_description: secondary
+    category: key
+    model_name: secondary
+    manufacturer_part_number: secondary
+    gpu_chipset: secondary
+    video_memory_gb: secondary
+    capacity_gb: secondary
+  products_2:
+    name: primary
+    brandName: key
+    descriptionText: secondary
+    priceAmount: secondary
+    titleAndDescription: secondary
+    productCategory: key
+    modelName: secondary
+    mpn: secondary
+    chipset: secondary
+    vramGb: secondary
+    capacityGb: secondary
+  products_3:
+    ProductTitle: primary
+    Brand: key
+    Details: secondary
+    Price: secondary
+    TitleDetails: secondary
+    Type: key
+    Model: secondary
+    PartNo: secondary
+    Chipset: secondary
+    MemorySizeGB: secondary
+    CapacityGB: secondary
+  products_4:
+    name: primary
+    mfr: key
+    desc: secondary
+    amt: secondary
+    name_desc: secondary
+    cat: key
+    mdl: secondary
+    pn: secondary
+    chip: secondary
+    vram: secondary
+    cap_gb: secondary
+
+attribute_mapping:
+  products_1:
+    product_name: title
+    manufacturer: brand
+    product_description: description
+    list_price: price
+    name_and_description: title_description
+    category: product_type
+    model_name: model
+    manufacturer_part_number: model_number
+    gpu_chipset: chipset_name
+    video_memory_gb: vram_gb
+    capacity_gb: storage_gb
+  products_2:
+    name: title
+    brandName: brand
+    descriptionText: description
+    priceAmount: price
+    titleAndDescription: title_description
+    productCategory: product_type
+    modelName: model
+    mpn: model_number
+    chipset: chipset_name
+    vramGb: vram_gb
+    capacityGb: storage_gb
+  products_3:
+    ProductTitle: title
+    Brand: brand
+    Details: description
+    Price: price
+    TitleDetails: title_description
+    Type: product_type
+    Model: model
+    PartNo: model_number
+    Chipset: chipset_name
+    MemorySizeGB: vram_gb
+    CapacityGB: storage_gb
+  products_4:
+    name: title
+    mfr: brand
+    desc: description
+    amt: price
+    name_desc: title_description
+    cat: product_type
+    mdl: model
+    pn: model_number
+    chip: chipset_name
+    vram: vram_gb
+    cap_gb: storage_gb
+
+paraphrase_rate_primary:
+  easy: 0.0
+  medium: 0.04
+  hard: 0.12
+paraphrase_rate_key:
+  easy: 0.0
+  medium: 0.08
+  hard: 0.18
+paraphrase_rate_secondary:
+  easy: 0.0
+  medium: 0.16
+  hard: 0.30
+paraphrase_rate_categorical:
+  easy: 0.0
+  medium: 0.08
+  hard: 0.18
+
+operator_mix:
+  easy:
+    # Note: dormant under `paraphrase_rate_*.easy: 0.0` (the rate-based
+    # dispatcher short-circuits before reaching operator sampling at easy).
+    # The easy normalize-down work runs via `baseline_above_target_rules`
+    # at a separate code path. Kept as defensive placeholder for any future
+    # easy-rate bump.
+    normalize_to_canonical: 1.0
+  medium:
+    abbreviate: 2.0
+    eda_random_swap: 1.0
+    eda_random_delete: 1.0
+    llm_paraphrase: 1.0
+  hard:
+    abbreviate: 1.5
+    eda_random_swap: 1.0
+    eda_random_delete: 1.0
+    llm_paraphrase: 3.0
+
+baseline_above_target_rules: []
+
+# Products noisy-text characteristics suggest unit-symbol abbreviations
+# in description fields (GB, GHz, etc.). Stub table; expand in S13.
+abbreviation_table:
+  Gigabyte: "GB"
+  Megabyte: "MB"
+  Terabyte: "TB"
+  Megahertz: "MHz"
+  Gigahertz: "GHz"
+
+stopword_list:
+  - the
+  - a
+  - an
+  - of
+  - and
+  - with
+
+key_token_skiplist:
+  products_1: &products_key_token_skiplist
+    title: []
+    brand: []
+    product_type: []
+  products_2: *products_key_token_skiplist
+  products_3: *products_key_token_skiplist
+  products_4: *products_key_token_skiplist
+
+key_token_skiplist_global: []
+
+# Hard-path LLM config. Default model gpt-5.4-mini per the 2026-05-06
+# LLM-model-default decision (~5x cheaper than full gpt-5.4). Before
+# each K1 hard run, ask the user whether to bump to gpt-5.4
+# (invalidates the on-disk LLM cache via the model_id cache key).
+# R10-D 2026-05-29: prompt_version bumped to v2 -- minimum-divergence
+# rule, <UNCHANGED> sentinel escape, per-attribute-class prompt
+# split (primary/key -> short_v2, secondary -> secondary_v2,
+# categorical -> categorical_v2). Cache key under
+# cache/knob_01_paraphrases/<domain>/<level>/ rotates on this bump.
+llm_prompt_version: v2
+llm_model_id: gpt-5.4-mini
+llm_temperature: 0.0
+
+anchor_survivor_floor:
+  primary: true
+  key: false
+  secondary: false
+  categorical: false

@@ -1,0 +1,3 @@
+case,pair,split,f1,precision,recall,matcher,threshold,source_file,note
+music,discogs__musicbrainz,pipeline_validation,0.9847715736040608,1.0,0.97,MLBasedMatcher,0.4,DI-Bench/runs/music/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+music,lastfm__musicbrainz,pipeline_validation,0.9949748743718592,1.0,0.99,MLBasedMatcher,0.3,DI-Bench/runs/music/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.

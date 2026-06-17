@@ -1,0 +1,74 @@
+[
+  {
+    "case": "companies-augmented-hard",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": null,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "companies-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 18,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 18,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "companies-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 18,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 18,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "companies-augmented-hard",
+    "category": "entity_matching",
+    "denominator": 2,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/augmented/companies/hard/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.8742164502164502
+  },
+  {
+    "case": "companies-augmented-hard",
+    "category": "fusion",
+    "denominator": 516,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 229,
+    "source_file": "DI-Bench/runs/augmented/companies/hard/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.4437984496124031
+  },
+  {
+    "case": "companies-augmented-hard",
+    "category": "consistency",
+    "denominator": 51471,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 39017,
+    "source_file": "DI-Bench/runs/augmented/companies/hard/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.7580385071205145
+  }
+]

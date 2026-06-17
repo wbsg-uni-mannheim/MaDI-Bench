@@ -1,0 +1,68 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "MusicBrainz Album Subset",
+  "description": "Subset of the MusicBrainz dataset covering more than 4,000 different albums (releases). Releases are described by attributes such as title, artist, release date, release country, and the list of tracks contained on the album. Some attribute values are missing or incorrect. The dataset is provided as XML and uses the MusicBrainz MMD 2.0 namespace.",
+  "url": "https://musicbrainz.org/",
+  "keywords": [
+    "MusicBrainz",
+    "music metadata",
+    "albums",
+    "releases",
+    "tracklist",
+    "XML",
+    "MMD 2.0"
+  ],
+  "numberOfItems": 4763,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "musicbrainz.csv"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_1",
+      "description": "MusicBrainz-derived record identifier for the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_2",
+      "description": "Title of the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_3",
+      "description": "Artist or group credited for the release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_4",
+      "description": "Release date normalized to YYYY-MM-DD where available",
+      "unitText": "ISO 8601 date"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_5",
+      "description": "Country where the release was published",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_6",
+      "description": "Total duration of the release in seconds",
+      "unitText": "seconds"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_9",
+      "description": "List of track titles on the release",
+      "unitText": "string list"
+    }
+  ]
+}

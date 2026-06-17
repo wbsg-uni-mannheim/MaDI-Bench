@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+games-augmented-hard,heuristic,none,provided_validation,0.869639794168096,507,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-hard,llm_no_val,none,provided_validation,0.8216123499142367,479,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-hard,llm_val,provided,provided_validation,0.8644939965694682,504,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-hard,llm_val_stats,provided,provided_validation,0.8627787307032591,503,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-hard,heuristic_stats,provided,provided_validation,0.8610634648370498,502,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-hard,iterative,provided,provided_validation,0.8610634648370498,502,583,DI-Bench/runs/augmented/games/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

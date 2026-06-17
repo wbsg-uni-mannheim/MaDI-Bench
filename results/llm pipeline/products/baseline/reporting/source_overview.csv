@@ -1,0 +1,6 @@
+Source,Rows,Columns,Data Density,Density in Target Schema (26 cols)
+Prod1,812,27,58.30%,60.54% (27/26 × 58.30%)
+Prod2,812,27,57.72%,59.94% (27/26 × 57.72%)
+Prod3,762,27,57.12%,59.32% (27/26 × 57.12%)
+Prod4,626,27,57.60%,59.82% (27/26 × 57.60%)
+Total Input,3012,26 (target),57.69% avg,59.92% weighted avg

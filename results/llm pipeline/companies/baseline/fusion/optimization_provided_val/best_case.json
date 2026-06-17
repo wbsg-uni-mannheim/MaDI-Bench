@@ -1,0 +1,73 @@
+{
+  "best_case_key": "llm_val__opt_provided",
+  "best_case_name": "llm_val",
+  "best_validation_accuracy": 0.7849264705882353,
+  "best_test_accuracy": 0.6324167872648335,
+  "best_case_dir": "DI-Bench/runs/companies/fusion/optimization_provided_val/case_llm_val__opt_provided",
+  "rules": {
+    "assets": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "city": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      }
+    },
+    "country": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
+    },
+    "founded": {
+      "resolver": "earliest",
+      "kwargs": {}
+    },
+    "founders": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "industry": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
+    },
+    "keypeople_name": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "revenue": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "url": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    }
+  }
+}

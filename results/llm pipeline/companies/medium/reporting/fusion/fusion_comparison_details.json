@@ -1,0 +1,105 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_val__opt_provided",
+    "validation_accuracy": 0.6481481481481481,
+    "test_accuracy": 0.5683333333333334,
+    "per_attribute_accuracy": {
+      "name": {
+        "accuracy": 0.75,
+        "total": 100
+      },
+      "founded": {
+        "accuracy": 0.44,
+        "total": 100
+      },
+      "revenue": {
+        "accuracy": 0.17,
+        "total": 100
+      },
+      "city": {
+        "accuracy": 0.28,
+        "total": 100
+      },
+      "country": {
+        "accuracy": 0.84,
+        "total": 100
+      },
+      "assets": {
+        "accuracy": 0.93,
+        "total": 100
+      }
+    },
+    "rules": {
+      "assets": {
+        "resolver": "maximum",
+        "kwargs": {}
+      },
+      "city": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact"
+          ]
+        }
+      },
+      "country": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "founded": {
+        "resolver": "earliest",
+        "kwargs": {}
+      },
+      "industry": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "keypeople": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "name": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "revenue": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "forbes"
+          ]
+        }
+      },
+      "website": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "fullcontact",
+            "dbpedia"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,336 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) Use the validation feedback to understand which sources tend to be correct for each attribute.
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources (use kwargs.sources=['source1']), random_value
+
+Starting point (heuristic plan you can override):
+{
+  "Attribute_11": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "ESRB": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "criticScore": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "developer": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "genres": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "platform": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "publisher": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "releaseYear": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "series": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "userScore": {
+    "kwargs": {},
+    "resolver": "median"
+  }
+}
+
+Attribute diagnostics:
+   attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                     sample_values
+Attribute_11          False               None             False             False          False            False                                                                                                                                                                                                   [82 000, 35000, 28, 23, 22, 21, 21, 20,000,000]
+        ESRB          False               None             False             False          False            False                                                                                                                                                                                                                          [E, M, E, E, M, M, T, E]
+ criticScore          False               None             False              True          False            False                                                                                                                                                                                                  [97.0, 98.0, 97.0, 98.0, 94.0, 97.0, 99.0, 94.0]
+   developer          False               None             False             False          False            False                                                                                                             [Hamdbeld Gqmes, Ocean Software, Key (company), Black Isle Studios, Blitz Games Studio, High Moon Studios, Ubi Soft Barcelona, Namco]
+      genres          False               None             False             False          False            False                                                                                                     [Racing video game, Beat 'em up, Role-playing video game, Platform game, Third-person shooter, Racing game, Hack and slash, Action Adventure]
+        name          False               None             False             False          False            False [San Francisco Rush 2049, RoboCop (1988 video game), Fallout 2, SpongeBob SquarePants: Creature from the Krusty Krab, Transformers: Fall of Cybertron, List of Monster Jam video games, Onimusha: Warlords, Nicktoons: Battle for Volcano Island]
+    platform          False               None             False             False          False            False                                                                                                                                            [Game Boy Color, Arcade Cabinet, PlayStation Vita, macOS, Wii, PlayStation 4, Xbox One, PlayStation 2]
+   publisher          False               None             False             False          False            False                                                                                                                                                    [Nintcndo, Nintendo, Nintendo, Nintendo, Nintendo, Microsoft Game Studios, Nintendo, Minrehdo]
+ releaseYear          False               None             False             False           True            False                                                                          [1989-01-01 00:00:00, 2016-01-01 00:00:00, 1998-01-01 00:00:00, 2006-01-01 00:00:00, 2003-01-01 00:00:00, 2002-01-01 00:00:00, 2019-01-01 00:00:00, 2005-01-01 00:00:00]
+      series          False               None             False             False          False            False                                                                       [Fallout (series), 5ponge8ob SquarePants video games, Gtud (sefies), Firc Pro Wresthng, James Bond in video games, Monster Jam, Ecco the Dolphin (series), Disney Infinity]
+   userScore          False               None             False              True          False            False                                                                                                                                                                                                          [8.3, 8.0, 7.5, 7.9, 8.3, 9.1, 7.O, 8.3]
+
+Dataset overview:
+[
+  {
+    "dataset_name": "dbpedia",
+    "rows": 45358,
+    "columns": 7,
+    "trust_score": 1.0
+  },
+  {
+    "dataset_name": "metacritic",
+    "rows": 18735,
+    "columns": 9,
+    "trust_score": 2.733139718506055
+  },
+  {
+    "dataset_name": "sales",
+    "rows": 6985,
+    "columns": 11,
+    "trust_score": 3.0
+  }
+]
+
+VALIDATION FEEDBACK:
+(Showing which source values were correct for sample entities)
+
+Attribute "ESRB":
+  - Sources: sales=E10+
+    → Correct: E10+
+  - Sources: metacritic=T
+    → Correct: T
+  - Sources: metacritic=E
+    → Correct: T
+  - Sources: metacritic=E
+    → Correct: E
+  - Sources: sales=E, metacritic=E
+    → Correct: E
+
+Attribute "criticScore":
+  - Sources: metacritic=86.0
+    → Correct: 86.0
+  - Sources: metacritic=81.0, sales=80.0
+    → Correct: 81.0
+  - Sources: metacritic=84.0
+    → Correct: 84.0
+  - Sources: metacritic=91.0, sales=9 1
+    → Correct: 91.0
+  - Sources: metacritic=85.0
+    → Correct: 85.0
+
+Attribute "developer":
+  - Sources: dbpedia=Tantalus Media, metacritic=Tantalus,Tantatus,Nintendo
+    → Correct: Nintendo Entertainment Planning and Development
+  - Sources: dbpedia=PopCap Games, metacritic=PopCap, sales=PopCap
+    → Correct: PopCap
+  - Sources: dbpedia=P-Studio, metacritic=Arc 5ystcm Works
+    → Correct: Arc System Works
+  - Sources: metacritic=KCEJ, sales=KCEJ
+    → Correct: KCEJ
+  - Sources: metacritic=UNCHANGED
+    → Correct: SquareSoft
+
+Attribute "name":
+  - Sources: dbpedia=The Legend of Zelda: Twilight Princess, metacritic=The Legend of Zelda: Twilight Princess HD
+    → Correct: The Legend of Zelda: Twilight Princess HD
+  - Sources: dbpedia=Plants vs. Zombies: Garden Warfare 2, metacritic=Plants vs Zombies: Garden Warfare 2, sales=Plants vs. Zombies: Garden Warfare 2
+    → Correct: Plants vs Zombies: Garden Warfare 2
+  - Sources: dbpedia=Persona 4 Arena Ultimax, metacritic=Persona 4 Arena Ultimax
+    → Correct: Persona 4 Arena Ultimax
+  - Sources: metacritic=Metal Gear Solid 3: Snake Eater, sales=Metal Gear Solid 3: Snake Eater, dbpedia=Metal Gear Solid Snake 3: Eater
+    → Correct: Metal Gear Solid 3: Snake Eater
+  - Sources: metacritic=Final Fantasy X-2
+    → Correct: Final Fantasy X-2
+
+Attribute "platform":
+  - Sources: metacritic=Wii U
+    → Correct: Wii U
+  - Sources: metacritic=PlayStation 4, sales=Xbox One
+    → Correct: PlayStation 4
+  - Sources: dbpedia=PlayStation 3, metacritic=PlayStation 3
+    → Correct: PlayStation 3
+  - Sources: metacritic=PlayStation 2
+    → Correct: PlayStation 2
+  - Sources: metacritic=PlayStation 2
+    → Correct: PlayStation 2
+
+Attribute "publisher":
+  - Sources: sales=Arts
+    → Correct: Electronic Arts
+  - Sources: sales=Konami Digital Entertainment
+    → Correct: Konami Digital Entertainment
+  - Sources: sales=CodemastErs
+    → Correct: Codemasters
+  - Sources: sales=BAM! Entertainment
+    → Correct: BAM! Entertainment
+  - Sources: sales=Activision
+    → Correct: Activision
+
+Attribute "releaseYear":
+  - Sources: dbpedia=2006-01-01 00:00:00, metacritic=2016-01-01 00:00:00
+    → Correct: 2016-03-04 00:00:00
+  - Sources: dbpedia=2016-01-01 00:00:00, metacritic=2016-01-01 00:00:00, sales=2016-01-01 00:00:00
+    → Correct: 2016-02-23 00:00:00
+  - Sources: dbpedia=2013-01-01 00:00:00, metacritic=2014-01-01 00:00:00
+    → Correct: 2014-09-30 00:00:00
+  - Sources: metacritic=2004-01-01 00:00:00, dbpedia=2011-01-01 00:00:00
+    → Correct: 2004-11-17 00:00:00
+  - Sources: metacritic=2003-01-01 00:00:00
+    → Correct: 2003-11-18 00:00:00
+
+Attribute "userScore":
+  - Sources: metacritic=8.6
+    → Correct: 8.5
+  - Sources: metacritic=7.9, sales=8.1
+    → Correct: 7.9
+  - Sources: metacritic=5.2
+    → Correct: 7.6
+  - Sources: metacritic=8.1, sales=9.3
+    → Correct: 9.3
+  - Sources: metacritic=6.8
+    → Correct: 6.8
+
+
+
+SOURCE ACCURACY STATISTICS (from validation set):
+
+Attribute "ESRB":
+  - metacritic: 99% correct (73/74 values)
+  - sales: 100% correct (18/18 values)
+
+Attribute "criticScore":
+  - metacritic: 99% correct (81/82 values)
+  - sales: 88% correct (14/16 values)
+
+Attribute "developer":
+  - dbpedia: 67% correct (32/48 values)
+  - metacritic: 67% correct (56/83 values)
+  - sales: 67% correct (12/18 values)
+
+Attribute "name":
+  - dbpedia: 84% correct (43/51 values)
+  - metacritic: 98% correct (82/84 values)
+  - sales: 100% correct (20/20 values)
+
+Attribute "platform":
+  - dbpedia: 57% correct (25/44 values)
+  - metacritic: 99% correct (82/83 values)
+  - sales: 56% correct (10/18 values)
+
+Attribute "publisher":
+  - sales: 74% correct (14/19 values)
+
+Attribute "releaseYear":
+  - dbpedia: 64% correct (29/45 values)
+  - metacritic: 89% correct (72/81 values)
+  - sales: 93% correct (13/14 values)
+
+Attribute "userScore":
+  - metacritic: 83% correct (58/70 values)
+  - sales: 79% correct (11/14 values)
+
+RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
+consider using 'favour_sources' to prefer that source's values.
+
+PREVIOUS ITERATION RULES (you may keep, modify, or discard):
+{
+  "Attribute_11": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "ESRB": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "criticScore": {
+    "kwargs": {
+      "sources": [
+        "metacritic"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "developer": {
+    "kwargs": {
+      "sources": [
+        "metacritic",
+        "sales"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "genres": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "name": {
+    "kwargs": {
+      "sources": [
+        "metacritic"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "platform": {
+    "kwargs": {
+      "sources": [
+        "metacritic"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "publisher": {
+    "kwargs": {
+      "sources": [
+        "sales"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "releaseYear": {
+    "kwargs": {
+      "sources": [
+        "metacritic"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "series": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "userScore": {
+    "kwargs": {
+      "sources": [
+        "metacritic"
+      ]
+    },
+    "resolver": "favour_sources"
+  }
+}
+
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.
+- For attributes where validation shows one source is consistently correct, consider using favour_sources.

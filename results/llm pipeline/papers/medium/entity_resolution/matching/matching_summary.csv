@@ -1,0 +1,3 @@
+left,right,best_matcher,f1,precision,recall,threshold,test_f1,test_precision,test_recall
+crossref,dblp,MLBasedMatcher,0.9950248756218906,0.9900990099009901,1.0,0.6,0.9826060421116874,0.9993792675356921,0.9663865546218487
+open_alex,dblp,MLBasedMatcher,1.0,1.0,1.0,0.7,0.7686622320768661,1.0,0.6242496998799519

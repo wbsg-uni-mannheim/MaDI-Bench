@@ -1,0 +1,10 @@
+step,runtime_sec,prompt_tokens,completion_tokens,embedding_tokens,total_tokens,cost_usd,requests,web_searches
+Step 1a: Schema Matching,9.51,8721,439,0,9160,0.0,3,0
+Step 1b: Normalization,216.87,95133,59819,0,154952,0.0,31,0
+Step 2: Validation & Training,1045.44,328757,14460,824677,343217,0.0,1804,0
+Step 3: FAISS Candidate Generation,16.77,939,464,0,1403,0.0,2,0
+Step 4: Active Learning Training Construction,453.12,203535,8912,0,212447,0.0,1114,0
+Step 5: Matcher Optimization,153.13,0,0,0,0,0.0,0,0
+Step 7.8: Fusion Optimization (Provided Val),280.17,16281,9298,0,25579,0.0,6,0
+Step 7.6: End-to-End Metrics,0.78,0,0,0,0,0.0,0,0
+TOTAL,2175.8,653366,93392,824677,746758,0.0,2960,0

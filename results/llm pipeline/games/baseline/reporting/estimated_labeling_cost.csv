@@ -1,0 +1,4 @@
+dataset_pair,num_candidates,sampled_pairs,input_tokens,output_tokens,estimated_cost_usd,estimate_mode
+Dbpedia-Metacritic,409880,10000,84095448,6148200,233.2418,sampled
+Dbpedia-Sales,157540,10000,31063895,2363100,87.4452,sampled
+TOTAL,567420,20000,115159343,8511300,320.687,sampled

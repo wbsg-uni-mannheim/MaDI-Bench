@@ -1,0 +1,81 @@
+{
+  "case_name": "llm_no_val",
+  "rules": {
+    "abstract_text": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "authors": {
+      "kwargs": {
+        "separator": ";"
+      },
+      "resolver": "union"
+    },
+    "cited_by_count": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "doi_code": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "doi_ref": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "doi_value": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "first_page": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "issue": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "journal": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "last_page": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "publication_year": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "publisher_name": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "referenced_works_count": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "topic_terms": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "volume": {
+      "kwargs": {},
+      "resolver": "voting"
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

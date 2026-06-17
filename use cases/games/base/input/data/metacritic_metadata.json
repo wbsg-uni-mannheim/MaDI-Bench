@@ -1,0 +1,98 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Best Video Games of All Time - Metacritic",
+  "description": "Dataset derived from the Kaggle dataset 'Best Video Games of All Time - Metacritic'. It contains around 20,500 videogames with information about their release date, developer, platform, genres, number of players, ESRB rating, metascore, user score.",
+  "url": "https://www.kaggle.com/datasets/darianogina/best-video-games-of-all-time-metacritic",
+  "keywords": [
+    "Kaggle",
+    "Metacritic",
+    "videogames",
+    "developer",
+    "platform",
+    "genres",
+    "ESRB",
+    "metascore",
+    "user score"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "identifier": "best-video-games-of-all-time-metacritic",
+  "version": "2",
+  "datePublished": "2023-09-01",
+  "dateModified": "2024-01-05",
+  "numberOfItems": 20494,
+  "temporalCoverage": "1970-01-01/2023-09-01",
+  "creator": {
+    "@type": "Person",
+    "name": "Daria Nogina",
+    "url": "https://www.kaggle.com/darianogina"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Kaggle",
+    "url": "https://www.kaggle.com/"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "metacritic.csv"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "mc_id",
+      "description": "Metacritic-derived record identifier for the videogame",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "game_title",
+      "description": "Videogame title as listed by Metacritic",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "year_published",
+      "description": "Release date normalized to YYYY-MM-DD where available",
+      "unitText": "ISO 8601 date"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "made_by",
+      "description": "Developer or studio listed by Metacritic",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "console",
+      "description": "Platform or console listed by Metacritic",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "genres",
+      "description": "Genre labels listed by Metacritic",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "press_rating",
+      "description": "Critic score given by Metacritic",
+      "unitText": "float, range 0-100"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "player_rating",
+      "description": "User score given by Metacritic",
+      "unitText": "float, range 0-10"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "age_rating",
+      "description": "ESRB age rating",
+      "unitText": "string"
+    }
+  ]
+}

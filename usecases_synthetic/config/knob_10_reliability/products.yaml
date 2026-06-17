@@ -1,0 +1,177 @@
+# Knob 10 — Source Reliability Differentiation: Products domain config.
+#
+# Per-domain notes (placeholder until products baseline is measured in S11):
+# all four sources share the same schema and there is no a-priori winner
+# per attribute. The targets below distribute mass roughly uniformly at
+# easy with a slight bias toward products_1 (anchor source); medium and
+# hard flatten further. S13 will recalibrate after baseline measurement.
+
+domain: products
+
+id_columns:
+  products_1: id
+  products_2: id
+  products_3: id
+  products_4: id
+
+attribute_mapping:
+  products_1:
+    product_name: title
+    manufacturer: brand
+    product_description: description
+    list_price: price
+    category: product_type
+    model_name: model
+    gpu_chipset: chipset_name
+    video_memory_gb: vram_gb
+    capacity_gb: storage_gb
+    currency_code: priceCurrency
+    manufacturer_part_number: model_number
+    name_and_description: title_description
+    bus_standard: bus_type
+    interface: interface_type
+    memory_technology: memory_type
+    connector: storage_connection_type
+    form_factor: form_factor
+    sequential_read_mb_s: read_speed_mb_s
+    sequential_write_mb_s: write_speed_mb_s
+    colour: color
+    width_millimeters: width_mm
+    length_millimeters: length_mm
+    height_millimeters: height_mm
+    weight_grams: weight_g
+  products_2:
+    name: title
+    brandName: brand
+    descriptionText: description
+    priceAmount: price
+    productCategory: product_type
+    modelName: model
+    chipset: chipset_name
+    vramGb: vram_gb
+    capacityGb: storage_gb
+    currency: priceCurrency
+    mpn: model_number
+    titleAndDescription: title_description
+    busType: bus_type
+    interfaceType: interface_type
+    memoryType: memory_type
+    connectionType: storage_connection_type
+    formFactor: form_factor
+    readSpeedMbps: read_speed_mb_s
+    writeSpeedMbps: write_speed_mb_s
+    color: color
+    widthMm: width_mm
+    depthMm: length_mm
+    heightMm: height_mm
+    weightG: weight_g
+  products_3:
+    ProductTitle: title
+    Brand: brand
+    Details: description
+    Price: price
+    Type: product_type
+    Model: model
+    Chipset: chipset_name
+    MemorySizeGB: vram_gb
+    CapacityGB: storage_gb
+    Currency: priceCurrency
+    PartNo: model_number
+    TitleDetails: title_description
+    Bus: bus_type
+    Interface: interface_type
+    MemoryType: memory_type
+    Connector: storage_connection_type
+    FormFactor: form_factor
+    ReadMBs: read_speed_mb_s
+    WriteMBs: write_speed_mb_s
+    Colour: color
+    WidthMM: width_mm
+    LengthMM: length_mm
+    HeightMM: height_mm
+    WeightG: weight_g
+  products_4:
+    name: title
+    mfr: brand
+    desc: description
+    amt: price
+    cat: product_type
+    mdl: model
+    chip: chipset_name
+    vram: vram_gb
+    cap_gb: storage_gb
+    cur: priceCurrency
+    pn: model_number
+    name_desc: title_description
+    bus: bus_type
+    iface: interface_type
+    mem: memory_type
+    conn: storage_connection_type
+    ff: form_factor
+    rd_mbs: read_speed_mb_s
+    wr_mbs: write_speed_mb_s
+    clr: color
+    w_mm: width_mm
+    l_mm: length_mm
+    h_mm: height_mm
+    wt_g: weight_g
+
+# Each attribute shares the same per-level distribution (no a-priori
+# winner per attribute on products). Anchor below keeps the per-source
+# weights DRY across the 24 attributes the K10 mask covers.
+_target_distribution: &target_distribution
+  easy:
+    products_1: 0.55
+    products_2: 0.20
+    products_3: 0.15
+    products_4: 0.10
+  medium:
+    products_1: 0.40
+    products_2: 0.25
+    products_3: 0.20
+    products_4: 0.15
+  hard:
+    products_1: 0.25
+    products_2: 0.25
+    products_3: 0.25
+    products_4: 0.25
+
+attribute_targets:
+  title: *target_distribution
+  brand: *target_distribution
+  description: *target_distribution
+  price: *target_distribution
+  product_type: *target_distribution
+  model: *target_distribution
+  chipset_name: *target_distribution
+  vram_gb: *target_distribution
+  storage_gb: *target_distribution
+  # NEW (10 entries):
+  priceCurrency: *target_distribution
+  model_number: *target_distribution
+  title_description: *target_distribution
+  bus_type: *target_distribution
+  interface_type: *target_distribution
+  memory_type: *target_distribution
+  storage_connection_type: *target_distribution
+  form_factor: *target_distribution
+  read_speed_mb_s: *target_distribution
+  write_speed_mb_s: *target_distribution
+  # NEW (5 sparse dims, 2026-06-02 scope decision):
+  color: *target_distribution
+  width_mm: *target_distribution
+  length_mm: *target_distribution
+  height_mm: *target_distribution
+  weight_g: *target_distribution
+
+compromise_rate_per_level:
+  easy: 0.0
+  medium: 0.05
+  hard: 0.15
+
+corr_strength_per_level:
+  easy: 0.0
+  medium: 0.20
+  hard: 0.50
+
+concentration_cap: 0.99

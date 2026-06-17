@@ -1,0 +1,121 @@
+{
+  "case_name": "heuristic",
+  "rules": {
+    "brand": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "bus_type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "chipset_name": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "cluster_id": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "color": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "description": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "form_factor": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "height_mm": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "interface_type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "length_mm": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "memory_type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "model": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "model_number": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "price": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "priceCurrency": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "product_type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "read_speed_mb_s": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "storage_connection_type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "storage_gb": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "title": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "title_description": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "url": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "vram_gb": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "weight_g": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "width_mm": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "write_speed_mb_s": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

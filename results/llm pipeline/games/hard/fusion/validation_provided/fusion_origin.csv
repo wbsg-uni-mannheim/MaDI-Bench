@@ -1,0 +1,86 @@
+entity_id,source_ids,name,releaseYear,developer,platform,criticScore,userScore,publisher,ESRB
+entity_0,"dbpedia_57913, metacritic_1593",metacritic,LLM,LLM,metacritic,metacritic,LLM,,
+entity_1,"dbpedia_51413, metacritic_3698, sales_2598",metacritic,LLM,metacritic,metacritic,metacritic,metacritic,LLM,sales
+entity_10,"dbpedia_64182, metacritic_2669",dbpedia,LLM,LLM,metacritic,LLM,LLM,,metacritic
+entity_11,"sales_7547, metacritic_17762, dbpedia_55590",sales,LLM,sales,sales,LLM,LLM,sales,sales
+entity_12,"metacritic_17545, dbpedia_23235",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_13,"metacritic_2331, dbpedia_36513, sales_3963",metacritic,LLM,LLM,metacritic,sales,LLM,sales,metacritic
+entity_14,"sales_7793, metacritic_14495, dbpedia_53223",sales,LLM,sales,metacritic,LLM,LLM,LLM,metacritic
+entity_15,"metacritic_15092, dbpedia_963",metacritic,LLM,LLM,metacritic,metacritic,LLM,,metacritic
+entity_16,"metacritic_16614, dbpedia_62228, sales_3296",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_17,"metacritic_9859, dbpedia_23399",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_18,metacritic_423,metacritic,LLM,metacritic,metacritic,,LLM,,metacritic
+entity_19,metacritic_2068,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_2,"dbpedia_31418, metacritic_2046",dbpedia,LLM,LLM,dbpedia,metacritic,LLM,,metacritic
+entity_20,metacritic_14981,metacritic,LLM,metacritic,metacritic,LLM,,,metacritic
+entity_21,"metacritic_9873, dbpedia_20631",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_22,metacritic_9351,metacritic,LLM,metacritic,metacritic,LLM,metacritic,,metacritic
+entity_23,"dbpedia_2375, sales_7860, metacritic_5275",dbpedia,LLM,dbpedia,dbpedia,LLM,LLM,sales,sales
+entity_24,metacritic_8007,metacritic,LLM,metacritic,metacritic,LLM,,,
+entity_25,metacritic_18448,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_26,"dbpedia_59845, metacritic_20093",metacritic,LLM,dbpedia,metacritic,metacritic,LLM,,metacritic
+entity_27,"metacritic_3893, dbpedia_48711, sales_2879",metacritic,LLM,metacritic,metacritic,LLM,LLM,sales,metacritic
+entity_28,metacritic_1478,metacritic,LLM,LLM,metacritic,LLM,LLM,,metacritic
+entity_29,"metacritic_230, dbpedia_15283",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_3,"metacritic_238, sales_185, dbpedia_46911",metacritic,LLM,metacritic,metacritic,metacritic,sales,sales,
+entity_30,metacritic_16466,metacritic,metacritic,metacritic,metacritic,LLM,LLM,,metacritic
+entity_31,"sales_879, metacritic_658, dbpedia_38072",sales,LLM,sales,sales,LLM,LLM,sales,sales
+entity_32,"dbpedia_54380, metacritic_6562",dbpedia,LLM,dbpedia,metacritic,metacritic,metacritic,,metacritic
+entity_33,"dbpedia_39830, sales_4887, metacritic_17264",dbpedia,LLM,dbpedia,metacritic,LLM,LLM,sales,sales
+entity_34,"metacritic_2081, dbpedia_775",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_35,metacritic_13257,metacritic,LLM,metacritic,metacritic,LLM,,,metacritic
+entity_36,metacritic_8948,metacritic,LLM,metacritic,metacritic,LLM,,,metacritic
+entity_37,"dbpedia_25488, sales_813, metacritic_17482",dbpedia,LLM,LLM,metacritic,LLM,,sales,sales
+entity_38,metacritic_14606,metacritic,LLM,metacritic,,LLM,,,metacritic
+entity_39,"metacritic_1307, dbpedia_2560",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_4,metacritic_1695,metacritic,LLM,LLM,metacritic,metacritic,,,
+entity_40,"metacritic_19736, dbpedia_38007",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_41,metacritic_14509,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_42,"dbpedia_18452, metacritic_20420, sales_2473",dbpedia,LLM,dbpedia,metacritic,LLM,LLM,sales,metacritic
+entity_43,"dbpedia_34642, metacritic_3279, sales_7038",dbpedia,LLM,dbpedia,metacritic,LLM,sales,LLM,metacritic
+entity_44,"dbpedia_4812, metacritic_14859",dbpedia,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_45,metacritic_2354,LLM,LLM,metacritic,metacritic,metacritic,LLM,,metacritic
+entity_46,metacritic_8251,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_47,"dbpedia_12303, metacritic_11331",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_48,metacritic_18845,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_49,metacritic_592,metacritic,LLM,LLM,metacritic,LLM,LLM,,metacritic
+entity_5,metacritic_336,metacritic,LLM,LLM,metacritic,metacritic,metacritic,,LLM
+entity_50,"metacritic_2900, dbpedia_14477",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_51,metacritic_11573,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_52,"dbpedia_51536, metacritic_4478",dbpedia,LLM,dbpedia,dbpedia,metacritic,metacritic,,metacritic
+entity_53,"dbpedia_16120, metacritic_5330",dbpedia,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_54,metacritic_1031,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_55,"sales_179, dbpedia_35107, metacritic_1313",sales,LLM,sales,sales,LLM,LLM,LLM,sales
+entity_56,"dbpedia_44671, metacritic_5338",dbpedia,LLM,dbpedia,LLM,metacritic,metacritic,,metacritic
+entity_57,metacritic_17509,metacritic,LLM,metacritic,metacritic,LLM,LLM,,
+entity_58,"metacritic_1947, dbpedia_52091",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_59,"dbpedia_1948, metacritic_9855",metacritic,LLM,LLM,metacritic,LLM,,,
+entity_6,metacritic_474,,,,metacritic,metacritic,,,metacritic
+entity_60,metacritic_13962,metacritic,LLM,metacritic,metacritic,metacritic,metacritic,,metacritic
+entity_61,metacritic_6976,metacritic,LLM,,metacritic,LLM,LLM,,metacritic
+entity_62,"sales_918, dbpedia_38457, metacritic_5949",sales,LLM,sales,metacritic,sales,LLM,sales,sales
+entity_63,metacritic_9178,metacritic,LLM,LLM,metacritic,LLM,LLM,,metacritic
+entity_64,metacritic_6542,metacritic,LLM,LLM,metacritic,LLM,,,metacritic
+entity_65,"metacritic_13378, dbpedia_15538",metacritic,LLM,metacritic,LLM,LLM,,,
+entity_66,"metacritic_10085, sales_2406, dbpedia_21268",metacritic,LLM,metacritic,metacritic,LLM,LLM,sales,metacritic
+entity_67,"dbpedia_5067, metacritic_15141",dbpedia,LLM,metacritic,dbpedia,LLM,LLM,,metacritic
+entity_68,"metacritic_18458, dbpedia_31934",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_69,metacritic_11680,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_7,"sales_5812, metacritic_2186, dbpedia_31269",sales,LLM,sales,sales,sales,LLM,sales,sales
+entity_70,metacritic_11373,LLM,LLM,LLM,metacritic,,LLM,,metacritic
+entity_71,metacritic_19089,metacritic,LLM,metacritic,metacritic,LLM,,,metacritic
+entity_72,"metacritic_1704, dbpedia_7668",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_73,"metacritic_8351, dbpedia_9851",metacritic,LLM,LLM,metacritic,LLM,LLM,,metacritic
+entity_74,"metacritic_1147, dbpedia_23275",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_75,"metacritic_20463, dbpedia_40981",metacritic,LLM,LLM,metacritic,LLM,,,
+entity_76,"dbpedia_16183, metacritic_4551",dbpedia,,metacritic,dbpedia,LLM,LLM,,metacritic
+entity_77,"metacritic_20267, dbpedia_35160",metacritic,LLM,dbpedia,metacritic,LLM,LLM,,metacritic
+entity_78,"dbpedia_12871, metacritic_12357, sales_2360",dbpedia,LLM,dbpedia,dbpedia,LLM,LLM,LLM,metacritic
+entity_79,"metacritic_6862, sales_7224, dbpedia_29718",metacritic,LLM,LLM,metacritic,LLM,LLM,LLM,metacritic
+entity_8,"metacritic_11984, dbpedia_42715",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_80,metacritic_14137,metacritic,LLM,metacritic,metacritic,LLM,metacritic,,metacritic
+entity_81,metacritic_16460,metacritic,LLM,LLM,metacritic,LLM,,,metacritic
+entity_82,metacritic_6454,metacritic,,LLM,metacritic,metacritic,LLM,,metacritic
+entity_83,metacritic_5368,metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic
+entity_84,"dbpedia_34013, metacritic_18876, sales_4898",dbpedia,LLM,metacritic,dbpedia,LLM,LLM,sales,sales
+entity_9,"metacritic_15609, dbpedia_7460",metacritic,LLM,metacritic,metacritic,LLM,LLM,,metacritic

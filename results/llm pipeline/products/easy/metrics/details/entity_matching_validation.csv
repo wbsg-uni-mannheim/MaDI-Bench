@@ -1,0 +1,4 @@
+case,pair,split,f1,precision,recall,matcher,threshold,source_file,note
+products-augmented-easy,products_1__products_2,pipeline_validation,0.91005291005291,0.9662921348314608,0.86,MLBasedMatcher,0.3,DI-Bench/runs/augmented/products/easy/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+products-augmented-easy,products_1__products_3,pipeline_validation,0.9693877551020408,0.9895833333333334,0.95,RuleBasedMatcher,0.9,DI-Bench/runs/augmented/products/easy/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+products-augmented-easy,products_1__products_4,pipeline_validation,0.7938144329896908,0.8191489361702128,0.77,MLBasedMatcher,0.3,DI-Bench/runs/augmented/products/easy/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.

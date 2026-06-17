@@ -1,0 +1,14 @@
+Target Column,Crossref,Dblp,Open_Alex
+id,id,id,id
+type,typ,ty,Attribute_3
+title,ttl,t,Attribute_4
+authors,auth_list,au,Attribute_5
+publication_year,pub_year,py,Attribute_6
+journal,venue,j,Attribute_7
+volume,vol,v,Attribute_10
+issue,iss_no,i,Attribute_11
+first_page,pg_first,fp,Attribute_12
+last_page,pg_last,lp,Attribute_13
+referenced_works_count,ref_count,rc,Attribute_14
+cited_by_count,cited_count,cc,Attribute_15
+Mapped,12/12,12/12,12/12

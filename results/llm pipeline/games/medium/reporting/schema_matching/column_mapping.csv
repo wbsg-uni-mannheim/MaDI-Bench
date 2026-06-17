@@ -1,0 +1,13 @@
+Target Column,Dbpedia,Metacritic,Sales
+id,id,id,id
+name,gm_nm,name,prod_title
+releaseYear,launch_yr,releaseYear,launch_dt
+developer,studio,developer,studio
+genres,gnr,genres,genre
+publisher,-,-,dist
+platform,system,platform,hw
+criticScore,-,criticScore,press_score
+userScore,-,userScore,comm_rating
+ESRB,-,ESRB,age_class
+series,franchise,-,-
+Mapped,7/11,9/11,10/11

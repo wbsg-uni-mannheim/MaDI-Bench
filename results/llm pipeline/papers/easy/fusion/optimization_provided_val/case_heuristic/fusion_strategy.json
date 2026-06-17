@@ -1,0 +1,27 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "abstract_text": "union",
+    "authors": "union",
+    "cited_by_count": "median",
+    "first_page": "median",
+    "issue": "median",
+    "journal": "most_complete",
+    "keywords": "union",
+    "last_page": "median",
+    "publication_year": "median",
+    "publisher": "most_complete",
+    "referenced_works_count": "median",
+    "title": "longest_string",
+    "type": "most_complete",
+    "volume": "median"
+  },
+  "strategy_name": "heuristic_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "crossref": 2.8949952568899877,
+    "dblp": 1.0,
+    "open_alex": 3.0
+  }
+}

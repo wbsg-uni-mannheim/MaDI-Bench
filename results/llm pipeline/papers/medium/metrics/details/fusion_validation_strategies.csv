@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+papers-augmented-medium,heuristic,none,provided_validation,0.6393129770992366,670,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-medium,llm_no_val,none,provided_validation,0.6412213740458015,672,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-medium,llm_val,provided,provided_validation,0.6288167938931297,659,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-medium,llm_val_stats,provided,provided_validation,0.6288167938931297,659,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-medium,heuristic_stats,provided,provided_validation,0.6288167938931297,659,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-medium,iterative,provided,provided_validation,0.6288167938931297,659,1048,DI-Bench/runs/augmented/papers/medium/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

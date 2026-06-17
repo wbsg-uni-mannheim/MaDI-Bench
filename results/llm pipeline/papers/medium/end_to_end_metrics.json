@@ -1,0 +1,37 @@
+{
+  "input_sources": 3,
+  "total_input_records": 182067,
+  "fused_output_records": 99791,
+  "fusion_ratio": 0.4519,
+  "row_gain_over_largest": 39042,
+  "row_gain_percentage": 64.27,
+  "merged_records": 52473,
+  "input_columns_target_schema": 20,
+  "fused_output_columns": 21,
+  "average_input_density": 0.4671,
+  "fused_data_density": 0.5946,
+  "data_density_change": 0.1275,
+  "largest_source_name": "crossref",
+  "largest_source_density": 0.7187,
+  "density_change_vs_largest": -0.1241,
+  "per_source_stats": [
+    {
+      "name": "dblp",
+      "rows": 60595,
+      "columns": 14,
+      "density": 0.4303
+    },
+    {
+      "name": "crossref",
+      "rows": 60749,
+      "columns": 15,
+      "density": 0.7187
+    },
+    {
+      "name": "open_alex",
+      "rows": 60723,
+      "columns": 15,
+      "density": 0.7476
+    }
+  ]
+}

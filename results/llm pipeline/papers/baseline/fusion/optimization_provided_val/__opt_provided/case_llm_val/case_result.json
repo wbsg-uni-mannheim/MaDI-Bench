@@ -1,0 +1,111 @@
+{
+  "case_name": "llm_val",
+  "rules": {
+    "abstract_text": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "authors": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "cited_by_count": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      }
+    },
+    "first_page": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "issue": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "journal": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "last_page": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "publication_year": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "publisher_name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "referenced_works_count": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "title": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "topic_terms": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "type": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    },
+    "volume": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

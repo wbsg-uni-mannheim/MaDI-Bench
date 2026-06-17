@@ -1,0 +1,40 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "brand": "favour_sources",
+    "bus_type": "favour_sources",
+    "chipset_name": "favour_sources",
+    "cluster_id": "voting",
+    "color": "favour_sources",
+    "description": "favour_sources",
+    "form_factor": "voting",
+    "height_mm": "median",
+    "interface_type": "favour_sources",
+    "length_mm": "median",
+    "memory_type": "voting",
+    "model": "favour_sources",
+    "model_number": "favour_sources",
+    "price": "favour_sources",
+    "priceCurrency": "favour_sources",
+    "product_type": "voting",
+    "read_speed_mb_s": "maximum",
+    "storage_connection_type": "favour_sources",
+    "storage_gb": "favour_sources",
+    "title": "favour_sources",
+    "title_description": "favour_sources",
+    "url": "prefer_higher_trust",
+    "vram_gb": "favour_sources",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  },
+  "strategy_name": "iterative_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "products_1": 3.0,
+    "products_2": 1.6869071627803387,
+    "products_3": 1.0,
+    "products_4": 1.0803018633784514
+  }
+}

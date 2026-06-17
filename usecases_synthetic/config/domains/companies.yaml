@@ -1,0 +1,55 @@
+domain: companies
+master_seed: 42
+
+# Sources refreshed 2026-05-04 to schema.org-style CSV format. Native id
+# columns ship with the data and already carry the source-specific
+# prefix (e.g. dbpedia ``entity_uri`` is ``http://dbpedia.org/...``,
+# fullcontact ``Attribute_1`` is ``fullcontact_<n>``); the loader
+# renames each ``id_column`` to ``id`` so downstream code keeps its
+# ``id_column="id"`` assumption. Pre-refresh XML/JSON sources are
+# preserved at usecases/companies/input/data/old/ for reference.
+sources:
+  - name: dbpedia
+    file: dbpedia.csv
+    format: csv
+    id_prefix: "http://dbpedia.org/"
+    id_column: entity_uri
+  - name: forbes
+    file: forbes.csv
+    format: csv
+    id_prefix: "http://www.forbes.com/"
+    id_column: forbes_url
+  - name: fullcontact
+    file: fullcontact.csv
+    format: csv
+    id_prefix: "fullcontact_"
+    id_column: Attribute_1
+
+source_pairs:
+  - [forbes, dbpedia]
+  - [forbes, fullcontact]
+
+fusion_files:
+  validation: validation_set.xml
+  test: test_set.xml
+
+# Target_schema scope = 8 data attrs (R10-N 2026-06-02). `industry` is a
+# target_schema attr that flows through SM (matched: dbpedia.sector +
+# forbes.business_segment) / normalization (GICS) / EM (a matching field),
+# but it is NOT fusion-scored: the GIVEN fusion gold (test_set.xml /
+# validation_set.xml) has no <industry> column, so there is nothing
+# to evaluate it against (user 2026-06-02). The given gold was reverted to
+# its as-shipped state; fusion macro_accuracy is reported over the 7
+# given-gold attrs (name, country, city, assets, revenue, founded,
+# keypeople). `website` DROPPED 2026-06-02: forbes.url == the id in all
+# rows, degenerate. `keypeople` = the target_schema attr formerly named
+# `founders` (renamed 2026-06-02: source + given gold agree on keypeople).
+attribute_classes:
+  name: primary
+  country: key
+  city: key
+  industry: secondary
+  assets: secondary
+  revenue: secondary
+  founded: secondary
+  keypeople: secondary

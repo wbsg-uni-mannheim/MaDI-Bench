@@ -1,0 +1,74 @@
+[
+  {
+    "case": "music-augmented-hard",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": null,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 0.9090909090909091
+  },
+  {
+    "case": "music-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 20,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 20,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "music-augmented-hard",
+    "category": "schema_matching",
+    "denominator": 24,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 20,
+    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "split": "official_gold",
+    "value": 0.8333333333333334
+  },
+  {
+    "case": "music-augmented-hard",
+    "category": "entity_matching",
+    "denominator": 2,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/augmented/music/hard/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.8802121831383973
+  },
+  {
+    "case": "music-augmented-hard",
+    "category": "fusion",
+    "denominator": 555,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 325,
+    "source_file": "DI-Bench/runs/augmented/music/hard/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.5855855855855856
+  },
+  {
+    "case": "music-augmented-hard",
+    "category": "consistency",
+    "denominator": 181473,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 163236,
+    "source_file": "DI-Bench/runs/augmented/music/hard/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.8995057115934602
+  }
+]

@@ -1,0 +1,7 @@
+case,category,metric,item,split,value,numerator,denominator,source_file,note
+games,schema_matching,f1,all_sources,official_gold,1.0,,,DI-Bench/usecases/games/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+games,schema_matching,precision,all_sources,official_gold,1.0,23.0,23.0,DI-Bench/usecases/games/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+games,schema_matching,recall,all_sources,official_gold,1.0,23.0,23.0,DI-Bench/usecases/games/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+games,entity_matching,macro_f1,all_pairs,official_test,0.6315126050420168,,2.0,DI-Bench/runs/games/entity_resolution/matching/entity_matching_official_test.csv,"Best final EM score for the configuration used, on the official held-out test set."
+games,fusion,accuracy,best_selected_strategy,official_test,0.8487394957983193,101.0,119.0,DI-Bench/runs/games/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.
+games,consistency,schema_consistency_score,,final_output,0.8472475619692191,338999.0,400118.0,DI-Bench/runs/games/metrics/consistency.json,

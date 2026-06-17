@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+music-augmented-easy,llm_no_val,official_test,0.7740259740259741,596,770,DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/case_llm_no_val/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

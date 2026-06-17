@@ -1,0 +1,86 @@
+entity_id,source_ids,name,releaseYear,developer,platform,criticScore,userScore,publisher,ESRB
+entity_0,"dbpedia_57913, metacritic_1593",The Legend of Zelda: Twilight Princess HD,2016-03-04,Nintendo Entertainment Planning and Development,Wii U,86.0,8.5,,
+entity_1,"dbpedia_51413, metacritic_3698, sales_2598",Plants vs Zombies: Garden Warfare 2,2016-02-23,PopCap,PlayStation 4,81.0,7.9,Electronic Arts,E10+
+entity_10,"dbpedia_64182, metacritic_2669",Insurgency: Sandstorm,2021-12-12,New World Interactive,Xbox One,80.0,7.7,,M
+entity_11,"sales_7547, metacritic_17762, dbpedia_55590",Carmen Sandiego: The Secret of the Stolen Drums,2004-09-01,Artificial Mind and Movement,Nintendo GameCube,58.0,6.3,BAM! Entertainment,E
+entity_12,"metacritic_17545, dbpedia_23235",Goat Simulator,2014-04-01,Coffee Stain Studios,PlayStation 4,61.0,5.9,,T
+entity_13,"metacritic_2331, dbpedia_36513, sales_3963",X-Men Legends II: Rise of Apocalypse,2005-09-20,Raven Software,PlayStation Portable (PSP),82.0,7.8,Activision,T
+entity_14,"sales_7793, metacritic_14495, dbpedia_53223",Sherlock Holmes: The Devil's Daughter,2016-06-10,Frogwares,Xbox One,71.0,7.2,Frogwares,T
+entity_15,"metacritic_15092, dbpedia_963",Battles of Prince of Persia,2005-12-06,Ubisoft Entertainment,Nintendo DS,64.0,6.6,,E10+
+entity_16,"metacritic_16614, dbpedia_62228, sales_3296",Delta Force: Black Hawk Down,2005-07-27,Climax Group,Xbox,72.0,7.0,,T
+entity_17,"metacritic_9859, dbpedia_23399",Arcana Heart 3,2011-01-13,Examu,PlayStation 3,71.0,6.9,,T
+entity_18,metacritic_423,Silent Hunter III,2005-03-15,Ubisoft,Windows PC,,8.5,,T
+entity_19,metacritic_2068,South Park: The Fractured But Whole,2017-10-17,Ubisoft San Francisco,Xbox One,81.0,7.9,,M
+entity_2,"dbpedia_31418, metacritic_2046",Persona 4 Arena Ultimax,2014-09-30,Arc System Works,PlayStation 3,84.0,7.6,,T
+entity_20,metacritic_14981,Dig Dug: Digging Strike,2005-09-08,Bullets,Nintendo DS,60.0,,,E
+entity_21,"metacritic_9873, dbpedia_20631",Destiny 2: Shadowkeep,2019-10-01,Bungie,PlayStation 4,79.0,7.7,,T
+entity_22,metacritic_9351,NHL 2K8,2007-09-11,Kush Games,PlayStation 3,71.0,7.0,,E10+
+entity_23,"dbpedia_2375, sales_7860, metacritic_5275",Transformers: Fall of Cybertron,2012-08-21,High Moon Studios,Xbox 360,80.0,8.0,Activision,T
+entity_24,metacritic_8007,Resident Evil Archives: Resident Evil,2008-06-26,Capcom,Wii,86.0,,,
+entity_25,metacritic_18448,Night at the Museum: Battle of the Smithsonian,2009-05-13,"Pipeworks Software, Inc.",Wii,57.0,6.1,,E10+
+entity_26,"dbpedia_59845, metacritic_20093",Pimp My Ride,2006-12-05,Eutechnyx,Xbox 360,38.0,5.2,,T
+entity_27,"metacritic_3893, dbpedia_48711, sales_2879",Mega Man Anniversary Collection,2004-06-22,Atomic Planet Entertainment,Nintendo GameCube,82.0,7.6,Capcom,E
+entity_28,metacritic_1478,Burnout 2: Point of Impact,2002-10-01,Criterion Games,PlayStation 2,88.0,8.2,,E
+entity_29,"metacritic_230, dbpedia_15283",Metroid Prime Trilogy,2009-08-24,Retro Studios,Wii,90.0,8.9,,T
+entity_3,"metacritic_238, sales_185, dbpedia_46911",Metal Gear Solid 3: Snake Eater,2004-11-17,KCEJ,PlayStation 2,91.0,9.3,Konami Digital Entertainment,
+entity_30,metacritic_16466,Gretzky NHL,2005-01-01,Page 44 Studios,PlayStation Portable (PSP),59.0,6.2,,E
+entity_31,"sales_879, metacritic_658, dbpedia_38072",Dead Space 2,2011-01-25,Visceral Games,PlayStation 3,88.0,8.5,Electronic Arts,M
+entity_32,"dbpedia_54380, metacritic_6562",NFL Street 2,2004-12-22,EA Tiburon,Nintendo GameCube,77.0,7.6,,E
+entity_33,"dbpedia_39830, sales_4887, metacritic_17264",Murdered: Soul Suspect,2014-06-03,Airtight Games,PlayStation 4,60.0,6.7,Square Enix,M
+entity_34,"metacritic_2081, dbpedia_775",Star Wars: Starfighter,2001-01-21,LucasArts,PlayStation 2,77.0,7.4,,T
+entity_35,metacritic_13257,Terminator 3: The Redemption,2004-09-09,Paradigm Entertainment,Nintendo GameCube,72.0,,,T
+entity_36,metacritic_8948,Super Monkey Ball: Banana Blitz,2006-11-19,Sega,Wii,73.0,,,E
+entity_37,"dbpedia_25488, sales_813, metacritic_17482",MySims Kingdom,2008-10-28,Electronic Arts,Nintendo DS,74.0,,Electronic Arts,E
+entity_38,metacritic_14606,Unchained Blades,2011-07-14,FuRyu,,64.0,,,T
+entity_39,"metacritic_1307, dbpedia_2560",Crash Bandicoot 4: It's About Time,2021-03-21,Toys for Bob,PlayStation 5,85.0,8.3,,E10+
+entity_4,metacritic_1695,Final Fantasy X-2,2003-11-18,SquareSoft,PlayStation 2,85.0,,,
+entity_40,"metacritic_19736, dbpedia_38007",Transformers: Rise of the Dark Spark,2014-06-24,Edge of Reality,Xbox 360,50.0,6.7,,T
+entity_41,metacritic_14509,Sonic Unleashed,2008-11-28,Sonic Team,Wii,64.0,6.6,,E10+
+entity_42,"dbpedia_18452, metacritic_20420, sales_2473",Madden NFL 2004,2003-08-11,EA Tiburon,PlayStation 2,90.0,8.1,Electronic Arts,E
+entity_43,"dbpedia_34642, metacritic_3279, sales_7038",Shantae and the Pirate's Curse,2014-10-22,WayForward,Nintendo 3DS,87.0,8.5,"WayForward,Intergrow",E10+
+entity_44,"dbpedia_4812, metacritic_14859",Rock of Ages 3: Make & Break,2020-07-20,ACE Team,PlayStation 4,72.0,7.2,,T
+entity_45,metacritic_2354,Darksiders II,2012-08-14,Vigil Games,PlayStation 3,84.0,8.2,,M
+entity_46,metacritic_8251,Ace Combat X: Skies of Deception,2006-10-24,Project Aces,PlayStation Portable (PSP),77.0,7.6,,T
+entity_47,"dbpedia_12303, metacritic_11331",State of Emergency,2002-02-12,VIS Entertainment,PlayStation 2,65.0,6.0,,M
+entity_48,metacritic_18845,Warriors Orochi 2,2008-04-03,Omega Force,PlayStation 2,49.0,5.8,,T
+entity_49,metacritic_592,World Soccer Winning Eleven 9,2005-08-04,Konami Digital Entertainment,Xbox,90.0,8.3,,E
+entity_5,metacritic_336,NBA 2K12,2011-10-04,Visual Concepts,PlayStation 3,90.0,6.8,,T
+entity_50,"metacritic_2900, dbpedia_14477",Little Nightmares,2017-04-28,Tarsier Studios,Xbox One,78.0,7.8,,T
+entity_51,metacritic_11573,Gotham City Impostors,2012-02-07,Monolith Productions,Xbox 360,72.0,7.2,,T
+entity_52,"dbpedia_51536, metacritic_4478",Broken Sword: The Shadow of the Templars,2002-03-17,Revolution Software,Game Boy Advance,80.0,8.1,,T
+entity_53,"dbpedia_16120, metacritic_5330",DeathSpank,2010-07-13,Hothead Games,Xbox 360,77.0,7.6,,T
+entity_54,metacritic_1031,Sins of a Solar Empire,2008-02-04,Ironclad Games,Windows PC,85.0,8.4,,T
+entity_55,"sales_179, dbpedia_35107, metacritic_1313",Resistance: Fall of Man,2006-11-11,Insomniac Games,PlayStation 3,85.0,8.2,Sony Computer Entertainment,M
+entity_56,"dbpedia_44671, metacritic_5338",The Unfinished Swan,2012-10-23,Giant Sparrow,PlayStation 3,79.0,8.1,,E10+
+entity_57,metacritic_17509,Senran Kagura 2: Deep Crimson,2015-07-08,Tamsoft,Nintendo 3DS,59.0,6.5,,
+entity_58,"metacritic_1947, dbpedia_52091",Turok: Dinosaur Hunter,1997-02-28,Iguana Entertainment,Nintendo 64,83.0,7.8,,M
+entity_59,"dbpedia_1948, metacritic_9855",DiRT 2,2007-06-15,Codemasters,Nintendo DS,84.0,,,
+entity_6,metacritic_474,,,,Xbox 360,90.0,,,E
+entity_60,metacritic_13962,Mega Man X: Command Mission,2004-07-29,Capcom,Nintendo GameCube,67.0,6.5,,E
+entity_61,metacritic_6976,Knights of Honor,2005-10-01,,Windows PC,79.0,7.7,,E10+
+entity_62,"sales_918, dbpedia_38457, metacritic_5949",Dead Rising 2,2010-09-24,Blue Castle Games,Windows PC,80.0,7.8,Capcom,M
+entity_63,metacritic_9178,Grow Home,2015-09-01,Ubisoft Reflections,PlayStation 4,77.0,7.5,,E
+entity_64,metacritic_6542,Dave Mirra Freestyle BMX 2,2001-11-18,"Z-Axis, Ltd.",Nintendo GameCube,76.0,,,T
+entity_65,"metacritic_13378, dbpedia_15538",Break 'Em All,2005-10-27,Warashi,Nintendo DS,62.0,,,
+entity_66,"metacritic_10085, sales_2406, dbpedia_21268",ModNation Racers,2010-05-25,SCEA San Diego Studios,PlayStation Portable (PSP),81.0,7.9,Sony Computer Entertainment,E
+entity_67,"dbpedia_5067, metacritic_15141",Conan Exiles,2018-01-30,Funcom,Xbox One,70.0,6.9,,M
+entity_68,"metacritic_18458, dbpedia_31934",Army of Two: The Devil's Cartel,2013-03-26,Visceral Games,Xbox 360,51.0,5.8,,M
+entity_69,metacritic_11680,Crackdown 2,2010-07-06,Ruffian Games,Xbox 360,69.0,6.9,,M
+entity_7,"sales_5812, metacritic_2186, dbpedia_31269",Colin McRae Rally 04,2004-03-02,Codemasters,Xbox,84.0,8.2,Codemasters,E
+entity_70,metacritic_11373,Over the Hedge,2006-05-09,Edge of Reality,Nintendo DS,,6.2,,E
+entity_71,metacritic_19089,Pirates: Duels on the High Seas,2009-05-14,Oxygen Interactive,Nintendo DS,43.0,,,E
+entity_72,"metacritic_1704, dbpedia_7668",BlazBlue: Continuum Shift,2010-07-27,Arc System Works,Xbox 360,84.0,7.9,,T
+entity_73,"metacritic_8351, dbpedia_9851",Magic: The Gathering - Duels of the Planeswalkers 2012,2011-06-15,Stainless Games,Xbox 360,76.0,7.5,,T
+entity_74,"metacritic_1147, dbpedia_23275",Serious Sam: The First Encounter,2001-03-21,Croteam,Windows PC,83.0,7.9,,M
+entity_75,"metacritic_20463, dbpedia_40981",Metal Gear Solid 2: Sons of Liberty,2001-11-12,Konami Digital Entertainment,PlayStation 2,94.0,,,
+entity_76,"dbpedia_16183, metacritic_4551",Wakeboarding Unleashed Featuring Shaun Murray,,Shaba Games,Xbox,79.0,7.9,,E
+entity_77,"metacritic_20267, dbpedia_35160",Superman Returns,2006-12-20,Santa Cruz Games,Nintendo DS,34.0,4.8,,E
+entity_78,"dbpedia_12871, metacritic_12357, sales_2360",Final Fantasy Explorers,2014-12-18,Racjin,Nintendo 3DS,64.0,6.6,Square Enix,E10+
+entity_79,"metacritic_6862, sales_7224, dbpedia_29718",Tomb Raider: Anniversary,2007-10-23,"Crystal Dynamics,Buzz Monkey Software",Xbox 360,82.0,8.0,"Feral Interactive,Eidos Interactive,Square Enix,Crystal Dynamics",T
+entity_8,"metacritic_11984, dbpedia_42715",Need for Speed: Nitro,2009-11-03,Firebrand Games,Nintendo DS,71.0,7.0,,E10+
+entity_80,metacritic_14137,Tales of the World: Radiant Mythology,2006-12-21,Alfa System,PlayStation Portable (PSP),79.0,7.5,,T
+entity_81,metacritic_16460,Unchained Blades,2011-07-14,ART,PlayStation Portable (PSP),64.0,,,T
+entity_82,metacritic_6454,Disney Alice in Wonderland,,Étranges Libellules S.A.,Nintendo DS,78.0,7.3,,E10+
+entity_83,metacritic_5368,Hexic HD,2005-11-22,Carbonated Games,Xbox 360,81.0,7.4,,E
+entity_84,"dbpedia_34013, metacritic_18876, sales_4898",NBA Live 08,2007-10-01,EA Canada,Wii,46.0,5.3,Electronic Arts,E
+entity_9,"metacritic_15609, dbpedia_7460",Sacred Citadel,2013-04-17,Southend Interactive,Xbox 360,65.0,6.5,,T

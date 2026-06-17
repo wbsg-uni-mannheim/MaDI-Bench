@@ -1,0 +1,16 @@
+{
+  "dbpedia__metacritic": {
+    "f1": 0.8584070796460176,
+    "matcher": "MLBasedMatcher",
+    "precision": 0.7698412698412699,
+    "recall": 0.97,
+    "threshold": 0.6
+  },
+  "dbpedia__sales": {
+    "f1": 0.9178743961352657,
+    "matcher": "MLBasedMatcher",
+    "precision": 0.8878504672897196,
+    "recall": 0.95,
+    "threshold": 0.5
+  }
+}

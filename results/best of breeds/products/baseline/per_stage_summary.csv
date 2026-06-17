@@ -1,0 +1,7 @@
+stage,winner,metric_key,val_score,test_score,runtime_s
+sm,llm_openai,f1,1.0,1.0,130.91076083795633
+norm,passthrough,macro_f1,0.6188098378691288,0.6188098378691288,2.438261396018788
+em_blocking,sc_block,pair_completeness (>=0.97 floor; reduction_ratio tiebreak),1.0,1.0,52.77264916198328
+em_matching,ditto_plm,f1,0.0,0.8408963716983865,52.77299850300187
+refinement,baseline,f1,0.8357138980001707,0.8408963716983865,0.1949177869828418
+fusion,pydi_per_attribute_optimal,macro_accuracy,0.5491796447955872,0.5668209342281034,383.66664607002167

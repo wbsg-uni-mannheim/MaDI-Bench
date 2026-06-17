@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+papers,heuristic,none,provided_validation,0.7598814229249012,769,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers,llm_no_val,none,provided_validation,0.7855731225296443,795,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers,llm_val,provided,provided_validation,0.7984189723320159,808,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers,llm_val_stats,provided,provided_validation,0.8003952569169961,810,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers,heuristic_stats,provided,provided_validation,0.7944664031620553,804,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers,iterative,provided,provided_validation,0.8013833992094862,811,1012,DI-Bench/runs/papers/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

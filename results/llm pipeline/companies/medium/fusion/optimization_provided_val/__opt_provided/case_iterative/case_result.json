@@ -1,0 +1,184 @@
+{
+  "case_name": "iterative",
+  "rules": {
+    "assets": {
+      "resolver": "maximum",
+      "kwargs": {}
+    },
+    "city": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      }
+    },
+    "country": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "dbpedia",
+          "fullcontact"
+        ]
+      }
+    },
+    "founded": {
+      "resolver": "earliest",
+      "kwargs": {}
+    },
+    "industry": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "keypeople": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      }
+    },
+    "revenue": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "dbpedia"
+        ]
+      }
+    },
+    "website": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "fullcontact",
+          "dbpedia"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": {
+    "name": {
+      "forbes": {
+        "source_name": "forbes",
+        "attribute": "name",
+        "correct": 89,
+        "total": 100,
+        "accuracy": 0.89
+      },
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "name",
+        "correct": 26,
+        "total": 41,
+        "accuracy": 0.6341
+      },
+      "fullcontact": {
+        "source_name": "fullcontact",
+        "attribute": "name",
+        "correct": 15,
+        "total": 23,
+        "accuracy": 0.6522
+      }
+    },
+    "country": {
+      "forbes": {
+        "source_name": "forbes",
+        "attribute": "country",
+        "correct": 69,
+        "total": 80,
+        "accuracy": 0.8625
+      },
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "country",
+        "correct": 40,
+        "total": 40,
+        "accuracy": 1.0
+      },
+      "fullcontact": {
+        "source_name": "fullcontact",
+        "attribute": "country",
+        "correct": 20,
+        "total": 20,
+        "accuracy": 1.0
+      }
+    },
+    "city": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "city",
+        "correct": 14,
+        "total": 41,
+        "accuracy": 0.3415
+      },
+      "fullcontact": {
+        "source_name": "fullcontact",
+        "attribute": "city",
+        "correct": 10,
+        "total": 21,
+        "accuracy": 0.4762
+      }
+    },
+    "assets": {
+      "forbes": {
+        "source_name": "forbes",
+        "attribute": "assets",
+        "correct": 91,
+        "total": 100,
+        "accuracy": 0.91
+      },
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "assets",
+        "correct": 10,
+        "total": 25,
+        "accuracy": 0.4
+      }
+    },
+    "revenue": {
+      "forbes": {
+        "source_name": "forbes",
+        "attribute": "revenue",
+        "correct": 0,
+        "total": 100,
+        "accuracy": 0.0
+      },
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "revenue",
+        "correct": 13,
+        "total": 33,
+        "accuracy": 0.3939
+      }
+    },
+    "founded": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "founded",
+        "correct": 28,
+        "total": 38,
+        "accuracy": 0.7368
+      },
+      "fullcontact": {
+        "source_name": "fullcontact",
+        "attribute": "founded",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      }
+    }
+  },
+  "iterations_used": 2,
+  "optimization_mode": "provided"
+}

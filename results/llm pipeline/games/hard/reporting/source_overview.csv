@@ -1,0 +1,5 @@
+Source,Rows,Columns,Data Density,Density in Target Schema (11 cols)
+Dbpedia,45358,7,81.87%,52.10% (7/11 × 81.87%)
+Metacritic,18735,9,88.30%,72.24% (9/11 × 88.30%)
+Sales,6985,11,89.33%,89.33% (11/11 × 89.33%)
+Total Input,71078,11 (target),86.50% avg,61.07% weighted avg

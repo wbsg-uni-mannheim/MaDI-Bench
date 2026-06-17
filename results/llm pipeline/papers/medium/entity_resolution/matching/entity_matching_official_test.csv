@@ -1,0 +1,3 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+crossref,dblp,crossref__dblp,MLBasedMatcher,0.6,0.9826060421116874,0.999379267535692,0.9663865546218487,6666,1666,5000,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/medium/input/entitymatching/dblp_2_crossref_test_corner_filled.csv
+open_alex,dblp,open_alex__dblp,MLBasedMatcher,0.7,0.7686622320768661,1.0,0.6242496998799519,6666,1666,5000,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/medium/input/entitymatching/dblp_2_open_alex_test_corner_filled.csv

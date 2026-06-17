@@ -1,0 +1,138 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_val__opt_provided",
+    "validation_accuracy": 0.9154929577464789,
+    "test_accuracy": 0.8571428571428571,
+    "per_attribute_accuracy": {
+      "platform": {
+        "accuracy": 1.0,
+        "total": 15
+      },
+      "ESRB": {
+        "accuracy": 0.9333333333333333,
+        "total": 15
+      },
+      "name": {
+        "accuracy": 1.0,
+        "total": 15
+      },
+      "releaseYear": {
+        "accuracy": 0.8666666666666667,
+        "total": 15
+      },
+      "publisher": {
+        "accuracy": 0.6666666666666666,
+        "total": 15
+      },
+      "developer": {
+        "accuracy": 0.6,
+        "total": 15
+      },
+      "criticScore": {
+        "accuracy": 1.0,
+        "total": 15
+      },
+      "userScore": {
+        "accuracy": 0.7857142857142857,
+        "total": 14
+      }
+    },
+    "rules": {
+      "ESRB": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "criticScore": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "developer": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "genres": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "dbpedia"
+          ]
+        }
+      },
+      "name": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "platform": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "publisher": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "sales"
+          ]
+        }
+      },
+      "releaseYear": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      },
+      "series": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "dbpedia"
+          ]
+        }
+      },
+      "units_sold_mm": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "sales"
+          ]
+        }
+      },
+      "userScore": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "metacritic"
+          ]
+        }
+      }
+    }
+  }
+}

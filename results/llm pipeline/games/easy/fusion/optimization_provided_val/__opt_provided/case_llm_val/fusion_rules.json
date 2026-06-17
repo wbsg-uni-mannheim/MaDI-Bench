@@ -1,0 +1,81 @@
+{
+  "attribute_rules": {
+    "ESRB": {
+      "kwargs": {},
+      "resolver": "weighted_voting"
+    },
+    "criticScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "developer": {
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "genres": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "globalSales": {
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "platform": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publisher": {
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "releaseYear": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "series": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "userScore": {
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  }
+}

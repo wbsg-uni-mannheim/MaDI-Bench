@@ -1,0 +1,22 @@
+Interface Family,Generation,Variant
+SATA,SATA III,SATA 6Gb/s
+SATA,SATA II,SATA 3Gb/s
+SATA,SATA I,SATA 1.5Gb/s
+PCI Express,PCIe 5.0,PCIe 5.0 x16
+PCI Express,PCIe 5.0,PCIe 5.0 x8
+PCI Express,PCIe 5.0,PCIe 5.0 x4
+PCI Express,PCIe 4.0,PCIe 4.0 x16
+PCI Express,PCIe 4.0,PCIe 4.0 x8
+PCI Express,PCIe 4.0,PCIe 4.0 x4
+PCI Express,PCIe 3.0,PCIe 3.0 x16
+PCI Express,PCIe 3.0,PCIe 3.0 x8
+PCI Express,PCIe 3.0,PCIe 3.0 x4
+NVMe,NVMe Gen5,M.2 NVMe Gen5
+NVMe,NVMe Gen4,M.2 NVMe Gen4
+NVMe,NVMe Gen3,M.2 NVMe Gen3
+USB,USB 3.2,USB 3.2 Gen 2x2
+USB,USB 3.2,USB 3.2 Gen 2
+USB,USB 3.1,USB 3.1 Gen 2
+USB,USB 3.0,USB 3.0
+Thunderbolt,Thunderbolt 4,Thunderbolt 4
+Thunderbolt,Thunderbolt 3,Thunderbolt 3

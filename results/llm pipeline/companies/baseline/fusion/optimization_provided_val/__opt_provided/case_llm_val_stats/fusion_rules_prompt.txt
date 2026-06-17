@@ -1,0 +1,238 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) Use the validation feedback to understand which sources tend to be correct for each attribute.
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources (use kwargs.sources=['source1']), random_value
+
+Starting point (heuristic plan you can override):
+{
+  "assets": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "city": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "country": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "founded": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "founders": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "industry": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "keypeople_name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "revenue": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "url": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  }
+}
+
+Attribute diagnostics:
+     attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                       sample_values
+        assets          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                  [8.0, 240560000000.0, 607100000.0, 294970000.0, 76660000.0, 204740000.0, 462900000.0, 662870000.0]
+          city           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                 [Castelnaudary, Lisbon, Mexico City, Istanbul, Istanbul, Istanbul, Istanbul, Paris]
+       country          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                        [France, Portugal, Mexico, France, France, Iceland, United Kingdom, Czechia]
+       founded          False               None             False             False           True            False                                                                                                                                                                                                                                                                                                                    [1970-01-01, 1993-01-01, 2002-01-01, 1998-01-01, 1997-01-01, 1975-01-01, 1923-01-01, 1946-01-01]
+      founders           True                  ,             False             False          False            False                                                                                                                                                                          [Raphael Bemporad, John Pitcairn, Douglas Sun, ['Fernand Renault', 'Louis Renault', 'Marcel Renault'], ['Martine Clozel', 'Thomas Widmann', 'Walter Fischli'], Jim Gasper, ['Ron Wayne', 'Steve Jobs', 'Steve Wozniak'], Richard MAINDRON]
+      industry          False               None             False             False          False            False                                                                                                                                                                                                                                                    [Food Products, Entertainment, Electric Utilities, Entertainment, Health Care Providers & Services, Industrial Conglomerates, Media, Oil Gas & Consumable Fuels]
+keypeople_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                              [Çalık Holding, Ahmet Çalık, Marcel Paul, Ahmet Özal, Aleksandar Ehrmann, Emil Škoda, Rupert Murdoch, Kelso & Company]
+          name          False               None             False             False          False            False                                                                                                                                                                                                                                                  [À la Table de Spanghero, �?guas de Portugal, �?nima Estudios, Çalık Enerji, Çalık Holding, Çukurova (construction firm), Çukurova Holding, Électricité de France]
+       revenue          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                           [2.0, 65170000000.0, 358500000.0, 6000000000.0, 209760000000.0, 31690000.0, 10400000000.0, 12500000000.0]
+           url          False               None             False             False          False            False [http://www.forbes.com/companies/icbc/, http://www.forbes.com/companies/china-construction-bank/, http://www.forbes.com/companies/agricultural-bank-of-china/, http://www.forbes.com/companies/jpmorgan-chase/, http://www.forbes.com/companies/berkshire-hathaway/, http://www.forbes.com/companies/exxon-mobil/, http://www.forbes.com/companies/general-electric/, http://www.forbes.com/companies/wells-fargo/]
+
+Dataset overview:
+[
+  {
+    "dataset_name": "dbpedia",
+    "rows": 10085,
+    "columns": 9,
+    "trust_score": 1.0
+  },
+  {
+    "dataset_name": "forbes",
+    "rows": 2000,
+    "columns": 7,
+    "trust_score": 3.0
+  },
+  {
+    "dataset_name": "fullcontact",
+    "rows": 1931,
+    "columns": 6,
+    "trust_score": 1.057415108001172
+  }
+]
+
+VALIDATION FEEDBACK:
+(Showing which source values were correct for sample entities)
+
+Attribute "assets":
+  - Sources: dbpedia=35.0, forbes=39900000000
+    → Correct: 39900000000
+  - Sources: forbes=162800000000
+    → Correct: 162800000000
+  - Sources: forbes=8800000000
+    → Correct: 8800000000
+  - Sources: forbes=31200000000, dbpedia=64.0
+    → Correct: 31200000000
+  - Sources: forbes=2117700000000
+    → Correct: 2117699999999
+
+Attribute "city":
+  - Sources: dbpedia=Quebec City
+    → Correct: Cleveland
+  - Sources: fullcontact=Paris
+    → Correct: Paris
+  - Sources: dbpedia=Castlereagh Street, SydneySydney
+    → Correct: Bergen
+  - Sources: fullcontact=Paris
+    → Correct: Paris
+  - Sources: dbpedia=London
+    → Correct: Newark
+
+Attribute "country":
+  - Sources: dbpedia=Canada, forbes=Canada
+    → Correct: Canada
+  - Sources: forbes=France, fullcontact=France
+    → Correct: France
+  - Sources: forbes=Australia, dbpedia=Australia
+    → Correct: Australia
+  - Sources: fullcontact=France, forbes=France
+    → Correct: France
+  - Sources: forbes=Netherlands
+    → Correct: Netherlands
+
+Attribute "founded":
+  - Sources: dbpedia=1892-01-01
+    → Correct: 1892-01-01 00:00:00
+  - Sources: fullcontact=1995-01-01
+    → Correct: 1991-01-01 00:00:00
+  - Sources: fullcontact=1977-01-01
+    → Correct: 1977-01-01 00:00:00
+  - Sources: dbpedia=1960-01-01
+    → Correct: 1935-01-01 00:00:00
+  - Sources: fullcontact=1885-01-01
+    → Correct: 1885-01-01 00:00:00
+
+Attribute "keypeople_name":
+  - Sources: dbpedia=Frank Lowy
+    → Correct: Frank Lowy
+  - Sources: dbpedia=Schlumberger brothers
+    → Correct: Schlumberger brothers
+  - Sources: dbpedia=Elmer Winter
+    → Correct: ['Elmer Winter', 'Vidya Gowda']
+  - Sources: dbpedia=Samuel Smith (watchmaker)
+    → Correct: ['Samuel Smith (watchmaker)', 'Candace Bradshaw']
+  - Sources: dbpedia=['Irwin M. Jacobs', 'Andrew Viterbi']
+    → Correct: ['Irwin M. Jacobs', 'Andrew Viterbi', 'Bob Forutan', 'Franklin P. Antonio']
+
+Attribute "name":
+  - Sources: dbpedia=Industrial Alliance, forbes=Industrial Alliance Insurance
+    → Correct: Industrial Alliance Insurance
+  - Sources: fullcontact=Deutsche Telekom AG, forbes=Deutsche Telekom
+    → Correct: Deutsche Telekom
+  - Sources: forbes=Eutelsat Communications, fullcontact=Eutelsat SA
+    → Correct: Eutelsat Communications
+  - Sources: forbes=Westfield Group, dbpedia=Westfield Group
+    → Correct: Westfield Group
+  - Sources: fullcontact=Crédit Agricole, forbes=Credit Agricole
+    → Correct: Credit Agricole
+
+Attribute "revenue":
+  - Sources: dbpedia=3.0, forbes=6300000000
+    → Correct: 6300000000
+  - Sources: forbes=79800000000
+    → Correct: 79800000000
+  - Sources: forbes=1700000000
+    → Correct: 1700000000
+  - Sources: forbes=2300000000, dbpedia=4.0
+    → Correct: 2300000000
+  - Sources: forbes=65300000000
+    → Correct: 65300000000
+
+
+
+SOURCE ACCURACY STATISTICS (from validation set):
+
+Attribute "assets":
+  - dbpedia: 41% correct (12/29 values)
+  - forbes: 92% correct (92/100 values)
+
+Attribute "city":
+  - dbpedia: 44% correct (22/50 values)
+  - fullcontact: 51% correct (20/39 values)
+
+Attribute "country":
+  - dbpedia: 98% correct (49/50 values)
+  - forbes: 98% correct (82/84 values)
+  - fullcontact: 87% correct (33/38 values)
+
+Attribute "founded":
+  - dbpedia: 82% correct (41/50 values)
+  - fullcontact: 68% correct (21/31 values)
+
+Attribute "keypeople_name":
+  - dbpedia: 67% correct (8/12 values)
+
+Attribute "name":
+  - dbpedia: 60% correct (30/50 values)
+  - forbes: 97% correct (97/100 values)
+  - fullcontact: 35% correct (17/48 values)
+
+Attribute "revenue":
+  - dbpedia: 36% correct (14/39 values)
+  - forbes: 88% correct (88/100 values)
+
+RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
+consider using 'favour_sources' to prefer that source's values.
+
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.
+- For attributes where validation shows one source is consistently correct, consider using favour_sources.

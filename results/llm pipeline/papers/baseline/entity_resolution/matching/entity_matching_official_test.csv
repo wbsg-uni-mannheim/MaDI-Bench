@@ -1,0 +1,5 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+dblp,crossref,dblp__crossref,MLBasedMatcher,0.6,0.9960831575775836,1.0,0.9921968787515006,6666,1666,5000,DI-Bench/usecases/papers/input/entitymatching/dblp_2_crossref_test.csv
+dblp,open_alex,dblp__open_alex,MLBasedMatcher,0.5,0.9248144562762182,1.0,0.8601440576230492,6666,1666,5000,DI-Bench/usecases/papers/input/entitymatching/dblp_2_open_alex_test.csv
+crossref,dblp,crossref__dblp,MLBasedMatcher,0.6,0.9972916039723142,1.0,0.9945978391356542,6666,1666,5000,DI-Bench/usecases/papers/input/entitymatching/dblp_2_crossref_test.csv
+open_alex,dblp,open_alex__dblp,MLBasedMatcher,0.7,0.9476340694006309,0.9986702127659575,0.9015606242496998,6666,1666,5000,DI-Bench/usecases/papers/input/entitymatching/dblp_2_open_alex_test.csv

@@ -1,0 +1,15 @@
+source,attribute,baseline_alignment_rate,n_cells,n_aligned
+discogs,artist,0.748201,139,104
+discogs,duration,0.139535,86,12
+discogs,genre,0.872,125,109
+discogs,label,0.71223,139,99
+discogs,name,0.834532,139,116
+discogs,release-country,0.093525,139,13
+discogs,release-date,0.510791,139,71
+lastfm,artist,0.506329,79,40
+lastfm,name,0.419753,81,34
+musicbrainz,artist,0.656489,131,86
+musicbrainz,duration,0.081481,135,11
+musicbrainz,name,0.88806,134,119
+musicbrainz,release-country,0.729323,133,97
+musicbrainz,release-date,0.656716,134,88

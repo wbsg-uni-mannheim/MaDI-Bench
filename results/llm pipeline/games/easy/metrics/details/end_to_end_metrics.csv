@@ -1,0 +1,16 @@
+case,metric,value,source_file
+games-augmented-easy,input_sources,3,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,total_input_records,78925,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,fused_output_records,63227,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,fusion_ratio,0.1989,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,row_gain_over_largest,16983,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,row_gain_percentage,36.72,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,merged_records,11568,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,input_columns_target_schema,12,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,fused_output_columns,13,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,average_input_density,0.5723,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,fused_data_density,0.62,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,data_density_change,0.0477,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,largest_source_name,dbpedia,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,largest_source_density,0.8386,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json
+games-augmented-easy,density_change_vs_largest,-0.2185,DI-Bench/runs/augmented/games/easy/end_to_end_metrics.json

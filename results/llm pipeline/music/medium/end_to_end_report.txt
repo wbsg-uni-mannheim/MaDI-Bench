@@ -1,0 +1,25 @@
+============================================================
+END-TO-END INTEGRATION METRICS
+============================================================
+
+Input Sources:                      3
+Total Input Records:                37,335
+Fused Output Records:               31,786
+Fusion Ratio:                       14.9%
+
+Row Gain Over Largest Source:       +9,126
+Row Gain Percentage:                +40.3%
+Merged Records:                     4,265
+
+Input Columns (Target Schema):      9
+Fused Output Columns:               10
+
+Average Input Data Density:         73.1%
+Fused Data Density:                 77.7%
+Data Density Change:                +4.6%
+
+Largest Source:                     discogs
+Largest Source Density:             84.9%
+Density Change vs Largest:          -7.1%
+
+============================================================

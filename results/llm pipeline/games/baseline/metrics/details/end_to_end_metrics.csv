@@ -1,0 +1,16 @@
+case,metric,value,source_file
+games,input_sources,3,DI-Bench/runs/games/end_to_end_metrics.json
+games,total_input_records,74951,DI-Bench/runs/games/end_to_end_metrics.json
+games,fused_output_records,61286,DI-Bench/runs/games/end_to_end_metrics.json
+games,fusion_ratio,0.1823,DI-Bench/runs/games/end_to_end_metrics.json
+games,row_gain_over_largest,14706,DI-Bench/runs/games/end_to_end_metrics.json
+games,row_gain_percentage,31.57,DI-Bench/runs/games/end_to_end_metrics.json
+games,merged_records,10479,DI-Bench/runs/games/end_to_end_metrics.json
+games,input_columns_target_schema,12,DI-Bench/runs/games/end_to_end_metrics.json
+games,fused_output_columns,13,DI-Bench/runs/games/end_to_end_metrics.json
+games,average_input_density,0.6222,DI-Bench/runs/games/end_to_end_metrics.json
+games,fused_data_density,0.6659,DI-Bench/runs/games/end_to_end_metrics.json
+games,data_density_change,0.0437,DI-Bench/runs/games/end_to_end_metrics.json
+games,largest_source_name,dbpedia,DI-Bench/runs/games/end_to_end_metrics.json
+games,largest_source_density,0.8995,DI-Bench/runs/games/end_to_end_metrics.json
+games,density_change_vs_largest,-0.2336,DI-Bench/runs/games/end_to_end_metrics.json

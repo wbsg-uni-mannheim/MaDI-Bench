@@ -1,0 +1,6 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+lastfm,id,Music Release,id,0.95,llm_based_matching
+lastfm,Attribute_2,Music Release,name,0.95,llm_based_matching
+lastfm,Attribute_3,Music Release,artist,0.95,llm_based_matching
+lastfm,Attribute_6,Music Release,duration,0.95,llm_based_matching
+lastfm,Attribute_9,Music Release,tracks,0.95,llm_based_matching

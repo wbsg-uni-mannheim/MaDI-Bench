@@ -1,0 +1,97 @@
+{
+  "best_case_key": "llm_val__opt_provided",
+  "best_case_name": "llm_val",
+  "best_validation_accuracy": 0.9154929577464789,
+  "best_test_accuracy": 0.8571428571428571,
+  "best_case_dir": "DI-Bench/runs/games/fusion/optimization_provided_val/case_llm_val__opt_provided",
+  "rules": {
+    "ESRB": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "criticScore": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "developer": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "genres": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "dbpedia"
+        ]
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "platform": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "publisher": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      }
+    },
+    "releaseYear": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    },
+    "series": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "dbpedia"
+        ]
+      }
+    },
+    "units_sold_mm": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      }
+    },
+    "userScore": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic"
+        ]
+      }
+    }
+  }
+}

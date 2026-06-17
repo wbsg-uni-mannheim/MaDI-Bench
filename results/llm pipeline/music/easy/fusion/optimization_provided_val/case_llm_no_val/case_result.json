@@ -1,0 +1,43 @@
+{
+  "case_name": "llm_no_val",
+  "rules": {
+    "artist": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "duration": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "genre": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "label": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "release-country": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "release-date": {
+      "kwargs": {},
+      "resolver": "earliest"
+    },
+    "tracks": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

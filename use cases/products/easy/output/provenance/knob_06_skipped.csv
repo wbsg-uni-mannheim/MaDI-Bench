@@ -1,0 +1,40 @@
+entity_id,source,attribute,original_value,reason,knob,level
+products_1_8072830,products_1,capacity_gb,16.0 GB,cell_collision_with_prior_knob,6,easy
+products_1_15347603,products_1,capacity_gb,"12,000.0 GB",cell_collision_with_prior_knob,6,easy
+products_1_32009117,products_1,list_price,169.99,operator_case_corrupt_no_effect,6,easy
+k02_noncorner_products_00213__products_1,products_1,list_price,48.5,numeric_jitter_exhausted_retries,6,easy
+k02_noncorner_products_00270__products_1,products_1,list_price,189.5,numeric_jitter_exhausted_retries,6,easy
+products_1_50222671,products_1,sequential_read_mb_s,530.0 MB/s,cell_collision_with_prior_knob,6,easy
+products_1_27166335,products_1,video_memory_gb,11.0 GB,cell_collision_with_prior_knob,6,easy
+products_1_68277426,products_1,video_memory_gb,6.0 GB,cell_collision_with_prior_knob,6,easy
+products_2_7197167,products_2,capacityGb,240.0 GB,cell_collision_with_prior_knob,6,easy
+products_2_14720640,products_2,capacityGb,"2,000.0 GB",cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00109__products_2,products_2,capacityGb,16.0 GB,cell_collision_with_prior_knob,6,easy
+products_2_13794201,products_2,modelName,GT710-SL-2GD5,closeness_floor_exhausted_retries,6,easy
+products_2_98380830,products_2,priceAmount,314.0,numeric_jitter_exhausted_retries,6,easy
+k02_noncorner_products_00356__products_2,products_2,priceAmount,219.5,numeric_jitter_exhausted_retries,6,easy
+k02_noncorner_products_00369__products_2,products_2,priceAmount,499.99,operator_case_corrupt_no_effect,6,easy
+products_2_54337235,products_2,vramGb,2.0 GB,cell_collision_with_prior_knob,6,easy
+products_3_27307306,products_3,CapacityGB,"2,000.0 GB",cell_collision_with_prior_knob,6,easy
+products_3_89786586,products_3,CapacityGB,960.0 GB,cell_collision_with_prior_knob,6,easy
+products_3_96449907,products_3,CapacityGB,"4,000.0 GB",cell_collision_with_prior_knob,6,easy
+products_3_60655529,products_3,CapacityGB,64.0 GB,cell_collision_with_prior_knob,6,easy
+products_3_1842835,products_3,CapacityGB,"2,000.0 GB",cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00028__products_3,products_3,CapacityGB,64.0 GB,cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00111__products_3,products_3,CapacityGB,0.5 GB,cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00318__products_3,products_3,CapacityGB,64.0 GB,cell_collision_with_prior_knob,6,easy
+products_3_71290070,products_3,Price,"90,000.0",cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00012__products_3,products_3,Price,219.99,numeric_jitter_exhausted_retries,6,easy
+k02_noncorner_products_00123__products_3,products_3,Price,89.95,numeric_jitter_exhausted_retries,6,easy
+products_3_23321687,products_3,WriteMBs,530.0 MB/s,cell_collision_with_prior_knob,6,easy
+products_4_94834764,products_4,amt,614.95,operator_case_corrupt_no_effect,6,easy
+products_4_65320459,products_4,amt,363.97,numeric_jitter_exhausted_retries,6,easy
+products_4_75638511,products_4,amt,267.23,numeric_jitter_exhausted_retries,6,easy
+products_4_85012405,products_4,cap_gb,240.0 GB,cell_collision_with_prior_knob,6,easy
+products_4_87756607,products_4,cap_gb,32.0 GB,cell_collision_with_prior_knob,6,easy
+products_4_31966474,products_4,cap_gb,300.0 GB,cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00151__products_4,products_4,cap_gb,"1,440.0 GB",cell_collision_with_prior_knob,6,easy
+k02_noncorner_products_00335__products_4,products_4,cap_gb,128.0 GB,cell_collision_with_prior_knob,6,easy
+products_4_85012405,products_4,rd_mbs,520.0 MB/s,cell_collision_with_prior_knob,6,easy
+products_4_17374088,products_4,rd_mbs,"3,500.0 MB/s",cell_collision_with_prior_knob,6,easy
+products_4_75418922,products_4,vram,2.0 GB,cell_collision_with_prior_knob,6,easy

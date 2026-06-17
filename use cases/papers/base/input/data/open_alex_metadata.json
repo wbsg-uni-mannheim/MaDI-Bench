@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "OpenAlex Computer Science Papers Downsampled Source-Schema Subset",
+  "description": "Downsampled OpenAlex works used as benchmark input for the papers web-data-integration usecase. The file preserves an OpenAlex-shaped source schema instead of the integrated schema. Rows are ordered like the schema-mapped OpenAlex subset so existing identity-resolution identifiers remain stable. Records are taken from the local OpenAlex source snapshots where available; missing DOI rows are represented in the same OpenAlex-shaped schema from the downsampled values.",
+  "url": "https://openalex.org/",
+  "keywords": [
+    "OpenAlex",
+    "scholarly metadata",
+    "computer science",
+    "papers",
+    "DOI",
+    "bibliographic metadata",
+    "source schema",
+    "schema matching",
+    "identity resolution",
+    "data fusion"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "identifier": "openalex-cs-papers-downsampled-source-schema-2018-2020",
+  "version": "1.1",
+  "datePublished": "2026-05-28",
+  "numberOfItems": 60719,
+  "temporalCoverage": "2018-01-01/2020-12-31",
+  "creator": {
+    "@type": "Organization",
+    "url": "https://openalex.org/",
+    "name": "OpenAlex"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OpenAlex",
+    "url": "https://openalex.org/"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/x-ndjson",
+      "contentUrl": "open_alex.jsonl"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "doi_value",
+      "description": "OpenAlex DOI value normalized for the benchmark input",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "work_kind",
+      "description": "OpenAlex work type",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "display_title",
+      "description": "OpenAlex work title",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "authors_list",
+      "description": "OpenAlex author display names",
+      "unitText": "array"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "year_published",
+      "description": "Publication year reported by OpenAlex",
+      "unitText": "year/integer"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "source_name",
+      "description": "OpenAlex source, journal, conference, or venue display name",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "topic_terms",
+      "description": "OpenAlex keywords or concepts associated with the paper",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "volume_tag",
+      "description": "OpenAlex volume",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "issue_tag",
+      "description": "OpenAlex issue",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "start_page",
+      "description": "First page or first page locator reported by OpenAlex",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "end_page",
+      "description": "Last page or last page locator reported by OpenAlex",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "refs_count",
+      "description": "Number of referenced works reported by OpenAlex",
+      "unitText": "count"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "citations_count",
+      "description": "Number of citations reported by OpenAlex",
+      "unitText": "count"
+    }
+  ]
+}

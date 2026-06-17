@@ -1,0 +1,5 @@
+dataset,llm_columns,llm_normalized,llm_total,builtin_columns,builtin_normalized,builtin_total
+dbpedia,2,12366,13133,3,20551,22299
+forbes,2,3715,3820,2,3489,3820
+fullcontact,1,1272,1291,2,2054,2178
+TOTAL,5,17353,18244,7,26094,28297

@@ -1,0 +1,3 @@
+case,pair,split,f1,precision,recall,matcher,threshold,source_file,note
+papers-augmented-easy,crossref__dblp,pipeline_validation,1.0,1.0,1.0,MLBasedMatcher,0.8,DI-Bench/runs/augmented/papers/easy/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+papers-augmented-easy,open_alex__dblp,pipeline_validation,1.0,1.0,1.0,MLBasedMatcher,0.9,DI-Bench/runs/augmented/papers/easy/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.

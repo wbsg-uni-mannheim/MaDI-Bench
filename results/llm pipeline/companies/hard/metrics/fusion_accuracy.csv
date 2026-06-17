@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+companies-augmented-hard,llm_val__opt_provided,official_test,0.4437984496124031,229,516,DI-Bench/runs/augmented/companies/hard/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

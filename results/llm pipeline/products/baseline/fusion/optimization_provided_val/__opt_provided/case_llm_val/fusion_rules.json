@@ -1,0 +1,144 @@
+{
+  "attribute_rules": {
+    "brand": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "bus_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "chipset_name": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cluster_id": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "color": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "description": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "form_factor": {
+      "kwargs": {},
+      "resolver": "weighted_voting"
+    },
+    "height_mm": {
+      "kwargs": {},
+      "resolver": "minimum"
+    },
+    "interface_type": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "length_mm": {
+      "kwargs": {},
+      "resolver": "minimum"
+    },
+    "memory_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "model": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "model_number": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "price": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "priceCurrency": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "product_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "read_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "storage_connection_type": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "storage_gb": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "title_description": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "url": {
+      "kwargs": {
+        "sources": [
+          "prod1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "vram_gb": {
+      "kwargs": {},
+      "resolver": "weighted_voting"
+    },
+    "weight_g": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "width_mm": {
+      "kwargs": {},
+      "resolver": "minimum"
+    },
+    "write_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "maximum"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+dataset,llm_columns,llm_normalized,llm_total,builtin_columns,builtin_normalized,builtin_total
+discogs,1,21977,22175,3,54628,54858
+lastfm,0,0,0,3,7485,7492
+musicbrainz,0,0,0,3,9113,9141
+test_set,1,77,77,0,0,0
+validation_set,1,100,100,0,0,0
+TOTAL,3,22154,22352,9,71226,71491

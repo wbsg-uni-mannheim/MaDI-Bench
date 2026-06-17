@@ -1,0 +1,4 @@
+case,pair,split,f1,precision,recall,source_file,note
+companies,dbpedia_forbes,official_test,0.931297709923664,0.8970588235294118,0.9682539682539684,DI-Bench/runs/companies/entity_resolution/training/training_comparison/dbpedia_forbes/comparison_summary.csv,Official held-out test score for the final configuration selected by validation.
+companies,forbes_fullcontact,official_test,0.8823529411764706,0.84,0.9292035398230089,DI-Bench/runs/companies/entity_resolution/training/training_comparison/forbes_fullcontact/comparison_summary.csv,Official held-out test score for the final configuration selected by validation.
+companies,all_pairs,official_test,0.9068253255500673,,,DI-Bench/runs/companies/entity_resolution/training/training_comparison,Unweighted mean across pair-level official test F1 values.

@@ -1,0 +1,73 @@
+{
+  "case_name": "llm_val",
+  "rules": {
+    "artist": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "lastfm",
+          "musicbrainz",
+          "discogs"
+        ]
+      }
+    },
+    "duration": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "genre": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "label": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "lastfm",
+          "discogs"
+        ]
+      }
+    },
+    "release-country": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "discogs"
+        ]
+      }
+    },
+    "release-date": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "discogs"
+        ]
+      }
+    },
+    "tracks": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

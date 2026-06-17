@@ -1,0 +1,55 @@
+{
+  "best_case_key": "heuristic",
+  "best_case_name": "heuristic",
+  "best_validation_accuracy": 0.8838797814207651,
+  "best_test_accuracy": 0.8135168961201502,
+  "best_case_dir": "DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/case_heuristic",
+  "rules": {
+    "ESRB": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "criticScore": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "developer": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "genres": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "globalSales": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "name": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "platform": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "publisher": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "releaseYear": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
+    },
+    "series": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "userScore": {
+      "resolver": "median",
+      "kwargs": {}
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "games-augmented-hard",
+    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/games-augmented/hard/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/augmented/games/hard/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.6823756625281348,
+    "n_evaluated": 344325,
+    "n_consistent": 234959,
+    "n_inconsistent": 109366,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "name": {
+        "consistency_score": 1.0,
+        "n_evaluated": 58952,
+        "n_consistent": 58952,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "releaseYear": {
+        "consistency_score": 0.0,
+        "n_evaluated": 52045,
+        "n_consistent": 0,
+        "n_inconsistent": 52045,
+        "failure_counts": {
+          "format.date": 52045,
+          "pattern": 52045
+        },
+        "excluded_from_dataset_score": false
+      },
+      "developer": {
+        "consistency_score": 1.0,
+        "n_evaluated": 53691,
+        "n_consistent": 53691,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "genres": {
+        "consistency_score": 0.0,
+        "n_evaluated": 55802,
+        "n_consistent": 0,
+        "n_inconsistent": 55802,
+        "failure_counts": {
+          "type": 55802
+        },
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 55802,
+            "n_known_values": 2258,
+            "n_unknown_values": 53544,
+            "known_value_rate": 0.040464499480305366
+          }
+        }
+      },
+      "publisher": {
+        "consistency_score": 1.0,
+        "n_evaluated": 6228,
+        "n_consistent": 6228,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "platform": {
+        "consistency_score": 1.0,
+        "n_evaluated": 48386,
+        "n_consistent": 48386,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "taxonomy": {
+            "exhaustive": false,
+            "membership_enforced": false,
+            "n_values_checked": 48386,
+            "n_known_values": 48386,
+            "n_unknown_values": 0,
+            "known_value_rate": 1.0
+          }
+        }
+      },
+      "criticScore": {
+        "consistency_score": 0.9632262924945851,
+        "n_evaluated": 21238,
+        "n_consistent": 20457,
+        "n_inconsistent": 781,
+        "failure_counts": {
+          "type": 781
+        },
+        "excluded_from_dataset_score": false
+      },
+      "userScore": {
+        "consistency_score": 0.9581940746615306,
+        "n_evaluated": 17653,
+        "n_consistent": 16915,
+        "n_inconsistent": 738,
+        "failure_counts": {
+          "type": 738
+        },
+        "excluded_from_dataset_score": false
+      },
+      "ESRB": {
+        "consistency_score": 1.0,
+        "n_evaluated": 17531,
+        "n_consistent": 17531,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "taxonomy": {
+            "exhaustive": true,
+            "membership_enforced": true,
+            "n_values_checked": 17531,
+            "n_known_values": 17531,
+            "n_unknown_values": 0,
+            "known_value_rate": 1.0
+          }
+        }
+      },
+      "series": {
+        "consistency_score": 1.0,
+        "n_evaluated": 12799,
+        "n_consistent": 12799,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources",
+      "Attribute_11"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

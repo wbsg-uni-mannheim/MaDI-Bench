@@ -1,0 +1,112 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) The main goal is to correctly identify list-like attributes and choose a list resolver (usually 'union').
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources, random_value
+
+Starting point (heuristic plan you can override):
+{
+  "assets": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "city": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "country": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "founded": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "industry": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "keypeople": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "revenue": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "url": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  }
+}
+
+Attribute diagnostics (to help spot list-like attributes and separators):
+attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                sample_values
+   assets           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                    [240,560,000,000.0, 1780, 11 389,74, 94510000000, 10,146, 41, 1,961.87, 24,203,000,000.0]
+     city           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                   [Lisbon, Mexico City, Istanbul, Istanbul, Istanbul, Istanbul, Paris, Lyon]
+  country          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                 [France, Portugal, Mexico, France, France, Iceland, United Kingdom, Czechia]
+  founded          False               None             False             False           True            False                                                                                                                                                                                                                                                     [1970-01-01 00:00:00, 1993-01-01 00:00:00, 1998-01-01 00:00:00, 1997-01-01 00:00:00, 1975-01-01 00:00:00, 1923-01-01 00:00:00, 1946-01-01 00:00:00, 1994-01-01 00:00:00]
+ industry          False               None             False             False          False            False                                                                                                                                                                                                                                                                          [Food Products, Electric Utilities, Entertainment, Industrial Conglomerates, Publishing, Financial Services, Automobiles, Industrial Conglomerates]
+keypeople           True                  ,             False             False          False            False                                                                                                                                                                                                                                                          [Marcel Paul, Formed through the merger of three predecessor banks, Adamjee Haji Dawood, Alvin Adam, David Eccles (businessman), Gene Amdahl, Jeetendra, Jeetendra]
+     name          False               None             False             False          False            False                                                                                                                                                                                                                                                                 [À la Table de Spanghero, �?guas de Portugal, �?nima Estudios, Çalık Enerji, Çalık Holding, Çukurova (construction firm), Électricité de France, Özal Group]
+  revenue           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                            [65170, 62,485,056.00, 187210000, 4737352200, 29.211.550.000,00, 279, 759, 11998]
+      url          False               None             False             False          False            False [http://www.forbes.com/companies/china-construction-bank/, http://www.forbes.com/companies/agricultural-bank-of-china/, http://www.forbes.com/companies/jpmorgan-chase/, http://www.forbes.com/companies/berkshire-hathaway/, http://www.forbes.com/companies/exxon-mobil/, http://www.forbes.com/companies/general-electric/, http://www.forbes.com/companies/wells-fargo/, http://www.forbes.com/companies/bank-of-china/]
+
+Dataset overview (trust_score may be missing; you can still use prefer_higher_trust if it makes sense):
+[
+  {
+    "dataset_name": "dbpedia",
+    "rows": 10069,
+    "columns": 9,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "forbes",
+    "rows": 2107,
+    "columns": 7,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "fullcontact",
+    "rows": 2004,
+    "columns": 6,
+    "trust_score": null
+  }
+]
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.

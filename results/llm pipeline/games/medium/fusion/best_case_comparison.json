@@ -1,0 +1,61 @@
+{
+  "auto_generated": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "heuristic",
+    "validation_accuracy": 0.8701854493580599,
+    "test_accuracy": 0.7847309136420526,
+    "rules": {
+      "ESRB": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "criticScore": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "developer": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "genres": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "name": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "platform": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "publisher": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "releaseYear": {
+        "resolver": "prefer_higher_trust",
+        "kwargs": {
+          "trust_key": "trust_score"
+        }
+      },
+      "series": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "units_sold_mm": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "userScore": {
+        "resolver": "median",
+        "kwargs": {}
+      }
+    }
+  }
+}

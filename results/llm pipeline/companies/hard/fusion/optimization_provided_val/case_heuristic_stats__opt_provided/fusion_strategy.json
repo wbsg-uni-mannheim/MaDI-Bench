@@ -1,0 +1,22 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "assets": "union",
+    "city": "union",
+    "country": "favour_sources",
+    "founded": "prefer_higher_trust",
+    "industry": "most_complete",
+    "keypeople": "union",
+    "name": "longest_string",
+    "revenue": "union",
+    "url": "most_complete"
+  },
+  "strategy_name": "heuristic_stats_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.0,
+    "forbes": 3.0,
+    "fullcontact": 1.3180177871937564
+  }
+}

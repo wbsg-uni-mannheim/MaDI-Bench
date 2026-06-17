@@ -1,0 +1,4 @@
+strategy,correspondences_after,clusters_after,oversized_after,target_range_after,max_cluster_size_after,oversized_fixed,collateral_damage
+MaximumBipartiteMatching,34304,30156,0,30156,3,1177,-3800
+GreedyOneToOne,34071,30065,0,30065,3,1177,-3709
+StableMatching,33896,29956,0,29956,3,1177,-3600

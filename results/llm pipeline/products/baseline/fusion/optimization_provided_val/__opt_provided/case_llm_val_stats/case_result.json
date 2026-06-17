@@ -1,0 +1,1011 @@
+{
+  "case_name": "llm_val_stats",
+  "rules": {
+    "brand": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod3",
+          "prod2",
+          "prod4"
+        ]
+      }
+    },
+    "bus_type": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "chipset_name": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "cluster_id": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "color": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod4",
+          "prod3"
+        ]
+      }
+    },
+    "description": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod3",
+          "prod2",
+          "prod4"
+        ]
+      }
+    },
+    "form_factor": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod3",
+          "prod4"
+        ]
+      }
+    },
+    "height_mm": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod3",
+          "prod1",
+          "prod4",
+          "prod2"
+        ]
+      }
+    },
+    "interface_type": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "length_mm": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod3",
+          "prod4",
+          "prod2"
+        ]
+      }
+    },
+    "memory_type": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod3",
+          "prod4"
+        ]
+      }
+    },
+    "model": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod3",
+          "prod4"
+        ]
+      }
+    },
+    "model_number": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod3",
+          "prod2"
+        ]
+      }
+    },
+    "price": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod2",
+          "prod3"
+        ]
+      }
+    },
+    "priceCurrency": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod2",
+          "prod3"
+        ]
+      }
+    },
+    "product_type": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "read_speed_mb_s": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod3",
+          "prod2",
+          "prod4"
+        ]
+      }
+    },
+    "storage_connection_type": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod3",
+          "prod2",
+          "prod1",
+          "prod4"
+        ]
+      }
+    },
+    "storage_gb": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod3",
+          "prod2"
+        ]
+      }
+    },
+    "title": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod4",
+          "prod3"
+        ]
+      }
+    },
+    "title_description": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod4",
+          "prod3"
+        ]
+      }
+    },
+    "url": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod4",
+          "prod3"
+        ]
+      }
+    },
+    "vram_gb": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod3",
+          "prod2",
+          "prod4"
+        ]
+      }
+    },
+    "weight_g": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod2",
+          "prod3"
+        ]
+      }
+    },
+    "width_mm": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod4",
+          "prod2",
+          "prod3"
+        ]
+      }
+    },
+    "write_speed_mb_s": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "prod1",
+          "prod2",
+          "prod3",
+          "prod4"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": {
+    "brand": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "brand",
+        "correct": 80,
+        "total": 86,
+        "accuracy": 0.9302
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "brand",
+        "correct": 75,
+        "total": 79,
+        "accuracy": 0.9494
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "brand",
+        "correct": 91,
+        "total": 94,
+        "accuracy": 0.9681
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "brand",
+        "correct": 61,
+        "total": 70,
+        "accuracy": 0.8714
+      }
+    },
+    "title": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "title",
+        "correct": 11,
+        "total": 87,
+        "accuracy": 0.1264
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "title",
+        "correct": 2,
+        "total": 82,
+        "accuracy": 0.0244
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "title",
+        "correct": 31,
+        "total": 100,
+        "accuracy": 0.31
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "title",
+        "correct": 7,
+        "total": 78,
+        "accuracy": 0.0897
+      }
+    },
+    "description": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "description",
+        "correct": 4,
+        "total": 87,
+        "accuracy": 0.046
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "description",
+        "correct": 6,
+        "total": 81,
+        "accuracy": 0.0741
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "description",
+        "correct": 29,
+        "total": 100,
+        "accuracy": 0.29
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "description",
+        "correct": 3,
+        "total": 78,
+        "accuracy": 0.0385
+      }
+    },
+    "price": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "price",
+        "correct": 19,
+        "total": 80,
+        "accuracy": 0.2375
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "price",
+        "correct": 12,
+        "total": 74,
+        "accuracy": 0.1622
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "price",
+        "correct": 51,
+        "total": 92,
+        "accuracy": 0.5543
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "price",
+        "correct": 19,
+        "total": 72,
+        "accuracy": 0.2639
+      }
+    },
+    "priceCurrency": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "priceCurrency",
+        "correct": 30,
+        "total": 81,
+        "accuracy": 0.3704
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "priceCurrency",
+        "correct": 24,
+        "total": 73,
+        "accuracy": 0.3288
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "priceCurrency",
+        "correct": 92,
+        "total": 92,
+        "accuracy": 1.0
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "priceCurrency",
+        "correct": 28,
+        "total": 71,
+        "accuracy": 0.3944
+      }
+    },
+    "url": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "url",
+        "correct": 7,
+        "total": 87,
+        "accuracy": 0.0805
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "url",
+        "correct": 3,
+        "total": 82,
+        "accuracy": 0.0366
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "url",
+        "correct": 41,
+        "total": 100,
+        "accuracy": 0.41
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "url",
+        "correct": 6,
+        "total": 78,
+        "accuracy": 0.0769
+      }
+    },
+    "title_description": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "title_description",
+        "correct": 4,
+        "total": 87,
+        "accuracy": 0.046
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "title_description",
+        "correct": 2,
+        "total": 82,
+        "accuracy": 0.0244
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "title_description",
+        "correct": 29,
+        "total": 100,
+        "accuracy": 0.29
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "title_description",
+        "correct": 3,
+        "total": 78,
+        "accuracy": 0.0385
+      }
+    },
+    "model": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "model",
+        "correct": 18,
+        "total": 79,
+        "accuracy": 0.2278
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "model",
+        "correct": 15,
+        "total": 72,
+        "accuracy": 0.2083
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "model",
+        "correct": 33,
+        "total": 88,
+        "accuracy": 0.375
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "model",
+        "correct": 10,
+        "total": 70,
+        "accuracy": 0.1429
+      }
+    },
+    "model_number": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "model_number",
+        "correct": 7,
+        "total": 30,
+        "accuracy": 0.2333
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "model_number",
+        "correct": 42,
+        "total": 48,
+        "accuracy": 0.875
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "model_number",
+        "correct": 9,
+        "total": 32,
+        "accuracy": 0.2812
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "model_number",
+        "correct": 5,
+        "total": 32,
+        "accuracy": 0.1562
+      }
+    },
+    "product_type": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "product_type",
+        "correct": 87,
+        "total": 87,
+        "accuracy": 1.0
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "product_type",
+        "correct": 82,
+        "total": 82,
+        "accuracy": 1.0
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "product_type",
+        "correct": 100,
+        "total": 100,
+        "accuracy": 1.0
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "product_type",
+        "correct": 77,
+        "total": 78,
+        "accuracy": 0.9872
+      }
+    },
+    "storage_gb": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "storage_gb",
+        "correct": 25,
+        "total": 64,
+        "accuracy": 0.3906
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "storage_gb",
+        "correct": 27,
+        "total": 58,
+        "accuracy": 0.4655
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "storage_gb",
+        "correct": 72,
+        "total": 73,
+        "accuracy": 0.9863
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "storage_gb",
+        "correct": 27,
+        "total": 53,
+        "accuracy": 0.5094
+      }
+    },
+    "read_speed_mb_s": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "read_speed_mb_s",
+        "correct": 11,
+        "total": 14,
+        "accuracy": 0.7857
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "read_speed_mb_s",
+        "correct": 16,
+        "total": 17,
+        "accuracy": 0.9412
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "read_speed_mb_s",
+        "correct": 11,
+        "total": 16,
+        "accuracy": 0.6875
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "read_speed_mb_s",
+        "correct": 11,
+        "total": 17,
+        "accuracy": 0.6471
+      }
+    },
+    "write_speed_mb_s": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "write_speed_mb_s",
+        "correct": 7,
+        "total": 12,
+        "accuracy": 0.5833
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "write_speed_mb_s",
+        "correct": 13,
+        "total": 17,
+        "accuracy": 0.7647
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "write_speed_mb_s",
+        "correct": 9,
+        "total": 15,
+        "accuracy": 0.6
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "write_speed_mb_s",
+        "correct": 7,
+        "total": 16,
+        "accuracy": 0.4375
+      }
+    },
+    "bus_type": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "bus_type",
+        "correct": 38,
+        "total": 62,
+        "accuracy": 0.6129
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "bus_type",
+        "correct": 36,
+        "total": 57,
+        "accuracy": 0.6316
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "bus_type",
+        "correct": 49,
+        "total": 74,
+        "accuracy": 0.6622
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "bus_type",
+        "correct": 41,
+        "total": 61,
+        "accuracy": 0.6721
+      }
+    },
+    "interface_type": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "interface_type",
+        "correct": 15,
+        "total": 40,
+        "accuracy": 0.375
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "interface_type",
+        "correct": 17,
+        "total": 44,
+        "accuracy": 0.3864
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "interface_type",
+        "correct": 15,
+        "total": 45,
+        "accuracy": 0.3333
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "interface_type",
+        "correct": 25,
+        "total": 56,
+        "accuracy": 0.4464
+      }
+    },
+    "color": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "color",
+        "correct": 3,
+        "total": 12,
+        "accuracy": 0.25
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "color",
+        "correct": 1,
+        "total": 9,
+        "accuracy": 0.1111
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "color",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "color",
+        "correct": 2,
+        "total": 8,
+        "accuracy": 0.25
+      }
+    },
+    "storage_connection_type": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "storage_connection_type",
+        "correct": 30,
+        "total": 36,
+        "accuracy": 0.8333
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "storage_connection_type",
+        "correct": 37,
+        "total": 51,
+        "accuracy": 0.7255
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "storage_connection_type",
+        "correct": 24,
+        "total": 40,
+        "accuracy": 0.6
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "storage_connection_type",
+        "correct": 32,
+        "total": 42,
+        "accuracy": 0.7619
+      }
+    },
+    "weight_g": {
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "weight_g",
+        "correct": 1,
+        "total": 3,
+        "accuracy": 0.3333
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "weight_g",
+        "correct": 2,
+        "total": 5,
+        "accuracy": 0.4
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "weight_g",
+        "correct": 4,
+        "total": 4,
+        "accuracy": 1.0
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "weight_g",
+        "correct": 1,
+        "total": 3,
+        "accuracy": 0.3333
+      }
+    },
+    "width_mm": {
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "width_mm",
+        "correct": 4,
+        "total": 5,
+        "accuracy": 0.8
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "width_mm",
+        "correct": 2,
+        "total": 3,
+        "accuracy": 0.6667
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "width_mm",
+        "correct": 5,
+        "total": 6,
+        "accuracy": 0.8333
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "width_mm",
+        "correct": 1,
+        "total": 2,
+        "accuracy": 0.5
+      }
+    },
+    "length_mm": {
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "length_mm",
+        "correct": 5,
+        "total": 5,
+        "accuracy": 1.0
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "length_mm",
+        "correct": 2,
+        "total": 3,
+        "accuracy": 0.6667
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "length_mm",
+        "correct": 6,
+        "total": 6,
+        "accuracy": 1.0
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "length_mm",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      }
+    },
+    "height_mm": {
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "height_mm",
+        "correct": 3,
+        "total": 5,
+        "accuracy": 0.6
+      },
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "height_mm",
+        "correct": 1,
+        "total": 3,
+        "accuracy": 0.3333
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "height_mm",
+        "correct": 5,
+        "total": 6,
+        "accuracy": 0.8333
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "height_mm",
+        "correct": 2,
+        "total": 2,
+        "accuracy": 1.0
+      }
+    },
+    "form_factor": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "form_factor",
+        "correct": 37,
+        "total": 40,
+        "accuracy": 0.925
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "form_factor",
+        "correct": 45,
+        "total": 48,
+        "accuracy": 0.9375
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "form_factor",
+        "correct": 34,
+        "total": 37,
+        "accuracy": 0.9189
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "form_factor",
+        "correct": 26,
+        "total": 36,
+        "accuracy": 0.7222
+      }
+    },
+    "memory_type": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "memory_type",
+        "correct": 17,
+        "total": 18,
+        "accuracy": 0.9444
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "memory_type",
+        "correct": 20,
+        "total": 20,
+        "accuracy": 1.0
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "memory_type",
+        "correct": 14,
+        "total": 18,
+        "accuracy": 0.7778
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "memory_type",
+        "correct": 14,
+        "total": 17,
+        "accuracy": 0.8235
+      }
+    },
+    "chipset_name": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "chipset_name",
+        "correct": 4,
+        "total": 21,
+        "accuracy": 0.1905
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "chipset_name",
+        "correct": 6,
+        "total": 25,
+        "accuracy": 0.24
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "chipset_name",
+        "correct": 4,
+        "total": 21,
+        "accuracy": 0.1905
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "chipset_name",
+        "correct": 5,
+        "total": 21,
+        "accuracy": 0.2381
+      }
+    },
+    "vram_gb": {
+      "prod2": {
+        "source_name": "prod2",
+        "attribute": "vram_gb",
+        "correct": 18,
+        "total": 21,
+        "accuracy": 0.8571
+      },
+      "prod1": {
+        "source_name": "prod1",
+        "attribute": "vram_gb",
+        "correct": 25,
+        "total": 25,
+        "accuracy": 1.0
+      },
+      "prod4": {
+        "source_name": "prod4",
+        "attribute": "vram_gb",
+        "correct": 16,
+        "total": 21,
+        "accuracy": 0.7619
+      },
+      "prod3": {
+        "source_name": "prod3",
+        "attribute": "vram_gb",
+        "correct": 19,
+        "total": 20,
+        "accuracy": 0.95
+      }
+    }
+  },
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

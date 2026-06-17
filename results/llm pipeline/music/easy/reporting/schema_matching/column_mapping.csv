@@ -1,0 +1,11 @@
+Target Column,Discogs,Lastfm,Musicbrainz
+id,id,id,id
+name,name,name,name
+artist,artist,artist,artist
+release-date,release-date,release-date,release-date
+release-country,release-country,release-country,release-country
+label,label,label,label
+genre,genre,genre,genre
+tracks,tracks,tracks,tracks
+duration,duration,duration,duration
+Mapped,9/9,9/9,9/9

@@ -1,0 +1,4 @@
+id,name,artist,release-date,release-country,duration,label,genre,tracks,Source
+discogs_3,Fermats Theorem / Sight Beyond,John B,1996-01-01 00:00:00,UK,1055.0,New Identity Recordings,Electronic / Dance,"['Fermats Theorem', 'Sight Beyond']",Discogs
+lastFM_1,Fermats Theorem / Sight Beyond,John B,,,45.0,,,"['Fermats Theorem', 'Sight Beyond']",Lastfm
+mbrainz_1,Fermats Theorem / Sight Beyond,John B,1996-01-01 00:00:00,United Kingdom of Great Britain and Northern Ireland,1055.0,,,"['Fermats Theorem', 'Sight Beyond']",Musicbrainz

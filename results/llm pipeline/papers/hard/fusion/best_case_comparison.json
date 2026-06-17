@@ -1,0 +1,105 @@
+{
+  "auto_generated": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "heuristic",
+    "validation_accuracy": 0.5932914046121593,
+    "test_accuracy": 0.5110470701248799,
+    "rules": {
+      "Attribute_2": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "Attribute_8": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "Attribute_9": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "abstract_text": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "authors": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "cited_by_count": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "dx": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "first_page": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "issue": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "journal": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "kw": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "kw_list": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      },
+      "last_page": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "pb": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "publ": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "publication_year": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "referenced_works_count": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "title": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "type": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "volume": {
+        "resolver": "median",
+        "kwargs": {}
+      }
+    }
+  }
+}

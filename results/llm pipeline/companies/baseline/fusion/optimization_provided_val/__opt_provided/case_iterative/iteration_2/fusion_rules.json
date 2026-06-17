@@ -1,0 +1,82 @@
+{
+  "attribute_rules": {
+    "assets": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "city": {
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "country": {
+      "kwargs": {
+        "sources": [
+          "forbes",
+          "dbpedia"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "founded": {
+      "kwargs": {
+        "sources": [
+          "dbpedia"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "founders": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "industry": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "keypeople_name": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "revenue": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "url": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  },
+  "main_entity": "company"
+}

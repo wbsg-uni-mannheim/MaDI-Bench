@@ -1,0 +1,131 @@
+{
+  "attribute_rules": {
+    "abstract_text": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "authors": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cited_by_count": {
+      "kwargs": {
+        "sources": [
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "do": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "first_page": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "issue": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "journal": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "keywords": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "kwd": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "kwds": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "last_page": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "pbl": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "pub": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "publication_year": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publisher": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "referenced_works_count": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "volume": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  },
+  "main_entity": "scholarly publication"
+}

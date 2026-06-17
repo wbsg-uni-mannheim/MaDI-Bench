@@ -1,0 +1,895 @@
+entity_id,source,attribute,original_value,reason,knob,level
+dbpedia_422,dbpedia,genre,Adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_572,dbpedia,genre,Adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_739,dbpedia,genre,Survival horror,closeness_floor_exhausted_retries,6,easy
+dbpedia_887,dbpedia,genre,Action game,closeness_floor_exhausted_retries,6,easy
+dbpedia_2328,dbpedia,genre,Puzzle game,closeness_floor_exhausted_retries,6,easy
+dbpedia_2990,dbpedia,genre,Hack and slash,closeness_floor_exhausted_retries,6,easy
+dbpedia_3077,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_3188,dbpedia,genre,Pinball,closeness_floor_exhausted_retries,6,easy
+dbpedia_3692,dbpedia,genre,Puzzle video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_6010,dbpedia,genre,Platform game,closeness_floor_exhausted_retries,6,easy
+dbpedia_6705,dbpedia,genre,Action game,closeness_floor_exhausted_retries,6,easy
+dbpedia_7571,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_7849,dbpedia,genre,Fighting game,closeness_floor_exhausted_retries,6,easy
+dbpedia_8057,dbpedia,genre,Puzzle video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_8567,dbpedia,genre,Puzzle-platform game,closeness_floor_exhausted_retries,6,easy
+dbpedia_9083,dbpedia,genre,Sports video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_10013,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_10644,dbpedia,genre,Racing game,closeness_floor_exhausted_retries,6,easy
+dbpedia_12820,dbpedia,genre,Puzzle-platform game,closeness_floor_exhausted_retries,6,easy
+dbpedia_13071,dbpedia,genre,Third-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_14598,dbpedia,genre,Fighting game,closeness_floor_exhausted_retries,6,easy
+dbpedia_14701,dbpedia,genre,Nonlinear gameplay,closeness_floor_exhausted_retries,6,easy
+dbpedia_15353,dbpedia,genre,Action game,closeness_floor_exhausted_retries,6,easy
+dbpedia_16232,dbpedia,genre,Action-adventure,closeness_floor_exhausted_retries,6,easy
+dbpedia_17271,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_17989,dbpedia,genre,Action game,closeness_floor_exhausted_retries,6,easy
+dbpedia_19047,dbpedia,genre,Platform game,closeness_floor_exhausted_retries,6,easy
+dbpedia_19946,dbpedia,genre,Metroidvania,closeness_floor_exhausted_retries,6,easy
+dbpedia_20263,dbpedia,genre,Flight simulator,closeness_floor_exhausted_retries,6,easy
+dbpedia_21138,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_21555,dbpedia,genre,Strategy game,closeness_floor_exhausted_retries,6,easy
+dbpedia_21885,dbpedia,genre,Action role-playing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_21965,dbpedia,genre,Party game,closeness_floor_exhausted_retries,6,easy
+dbpedia_23092,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_23972,dbpedia,genre,Snowboarding video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_24120,dbpedia,genre,Sports video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_24342,dbpedia,genre,Sandbox game,closeness_floor_exhausted_retries,6,easy
+dbpedia_24723,dbpedia,genre,Role-playing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_26138,dbpedia,genre,Stealth game,closeness_floor_exhausted_retries,6,easy
+dbpedia_27579,dbpedia,genre,Board game,closeness_floor_exhausted_retries,6,easy
+dbpedia_28100,dbpedia,genre,Beat 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_28107,dbpedia,genre,Fighting game,closeness_floor_exhausted_retries,6,easy
+dbpedia_28613,dbpedia,genre,Business simulation game,closeness_floor_exhausted_retries,6,easy
+dbpedia_29162,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_30003,dbpedia,genre,Adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_32269,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_33209,dbpedia,genre,Beat 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_33786,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_35029,dbpedia,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+dbpedia_35099,dbpedia,genre,Turn-based strategy,closeness_floor_exhausted_retries,6,easy
+dbpedia_35240,dbpedia,genre,Racing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_36189,dbpedia,genre,Racing game,closeness_floor_exhausted_retries,6,easy
+dbpedia_36545,dbpedia,genre,Adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_37671,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_37982,dbpedia,genre,Platform game,closeness_floor_exhausted_retries,6,easy
+dbpedia_38477,dbpedia,genre,Visual novel,closeness_floor_exhausted_retries,6,easy
+dbpedia_38537,dbpedia,genre,Racing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_38884,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_40217,dbpedia,genre,Graphic adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_40497,dbpedia,genre,Action role-playing,closeness_floor_exhausted_retries,6,easy
+dbpedia_41700,dbpedia,genre,Third-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_41988,dbpedia,genre,Beat 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_43104,dbpedia,genre,Third-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_43660,dbpedia,genre,Role-playing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_43794,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_43944,dbpedia,genre,Beat 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_44576,dbpedia,genre,Tower defense,closeness_floor_exhausted_retries,6,easy
+dbpedia_45021,dbpedia,genre,Role-playing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_46373,dbpedia,genre,Pool (cue sports),closeness_floor_exhausted_retries,6,easy
+dbpedia_46509,dbpedia,genre,Stealth game,closeness_floor_exhausted_retries,6,easy
+dbpedia_47913,dbpedia,genre,Turn-based strategy,closeness_floor_exhausted_retries,6,easy
+dbpedia_48477,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_48521,dbpedia,genre,Snowboarding video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_48601,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_51811,dbpedia,genre,First-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_51813,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_52737,dbpedia,genre,Action-adventure game,closeness_floor_exhausted_retries,6,easy
+dbpedia_54170,dbpedia,genre,Survival horror,closeness_floor_exhausted_retries,6,easy
+dbpedia_54265,dbpedia,genre,Racing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_56369,dbpedia,genre,Beat 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_57928,dbpedia,genre,First-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_60620,dbpedia,genre,Shoot 'em up,closeness_floor_exhausted_retries,6,easy
+dbpedia_60756,dbpedia,genre,Sports game,closeness_floor_exhausted_retries,6,easy
+dbpedia_61275,dbpedia,genre,Role-playing video game,closeness_floor_exhausted_retries,6,easy
+dbpedia_63918,dbpedia,genre,First-person shooter,closeness_floor_exhausted_retries,6,easy
+dbpedia_15,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_199,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_249,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_359,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_523,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_635,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_642,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_654,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_740,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_881,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_901,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_1047,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_1260,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_1329,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_1530,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_1653,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_1956,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_2201,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_2221,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_2280,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_2443,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_2552,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_2650,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_2668,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_2734,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_2774,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_2894,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_3091,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_3206,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_3266,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_3269,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_3348,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_3699,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_4221,dbpedia,launch_yr,"January 01, 2022",cell_collision_with_prior_knob,6,easy
+dbpedia_4225,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_4306,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_4317,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_4349,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_4531,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_4592,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_4631,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_4633,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_4643,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_5019,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_5049,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_5100,dbpedia,launch_yr,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+dbpedia_5143,dbpedia,launch_yr,"January 01, 1999",cell_collision_with_prior_knob,6,easy
+dbpedia_5151,dbpedia,launch_yr,"January 01, 1931",cell_collision_with_prior_knob,6,easy
+dbpedia_5172,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_5231,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_5261,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_5279,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_5282,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_5398,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_5514,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_5646,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_5647,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_5880,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_5916,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_6165,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_6227,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_6283,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_6353,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_6365,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_6444,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_6775,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_6842,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_7108,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_7234,dbpedia,launch_yr,"January 01, 1985",cell_collision_with_prior_knob,6,easy
+dbpedia_7304,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_7355,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_7556,dbpedia,launch_yr,"January 01, 1987",cell_collision_with_prior_knob,6,easy
+dbpedia_7638,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_7732,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_7858,dbpedia,launch_yr,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+dbpedia_7860,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_7870,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_7983,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_8445,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_8486,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_8703,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_8853,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_8863,dbpedia,launch_yr,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+dbpedia_9060,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_9113,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_9230,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_9615,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_9766,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_9779,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_9876,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_9913,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_10023,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_10038,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_10070,dbpedia,launch_yr,"January 01, 1988",cell_collision_with_prior_knob,6,easy
+dbpedia_10235,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_10425,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_10478,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_10488,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_10538,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_10660,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_10794,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_10801,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_10859,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_10878,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_11328,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_11787,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_11839,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_11878,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_11920,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_11921,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_11929,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_12147,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_12154,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_12241,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_12424,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_12481,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_12813,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_12818,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_13070,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_13264,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_13301,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_13363,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_13377,dbpedia,launch_yr,"January 01, 1988",cell_collision_with_prior_knob,6,easy
+dbpedia_13507,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_13603,dbpedia,launch_yr,"January 01, 2022",cell_collision_with_prior_knob,6,easy
+dbpedia_13604,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_13759,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_14013,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_14121,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_14355,dbpedia,launch_yr,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+dbpedia_14370,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_14621,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_14661,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_14857,dbpedia,launch_yr,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+dbpedia_15032,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_15047,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_15073,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_15350,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_15517,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_15679,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_15686,dbpedia,launch_yr,"January 01, 1985",cell_collision_with_prior_knob,6,easy
+dbpedia_15985,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_16161,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_16404,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_16543,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_16622,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_16681,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_16729,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_16872,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_17192,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_17202,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_17482,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_17504,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_17683,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_17837,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_17939,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_18089,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_18179,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_18406,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_18463,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_18502,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_18871,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_19425,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_19455,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_19525,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_20097,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_20394,dbpedia,launch_yr,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+dbpedia_20818,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_20858,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_21149,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_21246,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_21315,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_21489,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_21497,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_21555,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_21588,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_21600,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_21711,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_21742,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_21774,dbpedia,launch_yr,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+dbpedia_21812,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_21962,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_22281,dbpedia,launch_yr,"January 01, 1988",cell_collision_with_prior_knob,6,easy
+dbpedia_22373,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_22386,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_22532,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_22727,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_22731,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_22820,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_23060,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_23118,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_23285,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_23508,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_24176,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_24288,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_24307,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_24594,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_24758,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_25023,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_25083,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_25180,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_25182,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_25424,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_25565,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_25655,dbpedia,launch_yr,"January 01, 1987",cell_collision_with_prior_knob,6,easy
+dbpedia_25985,dbpedia,launch_yr,"January 01, 1999",cell_collision_with_prior_knob,6,easy
+dbpedia_25994,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_26050,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_26071,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_26356,dbpedia,launch_yr,"January 01, 1999",cell_collision_with_prior_knob,6,easy
+dbpedia_26396,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_26489,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_27006,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_27302,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_27691,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_27967,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_27990,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_28006,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_28064,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_28238,dbpedia,launch_yr,"January 01, 1999",cell_collision_with_prior_knob,6,easy
+dbpedia_28282,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_28673,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_29024,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_29118,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_29221,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_29431,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_29635,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_29709,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_29990,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_30166,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_30404,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_30450,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_30499,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_30533,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_30590,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_30612,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_30644,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_30648,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_30794,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_30806,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_30859,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_30912,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_31314,dbpedia,launch_yr,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+dbpedia_31434,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_31696,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_31950,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_32166,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_32248,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_32443,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_32596,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_32600,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_32691,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_32988,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_33141,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_33214,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_33234,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_33468,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_33711,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_34038,dbpedia,launch_yr,"January 01, 1987",cell_collision_with_prior_knob,6,easy
+dbpedia_34094,dbpedia,launch_yr,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+dbpedia_34156,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_34353,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_34357,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_34513,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_34909,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_35041,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_35099,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_35554,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_35786,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_35873,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_35920,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_36336,dbpedia,launch_yr,"January 01, 2022",cell_collision_with_prior_knob,6,easy
+dbpedia_36479,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_37123,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_37210,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_37396,dbpedia,launch_yr,"January 01, 1985",cell_collision_with_prior_knob,6,easy
+dbpedia_37745,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_38587,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_38720,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_38880,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_39047,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_39066,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_39079,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_39267,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_39325,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_39373,dbpedia,launch_yr,"January 01, 1989",cell_collision_with_prior_knob,6,easy
+dbpedia_39547,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_39734,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_39776,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_39805,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_39959,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_40101,dbpedia,launch_yr,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+dbpedia_40422,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_40429,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_40497,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_40554,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_41062,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_41145,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_41230,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_41322,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_41368,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_41595,dbpedia,launch_yr,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+dbpedia_41871,dbpedia,launch_yr,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+dbpedia_42284,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_42301,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_42449,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_42509,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_42578,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_42620,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_43169,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_43247,dbpedia,launch_yr,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+dbpedia_43297,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_43318,dbpedia,launch_yr,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+dbpedia_43654,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_43791,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_43896,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_43909,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_44043,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_44390,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_44594,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_44651,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_44661,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_44750,dbpedia,launch_yr,"January 01, 2019",cell_collision_with_prior_knob,6,easy
+dbpedia_44796,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_45059,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_45061,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_45062,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_45177,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_45203,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_45320,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_45697,dbpedia,launch_yr,"January 01, 1994",cell_collision_with_prior_knob,6,easy
+dbpedia_45911,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_46320,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_46556,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_46574,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_46754,dbpedia,launch_yr,"January 01, 1985",cell_collision_with_prior_knob,6,easy
+dbpedia_47171,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_47181,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_47200,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_47218,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_48025,dbpedia,launch_yr,"January 01, 2020",cell_collision_with_prior_knob,6,easy
+dbpedia_48242,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_48289,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_48403,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_48555,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_48938,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_49118,dbpedia,launch_yr,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+dbpedia_49468,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_49478,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_49507,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_49614,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_49650,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_49824,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_50041,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_51023,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_51093,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_51213,dbpedia,launch_yr,"January 01, 2015",cell_collision_with_prior_knob,6,easy
+dbpedia_51222,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_51532,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_51568,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_51910,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_52178,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_52413,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_52514,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_53024,dbpedia,launch_yr,"January 01, 2022",cell_collision_with_prior_knob,6,easy
+dbpedia_53314,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_53415,dbpedia,launch_yr,"January 01, 1984",cell_collision_with_prior_knob,6,easy
+dbpedia_53482,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_53598,dbpedia,launch_yr,"January 01, 1990",cell_collision_with_prior_knob,6,easy
+dbpedia_53667,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_53995,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_54064,dbpedia,launch_yr,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+dbpedia_54170,dbpedia,launch_yr,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+dbpedia_55980,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_56009,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_56091,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_56159,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_56707,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_57005,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_57038,dbpedia,launch_yr,"January 01, 2017",cell_collision_with_prior_knob,6,easy
+dbpedia_57050,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_57149,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_57177,dbpedia,launch_yr,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+dbpedia_57367,dbpedia,launch_yr,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+dbpedia_58105,dbpedia,launch_yr,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+dbpedia_58358,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_58679,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_58848,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_59042,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_59293,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_59331,dbpedia,launch_yr,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+dbpedia_59382,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_59906,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_60493,dbpedia,launch_yr,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+dbpedia_60505,dbpedia,launch_yr,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+dbpedia_60723,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_60806,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_60880,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_61081,dbpedia,launch_yr,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+dbpedia_61808,dbpedia,launch_yr,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+dbpedia_61933,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_62241,dbpedia,launch_yr,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+dbpedia_62927,dbpedia,launch_yr,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+dbpedia_62984,dbpedia,launch_yr,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+dbpedia_63044,dbpedia,launch_yr,"January 01, 1999",cell_collision_with_prior_knob,6,easy
+dbpedia_63215,dbpedia,launch_yr,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+dbpedia_63530,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_63789,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_64145,dbpedia,launch_yr,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+dbpedia_64229,dbpedia,launch_yr,"January 01, 2018",cell_collision_with_prior_knob,6,easy
+dbpedia_64407,dbpedia,launch_yr,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+dbpedia_64519,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_64616,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+dbpedia_64756,dbpedia,launch_yr,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+dbpedia_64761,dbpedia,launch_yr,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+dbpedia_64936,dbpedia,launch_yr,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00006__dbpedia,dbpedia,launch_yr,"September 12, 2024",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00101__dbpedia,dbpedia,launch_yr,"September 17, 2021",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00382__dbpedia,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00560__dbpedia,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00637__dbpedia,dbpedia,launch_yr,"January 01, 2023",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00963__dbpedia,dbpedia,launch_yr,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+dbpedia_1533,dbpedia,studio,Rockstar London,closeness_floor_exhausted_retries,6,easy
+dbpedia_4141,dbpedia,studio,Linux,closeness_floor_exhausted_retries,6,easy
+dbpedia_4723,dbpedia,studio,Rebellion Developments,closeness_floor_exhausted_retries,6,easy
+dbpedia_6075,dbpedia,studio,Black Ops Entertainment,closeness_floor_exhausted_retries,6,easy
+dbpedia_6571,dbpedia,studio,WayForward,closeness_floor_exhausted_retries,6,easy
+dbpedia_7614,dbpedia,studio,Image Space Incorporated,closeness_floor_exhausted_retries,6,easy
+dbpedia_14140,dbpedia,studio,Ubisoft Montreal,closeness_floor_exhausted_retries,6,easy
+dbpedia_15132,dbpedia,studio,Eurocom,closeness_floor_exhausted_retries,6,easy
+dbpedia_17083,dbpedia,studio,Givro Corporation,closeness_floor_exhausted_retries,6,easy
+dbpedia_17671,dbpedia,studio,Arkane Studios,closeness_floor_exhausted_retries,6,easy
+dbpedia_20174,dbpedia,studio,"GREE, Inc.",closeness_floor_exhausted_retries,6,easy
+dbpedia_21546,dbpedia,studio,Acclaim Studios Salt Lake City,closeness_floor_exhausted_retries,6,easy
+dbpedia_21981,dbpedia,studio,Iguana Entertainment,closeness_floor_exhausted_retries,6,easy
+dbpedia_27566,dbpedia,studio,Visceral Games,closeness_floor_exhausted_retries,6,easy
+dbpedia_29907,dbpedia,studio,Aspyr,closeness_floor_exhausted_retries,6,easy
+dbpedia_30999,dbpedia,studio,Crawfish Interactive,closeness_floor_exhausted_retries,6,easy
+dbpedia_31941,dbpedia,studio,Ubisoft Sao Paulo,closeness_floor_exhausted_retries,6,easy
+dbpedia_36534,dbpedia,studio,Robot Entertainment,closeness_floor_exhausted_retries,6,easy
+dbpedia_37806,dbpedia,studio,N-Space,closeness_floor_exhausted_retries,6,easy
+dbpedia_47175,dbpedia,studio,Guerrilla Games,closeness_floor_exhausted_retries,6,easy
+dbpedia_48510,dbpedia,studio,EA Redwood Shores,closeness_floor_exhausted_retries,6,easy
+dbpedia_49519,dbpedia,studio,HB Studios,closeness_floor_exhausted_retries,6,easy
+dbpedia_50173,dbpedia,studio,EA Los Angeles,closeness_floor_exhausted_retries,6,easy
+dbpedia_56925,dbpedia,studio,Eurocom,closeness_floor_exhausted_retries,6,easy
+dbpedia_61856,dbpedia,studio,Housemarque,closeness_floor_exhausted_retries,6,easy
+dbpedia_62004,dbpedia,studio,EA Canada,closeness_floor_exhausted_retries,6,easy
+dbpedia_63449,dbpedia,studio,Sony Interactive Entertainment,closeness_floor_exhausted_retries,6,easy
+metacritic_4834,metacritic,genres,"Action,General",closeness_floor_exhausted_retries,6,easy
+metacritic_5224,metacritic,genres,"Action Adventure,Historic",closeness_floor_exhausted_retries,6,easy
+metacritic_7691,metacritic,genres,"Role-Playing,Console-style RPG",closeness_floor_exhausted_retries,6,easy
+metacritic_11257,metacritic,genres,"Driving,Mission-based",closeness_floor_exhausted_retries,6,easy
+metacritic_13187,metacritic,genres,"Action Adventure,Horror",closeness_floor_exhausted_retries,6,easy
+metacritic_14967,metacritic,genres,"Action,General",closeness_floor_exhausted_retries,6,easy
+metacritic_15485,metacritic,genres,"Action Adventure,Fantasy",closeness_floor_exhausted_retries,6,easy
+metacritic_17345,metacritic,genres,"Role-Playing,Action RPG",closeness_floor_exhausted_retries,6,easy
+metacritic_17764,metacritic,genres,"Action Adventure,Survival",closeness_floor_exhausted_retries,6,easy
+metacritic_201,metacritic,made_by,Nintendo,closeness_floor_exhausted_retries,6,easy
+metacritic_781,metacritic,made_by,Headgate,closeness_floor_exhausted_retries,6,easy
+metacritic_2577,metacritic,made_by,"SegaSoft,Sega,PagodaWest Games",closeness_floor_exhausted_retries,6,easy
+metacritic_4533,metacritic,made_by,3D Realms,closeness_floor_exhausted_retries,6,easy
+metacritic_4614,metacritic,made_by,EA Sports,closeness_floor_exhausted_retries,6,easy
+metacritic_8173,metacritic,made_by,Midway,closeness_floor_exhausted_retries,6,easy
+metacritic_8260,metacritic,made_by,"Haemimont,Haemimont Games",closeness_floor_exhausted_retries,6,easy
+metacritic_9891,metacritic,made_by,"Skydance Interactive,Skybound Games",closeness_floor_exhausted_retries,6,easy
+metacritic_10042,metacritic,made_by,Ubisoft,closeness_floor_exhausted_retries,6,easy
+metacritic_10363,metacritic,made_by,Edge of Reality,closeness_floor_exhausted_retries,6,easy
+metacritic_12422,metacritic,made_by,Acquire,closeness_floor_exhausted_retries,6,easy
+metacritic_12561,metacritic,made_by,Electronic Arts,closeness_floor_exhausted_retries,6,easy
+metacritic_14862,metacritic,made_by,Grip Games,closeness_floor_exhausted_retries,6,easy
+metacritic_16700,metacritic,made_by,"Nintendo,Good-Feel",closeness_floor_exhausted_retries,6,easy
+metacritic_17024,metacritic,made_by,"Nintendo,Nd Cube",closeness_floor_exhausted_retries,6,easy
+metacritic_18266,metacritic,made_by,3DO,closeness_floor_exhausted_retries,6,easy
+metacritic_19113,metacritic,made_by,Anuman Interactive,closeness_floor_exhausted_retries,6,easy
+metacritic_20236,metacritic,made_by,"NCS,extreme Co.,Ltd.",closeness_floor_exhausted_retries,6,easy
+metacritic_337,metacritic,player_rating,8.7,numeric_jitter_exhausted_retries,6,easy
+metacritic_454,metacritic,player_rating,8.8,numeric_jitter_exhausted_retries,6,easy
+metacritic_610,metacritic,player_rating,7.8,numeric_jitter_exhausted_retries,6,easy
+metacritic_803,metacritic,player_rating,8.6,numeric_jitter_exhausted_retries,6,easy
+metacritic_832,metacritic,player_rating,9.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_1611,metacritic,player_rating,8.7,numeric_jitter_exhausted_retries,6,easy
+metacritic_1660,metacritic,player_rating,7.1,numeric_jitter_exhausted_retries,6,easy
+metacritic_1797,metacritic,player_rating,6.1,closeness_floor_exhausted_retries,6,easy
+metacritic_2046,metacritic,player_rating,5.2,closeness_floor_exhausted_retries,6,easy
+metacritic_2234,metacritic,player_rating,7.6,closeness_floor_exhausted_retries,6,easy
+metacritic_3034,metacritic,player_rating,8.3,numeric_jitter_exhausted_retries,6,easy
+metacritic_3724,metacritic,player_rating,6.7,numeric_jitter_exhausted_retries,6,easy
+metacritic_3929,metacritic,player_rating,7.6,numeric_jitter_exhausted_retries,6,easy
+metacritic_4444,metacritic,player_rating,7.2,numeric_jitter_exhausted_retries,6,easy
+metacritic_4521,metacritic,player_rating,6.8,numeric_jitter_exhausted_retries,6,easy
+metacritic_6308,metacritic,player_rating,7.9,numeric_jitter_exhausted_retries,6,easy
+metacritic_7313,metacritic,player_rating,6.3,numeric_jitter_exhausted_retries,6,easy
+metacritic_7736,metacritic,player_rating,6.3,numeric_jitter_exhausted_retries,6,easy
+metacritic_7869,metacritic,player_rating,7.2,numeric_jitter_exhausted_retries,6,easy
+metacritic_8225,metacritic,player_rating,7.2,operator_case_corrupt_no_effect,6,easy
+metacritic_8648,metacritic,player_rating,8.5,numeric_jitter_exhausted_retries,6,easy
+metacritic_9185,metacritic,player_rating,7.2,numeric_jitter_exhausted_retries,6,easy
+metacritic_9486,metacritic,player_rating,2.8,closeness_floor_exhausted_retries,6,easy
+metacritic_9611,metacritic,player_rating,6.3,numeric_jitter_exhausted_retries,6,easy
+metacritic_9896,metacritic,player_rating,7.1,numeric_jitter_exhausted_retries,6,easy
+metacritic_10339,metacritic,player_rating,5.4,numeric_jitter_exhausted_retries,6,easy
+metacritic_10471,metacritic,player_rating,8.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_10786,metacritic,player_rating,7.2,numeric_jitter_exhausted_retries,6,easy
+metacritic_11031,metacritic,player_rating,7.5,closeness_floor_exhausted_retries,6,easy
+metacritic_11045,metacritic,player_rating,8.1,numeric_jitter_exhausted_retries,6,easy
+metacritic_11214,metacritic,player_rating,7.2,closeness_floor_exhausted_retries,6,easy
+metacritic_11734,metacritic,player_rating,6.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_11970,metacritic,player_rating,7.8,numeric_jitter_exhausted_retries,6,easy
+metacritic_12194,metacritic,player_rating,7.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_12263,metacritic,player_rating,7.9,numeric_jitter_exhausted_retries,6,easy
+metacritic_12414,metacritic,player_rating,6.8,numeric_jitter_exhausted_retries,6,easy
+metacritic_13411,metacritic,player_rating,6.5,numeric_jitter_exhausted_retries,6,easy
+metacritic_13601,metacritic,player_rating,5.1,numeric_jitter_exhausted_retries,6,easy
+metacritic_13956,metacritic,player_rating,6.3,operator_case_corrupt_no_effect,6,easy
+metacritic_14046,metacritic,player_rating,6.3,numeric_jitter_exhausted_retries,6,easy
+metacritic_14747,metacritic,player_rating,5.8,closeness_floor_exhausted_retries,6,easy
+metacritic_15380,metacritic,player_rating,7.7,numeric_jitter_exhausted_retries,6,easy
+metacritic_15832,metacritic,player_rating,6.5,closeness_floor_exhausted_retries,6,easy
+metacritic_16023,metacritic,player_rating,6.4,numeric_jitter_exhausted_retries,6,easy
+metacritic_16130,metacritic,player_rating,7.2,numeric_jitter_exhausted_retries,6,easy
+metacritic_17061,metacritic,player_rating,7.9,numeric_jitter_exhausted_retries,6,easy
+metacritic_17347,metacritic,player_rating,7.4,numeric_jitter_exhausted_retries,6,easy
+metacritic_17658,metacritic,player_rating,7.9,closeness_floor_exhausted_retries,6,easy
+metacritic_18144,metacritic,player_rating,6.2,closeness_floor_exhausted_retries,6,easy
+metacritic_18227,metacritic,player_rating,5.7,closeness_floor_exhausted_retries,6,easy
+metacritic_18975,metacritic,player_rating,4.5,numeric_jitter_exhausted_retries,6,easy
+metacritic_19794,metacritic,player_rating,6.6,numeric_jitter_exhausted_retries,6,easy
+metacritic_19873,metacritic,player_rating,1.7,closeness_floor_exhausted_retries,6,easy
+metacritic_20105,metacritic,player_rating,5.3,operator_case_corrupt_no_effect,6,easy
+metacritic_256,metacritic,press_rating,91.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_310,metacritic,press_rating,91.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_582,metacritic,press_rating,89.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_608,metacritic,press_rating,89.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_1367,metacritic,press_rating,86.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_1972,metacritic,press_rating,85.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_2361,metacritic,press_rating,84.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_2453,metacritic,press_rating,84.0,operator_case_corrupt_no_effect,6,easy
+metacritic_2771,metacritic,press_rating,83.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_2783,metacritic,press_rating,83.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_2981,metacritic,press_rating,83.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_4392,metacritic,press_rating,80.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_4697,metacritic,press_rating,80.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_5746,metacritic,press_rating,79.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_6658,metacritic,press_rating,77.0,closeness_floor_exhausted_retries,6,easy
+metacritic_6986,metacritic,press_rating,77.0,operator_case_corrupt_no_effect,6,easy
+metacritic_7409,metacritic,press_rating,76.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_7451,metacritic,press_rating,76.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_8287,metacritic,press_rating,75.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_8962,metacritic,press_rating,74.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_9334,metacritic,press_rating,74.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_9369,metacritic,press_rating,74.0,operator_case_corrupt_no_effect,6,easy
+metacritic_9782,metacritic,press_rating,73.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_9835,metacritic,press_rating,73.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_10733,metacritic,press_rating,72.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_11081,metacritic,press_rating,71.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_11612,metacritic,press_rating,71.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_11891,metacritic,press_rating,70.0,operator_case_corrupt_no_effect,6,easy
+metacritic_11937,metacritic,press_rating,70.0,operator_case_corrupt_no_effect,6,easy
+metacritic_12263,metacritic,press_rating,70.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_12929,metacritic,press_rating,69.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_13633,metacritic,press_rating,67.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_13720,metacritic,press_rating,67.0,operator_case_corrupt_no_effect,6,easy
+metacritic_14124,metacritic,press_rating,66.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_14457,metacritic,press_rating,66.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_15308,metacritic,press_rating,64.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_15643,metacritic,press_rating,63.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_16058,metacritic,press_rating,62.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_16187,metacritic,press_rating,62.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_16293,metacritic,press_rating,62.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_16334,metacritic,press_rating,61.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_17020,metacritic,press_rating,59.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_17080,metacritic,press_rating,59.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_17797,metacritic,press_rating,57.0,operator_case_corrupt_no_effect,6,easy
+metacritic_18236,metacritic,press_rating,55.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_18277,metacritic,press_rating,55.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_19027,metacritic,press_rating,51.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_19055,metacritic,press_rating,50.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_19554,metacritic,press_rating,46.0,numeric_jitter_exhausted_retries,6,easy
+metacritic_1316,metacritic,year_published,2008-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_4350,metacritic,year_published,2019-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_4719,metacritic,year_published,2010-01-01,operator_case_corrupt_no_effect,6,easy
+metacritic_5939,metacritic,year_published,2002-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_5974,metacritic,year_published,2006-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_6525,metacritic,year_published,2007-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_8231,metacritic,year_published,2023-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_8359,metacritic,year_published,2022-01-01,operator_case_corrupt_no_effect,6,easy
+metacritic_9230,metacritic,year_published,2016-01-01,operator_case_corrupt_no_effect,6,easy
+metacritic_9571,metacritic,year_published,2017-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_13696,metacritic,year_published,2022-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_14068,metacritic,year_published,2012-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_17781,metacritic,year_published,2008-01-01,operator_case_corrupt_no_effect,6,easy
+metacritic_18169,metacritic,year_published,2008-01-01,closeness_floor_exhausted_retries,6,easy
+metacritic_18402,metacritic,year_published,2023-01-01,operator_case_corrupt_no_effect,6,easy
+sales_39,sales,comm_rating,2.6,closeness_floor_exhausted_retries,6,easy
+sales_299,sales,comm_rating,6.8,numeric_jitter_exhausted_retries,6,easy
+sales_473,sales,comm_rating,8.9,numeric_jitter_exhausted_retries,6,easy
+sales_1025,sales,comm_rating,8.0,closeness_floor_exhausted_retries,6,easy
+sales_1097,sales,comm_rating,7.8,closeness_floor_exhausted_retries,6,easy
+sales_1106,sales,comm_rating,6.5,closeness_floor_exhausted_retries,6,easy
+sales_1440,sales,comm_rating,7.1,operator_case_corrupt_no_effect,6,easy
+sales_1634,sales,comm_rating,6.4,closeness_floor_exhausted_retries,6,easy
+sales_1694,sales,comm_rating,7.3,operator_case_corrupt_no_effect,6,easy
+sales_1931,sales,comm_rating,8.6,operator_case_corrupt_no_effect,6,easy
+sales_2849,sales,comm_rating,6.7,closeness_floor_exhausted_retries,6,easy
+sales_3054,sales,comm_rating,4.6,closeness_floor_exhausted_retries,6,easy
+sales_3348,sales,comm_rating,8.9,closeness_floor_exhausted_retries,6,easy
+sales_3884,sales,comm_rating,7.7,numeric_jitter_exhausted_retries,6,easy
+sales_4177,sales,comm_rating,9.0,closeness_floor_exhausted_retries,6,easy
+sales_4722,sales,comm_rating,4.6,closeness_floor_exhausted_retries,6,easy
+sales_4964,sales,comm_rating,8.5,operator_case_corrupt_no_effect,6,easy
+sales_5081,sales,comm_rating,7.9,numeric_jitter_exhausted_retries,6,easy
+sales_5296,sales,comm_rating,8.2,numeric_jitter_exhausted_retries,6,easy
+sales_5810,sales,comm_rating,3.4,closeness_floor_exhausted_retries,6,easy
+sales_6173,sales,comm_rating,6.8,closeness_floor_exhausted_retries,6,easy
+sales_6250,sales,comm_rating,7.3,closeness_floor_exhausted_retries,6,easy
+sales_7211,sales,comm_rating,6.8,closeness_floor_exhausted_retries,6,easy
+sales_7454,sales,comm_rating,7.9,numeric_jitter_exhausted_retries,6,easy
+sales_318,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_353,sales,genre,Sports,closeness_floor_exhausted_retries,6,easy
+sales_616,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_794,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_913,sales,genre,Role-Playing,closeness_floor_exhausted_retries,6,easy
+sales_941,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_997,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_1161,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_1262,sales,genre,Sports,closeness_floor_exhausted_retries,6,easy
+sales_1317,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_1332,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_1335,sales,genre,Platform,closeness_floor_exhausted_retries,6,easy
+sales_1691,sales,genre,Simulation,closeness_floor_exhausted_retries,6,easy
+sales_1848,sales,genre,Shooter,closeness_floor_exhausted_retries,6,easy
+sales_2050,sales,genre,Sports,closeness_floor_exhausted_retries,6,easy
+sales_2130,sales,genre,Racing,closeness_floor_exhausted_retries,6,easy
+sales_2247,sales,genre,Platform,closeness_floor_exhausted_retries,6,easy
+sales_2543,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_2587,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_2758,sales,genre,Sports,closeness_floor_exhausted_retries,6,easy
+sales_2943,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_3131,sales,genre,Sports,closeness_floor_exhausted_retries,6,easy
+sales_3147,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_3154,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_3257,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_3259,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_3296,sales,genre,Shooter,closeness_floor_exhausted_retries,6,easy
+sales_3741,sales,genre,Misc,closeness_floor_exhausted_retries,6,easy
+sales_4440,sales,genre,Action,closeness_floor_exhausted_retries,6,easy
+sales_5064,sales,genre,Role-Playing,closeness_floor_exhausted_retries,6,easy
+sales_5476,sales,genre,Platform,closeness_floor_exhausted_retries,6,easy
+sales_5728,sales,genre,Platform,closeness_floor_exhausted_retries,6,easy
+sales_5935,sales,genre,Strategy,closeness_floor_exhausted_retries,6,easy
+sales_6017,sales,genre,Misc,closeness_floor_exhausted_retries,6,easy
+sales_6212,sales,genre,Fighting,closeness_floor_exhausted_retries,6,easy
+sales_6830,sales,genre,Simulation,closeness_floor_exhausted_retries,6,easy
+sales_6923,sales,genre,Simulation,closeness_floor_exhausted_retries,6,easy
+sales_76,sales,launch_dt,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+sales_102,sales,launch_dt,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+sales_146,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_297,sales,launch_dt,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+sales_381,sales,launch_dt,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+sales_388,sales,launch_dt,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+sales_421,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_490,sales,launch_dt,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+sales_548,sales,launch_dt,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+sales_693,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_791,sales,launch_dt,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+sales_920,sales,launch_dt,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+sales_1014,sales,launch_dt,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+sales_1087,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_1144,sales,launch_dt,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+sales_1202,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_1440,sales,launch_dt,"January 01, 2014",cell_collision_with_prior_knob,6,easy
+sales_1530,sales,launch_dt,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+sales_1544,sales,launch_dt,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+sales_1848,sales,launch_dt,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+sales_2012,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_2424,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_2561,sales,launch_dt,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+sales_2589,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_2627,sales,launch_dt,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+sales_2628,sales,launch_dt,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+sales_2781,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_2942,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_3120,sales,launch_dt,"January 01, 2013",cell_collision_with_prior_knob,6,easy
+sales_3190,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_3710,sales,launch_dt,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+sales_3871,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_4129,sales,launch_dt,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+sales_4559,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_4564,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_4753,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_4785,sales,launch_dt,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+sales_4858,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_4864,sales,launch_dt,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+sales_4897,sales,launch_dt,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+sales_5190,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_5205,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_5227,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_5264,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_5281,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_5439,sales,launch_dt,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+sales_5522,sales,launch_dt,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+sales_6029,sales,launch_dt,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+sales_6148,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_6409,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_6414,sales,launch_dt,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+sales_6423,sales,launch_dt,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+sales_6449,sales,launch_dt,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+sales_6476,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_6827,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_6844,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_6979,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_6996,sales,launch_dt,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+sales_7056,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_7342,sales,launch_dt,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+sales_7363,sales,launch_dt,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+sales_7431,sales,launch_dt,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+sales_7445,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_7492,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+sales_7545,sales,launch_dt,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+sales_7630,sales,launch_dt,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+sales_7704,sales,launch_dt,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+sales_7765,sales,launch_dt,"January 01, 2016",cell_collision_with_prior_knob,6,easy
+sales_7822,sales,launch_dt,"January 01, 2008",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00067__sales,sales,launch_dt,"January 01, 2021",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00250__sales,sales,launch_dt,"July 14, 2026",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00583__sales,sales,launch_dt,"September 14, 2018",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_00635__sales,sales,launch_dt,"January 01, 2024",cell_collision_with_prior_knob,6,easy
+k02_noncorner_games_01022__sales,sales,launch_dt,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+sales_726,sales,studio,TT Games,closeness_floor_exhausted_retries,6,easy
+sales_4479,sales,studio,THQ,closeness_floor_exhausted_retries,6,easy
+sales_4762,sales,studio,Warthog,closeness_floor_exhausted_retries,6,easy
+sales_5116,sales,studio,Kuju Entertainment,closeness_floor_exhausted_retries,6,easy
+sales_268,sales,units_sold_mm,3,operator_case_corrupt_no_effect,6,easy
+sales_298,sales,units_sold_mm,3,operator_case_corrupt_no_effect,6,easy
+sales_308,sales,units_sold_mm,3,operator_case_corrupt_no_effect,6,easy
+sales_550,sales,units_sold_mm,2,operator_case_corrupt_no_effect,6,easy
+sales_849,sales,units_sold_mm,1,operator_case_corrupt_no_effect,6,easy
+sales_1103,sales,units_sold_mm,1,operator_whitespace_corrupt_no_effect,6,easy
+sales_1146,sales,units_sold_mm,1,operator_case_corrupt_no_effect,6,easy
+sales_1152,sales,units_sold_mm,1,operator_whitespace_corrupt_no_effect,6,easy
+sales_1354,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_1370,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_1486,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_1519,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_1531,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_1713,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_1759,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_1997,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_2023,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2078,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2109,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2128,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2157,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2230,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2254,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2320,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_2507,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_2556,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2614,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_2678,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_2883,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_2920,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3067,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3163,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3167,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3168,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3200,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3232,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3264,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3301,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3588,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_3641,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3676,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3740,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_3744,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4006,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4098,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4178,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4239,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_4623,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4639,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_4656,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_4914,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_5002,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_5158,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_5204,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_5434,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_5594,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_5652,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_5817,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_5819,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_5943,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_5989,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_6087,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_6315,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_6336,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_6512,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_6664,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_6680,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_6882,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_6912,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_6929,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy
+sales_7023,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_7224,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_7484,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_7580,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_7646,sales,units_sold_mm,0,operator_whitespace_corrupt_no_effect,6,easy
+sales_7790,sales,units_sold_mm,0,operator_case_corrupt_no_effect,6,easy

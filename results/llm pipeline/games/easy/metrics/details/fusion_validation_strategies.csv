@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+games-augmented-easy,heuristic,none,provided_validation,0.8838797814207651,647,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-easy,llm_no_val,none,provided_validation,0.8538251366120219,625,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-easy,llm_val,provided,provided_validation,0.8729508196721312,639,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-easy,llm_val_stats,provided,provided_validation,0.8729508196721312,639,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-easy,heuristic_stats,provided,provided_validation,0.8729508196721312,639,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games-augmented-easy,iterative,provided,provided_validation,0.8729508196721312,639,732,DI-Bench/runs/augmented/games/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

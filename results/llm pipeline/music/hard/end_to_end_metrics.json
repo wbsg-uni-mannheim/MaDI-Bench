@@ -1,0 +1,37 @@
+{
+  "input_sources": 3,
+  "total_input_records": 35169,
+  "fused_output_records": 32443,
+  "fusion_ratio": 0.0775,
+  "row_gain_over_largest": 10188,
+  "row_gain_percentage": 45.78,
+  "merged_records": 2202,
+  "input_columns_target_schema": 13,
+  "fused_output_columns": 14,
+  "average_input_density": 0.4991,
+  "fused_data_density": 0.5424,
+  "data_density_change": 0.0433,
+  "largest_source_name": "discogs",
+  "largest_source_density": 0.8323,
+  "density_change_vs_largest": -0.2899,
+  "per_source_stats": [
+    {
+      "name": "discogs",
+      "rows": 22255,
+      "columns": 9,
+      "density": 0.8323
+    },
+    {
+      "name": "lastfm",
+      "rows": 9339,
+      "columns": 9,
+      "density": 0.4576
+    },
+    {
+      "name": "musicbrainz",
+      "rows": 3575,
+      "columns": 9,
+      "density": 0.7151
+    }
+  ]
+}

@@ -1,0 +1,475 @@
+{
+  "France": [
+    "France"
+  ],
+  "Portugal": [
+    "Kingdom of Portugal",
+    "Portugal"
+  ],
+  "Mexico": [
+    "Mexico"
+  ],
+  "Turkey": [
+    "Turkey"
+  ],
+  "Iceland": [
+    "Iceland"
+  ],
+  "United Kingdom": [
+    "England",
+    "Kingdom of England",
+    "Northern Ireland",
+    "Peerage of the United Kingdom",
+    "Scotland",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "Wales"
+  ],
+  "Croatia": [
+    "Croatia"
+  ],
+  "Japan": [
+    "Empire of Japan",
+    "Japan"
+  ],
+  "India": [
+    "India"
+  ],
+  "Serbia": [
+    "Serbia"
+  ],
+  "Lithuania": [
+    "Lithuania"
+  ],
+  "Montenegro": [
+    "Montenegro"
+  ],
+  "United States": [
+    "Banking in the United States",
+    "United States",
+    "United States of America"
+  ],
+  "Netherlands": [
+    "Dutch Republic",
+    "Netherlands"
+  ],
+  "Russia": [
+    "Russia",
+    "Russian Federation"
+  ],
+  "Australia": [
+    "Australia"
+  ],
+  "Malta": [
+    "Malta"
+  ],
+  "Germany": [
+    "German Empire",
+    "Germany",
+    "West Germany",
+    "W\u00fcrttemberg"
+  ],
+  "Italy": [
+    "Italy"
+  ],
+  "Pakistan": [
+    "Pakistan"
+  ],
+  "South Korea": [
+    "Korea (Republic of)",
+    "Korea, Republic of",
+    "South Korea"
+  ],
+  "Israel": [
+    "Israel"
+  ],
+  "Saudi Arabia": [
+    "Saudi Arabia"
+  ],
+  "Denmark": [
+    "Denmark"
+  ],
+  "Latvia": [
+    "Latvia"
+  ],
+  "Philippines": [
+    "Philippines"
+  ],
+  "Sweden": [
+    "Sweden"
+  ],
+  "Switzerland": [
+    "Switzerland"
+  ],
+  "Canada": [
+    "Canada",
+    "Upper Canada"
+  ],
+  "South Africa": [
+    "South Africa"
+  ],
+  "Taiwan": [
+    "Guanxi, Hsinchu",
+    "Mailiao, Yunlin",
+    "Taiwan",
+    "Taiwan, Province of China"
+  ],
+  "Slovenia": [
+    "Slovenia"
+  ],
+  "Brazil": [
+    "Brazil"
+  ],
+  "New Zealand": [
+    "New Zealand"
+  ],
+  "Austria": [
+    "Austria"
+  ],
+  "Poland": [
+    "Poland"
+  ],
+  "Norway": [
+    "Norway"
+  ],
+  "China": [
+    "China",
+    "Republic of China (1912\u201349)"
+  ],
+  "Uruguay": [
+    "Uruguay"
+  ],
+  "Luxembourg": [
+    "Luxembourg"
+  ],
+  "Spain": [
+    "Spain"
+  ],
+  "United Arab Emirates": [
+    "United Arab Emirates"
+  ],
+  "Nigeria": [
+    "Nigeria"
+  ],
+  "Azerbaijan": [
+    "Azerbaijan"
+  ],
+  "Singapore": [
+    "Singapore"
+  ],
+  "Bangladesh": [
+    "Bangladesh"
+  ],
+  "Belarus": [
+    "Belarus"
+  ],
+  "Greece": [
+    "Greece"
+  ],
+  "Colombia": [
+    "Colombia"
+  ],
+  "Argentina": [
+    "Argentina"
+  ],
+  "Ukraine": [
+    "Ukraine"
+  ],
+  "Romania": [
+    "Romania"
+  ],
+  "Indonesia": [
+    "Indonesia"
+  ],
+  "Kuwait": [
+    "Kuwait"
+  ],
+  "Afghanistan": [
+    "Afghanistan"
+  ],
+  "Finland": [
+    "Finland",
+    "Grand Duchy of Finland"
+  ],
+  "Vietnam": [
+    "Vietnam"
+  ],
+  "Morocco": [
+    "Morocco",
+    "Spanish protectorate in Morocco"
+  ],
+  "Somalia": [
+    "Somalia"
+  ],
+  "Qatar": [
+    "Qatar"
+  ],
+  "Albania": [
+    "Albania"
+  ],
+  "Egypt": [
+    "Egypt"
+  ],
+  "Algeria": [
+    "Algeria"
+  ],
+  "Peru": [
+    "Peru"
+  ],
+  "Ethiopia": [
+    "Ethiopia"
+  ],
+  "Belgium": [
+    "Belgium"
+  ],
+  "Cyprus": [
+    "Cyprus"
+  ],
+  "Jordan": [
+    "Jordan"
+  ],
+  "Armenia": [
+    "Armenia"
+  ],
+  "Malaysia": [
+    "Malaysia"
+  ],
+  "Thailand": [
+    "Thailand"
+  ],
+  "Kazakhstan": [
+    "Kazakhstan"
+  ],
+  "Lebanon": [
+    "Lebanon"
+  ],
+  "Bahrain": [
+    "Bahrain"
+  ],
+  "Dominican Republic": [
+    "Dominican Republic"
+  ],
+  "Chile": [
+    "Chile"
+  ],
+  "Paraguay": [
+    "Paraguay"
+  ],
+  "Nicaragua": [
+    "Nicaragua"
+  ],
+  "Iran": [
+    "Iran"
+  ],
+  "Guyana": [
+    "Guyana"
+  ],
+  "Tunisia": [
+    "Tunisia"
+  ],
+  "Hungary": [
+    "Hungary"
+  ],
+  "Jersey": [
+    "Jersey"
+  ],
+  "Bermuda": [
+    "Bermuda"
+  ],
+  "Bulgaria": [
+    "Bulgaria"
+  ],
+  "Ecuador": [
+    "Ecuador"
+  ],
+  "Costa Rica": [
+    "Costa Rica"
+  ],
+  "Cambodia": [
+    "Cambodia"
+  ],
+  "Sri Lanka": [
+    "Sri Lanka"
+  ],
+  "Kenya": [
+    "Kenya"
+  ],
+  "Nepal": [
+    "Nepal"
+  ],
+  "Mongolia": [
+    "Mongolia"
+  ],
+  "Isle of Man": [
+    "Isle of Man"
+  ],
+  "Puerto Rico": [
+    "Puerto Rico"
+  ],
+  "Cameroon": [
+    "Cameroon"
+  ],
+  "Slovakia": [
+    "Slovakia"
+  ],
+  "Venezuela": [
+    "Venezuela",
+    "Venezuela (Bolivarian Republic of)"
+  ],
+  "Botswana": [
+    "Botswana"
+  ],
+  "Ghana": [
+    "Ghana"
+  ],
+  "Brunei": [
+    "Brunei"
+  ],
+  "Haiti": [
+    "Haiti"
+  ],
+  "El Salvador": [
+    "El Salvador"
+  ],
+  "Estonia": [
+    "Estonia"
+  ],
+  "Honduras": [
+    "Honduras"
+  ],
+  "Mauritius": [
+    "Mauritius"
+  ],
+  "Namibia": [
+    "Namibia"
+  ],
+  "Angola": [
+    "Angola"
+  ],
+  "Uzbekistan": [
+    "Uzbekistan"
+  ],
+  "Greenland": [
+    "Greenland"
+  ],
+  "Sudan": [
+    "Sudan"
+  ],
+  "Yemen": [
+    "Yemen"
+  ],
+  "Guernsey": [
+    "Guernsey"
+  ],
+  "Eritrea": [
+    "Eritrea"
+  ],
+  "Libya": [
+    "Libya"
+  ],
+  "Liberia": [
+    "Liberia"
+  ],
+  "Liechtenstein": [
+    "Liechtenstein"
+  ],
+  "Tanzania": [
+    "Tanzania"
+  ],
+  "Monaco": [
+    "Monaco"
+  ],
+  "Zimbabwe": [
+    "Zimbabwe"
+  ],
+  "Oman": [
+    "Oman"
+  ],
+  "Guam": [
+    "Guam"
+  ],
+  "Suriname": [
+    "Suriname"
+  ],
+  "Gibraltar": [
+    "Gibraltar"
+  ],
+  "Fiji": [
+    "Fiji"
+  ],
+  "North Korea": [
+    "Korea, North",
+    "North Korea"
+  ],
+  "Faroe Islands": [
+    "Faroe Islands"
+  ],
+  "Niger": [
+    "Niger"
+  ],
+  "Burkina Faso": [
+    "Burkina Faso"
+  ],
+  "Samoa": [
+    "Samoa"
+  ],
+  "Equatorial Guinea": [
+    "Equatorial Guinea"
+  ],
+  "Vanuatu": [
+    "Vanuatu"
+  ],
+  "Turkmenistan": [
+    "Turkmenistan"
+  ],
+  "Malawi": [
+    "Malawi"
+  ],
+  "Barbados": [
+    "Barbados"
+  ],
+  "Tuvalu": [
+    "Tuvalu"
+  ],
+  "British Virgin Islands": [
+    "British Virgin Islands"
+  ],
+  "Zambia": [
+    "Zambia"
+  ],
+  "Czechia": [
+    "Czech Republic"
+  ],
+  "Ireland": [
+    "Ireland",
+    "Republic of Ireland"
+  ],
+  "Georgia": [
+    "Georgia (country)"
+  ],
+  "Congo - Kinshasa": [
+    "Democratic Republic of the Congo"
+  ],
+  "Hong Kong SAR China": [
+    "Hong Kong"
+  ],
+  "North Macedonia": [
+    "Republic of Macedonia"
+  ],
+  "Myanmar (Burma)": [
+    "Burma"
+  ],
+  "Bosnia & Herzegovina": [
+    "Bosnia and Herzegovina",
+    "Republika Srpska"
+  ],
+  "Bahamas": [
+    "The Bahamas"
+  ],
+  "Congo - Brazzaville": [
+    "Republic of the Congo"
+  ],
+  "Svalbard & Jan Mayen": [
+    "Svalbard"
+  ]
+}

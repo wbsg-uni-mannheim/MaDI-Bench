@@ -1,0 +1,96 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "Discogs Releases Subset (22k Releases)",
+  "description": "A large subset of the Discogs music database describing over 22,000 music releases. The dataset includes structured metadata for each release such as title, artists, labels, release year, genres, styles, formats, and country of release. The data was derived from the Discogs public database dumps and transformed into a research-friendly structured format. Discogs content is crowdsourced and curated by its user community.",
+  "url": "https://www.discogs.com/developers#database-dumps",
+  "keywords": [
+    "Discogs",
+    "music metadata",
+    "music releases",
+    "albums",
+    "artists",
+    "labels",
+    "genres",
+    "styles",
+    "vinyl",
+    "CD",
+    "music database"
+  ],
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "datePublished": "2016-06-01",
+  "numberOfItems": 22627,
+  "creator": {
+    "@type": "Organization",
+    "name": "Discogs",
+    "url": "https://www.discogs.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Discogs",
+    "url": "https://www.discogs.com/"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "discogs.csv"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "rec_uid",
+      "description": "Discogs-derived record identifier for the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "title_str",
+      "description": "Title of the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "performer",
+      "description": "Artist or group credited for the release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pub_dt",
+      "description": "Release date normalized to YYYY-MM-DD where available",
+      "unitText": "ISO 8601 date"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "origin_loc",
+      "description": "Country where the release was published",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "duration",
+      "description": "Total duration of the release in seconds",
+      "unitText": "seconds"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "imprint",
+      "description": "Record label that published the release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "category",
+      "description": "Primary genre or style of the release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tracks_track-name",
+      "description": "List of track titles on the release",
+      "unitText": "string list"
+    }
+  ]
+}

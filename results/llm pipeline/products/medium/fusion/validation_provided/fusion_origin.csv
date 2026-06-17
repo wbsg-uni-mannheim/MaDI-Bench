@@ -1,0 +1,101 @@
+entity_id,source_ids,title,brand,description,price,priceCurrency,title_description,product_type,model,storage_gb,bus_type,model_number,read_speed_mb_s,write_speed_mb_s,interface_type,storage_connection_type,form_factor,memory_type,chipset_name,vram_gb
+entity_0,"products_3_95492944, products_1_66284906, products_2_25091743",LLM,products_3,LLM,LLM,products_3,LLM,products_3,LLM,products_1,products_3,,,,,,,,,
+entity_1,"products_2_27226970, products_1_94807470, products_3_94836578",products_2,products_2,LLM,products_1,products_1,LLM,products_2,LLM,products_1,products_2,products_1,LLM,LLM,,,,,,
+entity_10,"products_1_23694723, products_3_5160662",LLM,products_1,LLM,LLM,products_3,LLM,products_1,LLM,LLM,products_1,products_1,LLM,LLM,LLM,products_1,,,,
+entity_11,"products_4_71010886, products_1_3957588, products_3_39434551",LLM,products_1,LLM,LLM,products_1,LLM,products_4,products_1,LLM,,,,products_3,LLM,LLM,,,,
+entity_12,"products_3_61198101, products_1_2237933",products_1,products_3,LLM,LLM,LLM,LLM,products_1,products_1,LLM,products_3,LLM,,,,,,,,
+entity_13,products_1_13600999,products_1,products_1,products_1,LLM,products_1,products_1,products_1,LLM,products_1,,products_1,,,LLM,LLM,,,,
+entity_14,"products_1_18451047, products_3_43128365",LLM,products_1,products_1,LLM,products_3,LLM,products_1,LLM,products_1,products_1,LLM,,,,,,,,
+entity_15,"products_2_4557639, products_3_51601254, products_1_84278896",products_1,products_2,LLM,LLM,products_1,products_2,products_2,products_3,products_2,products_3,products_1,,,,,,,,
+entity_16,"products_3_17471458, products_1_70026799, products_4_20551993",products_1,products_3,LLM,products_1,products_4,products_1,products_3,products_1,products_1,LLM,products_1,LLM,,products_3,products_3,,,,
+entity_17,"products_2_38117313, products_3_42834782, products_1_13163468",LLM,products_2,LLM,LLM,LLM,LLM,products_2,LLM,products_1,products_2,LLM,,,LLM,,,,,
+entity_18,products_1_12424905,products_1,products_1,LLM,LLM,products_1,LLM,products_1,products_1,LLM,,LLM,,,,,,,,
+entity_19,"products_1_16849538, products_2_96833745, products_3_61906477",LLM,products_1,products_1,LLM,LLM,LLM,products_1,products_1,LLM,LLM,,products_1,products_1,LLM,products_1,,,,
+entity_2,products_1_72380436,LLM,,LLM,LLM,products_1,LLM,products_1,,,,,,,,,,,,
+entity_20,"products_1_65837616, products_2_52338887",products_1,products_1,products_1,LLM,LLM,LLM,products_1,products_1,products_1,,,,,,,,,,
+entity_21,"products_1_12049659, products_2_5992480",LLM,products_1,LLM,LLM,products_1,products_1,products_1,LLM,LLM,products_1,,,,LLM,,,,,
+entity_22,"products_3_22646558, products_1_86835292",LLM,products_3,LLM,LLM,products_3,LLM,products_3,products_1,products_1,products_1,,,,products_1,products_1,,,,
+entity_23,"products_1_1252810, products_2_3708141, products_3_53357791, products_4_60975501",products_4,products_1,LLM,products_1,products_1,LLM,products_1,products_1,products_1,products_1,,,,products_1,products_1,,,,
+entity_24,"products_2_33848192, products_1_16588524, products_3_82272597",products_1,products_2,LLM,LLM,products_2,LLM,products_2,products_1,products_1,LLM,products_2,LLM,products_1,products_2,products_1,,,,
+entity_25,"products_3_18175862, products_2_8019719, products_1_21663730",products_1,products_2,LLM,LLM,LLM,LLM,products_3,,LLM,products_2,,,,LLM,LLM,products_3,,,
+entity_26,"products_1_14296399, products_3_47613152",products_1,products_1,LLM,LLM,LLM,products_1,products_1,,products_3,products_1,products_1,,,LLM,LLM,products_1,,,
+entity_27,"products_3_96484648, products_1_21446102",products_1,products_3,LLM,LLM,products_1,LLM,products_3,products_3,products_1,,,,,,,,,,
+entity_28,"products_1_71883742, products_4_45372457, products_3_29257602",LLM,products_1,products_1,LLM,LLM,products_1,products_1,products_3,products_1,products_1,LLM,,,products_1,products_3,products_1,,,
+entity_29,products_1_95573755,products_1,LLM,LLM,LLM,products_1,LLM,products_1,products_1,products_1,products_1,products_1,,,LLM,LLM,products_1,,,
+entity_3,products_1_24673290,LLM,products_1,products_1,products_1,products_1,products_1,products_1,LLM,products_1,products_1,,,,,,,,,
+entity_30,"products_3_80509522, products_4_41915007, products_1_47930825",LLM,products_3,LLM,LLM,LLM,products_1,products_3,LLM,LLM,products_3,products_1,,,LLM,products_3,products_4,,,
+entity_31,products_1_98624308,LLM,products_1,products_1,LLM,products_1,products_1,products_1,LLM,products_1,products_1,products_1,,,products_1,products_1,products_1,,,
+entity_32,"products_3_66040433, products_1_97905619",products_1,products_3,LLM,products_1,products_1,LLM,products_3,LLM,products_1,products_3,LLM,,,products_1,products_3,products_3,,,
+entity_33,"products_1_48281373, products_4_68607451",LLM,products_1,products_4,LLM,products_1,products_1,products_1,LLM,LLM,products_1,products_1,,,LLM,LLM,products_1,,,
+entity_34,"products_2_5623956, products_1_87572356",LLM,LLM,products_1,LLM,products_1,LLM,products_2,,products_1,products_2,,,,LLM,products_2,LLM,,,
+entity_35,products_1_82091590,LLM,LLM,LLM,LLM,LLM,LLM,products_1,,LLM,products_1,products_1,,,LLM,products_1,products_1,,,
+entity_36,products_1_6557275,LLM,,products_1,LLM,LLM,LLM,products_1,products_1,products_1,LLM,,,,,,,,,
+entity_37,products_1_42551174,LLM,products_1,products_1,LLM,products_1,LLM,products_1,LLM,LLM,products_1,products_1,,,LLM,LLM,products_1,,,
+entity_38,products_1_31239709,LLM,products_1,LLM,,products_1,LLM,products_1,LLM,LLM,products_1,products_1,,,products_1,LLM,products_1,,,
+entity_39,"products_4_57859900, products_1_53672855",LLM,products_4,products_1,LLM,products_4,LLM,products_4,products_4,products_1,products_4,,,,LLM,products_1,products_1,,,
+entity_4,products_1_73035052,LLM,LLM,LLM,LLM,products_1,products_1,products_1,LLM,,products_1,,,,,,,,,
+entity_40,products_1_47203114,products_1,products_1,LLM,LLM,LLM,products_1,products_1,,products_1,products_1,products_1,,,products_1,products_1,products_1,,,
+entity_41,products_1_28606757,products_1,products_1,products_1,LLM,products_1,products_1,products_1,LLM,products_1,LLM,,,,products_1,,products_1,,,
+entity_42,"products_3_76239789, products_1_83479410, products_4_6142698",products_1,products_3,products_1,LLM,LLM,LLM,products_3,LLM,products_1,products_1,LLM,,,LLM,products_1,products_1,,,
+entity_43,"products_1_79539273, products_3_26401991",LLM,products_3,LLM,LLM,products_1,LLM,products_1,products_1,LLM,products_1,products_1,,,LLM,products_1,products_1,,,
+entity_44,"products_4_3817876, products_1_18406024, products_3_69955627",LLM,products_1,LLM,LLM,products_1,LLM,products_4,products_4,LLM,products_1,products_4,,,LLM,products_1,products_4,,,
+entity_45,products_1_70715850,LLM,products_1,LLM,LLM,products_1,LLM,products_1,LLM,LLM,,,,,products_1,LLM,products_1,,,
+entity_46,"products_2_90222476, products_1_23418968",LLM,products_2,LLM,LLM,products_2,LLM,products_2,LLM,LLM,products_1,,,,LLM,LLM,products_1,,,
+entity_47,"products_1_4586576, products_3_21433083, products_2_51996514",LLM,products_3,LLM,LLM,products_1,LLM,products_1,,products_1,products_1,,,,LLM,products_1,products_1,,,
+entity_48,products_1_92213757,LLM,products_1,LLM,LLM,LLM,LLM,products_1,products_1,LLM,,products_1,,,,,,,,
+entity_49,"products_1_44551871, products_3_30114774",LLM,products_1,LLM,LLM,LLM,products_1,products_1,products_1,products_1,products_1,products_1,,,LLM,products_3,products_1,,,
+entity_5,"products_1_16479164, products_3_25774360",LLM,products_1,LLM,products_1,products_1,LLM,products_1,LLM,LLM,products_1,,,,,,,,,
+entity_50,"products_1_675322, products_4_77070657",products_1,products_1,products_1,LLM,products_1,LLM,products_1,products_1,LLM,products_1,products_4,,,products_1,LLM,products_4,,,
+entity_51,"products_4_66179582, products_3_7897792, products_1_25541170",products_1,products_4,LLM,LLM,products_3,products_1,products_3,products_4,products_1,LLM,products_1,LLM,LLM,LLM,products_4,products_3,,,
+entity_52,products_1_36708398,LLM,products_1,products_1,LLM,products_1,LLM,LLM,,products_1,products_1,products_1,,,products_1,products_1,products_1,,,
+entity_53,"products_3_58345950, products_4_93635611, products_1_67813666",LLM,products_3,products_1,LLM,LLM,LLM,products_3,LLM,products_1,products_3,products_4,LLM,products_4,products_3,products_1,products_3,,,
+entity_54,products_1_25370721,products_1,products_1,LLM,LLM,LLM,LLM,products_1,LLM,products_1,LLM,,LLM,products_1,LLM,products_1,products_1,,,
+entity_55,products_1_61786604,LLM,products_1,LLM,LLM,,LLM,products_1,LLM,products_1,LLM,,LLM,LLM,LLM,products_1,products_1,,,
+entity_56,"products_4_63700999, products_3_67987526, products_2_40217101, products_1_72884596",LLM,products_4,LLM,LLM,products_4,products_1,products_4,products_2,LLM,products_4,products_1,products_2,products_4,products_4,products_4,products_3,,,
+entity_57,"products_1_62078047, products_3_12117192, products_4_22696080",LLM,products_1,products_4,LLM,products_4,products_4,products_1,LLM,products_3,products_1,products_1,LLM,LLM,products_1,products_1,products_1,,,
+entity_58,products_1_26353099,LLM,products_1,LLM,LLM,LLM,products_1,products_1,LLM,products_1,LLM,,,,LLM,products_1,products_1,,,
+entity_59,"products_1_32738830, products_3_43317133",products_3,products_1,products_1,LLM,products_3,products_1,products_1,products_1,LLM,products_1,,LLM,products_1,products_1,products_1,products_1,,,
+entity_6,"products_1_27965637, products_3_95284377, products_2_31237395",LLM,products_2,products_1,LLM,products_2,products_1,products_1,products_3,LLM,LLM,LLM,products_1,products_1,LLM,products_1,,,,
+entity_60,"products_1_80641070, products_3_33116922, products_4_29276292",products_1,products_1,LLM,LLM,products_1,LLM,products_1,products_4,LLM,LLM,LLM,,,LLM,products_1,products_1,,,
+entity_61,products_1_84704597,LLM,products_1,products_1,LLM,LLM,products_1,products_1,products_1,products_1,products_1,products_1,,,products_1,products_1,products_1,,,
+entity_62,"products_3_88489852, products_1_15871125, products_2_79853164",products_1,products_3,LLM,LLM,products_1,LLM,products_3,products_1,products_1,LLM,products_1,LLM,LLM,LLM,products_3,products_1,,,
+entity_63,products_1_62156844,LLM,products_1,LLM,LLM,LLM,LLM,products_1,products_1,products_1,products_1,products_1,,,products_1,products_1,products_1,,,
+entity_64,products_1_10006478,products_1,products_1,LLM,LLM,products_1,LLM,products_1,products_1,products_1,products_1,,LLM,products_1,products_1,products_1,products_1,,,
+entity_65,"products_2_569608, products_1_705891",products_1,products_2,products_1,LLM,products_2,products_1,products_2,,LLM,LLM,products_1,LLM,LLM,LLM,products_1,products_2,,,
+entity_66,"products_3_79517683, products_1_31663634",LLM,products_1,products_1,LLM,products_3,products_1,products_3,LLM,LLM,LLM,,LLM,LLM,LLM,products_3,products_3,,,
+entity_67,"products_1_10565065, products_4_59583035",LLM,products_4,LLM,LLM,LLM,LLM,products_1,LLM,products_4,LLM,products_1,LLM,products_4,LLM,products_1,products_1,,,
+entity_68,"products_3_40157515, products_1_6186646",products_3,products_3,products_1,LLM,products_3,LLM,products_3,products_1,products_3,products_3,products_1,LLM,products_1,products_1,products_3,products_1,,,
+entity_69,"products_1_8217265, products_3_36838708",products_1,products_1,LLM,LLM,products_1,products_1,products_1,products_3,LLM,LLM,,LLM,products_1,LLM,products_1,products_1,,,
+entity_7,products_1_24038266,products_1,,LLM,products_1,LLM,LLM,products_1,LLM,products_1,products_1,,,,,,,,,
+entity_70,"products_1_61307663, products_3_80753496",products_1,products_1,LLM,LLM,,LLM,products_1,LLM,LLM,LLM,products_1,LLM,LLM,LLM,,,,,
+entity_71,"products_3_49263678, products_4_58196146, products_1_61433092, products_2_33137302",products_3,products_1,products_2,LLM,products_4,products_2,products_3,products_2,products_3,products_1,,products_1,products_1,products_1,LLM,LLM,,,
+entity_72,products_1_19453676,LLM,LLM,LLM,LLM,LLM,LLM,products_1,products_1,products_1,LLM,,,,LLM,products_1,products_1,,,
+entity_73,"products_4_21085676, products_3_44201512, products_1_1088849",products_1,products_3,LLM,LLM,products_3,LLM,products_4,products_4,products_1,LLM,products_1,products_1,products_1,LLM,products_3,products_1,,,
+entity_74,products_1_74635538,products_1,products_1,products_1,LLM,LLM,LLM,LLM,LLM,LLM,LLM,products_1,,,LLM,products_1,products_1,,,
+entity_75,"products_1_6817605, products_2_81919883, products_3_81443209",LLM,products_1,LLM,LLM,products_1,products_1,products_1,LLM,,products_3,,,,,,,products_1,LLM,products_1
+entity_76,"products_1_39143445, products_3_63864528, products_4_7695737",LLM,products_1,LLM,LLM,products_1,LLM,products_1,LLM,,products_1,products_3,,,,,LLM,products_1,LLM,products_1
+entity_77,products_1_40530169,products_1,products_1,products_1,LLM,LLM,LLM,products_1,LLM,,,products_1,,,,,,,LLM,products_1
+entity_78,"products_3_37026032, products_4_97231319, products_2_44467616, products_1_52172790",LLM,products_3,products_3,products_1,products_3,products_3,products_4,LLM,,,,,,,,,products_3,products_1,products_2
+entity_79,"products_3_2996010, products_1_22055981",LLM,products_3,LLM,LLM,LLM,LLM,products_3,LLM,,products_3,products_1,,,,,products_1,products_3,LLM,products_3
+entity_8,products_1_7871781,LLM,products_1,products_1,LLM,LLM,LLM,products_1,LLM,LLM,products_1,products_1,,,,,,,,
+entity_80,"products_4_50792597, products_3_69586730, products_2_98699269, products_1_7179251",LLM,products_4,LLM,LLM,products_3,LLM,products_4,LLM,,LLM,products_1,,,LLM,,,products_1,LLM,products_4
+entity_81,"products_3_45917002, products_1_68277426, products_2_72908237",LLM,products_3,LLM,LLM,products_3,products_1,products_3,LLM,,products_3,,,,,,,products_3,LLM,products_1
+entity_82,"products_2_19126355, products_3_420268, products_1_66404124",products_1,products_1,LLM,LLM,products_2,LLM,products_2,LLM,,LLM,,,,,,,products_3,LLM,products_2
+entity_83,products_1_72112341,products_1,products_1,LLM,LLM,LLM,LLM,products_1,,,products_1,products_1,,,,,,products_1,LLM,products_1
+entity_84,"products_3_54755582, products_1_46100256",LLM,products_3,LLM,,,products_1,products_3,products_3,,,,,,,,,products_3,products_3,products_3
+entity_85,"products_2_39418692, products_1_28212814, products_3_40032101",products_1,products_2,LLM,LLM,products_1,LLM,products_2,products_2,,,products_2,,,,,,products_2,products_1,products_1
+entity_86,products_1_46937084,LLM,products_1,LLM,LLM,products_1,LLM,products_1,LLM,,,products_1,,,,,LLM,products_1,products_1,products_1
+entity_87,"products_1_98557440, products_4_75418922, products_2_90054170",LLM,products_1,LLM,LLM,products_1,LLM,products_1,LLM,,LLM,products_1,,,,,,LLM,LLM,products_1
+entity_88,products_1_18374077,products_1,products_1,LLM,LLM,products_1,LLM,products_1,LLM,,products_1,products_1,,,,,,products_1,LLM,products_1
+entity_89,"products_1_26544937, products_3_46320085",LLM,products_1,LLM,LLM,LLM,LLM,products_1,LLM,,,products_1,,,,,,products_1,LLM,products_1
+entity_9,products_1_85544471,LLM,,LLM,products_1,products_1,LLM,products_1,LLM,products_1,products_1,,,,,,,,,
+entity_90,"products_1_5371368, products_3_18402228",LLM,products_1,LLM,LLM,products_1,products_3,products_1,LLM,,LLM,products_3,,,,,LLM,products_1,LLM,products_1
+entity_91,"products_2_4660875, products_1_22326836, products_3_47205216, products_4_76264958",LLM,products_2,LLM,LLM,products_2,products_1,products_2,products_3,,products_1,,,,,,,products_1,products_1,products_2
+entity_92,"products_1_8904814, products_3_88954239",LLM,products_1,LLM,LLM,products_3,LLM,products_1,LLM,,products_3,,,,,,,,LLM,products_1
+entity_93,"products_4_90172558, products_3_8081917, products_1_9569117",products_4,,LLM,LLM,products_4,LLM,products_1,LLM,,products_3,products_4,,,,,products_4,,LLM,products_1
+entity_94,products_1_24614355,LLM,products_1,LLM,LLM,products_1,LLM,products_1,,,products_1,products_1,,,,,,products_1,LLM,products_1
+entity_95,"products_3_93023962, products_2_65348210, products_1_44678762",LLM,products_3,LLM,LLM,products_2,LLM,products_2,LLM,,,,,,,,,products_3,LLM,products_3
+entity_96,"products_3_77924764, products_1_19733045",LLM,products_3,LLM,LLM,LLM,LLM,products_3,LLM,,products_1,LLM,,,,,,products_1,LLM,products_1
+entity_97,products_1_19807424,LLM,products_1,LLM,,,LLM,LLM,products_1,,,,,,,,,,products_1,products_1
+entity_98,"products_4_74115015, products_3_34888275, products_1_35479899",LLM,products_4,LLM,products_1,LLM,LLM,products_4,LLM,,LLM,,,,,,,products_1,LLM,products_4
+entity_99,"products_4_22290248, products_3_41306498, products_1_19001308, products_2_97029437",LLM,products_4,LLM,LLM,LLM,LLM,products_3,LLM,,products_4,LLM,,,,,,products_1,LLM,products_1

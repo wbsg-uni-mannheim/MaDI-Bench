@@ -1,0 +1,57 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "LastFM Album Metadata (10k Entries)",
+  "description": "Album-level metadata retrieved from Last.fm using the Last.fm API. The API was queried using album names from the MusicBrainz dataset as query strings. The original retrieval contains over 85,000 entities. A reduced version contains around 10,000 entries and provides album name and artist, as well as tracklists including track title, duration, and position on the album. Additional fields present in the CSV include the Last.fm URL for the album and popularity indicators returned by the API (listeners and playcount).",
+  "url": "https://www.last.fm/api",
+  "keywords": [
+    "Last.fm",
+    "LastFM API",
+    "music metadata",
+    "albums",
+    "tracklist",
+    "track duration",
+    "MusicBrainz"
+  ],
+  "license": "https://www.last.fm/api/tos",
+  "numberOfItems": 9865,
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "lastfm.csv"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "item_code",
+      "description": "Last.fm-derived record identifier for the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "album_title",
+      "description": "Title of the music release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "band",
+      "description": "Artist or group credited for the release",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "album_length",
+      "description": "Total duration of the release in seconds",
+      "unitText": "seconds"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "tracks_track-name",
+      "description": "List of track titles on the release",
+      "unitText": "string list"
+    }
+  ]
+}

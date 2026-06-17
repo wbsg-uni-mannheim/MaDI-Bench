@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+products-augmented-medium,llm_no_val,official_test,0.4587929915639195,707,1541,DI-Bench/runs/augmented/products/medium/fusion/optimization_provided_val/case_llm_no_val/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

@@ -1,0 +1,49 @@
+{
+  "best_strategy": "MaximumBipartiteMatching",
+  "before": {
+    "total_correspondences": 2285,
+    "total_clusters": 432,
+    "oversized_clusters": 47,
+    "target_range_clusters": 385,
+    "max_cluster_size": 214
+  },
+  "after": {
+    "total_correspondences": 1624,
+    "total_clusters": 669,
+    "oversized_clusters": 0,
+    "target_range_clusters": 669,
+    "max_cluster_size": 4
+  },
+  "strategies": [
+    {
+      "strategy": "MaximumBipartiteMatching",
+      "correspondences_after": 1624,
+      "clusters_after": 669,
+      "oversized_after": 0,
+      "target_range_after": 669,
+      "max_cluster_size_after": 4,
+      "oversized_fixed": 47,
+      "collateral_damage": -284
+    },
+    {
+      "strategy": "GreedyOneToOne",
+      "correspondences_after": 1590,
+      "clusters_after": 658,
+      "oversized_after": 0,
+      "target_range_after": 658,
+      "max_cluster_size_after": 4,
+      "oversized_fixed": 47,
+      "collateral_damage": -273
+    },
+    {
+      "strategy": "StableMatching",
+      "correspondences_after": 1571,
+      "clusters_after": 651,
+      "oversized_after": 0,
+      "target_range_after": 651,
+      "max_cluster_size_after": 4,
+      "oversized_fixed": 47,
+      "collateral_damage": -266
+    }
+  ]
+}

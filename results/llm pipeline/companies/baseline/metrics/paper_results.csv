@@ -1,0 +1,7 @@
+case,category,metric,item,split,value,numerator,denominator,source_file,note
+companies,schema_matching,f1,all_sources,official_gold,0.975609756097561,,,DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+companies,schema_matching,precision,all_sources,official_gold,1.0,20.0,20.0,DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+companies,schema_matching,recall,all_sources,official_gold,0.9523809523809523,20.0,21.0,DI-Bench/usecases/companies/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation.
+companies,entity_matching,macro_f1,all_pairs,official_test,0.9068253255500673,,2.0,DI-Bench/runs/companies/entity_resolution/training/training_comparison,"Best final EM score for the configuration used, on the official held-out test set."
+companies,fusion,accuracy,best_selected_strategy,official_test,0.6324167872648335,437.0,691.0,DI-Bench/runs/companies/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.
+companies,consistency,schema_consistency_score,,final_output,0.99159109645507,60140.0,60650.0,DI-Bench/runs/companies/metrics/consistency.json,

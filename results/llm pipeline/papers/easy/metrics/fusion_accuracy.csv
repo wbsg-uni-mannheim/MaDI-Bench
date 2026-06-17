@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+papers-augmented-easy,llm_no_val,official_test,0.6464135021097046,766,1185,DI-Bench/runs/augmented/papers/easy/fusion/optimization_provided_val/case_llm_no_val/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

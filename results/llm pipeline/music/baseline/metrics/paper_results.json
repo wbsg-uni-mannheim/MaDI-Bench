@@ -1,0 +1,74 @@
+[
+  {
+    "case": "music",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": null,
+    "source_file": "DI-Bench/usecases/music/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "music",
+    "category": "schema_matching",
+    "denominator": 18,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 18,
+    "source_file": "DI-Bench/usecases/music/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "music",
+    "category": "schema_matching",
+    "denominator": 18,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation.",
+    "numerator": 18,
+    "source_file": "DI-Bench/usecases/music/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "music",
+    "category": "entity_matching",
+    "denominator": 2,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/music/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.9810318974918211
+  },
+  {
+    "case": "music",
+    "category": "fusion",
+    "denominator": 154,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 128,
+    "source_file": "DI-Bench/runs/music/fusion/optimization_provided_val/case_llm_val__opt_provided/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.8311688311688312
+  },
+  {
+    "case": "music",
+    "category": "consistency",
+    "denominator": 200275,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 193557,
+    "source_file": "DI-Bench/runs/music/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.9664561228311073
+  }
+]

@@ -1,0 +1,67 @@
+case,optimization_mode,attribute,resolver,kwargs
+heuristic,none,ESRB,most_complete,{}
+heuristic,none,criticScore,median,{}
+heuristic,none,developer,most_complete,{}
+heuristic,none,genres,most_complete,{}
+heuristic,none,name,longest_string,{}
+heuristic,none,platform,most_complete,{}
+heuristic,none,publisher,most_complete,{}
+heuristic,none,releaseYear,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+heuristic,none,series,most_complete,{}
+heuristic,none,units_sold_mm,median,{}
+heuristic,none,userScore,median,{}
+llm_no_val,none,ESRB,voting,{}
+llm_no_val,none,criticScore,median,{}
+llm_no_val,none,developer,union,"{""separator"": "",""}"
+llm_no_val,none,genres,union,"{""separator"": "",""}"
+llm_no_val,none,name,longest_string,{}
+llm_no_val,none,platform,union,"{""separator"": "",""}"
+llm_no_val,none,publisher,union,"{""separator"": "",""}"
+llm_no_val,none,releaseYear,earliest,{}
+llm_no_val,none,series,most_complete,{}
+llm_no_val,none,units_sold_mm,median,{}
+llm_no_val,none,userScore,median,{}
+llm_val,provided,ESRB,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,criticScore,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,developer,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,genres,most_complete,{}
+llm_val,provided,name,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,platform,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,publisher,favour_sources,"{""sources"": [""sales""]}"
+llm_val,provided,releaseYear,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val,provided,series,most_complete,{}
+llm_val,provided,units_sold_mm,median,{}
+llm_val,provided,userScore,favour_sources,"{""sources"": [""metacritic""]}"
+llm_val_stats,provided,ESRB,favour_sources,"{""sources"": [""metacritic"", ""sales""]}"
+llm_val_stats,provided,criticScore,favour_sources,"{""sources"": [""metacritic"", ""sales""]}"
+llm_val_stats,provided,developer,favour_sources,"{""sources"": [""sales"", ""metacritic"", ""dbpedia""]}"
+llm_val_stats,provided,genres,most_complete,{}
+llm_val_stats,provided,name,favour_sources,"{""sources"": [""sales"", ""metacritic"", ""dbpedia""]}"
+llm_val_stats,provided,platform,favour_sources,"{""sources"": [""metacritic"", ""sales"", ""dbpedia""]}"
+llm_val_stats,provided,publisher,favour_sources,"{""sources"": [""sales""]}"
+llm_val_stats,provided,releaseYear,favour_sources,"{""sources"": [""sales"", ""metacritic"", ""dbpedia""]}"
+llm_val_stats,provided,series,most_complete,{}
+llm_val_stats,provided,units_sold_mm,median,{}
+llm_val_stats,provided,userScore,favour_sources,"{""sources"": [""metacritic"", ""sales""]}"
+heuristic_stats,provided,ESRB,favour_sources,"{""sources"": [""metacritic""]}"
+heuristic_stats,provided,criticScore,favour_sources,"{""sources"": [""metacritic""]}"
+heuristic_stats,provided,developer,favour_sources,"{""sources"": [""sales""]}"
+heuristic_stats,provided,genres,most_complete,{}
+heuristic_stats,provided,name,favour_sources,"{""sources"": [""sales""]}"
+heuristic_stats,provided,platform,favour_sources,"{""sources"": [""metacritic""]}"
+heuristic_stats,provided,publisher,most_complete,{}
+heuristic_stats,provided,releaseYear,favour_sources,"{""sources"": [""sales""]}"
+heuristic_stats,provided,series,most_complete,{}
+heuristic_stats,provided,units_sold_mm,median,{}
+heuristic_stats,provided,userScore,favour_sources,"{""sources"": [""metacritic""]}"
+iterative,provided,ESRB,favour_sources,"{""sources"": [""metacritic""]}"
+iterative,provided,criticScore,favour_sources,"{""sources"": [""metacritic""]}"
+iterative,provided,developer,favour_sources,"{""sources"": [""sales"", ""metacritic""]}"
+iterative,provided,genres,most_complete,{}
+iterative,provided,name,favour_sources,"{""sources"": [""sales"", ""metacritic""]}"
+iterative,provided,platform,favour_sources,"{""sources"": [""metacritic""]}"
+iterative,provided,publisher,most_complete,{}
+iterative,provided,releaseYear,favour_sources,"{""sources"": [""sales"", ""metacritic""]}"
+iterative,provided,series,most_complete,{}
+iterative,provided,units_sold_mm,favour_sources,"{""sources"": [""sales""]}"
+iterative,provided,userScore,favour_sources,"{""sources"": [""metacritic""]}"

@@ -1,0 +1,3 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+dbpedia,forbes,dbpedia__forbes,MLBasedMatcher,0.9,0.96,0.967741935483871,0.9523809523809524,140,63,77,DI-Bench/usecases/companies/input/entitymatching/forbes_2_dbpedia_test.csv
+forbes,fullcontact,forbes__fullcontact,MLBasedMatcher,0.6,0.8810572687224669,0.8771929824561403,0.8849557522123894,459,113,346,DI-Bench/usecases/companies/input/entitymatching/forbes_2_fullcontact_test.csv

@@ -1,0 +1,4 @@
+dataset_pair,num_candidates,sampled_pairs,input_tokens,output_tokens,estimated_cost_usd,estimate_mode
+Dblp-Crossref,818580,10000,223861002,12278700,563.6586,sampled
+Dblp-Open_alex,799780,10000,218787497,11996700,550.8319,sampled
+TOTAL,1618360,20000,442648499,24275400,1114.4904999999999,sampled

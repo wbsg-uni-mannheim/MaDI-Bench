@@ -1,0 +1,5 @@
+Source,Precision,Recall,F1,Correct,Predicted,Gold,Missing
+All_Sources,1.0,0.9583333333333334,0.9787234042553191,23,23,24,1
+Dbpedia,1.0,1.0,1.0,6,6,6,0
+Metacritic,1.0,1.0,1.0,8,8,8,0
+Sales,1.0,0.9,0.9473684210526316,9,9,10,1

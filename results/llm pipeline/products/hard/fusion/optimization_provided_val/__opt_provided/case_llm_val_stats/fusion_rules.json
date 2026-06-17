@@ -1,0 +1,241 @@
+{
+  "attribute_rules": {
+    "brand": {
+      "kwargs": {
+        "sources": [
+          "products_2",
+          "products_1",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "bus_type": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_4",
+          "products_3"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "chipset_name": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cluster_id": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "color": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "description": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_4",
+          "products_3"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "form_factor": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_3",
+          "products_4",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "height_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "interface_type": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "length_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "memory_type": {
+      "kwargs": {
+        "sources": [
+          "products_2",
+          "products_3",
+          "products_1",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "model": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_3",
+          "products_4",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "model_number": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "price": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "priceCurrency": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "product_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "read_speed_mb_s": {
+      "kwargs": {
+        "sources": [
+          "products_4",
+          "products_1",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "storage_connection_type": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "storage_gb": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_3",
+          "products_4",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title_description": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_2",
+          "products_3"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "url": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_4",
+          "products_3"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "vram_gb": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "weight_g": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "width_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "write_speed_mb_s": {
+      "kwargs": {
+        "sources": [
+          "products_4",
+          "products_3",
+          "products_1",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  }
+}

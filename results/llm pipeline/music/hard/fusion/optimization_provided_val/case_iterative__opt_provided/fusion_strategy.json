@@ -1,0 +1,25 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "Attribute_4": "most_complete",
+    "Attribute_5": "most_complete",
+    "Attribute_7": "most_complete",
+    "Attribute_8": "most_complete",
+    "artist": "favour_sources",
+    "duration": "maximum",
+    "genre": "favour_sources",
+    "label": "favour_sources",
+    "name": "favour_sources",
+    "release-country": "favour_sources",
+    "release-date": "favour_sources",
+    "tracks": "union"
+  },
+  "strategy_name": "iterative_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "discogs": 3.0,
+    "lastfm": 1.0,
+    "musicbrainz": 2.3740451531833022
+  }
+}

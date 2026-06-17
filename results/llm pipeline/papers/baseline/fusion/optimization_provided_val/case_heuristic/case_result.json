@@ -1,0 +1,71 @@
+{
+  "case_name": "heuristic",
+  "rules": {
+    "abstract_text": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "authors": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ";"
+      }
+    },
+    "cited_by_count": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "first_page": {
+      "resolver": "voting",
+      "kwargs": {}
+    },
+    "issue": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "journal": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "last_page": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "publication_year": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "publisher_name": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "referenced_works_count": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "title": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "topic_terms": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    },
+    "type": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "volume": {
+      "resolver": "median",
+      "kwargs": {}
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

@@ -1,0 +1,246 @@
+{
+  "case_name": "llm_val_stats",
+  "rules": {
+    "ESRB": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "criticScore": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "developer": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "genres": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "platform": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "publisher": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      }
+    },
+    "releaseYear": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    },
+    "series": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "units_sold_mm": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "sales"
+        ]
+      }
+    },
+    "userScore": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "metacritic",
+          "sales"
+        ]
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": {
+    "name": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "name",
+        "correct": 3,
+        "total": 7,
+        "accuracy": 0.4286
+      },
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "name",
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "name",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "releaseYear": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "releaseYear",
+        "correct": 3,
+        "total": 7,
+        "accuracy": 0.4286
+      },
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "releaseYear",
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "releaseYear",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "developer": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "developer",
+        "correct": 5,
+        "total": 7,
+        "accuracy": 0.7143
+      },
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "developer",
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "developer",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "platform": {
+      "dbpedia": {
+        "source_name": "dbpedia",
+        "attribute": "platform",
+        "correct": 3,
+        "total": 7,
+        "accuracy": 0.4286
+      },
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "platform",
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "platform",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "criticScore": {
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "criticScore",
+        "correct": 10,
+        "total": 10,
+        "accuracy": 1.0
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "criticScore",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "userScore": {
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "userScore",
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "userScore",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "ESRB": {
+      "metacritic": {
+        "source_name": "metacritic",
+        "attribute": "ESRB",
+        "correct": 9,
+        "total": 10,
+        "accuracy": 0.9
+      },
+      "sales": {
+        "source_name": "sales",
+        "attribute": "ESRB",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    },
+    "publisher": {
+      "sales": {
+        "source_name": "sales",
+        "attribute": "publisher",
+        "correct": 1,
+        "total": 1,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "iterations_used": 1,
+  "optimization_mode": "provided"
+}

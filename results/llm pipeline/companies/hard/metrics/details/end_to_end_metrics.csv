@@ -1,0 +1,16 @@
+case,metric,value,source_file
+companies-augmented-hard,input_sources,3,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,total_input_records,14180,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,fused_output_records,12937,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,fusion_ratio,0.0877,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,row_gain_over_largest,2868,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,row_gain_percentage,28.48,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,merged_records,959,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,input_columns_target_schema,10,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,fused_output_columns,11,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,average_input_density,0.5033,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,fused_data_density,0.5555,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,data_density_change,0.0522,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,largest_source_name,dbpedia,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,largest_source_density,0.5563,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json
+companies-augmented-hard,density_change_vs_largest,-0.0008,DI-Bench/runs/augmented/companies/hard/end_to_end_metrics.json

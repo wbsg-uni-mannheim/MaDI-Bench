@@ -1,0 +1,10 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+name,1.0,12908,12908,0,False,{},{},False,
+founded,0.9091955125131844,10429,9482,947,False,"{""date_range"": 3, ""format.date"": 944, ""pattern"": 944}",{},False,
+country,0.9637010087646767,12094,11655,439,False,"{""taxonomy"": 439}","{""taxonomy"": {""exhaustive"": true, ""known_value_rate"": 0.9637010087646767, ""membership_enforced"": true, ""n_known_values"": 11655, ""n_unknown_values"": 439, ""n_values_checked"": 12094}}",False,
+city,1.0,9883,9883,0,False,{},{},False,
+industry,0.9986916703009159,6879,6870,9,False,"{""taxonomy"": 9}","{""taxonomy"": {""exhaustive"": true, ""known_value_rate"": 0.9986916703009159, ""membership_enforced"": true, ""n_known_values"": 6870, ""n_unknown_values"": 9, ""n_values_checked"": 6879}}",False,
+assets,0.8910284463894967,2285,2036,249,False,"{""type"": 249}",{},False,
+revenue,0.9966595809292439,3293,3282,11,False,"{""type"": 11}",{},False,
+keypeople,0.39473684210526316,152,60,92,False,"{""type"": 92}",{},False,

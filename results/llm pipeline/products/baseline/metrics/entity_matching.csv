@@ -1,0 +1,5 @@
+case,pair,split,f1,precision,recall,source_file,note
+products,prod1__prod2,official_test,0.5714285714285714,0.4736842105263157,0.72,DI-Bench/runs/products/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products,prod1__prod3,official_test,0.591304347826087,0.5230769230769231,0.68,DI-Bench/runs/products/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products,prod1__prod4,official_test,0.7299270072992701,0.5747126436781609,1.0,DI-Bench/runs/products/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products,all_pairs,official_test,0.6308866421846427,,,DI-Bench/runs/products/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

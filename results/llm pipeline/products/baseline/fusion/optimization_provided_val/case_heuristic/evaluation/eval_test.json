@@ -1,0 +1,107 @@
+{
+  "overall_accuracy": 0.4364508393285372,
+  "total_comparisons": 2085,
+  "correct_comparisons": 910,
+  "per_attribute_accuracy": {
+    "price": {
+      "accuracy": 0.65,
+      "total": 100
+    },
+    "vram_gb": {
+      "accuracy": 0.96,
+      "total": 25
+    },
+    "width_mm": {
+      "accuracy": 0.07142857142857142,
+      "total": 98
+    },
+    "brand": {
+      "accuracy": 0.92,
+      "total": 100
+    },
+    "write_speed_mb_s": {
+      "accuracy": 0.3333333333333333,
+      "total": 63
+    },
+    "bus_type": {
+      "accuracy": 0.45,
+      "total": 100
+    },
+    "length_mm": {
+      "accuracy": 0.07142857142857142,
+      "total": 98
+    },
+    "read_speed_mb_s": {
+      "accuracy": 0.35714285714285715,
+      "total": 70
+    },
+    "weight_g": {
+      "accuracy": 0.05813953488372093,
+      "total": 86
+    },
+    "title_description": {
+      "accuracy": 0.36363636363636365,
+      "total": 99
+    },
+    "chipset_name": {
+      "accuracy": 0.48,
+      "total": 25
+    },
+    "model": {
+      "accuracy": 0.45454545454545453,
+      "total": 99
+    },
+    "url": {
+      "accuracy": 0.39,
+      "total": 100
+    },
+    "model_number": {
+      "accuracy": 0.40404040404040403,
+      "total": 99
+    },
+    "storage_gb": {
+      "accuracy": 0.9866666666666667,
+      "total": 75
+    },
+    "storage_connection_type": {
+      "accuracy": 0.3888888888888889,
+      "total": 72
+    },
+    "title": {
+      "accuracy": 0.24,
+      "total": 100
+    },
+    "height_mm": {
+      "accuracy": 0.061224489795918366,
+      "total": 98
+    },
+    "form_factor": {
+      "accuracy": 0.47560975609756095,
+      "total": 82
+    },
+    "priceCurrency": {
+      "accuracy": 0.94,
+      "total": 100
+    },
+    "product_type": {
+      "accuracy": 1.0,
+      "total": 100
+    },
+    "description": {
+      "accuracy": 0.35,
+      "total": 100
+    },
+    "memory_type": {
+      "accuracy": 0.53125,
+      "total": 32
+    },
+    "interface_type": {
+      "accuracy": 0.16,
+      "total": 100
+    },
+    "color": {
+      "accuracy": 0.21875,
+      "total": 64
+    }
+  }
+}

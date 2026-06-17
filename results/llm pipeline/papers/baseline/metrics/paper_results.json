@@ -1,0 +1,74 @@
+[
+  {
+    "case": "papers",
+    "category": "schema_matching",
+    "denominator": null,
+    "item": "all_sources",
+    "metric": "f1",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": null,
+    "source_file": "DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "papers",
+    "category": "schema_matching",
+    "denominator": 31,
+    "item": "all_sources",
+    "metric": "precision",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 31,
+    "source_file": "DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "papers",
+    "category": "schema_matching",
+    "denominator": 31,
+    "item": "all_sources",
+    "metric": "recall",
+    "note": "Official schema-matching gold evaluation from manifest schema_gold.",
+    "numerator": 31,
+    "source_file": "DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json",
+    "split": "official_gold",
+    "value": 1.0
+  },
+  {
+    "case": "papers",
+    "category": "entity_matching",
+    "denominator": 4,
+    "item": "all_pairs",
+    "metric": "macro_f1",
+    "note": "Best final EM score for the configuration used, on the official held-out test set.",
+    "numerator": null,
+    "source_file": "DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv",
+    "split": "official_test",
+    "value": 0.9664558218066867
+  },
+  {
+    "case": "papers",
+    "category": "fusion",
+    "denominator": 1041,
+    "item": "best_selected_strategy",
+    "metric": "accuracy",
+    "note": "Official test_set.xml evaluation for the selected fusion strategy.",
+    "numerator": 816,
+    "source_file": "DI-Bench/runs/papers/fusion/optimization_provided_val/case_iterative__opt_provided/evaluation/eval_test.json",
+    "split": "official_test",
+    "value": 0.7838616714697406
+  },
+  {
+    "case": "papers",
+    "category": "consistency",
+    "denominator": 790477,
+    "item": "",
+    "metric": "schema_consistency_score",
+    "note": "",
+    "numerator": 693245,
+    "source_file": "DI-Bench/runs/papers/metrics/consistency.json",
+    "split": "final_output",
+    "value": 0.8769957886187707
+  }
+]

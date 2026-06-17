@@ -1,0 +1,15 @@
+Metric,Value
+Input Sources,4
+Total Input Records,"3,012"
+Fused Output Records,991
+Fusion Ratio,67.1%
+Row Gain Over Largest Source,+179
+Row Gain Percentage,+22.0%
+Merged Records,786
+Input Columns (Target Schema),27
+Fused Output Columns,28
+Average Input Data Density,57.7%
+Fused Data Density,63.8%
+Data Density Change,+6.1%
+Largest Source Density (prod1),58.3%
+Density Change vs Largest,+5.5%

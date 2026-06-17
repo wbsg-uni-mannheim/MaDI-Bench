@@ -1,0 +1,2 @@
+level,paraphrase_attempts,paraphrase_committed,mean_edit_distance,mean_token_jaccard_drop,strict_cache_miss_count,llm_unchanged_count,llm_near_identity_count
+easy,109,109,0.410943,0.609327,0,0,0

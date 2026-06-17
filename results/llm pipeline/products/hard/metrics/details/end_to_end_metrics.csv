@@ -1,0 +1,16 @@
+case,metric,value,source_file
+products-augmented-hard,input_sources,4,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,total_input_records,2365,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,fused_output_records,998,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,fusion_ratio,0.578,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,row_gain_over_largest,345,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,row_gain_percentage,52.83,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,merged_records,569,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,input_columns_target_schema,27,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,fused_output_columns,28,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,average_input_density,0.4972,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,fused_data_density,0.5568,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,data_density_change,0.0596,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,largest_source_name,products_1,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,largest_source_density,0.5186,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json
+products-augmented-hard,density_change_vs_largest,0.0383,DI-Bench/runs/augmented/products/hard/end_to_end_metrics.json

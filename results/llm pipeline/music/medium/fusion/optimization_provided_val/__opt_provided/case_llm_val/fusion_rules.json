@@ -1,0 +1,63 @@
+{
+  "attribute_rules": {
+    "artist": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "duration": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "genre": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "label": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz",
+          "lastfm"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "release-country": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "release-date": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "tracks": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    }
+  }
+}

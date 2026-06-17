@@ -1,0 +1,2 @@
+variant,case,validation_accuracy,test_accuracy,test_correct,test_total,acc_assets,acc_city,acc_country,acc_founded,acc_name,acc_revenue
+provided,llm_val__opt_provided,0.4900990099009901,0.4437984496124031,229,516,0.23255813953488372,0.26744186046511625,0.8372093023255814,0.36046511627906974,0.6744186046511628,0.29069767441860467

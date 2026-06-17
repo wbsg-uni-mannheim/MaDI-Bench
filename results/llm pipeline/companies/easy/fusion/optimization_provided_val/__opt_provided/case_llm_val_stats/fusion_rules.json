@@ -1,0 +1,73 @@
+{
+  "attribute_rules": {
+    "assets": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "city": {
+      "kwargs": {
+        "sources": [
+          "fullcontact"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "country": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "founded": {
+      "kwargs": {
+        "sources": [
+          "dbpedia"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "industry": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "keypeople": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "revenue": {
+      "kwargs": {
+        "sources": [
+          "forbes"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "website": {
+      "kwargs": {
+        "sources": [
+          "fullcontact",
+          "dbpedia"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  }
+}

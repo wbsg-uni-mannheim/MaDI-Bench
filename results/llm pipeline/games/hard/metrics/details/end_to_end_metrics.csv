@@ -1,0 +1,16 @@
+case,metric,value,source_file
+games-augmented-hard,input_sources,3,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,total_input_records,71078,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,fused_output_records,60976,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,fusion_ratio,0.1421,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,row_gain_over_largest,15618,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,row_gain_percentage,34.43,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,merged_records,8215,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,input_columns_target_schema,12,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,fused_output_columns,13,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,average_input_density,0.548,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,fused_data_density,0.5961,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,data_density_change,0.0482,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,largest_source_name,dbpedia,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,largest_source_density,0.7923,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json
+games-augmented-hard,density_change_vs_largest,-0.1961,DI-Bench/runs/augmented/games/hard/end_to_end_metrics.json

@@ -1,0 +1,13 @@
+Target Column,Dbpedia,Metacritic,Sales
+id,id,id,id
+name,name,name,name
+releaseYear,releaseYear,releaseYear,releaseYear
+developer,developer,developer,developer
+genres,genres,genres,genres
+publisher,-,-,publisher
+platform,platform,platform,platform
+criticScore,-,criticScore,criticScore
+userScore,-,userScore,userScore
+ESRB,-,ESRB,ESRB
+series,series,-,-
+Mapped,7/11,9/11,10/11

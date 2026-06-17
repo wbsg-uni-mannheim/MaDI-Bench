@@ -1,0 +1,138 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "papers",
+    "schema_path": "DI-Bench/usecases/papers/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/papers/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.8769957886187707,
+    "n_evaluated": 790477,
+    "n_consistent": 693245,
+    "n_inconsistent": 97232,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "type": {
+        "consistency_score": 1.0,
+        "n_evaluated": 83197,
+        "n_consistent": 83197,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "title": {
+        "consistency_score": 1.0,
+        "n_evaluated": 83043,
+        "n_consistent": 83043,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "authors": {
+        "consistency_score": 0.0,
+        "n_evaluated": 83184,
+        "n_consistent": 0,
+        "n_inconsistent": 83184,
+        "failure_counts": {
+          "type": 83184
+        },
+        "excluded_from_dataset_score": false
+      },
+      "publication_year": {
+        "consistency_score": 0.9999519213433177,
+        "n_evaluated": 83197,
+        "n_consistent": 83193,
+        "n_inconsistent": 4,
+        "failure_counts": {
+          "maximum": 4
+        },
+        "excluded_from_dataset_score": false
+      },
+      "journal": {
+        "consistency_score": 1.0,
+        "n_evaluated": 62773,
+        "n_consistent": 62773,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "volume": {
+        "consistency_score": 1.0,
+        "n_evaluated": 61125,
+        "n_consistent": 61125,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "issue": {
+        "consistency_score": 0.9999736245186475,
+        "n_evaluated": 37914,
+        "n_consistent": 37913,
+        "n_inconsistent": 1,
+        "failure_counts": {
+          "pattern": 1
+        },
+        "excluded_from_dataset_score": false
+      },
+      "first_page": {
+        "consistency_score": 0.9007815922999731,
+        "n_evaluated": 70753,
+        "n_consistent": 63733,
+        "n_inconsistent": 7020,
+        "failure_counts": {
+          "page_locator.numeric_range": 7008,
+          "pattern": 12
+        },
+        "excluded_from_dataset_score": false
+      },
+      "last_page": {
+        "consistency_score": 0.9007391912710415,
+        "n_evaluated": 70753,
+        "n_consistent": 63730,
+        "n_inconsistent": 7023,
+        "failure_counts": {
+          "page_locator.numeric_comparison": 2,
+          "page_locator.numeric_range": 7008,
+          "pattern": 13
+        },
+        "excluded_from_dataset_score": false
+      },
+      "referenced_works_count": {
+        "consistency_score": 1.0,
+        "n_evaluated": 77269,
+        "n_consistent": 77269,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "cited_by_count": {
+        "consistency_score": 1.0,
+        "n_evaluated": 77269,
+        "n_consistent": 77269,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [
+      "doi"
+    ],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources",
+      "abstract_text",
+      "publisher_name",
+      "topic_terms"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

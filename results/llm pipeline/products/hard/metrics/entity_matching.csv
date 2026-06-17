@@ -1,0 +1,5 @@
+case,pair,split,f1,precision,recall,source_file,note
+products-augmented-hard,products_1__products_2,official_test,0.4347826086956521,0.3125,0.7142857142857143,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products-augmented-hard,products_1__products_3,official_test,0.5225225225225225,0.3717948717948718,0.8787878787878788,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products-augmented-hard,products_1__products_4,official_test,0.5714285714285714,0.4242424242424242,0.875,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+products-augmented-hard,all_pairs,official_test,0.5095779008822486,,,DI-Bench/runs/augmented/products/hard/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

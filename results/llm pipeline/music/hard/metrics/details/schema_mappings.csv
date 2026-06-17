@@ -1,0 +1,24 @@
+case,source_dataset,source_column,target_dataset,target_column,score,notes,source_file
+music-augmented-hard,discogs,id,Music Release,id,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,rel_nm,Music Release,name,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,art_nm,Music Release,artist,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,rel_dt,Music Release,release-date,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,rel_ctry,Music Release,release-country,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,dur,Music Release,duration,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,lbl,Music Release,label,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,gnr,Music Release,genre,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,discogs,trks,Music Release,tracks,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/discogs_mapping.csv
+music-augmented-hard,lastfm,id,Music Release,id,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/lastfm_mapping.csv
+music-augmented-hard,lastfm,Attribute_2,Music Release,name,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/lastfm_mapping.csv
+music-augmented-hard,lastfm,Attribute_3,Music Release,artist,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/lastfm_mapping.csv
+music-augmented-hard,lastfm,Attribute_6,Music Release,duration,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/lastfm_mapping.csv
+music-augmented-hard,lastfm,Attribute_9,Music Release,tracks,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/lastfm_mapping.csv
+music-augmented-hard,musicbrainz,id,Music Release,id,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,t,Music Release,name,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,ar,Music Release,artist,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,rd,Music Release,release-date,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,rc,Music Release,release-country,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,du,Music Release,duration,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,lb,Music Release,label,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,g,Music Release,genre,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv
+music-augmented-hard,musicbrainz,tk,Music Release,tracks,0.95,llm_based_matching,DI-Bench/runs/augmented/music/hard/schema_matching/mappings/musicbrainz_mapping.csv

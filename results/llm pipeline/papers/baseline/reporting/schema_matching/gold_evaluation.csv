@@ -1,0 +1,5 @@
+Source,Precision,Recall,F1,Correct,Predicted,Gold,Missing
+All_Sources,1.0,1.0,1.0,31,31,31,0
+Crossref,1.0,1.0,1.0,11,11,11,0
+Dblp,1.0,1.0,1.0,9,9,9,0
+Open_Alex,1.0,1.0,1.0,11,11,11,0

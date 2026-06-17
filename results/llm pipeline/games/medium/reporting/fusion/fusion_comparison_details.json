@@ -1,0 +1,96 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "heuristic",
+    "validation_accuracy": 0.8701854493580599,
+    "test_accuracy": 0.7847309136420526,
+    "per_attribute_accuracy": {
+      "ESRB": {
+        "accuracy": 0.97,
+        "total": 100
+      },
+      "releaseYear": {
+        "accuracy": 0.88,
+        "total": 100
+      },
+      "platform": {
+        "accuracy": 0.89,
+        "total": 100
+      },
+      "developer": {
+        "accuracy": 0.68,
+        "total": 100
+      },
+      "name": {
+        "accuracy": 0.86,
+        "total": 100
+      },
+      "publisher": {
+        "accuracy": 0.3,
+        "total": 100
+      },
+      "criticScore": {
+        "accuracy": 0.92,
+        "total": 100
+      },
+      "userScore": {
+        "accuracy": 0.7777777777777778,
+        "total": 99
+      }
+    },
+    "rules": {
+      "ESRB": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "criticScore": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "developer": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "genres": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "name": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "platform": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "publisher": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "releaseYear": {
+        "resolver": "prefer_higher_trust",
+        "kwargs": {
+          "trust_key": "trust_score"
+        }
+      },
+      "series": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "units_sold_mm": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "userScore": {
+        "resolver": "median",
+        "kwargs": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+products,heuristic,none,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products,llm_no_val,none,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products,llm_val,provided,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products,llm_val_stats,provided,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products,heuristic_stats,provided,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products,iterative,provided,provided_validation,0.6470154753131908,878,1357,DI-Bench/runs/products/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

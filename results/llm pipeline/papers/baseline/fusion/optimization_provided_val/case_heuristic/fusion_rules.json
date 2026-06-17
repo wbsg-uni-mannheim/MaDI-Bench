@@ -1,0 +1,66 @@
+{
+  "attribute_rules": {
+    "abstract_text": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "authors": {
+      "kwargs": {
+        "separator": ";"
+      },
+      "resolver": "union"
+    },
+    "cited_by_count": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "first_page": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "issue": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "journal": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "last_page": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "publication_year": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "publisher_name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "referenced_works_count": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "topic_terms": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "type": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "volume": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  }
+}

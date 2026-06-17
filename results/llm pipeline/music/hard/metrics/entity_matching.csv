@@ -1,0 +1,4 @@
+case,pair,split,f1,precision,recall,source_file,note
+music-augmented-hard,discogs__musicbrainz,official_test,0.8246445497630331,0.9720670391061452,0.7160493827160493,DI-Bench/runs/augmented/music/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+music-augmented-hard,lastfm__musicbrainz,official_test,0.9357798165137616,0.9732824427480916,0.901060070671378,DI-Bench/runs/augmented/music/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+music-augmented-hard,all_pairs,official_test,0.8802121831383973,,,DI-Bench/runs/augmented/music/hard/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

@@ -1,0 +1,118 @@
+{
+  "case": "music",
+  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/music.json",
+  "pipeline_output_dir": "DI-Bench/runs/music",
+  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/music",
+  "command": [
+    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "scripts/run_pipeline.py",
+    "--manifest",
+    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/music.json",
+    "--training-set-construction",
+    "active",
+    "--fusion-case",
+    "all",
+    "--official-validation-fusion-only"
+  ],
+  "models": {
+    "schema": "gpt-5.5",
+    "labeling": "gpt-5.2",
+    "fusion": "gpt-5.5"
+  },
+  "training_set_construction": "active",
+  "active_learning_cache_only": true,
+  "official_validation_fusion_only": true,
+  "fusion_case": "all",
+  "extra_args": [],
+  "status": "success",
+  "return_code": 0,
+  "started_at_utc": "2026-06-09T16:43:03+00:00",
+  "finished_at_utc": "2026-06-09T16:47:32+00:00",
+  "wall_seconds": 269.58844145800686,
+  "wall_hms": "4m 30s",
+  "pipeline_metric_total_seconds": 257.96,
+  "pipeline_metric_total_hms": "4m 18s",
+  "metrics_csv": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/music/pipeline_metrics.csv",
+  "metrics_json": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/music/pipeline_metrics.json",
+  "pipeline_log": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/music/pipeline.log",
+  "console_log": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/music/console.log",
+  "steps": [
+    {
+      "step": "Step 2: Validation & Training",
+      "runtime_sec": "0.01",
+      "prompt_tokens": "0",
+      "completion_tokens": "0",
+      "embedding_tokens": "0",
+      "total_tokens": "0",
+      "cost_usd": "0.0",
+      "requests": "0",
+      "web_searches": "0"
+    },
+    {
+      "step": "Step 3: FAISS Candidate Generation",
+      "runtime_sec": "19.82",
+      "prompt_tokens": "1234",
+      "completion_tokens": "695",
+      "embedding_tokens": "0",
+      "total_tokens": "1929",
+      "cost_usd": "0.0",
+      "requests": "2",
+      "web_searches": "0"
+    },
+    {
+      "step": "Step 4: Active Learning Training Construction",
+      "runtime_sec": "0.01",
+      "prompt_tokens": "0",
+      "completion_tokens": "0",
+      "embedding_tokens": "0",
+      "total_tokens": "0",
+      "cost_usd": "0.0",
+      "requests": "0",
+      "web_searches": "0"
+    },
+    {
+      "step": "Step 5: Matcher Optimization",
+      "runtime_sec": "0.02",
+      "prompt_tokens": "0",
+      "completion_tokens": "0",
+      "embedding_tokens": "0",
+      "total_tokens": "0",
+      "cost_usd": "0.0",
+      "requests": "0",
+      "web_searches": "0"
+    },
+    {
+      "step": "Step 7.8: Fusion Optimization (Provided Val)",
+      "runtime_sec": "237.67",
+      "prompt_tokens": "22191",
+      "completion_tokens": "9548",
+      "embedding_tokens": "0",
+      "total_tokens": "31739",
+      "cost_usd": "0.0",
+      "requests": "5",
+      "web_searches": "0"
+    },
+    {
+      "step": "Step 7.6: End-to-End Metrics",
+      "runtime_sec": "0.42",
+      "prompt_tokens": "0",
+      "completion_tokens": "0",
+      "embedding_tokens": "0",
+      "total_tokens": "0",
+      "cost_usd": "0.0",
+      "requests": "0",
+      "web_searches": "0"
+    },
+    {
+      "step": "TOTAL",
+      "runtime_sec": "257.96",
+      "prompt_tokens": "23425",
+      "completion_tokens": "10243",
+      "embedding_tokens": "0",
+      "total_tokens": "33668",
+      "cost_usd": "0.0",
+      "requests": "7",
+      "web_searches": "0"
+    }
+  ]
+}

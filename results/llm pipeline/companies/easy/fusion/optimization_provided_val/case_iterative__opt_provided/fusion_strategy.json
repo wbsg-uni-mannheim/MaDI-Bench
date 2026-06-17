@@ -1,0 +1,22 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "assets": "favour_sources",
+    "city": "favour_sources",
+    "country": "favour_sources",
+    "founded": "earliest",
+    "industry": "favour_sources",
+    "keypeople": "union",
+    "name": "favour_sources",
+    "revenue": "favour_sources",
+    "website": "favour_sources"
+  },
+  "strategy_name": "iterative_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.07168606967683,
+    "forbes": 3.0,
+    "fullcontact": 1.0
+  }
+}

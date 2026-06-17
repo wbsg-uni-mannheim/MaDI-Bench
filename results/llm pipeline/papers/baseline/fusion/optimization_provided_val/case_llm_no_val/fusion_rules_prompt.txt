@@ -1,0 +1,154 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) The main goal is to correctly identify list-like attributes and choose a list resolver (usually 'union').
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources, random_value
+
+Starting point (heuristic plan you can override):
+{
+  "abstract_text": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "authors": {
+    "kwargs": {
+      "separator": ";"
+    },
+    "resolver": "union"
+  },
+  "cited_by_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "doi_code": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "doi_ref": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "doi_value": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "first_page": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "issue": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "journal": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "last_page": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "publication_year": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "publisher_name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "referenced_works_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "topic_terms": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "volume": {
+    "kwargs": {},
+    "resolver": "median"
+  }
+}
+
+Attribute diagnostics (to help spot list-like attributes and separators):
+             attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    sample_values
+         abstract_text           True                  ,             False             False          False            False [With the development of social networks and online mobile communities, group recommendation systems support users’ inter, To obtain information about foreign markets is a very complex task for small‐ and medium‐sized enterprises. This work’s , The vehicular communication networks, which can employ mobile, intelligent sensing devices with participatory sensing to, Quasi‐cyclic (QC) LDPC codes play an important role in 5G communications and have been chosen as the standard codes for , Cities are highly dynamic systems, whose resilience is affected by the interconnectedness between “hard” and “soft” infr, We consider several classes of intersection graphs of line segments in the plane and prove new equality and separation r, We investigate the increasingly common business setting in which companies face the possibility of both observed and uno, Human Immunodeficiency Virus (HIV) is a virus that attacks or infects cells in the immune system that causes immune decl]
+               authors           True                  ;             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [Hsuan Hsiao; Jason Helge Anderson, Mark Clark; Avinash Kodi; Razvan C. Bunescu; Ahmed Louri, Yu-Kai Chuang; Kuan-Jung Chen; Kun-Lin Lin; Shao-Yun Fang; Bing Li 0005; Ulf Schlichtmann, Duy Thanh Nguyen; Nhut-Minh Ho; Ik-Joon Chang, Kosuke Watanabe; Eunsuk Kang; Chung-Wei Lin; Shinichi Shiraishi, Xingchen Man; Leibo Liu; Jianfeng Zhu 0001; Shaojun Wei, Zihao Liu; Tao Liu 0023; Wujie Wen; Lei Jiang 0001; Jie Xu 0001; Yanzhi Wang; Gang Quan, Ilgweon Kang; Dongwon Park; Changho Han; Chung-Kuan Cheng]
+        cited_by_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [18, 14, 10, 1, 10, 9, 10, 7]
+              doi_code          False               None             False             False          False             True                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [10.5220/0006842100980105, 10.1155/2018/6709607, 10.1155/2018/8571530, 10.18653/v1/s18-1009, 10.12720/jcm.13.12.743-749, 10.18653/v1/d18-1361, 10.18653/v1/n18-1104, 10.18653/v1/w18-5421]
+               doi_ref          False               None             False             False          False             True                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [10.1145/3316781.3317924, 10.1109/DAC.2018.8465925, 10.1109/DAC.2018.8465775, 10.1145/3316781.3317915, 10.1109/DAC.2018.8465912, 10.1145/3316781.3317745, 10.1109/DAC.2018.8465809, 10.1145/3225209.3225210]
+             doi_value          False               None             False             False          False             True                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [10.1093/nar/gky1131, 10.1093/bioinformatics/bty191, 10.1093/nar/gky427, 10.1016/j.jcp.2018.10.045, 10.18653/v1/n18-1202, 10.21105/joss.00861, 10.1093/nar/gky1106, 10.1007/978-3-030-00889-5_1]
+            first_page          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+                 issue          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [3, 2, 3, 1, 1, 3, 2, 3]
+               journal          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl.]
+             last_page          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [6.0, 6.0, 6.0, 6.0, 8.0, 6.0, 6.0, 6.0]
+      publication_year          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2019, 2018, 2018, 2019, 2018, 2019, 2018, 2018]
+        publisher_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [SCITEPRESS - Science and Technology Publications, Wiley, Wiley, Association for Computational Linguistics, Engineering and Technology Publishing, Association for Computational Linguistics, Association for Computational Linguistics, Association for Computational Linguistics]
+referenced_works_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [0, 35, 60, 0, 17, 0, 0, 0]
+                 title          False               None             False             False          False            False                                                                                                                                                                                                                                                                            [Thread Weaving: Static Resource Scheduling for Multithreaded High-Level Synthesis., LEAD: learning-enabled energy-aware dynamic voltage/frequency scaling in NoCs., PlanarONoC: concurrent placement and routing considering crossing minimization for optical networks-on-chip., St-DRC: Stretchable DRAM Refresh Controller with No Parity-overhead Error Correction Scheme for Energy-efficient DNNs., Runtime monitoring for safety of intelligent vehicles., A General Pattern-Based Dynamic Compilation Framework for Coarse-Grained Reconfigurable Architectures., DeepN-JPEG: a deep neural network favorable JPEG-based image compression framework., Fast and precise routability analysis with conditional design rules.]
+           topic_terms           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [KEGG, Interaction network, Multiple sequence alignment, Homology, Partial derivative, Automatic differentiation, Physical law, Human language, Computational linguistics, Manifold (fluid mechanics), Pride, Feature (linguistics)]
+                  type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings]
+                volume          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [71, 73, 74, 74, 74, 76, 73, 72]
+
+Dataset overview (trust_score may be missing; you can still use prefer_higher_trust if it makes sense):
+[
+  {
+    "dataset_name": "dblp",
+    "rows": 60591,
+    "columns": 11,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "crossref",
+    "rows": 60749,
+    "columns": 15,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "open_alex",
+    "rows": 60719,
+    "columns": 14,
+    "trust_score": null
+  }
+]
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.

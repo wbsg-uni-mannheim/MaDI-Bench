@@ -1,0 +1,43 @@
+{
+  "best_case_key": "llm_no_val",
+  "best_case_name": "llm_no_val",
+  "best_validation_accuracy": 0.7115628970775095,
+  "best_test_accuracy": 0.7740259740259741,
+  "best_case_dir": "DI-Bench/runs/augmented/music/easy/fusion/optimization_provided_val/case_llm_no_val",
+  "rules": {
+    "artist": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "duration": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "genre": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "label": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "release-country": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "release-date": {
+      "kwargs": {},
+      "resolver": "earliest"
+    },
+    "tracks": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    }
+  }
+}

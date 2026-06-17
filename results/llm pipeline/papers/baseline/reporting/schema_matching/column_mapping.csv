@@ -1,0 +1,14 @@
+Target Column,Crossref,Dblp,Open_Alex
+id,id,id,id
+type,work_type,entry_type,work_kind
+title,title_text,publication_title,display_title
+authors,contributor_names,author_list,authors_list
+publication_year,issued_year,pub_year,year_published
+journal,container_title,venue_name,source_name
+volume,volume_id,volume_no,volume_tag
+issue,issue_id,issue_no,issue_tag
+first_page,page_first,page_start,start_page
+last_page,page_last,page_finish,end_page
+referenced_works_count,reference_total,-,refs_count
+cited_by_count,cited_total,-,citations_count
+Mapped,12/12,10/12,12/12

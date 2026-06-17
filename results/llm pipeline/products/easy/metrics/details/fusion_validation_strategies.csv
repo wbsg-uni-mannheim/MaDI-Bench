@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+products-augmented-easy,heuristic,none,provided_validation,0.4749283667621776,663,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products-augmented-easy,llm_no_val,none,provided_validation,0.5286532951289399,738,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products-augmented-easy,llm_val,provided,provided_validation,0.5322349570200573,743,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products-augmented-easy,llm_val_stats,provided,provided_validation,0.4935530085959885,689,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products-augmented-easy,heuristic_stats,provided,provided_validation,0.4770773638968481,666,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+products-augmented-easy,iterative,provided,provided_validation,0.504297994269341,704,1396,DI-Bench/runs/augmented/products/easy/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

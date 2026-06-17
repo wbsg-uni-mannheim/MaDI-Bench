@@ -1,0 +1,79 @@
+{
+  "attribute_rules": {
+    "Attribute_4": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "Attribute_5": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "Attribute_7": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "Attribute_8": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "artist": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "duration": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "genre": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "label": {
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "name": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "release-country": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "release-date": {
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "tracks": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    }
+  },
+  "main_entity": "music release / album"
+}

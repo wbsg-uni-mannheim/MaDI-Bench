@@ -1,0 +1,4 @@
+dataset_pair,num_candidates,sampled_pairs,input_tokens,output_tokens,estimated_cost_usd,estimate_mode
+Discogs-Musicbrainz,95780,10000,29412793,1436700,71.5862,sampled
+Lastfm-Musicbrainz,95780,10000,26448756,1436700,66.3991,sampled
+TOTAL,191560,20000,55861549,2873400,137.9853,sampled

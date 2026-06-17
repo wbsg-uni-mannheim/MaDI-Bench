@@ -1,0 +1,13 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+type,1.0,83197,83197,0,False,{},{},False,
+title,1.0,83043,83043,0,False,{},{},False,
+authors,0.0,83184,0,83184,False,"{""type"": 83184}",{},False,
+publication_year,0.9999519213433177,83197,83193,4,False,"{""maximum"": 4}",{},False,
+journal,1.0,62773,62773,0,False,{},{},False,
+volume,1.0,61125,61125,0,False,{},{},False,
+issue,0.9999736245186475,37914,37913,1,False,"{""pattern"": 1}",{},False,
+first_page,0.9007815922999731,70753,63733,7020,False,"{""page_locator.numeric_range"": 7008, ""pattern"": 12}",{},False,
+last_page,0.9007391912710415,70753,63730,7023,False,"{""page_locator.numeric_comparison"": 2, ""page_locator.numeric_range"": 7008, ""pattern"": 13}",{},False,
+referenced_works_count,1.0,77269,77269,0,False,{},{},False,
+cited_by_count,1.0,77269,77269,0,False,{},{},False,

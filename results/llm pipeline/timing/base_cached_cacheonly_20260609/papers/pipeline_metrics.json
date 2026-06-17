@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "name": "Step 1a: Schema Matching",
+      "runtime_seconds": 24.135653018951416,
+      "prompt_tokens": 25887,
+      "completion_tokens": 554,
+      "total_tokens": 26441,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 3,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 1b: Normalization",
+      "runtime_seconds": 0.8228442668914795,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    }
+  ]
+}

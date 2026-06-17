@@ -1,0 +1,222 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) Use the validation feedback to understand which sources tend to be correct for each attribute.
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources (use kwargs.sources=['source1']), random_value
+
+Starting point (heuristic plan you can override):
+{
+  "assets": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "city": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "country": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "founded": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "industry": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "keypeople": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "revenue": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "website": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  }
+}
+
+Attribute diagnostics:
+attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                       sample_values
+   assets           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                      [240560000000, 2270000000, 12360000000, 94510000000, 10.146.000.000,0, 41220000000, 300, 2129]
+     city           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                          [Lisbon, Mexico City, Istanbul, Istanbul, Istanbul, Istanbul, Paris, Lyon]
+  country          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                        [France, Portugal, Mexico, France, France, Iceland, United Kingdom, Czechia]
+  founded          False               None             False             False           True            False                                                                                                                                                                                                                                            [1970-01-01 00:00:00, 1993-01-01 00:00:00, 1998-01-01 00:00:00, 1997-01-01 00:00:00, 1975-01-01 00:00:00, 1923-01-01 00:00:00, 1946-01-01 00:00:00, 1994-01-01 00:00:00]
+ industry          False               None             False             False          False            False                                                                                                                                                                                                                                                                          [Food Products, Entertainment, Electric Utilities, Entertainment, Industrial Conglomerates, Publishing, Financial Services, Entertainment]
+keypeople           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                   [Marcel Paul, Merger of three predecessor banks, Adamjee Haji Dawood, Alvin Adams, David Eccles (businessman), Gene Amdahl, Jeetendra, Jeetendra]
+     name          False               None             False             False          False            False                                                                                                                                                                                                                                                                    [À la Table de Spanghero, �?guas de Portugal, �?nima Estudios, Çalık Enerji, Çalık Holding, Çukurova (construction firm), Çukurova Holding, EDF]
+  revenue           True                  ,             False              True          False            False                                                                                                                                                                                                                                                                                                                            [65170000000, 79680000, 187210000, 6041000000, 31700000000, 279, 968000000, 15300000000]
+  website          False               None             False             False          False            False [http://www.forbes.com/companies/icbc/, http://www.forbes.com/companies/china-construction-bank/, http://www.forbes.com/companies/agricultural-bank-of-china/, http://www.forbes.com/companies/jpmorgan-chase/, http://www.forbes.com/companies/berkshire-hathaway/, http://www.forbes.com/companies/exxon-mobil/, http://www.forbes.com/companies/general-electric/, http://www.forbes.com/companies/wells-fargo/]
+
+Dataset overview:
+[
+  {
+    "dataset_name": "dbpedia",
+    "rows": 10075,
+    "columns": 9,
+    "trust_score": 1.0
+  },
+  {
+    "dataset_name": "forbes",
+    "rows": 2205,
+    "columns": 7,
+    "trust_score": 3.0
+  },
+  {
+    "dataset_name": "fullcontact",
+    "rows": 2052,
+    "columns": 6,
+    "trust_score": 1.1748539534979303
+  }
+]
+
+VALIDATION FEEDBACK:
+(Showing which source values were correct for sample entities)
+
+Attribute "assets":
+  - Sources: forbes=35, dbpedia=39900000000
+    → Correct: 39900000000
+  - Sources: forbes=162800000000
+    → Correct: 162800000000
+  - Sources: forbes=8800000000
+    → Correct: 8800000000
+  - Sources: forbes=31200000000, dbpedia=64
+    → Correct: 31200000000
+  - Sources: forbes=2117700000000
+    → Correct: 2117699999999
+
+Attribute "city":
+  - Sources: dbpedia=Quebec City
+    → Correct: Cleveland
+  - Sources: dbpedia=Castlereagh Street, SydneySydney
+    → Correct: Bergen
+  - Sources: fullcontact=Paris
+    → Correct: Paris
+  - Sources: dbpedia=London
+    → Correct: Newark
+  - Sources: dbpedia=GuangdongShenzhen
+    → Correct: Los Angeles
+
+Attribute "country":
+  - Sources: forbes=Canada, dbpedia=Canada
+    → Correct: Canada
+  - Sources: forbes=France
+    → Correct: France
+  - Sources: forbes=Australia, dbpedia=Australia
+    → Correct: Australia
+  - Sources: fullcontact=France, forbes=France
+    → Correct: France
+  - Sources: forbes=Netherlands
+    → Correct: Netherlands
+
+Attribute "founded":
+  - Sources: dbpedia=1892-01-01 00:00:00
+    → Correct: 1892-01-01 00:00:00
+  - Sources: dbpedia=1960-01-01 00:00:00
+    → Correct: 1935-01-01 00:00:00
+  - Sources: fullcontact=1885-01-01 00:00:00
+    → Correct: 1885-01-01 00:00:00
+  - Sources: dbpedia=1848-01-01 00:00:00
+    → Correct: 1848-01-01 00:00:00
+  - Sources: dbpedia=1995-01-01 00:00:00
+    → Correct: 1995-01-01 00:00:00
+
+Attribute "name":
+  - Sources: forbes=Industrial Alliance Insurance, dbpedia=Industrial Alliance
+    → Correct: Industrial Alliance Insurance
+  - Sources: forbes=Deutsche Telekom AG
+    → Correct: Deutsche Telekom
+  - Sources: forbes=Eutelsat Communications
+    → Correct: Eutelsat Communications
+  - Sources: forbes=Westfield Group, dbpedia=Westfield Group
+    → Correct: Westfield Group
+  - Sources: fullcontact=Crédit Agricole, forbes=Credit Agricole
+    → Correct: Credit Agricole
+
+Attribute "revenue":
+  - Sources: forbes=6, dbpedia=3
+    → Correct: 6300000000
+  - Sources: forbes=79
+    → Correct: 79800000000
+  - Sources: forbes=1
+    → Correct: 1700000000
+  - Sources: forbes=2, dbpedia=4
+    → Correct: 2300000000
+  - Sources: forbes=65
+    → Correct: 65300000000
+
+
+
+SOURCE ACCURACY STATISTICS (from validation set):
+
+Attribute "assets":
+  - dbpedia: 40% correct (10/25 values)
+  - forbes: 91% correct (91/100 values)
+
+Attribute "city":
+  - dbpedia: 34% correct (14/41 values)
+  - fullcontact: 48% correct (10/21 values)
+
+Attribute "country":
+  - dbpedia: 100% correct (40/40 values)
+  - forbes: 86% correct (69/80 values)
+  - fullcontact: 100% correct (20/20 values)
+
+Attribute "founded":
+  - dbpedia: 74% correct (28/38 values)
+  - fullcontact: 73% correct (11/15 values)
+
+Attribute "name":
+  - dbpedia: 63% correct (26/41 values)
+  - forbes: 89% correct (89/100 values)
+  - fullcontact: 65% correct (15/23 values)
+
+Attribute "revenue":
+  - dbpedia: 39% correct (13/33 values)
+  - forbes: 0% correct (0/100 values)
+
+RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
+consider using 'favour_sources' to prefer that source's values.
+
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.
+- For attributes where validation shows one source is consistently correct, consider using favour_sources.

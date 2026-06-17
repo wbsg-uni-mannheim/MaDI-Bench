@@ -1,0 +1,69 @@
+{
+  "best_case_key": "llm_no_val",
+  "best_case_name": "llm_no_val",
+  "best_validation_accuracy": 0.6660761736049602,
+  "best_test_accuracy": 0.6464135021097046,
+  "best_case_dir": "DI-Bench/runs/augmented/papers/easy/fusion/optimization_provided_val/case_llm_no_val",
+  "rules": {
+    "abstract_text": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "authors": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "cited_by_count": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "first_page": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "issue": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "journal": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "keywords": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "last_page": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "publication_year": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "publisher": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "referenced_works_count": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "volume": {
+      "kwargs": {},
+      "resolver": "voting"
+    }
+  }
+}

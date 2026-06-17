@@ -1,0 +1,61 @@
+{
+  "case_name": "heuristic",
+  "rules": {
+    "Attribute_4": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_5": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_7": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "Attribute_8": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "artist": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "duration": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "genre": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "label": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "name": {
+      "resolver": "longest_string",
+      "kwargs": {}
+    },
+    "release-country": {
+      "resolver": "most_complete",
+      "kwargs": {}
+    },
+    "release-date": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
+    },
+    "tracks": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": null,
+  "iterations_used": 1,
+  "optimization_mode": null
+}

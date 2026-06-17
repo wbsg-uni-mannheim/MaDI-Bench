@@ -1,0 +1,162 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) The main goal is to correctly identify list-like attributes and choose a list resolver (usually 'union').
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources, random_value
+
+Starting point (heuristic plan you can override):
+{
+  "abstract_text": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "authors": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "cited_by_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "do": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "first_page": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "issue": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "journal": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "keywords": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "kwd": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "kwds": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "last_page": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "pbl": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "pub": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "publication_year": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "publisher": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "referenced_works_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "volume": {
+    "kwargs": {},
+    "resolver": "median"
+  }
+}
+
+Attribute diagnostics (to help spot list-like attributes and separators):
+             attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    sample_values
+         abstract_text           True                  ,             False             False          False            False [With the development of social networks and online mobile communities, group recommendation systems support users’ inter, To obtain information about foreign markets is a very complex task for small‐ and medium‐sized enterprises. This work’s , The vehicular communication networks, which can employ mobile, intelligent sensing devices with participatory sensing to, Quasi‐cyclic (QC) LDPC codes play an important role in 5G communications and have been chosen as the standard codes for , Cities are highly dynamic systems, whose resilience is affected by the interconnectedness between “hard” and “soft” infr, We consider several classes of intersection graphs of line segments in the plane and prove new equality and separation r, We investigate the increasingly common business setting in which companies face the possibility of both observed and uno, Human Immunodeficiency Virus (HIV) is a virus that attacks or infects cells in the immune system that causes immune decl]
+               authors           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                        [['Hsuan Hsiao', 'Jason Helge Anderson'], ['Mark Clark', 'Avinash Kodi', 'Razvan C. Bunescu', 'Ahmed Louri'], ['Yu-Kai Chuang', 'Kuan-Jung Chen', 'Kun-Lin Lin', 'Shao-Yun Fang', 'Bing Li 0005', 'Ulf Schlichtmann'], ['Duy Thanh Nguyen', 'Nhut-Minh Ho', 'Ik-Joon Chang'], Xingchen Man, Leibo Liu, Jianfeng Zhu 0001, and Shaojun Wei, ['Zihao Liu', 'Tao Liu 0023', 'Wujie Wen', 'Lei Jiang 0001', 'Jie Xu 0001', 'Yanzhi Wang', 'Gang Quan'], ['Fan Yang', 'Youyou Lu', 'Youmin Chen', 'Haiyu Mao', 'Jiwu Shu'], ['Jae-San Kim', 'Joon-Sung Yang']]
+        cited_by_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [3.0, 2.0, 2.0, 2.0, 2.0, 3.0, 4.0, 3.0]
+                    do          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [10.1093/nar/gky1131, 10.1093/bioinformatics/bty191, 10.1093/nar/gky427, 10.1016/j.jcp.2018.10.045, 10.18653/v1/n18-1202, 10.21105/joss.00861, 10.1093/nar/gky1106, 10.1007/978-3-030-00889-5_1]
+            first_page          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+                 issue          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [1, 3, 2, 3, 2, 1, 3, 1]
+               journal          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl.]
+              keywords           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                   [Speculative ecology, River folklore, Acoustic cartography, Maritime folklore, coastal trade records, speculative cartography, civic ritual, archival studies, Imaginary geography, archival fiction, cartographic poetics, lunar ecology, invented archives, ambient seascape, archival synthesis, tide notation, Maritime folklore, oral history, ritual objects, island communities, Bioluminescence, Cave Ecology, Imaginary Fauna, coastal folklore, tidal ecology, lighthouse heritage, oral history, Urban hydrology, community soundscapes, pollinator corridors, rooftop agriculture]
+                   kwd           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [KEGG, Interaction network, Multiple sequence alignment, Homology, Partial derivative, Automatic differentiation, Physical law, Human language, Computational linguistics, Manifold (fluid mechanics), Pride, Feature (linguistics)]
+                  kwds           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                   [Speculative ecology, River folklore, Acoustic cartography, Maritime folklore, coastal trade records, speculative cartography, civic ritual, archival studies, Imaginary geography, archival fiction, cartographic poetics, lunar ecology, invented archives, ambient seascape, archival synthesis, tide notation, Maritime folklore, oral history, ritual objects, island communities, Bioluminescence, Cave Ecology, Imaginary Fauna, coastal folklore, tidal ecology, lighthouse heritage, oral history, Urban hydrology, community soundscapes, pollinator corridors, rooftop agriculture]
+             last_page          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0]
+                   pbl          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [Velvet Lantern Press, Harborlight Press, Lumen Atlas Press, Northwind Academic Press, Northgate Press Folio, Northbridge Academic Press, Northwind Academic Press, Press Merriton]
+                   pub          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [Velvet Lantern Press, Harborlight Press, Lumen Atlas Press, Northwind Academic Press, Northgate Folio Press, Northbridge Academic Press, Northwind Academic Press, Merriton Press]
+      publication_year          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2019, 2018, 2018, 2019, 2018, 2019, 2018, 2018]
+             publisher          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [SCITEPRESS - Science and Technology Publications, Wi1ey, Wiley, Association for Computational Linguistics, Engineering and Technology Publishing, Association for Computational Linguistics, Association for Computational Linguistics, Association for Computational Linguistics]
+referenced_works_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [12, 19, 14, 14, 7, 12, 18, 24]
+                 title          False               None             False             False          False            False                                                                                                                                                                                                                                                                            [Thread Weaving: Static Resource Scheduling for Multithreaded High-Level Synthesis., LEAD: learning-enabled energy-aware dynamic voltage/frequency scaling in NoCs., PlanarONoC: concurrent placement and routing considering crossing minimization for optical networks-on-chip., St-DRC: Stretchable DRAM Refresh Controller with No Parity-overhead Error Correction Scheme for Energy-efficient DNNs., Runtime monitoring for safety of intelligent vehicles., A General Pattern-Based Dynamic Compilation Framework for Coarse-Grained Reconfigurable Architectures., DeepN-JPEG: a deep neural network favorable JPEG-based image compression framework., Fast and precise routability analysis with conditional design rules.]
+                  type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings]
+                volume          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [71, 73, 76, 72, 76, 71, 76, 70]
+
+Dataset overview (trust_score may be missing; you can still use prefer_higher_trust if it makes sense):
+[
+  {
+    "dataset_name": "dblp",
+    "rows": 60595,
+    "columns": 14,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "crossref",
+    "rows": 60749,
+    "columns": 15,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "open_alex",
+    "rows": 60723,
+    "columns": 15,
+    "trust_score": null
+  }
+]
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.

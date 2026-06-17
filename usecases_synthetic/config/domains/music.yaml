@@ -1,0 +1,66 @@
+domain: music
+master_seed: 42
+
+# Source CSVs are in raw WDC form: the entity id lives in a source-specific
+# column (musicbrainz=Attribute_1, discogs=rec_uid, lastfm=item_code), already
+# carrying the EM-gold prefix (``mbrainz_<n>`` / ``discogs_<n>`` / ``lastFM_<n>``).
+# The loader renames each declared ``id_column`` -> ``id`` so downstream code
+# keeps its ``id_column="id"`` assumption; the EM/Fusion committee
+# ``column_mapping`` blocks rename the remaining raw columns onto the canonical
+# schema (name/artist/release-date/release-country/duration/label/genre/tracks).
+# (The earlier "ships with a native id column" note was stale — the 2026-06-03
+# header rewrite put raw Attribute_N/rec_uid/item_code headers on disk.)
+# Pre-refresh XML/JSON/CSV sources are preserved at usecases/music/input/data/old/.
+sources:
+  - name: musicbrainz
+    file: musicbrainz.csv
+    format: csv
+    id_prefix: "mbrainz_"
+    id_column: Attribute_1
+  - name: discogs
+    file: discogs.csv
+    format: csv
+    id_prefix: "discogs_"
+    id_column: rec_uid
+  - name: lastfm
+    file: lastfm.csv
+    format: csv
+    id_prefix: "lastFM_"
+    id_column: item_code
+
+source_pairs:
+  - [musicbrainz, discogs]
+  - [musicbrainz, lastfm]
+
+# Fusion val/test split. The workflow notebook (and downstream pipeline)
+# now reads the larger 200-entity sets shipped at *_set_final.xml; the
+# smaller 50-line legacy files are retained on disk but no longer
+# canonical. Music's R3 pool + R5 fusion sign-off were run against the
+# larger set under its previous local filename; this entry makes the
+# resolution explicit after the upstream rename.
+fusion_files:
+  validation: validation_set_final.xml
+  test: test_set_final.xml
+
+# Canonical attributes drawn from input/schemamatching/target_schema.json
+# (release schema). ``name`` is the release title (primary). ``artist``,
+# ``release-country``, and ``genre`` are key partitioning attributes:
+# artist + name together identify a release, release-country is a
+# coarse categorical for K10 reliability routing, genre is a discrete
+# attribute that partitions the search space for K2 niche density.
+# ``release-date``, ``duration``, and ``label`` are secondary. The
+# pre-refresh canonical schema also surfaced ``tracks_track_name`` /
+# ``tracks_track_duration`` / ``tracks_track_position`` (XML aggregator
+# output); the refreshed CSVs collapse the tracklist into a single
+# ``tracks`` column. The aggregated track fields will be revisited in
+# the R5 committee review; they are intentionally omitted from
+# attribute_classes here so knobs do not target a column that no longer
+# exists post-refresh.
+attribute_classes:
+  name: primary
+  artist: key
+  release-country: key
+  genre: key
+  release-date: secondary
+  duration: secondary
+  label: secondary

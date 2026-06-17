@@ -1,0 +1,101 @@
+entity_id,source_ids,name,country,city,assets,revenue,founded
+entity_0,"http://www.forbes.com/companies/industrial-alliance-insurance/, http://dbpedia.org/resource/Industrial_Alliance",Industrial Alliance Insurance,Canada,Cleveland,39900000000,6300000000,1892-01-01
+entity_1,http://www.forbes.com/companies/deutsche-telekom/,Deutsche Telekom,,,162800000000,79800000000,
+entity_10,"http://dbpedia.org/resource/Schlumberger, http://www.forbes.com/companies/schlumberger/",Schlumberger,United States,London,67099999999,45400000000,1926-01-01
+entity_11,http://www.forbes.com/companies/shoprite-holdings/,Shoprite Holdings,South Africa,,3800000000,10100000000,
+entity_12,http://www.forbes.com/companies/bayer/,Bayer,,,70700000000,53300000000,
+entity_13,"fullcontact_486, http://www.forbes.com/companies/manpower/, http://dbpedia.org/resource/Manpower_Inc.",Manpower,United States,Milwaukee,7300000000,20200000000,1948-01-01
+entity_14,http://www.forbes.com/companies/level-3-communications/,Level 3 Communications,United States,,12900000000,6300000000,
+entity_15,http://www.forbes.com/companies/crown-resorts/,Crown Resorts,Australia,,5800000000,2800000000,
+entity_16,"fullcontact_719, http://www.forbes.com/companies/tdc/",TDC,Denmark,København C,11200000000,4400000000,1882-01-01
+entity_17,"http://www.forbes.com/companies/smiths-group/, http://dbpedia.org/resource/Smiths_Group",Smiths Group,United Kingdom,Newcastle upon Tyne,5800000000,4800000000,1831-01-01
+entity_18,http://www.forbes.com/companies/banca-popolare-di-milano/,Banca Popolare di Milano,Italy,,68000000000,2900000000,
+entity_19,"http://www.forbes.com/companies/china-communications-services/, http://dbpedia.org/resource/China_Communications_Services_Corporation",China Communications Services,China,Emery,8000000000,11100000000,2006-01-01
+entity_2,http://www.forbes.com/companies/eutelsat-communications/,Eutelsat Communications,France,,8800000000,1700000000,
+entity_20,http://www.forbes.com/companies/bank-muscat/,Bank Muscat,,,22000000000,1100000000,
+entity_21,http://www.forbes.com/companies/nabors-industries/,Nabors Industries,Bermuda,,12200000000,6200000000,
+entity_22,"http://dbpedia.org/resource/Qualcomm, http://www.forbes.com/companies/qualcomm/",Qualcomm,United States,San Diego,46300000000,25500000000,1985-01-01
+entity_23,"fullcontact_261, http://www.forbes.com/companies/dicks-sporting-goods/",Dick's Sporting Goods,United States,Binghamton,3100000000,6200000000,1948-01-01
+entity_24,"http://dbpedia.org/resource/Herbalife, http://www.forbes.com/companies/herbalife/",Herbalife,United States,Gurgaon,2500000000,4800000000,1980-01-01
+entity_25,"http://dbpedia.org/resource/Chang_Hwa_Bank, http://www.forbes.com/companies/chang-hwa-bank/",Chang Hwa Bank,"Taiwan, Province of China",Taichung,56670000000,860000000,1905-01-01
+entity_26,"http://www.forbes.com/companies/aurubis/, http://dbpedia.org/resource/Aurubis",Aurubis,Germany,Hamburg,5600000000,15580000000,1866-01-01
+entity_27,"http://www.forbes.com/companies/astrazeneca/, fullcontact_114",AstraZeneca,United Kingdom,London,55900000000,25710000000,
+entity_28,"http://www.forbes.com/companies/accor/, fullcontact_50",Accor,France,Paris,9670000000,7490000000,
+entity_29,"fullcontact_790, http://dbpedia.org/resource/Verisign, http://www.forbes.com/companies/verisign/",VeriSign,United States,"Reston, Virginia",2660000000,970000000,1995-01-01
+entity_3,"http://www.forbes.com/companies/westfield-group/, http://dbpedia.org/resource/Westfield_Group",Westfield Group,Australia,Bergen,31200000000,2300000000,1935-01-01
+entity_30,http://www.forbes.com/companies/grupo-carso/,Grupo Carso,Mexico,,6920000000,6670000000,
+entity_31,"http://www.forbes.com/companies/lyondellbasell-industries/, fullcontact_485",LyondellBasell,Netherlands,"Houston, Texas",27300000000,44060000000,
+entity_32,http://www.forbes.com/companies/hyundai-hysco/,Hyundai EP,"Korea, Republic of",,518807356,870496776,
+entity_33,http://www.forbes.com/companies/toyota-boshoku/,Toyota Boshoku,Japan,,6090000000,11790000000,
+entity_34,"http://www.forbes.com/companies/nec/, http://dbpedia.org/resource/NEC",NEC,Japan,"Minato, Tokyo",24220000000,30230000000,1899-01-01
+entity_35,"http://www.forbes.com/companies/kone/, http://dbpedia.org/resource/Kone",Kone,Finland,Espoo,7380000000,9240000000,1910-01-01
+entity_36,http://www.forbes.com/companies/rwe-group/,RWE Group,,,112390000000,67220000000,
+entity_37,http://www.forbes.com/companies/boeing/,Boeing,United States,,92660000000,86620000000,
+entity_38,"http://dbpedia.org/resource/Petrobras, http://www.forbes.com/companies/petrobras/",Petrobras,Brazil,Rio de Janeiro,321420000000,141460000000,1953-01-01
+entity_39,"http://www.forbes.com/companies/sandisk/, http://dbpedia.org/resource/SanDisk, fullcontact_642",SanDisk,United States,"Milpitas, California",10490000000,6170000000,1988-01-01
+entity_4,"fullcontact_238, http://www.forbes.com/companies/credit-agricole/",Credit Agricole,France,Paris,2117699999999,65300000000,1885-01-01
+entity_40,"http://www.forbes.com/companies/juniper-networks/, fullcontact_447",Juniper Networks,United States,"Sunnyvale, California",10330000000,4670000000,1996-01-01
+entity_41,http://www.forbes.com/companies/amp/,AMP,Australia,,18440000000,13470000000,
+entity_42,"http://dbpedia.org/resource/Krung_Thai_Bank, http://www.forbes.com/companies/krung-thai-bank/",Krung Thai Bank,Thailand,Bangkok,77830000000,2960000000,1966-01-01
+entity_43,http://www.forbes.com/companies/lkq/,LKQ,United States,,4520000000,5060000000,
+entity_44,http://www.forbes.com/companies/continental-resources/,Continental Resources,United States,,24540015360,3460000000,
+entity_45,"http://www.forbes.com/companies/bp/, http://dbpedia.org/resource/BP",BP,United Kingdom,London,305690000000,379140000000,1901-01-01
+entity_46,"http://www.forbes.com/companies/western-digital/, http://dbpedia.org/resource/Western_Digital",Western Digital,United States,California,15280000000,15270000000,1970-01-01
+entity_47,http://www.forbes.com/companies/metro-group/,Metro Group,,,5873000000,473736370,
+entity_48,"http://dbpedia.org/resource/Mitsubishi_UFJ_NICOS, http://www.forbes.com/companies/mitsubishi-ufj-financial/",Mitsubishi UFJ Financial,Japan,Tokyo,2837434000000,55573000000,2005-01-01
+entity_49,"fullcontact_467, http://www.forbes.com/companies/kroger/",Kroger,United States,"Cincinnati, Ohio",25480000000,98260000000,
+entity_5,http://www.forbes.com/companies/randstad-holding/,Randstad Holding,Netherlands,,9100000000,22000000000,
+entity_50,http://www.forbes.com/companies/iberdrola/,Iberdrola,,,124000000000,42450000000,
+entity_51,http://www.forbes.com/companies/bharat-petroleum/,Bharat Petroleum,India,,14654103384,43615731908,
+entity_52,http://www.forbes.com/companies/cit-group/,CIT Group,United States,,47139000000,2390000000,
+entity_53,http://www.forbes.com/companies/fresenius/,Fresenius,,,45240000000,27040000000,
+entity_54,http://www.forbes.com/companies/pandora/,Pandora,Denmark,,1720000000,1610000000,
+entity_55,"fullcontact_702, http://www.forbes.com/companies/steinhoff-international/",Steinhoff International,Germany,Stellenbosch,11428000000,6800000000,1964-01-01
+entity_56,http://www.forbes.com/companies/hoya/,Hoya,Japan,,6530000000,4340000000,
+entity_57,"http://www.forbes.com/companies/dish-network/, http://dbpedia.org/resource/Dish_Network",DISH Network,United States,"Meridian, Colorado",20360000000,13510000000,1980-01-01
+entity_58,"http://dbpedia.org/resource/Michelin, http://www.forbes.com/companies/michelin-group/",Michelin Group,France,Clermont-Ferrand,28560000000,27960000000,1889-01-01
+entity_59,"http://www.forbes.com/companies/oracle/, fullcontact_561",Oracle,United States,,85240000000,37550000000,1997-01-01
+entity_6,"http://www.forbes.com/companies/prudential/, http://dbpedia.org/resource/Prudential_plc",Prudential,United Kingdom,Newark,528500000000,81900000000,1848-01-01
+entity_60,http://www.forbes.com/companies/shimano/,Shimano,Japan,,3040000000,2730000000,
+entity_61,"http://www.forbes.com/companies/linde/, http://dbpedia.org/resource/The_Linde_Group",Linde,Germany,Dublin,20260000000,11930000000,
+entity_62,http://www.forbes.com/companies/rural-electrification/,Rural Electrification,India,,21084590529,2203108389,
+entity_63,"http://dbpedia.org/resource/Costco, fullcontact_235, http://www.forbes.com/companies/costco-wholesale/",Costco Wholesale,United States,"Issaquah, Washington",32320000000,106460000000,1983-01-01
+entity_64,http://www.forbes.com/companies/kellogg/,Kellogg,United States,,15470000000,14790000000,
+entity_65,http://www.forbes.com/companies/kuwait-projects/,Kuwait Projects,Kuwait,,30690000000,860000000,
+entity_66,"http://dbpedia.org/resource/Amphenol, http://www.forbes.com/companies/amphenol/",Amphenol,United States,"Wallingford, Connecticut",6170000000,4610000000,1932-01-01
+entity_67,"http://dbpedia.org/resource/Shiseido, fullcontact_1943, http://www.forbes.com/companies/shiseido/",Shiseido,Japan,Tokyo,7030000000,7360000000,1872-01-01
+entity_68,"http://www.forbes.com/companies/mapfre/, http://dbpedia.org/resource/Mapfre",Mapfre,Spain,Majadahonda,78480000000,28290000000,1933-01-01
+entity_69,"http://www.forbes.com/companies/iliad/, http://dbpedia.org/resource/Iliad_(company)",Iliad,France,Paris,4776300000,3747900000,1999-01-01
+entity_7,"http://www.forbes.com/companies/byd/, http://dbpedia.org/resource/BYD_Company",BYD,China,Los Angeles,12900000000,8400000000,1995-01-01
+entity_70,"http://www.forbes.com/companies/baywa/, http://dbpedia.org/resource/BayWa",BayWa,Germany,Munich,6930000000,21340000000,1923-01-01
+entity_71,"fullcontact_46, http://www.forbes.com/companies/aberdeen-asset-management/",Aberdeen Asset Management,United Kingdom,Aberdeen,1687852500,2100000000,1983-01-01
+entity_72,"http://dbpedia.org/resource/Vivendi, http://www.forbes.com/companies/vivendi/",Vivendi,France,Paris,67920000000,18920000000,
+entity_73,http://www.forbes.com/companies/wistron/,Wistron,,,9020000000,21290000000,
+entity_74,"http://dbpedia.org/resource/Renault_Sport, fullcontact_17, http://www.forbes.com/companies/renault/",Renault,France,Boulogne Billancourt,103560000000,56530000000,1899-01-01
+entity_75,"http://www.forbes.com/companies/sumitomo-mitsui-trust/, http://dbpedia.org/resource/Sumitomo_Mitsui_Trust_Holdings",Sumitomo Mitsui Trust,Japan,Tokyo,401210000000,10040000000,2002-01-01
+entity_76,http://www.forbes.com/companies/galaxy-entertainment/,Galaxy Entertainment,,,5970000000,8520000000,
+entity_77,"http://dbpedia.org/resource/Thales_Group, http://www.forbes.com/companies/thales/",Thales Group,France,Paris,25760000000,17540000000,2000-01-01
+entity_78,"http://dbpedia.org/resource/Areva, http://www.forbes.com/companies/areva/, fullcontact_106",Areva,France,Paris,44207184000,12729024000,2001-01-01
+entity_79,http://www.forbes.com/companies/davita/,DaVita,United States,,17100000000,11760000000,
+entity_8,http://www.forbes.com/companies/dongbu-insurance/,Dongbu Insurance,,,28300000000,11100000000,
+entity_80,http://www.forbes.com/companies/empire/,Empire,Canada,,9810000000,18340000000,
+entity_81,"fullcontact_802, http://www.forbes.com/companies/volkswagen-group/, http://dbpedia.org/resource/Volkswagen_Group",Volkswagen Group,Germany,Wolfsburg,447910000000,261910000000,1937-01-01
+entity_82,"http://www.forbes.com/companies/salzgitter/, fullcontact_640",Salzgitter,,,11390000000,12300000000,
+entity_83,http://www.forbes.com/companies/orix/,Orix,Japan,,85660000000,9000000000,
+entity_84,http://www.forbes.com/companies/ugi/,UGI,,,10660000000,7500000000,
+entity_85,http://www.forbes.com/companies/mtr/,MTR,Hong Kong,,27830000000,4990000000,
+entity_86,http://www.forbes.com/companies/konica-minolta/,Konica Minolta,Japan,,9510000000,9270000000,
+entity_87,http://www.forbes.com/companies/edp-energias-de-portugal/,EDP-Energias de Portugal,Portugal,,58090000000,21530000000,
+entity_88,"http://www.forbes.com/companies/tenaris/, http://dbpedia.org/resource/Tenaris",Tenaris,Luxembourg,Luxembourg (city),15930000000,10600000000,2001-01-01
+entity_89,http://www.forbes.com/companies/wendel/,Wendel,France,,18950000000,7560000000,
+entity_9,http://www.forbes.com/companies/yamaha-motor/,Yamaha Motor,Japan,,10900000000,14400000000,
+entity_90,"http://dbpedia.org/resource/Coloplast, http://www.forbes.com/companies/coloplast/, fullcontact_224",Coloplast,Denmark,Humlebæk,1560000000,2110000000,1957-01-01
+entity_91,"http://www.forbes.com/companies/prudential-financial/, fullcontact_1322",Prudential Financial,United States,"Newark, New Jersey",731780000000,41410000000,1875-01-01
+entity_92,http://www.forbes.com/companies/hermes-international/,Hermès International,France,,5440000000,5190000000,
+entity_93,"http://www.forbes.com/companies/zijin-mining-group/, http://dbpedia.org/resource/Zijin_Mining",Zijin Mining Group,China,"Shanghang, Longyan, Fujian",11050000000,8130000000,
+entity_94,"http://dbpedia.org/resource/China_Mobile, http://www.forbes.com/companies/china-mobile/",China Mobile,China,Beijing,192900000000,102500000000,1997-01-01
+entity_95,http://www.forbes.com/companies/toshiba/,Toshiba,Japan,,61700000000,63690000000,
+entity_96,http://www.forbes.com/companies/lafarge/,Lafarge,France,,51074520000,20936764800,
+entity_97,http://www.forbes.com/companies/panasonic/,Panasonic,Japan,,52190000000,76050000000,
+entity_98,"fullcontact_1541, http://www.forbes.com/companies/exelon/, http://dbpedia.org/resource/Exelon",Exelon,United States,Chicago,79920000000,24890000000,2000-01-01
+entity_99,http://www.forbes.com/companies/liberty-global/,Liberty Global,United Kingdom,,67710000000,14180000000,

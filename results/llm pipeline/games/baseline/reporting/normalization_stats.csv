@@ -1,0 +1,6 @@
+dataset,llm_columns,llm_normalized,llm_total,builtin_columns,builtin_normalized,builtin_total
+dbpedia,1,38853,46170,2,84024,91341
+metacritic,2,38712,38712,3,59204,59206
+sales,1,7877,7877,3,23631,23631
+test_set,1,100,100,0,0,0
+TOTAL,5,85542,92859,8,166859,174178

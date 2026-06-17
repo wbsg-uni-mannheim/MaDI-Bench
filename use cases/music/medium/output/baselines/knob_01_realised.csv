@@ -1,0 +1,2 @@
+level,paraphrase_attempts,paraphrase_committed,mean_edit_distance,mean_token_jaccard_drop,strict_cache_miss_count,llm_unchanged_count,llm_near_identity_count
+medium,15882,5400,0.345275,0.431836,0,1524,66

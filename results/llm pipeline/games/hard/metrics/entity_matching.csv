@@ -1,0 +1,3 @@
+case,pair,split,f1,precision,recall,source_file,note
+games-augmented-hard,dbpedia__sales,official_test,0.8203125000000001,0.75,0.9051724137931034,DI-Bench/runs/augmented/games/hard/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+games-augmented-hard,all_pairs,official_test,0.8203125000000001,,,DI-Bench/runs/augmented/games/hard/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

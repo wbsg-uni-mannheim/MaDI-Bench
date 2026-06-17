@@ -1,0 +1,3 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+dbpedia,metacritic,dbpedia__metacritic,MLBasedMatcher,0.6,0.5630252100840336,0.5075757575757576,0.6320754716981132,337,106,231,DI-Bench/usecases/games/input/entitymatching/dbpedia_2_metacritic_test.csv
+dbpedia,sales,dbpedia__sales,MLBasedMatcher,0.6,0.7,0.6319444444444444,0.7844827586206896,402,116,286,DI-Bench/usecases/games/input/entitymatching/dbpedia_2_sales_test.csv

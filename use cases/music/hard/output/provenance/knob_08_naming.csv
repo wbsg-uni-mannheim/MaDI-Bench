@@ -1,0 +1,25 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+,discogs,name,name,rel_nm,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,artist,artist,art_nm,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,release-date,release-date,rel_dt,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,release-country,release-country,rel_ctry,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,duration,duration,dur,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,label,label,lbl,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,genre,genre,gnr,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,discogs,tracks,tracks,trks,rename_abbreviated,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,name,name,Attribute_2,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,artist,artist,Attribute_3,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,release-date,release-date,Attribute_4,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,release-country,release-country,Attribute_5,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,duration,duration,Attribute_6,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,label,label,Attribute_7,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,genre,genre,Attribute_8,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,lastfm,tracks,tracks,Attribute_9,rename_anonymize,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,name,name,t,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,artist,artist,ar,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,release-date,release-date,rd,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,release-country,release-country,rc,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,duration,duration,du,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,label,label,lb,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,genre,genre,g,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
+,musicbrainz,tracks,tracks,tk,rename_cryptic,"{""baseline_rung"": ""descriptive"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard

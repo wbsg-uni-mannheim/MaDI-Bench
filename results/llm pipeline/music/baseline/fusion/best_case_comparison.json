@@ -1,0 +1,49 @@
+{
+  "auto_generated": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_no_val",
+    "validation_accuracy": 0.735,
+    "test_accuracy": 0.8766233766233766,
+    "rules": {
+      "artist": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "duration": {
+        "kwargs": {},
+        "resolver": "maximum"
+      },
+      "genre": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "label": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "name": {
+        "kwargs": {},
+        "resolver": "longest_string"
+      },
+      "release-country": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "release-date": {
+        "kwargs": {},
+        "resolver": "earliest"
+      },
+      "tracks": {
+        "kwargs": {
+          "separator": ","
+        },
+        "resolver": "union"
+      }
+    }
+  }
+}

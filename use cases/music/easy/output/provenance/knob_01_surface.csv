@@ -1,0 +1,3 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+mbrainz_2110,musicbrainz,release-country,United Kingdom of Great Britain and Northern Ireland,Netherlands,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy
+mbrainz_7063,musicbrainz,release-country,Bosnia and Herzegovina,Bosnia & Herzegovina,normalize_to_canonical,"{""template_source"": ""sibling"", ""canonical_form_origin"": ""sibling_source"", ""strategy"": ""shortest""}",1,easy

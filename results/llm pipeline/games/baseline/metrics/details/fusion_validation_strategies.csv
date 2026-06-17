@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+games,heuristic,none,provided_validation,0.8767123287671232,64,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games,llm_no_val,none,provided_validation,0.8493150684931506,62,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games,llm_val,provided,provided_validation,0.8493150684931506,62,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games,llm_val_stats,provided,provided_validation,0.8493150684931506,62,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games,heuristic_stats,provided,provided_validation,0.8493150684931506,62,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+games,iterative,provided,provided_validation,0.8493150684931506,62,73,DI-Bench/runs/games/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

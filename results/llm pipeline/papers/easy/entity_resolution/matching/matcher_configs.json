@@ -1,0 +1,16 @@
+{
+  "crossref__dblp": {
+    "f1": 1.0,
+    "matcher": "MLBasedMatcher",
+    "precision": 1.0,
+    "recall": 1.0,
+    "threshold": 0.8
+  },
+  "open_alex__dblp": {
+    "f1": 1.0,
+    "matcher": "MLBasedMatcher",
+    "precision": 1.0,
+    "recall": 1.0,
+    "threshold": 0.9
+  }
+}

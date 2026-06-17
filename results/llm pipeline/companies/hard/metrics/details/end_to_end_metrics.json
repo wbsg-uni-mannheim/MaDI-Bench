@@ -1,0 +1,37 @@
+{
+  "average_input_density": 0.5033,
+  "data_density_change": 0.0522,
+  "density_change_vs_largest": -0.0008,
+  "fused_data_density": 0.5555,
+  "fused_output_columns": 11,
+  "fused_output_records": 12937,
+  "fusion_ratio": 0.0877,
+  "input_columns_target_schema": 10,
+  "input_sources": 3,
+  "largest_source_density": 0.5563,
+  "largest_source_name": "dbpedia",
+  "merged_records": 959,
+  "per_source_stats": [
+    {
+      "columns": 9,
+      "density": 0.5563,
+      "name": "dbpedia",
+      "rows": 10069
+    },
+    {
+      "columns": 7,
+      "density": 0.9027,
+      "name": "forbes",
+      "rows": 2107
+    },
+    {
+      "columns": 6,
+      "density": 0.6351,
+      "name": "fullcontact",
+      "rows": 2004
+    }
+  ],
+  "row_gain_over_largest": 2868,
+  "row_gain_percentage": 28.48,
+  "total_input_records": 14180
+}

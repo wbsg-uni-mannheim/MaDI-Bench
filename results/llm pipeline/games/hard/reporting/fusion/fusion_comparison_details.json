@@ -1,0 +1,96 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "heuristic",
+    "validation_accuracy": 0.869639794168096,
+    "test_accuracy": 0.7261904761904762,
+    "per_attribute_accuracy": {
+      "userScore": {
+        "accuracy": 0.7857142857142857,
+        "total": 84
+      },
+      "releaseYear": {
+        "accuracy": 0.7976190476190477,
+        "total": 84
+      },
+      "developer": {
+        "accuracy": 0.6190476190476191,
+        "total": 84
+      },
+      "publisher": {
+        "accuracy": 0.11904761904761904,
+        "total": 84
+      },
+      "criticScore": {
+        "accuracy": 0.9166666666666666,
+        "total": 84
+      },
+      "ESRB": {
+        "accuracy": 0.8809523809523809,
+        "total": 84
+      },
+      "platform": {
+        "accuracy": 0.8214285714285714,
+        "total": 84
+      },
+      "name": {
+        "accuracy": 0.8690476190476191,
+        "total": 84
+      }
+    },
+    "rules": {
+      "Attribute_11": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "ESRB": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "criticScore": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "developer": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "genres": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "name": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "platform": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "publisher": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "releaseYear": {
+        "resolver": "prefer_higher_trust",
+        "kwargs": {
+          "trust_key": "trust_score"
+        }
+      },
+      "series": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "userScore": {
+        "resolver": "median",
+        "kwargs": {}
+      }
+    }
+  }
+}

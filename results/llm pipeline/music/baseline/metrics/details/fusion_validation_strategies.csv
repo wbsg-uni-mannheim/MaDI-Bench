@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+music,heuristic,none,provided_validation,0.72,144,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music,llm_no_val,none,provided_validation,0.735,147,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music,llm_val,provided,provided_validation,0.75,150,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music,llm_val_stats,provided,provided_validation,0.74,148,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music,heuristic_stats,provided,provided_validation,0.735,147,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+music,iterative,provided,provided_validation,0.75,150,200,DI-Bench/runs/music/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

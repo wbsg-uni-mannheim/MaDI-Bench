@@ -1,0 +1,22 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "assets": "maximum",
+    "city": "union",
+    "country": "most_complete",
+    "founded": "earliest",
+    "industry": "most_complete",
+    "keypeople": "union",
+    "name": "longest_string",
+    "revenue": "maximum",
+    "website": "most_complete"
+  },
+  "strategy_name": "llm_no_val_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.0,
+    "forbes": 3.0,
+    "fullcontact": 1.1748539534979303
+  }
+}

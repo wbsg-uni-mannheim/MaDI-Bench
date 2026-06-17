@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+papers-augmented-hard,heuristic,official_test,0.5110470701248799,532,1041,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

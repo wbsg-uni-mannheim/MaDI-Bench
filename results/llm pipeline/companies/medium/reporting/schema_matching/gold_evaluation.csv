@@ -1,0 +1,5 @@
+Source,Precision,Recall,F1,Correct,Predicted,Gold,Missing
+All_Sources,1.0,1.0,1.0,18,18,18,0
+Dbpedia,1.0,1.0,1.0,8,8,8,0
+Forbes,1.0,1.0,1.0,5,5,5,0
+Fullcontact,1.0,1.0,1.0,5,5,5,0

@@ -1,0 +1,5 @@
+Source,Rows,Columns,Data Density,Density in Target Schema (12 cols)
+Dblp,55958,15,46.12%,57.65% (15/12 × 46.12%)
+Crossref,40929,15,71.47%,89.34% (15/12 × 71.47%)
+Open_Alex,39989,15,73.09%,91.36% (15/12 × 73.09%)
+Total Input,136876,12 (target),63.56% avg,76.98% weighted avg

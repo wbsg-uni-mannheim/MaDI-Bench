@@ -1,0 +1,10 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+name,1.0,31600,31600,0,False,{},{},False,
+artist,1.0,29702,29702,0,False,{},{},False,
+release-date,0.0,18237,0,18237,False,"{""format.date"": 18237, ""pattern"": 18237}",{},False,
+release-country,1.0,21073,21073,0,False,{},{},False,
+label,1.0,20143,20143,0,False,{},{},False,
+genre,1.0,19761,19761,0,False,{},"{""taxonomy"": {""exhaustive"": true, ""known_value_rate"": 1.0, ""membership_enforced"": true, ""n_known_values"": 19761, ""n_unknown_values"": 0, ""n_values_checked"": 19761}}",False,
+tracks,1.0,29136,29136,0,False,{},{},False,
+duration,1.0,11821,11821,0,False,{},{},False,

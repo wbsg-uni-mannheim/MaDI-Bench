@@ -1,0 +1,74 @@
+{
+  "auto_generated": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_val__opt_provided",
+    "validation_accuracy": 0.656084656084656,
+    "test_accuracy": 0.7103896103896103,
+    "rules": {
+      "artist": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "discogs"
+          ]
+        }
+      },
+      "duration": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "discogs"
+          ]
+        }
+      },
+      "genre": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "discogs"
+          ]
+        }
+      },
+      "label": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "discogs"
+          ]
+        }
+      },
+      "name": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "musicbrainz",
+            "lastfm"
+          ]
+        }
+      },
+      "release-country": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "release-date": {
+        "resolver": "favour_sources",
+        "kwargs": {
+          "sources": [
+            "musicbrainz"
+          ]
+        }
+      },
+      "tracks": {
+        "resolver": "union",
+        "kwargs": {
+          "separator": ","
+        }
+      }
+    }
+  }
+}

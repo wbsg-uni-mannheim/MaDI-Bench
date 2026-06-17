@@ -1,0 +1,35 @@
+{
+  "overall_accuracy": 0.7683823529411765,
+  "total_comparisons": 544,
+  "correct_comparisons": 418,
+  "per_attribute_accuracy": {
+    "keypeople_name": {
+      "accuracy": 0.6666666666666666,
+      "total": 12
+    },
+    "assets": {
+      "accuracy": 0.84,
+      "total": 100
+    },
+    "revenue": {
+      "accuracy": 0.79,
+      "total": 100
+    },
+    "city": {
+      "accuracy": 0.36231884057971014,
+      "total": 69
+    },
+    "founded": {
+      "accuracy": 0.7611940298507462,
+      "total": 67
+    },
+    "country": {
+      "accuracy": 0.9583333333333334,
+      "total": 96
+    },
+    "name": {
+      "accuracy": 0.79,
+      "total": 100
+    }
+  }
+}

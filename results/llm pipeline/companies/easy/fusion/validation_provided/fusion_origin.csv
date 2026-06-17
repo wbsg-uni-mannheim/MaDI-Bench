@@ -1,0 +1,101 @@
+entity_id,source_ids,name,country,city,assets,revenue,founded
+entity_0,"http://dbpedia.org/resource/Industrial_Alliance, http://www.forbes.com/companies/industrial-alliance-insurance/",forbes,dbpedia,LLM,LLM,LLM,LLM
+entity_1,"http://dbpedia.org/resource/Magyar_Telekom, http://www.forbes.com/companies/deutsche-telekom/",forbes,LLM,LLM,LLM,LLM,LLM
+entity_10,"http://dbpedia.org/resource/Schlumberger, http://www.forbes.com/companies/schlumberger/",dbpedia,dbpedia,LLM,LLM,LLM,LLM
+entity_11,http://www.forbes.com/companies/shoprite-holdings/,forbes,forbes,,LLM,LLM,
+entity_12,"http://www.forbes.com/companies/bayer/, fullcontact_139, http://dbpedia.org/resource/Bayer_Corporation",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_13,"fullcontact_486, http://dbpedia.org/resource/Manpower_Inc., http://www.forbes.com/companies/manpower/",fullcontact,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_14,http://www.forbes.com/companies/level-3-communications/,forbes,forbes,,LLM,LLM,
+entity_15,http://www.forbes.com/companies/crown-resorts/,forbes,forbes,,LLM,LLM,
+entity_16,"http://www.forbes.com/companies/tdc/, fullcontact_719",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_17,"http://www.forbes.com/companies/smiths-group/, fullcontact_685, http://dbpedia.org/resource/Smiths_Group",forbes,forbes,LLM,LLM,LLM,fullcontact
+entity_18,http://www.forbes.com/companies/banca-popolare-di-milano/,forbes,forbes,,LLM,LLM,
+entity_19,"http://www.forbes.com/companies/china-communications-services/, http://dbpedia.org/resource/China_Communications_Services_Corporation",dbpedia,forbes,LLM,LLM,LLM,LLM
+entity_2,http://www.forbes.com/companies/eutelsat-communications/,LLM,forbes,,LLM,LLM,
+entity_20,"http://www.forbes.com/companies/bank-muscat/, fullcontact_133",forbes,forbes,fullcontact,LLM,LLM,LLM
+entity_21,http://www.forbes.com/companies/nabors-industries/,forbes,forbes,,LLM,LLM,
+entity_22,"fullcontact_613, http://dbpedia.org/resource/Qualcomm, http://www.forbes.com/companies/qualcomm/",dbpedia,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_23,"http://www.forbes.com/companies/dicks-sporting-goods/, fullcontact_261",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_24,"http://www.forbes.com/companies/herbalife/, http://dbpedia.org/resource/Herbalife",forbes,forbes,dbpedia,LLM,LLM,LLM
+entity_25,"http://dbpedia.org/resource/Chang_Hwa_Bank, http://www.forbes.com/companies/chang-hwa-bank/",dbpedia,dbpedia,dbpedia,LLM,LLM,LLM
+entity_26,"http://www.forbes.com/companies/aurubis/, http://dbpedia.org/resource/Aurubis, fullcontact_119",forbes,forbes,fullcontact,LLM,LLM,LLM
+entity_27,"fullcontact_114, http://www.forbes.com/companies/astrazeneca/",forbes,fullcontact,fullcontact,LLM,LLM,
+entity_28,http://www.forbes.com/companies/accor/,forbes,forbes,,LLM,LLM,
+entity_29,"http://dbpedia.org/resource/Verisign, fullcontact_790, http://www.forbes.com/companies/verisign/",dbpedia,dbpedia,fullcontact,LLM,LLM,fullcontact
+entity_3,"http://www.forbes.com/companies/westfield-group/, http://dbpedia.org/resource/Westfield_Group",forbes,forbes,LLM,LLM,LLM,LLM
+entity_30,"http://dbpedia.org/resource/Grupo_Calvo, http://www.forbes.com/companies/grupo-carso/",forbes,LLM,LLM,LLM,LLM,LLM
+entity_31,"fullcontact_485, http://dbpedia.org/resource/LyondellBasell, http://www.forbes.com/companies/lyondellbasell-industries/",fullcontact,LLM,LLM,LLM,LLM,fullcontact
+entity_32,"http://dbpedia.org/resource/Hyundai_EP, http://www.forbes.com/companies/hyundai-hysco/",forbes,forbes,,LLM,LLM,LLM
+entity_33,http://www.forbes.com/companies/toyota-boshoku/,forbes,LLM,,LLM,LLM,
+entity_34,"http://www.forbes.com/companies/nec/, http://dbpedia.org/resource/NEC",forbes,forbes,dbpedia,LLM,LLM,LLM
+entity_35,"http://dbpedia.org/resource/Kone, http://www.forbes.com/companies/kone/, fullcontact_462",dbpedia,dbpedia,dbpedia,LLM,LLM,fullcontact
+entity_36,http://www.forbes.com/companies/rwe-group/,forbes,forbes,,LLM,LLM,
+entity_37,"fullcontact_160, http://dbpedia.org/resource/Boeing_Commercial_Airplanes, http://www.forbes.com/companies/boeing/",forbes,fullcontact,LLM,LLM,LLM,fullcontact
+entity_38,"http://www.forbes.com/companies/petrobras/, fullcontact_582, http://dbpedia.org/resource/Petrobras",forbes,forbes,fullcontact,LLM,LLM,LLM
+entity_39,"http://www.forbes.com/companies/sandisk/, http://dbpedia.org/resource/SanDisk, fullcontact_642",forbes,forbes,LLM,LLM,LLM,fullcontact
+entity_4,"http://www.forbes.com/companies/credit-agricole/, fullcontact_238, http://dbpedia.org/resource/Cr%C3%A9dit_Agricole_Srbija",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_40,"http://dbpedia.org/resource/Unisphere_Networks, fullcontact_447, http://www.forbes.com/companies/juniper-networks/",fullcontact,dbpedia,LLM,LLM,LLM,LLM
+entity_41,http://www.forbes.com/companies/amp/,forbes,forbes,,LLM,LLM,
+entity_42,"http://dbpedia.org/resource/Krung_Thai_Bank, http://www.forbes.com/companies/krung-thai-bank/",dbpedia,dbpedia,LLM,LLM,LLM,LLM
+entity_43,"fullcontact_481, http://www.forbes.com/companies/lkq/",forbes,fullcontact,LLM,LLM,LLM,
+entity_44,http://www.forbes.com/companies/continental-resources/,forbes,LLM,,LLM,LLM,
+entity_45,"fullcontact_166, http://www.forbes.com/companies/bp/, http://dbpedia.org/resource/BP",forbes,fullcontact,fullcontact,LLM,LLM,LLM
+entity_46,"http://www.forbes.com/companies/western-digital/, http://dbpedia.org/resource/Western_Digital",forbes,forbes,LLM,LLM,LLM,LLM
+entity_47,"http://www.forbes.com/companies/metro-group/, fullcontact_507",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_48,"http://dbpedia.org/resource/Mitsubishi_UFJ_NICOS, http://www.forbes.com/companies/mitsubishi-ufj-financial/, fullcontact_1589",forbes,dbpedia,LLM,LLM,LLM,fullcontact
+entity_49,"http://dbpedia.org/resource/Kroger, http://www.forbes.com/companies/kroger/, fullcontact_467",dbpedia,dbpedia,LLM,LLM,LLM,fullcontact
+entity_5,http://www.forbes.com/companies/randstad-holding/,forbes,forbes,,LLM,LLM,
+entity_50,"http://dbpedia.org/resource/Iberdrola_Renovables, fullcontact_406, http://www.forbes.com/companies/iberdrola/",forbes,dbpedia,fullcontact,LLM,LLM,LLM
+entity_51,"fullcontact_150, http://www.forbes.com/companies/bharat-petroleum/",forbes,fullcontact,fullcontact,LLM,LLM,LLM
+entity_52,http://www.forbes.com/companies/cit-group/,forbes,forbes,,LLM,LLM,
+entity_53,"fullcontact_330, http://www.forbes.com/companies/fresenius/",forbes,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_54,"fullcontact_573, http://www.forbes.com/companies/pandora/",fullcontact,forbes,LLM,LLM,LLM,LLM
+entity_55,"http://www.forbes.com/companies/steinhoff-international/, http://dbpedia.org/resource/Crown_International, fullcontact_702",forbes,LLM,LLM,LLM,LLM,LLM
+entity_56,http://www.forbes.com/companies/hoya/,forbes,LLM,,LLM,LLM,
+entity_57,"fullcontact_264, http://www.forbes.com/companies/dish-network/",fullcontact,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_58,"http://dbpedia.org/resource/Michelin, http://www.forbes.com/companies/michelin-group/",forbes,dbpedia,dbpedia,LLM,LLM,LLM
+entity_59,"http://www.forbes.com/companies/oracle/, fullcontact_561",forbes,forbes,,LLM,LLM,LLM
+entity_6,http://www.forbes.com/companies/prudential/,forbes,forbes,,LLM,LLM,
+entity_60,http://www.forbes.com/companies/shimano/,forbes,LLM,,LLM,LLM,
+entity_61,"fullcontact_479, http://www.forbes.com/companies/linde/",forbes,fullcontact,LLM,LLM,LLM,
+entity_62,http://www.forbes.com/companies/rural-electrification/,forbes,LLM,,LLM,LLM,
+entity_63,"http://dbpedia.org/resource/Costco, fullcontact_235, http://www.forbes.com/companies/costco-wholesale/",LLM,dbpedia,LLM,LLM,LLM,LLM
+entity_64,http://www.forbes.com/companies/kellogg/,forbes,forbes,,LLM,LLM,
+entity_65,http://www.forbes.com/companies/kuwait-projects/,forbes,forbes,,LLM,LLM,
+entity_66,"http://www.forbes.com/companies/amphenol/, http://dbpedia.org/resource/Amphenol",forbes,forbes,LLM,LLM,LLM,LLM
+entity_67,"fullcontact_1943, http://www.forbes.com/companies/shiseido/, http://dbpedia.org/resource/Shiseido",fullcontact,fullcontact,LLM,LLM,LLM,fullcontact
+entity_68,"http://dbpedia.org/resource/Mapfre, http://www.forbes.com/companies/mapfre/",dbpedia,dbpedia,dbpedia,LLM,LLM,LLM
+entity_69,"fullcontact_411, http://www.forbes.com/companies/iliad/, http://dbpedia.org/resource/Iliad_(company)",forbes,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_7,"http://dbpedia.org/resource/BYD_Company, http://www.forbes.com/companies/byd/",dbpedia,dbpedia,LLM,LLM,LLM,LLM
+entity_70,"http://www.forbes.com/companies/baywa/, http://dbpedia.org/resource/Sherwin-Williams, fullcontact_140",forbes,forbes,fullcontact,LLM,LLM,fullcontact
+entity_71,"fullcontact_46, http://www.forbes.com/companies/aberdeen-asset-management/",fullcontact,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_72,"http://dbpedia.org/resource/Vivendi, http://www.forbes.com/companies/vivendi/, fullcontact_798",dbpedia,dbpedia,dbpedia,LLM,LLM,LLM
+entity_73,"http://dbpedia.org/resource/Wistron_Corporation, fullcontact_823, http://www.forbes.com/companies/wistron/",forbes,dbpedia,dbpedia,LLM,LLM,fullcontact
+entity_74,"fullcontact_17, http://dbpedia.org/resource/Renault_Sport, http://www.forbes.com/companies/renault/",fullcontact,fullcontact,LLM,LLM,LLM,LLM
+entity_75,"http://www.forbes.com/companies/sumitomo-mitsui-trust/, http://dbpedia.org/resource/Sumitomo_Mitsui_Trust_Holdings",forbes,forbes,dbpedia,LLM,LLM,LLM
+entity_76,http://www.forbes.com/companies/galaxy-entertainment/,forbes,forbes,,LLM,LLM,
+entity_77,"http://dbpedia.org/resource/Thales_Group, http://www.forbes.com/companies/thales/",forbes,dbpedia,LLM,LLM,LLM,LLM
+entity_78,"http://dbpedia.org/resource/Areva, http://www.forbes.com/companies/areva/, fullcontact_106",dbpedia,dbpedia,LLM,LLM,LLM,fullcontact
+entity_79,"http://www.forbes.com/companies/davita/, fullcontact_252",fullcontact,forbes,,LLM,LLM,fullcontact
+entity_8,"http://www.forbes.com/companies/dongbu-insurance/, http://dbpedia.org/resource/Bangkok_Insurance",forbes,LLM,LLM,LLM,LLM,LLM
+entity_80,http://www.forbes.com/companies/empire/,forbes,forbes,,LLM,LLM,
+entity_81,"http://dbpedia.org/resource/Volkswagen_Group, http://www.forbes.com/companies/volkswagen-group/, fullcontact_802",dbpedia,dbpedia,dbpedia,LLM,LLM,fullcontact
+entity_82,http://www.forbes.com/companies/salzgitter/,forbes,,,LLM,LLM,
+entity_83,http://www.forbes.com/companies/orix/,forbes,LLM,,LLM,LLM,
+entity_84,"http://www.forbes.com/companies/ugi/, fullcontact_767",fullcontact,forbes,LLM,LLM,LLM,fullcontact
+entity_85,http://www.forbes.com/companies/mtr/,forbes,forbes,,LLM,LLM,
+entity_86,http://www.forbes.com/companies/konica-minolta/,forbes,forbes,,LLM,LLM,
+entity_87,http://www.forbes.com/companies/edp-energias-de-portugal/,forbes,forbes,,LLM,LLM,
+entity_88,"fullcontact_732, http://dbpedia.org/resource/Tenaris, http://www.forbes.com/companies/tenaris/",fullcontact,dbpedia,fullcontact,LLM,LLM,LLM
+entity_89,"http://www.forbes.com/companies/wendel/, http://dbpedia.org/resource/Wendel_(group)",forbes,forbes,LLM,LLM,LLM,LLM
+entity_9,http://www.forbes.com/companies/yamaha-motor/,forbes,forbes,,LLM,LLM,
+entity_90,"http://www.forbes.com/companies/coloplast/, http://dbpedia.org/resource/Coloplast, fullcontact_224",forbes,forbes,fullcontact,LLM,LLM,LLM
+entity_91,"http://www.forbes.com/companies/prudential-financial/, http://dbpedia.org/resource/Prudential_Financial",forbes,forbes,LLM,LLM,LLM,LLM
+entity_92,"http://www.forbes.com/companies/hermes-international/, fullcontact_12",forbes,LLM,LLM,LLM,LLM,LLM
+entity_93,"http://www.forbes.com/companies/zijin-mining-group/, http://dbpedia.org/resource/Zijin_Mining",dbpedia,forbes,LLM,LLM,LLM,LLM
+entity_94,"http://dbpedia.org/resource/China_Mobile, http://www.forbes.com/companies/china-mobile/",dbpedia,dbpedia,dbpedia,LLM,LLM,LLM
+entity_95,"http://www.forbes.com/companies/toshiba/, fullcontact_747, http://dbpedia.org/resource/Toshiba",forbes,forbes,LLM,LLM,LLM,fullcontact
+entity_96,http://www.forbes.com/companies/lafarge/,LLM,forbes,,LLM,LLM,
+entity_97,http://www.forbes.com/companies/panasonic/,forbes,LLM,,LLM,LLM,
+entity_98,"fullcontact_1541, http://www.forbes.com/companies/exelon/, http://dbpedia.org/resource/Exelon",fullcontact,fullcontact,fullcontact,LLM,LLM,fullcontact
+entity_99,"http://www.forbes.com/companies/liberty-global/, http://dbpedia.org/resource/Liberty_Mutual, fullcontact_478",forbes,LLM,LLM,LLM,LLM,LLM

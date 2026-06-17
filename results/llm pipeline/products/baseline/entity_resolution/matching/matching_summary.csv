@@ -1,0 +1,4 @@
+left,right,best_matcher,f1,precision,recall,threshold
+prod1,prod2,RuleBasedMatcher,0.6,0.5142857142857142,0.72,0.5
+prod1,prod3,RuleBasedMatcher,0.6204081632653062,0.5241379310344828,0.76,0.5
+prod1,prod4,RuleBasedMatcher,0.5649717514124294,0.3937007874015748,1.0,0.3

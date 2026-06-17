@@ -1,0 +1,40 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "brand": "voting",
+    "bus_type": "voting",
+    "chipset_name": "most_complete",
+    "cluster_id": "voting",
+    "color": "voting",
+    "description": "longest_string",
+    "form_factor": "voting",
+    "height_mm": "median",
+    "interface_type": "voting",
+    "length_mm": "median",
+    "memory_type": "voting",
+    "model": "most_complete",
+    "model_number": "most_complete",
+    "price": "median",
+    "priceCurrency": "voting",
+    "product_type": "voting",
+    "read_speed_mb_s": "median",
+    "storage_connection_type": "voting",
+    "storage_gb": "median",
+    "title": "longest_string",
+    "title_description": "longest_string",
+    "url": "union",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "median"
+  },
+  "strategy_name": "llm_no_val_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "products_1": 3.0,
+    "products_2": 1.8618796859241278,
+    "products_3": 1.4672051154712058,
+    "products_4": 1.0
+  }
+}

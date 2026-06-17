@@ -1,0 +1,2 @@
+variant,case,validation_accuracy,test_accuracy,test_correct,test_total,acc_authors,acc_cited_by_count,acc_first_page,acc_issue,acc_journal,acc_last_page,acc_publication_year,acc_referenced_works_count,acc_title,acc_type,acc_volume
+provided,heuristic,0.5932914046121593,0.5110470701248799,532,1041,0.36,0.24175824175824176,0.4270833333333333,0.5769230769230769,0.37373737373737376,0.4148936170212766,0.93,0.4673913043478261,0.55,0.65,0.6153846153846154

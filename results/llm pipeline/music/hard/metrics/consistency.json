@@ -1,0 +1,113 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "music-augmented-hard",
+    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/augmented/music/hard/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.8995057115934602,
+    "n_evaluated": 181473,
+    "n_consistent": 163236,
+    "n_inconsistent": 18237,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "name": {
+        "consistency_score": 1.0,
+        "n_evaluated": 31600,
+        "n_consistent": 31600,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "artist": {
+        "consistency_score": 1.0,
+        "n_evaluated": 29702,
+        "n_consistent": 29702,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "release-date": {
+        "consistency_score": 0.0,
+        "n_evaluated": 18237,
+        "n_consistent": 0,
+        "n_inconsistent": 18237,
+        "failure_counts": {
+          "format.date": 18237,
+          "pattern": 18237
+        },
+        "excluded_from_dataset_score": false
+      },
+      "release-country": {
+        "consistency_score": 1.0,
+        "n_evaluated": 21073,
+        "n_consistent": 21073,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "label": {
+        "consistency_score": 1.0,
+        "n_evaluated": 20143,
+        "n_consistent": 20143,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "genre": {
+        "consistency_score": 1.0,
+        "n_evaluated": 19761,
+        "n_consistent": 19761,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "taxonomy": {
+            "exhaustive": true,
+            "membership_enforced": true,
+            "n_values_checked": 19761,
+            "n_known_values": 19761,
+            "n_unknown_values": 0,
+            "known_value_rate": 1.0
+          }
+        }
+      },
+      "tracks": {
+        "consistency_score": 1.0,
+        "n_evaluated": 29136,
+        "n_consistent": 29136,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "duration": {
+        "consistency_score": 1.0,
+        "n_evaluated": 11821,
+        "n_consistent": 11821,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources",
+      "Attribute_7",
+      "Attribute_4",
+      "Attribute_8",
+      "Attribute_5"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

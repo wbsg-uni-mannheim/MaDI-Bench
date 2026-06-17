@@ -1,0 +1,27 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+products_3,id,Hardware Product,id,0.95,llm_based_matching
+products_3,Attribute_3,Hardware Product,brand,0.95,llm_based_matching
+products_3,Attribute_2,Hardware Product,title,0.95,llm_based_matching
+products_3,Attribute_4,Hardware Product,description,0.95,llm_based_matching
+products_3,Attribute_5,Hardware Product,price,0.95,llm_based_matching
+products_3,Attribute_6,Hardware Product,priceCurrency,0.95,llm_based_matching
+products_3,Link,Hardware Product,url,0.95,llm_based_matching
+products_3,Attribute_7,Hardware Product,title_description,0.95,llm_based_matching
+products_3,Attribute_9,Hardware Product,model,0.95,llm_based_matching
+products_3,Attribute_10,Hardware Product,model_number,0.95,llm_based_matching
+products_3,Attribute_8,Hardware Product,product_type,0.95,llm_based_matching
+products_3,Attribute_11,Hardware Product,chipset_name,0.95,llm_based_matching
+products_3,Attribute_12,Hardware Product,vram_gb,0.95,llm_based_matching
+products_3,Attribute_13,Hardware Product,storage_gb,0.95,llm_based_matching
+products_3,Attribute_19,Hardware Product,read_speed_mb_s,0.95,llm_based_matching
+products_3,Attribute_20,Hardware Product,write_speed_mb_s,0.95,llm_based_matching
+products_3,Attribute_14,Hardware Product,bus_type,0.95,llm_based_matching
+products_3,Attribute_15,Hardware Product,interface_type,0.95,llm_based_matching
+products_3,Attribute_22,Hardware Product,height_mm,0.95,llm_based_matching
+products_3,Attribute_23,Hardware Product,length_mm,0.95,llm_based_matching
+products_3,Attribute_24,Hardware Product,width_mm,0.95,llm_based_matching
+products_3,Attribute_25,Hardware Product,weight_g,0.95,llm_based_matching
+products_3,Attribute_17,Hardware Product,storage_connection_type,0.95,llm_based_matching
+products_3,Attribute_16,Hardware Product,memory_type,0.95,llm_based_matching
+products_3,Attribute_21,Hardware Product,color,0.95,llm_based_matching
+products_3,Attribute_18,Hardware Product,form_factor,0.95,llm_based_matching

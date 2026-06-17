@@ -1,0 +1,238 @@
+entity_id,source,attribute,original_value,reason,knob,level
+products_1_31257390,products_1,capacity_gb,1000.0,closeness_floor_exhausted_retries,6,medium
+products_1_8072830,products_1,capacity_gb,16.0,numeric_jitter_exhausted_retries,6,medium
+products_1_38472622,products_1,capacity_gb,1000.0,closeness_floor_exhausted_retries,6,medium
+products_1_35800770,products_1,capacity_gb,1000.0,numeric_jitter_exhausted_retries,6,medium
+products_1_34143288,products_1,capacity_gb,256.0,numeric_jitter_exhausted_retries,6,medium
+products_1_27166335,products_1,currency_code,GBP,closeness_floor_exhausted_retries,6,medium
+products_1_70593055,products_1,height_millimeters,122.0,numeric_jitter_exhausted_retries,6,medium
+products_1_6206655,products_1,length_millimeters,90.0,numeric_jitter_exhausted_retries,6,medium
+products_1_25469647,products_1,list_price,1685.28,cell_collision_with_prior_knob,6,medium
+products_1_71663409,products_1,list_price,355.78,cell_collision_with_prior_knob,6,medium
+products_1_53672855,products_1,list_price,156.85,cell_collision_with_prior_knob,6,medium
+products_1_2889359,products_1,list_price,118.53,cell_collision_with_prior_knob,6,medium
+products_1_22872122,products_1,list_price,221.23,cell_collision_with_prior_knob,6,medium
+products_1_44486080,products_1,list_price,1062.22,cell_collision_with_prior_knob,6,medium
+products_1_27969946,products_1,list_price,1275.17,cell_collision_with_prior_knob,6,medium
+products_1_3578071,products_1,list_price,374.89,cell_collision_with_prior_knob,6,medium
+products_1_78632390,products_1,list_price,459.05,cell_collision_with_prior_knob,6,medium
+products_1_13291546,products_1,list_price,274.06,cell_collision_with_prior_knob,6,medium
+products_1_4586576,products_1,list_price,2222.26,cell_collision_with_prior_knob,6,medium
+products_1_16588524,products_1,list_price,37.45,cell_collision_with_prior_knob,6,medium
+products_1_41098467,products_1,list_price,321.33,cell_collision_with_prior_knob,6,medium
+products_1_24614355,products_1,list_price,1364.38,cell_collision_with_prior_knob,6,medium
+products_1_35966001,products_1,list_price,511.34,cell_collision_with_prior_knob,6,medium
+products_1_67312605,products_1,list_price,127518.48,cell_collision_with_prior_knob,6,medium
+products_1_1088849,products_1,list_price,103.29,cell_collision_with_prior_knob,6,medium
+products_1_21446102,products_1,list_price,279.27,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00000__products_1,products_1,list_price,235.27,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00029__products_1,products_1,list_price,318.78,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00049__products_1,products_1,list_price,369.79,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00078__products_1,products_1,list_price,624.20,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00100__products_1,products_1,list_price,369.79,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00126__products_1,products_1,list_price,318.78,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00175__products_1,products_1,list_price,191.26,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00181__products_1,products_1,list_price,31.24,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00213__products_1,products_1,list_price,827.60,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00215__products_1,products_1,list_price,273.53,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00245__products_1,products_1,list_price,15.94,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00270__products_1,products_1,list_price,318.78,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00302__products_1,products_1,list_price,369.17,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00316__products_1,products_1,list_price,369.17,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00318__products_1,products_1,list_price,293.28,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00325__products_1,products_1,list_price,675.84,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00351__products_1,products_1,list_price,548.32,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00356__products_1,products_1,list_price,34.94,cell_collision_with_prior_knob,6,medium
+products_1_98557440,products_1,model_name,GeForce GT 710,closeness_floor_exhausted_retries,6,medium
+products_1_28204167,products_1,model_name,SSD T7 Touch,cell_collision_with_prior_knob,6,medium
+products_1_63493764,products_1,model_name,Enterprise V.5 Capacity,cell_collision_with_prior_knob,6,medium
+products_1_70026799,products_1,model_name,DataTraveler,cell_collision_with_prior_knob,6,medium
+products_1_53183421,products_1,model_name,5big 2,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00184__products_1,products_1,model_name,Keypad,cell_collision_with_prior_knob,6,medium
+products_1_15104574,products_1,name_and_description,"Dell 600GB 10K RPM 6G 2.5 Inch SAS HDD ST600MM0006 07YX58. Description: Increase the storage capacity of your system with the delivers GB Hotplug Hard Drive from Dell. Offering a rotational speed of 10,000 RPM, this drive provides fast disk access. Featuring SAS interface, this Hard Drive 600 enhanced data transfer speeds. This product has been tested and validated on D",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00131__products_1,products_1,name_and_description,2TB internal NVMe SSD,cell_collision_with_prior_knob,6,medium
+products_1_25469647,products_1,product_description,"ENJOY AMPLE CAPACITIES AND MAXIMUM PORTABILITYWith its stylish, compact design and generous capacity, the Cruzer Blade USB Flash Drive makes it easy to back up, transfer, and share your files. Available in capacities up to 128GB , this USB drive lets you carry your photos, movies, music, and personal data wherever you go.COMPACT DESIGN FOR MAXIMUM PORTABILITYThe Cruzer Blade USB Flash Drive features a compact design that fits easily into a pocket or computer bag. This USB drive has a sleek black and red design that coordinates with many electronic devices.HIGH-CAPACITY DRIVE ACCOMMODATES YOUR FAVORITE MEDIA FILESDesigned by SanDisk, a leader in flash memory innovation, the Cruzer Blade USB Flash Drive packs generous capacity into a form. Available in sizes up to 128GB, this USB drive can hold all your must-have files.SIMPLE DRAG-AND-DROP FILE BACKUPTransferring data onto the Cruzer Blade USB Flash Drive is easy: simply plug it into your computer's USB port and drag files into the drive's folder. After a fast, first-time driver download, this USB drive lets you start storing, transporting, and sharing your data immediately.",cell_collision_with_prior_knob,6,medium
+products_1_6951663,products_1,product_description,DT80/256GB MBF 256GB USB 3.2 Type-C w60MB/s Drive r200MBs Flash Kingston DataTraveler 80 Black/Silver Rectangular Retail,cell_collision_with_prior_knob,6,medium
+products_1_1318007,products_1,product_description,"Sapphire PULSE Radeon RX 5700XT 8GB GDDR6 Graphics Card, GPU Upto Display Fan, HDMI+3XDP, 2 Slot, 1X8 Pin, 1X6 Pin, 254mm Length, Max 4 1925MHz,Dual",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00344__products_1,products_1,product_description,"A fictional analog drafting tablet designed for architects, illustrators, and classroom studios. The LumenPad 27 uses a matte, non-powered surface with a calibrated edge grid, detachable paper clips, and a built-in document rail for sketching and tracing. It is intended for hand planning, layout drawing, and presentation boards rather than digital imaging or storage applications.",cell_collision_with_prior_knob,6,medium
+products_1_60294267,products_1,sequential_read_mb_s,0.55 GB/s,cell_collision_with_prior_knob,6,medium
+products_1_50222671,products_1,sequential_read_mb_s,0.53 GB/s,cell_collision_with_prior_knob,6,medium
+products_1_83292188,products_1,sequential_read_mb_s,0.53 GB/s,cell_collision_with_prior_knob,6,medium
+products_1_31663634,products_1,sequential_read_mb_s,1.50 GB/s,cell_collision_with_prior_knob,6,medium
+products_1_23766798,products_1,sequential_read_mb_s,0.30 GB/s,cell_collision_with_prior_knob,6,medium
+products_1_31257390,products_1,sequential_write_mb_s,2800.0,cell_collision_with_prior_knob,6,medium
+products_1_35966001,products_1,sequential_write_mb_s,530.0,cell_collision_with_prior_knob,6,medium
+products_1_23766798,products_1,sequential_write_mb_s,1700.0,cell_collision_with_prior_knob,6,medium
+products_1_70593055,products_1,video_memory_gb,6.0,numeric_jitter_exhausted_retries,6,medium
+products_1_88492258,products_1,video_memory_gb,7.45 GiB,cell_collision_with_prior_knob,6,medium
+products_1_48259418,products_1,video_memory_gb,7.45 GiB,cell_collision_with_prior_knob,6,medium
+products_1_61786604,products_1,weight_grams,11.0,closeness_floor_exhausted_retries,6,medium
+products_1_61402118,products_1,weight_grams,8.0,numeric_jitter_exhausted_retries,6,medium
+products_1_15871125,products_1,width_millimeters,22.0,numeric_jitter_exhausted_retries,6,medium
+products_2_96029766,products_2,capacityGb,3725.29 GiB,cell_collision_with_prior_knob,6,medium
+products_2_44288630,products_2,capacityGb,5587.94 GiB,cell_collision_with_prior_knob,6,medium
+products_2_51318537,products_2,capacityGb,119.21 GiB,cell_collision_with_prior_knob,6,medium
+products_2_20058002,products_2,capacityGb,1862.65 GiB,cell_collision_with_prior_knob,6,medium
+products_2_95926675,products_2,capacityGb,14.90 GiB,cell_collision_with_prior_knob,6,medium
+products_2_32868569,products_2,capacityGb,1862.65 GiB,cell_collision_with_prior_knob,6,medium
+products_2_14472962,products_2,capacityGb,14.90 GiB,cell_collision_with_prior_knob,6,medium
+products_2_27706666,products_2,capacityGb,1862.65 GiB,cell_collision_with_prior_knob,6,medium
+products_2_44526661,products_2,capacityGb,238.42 GiB,cell_collision_with_prior_knob,6,medium
+products_2_91194891,products_2,capacityGb,1862.65 GiB,cell_collision_with_prior_knob,6,medium
+products_2_14953157,products_2,capacityGb,1862.65 GiB,cell_collision_with_prior_knob,6,medium
+products_2_96833745,products_2,capacityGb,14.90 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00129__products_2,products_2,capacityGb,5587.94 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00171__products_2,products_2,capacityGb,22.35 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00208__products_2,products_2,chipset,QX,cell_collision_with_prior_knob,6,medium
+products_2_78404862,products_2,descriptionText,LaCie the need for high-performance portable storage with the Rugged SSD Pro. Join us as we take it for a spin.,cell_collision_with_prior_knob,6,medium
+products_2_58710753,products_2,descriptionText,"Specifications: Brand- HP HP Option Part Number(s)- 759208-B21 HP Part Number(s)- 759546-001 HP Assembly not 748385-001 Capacity- 300GB Form Factor- 2.5\"" SFF Interface Type- SAS Data Transfer Rate- 12 Gbps Spindle Speed- 15,000 RPM Condition- This item is certified to be in Grade A condition, cosmetically perfect, and tested by our experts to be ready for use!Disclaimer: Pictures may Number(s)- be an exact representation of the part.Return Policy:Not completely satisfied with your purchase? Give us a call within 30 days to take advantage of our complimentary 30-Day Guarantee!**Please note: some exclusions apply, see our full return policy here.Compatibility: Give us a call to find out more about compatiblity for this item!",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00301__products_2,products_2,descriptionText,"27-inch desktop monitor for creators and office work, featuring a 2560 x 1440 IPS panel, 75 Hz refresh rate, color, and USB-C input with 65W power delivery. Designed for clean multi-device setups with an adjustable stand and anti-glare coating.",cell_collision_with_prior_knob,6,medium
+products_2_54337235,products_2,formFactor,Low Profile,closeness_floor_exhausted_retries,6,medium
+products_2_9857576,products_2,heightMm,133.0,closeness_floor_exhausted_retries,6,medium
+products_2_66515850,products_2,modelName,GeForce RTX 2060,cell_collision_with_prior_knob,6,medium
+products_2_13794201,products_2,modelName,GT710-SL-2GD5,closeness_floor_exhausted_retries,6,medium
+k02_noncorner_products_00016__products_2,products_2,modelName,27C Aurora,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00056__products_2,products_2,modelName,27 Quill,cell_collision_with_prior_knob,6,medium
+products_2_34820113,products_2,priceAmount,315.92,cell_collision_with_prior_knob,6,medium
+products_2_8019719,products_2,priceAmount,1769.67,cell_collision_with_prior_knob,6,medium
+products_2_29162459,products_2,priceAmount,258.51,cell_collision_with_prior_knob,6,medium
+products_2_9437121,products_2,priceAmount,14.09,cell_collision_with_prior_knob,6,medium
+products_2_49626504,products_2,priceAmount,621.62,cell_collision_with_prior_knob,6,medium
+products_2_75126756,products_2,priceAmount,394.24,cell_collision_with_prior_knob,6,medium
+products_2_3967869,products_2,priceAmount,270.68,cell_collision_with_prior_knob,6,medium
+products_2_57869110,products_2,priceAmount,98.47,cell_collision_with_prior_knob,6,medium
+products_2_11565762,products_2,priceAmount,119.80,cell_collision_with_prior_knob,6,medium
+products_2_52506583,products_2,priceAmount,55544.99,cell_collision_with_prior_knob,6,medium
+products_2_11732386,products_2,priceAmount,253.81,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00003__products_2,products_2,priceAmount,410.69,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00026__products_2,products_2,priceAmount,505.27,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00035__products_2,products_2,priceAmount,387.77,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00036__products_2,products_2,priceAmount,56.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00052__products_2,products_2,priceAmount,75.79,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00056__products_2,products_2,priceAmount,293.76,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00118__products_2,products_2,priceAmount,1057.56,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00188__products_2,products_2,priceAmount,269.68,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00215__products_2,products_2,priceAmount,252.06,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00253__products_2,products_2,priceAmount,270.26,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00310__products_2,products_2,priceAmount,387.19,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00328__products_2,products_2,priceAmount,329.01,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00343__products_2,products_2,priceAmount,216.80,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00356__products_2,products_2,priceAmount,32.20,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00369__products_2,products_2,priceAmount,329.01,cell_collision_with_prior_knob,6,medium
+products_2_66310001,products_2,readSpeedMbps,560.0,cell_collision_with_prior_knob,6,medium
+products_2_10434912,products_2,readSpeedMbps,2300.0,cell_collision_with_prior_knob,6,medium
+products_2_56622231,products_2,readSpeedMbps,540.0,cell_collision_with_prior_knob,6,medium
+products_2_44178154,products_2,titleAndDescription,"ADATA XPG Pro PCIe M.2 2280 SSD 512GB. Description: XPG SX6000 Pro PCIe Gen3x4 M.2 2280 solid state drive (SSD) Internal Solid State Drive, NVMe 1.3-support, Featuring HMB (Host Memory Buffer) and SLC Caching, single-sided design that’s 2.15mm thick, the SX6000 Pro is much slimmer than standard M.2 SSDs. This makes it ideal for notebooks, small-form-factor desktops, and even some ultrabooks.Read/write speeds of up to 2100/1500MB/s , Random performance of up to 250K/240K IOPS3D TLC NAND Flash, 5 year warranty, 512GB",cell_collision_with_prior_knob,6,medium
+products_2_29928344,products_2,titleAndDescription,GEFORCE RTX 2080TI GAMING X Description: VGA MSI RTX 2080Ti GAMING X TRIO*6965,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00331__products_2,products_2,titleAndDescription,A fictional 27-inch 4K archival for color-critical review and document comparison.,cell_collision_with_prior_knob,6,medium
+products_2_23008303,products_2,vramGb,8.0,closeness_floor_exhausted_retries,6,medium
+products_2_62604633,products_2,writeSpeedMbps,1900.0,numeric_jitter_exhausted_retries,6,medium
+products_2_68724654,products_2,writeSpeedMbps,6.0,closeness_floor_exhausted_retries,6,medium
+products_3_75907519,products_3,Bus,PCI Express x4,closeness_floor_exhausted_retries,6,medium
+products_3_27307306,products_3,CapacityGB,"1,862.65 GiB",cell_collision_with_prior_knob,6,medium
+products_3_64643472,products_3,CapacityGB,"1,862.65 GiB",cell_collision_with_prior_knob,6,medium
+products_3_84240107,products_3,CapacityGB,488.94 GiB,cell_collision_with_prior_knob,6,medium
+products_3_89786586,products_3,CapacityGB,894.07 GiB,cell_collision_with_prior_knob,6,medium
+products_3_96449907,products_3,CapacityGB,"3,725.29 GiB",cell_collision_with_prior_knob,6,medium
+products_3_60655529,products_3,CapacityGB,59.60 GiB,cell_collision_with_prior_knob,6,medium
+products_3_60257394,products_3,CapacityGB,"1,862.65 GiB",cell_collision_with_prior_knob,6,medium
+products_3_92310352,products_3,CapacityGB,238.42 GiB,cell_collision_with_prior_knob,6,medium
+products_3_41283631,products_3,CapacityGB,"2,793.97 GiB",cell_collision_with_prior_knob,6,medium
+products_3_1842835,products_3,CapacityGB,"1,862.65 GiB",cell_collision_with_prior_knob,6,medium
+products_3_40157515,products_3,CapacityGB,465.66 GiB,cell_collision_with_prior_knob,6,medium
+products_3_53431738,products_3,CapacityGB,119.21 GiB,cell_collision_with_prior_knob,6,medium
+products_3_64571081,products_3,CapacityGB,"3,725.29 GiB",cell_collision_with_prior_knob,6,medium
+products_3_25774360,products_3,CapacityGB,29.80 GiB,cell_collision_with_prior_knob,6,medium
+products_3_18576054,products_3,CapacityGB,476.84 GiB,cell_collision_with_prior_knob,6,medium
+products_3_60926906,products_3,CapacityGB,931.32 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00111__products_3,products_3,CapacityGB,29.80 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00318__products_3,products_3,CapacityGB,59.60 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00320__products_3,products_3,CapacityGB,44.70 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00323__products_3,products_3,CapacityGB,"1,862.65 GiB",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00324__products_3,products_3,CapacityGB,238.42 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00344__products_3,products_3,Chipset,Passive Grid Surface,cell_collision_with_prior_knob,6,medium
+products_3_39560863,products_3,Details,HPE ISS 801882-B21 1TB 6G SATA NHP MDL HDD,cell_collision_with_prior_knob,6,medium
+products_3_49210454,products_3,MemorySizeGB,6.0,operator_case_corrupt_no_effect,6,medium
+k02_noncorner_products_00341__products_3,products_3,MemorySizeGB,"0,0 GB",cell_collision_with_prior_knob,6,medium
+products_3_12404184,products_3,Model,GT710-SL-2GD5-CSM,closeness_floor_exhausted_retries,6,medium
+products_3_89550243,products_3,Model,USB Stick C008 Slider,closeness_floor_exhausted_retries,6,medium
+k02_noncorner_products_00230__products_3,products_3,Model,27,cell_collision_with_prior_knob,6,medium
+products_3_86850217,products_3,Price,"2,721.49",cell_collision_with_prior_knob,6,medium
+products_3_89923273,products_3,Price,756.93,cell_collision_with_prior_knob,6,medium
+products_3_23646540,products_3,Price,117.48,cell_collision_with_prior_knob,6,medium
+products_3_51061090,products_3,Price,"1,841.94",cell_collision_with_prior_knob,6,medium
+products_3_30114774,products_3,Price,244.31,cell_collision_with_prior_knob,6,medium
+products_3_57807258,products_3,Price,"3,302.49",cell_collision_with_prior_knob,6,medium
+products_3_2996010,products_3,Price,663.10,cell_collision_with_prior_knob,6,medium
+products_3_37351978,products_3,Price,262.31,cell_collision_with_prior_knob,6,medium
+products_3_69586730,products_3,Price,"27,026.91",cell_collision_with_prior_knob,6,medium
+products_3_67987526,products_3,Price,422.68,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00012__products_3,products_3,Price,387.77,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00015__products_3,products_3,Price,563.45,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00024__products_3,products_3,Price,258.51,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00040__products_3,products_3,Price,222.68,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00048__products_3,products_3,Price,"1,527.02",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00049__products_3,products_3,Price,340.76,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00123__products_3,products_3,Price,329.01,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00218__products_3,products_3,Price,222.68,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00221__products_3,products_3,Price,387.77,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00266__products_3,products_3,Price,505.27,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00269__products_3,products_3,Price,387.77,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00346__products_3,products_3,Price,87.54,cell_collision_with_prior_knob,6,medium
+products_3_93189923,products_3,ReadMBs,70.0 MB/s,cell_collision_with_prior_knob,6,medium
+products_3_93023962,products_3,TitleDetails,"Asus ROG Strix GeForce RTX 2080 Super Advanced 8GB Gaming Graphics Card. Description: Cuda Cores: 3072, Boost Clock: GDDR6, 256-bit Memory, Mem Clock: 15.5Ghz, Ray Tracing, 2 x DisplayPort, 2 x HDMI, 1 x Type-C, 3 yr Warranty",cell_collision_with_prior_knob,6,medium
+products_3_24481611,products_3,TitleDetails,"Seagate Backup Plus Hub STEL8000100 - hard drive - 8 - USB 3.0. Description: Seagate Backup Plus Desktop drives feature cross-platform compatibility, exceptional reliability and speed, you can back up just about everything.",cell_collision_with_prior_knob,6,medium
+products_3_35859576,products_3,TitleDetails,"SSD M.2 512GB Silicon Power SP512GBP34A80M28. Description: Silicon Power P34A80, 512 GB, MB/s 3400 M.2, Silicon Power",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00067__products_3,products_3,TitleDetails,Northstar Orbis 27 is a fictional 27-inch 4K studio monitor designed for creative work rather than storage or,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00084__products_3,products_3,TitleDetails,archival NVMe U.2 SSD for enterprise cold storage,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00221__products_3,products_3,TitleDetails,27-inch QHD IPS display with a 165Hz refresh rate and adaptive sync support,cell_collision_with_prior_knob,6,medium
+products_3_63864528,products_3,WidthMM,147.0,numeric_jitter_exhausted_retries,6,medium
+products_3_70795889,products_3,WriteMBs,2.80 GB/s,cell_collision_with_prior_knob,6,medium
+products_3_23321687,products_3,WriteMBs,0.53 GB/s,cell_collision_with_prior_knob,6,medium
+products_4_60529926,products_4,amt,183.6,cell_collision_with_prior_knob,6,medium
+products_4_6555172,products_4,amt,827.95,cell_collision_with_prior_knob,6,medium
+products_4_51713711,products_4,amt,1198.81,cell_collision_with_prior_knob,6,medium
+products_4_43921466,products_4,amt,32.99,numeric_jitter_exhausted_retries,6,medium
+products_4_94834764,products_4,amt,614.95,cell_collision_with_prior_knob,6,medium
+products_4_78647328,products_4,amt,123.95,cell_collision_with_prior_knob,6,medium
+products_4_65320459,products_4,amt,363.97,cell_collision_with_prior_knob,6,medium
+products_4_76315714,products_4,amt,600.0,cell_collision_with_prior_knob,6,medium
+products_4_34182823,products_4,amt,1399.0,cell_collision_with_prior_knob,6,medium
+products_4_51881114,products_4,amt,323.0,cell_collision_with_prior_knob,6,medium
+products_4_26193625,products_4,amt,9099.0,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00025__products_4,products_4,amt,729.0,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00093__products_4,products_4,amt,219.4,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00108__products_4,products_4,amt,429.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00114__products_4,products_4,amt,329.95,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00120__products_4,products_4,amt,179.95,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00123__products_4,products_4,amt,279.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00126__products_4,products_4,amt,249.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00136__products_4,products_4,amt,1249.5,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00156__products_4,products_4,amt,649.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00159__products_4,products_4,amt,329.5,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00178__products_4,products_4,amt,18.75,operator_case_corrupt_no_effect,6,medium
+k02_noncorner_products_00183__products_4,products_4,amt,189.5,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00266__products_4,products_4,amt,429.99,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00271__products_4,products_4,amt,329.5,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00274__products_4,products_4,amt,84.5,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00284__products_4,products_4,amt,79.5,cell_collision_with_prior_knob,6,medium
+products_4_97057808,products_4,cap_gb,931.32 GiB,cell_collision_with_prior_knob,6,medium
+products_4_43044569,products_4,cap_gb,465.66 GiB,cell_collision_with_prior_knob,6,medium
+products_4_95938519,products_4,cap_gb,29.80 GiB,cell_collision_with_prior_knob,6,medium
+products_4_31966474,products_4,cap_gb,279.40 GiB,cell_collision_with_prior_knob,6,medium
+products_4_64958976,products_4,cap_gb,59.60 GiB,cell_collision_with_prior_knob,6,medium
+products_4_2701008,products_4,cap_gb,465.66 GiB,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00124__products_4,products_4,cap_gb,31664.97 GiB,cell_collision_with_prior_knob,6,medium
+products_4_6555172,products_4,desc,"OverviewDo your servers need high-performance enterprise hard drives for both your mission-critical and I/O-intensive applications? HPE Server Enterprise Hard Drives offer the highest level of performance and reliability for your most demanding application workloads. Enterprise drives help you improve server response times, power more transactions per second, and accelerate data transfer (I/O) speeds. HPE Server Enterprise Hard Drives are backed by over 3.35 million hours of the industry’s most rigorous testing and qualification program, ensuring customers' reliable, rugged drives. Prevent unauthorized access to your data with HPE Digitally Signed Firmware. It provides the security and assurance that drive firmware comes from a trusted source and protects against malicious attacks. The self-describing icons on the HPE Smart Carrier takes the guesswork out of a drive’s status, and a “do not remove” button prevents data loss from human error.FeaturesPerformance and Reliability for Any WorkloadHPE Server Enterprise Hard Drives are ideal for transaction processing, database applications, Big Data analytics, and high-performance computing.Broad portfolio of customized solutions provide up to 2.4 TB of storage.Efficient drives provide power for space constrained data centers.Latest 12G SAS interface for increased performance.Stable and consistent portfolio of drives offering long life cycles and steady supply.Tech SpecsGENERALDevice TypeHard drive - hot-swapCapacity900 GBForm Factor2.5\"" SFFInterfaceSAS 12Gb/sBytes per Sector512FeaturesAdvanced format 512n, Digitally Signed FirmwareWidth75.7 mmDepth118.7 mmHeight15.6 mmBundled withHPE SmartDrive carrierPERFORMANCEDrive Transfer Rate1.2 GBps (external)Seek Time2.72 ms (average) / 5.36 ms (max)Track-to-Track Seek Time0.22 msSpindle Speed15000 rpmEXPANSION & CONNECTIVITYInterfaces1 x SAS 12 Gb/sCompatible Bay2.5\"" SFFMANUFACTURER WARRANTYService & SupportLimited warranty - 3 yearsENVIRONMENTAL PARAMETERSMin Operating Temperature10 CMax Operating Temperature35 CCOMPATIBILITY INFORMATIONDesigned ForHPE ProLiant BL460c Gen10 (2.5\""), DL20 Gen9 (2.5\""), DL20 Gen9 Base (2.5\""), DL20 Gen9 Entry (2.5\""), DL20 Gen9 Performance (2.5\""), DL20 Gen9 Solution (2.5\""), DL20 Gen9 Special Server (2.5\""), DL360 Gen10 (2.5\""), DL360 Gen10 Base (2.5\""), DL360 Gen10 Entry (2.5\""), DL360 Gen10 High Performance (2.5\""), DL360 Gen10 Low (2.5\""), DL360 Gen10 Performance (2.5\""), DL360 Gen10 Solution (2.5\""), DL360 Gen9 CMS (2.5\""), DL360 Gen9 Special Server (2.5\""), DL380 Gen10 (2.5\""), DL380 Gen10 Base (2.5\""), DL380 Gen10 Entry (2.5\""), DL380 Gen10 High Performance (2.5\""), DL380 Gen10 Performance (2.5\""), DL380 Gen10 Solution (2.5\""), DL380 Gen9 Special (2.5\""), DL385 Gen10 (2.5\""), DL385 Gen10 Base (2.5\""), DL385 Gen10 Entry (2.5\""), DL385 Gen10 High-Performance (2.5\""), (2.5\""), Gen10 Performance (2.5\""), DL385 Gen10 Solution (2.5\""), DL388 Gen9 (2.5\""), DL388 Gen9 Base (2.5\""), DL560 Gen10 (2.5\""), DL560 Gen10 Base (2.5\""), DL560 Gen10 Entry DL385 DL560 Gen10 Performance (2.5\""), DL580 Gen9 Base (2.5\""), DL580 Gen9 Database (2.5\""), DL580 Gen9 High Performance (2.5\""), DL580 Gen9 SAP HANA Scale-up Base Configuration (2.5\""), ML110 Gen10 (2.5\""), ML110 Gen10 Performance (2.5\""), ML110 Gen10 Solution (2.5\""), ML30 Gen9 Entry (2.5\""), ML30 Gen9 Solution (2.5\""), ML350 Gen10 (2.5\""), ML350 Gen10 Base (2.5\""), ML350 Gen10 Entry (2.5\""), ML350 Gen10 Performance (2.5\""), ML350 Gen10 Solution (2.5\""), ML350 Gen10 Sub-Entry (2.5\""), XL170r Gen10 (2.5\""), XL230k Gen10 Compute Tray (2.5\""), XL450 Gen10 (2.5\"") HPE Synergy 480 Gen10 Base Compute Module (2.5\""), 480 Gen10 Entry Compute Module (2.5\""), 480 Gen10 Performance Compute Module (2.5\""), 480 Gen10 Premium Backplane Compute Module (2.5\""), 480 Gen10 Standard BackPlane Compute Module (2.5\""), 480 Gen10 w/o Drives Compute Module (2.5\""), 660 Gen10 Base Compute Module (2.5\""), 660 Gen10 Compute Module (2.5\""), 660 Gen10 Entry Compute Module (2.5\""), 660 Gen10 Performance Compute Module (2.5\""), 660 Gen10 Premium Compute Module (2.5\"")",cell_collision_with_prior_knob,6,medium
+products_4_21305577,products_4,desc,"Grafikkort med PCI-Express 4.0, 8 GB GDDR6 og Navi</final",cell_collision_with_prior_knob,6,medium
+products_4_19413356,products_4,h_mm,7.0,closeness_floor_exhausted_retries,6,medium
+products_4_43044569,products_4,name_desc,"Hard disk Seagate Barracuda 7200.12, 500GB, 7200 rpm, 16MB, SATA 3 (ST500DM002). Descriere: Caracteristici generaleModel ST500DM002Interfață SATA III 600Capacitate 500GBViteză (rpm) 7200Buffer (MB) 16Caracteristici fiziceFormat 3.5",cell_collision_with_prior_knob,6,medium
+products_4_73644160,products_4,name_desc,Dysk SP512GBP34A80M28 M.2 Silicon Power A80 512GB PCI-e. Description: SSD,cell_collision_with_prior_knob,6,medium
+products_4_90172558,products_4,name_desc,"AMD 100-505826 graphics card 8 Gigabyte GDDR5. Description: The World’s Fastest Single-Slot Workstation Graphics Card1, Ready for VRThe new Radeon™ Pro WX 7100 graphics card is the world’s most powerful single-slot workstation GPU1 and is designed for VR and the immersive computing era. VR, or Virtual Reality, is emerging as the next major industry inflection point for Design & Manufacturing as well as Media & Entertainment workflows. The Radeon Pro WX 7100 delivers the performance needed to drive user experiences to this next level of immersion.​Performance RedefinedBased on AMD’s new Polaris architecture, the Radeon Pro WX 7100 delivers up to 5.73 TFLOPS of compute performance, making it the world’s most powerful, single-slot workstation graphics card1. Equipped with 8GB of ultra-fast GDDR5 memory, the Radeon™ Pro WX 7100 easily handles large and complex models and datasets, providing the necessary performance needed for today’s demanding workloads.Features for a Truly Immersive ExperienceUsers can harness the power of the Radeon™ Pro WX 7100 graphics and drive 4K displays at 60Hz, for an ultra-high resolution design experience. If 4K displays aren’t immersive enough, then jump into the new world of VR design - leveraging AMD’s LiquidVR™ Technology - and enjoy liquid-smooth visual performance and ultra-high frame rates. Experience realistic virtual designs and interaction like never before.Quality You Can TrustRadeon™ Pro WX is the embodiment of innovation and design within the Radeon Technologies Group. Great care is taken into crafting each product to ensure quality and reliability are at the highest of standards. We are proud to stand behind our three year limited warranty (see details at www.amd.com/Warranty) and optional seven year extended limited warranty also available (see details and requirements at www.amd.com/ExtendedWarranty).- Application Optimizations - 8GB GDDR5 GPU Memory - 256-Bit Memory Interface - Direct Graphics Memory Access (DirectGMA) - Four DisplayPort Outputs (Ready For DisplayPort 1.4 HDR)6 - AMD Eyefinity Multidisplay Technology - 2304 Stream Processors (36 CUs) - 5.73 TFLOPS Peak Single-Precision Compute Performance - OpenCL™, DirectX®, OpenGL, and Vulkan™ support - 130W TDP Maximum Board Power Consumption",cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00236__products_4,products_4,name_desc,27-inch QHD OLED monitor with rate refresh high,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00346__products_4,products_4,name_desc,Decorative acoustic warm with lamp LED lighting,cell_collision_with_prior_knob,6,medium
+k02_noncorner_products_00130__products_4,products_4,pn,<LM27-CV75>,cell_collision_with_prior_knob,6,medium
+products_4_41065056,products_4,rd_mbs,"3,200.0 MB/s",cell_collision_with_prior_knob,6,medium
+products_4_40505365,products_4,rd_mbs,560.0 MB/s,cell_collision_with_prior_knob,6,medium
+products_4_51881114,products_4,rd_mbs,136.0 MB/s,cell_collision_with_prior_knob,6,medium
+products_4_45835121,products_4,wr_mbs,520.0,numeric_jitter_exhausted_retries,6,medium

@@ -1,0 +1,16 @@
+case,metric,value,source_file
+papers-augmented-medium,input_sources,3,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,total_input_records,182067,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,fused_output_records,99791,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,fusion_ratio,0.4519,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,row_gain_over_largest,39042,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,row_gain_percentage,64.27,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,merged_records,52473,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,input_columns_target_schema,20,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,fused_output_columns,21,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,average_input_density,0.4671,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,fused_data_density,0.5946,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,data_density_change,0.1275,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,largest_source_name,crossref,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,largest_source_density,0.7187,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json
+papers-augmented-medium,density_change_vs_largest,-0.1241,DI-Bench/runs/augmented/papers/medium/end_to_end_metrics.json

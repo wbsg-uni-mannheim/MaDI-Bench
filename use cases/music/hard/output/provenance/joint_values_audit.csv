@@ -1,0 +1,7 @@
+check,status,detail
+k1_k5_disjoint,PASS,0 overlapping cells
+k1_k6_disjoint,PASS,0 overlapping cells
+k5_k6_disjoint,PASS,0 overlapping cells
+k4_fabricated_not_in_k1,PASS,0 K4-fabricated cells touched by K1
+k4_fabricated_not_in_k5,PASS,0 K4-fabricated cells touched by K5
+provenance_row_totals,INFO,k1=12886 k5=36236 k6=7489 total=56611

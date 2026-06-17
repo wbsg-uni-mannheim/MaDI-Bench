@@ -1,0 +1,11 @@
+Target Column,Dbpedia,Forbes,Fullcontact
+id,id,id,id
+name,name,name,name
+founded,founded,-,founded
+country,country,country,country
+city,city,-,city
+industry,industry,industry,-
+assets,assets,assets,-
+revenue,revenue,revenue,-
+keypeople,keypeople,-,keypeople
+Mapped,9/9,6/9,6/9

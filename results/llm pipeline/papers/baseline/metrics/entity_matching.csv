@@ -1,0 +1,6 @@
+case,pair,split,f1,precision,recall,source_file,note
+papers,dblp__crossref,official_test,0.9960831575775836,1.0,0.9921968787515006,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+papers,dblp__open_alex,official_test,0.9248144562762182,1.0,0.8601440576230492,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+papers,crossref__dblp,official_test,0.9972916039723142,1.0,0.9945978391356542,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+papers,open_alex__dblp,official_test,0.9476340694006308,0.9986702127659576,0.9015606242496998,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+papers,all_pairs,official_test,0.9664558218066867,,,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

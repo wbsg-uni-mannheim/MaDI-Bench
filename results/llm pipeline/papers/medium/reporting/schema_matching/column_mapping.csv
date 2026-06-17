@@ -1,0 +1,14 @@
+Target Column,Crossref,Dblp,Open_Alex
+id,id,id,id
+type,type,typ,wt
+title,title,ttl,tt
+authors,authors,auth,aus
+publication_year,publication_year,pub_yr,pyr
+journal,journal,jrnl,jrn
+volume,volume,vol,vol
+issue,issue,iss,isu
+first_page,first_page,fpage,fpa
+last_page,last_page,lpage,lpa
+referenced_works_count,referenced_works_count,ref_cnt,rwn
+cited_by_count,cited_by_count,cite_cnt,cby
+Mapped,12/12,12/12,12/12

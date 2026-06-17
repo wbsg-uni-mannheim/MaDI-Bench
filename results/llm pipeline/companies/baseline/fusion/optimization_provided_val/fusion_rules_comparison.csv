@@ -1,0 +1,61 @@
+case,optimization_mode,attribute,resolver,kwargs
+heuristic,none,assets,median,{}
+heuristic,none,city,union,"{""separator"": "",""}"
+heuristic,none,country,most_complete,{}
+heuristic,none,founded,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+heuristic,none,founders,union,"{""separator"": "",""}"
+heuristic,none,industry,most_complete,{}
+heuristic,none,keypeople_name,longest_string,{}
+heuristic,none,name,longest_string,{}
+heuristic,none,revenue,median,{}
+heuristic,none,url,most_complete,{}
+llm_no_val,none,assets,median,{}
+llm_no_val,none,city,union,"{""separator"": "",""}"
+llm_no_val,none,country,most_complete,{}
+llm_no_val,none,founded,earliest,{}
+llm_no_val,none,founders,union,"{""separator"": "",""}"
+llm_no_val,none,industry,most_complete,{}
+llm_no_val,none,keypeople_name,union,"{""separator"": "",""}"
+llm_no_val,none,name,longest_string,{}
+llm_no_val,none,revenue,median,{}
+llm_no_val,none,url,most_complete,{}
+llm_val,provided,assets,favour_sources,"{""sources"": [""forbes""]}"
+llm_val,provided,city,favour_sources,"{""sources"": [""fullcontact""]}"
+llm_val,provided,country,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+llm_val,provided,founded,earliest,{}
+llm_val,provided,founders,union,"{""separator"": "",""}"
+llm_val,provided,industry,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+llm_val,provided,keypeople_name,union,"{""separator"": "",""}"
+llm_val,provided,name,favour_sources,"{""sources"": [""forbes""]}"
+llm_val,provided,revenue,favour_sources,"{""sources"": [""forbes""]}"
+llm_val,provided,url,most_complete,{}
+llm_val_stats,provided,assets,favour_sources,"{""sources"": [""forbes""]}"
+llm_val_stats,provided,city,favour_sources,"{""sources"": [""fullcontact""]}"
+llm_val_stats,provided,country,favour_sources,"{""sources"": [""forbes"", ""dbpedia"", ""fullcontact""]}"
+llm_val_stats,provided,founded,favour_sources,"{""sources"": [""dbpedia""]}"
+llm_val_stats,provided,founders,union,"{""separator"": "",""}"
+llm_val_stats,provided,industry,most_complete,{}
+llm_val_stats,provided,keypeople_name,union,"{""separator"": "",""}"
+llm_val_stats,provided,name,favour_sources,"{""sources"": [""forbes""]}"
+llm_val_stats,provided,revenue,favour_sources,"{""sources"": [""forbes""]}"
+llm_val_stats,provided,url,most_complete,{}
+heuristic_stats,provided,assets,favour_sources,"{""sources"": [""forbes""]}"
+heuristic_stats,provided,city,union,"{""separator"": "",""}"
+heuristic_stats,provided,country,favour_sources,"{""sources"": [""dbpedia""]}"
+heuristic_stats,provided,founded,favour_sources,"{""sources"": [""dbpedia""]}"
+heuristic_stats,provided,founders,union,"{""separator"": "",""}"
+heuristic_stats,provided,industry,most_complete,{}
+heuristic_stats,provided,keypeople_name,longest_string,{}
+heuristic_stats,provided,name,favour_sources,"{""sources"": [""forbes""]}"
+heuristic_stats,provided,revenue,favour_sources,"{""sources"": [""forbes""]}"
+heuristic_stats,provided,url,most_complete,{}
+iterative,provided,assets,favour_sources,"{""sources"": [""forbes""]}"
+iterative,provided,city,favour_sources,"{""sources"": [""fullcontact""]}"
+iterative,provided,country,favour_sources,"{""sources"": [""forbes"", ""dbpedia""]}"
+iterative,provided,founded,favour_sources,"{""sources"": [""dbpedia""]}"
+iterative,provided,founders,union,"{""separator"": "",""}"
+iterative,provided,industry,favour_sources,"{""sources"": [""forbes""]}"
+iterative,provided,keypeople_name,union,"{""separator"": "",""}"
+iterative,provided,name,favour_sources,"{""sources"": [""forbes""]}"
+iterative,provided,revenue,favour_sources,"{""sources"": [""forbes""]}"
+iterative,provided,url,favour_sources,"{""sources"": [""forbes""]}"

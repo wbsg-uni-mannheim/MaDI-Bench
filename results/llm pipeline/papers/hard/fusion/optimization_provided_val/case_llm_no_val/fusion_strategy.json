@@ -1,0 +1,33 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "Attribute_2": "voting",
+    "Attribute_8": "voting",
+    "Attribute_9": "union",
+    "abstract_text": "longest_string",
+    "authors": "union",
+    "cited_by_count": "maximum",
+    "dx": "voting",
+    "first_page": "most_complete",
+    "issue": "voting",
+    "journal": "voting",
+    "kw": "union",
+    "kw_list": "union",
+    "last_page": "most_complete",
+    "pb": "voting",
+    "publ": "voting",
+    "publication_year": "median",
+    "referenced_works_count": "median",
+    "title": "longest_string",
+    "type": "voting",
+    "volume": "voting"
+  },
+  "strategy_name": "llm_no_val_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "crossref": 2.879790205350197,
+    "dblp": 1.0,
+    "open_alex": 3.0
+  }
+}

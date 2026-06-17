@@ -1,0 +1,5 @@
+dataset_pair,num_candidates,sampled_pairs,input_tokens,output_tokens,estimated_cost_usd,estimate_mode
+Prod1-Prod2,16240,10000,8550850,243600,18.3744,sampled
+Prod1-Prod3,15240,10000,7824280,228600,16.8929,sampled
+Prod1-Prod4,12520,10000,6422039,187800,13.8678,sampled
+TOTAL,44000,30000,22797169,660000,49.13510000000001,sampled

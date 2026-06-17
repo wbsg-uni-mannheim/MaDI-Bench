@@ -1,0 +1,40 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "brand": "most_complete",
+    "bus_type": "most_complete",
+    "chipset_name": "longest_string",
+    "cluster_id": "median",
+    "color": "most_complete",
+    "description": "union",
+    "form_factor": "most_complete",
+    "height_mm": "median",
+    "interface_type": "most_complete",
+    "length_mm": "median",
+    "memory_type": "most_complete",
+    "model": "most_complete",
+    "model_number": "most_complete",
+    "price": "median",
+    "priceCurrency": "most_complete",
+    "product_type": "most_complete",
+    "read_speed_mb_s": "most_complete",
+    "storage_connection_type": "most_complete",
+    "storage_gb": "most_complete",
+    "title": "longest_string",
+    "title_description": "union",
+    "url": "most_complete",
+    "vram_gb": "most_complete",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "most_complete"
+  },
+  "strategy_name": "heuristic_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "products_1": 3.0,
+    "products_2": 1.8618796859241278,
+    "products_3": 1.4672051154712058,
+    "products_4": 1.0
+  }
+}

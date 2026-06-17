@@ -1,0 +1,263 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) Use the validation feedback to understand which sources tend to be correct for each attribute.
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources (use kwargs.sources=['source1']), random_value
+
+Starting point (heuristic plan you can override):
+{
+  "Attribute_4": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "Attribute_5": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "Attribute_7": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "Attribute_8": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "artist": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "duration": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "genre": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "label": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "release-country": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "release-date": {
+    "kwargs": {
+      "trust_key": "trust_score"
+    },
+    "resolver": "prefer_higher_trust"
+  },
+  "tracks": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  }
+}
+
+Attribute diagnostics:
+      attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                sample_values
+    Attribute_4          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []
+    Attribute_5          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []
+    Attribute_7          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []
+    Attribute_8          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           []
+         artist          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [Psychos, Petalpusher, L. Garnier, Ron Trent, Mampi Swift, Monica M. Elam, Decorum, Surgeon]
+       duration          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          [0.0, 2204.0, 768.0, 715.0, 910.0, 0.0, 0.0, 539.0]
+          genre          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [Electronic / Dance, Electronic / Dance, Electronic / Dance, Electronic / Dance, Electronic / Dance, Electronic / Dance, Electronic / Dance, Electronic / Dance]
+          label          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [Renegade Hardware, Naked Music Recordin, F Communications, Peacefrog Rec., Suburban Base Reco, Clairaudience, Records Spirit Liftin', Downwards]
+           name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [Tempest / Inner Sense, Surrender, Unreasonable Behaviour, In The Spirit, Analogue, Ebony Angel - The Resurrection, Contrax / All Mighty, Electronically Tested]
+release-country          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [UK, United States of America, France, UK, UK, United States of America, UK, UK]
+   release-date          False               None             False             False           True            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [1998-01-01 00:00:00, 1999-04-27 00:00:00, 2000-06-01 00:00:00, 1999-01-01 00:00:00, 1997-01-01 00:00:00, 1999-01-01 00:00:00, 1999-01-01 00:00:00, 1995-01-01 00:00:00]
+         tracks           True                  ,             False             False          False            False [['Tempest', 'Inner Sense'], ['Surrender (Petalpusher Original)', "Surrender (Mig's Naked Seduction Dub)", 'Surrender (Attaboy Remix)', "Surrender (M, ['The Warning', 'City Sphere', 'Forgotten Thoughts', 'The Sound Of The Big Babou', 'Unreasonable Behaviour', "Cycles D'o, ['In The Spirit (The Full Experience)', 'In The Spirit (Kada)', 'In The Spirit (Guitar Alchemy)'], ['Analogue', 'Behold'], ['The Resurrection (Rainforest Rhapsody)', 'The Resurrection (Fantasy Ballroom Mix)', 'The Resurrection (Acoustic Overtu, ['Contrax', 'All Mighty'], ['Barrier Method', 'Pork Machine', 'Language Barrier', 'Machine Language']]
+
+Dataset overview:
+[
+  {
+    "dataset_name": "discogs",
+    "rows": 22255,
+    "columns": 9,
+    "trust_score": 3.0
+  },
+  {
+    "dataset_name": "lastfm",
+    "rows": 9339,
+    "columns": 9,
+    "trust_score": 1.0
+  },
+  {
+    "dataset_name": "musicbrainz",
+    "rows": 3575,
+    "columns": 9,
+    "trust_score": 2.3740451531833022
+  }
+]
+
+VALIDATION FEEDBACK:
+(Showing which source values were correct for sample entities)
+
+Attribute "artist":
+  - Sources: musicbrainz=Limp Twins, The
+    → Correct: Limp Twins, The
+  - Sources: discogs=Lenny Kravitz, musicbrainz=Lenny Kravitz
+    → Correct: Lenny Kravitz
+  - Sources: musicbrainz=Joel McNeely, lastfm=McNeely Joel, discogs=Joel McNeely
+    → Correct: Joel McNeely
+  - Sources: musicbrainz=Boyle, Susan, discogs=Susan Boyle, lastfm=S. Boyle
+    → Correct: Boyle, Susan
+  - Sources: musicbrainz=Libayz, Olivi4r
+    → Correct: Libaux, Olivier
+
+Attribute "duration":
+  - Sources: musicbrainz=2189.0
+    → Correct: 2194
+  - Sources: discogs=560.0, musicbrainz=672.0
+    → Correct: 1706
+  - Sources: musicbrainz=1122.0, lastfm=3092.0, discogs=1750.0
+    → Correct: 3086
+  - Sources: musicbrainz=1591.0, discogs=2193.0, lastfm=1591.0
+    → Correct: 2617
+  - Sources: musicbrainz=840.0
+    → Correct: 2542
+
+Attribute "genre":
+  - Sources: discogs=Rock
+    → Correct: Rock
+  - Sources: discogs=Electronic / Dance
+    → Correct: Electronic / Dance
+  - Sources: discogs=Pop
+    → Correct: Pop
+  - Sources: discogs=Electronic / Dance
+    → Correct: Electronic / Dance
+  - Sources: discogs=Rock
+    → Correct: Rock
+
+Attribute "label":
+  - Sources: discogs=Virgin
+    → Correct: Virgin
+  - Sources: discogs=Varèse S arabande
+    → Correct: Varèse Sarabande
+  - Sources: discogs=Sony Music|Syco Music
+    → Correct: Columbia|Syco Music
+  - Sources: discogs=Elemental Records
+    → Correct: Elemental Records
+  - Sources: discogs=Wichita
+    → Correct: Wichita
+
+Attribute "name":
+  - Sources: musicbrainz=Tales From Beyond the Groove
+    → Correct: Tales From Beyond the Groove
+  - Sources: discogs=I Belong To You, musicbrainz=I Belong to You
+    → Correct: I Belong to You
+  - Sources: musicbrainz=Star Wars: Shadows of the Empire, lastfm=Star Wars: Shadows of the Empire, discogs=Star Wars: Shadows Of The Empire
+    → Correct: Star Wars: Shadows of the Empire
+  - Sources: musicbrainz=Standing Ovation: The Greatest Songs from the Stage, discogs=Standing Ovation: The Greatest Songs From The Stage, lastfm=Standing Ovation: The Greatest Songs From The Stage
+    → Correct: Standing Ovation: The Greatest Songs From The Stage
+  - Sources: musicbrainz=Uncovered Queens Of The Stone
+    → Correct: Uncovered Queens of the Stone Age
+
+Attribute "release-country":
+  - Sources: musicbrainz=United Kingdom of Great Britain and Northern Ireland
+    → Correct: United Kingdom
+  - Sources: discogs=Europe
+    → Correct: Luxembourg
+  - Sources: musicbrainz=Germany, discogs=Europe
+    → Correct: Germany
+  - Sources: musicbrainz=United Kingdom of Great Britain and Northern Ireland, discogs=Europe
+    → Correct: United Kingdom
+  - Sources: musicbrainz=FraNce
+    → Correct: France
+
+Attribute "release-date":
+  - Sources: musicbrainz=2003-11-17 00:00:00
+    → Correct: 2003-11-17 00:00:00
+  - Sources: discogs=1998-01-01 00:00:00, musicbrainz=1998-09-22 00:00:00
+    → Correct: 1998-09-22 00:00:00
+  - Sources: musicbrainz=1996-01-01 00:00:00, discogs=1996-01-01 00:00:00
+    → Correct: 1996-01-01 00:00:00
+  - Sources: musicbrainz=2012-11-19 00:00:00, discogs=2012-01-01 00:00:00
+    → Correct: 2012-11-19 00:00:00
+  - Sources: musicbrainz=2013-06-24 00:00:00
+    → Correct: 2013-06-24 00:00:00
+
+Attribute "tracks":
+  - Sources: musicbrainz=['Tales From Beyond the Groove', 'Elemental', 'The Limping Song', 'The Dub That Sank My Sub', 'Living Well', 'Moving Closer to the Sofa', 'Another Day in the Life of Mr Jones', 'If It Ainâ€™t Brokeâ€¦ Break It!', 'Get It Back', 'Sunday Driver', 'Bitter & Twisted']
+    → Correct: ['Tales From Beyond the Groove', 'Tales From Beyond The Groove', 'Elemental', 'Elemental', 'The Limping Song', 'The Limping Song', 'The Dub That Sank My Sub', 'The Dub That Sank My Sub', 'Living Well', 'Living Well', 'Moving Closer to the Sofa', 'Moving Closer To The Sofa', 'Another Day in the Life of Mr Jones', 'Another Day In The Life Of Mr Jones', "If It Ain't Broke.......Break It!", 'If It Ain't Broke… Break It!', 'Get It Back', 'Get It Back', 'Sunday Driver', 'Sunday Driver']
+  - Sources: discogs=['I Belong To You', "If You Can't Say No (Flunky In The Attic Mix)", "If You Can't Say No (Just Say No Mix)", "If You Can't Say No (BT Twilo Dub)", "If You Can't Say No (Dallas Austin Mix)"], musicbrainz=['I Belong to You', 'If You Canâ€™t Say No (Flunky in the Attic mix)', 'If You Canâ€™t Say No (Just Say No mix)', 'If You Canâ€™t Say No (BT Twilo dub)', 'If You Canâ€™t Say No (Dallas Austin mix)']
+    → Correct: ['I Belong to You', 'I Belong To You', 'I Belong to You', "If You Can't Say No (Flunky In The Attic Mix)", "If You Can't Say No [Flunky In The Attic Mix]", 'If You Can't Say No (Flunky in the Attic mix)', "If You Can't Say No (Just Say No Mix)", "If You Can't Say No [Just Say No Mix]", 'If You Can't Say No (Just Say No mix)', "If You Can't Say No (BT Twilo Dub)", "If You Can't Say No [BT Twilo Dub]", 'If You Can't Say No (BT Twilo dub)', "If You Can't Say No (Dallas Austin Mix)", "If You Can't Say No [Dallas Austin Mix]", 'If You Can't Say No (Dallas Austin mix)']
+  - Sources: musicbrainz=['Main Theme From Star Wars and Leiaâ€™s Nightmare', 'The Battle of Gall', 'Imperial City', 'Beggarâ€™s Canyon Chase', 'The Southern Underground', 'Xizorâ€™s Theme', 'The Seduction of Princess Leia', 'Night Skies', 'Into the Sewers', 'The Destruction of Xizorâ€™s Palace'], lastfm=["Main Theme from Star Wars and Leia's Nightmare", 'The Battle of Gall', 'Imperial City', "Beggar's Canyon Chase", 'The Southern Underground', "Xizor's Theme", 'The Seduction of Princess Leia', 'Night Skies', 'Into the Sewers', "The Destruction Of Xizor's Palace"]
+    → Correct: ["Main Theme From Star Wars And Leia's Nightmare", "Main Theme from Star Wars and Leia's Nightmare", 'Main Theme From Star Wars and Leia's Nightmare', 'The Battle of Gall', 'The Battle Of Gall', 'The Battle of Gall', 'Imperial City', 'Imperial City', 'Imperial City', "Beggar's Canyon Chase", "Beggar's Canyon Chase", 'Beggar's Canyon Chase', 'The Southern Underground', 'The Southern Underground', 'The Southern Underground', "Xizor's Theme", "Xizor's Theme", 'Xizor's Theme', 'The Seduction of Princess Leia', 'The Seduction Of Princess Leia']
+  - Sources: musicbrainz=['Somewhere Over the Rainbow', 'The Winner Takes It All', 'Send in the Clowns', 'The Music of the Night', 'Bring Him Home', 'Memory', 'As Long As He Needs Me', 'All I Ask of You', 'Out Here On My Own', 'Youâ€™ll Never Walk Alone', 'This Is the Moment'], discogs=['Somewhere Over The Rainbow', 'The Winner Takes It All', 'Send In The Clowns', 'The Music Of The Night', 'Bring Him Home', 'Memory', 'As Long As He Needs Me', 'All I Ask Of You', 'Out Here On My Own', "You'll Never Walk Alone", 'Encore', 'This Is The Moment'], lastfm=['Somewhere Over The Rainbow', 'The Winner Takes It All', 'Send In The Clowns', 'The Music Of The Night', 'Bring Him Home', 'Memory', 'As Long as He Needs Me', 'All I Ask Of You', 'Out Here On My Own', "You'll Never Walk Alone", 'This Is the Moment']
+    → Correct: ['Somewhere Over the Rainbow', 'Somewhere Over The Rainbow', 'Somewhere Over The Rainbow', 'The Winner Takes It All', 'The Winner Takes It All', 'The Winner Takes It All', 'Send in the Clowns', 'Send In The Clowns', 'Send In The Clowns', 'The Music of the Night', 'The Music Of The Night', 'The Music Of The Night', 'Bring Him Home', 'Bring Him Home', 'Bring Him Home', 'Memory', 'Memory', 'Memory', 'As Long As He Needs Me', 'As Long As He Needs Me']
+  - Sources: musicbrainz=['River in the Road', 'Medication', 'Burn the Witch', 'No One Knows', 'In My Head', '3â€™s and 7â€™s', 'Tangled Up in Plaid', 'The Blood Is Love', 'Running Joke', 'Hanginâ€™ Tree', 'Go With the Flow', 'I Never Came']
+    → Correct: ['River in the Road', 'River In The Road', 'Medication', 'Medication', 'Burn the Witch', 'Burn The Witch', 'No One Knows', 'No One Knows', 'In My Head', 'In My Head', '3's and 7's', '3’s And 7’s', 'Tangled Up in Plaid', 'Tangled Up In Plaid', 'The Blood Is Love', 'The Blood Is Love', 'Running Joke', 'Running Joke', "Hangin' Tree", 'Hangin' Tree']
+
+
+
+SOURCE ACCURACY STATISTICS (from validation set):
+
+Attribute "artist":
+  - discogs: 96% correct (25/26 values)
+  - lastfm: 54% correct (15/28 values)
+  - musicbrainz: 81% correct (52/64 values)
+
+Attribute "duration":
+  - discogs: 29% correct (4/14 values)
+  - lastfm: 21% correct (6/28 values)
+  - musicbrainz: 29% correct (19/65 values)
+
+Attribute "genre":
+  - discogs: 96% correct (25/26 values)
+
+Attribute "label":
+  - discogs: 69% correct (18/26 values)
+
+Attribute "name":
+  - discogs: 81% correct (21/26 values)
+  - lastfm: 50% correct (15/30 values)
+  - musicbrainz: 80% correct (53/66 values)
+
+Attribute "release-country":
+  - discogs: 16% correct (4/25 values)
+  - musicbrainz: 56% correct (36/64 values)
+
+Attribute "release-date":
+  - discogs: 88% correct (22/25 values)
+  - musicbrainz: 92% correct (59/64 values)
+
+Attribute "tracks":
+  - discogs: 48% correct (12/25 values)
+  - lastfm: 30% correct (9/30 values)
+  - musicbrainz: 55% correct (32/58 values)
+
+RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
+consider using 'favour_sources' to prefer that source's values.
+
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.
+- For attributes where validation shows one source is consistently correct, consider using favour_sources.

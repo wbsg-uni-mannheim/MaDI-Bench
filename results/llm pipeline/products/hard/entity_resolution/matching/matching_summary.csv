@@ -1,0 +1,4 @@
+left,right,best_matcher,f1,precision,recall,threshold
+products_1,products_2,MLBasedMatcher,0.6764705882352942,0.6634615384615384,0.69,0.4
+products_1,products_3,MLBasedMatcher,0.564885496183206,0.4567901234567901,0.74,0.3
+products_1,products_4,MLBasedMatcher,0.5901639344262295,0.5,0.72,0.3

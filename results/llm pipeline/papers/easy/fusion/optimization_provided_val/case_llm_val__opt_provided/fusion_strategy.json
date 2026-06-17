@@ -1,0 +1,27 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "abstract_text": "longest_string",
+    "authors": "favour_sources",
+    "cited_by_count": "favour_sources",
+    "first_page": "voting",
+    "issue": "voting",
+    "journal": "favour_sources",
+    "keywords": "favour_sources",
+    "last_page": "voting",
+    "publication_year": "favour_sources",
+    "publisher": "favour_sources",
+    "referenced_works_count": "favour_sources",
+    "title": "longest_string",
+    "type": "voting",
+    "volume": "voting"
+  },
+  "strategy_name": "llm_val_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "crossref": 2.8949952568899877,
+    "dblp": 1.0,
+    "open_alex": 3.0
+  }
+}

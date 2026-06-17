@@ -1,0 +1,8 @@
+validation_source,case,eval_mode,accuracy,correct,total
+provided,heuristic,provided,0.7261029411764706,,
+provided,llm_no_val,provided,0.7297794117647058,,
+provided,llm_val,provided,0.7849264705882353,,
+provided,llm_val,test,0.6324167872648335,,
+provided,llm_val_stats,provided,0.7830882352941176,,
+provided,heuristic_stats,provided,0.7683823529411765,,
+provided,iterative,provided,0.7830882352941176,,

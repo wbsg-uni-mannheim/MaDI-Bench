@@ -1,0 +1,173 @@
+{
+  "attribute_rules": {
+    "brand": {
+      "kwargs": {
+        "sources": [
+          "products_2",
+          "products_3",
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "bus_type": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "chipset_name": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cluster_id": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "color": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "description": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "form_factor": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "height_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "interface_type": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "length_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "memory_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "model": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "model_number": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "price": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "priceCurrency": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "product_type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "read_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "storage_connection_type": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "storage_gb": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title_description": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "url": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "vram_gb": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "weight_g": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "width_mm": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "write_speed_mb_s": {
+      "kwargs": {},
+      "resolver": "maximum"
+    }
+  },
+  "main_entity": "computer hardware product"
+}

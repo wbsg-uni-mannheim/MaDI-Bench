@@ -1,0 +1,101 @@
+entity_id,source_ids,type,title,authors,publication_year,journal,volume,last_page,referenced_works_count,cited_by_count,issue,first_page
+entity_0,"crossref-56390, dblp-47772",crossref,LLM,LLM,crossref,crossref,LLM,crossref,LLM,LLM,,
+entity_1,"dblp-53914, crossref-23817",dblp,LLM,dblp,dblp,crossref,LLM,crossref,,LLM,dblp,crossref
+entity_10,"open_alex-48755, dblp-43812, crossref-54385",LLM,LLM,dblp,open_alex,open_alex,LLM,,LLM,LLM,open_alex,
+entity_11,"open_alex-36940, crossref-28161",open_alex,LLM,open_alex,open_alex,open_alex,LLM,,LLM,LLM,open_alex,
+entity_12,"dblp-56975, crossref-21987",dblp,crossref,LLM,dblp,crossref,LLM,crossref,,,,crossref
+entity_13,"crossref-59566, dblp-43874, open_alex-45611",crossref,LLM,LLM,crossref,LLM,LLM,crossref,LLM,LLM,crossref,crossref
+entity_14,"open_alex-29721, dblp-45818",open_alex,LLM,LLM,dblp,,LLM,,LLM,,dblp,open_alex
+entity_15,"crossref-14028, open_alex-00408",LLM,LLM,LLM,crossref,crossref,LLM,crossref,LLM,LLM,,crossref
+entity_16,"dblp-47668, open_alex-49682",dblp,LLM,LLM,dblp,open_alex,LLM,,LLM,LLM,dblp,
+entity_17,"crossref-45306, dblp-57216",crossref,crossref,dblp,crossref,crossref,LLM,LLM,LLM,LLM,,crossref
+entity_18,"crossref-19864, dblp-59736",dblp,LLM,LLM,crossref,LLM,LLM,,LLM,,crossref,
+entity_19,"crossref-40559, open_alex-25389",open_alex,LLM,open_alex,crossref,crossref,,crossref,LLM,LLM,,crossref
+entity_2,"open_alex-52236, crossref-45116",open_alex,LLM,LLM,open_alex,crossref,LLM,crossref,LLM,LLM,open_alex,open_alex
+entity_20,"crossref-10572, open_alex-19015",open_alex,LLM,LLM,crossref,LLM,LLM,open_alex,LLM,LLM,open_alex,open_alex
+entity_21,"dblp-47782, open_alex-40186",dblp,LLM,LLM,open_alex,LLM,LLM,,,,dblp,open_alex
+entity_22,"open_alex-48416, crossref-41952, dblp-14817",crossref,open_alex,LLM,open_alex,,,,LLM,LLM,,
+entity_23,"dblp-28192, crossref-24047",dblp,dblp,LLM,dblp,crossref,LLM,crossref,LLM,LLM,crossref,crossref
+entity_24,"open_alex-42825, dblp-51100",,LLM,LLM,dblp,open_alex,LLM,LLM,LLM,LLM,,LLM
+entity_25,"open_alex-54525, crossref-57464",open_alex,LLM,LLM,open_alex,crossref,LLM,open_alex,LLM,LLM,,open_alex
+entity_26,"crossref-33023, open_alex-29223",LLM,crossref,open_alex,crossref,open_alex,LLM,,LLM,LLM,open_alex,
+entity_27,"dblp-56980, open_alex-25944",dblp,LLM,LLM,dblp,LLM,LLM,open_alex,LLM,LLM,dblp,open_alex
+entity_28,"dblp-52701, crossref-16147",dblp,crossref,LLM,dblp,LLM,LLM,crossref,,,dblp,
+entity_29,"crossref-38137, dblp-56559, open_alex-34561",crossref,LLM,dblp,crossref,crossref,LLM,crossref,LLM,LLM,crossref,crossref
+entity_3,"crossref-33366, open_alex-21540",crossref,LLM,LLM,crossref,,,crossref,LLM,LLM,,
+entity_30,"dblp-46468, crossref-49102",dblp,crossref,dblp,dblp,crossref,LLM,crossref,,,crossref,crossref
+entity_31,"crossref-02212, dblp-54188",crossref,LLM,LLM,crossref,crossref,LLM,crossref,,,dblp,
+entity_32,"crossref-29651, dblp-39895",crossref,crossref,LLM,crossref,crossref,LLM,crossref,,LLM,crossref,crossref
+entity_33,"open_alex-33510, dblp-58194",dblp,open_alex,LLM,dblp,open_alex,LLM,,,,,
+entity_34,"crossref-29255, open_alex-35849",crossref,LLM,open_alex,crossref,crossref,LLM,crossref,LLM,,crossref,crossref
+entity_35,"open_alex-02269, crossref-15957",LLM,LLM,LLM,crossref,open_alex,LLM,open_alex,LLM,LLM,open_alex,
+entity_36,"open_alex-43263, crossref-42269",open_alex,LLM,LLM,open_alex,open_alex,LLM,,LLM,LLM,,
+entity_37,"open_alex-15775, k04__within_dup__crossref__dblp-47775",LLM,LLM,LLM,crossref,LLM,LLM,LLM,LLM,LLM,crossref,LLM
+entity_38,"dblp-23341, open_alex-37795",dblp,LLM,LLM,dblp,LLM,LLM,open_alex,LLM,LLM,open_alex,open_alex
+entity_39,"crossref-44136, open_alex-43935",crossref,crossref,LLM,crossref,crossref,LLM,crossref,LLM,LLM,crossref,crossref
+entity_4,"open_alex-03546, crossref-21758",open_alex,open_alex,open_alex,crossref,open_alex,LLM,open_alex,LLM,LLM,,crossref
+entity_40,"dblp-22672, crossref-38922, open_alex-42956",crossref,crossref,LLM,dblp,LLM,LLM,crossref,LLM,,crossref,crossref
+entity_41,"open_alex-10335, crossref-16758",open_alex,open_alex,LLM,open_alex,open_alex,LLM,crossref,LLM,LLM,,crossref
+entity_42,"open_alex-42843, crossref-38822",LLM,LLM,LLM,open_alex,open_alex,LLM,open_alex,LLM,LLM,,open_alex
+entity_43,"open_alex-54591, dblp-35800",LLM,LLM,open_alex,dblp,open_alex,LLM,,,LLM,,open_alex
+entity_44,"crossref-09503, open_alex-06659",crossref,LLM,LLM,crossref,open_alex,LLM,crossref,LLM,LLM,crossref,crossref
+entity_45,"crossref-53202, open_alex-60281",crossref,LLM,crossref,crossref,,,crossref,LLM,LLM,,crossref
+entity_46,"open_alex-32817, crossref-42067",LLM,LLM,LLM,crossref,open_alex,LLM,open_alex,LLM,LLM,,open_alex
+entity_47,"dblp-39924, crossref-01268",dblp,dblp,LLM,dblp,,LLM,crossref,LLM,LLM,LLM,crossref
+entity_48,"crossref-21332, open_alex-35656",LLM,crossref,LLM,crossref,crossref,LLM,crossref,LLM,LLM,,crossref
+entity_49,"dblp-44426, open_alex-37805",dblp,open_alex,dblp,LLM,LLM,LLM,open_alex,,LLM,dblp,open_alex
+entity_5,"crossref-52023, open_alex-45603",open_alex,crossref,open_alex,crossref,open_alex,LLM,crossref,LLM,LLM,crossref,crossref
+entity_50,"dblp-54251, open_alex-39006",LLM,open_alex,LLM,open_alex,dblp,LLM,open_alex,,LLM,,
+entity_51,"open_alex-21843, crossref-27506, dblp-16992",open_alex,open_alex,open_alex,open_alex,crossref,LLM,crossref,LLM,LLM,crossref,open_alex
+entity_52,"open_alex-26427, crossref-21412",open_alex,LLM,LLM,open_alex,open_alex,LLM,LLM,LLM,LLM,open_alex,LLM
+entity_53,"dblp-29597, open_alex-43951, crossref-51183",LLM,LLM,open_alex,dblp,crossref,LLM,open_alex,LLM,LLM,,open_alex
+entity_54,"dblp-40597, crossref-19767",LLM,crossref,LLM,dblp,LLM,LLM,crossref,LLM,LLM,,crossref
+entity_55,"open_alex-19268, crossref-16940, dblp-36977",open_alex,open_alex,LLM,open_alex,crossref,LLM,crossref,LLM,LLM,open_alex,open_alex
+entity_56,"dblp-41920, open_alex-48192",dblp,dblp,open_alex,dblp,open_alex,LLM,,LLM,,open_alex,
+entity_57,"dblp-54071, open_alex-57537",LLM,open_alex,open_alex,dblp,open_alex,LLM,,LLM,LLM,,
+entity_58,"dblp-29975, open_alex-27291",dblp,open_alex,LLM,dblp,LLM,,open_alex,LLM,LLM,open_alex,LLM
+entity_59,"crossref-29363, open_alex-25140",crossref,crossref,LLM,crossref,crossref,LLM,open_alex,LLM,LLM,,crossref
+entity_6,"dblp-43955, crossref-54350",LLM,LLM,LLM,dblp,LLM,LLM,,,LLM,dblp,
+entity_60,"dblp-14797, crossref-41811, open_alex-45851",dblp,dblp,LLM,dblp,,,,LLM,LLM,,
+entity_61,"crossref-18901, dblp-40913",LLM,crossref,dblp,crossref,crossref,LLM,crossref,LLM,,,crossref
+entity_62,"crossref-19874, dblp-51832",crossref,LLM,crossref,crossref,LLM,LLM,crossref,LLM,,,crossref
+entity_63,"dblp-29935, open_alex-17324",dblp,dblp,open_alex,dblp,,LLM,LLM,LLM,LLM,dblp,
+entity_64,"open_alex-42594, dblp-29741",open_alex,LLM,LLM,open_alex,dblp,LLM,,,LLM,open_alex,LLM
+entity_65,"k04__within_dup__crossref__dblp-09974, open_alex-23372, dblp-09974",LLM,LLM,LLM,crossref,,,crossref,,LLM,,crossref
+entity_66,"open_alex-12567, crossref-23604",crossref,open_alex,LLM,crossref,crossref,LLM,open_alex,LLM,LLM,open_alex,crossref
+entity_67,"open_alex-09929, crossref-07702",LLM,open_alex,LLM,crossref,open_alex,LLM,open_alex,,,open_alex,open_alex
+entity_68,"crossref-08716, open_alex-06322",crossref,crossref,open_alex,crossref,crossref,LLM,crossref,LLM,LLM,open_alex,crossref
+entity_69,"open_alex-43641, crossref-54519",open_alex,LLM,LLM,open_alex,crossref,LLM,,LLM,LLM,open_alex,
+entity_7,"dblp-52639, crossref-28464",dblp,LLM,LLM,dblp,crossref,LLM,crossref,LLM,LLM,,crossref
+entity_70,"dblp-51055, crossref-22808, open_alex-29910",dblp,dblp,dblp,dblp,crossref,LLM,crossref,LLM,LLM,open_alex,crossref
+entity_71,"dblp-46459, open_alex-32442, crossref-30233",LLM,open_alex,LLM,dblp,crossref,LLM,,LLM,LLM,dblp,open_alex
+entity_72,"dblp-22766, crossref-36610",dblp,LLM,LLM,LLM,LLM,LLM,crossref,LLM,LLM,crossref,crossref
+entity_73,"open_alex-02436, crossref-18972",open_alex,LLM,LLM,crossref,LLM,LLM,open_alex,LLM,,open_alex,open_alex
+entity_74,"dblp-25035, open_alex-20177",dblp,open_alex,open_alex,dblp,open_alex,LLM,LLM,LLM,LLM,,open_alex
+entity_75,"crossref-21715, open_alex-05477, dblp-57635",crossref,crossref,open_alex,crossref,crossref,LLM,crossref,LLM,LLM,,crossref
+entity_76,"dblp-44771, open_alex-01833",dblp,LLM,LLM,dblp,open_alex,LLM,open_alex,LLM,LLM,LLM,open_alex
+entity_77,"dblp-29270, crossref-57649",dblp,LLM,LLM,dblp,crossref,LLM,crossref,LLM,LLM,,crossref
+entity_78,"open_alex-39394, crossref-32275",open_alex,LLM,LLM,open_alex,LLM,LLM,open_alex,LLM,LLM,LLM,open_alex
+entity_79,"k04__within_dup__dblp__dblp-03156, open_alex-31541",dblp,open_alex,LLM,dblp,,,open_alex,,LLM,,open_alex
+entity_8,"crossref-37789, open_alex-30032, dblp-40993",LLM,LLM,LLM,crossref,LLM,LLM,crossref,LLM,LLM,crossref,crossref
+entity_80,"crossref-02779, open_alex-05961, dblp-21241",crossref,LLM,LLM,open_alex,crossref,LLM,crossref,LLM,LLM,open_alex,crossref
+entity_81,"open_alex-49135, crossref-59576",open_alex,LLM,LLM,open_alex,open_alex,LLM,open_alex,LLM,LLM,crossref,open_alex
+entity_82,"crossref-13578, dblp-39723",crossref,LLM,LLM,crossref,LLM,LLM,crossref,LLM,LLM,crossref,crossref
+entity_83,"crossref-40739, open_alex-28873, dblp-21537",crossref,crossref,LLM,crossref,LLM,LLM,open_alex,LLM,LLM,open_alex,crossref
+entity_84,"dblp-22806, crossref-48614",dblp,LLM,LLM,dblp,LLM,LLM,crossref,LLM,LLM,crossref,crossref
+entity_85,"dblp-47398, crossref-53036",dblp,LLM,LLM,dblp,crossref,LLM,crossref,,LLM,dblp,crossref
+entity_86,"crossref-41534, dblp-21517",LLM,LLM,dblp,crossref,LLM,LLM,crossref,,,crossref,crossref
+entity_87,"crossref-21703, open_alex-03884, dblp-22022",crossref,crossref,LLM,crossref,LLM,LLM,crossref,LLM,LLM,,crossref
+entity_88,"crossref-13478, dblp-51063",crossref,LLM,LLM,crossref,crossref,LLM,LLM,LLM,LLM,,crossref
+entity_89,"dblp-40153, crossref-50213",dblp,LLM,LLM,dblp,crossref,,crossref,LLM,LLM,dblp,crossref
+entity_9,"crossref-14847, open_alex-15627",crossref,LLM,open_alex,crossref,open_alex,LLM,LLM,LLM,LLM,,open_alex
+entity_90,"open_alex-53139, dblp-39564",open_alex,LLM,LLM,open_alex,LLM,LLM,open_alex,LLM,LLM,,open_alex
+entity_91,"dblp-00185, open_alex-57244",dblp,dblp,open_alex,dblp,,,LLM,LLM,LLM,,LLM
+entity_92,"crossref-15175, open_alex-11053",crossref,LLM,LLM,crossref,LLM,,LLM,LLM,LLM,,open_alex
+entity_93,"crossref-50297, open_alex-53871",crossref,crossref,LLM,crossref,open_alex,LLM,,LLM,LLM,,crossref
+entity_94,"crossref-52341, dblp-58290",crossref,crossref,crossref,crossref,LLM,LLM,,LLM,,dblp,
+entity_95,"crossref-39953, open_alex-24635",LLM,crossref,LLM,crossref,crossref,LLM,LLM,LLM,LLM,crossref,crossref
+entity_96,"open_alex-34758, crossref-26761, dblp-03740",crossref,open_alex,LLM,open_alex,,,open_alex,LLM,LLM,,open_alex
+entity_97,"open_alex-26204, crossref-29168",crossref,open_alex,open_alex,open_alex,,,open_alex,LLM,LLM,,crossref
+entity_98,"crossref-59565, open_alex-47141, dblp-43905",crossref,LLM,LLM,crossref,crossref,LLM,crossref,LLM,LLM,crossref,crossref
+entity_99,"open_alex-03326, dblp-41953",dblp,open_alex,LLM,open_alex,open_alex,LLM,,LLM,LLM,,

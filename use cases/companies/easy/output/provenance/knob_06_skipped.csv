@@ -1,0 +1,145 @@
+entity_id,source,attribute,original_value,reason,knob,level
+http://dbpedia.org/resource/Black_&_Decker,dbpedia,annual_income,6.09,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Boeing_Commercial_Airplanes,dbpedia,annual_income,35.20,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Dansk_Supermarked_A/S,dbpedia,annual_income,7.56,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/GRTgaz,dbpedia,annual_income,1464000000.0,numeric_jitter_exhausted_retries,6,easy
+http://dbpedia.org/resource/Kaman_Aircraft,dbpedia,annual_income,1.59,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Nokia,dbpedia,annual_income,12.70,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/OTP_banka_Srbija,dbpedia,annual_income,40800000.0,operator_case_corrupt_no_effect,6,easy
+http://dbpedia.org/resource/Pitney_Bowes,dbpedia,annual_income,3.87,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/System_Group,dbpedia,annual_income,423,cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/430_West_Records,dbpedia,established,"January 01, 1991",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/4K_Media_Inc.,dbpedia,established,"January 01, 2012",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Action_International_Pictures,dbpedia,established,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Alexander_Schleicher_GmbH_&_Co,dbpedia,established,"January 01, 1926",cell_collision_with_prior_knob,6,easy
+"http://dbpedia.org/resource/Atari,_SA",dbpedia,established,"January 01, 1983",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Bavaria_Yachtbau,dbpedia,established,"January 01, 1978",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Brevan_Howard,dbpedia,established,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/BrewDog,dbpedia,established,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Busey_Bank,dbpedia,established,"January 01, 1868",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Buypass,dbpedia,established,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/C_Spire_Wireless,dbpedia,established,"January 01, 1988",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Cameco,dbpedia,established,"January 01, 1988",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Catwalk_Production_House,dbpedia,established,"January 01, 1970",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Cervecer%C3%ADa_Nacional_Dominicana,dbpedia,established,"January 01, 1929",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Coherent_Solutions,dbpedia,established,"January 01, 1995",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Coop_(Italy),dbpedia,established,"January 01, 1967",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Crocodile_Garments,dbpedia,established,"January 01, 1952",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Cycling_'74,dbpedia,established,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Dairy_Farmers_of_Britain,dbpedia,established,"January 01, 2002",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Dampskibsselskabet_Torm,dbpedia,established,"January 01, 1889",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Dark_Energy_Digital,dbpedia,established,"January 01, 1998",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Davrian,dbpedia,established,"January 01, 1967",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Diners_Club_International,dbpedia,established,"January 01, 1950",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/EA_Salt_Lake,dbpedia,established,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Ecover,dbpedia,established,"January 01, 1980",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Eko_India_Financial_Services,dbpedia,established,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Enel_OGK-5,dbpedia,established,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Engagor,dbpedia,established,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Fara_(company),dbpedia,established,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Ferrovie_del_Sud_Est,dbpedia,established,"January 01, 1931",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/First_West_Credit_Union,dbpedia,established,"January 01, 1946",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Furch_Guitars,dbpedia,established,"January 01, 1981",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Gaia_Online,dbpedia,established,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Galway_Hooker_(beer),dbpedia,established,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Geniki_Bank,dbpedia,established,"January 01, 1937",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Gruner_AG,dbpedia,established,"January 01, 1862",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Gul_Ahmed_Group,dbpedia,established,"January 01, 1953",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Hardy_Brothers,dbpedia,established,"January 01, 1853",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Heartland_Bank,dbpedia,established,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Heinkel,dbpedia,established,"January 01, 1922",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/High-Tech_Bridge,dbpedia,established,"January 01, 2007",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/HollyFrontier,dbpedia,established,"January 01, 1947",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Hotels.nl,dbpedia,established,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Indian_Rare_Earths,dbpedia,established,"January 01, 1950",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Ittefaq_Group,dbpedia,established,"January 01, 1939",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/J%C3%B8tul,dbpedia,established,"January 01, 1853",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Kirin_Brewery_Company,dbpedia,established,"January 01, 1885",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Knjaz_Milo%C5%A1_a.d.,dbpedia,established,"January 01, 1811",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Kong%C5%8D_Gumi,dbpedia,established,"January 01, 0578",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Luck_Films,dbpedia,established,"January 01, 2010",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/M%C3%A4urer_&_Wirtz,dbpedia,established,"January 01, 1845",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Mahindra_Ugine_Steel,dbpedia,established,"January 01, 1962",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Mikro-Gen,dbpedia,established,"January 01, 1981",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Nisa-Today's,dbpedia,established,"January 01, 1977",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Olive_Telecommunications,dbpedia,established,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Oxford_Scientific_Films,dbpedia,established,"January 01, 1968",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/PASHA_Holding,dbpedia,established,"January 01, 2006",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Panini_Group,dbpedia,established,"January 01, 1961",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Pink_and_White_Productions,dbpedia,established,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Prism_Leisure_Corporation,dbpedia,established,"January 01, 1980",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Propulsion_Universelle_et_Recuperation_d'Energie,dbpedia,established,"January 01, 2011",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/RGB_Entertainment,dbpedia,established,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Renault_Pars,dbpedia,established,"January 01, 2004",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Ritz-Carlton_Hotel_Company,dbpedia,established,"January 01, 1983",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Rogers_Radio,dbpedia,established,"January 01, 1959",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/SCE_Studio_Liverpool,dbpedia,established,"January 01, 1984",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Scorpa,dbpedia,established,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Sea_Ray,dbpedia,established,"January 01, 1959",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Sevmash,dbpedia,established,"January 01, 1939",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Sleepycat_Software,dbpedia,established,"January 01, 1997",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Sofa_Workshop,dbpedia,established,"January 01, 1986",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Stowa,dbpedia,established,"January 01, 1927",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Symantec,dbpedia,established,"January 01, 1982",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Taxi_Media,dbpedia,established,"January 01, 1980",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Tequila_Herradura,dbpedia,established,"January 01, 1870",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Texas_Power,dbpedia,established,"January 01, 2005",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Theranos,dbpedia,established,"January 01, 2003",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Tokyo_Star_Bank,dbpedia,established,"January 01, 2001",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/True_Value,dbpedia,established,"January 01, 1948",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Turner_Broadcasting_System_Sweden,dbpedia,established,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Virgin_Holidays_Cruises,dbpedia,established,"January 01, 2000",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Virtusa,dbpedia,established,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/W._D._Oddy_&_Company,dbpedia,established,"January 01, 1917",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Wagamama,dbpedia,established,"January 01, 1992",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Wells_Fargo_Advisors,dbpedia,established,"January 01, 1879",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Wheatsville_Co-op,dbpedia,established,"January 01, 1976",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Whitewater_Brewery,dbpedia,established,"January 01, 1996",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Yizheng_Chemical_Fibre,dbpedia,established,"January 01, 1993",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/ZiiLABS,dbpedia,established,"January 01, 2009",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Bank_of_the_Philippine_Islands,dbpedia,total_assets_val,"19,455,000,000.0",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Coloplast,dbpedia,total_assets_val,"9,218,000,000.0",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Elisa_(company),dbpedia,total_assets_val,"1,972,000,000.0",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Flygprestanda,dbpedia,total_assets_val,"10,556,000.0",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Huntsman_Corporation,dbpedia,total_assets_val,"8,884,000,000.0",cell_collision_with_prior_knob,6,easy
+http://dbpedia.org/resource/Rietumu_Banka,dbpedia,total_assets_val,1.0,operator_case_corrupt_no_effect,6,easy
+http://dbpedia.org/resource/YugoRosGaz,dbpedia,total_assets_val,"191,130,000.0",cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/east-japan-railway/,forbes,asset_value,68.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/vtb-bank/,forbes,asset_value,262,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/marathon-petroleum/,forbes,asset_value,28.40,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/porsche-automobil-holding/,forbes,asset_value,43.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/gd-power-development/,forbes,asset_value,40.40,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/abu-dhabi-commercial/,forbes,asset_value,49.90,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/united-utilities/,forbes,asset_value,16.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/t-rowe-price/,forbes,asset_value,5.20,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/oil-gas-development/,forbes,asset_value,4.60,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/forest-laboratories/,forbes,asset_value,9.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/guangzhou-automobile/,forbes,asset_value,9.50,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/sinopec-china-petroleum/,forbes,sales_figure,445.30,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/boeing/,forbes,sales_figure,86.60,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/mcdonalds/,forbes,sales_figure,28.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/ace/,forbes,sales_figure,18.90,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/danske-bank/,forbes,sales_figure,20.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/dai-ichi-life-insurance/,forbes,sales_figure,58.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/safran/,forbes,sales_figure,19.50,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/paccar/,forbes,sales_figure,17.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/firstrand/,forbes,sales_figure,6.30,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/cheung-kong-holdings/,forbes,sales_figure,2.60,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/insurance-australia-group/,forbes,sales_figure,9,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/uralkali/,forbes,sales_figure,3.30,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/bank-of-ningbo/,forbes,sales_figure,3.90,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/taishin-financial-holdings/,forbes,sales_figure,2.50,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/el-puerto-de-liverpool/,forbes,sales_figure,5.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/fmc-technologies/,forbes,sales_figure,7.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/harbin-bank/,forbes,sales_figure,2.60,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/china-national-chemical/,forbes,sales_figure,9.70,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/abengoa/,forbes,sales_figure,9.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/agl-energy/,forbes,sales_figure,9.20,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/westlake-chemical/,forbes,sales_figure,3.80,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/semen-indonesia/,forbes,sales_figure,2.30,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/corporation-bank/,forbes,sales_figure,3.10,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/microchip-technology/,forbes,sales_figure,1.90,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/packaging-corp-amer/,forbes,sales_figure,3.70,cell_collision_with_prior_knob,6,easy
+http://www.forbes.com/companies/towers-watson/,forbes,sales_figure,3.50,cell_collision_with_prior_knob,6,easy
+fullcontact_101,fullcontact,Attribute_5,Jim Gasper,closeness_floor_exhausted_retries,6,easy
+fullcontact_338,fullcontact,Attribute_6,1960-01-01,closeness_floor_exhausted_retries,6,easy

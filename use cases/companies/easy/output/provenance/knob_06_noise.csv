@@ -1,0 +1,89 @@
+entity_id,source,attribute,original_value,new_value,transform_fn,transform_params,knob,level
+http://www.forbes.com/companies/hon-hai-precision/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/taiwan-semiconductor/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/cathay-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/fubon-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/formosa-petrochemical/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/formosa-chemicals/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/quanta-computer/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/chunghwa-telecom/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/china-steel/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/nan-ya-plastics/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/chinatrust-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/mega-financial-holding/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/formosa-plastics/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/asustek-computer/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/mediatek/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/shin-kong-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/taishin-financial-holdings/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/delta-electronics/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/advanced-semiconductor/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/pegatron/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/first-financial-holding/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/cheng-shin-rubber-industry/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/innolux/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/au-optronics/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/hua-nan-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/sinopac-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/china-life-insurance-taiwan/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/compal-electronics/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/taiwan-mobile/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/taiwan-cooperative-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/wistron/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/esun-financial/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/ruentex-industries/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/far-eastern-new-century/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/taiwan-business-bank/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/mercuries-associates/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/ruentex-development/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/inventec/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/pou-chen/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/president-chain-store/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/tpk-holding/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/wpg-holdings/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/yuanta-financial-holding/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/acer/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://www.forbes.com/companies/inotera-memories/,forbes,region,"Taiwan, Province of China[a]","Taiwan, Province of China",cleanup,"{""pattern"": ""\\s*\\[a\\]\\s*$"", ""replacement"": """"}",6,easy
+http://dbpedia.org/resource/Albatron_Technology,dbpedia,annual_income,2000000.0,2000000. 0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/American_Respiratory_Care_Foundation,dbpedia,annual_income,749783.0,74 9783.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 2}",6,easy
+http://dbpedia.org/resource/Archos,dbpedia,annual_income,154900000.0,15490000 0.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/Banco_Ita%C3%BA_Paraguay,dbpedia,annual_income,205900000.0,20 5900000.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 2}",6,easy
+http://dbpedia.org/resource/C.I.Agent_Solutions,dbpedia,annual_income,4900000.0,490 0000.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 3}",6,easy
+http://dbpedia.org/resource/Citec,dbpedia,annual_income,66000000.0,660 00000.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 3}",6,easy
+http://dbpedia.org/resource/Hansteen_Holdings,dbpedia,annual_income,83000000.0,830 00000.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 3}",6,easy
+http://dbpedia.org/resource/Israel_Discount_Bank,dbpedia,annual_income,4000000.0,4000000. 0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/O'Charley's,dbpedia,annual_income,830100000.0,83010000 0.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/PSSC_Labs,dbpedia,annual_income,2200000.0,2 200000.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 1}",6,easy
+http://dbpedia.org/resource/Port_of_Tallinn,dbpedia,annual_income,102200000.0,1022000 00.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 7}",6,easy
+http://dbpedia.org/resource/Termoelectrica,dbpedia,annual_income,346000000.0,34600000 0.0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/Tessera_Technologies,dbpedia,annual_income,248000000.0,248000000 .0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 9}",6,easy
+http://dbpedia.org/resource/Trimble_Navigation,dbpedia,annual_income,2.0,2 .0,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 1}",6,easy
+http://dbpedia.org/resource/Chess_Communication,dbpedia,keypeople_name,Amedia,amedia,case_corrupt,"{""position"": 0, ""original"": ""A"", ""replacement"": ""a""}",6,easy
+http://dbpedia.org/resource/Fisher_&_Paykel_Healthcare,dbpedia,keypeople_name,Woolf Fisher,WOolf Fisher,case_corrupt,"{""position"": 1, ""original"": ""o"", ""replacement"": ""O""}",6,easy
+http://dbpedia.org/resource/Gallup_(company),dbpedia,keypeople_name,George Gallup,GeorgeGallup,whitespace_corrupt,"{""sub_op"": ""space_delete"", ""position"": 6}",6,easy
+http://dbpedia.org/resource/Hotchkiss_Ordnance_Company,dbpedia,keypeople_name,Benjamin B. Hotchkiss,BenjaminB. Hotchkiss,whitespace_corrupt,"{""sub_op"": ""space_delete"", ""position"": 8}",6,easy
+http://dbpedia.org/resource/IBM_Internet_Security_Systems,dbpedia,keypeople_name,Chris Klaus,Ch ris Klaus,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 2}",6,easy
+http://dbpedia.org/resource/Mayo_Clinic,dbpedia,keypeople_name,"['Charles Horace Mayo', 'Henry Stanley Plummer', 'William Worrall Mayo', 'Augustus Stinchfield', 'William James Mayo']","['Charles Horace Mayo', 'Henry Stanley Plummer', 'William Worrall Mayo', 'Augustus StincHfield', 'William James Mayo']",case_corrupt,"{""position"": 88, ""original"": ""h"", ""replacement"": ""H""}",6,easy
+http://dbpedia.org/resource/Mondragon_Corporation,dbpedia,keypeople_name,José María Arizmendiarrieta,José María ARizmendiarrieta,case_corrupt,"{""position"": 12, ""original"": ""r"", ""replacement"": ""R""}",6,easy
+http://dbpedia.org/resource/Ronco,dbpedia,keypeople_name,Ron Popeil,RonPopeil,whitespace_corrupt,"{""sub_op"": ""space_delete"", ""position"": 3}",6,easy
+http://dbpedia.org/resource/Stream_TV,dbpedia,keypeople_name,Miro Allione,Miro  Allione,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 5}",6,easy
+k04__fab__dbpedia__fullcontact_520,dbpedia,keypeople_name,<NA>,<N A>,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 2}",6,easy
+k04__fab__dbpedia__fullcontact_529,dbpedia,keypeople_name,<NA>,<nA>,case_corrupt,"{""position"": 1, ""original"": ""N"", ""replacement"": ""n""}",6,easy
+k04__fab__dbpedia__fullcontact_672,dbpedia,keypeople_name,<NA>,<Na>,case_corrupt,"{""position"": 2, ""original"": ""A"", ""replacement"": ""a""}",6,easy
+k04__fab__dbpedia__fullcontact_374,dbpedia,keypeople_name,<NA>,<N A>,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 2}",6,easy
+fullcontact_1355,fullcontact,Attribute_5,Hassan Bawab,HaSsan Bawab,case_corrupt,"{""position"": 2, ""original"": ""s"", ""replacement"": ""S""}",6,easy
+k04__fab__fullcontact__http___dbpedia.org_resource_Colruyt_(supermarket),fullcontact,Attribute_5,<NA>,< NA>,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 1}",6,easy
+k04__fab__fullcontact__http___dbpedia.org_resource_China_Taiping,fullcontact,Attribute_5,<NA>,<Na>,case_corrupt,"{""position"": 2, ""original"": ""A"", ""replacement"": ""a""}",6,easy
+fullcontact_218,fullcontact,Attribute_6,1995-01-01,1995-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_239,fullcontact,Attribute_6,2001-01-01,2001-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_547,fullcontact,Attribute_6,1889-01-01,188901-01,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 4, ""removed"": ""-""}",6,easy
+fullcontact_660,fullcontact,Attribute_6,1940-01-01,1940-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_721,fullcontact,Attribute_6,2007-01-01,2007-01 -01,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 7}",6,easy
+fullcontact_756,fullcontact,Attribute_6,1937-01-01,1937-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_1022,fullcontact,Attribute_6,2005-01-01,200501-01,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 4, ""removed"": ""-""}",6,easy
+fullcontact_1041,fullcontact,Attribute_6,2009-01-01,2009-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_1176,fullcontact,Attribute_6,1887-01-01,1887-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy
+fullcontact_1684,fullcontact,Attribute_6,1849-01-01,1849-01-0 1,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 9}",6,easy
+fullcontact_1851,fullcontact,Attribute_6,2003-01-01,2003 -01-01,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 4}",6,easy
+fullcontact_1896,fullcontact,Attribute_6,2006-01-01,200 6-01-01,whitespace_corrupt,"{""sub_op"": ""space_insert"", ""position"": 3}",6,easy
+fullcontact_1925,fullcontact,Attribute_6,1785-01-01,1785-0101,whitespace_corrupt,"{""sub_op"": ""punct_collapse"", ""position"": 7, ""removed"": ""-""}",6,easy

@@ -1,0 +1,26 @@
+{
+  "case": "games",
+  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/games.json",
+  "pipeline_output_dir": "DI-Bench/runs/games",
+  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_20260609/games",
+  "command": [
+    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "scripts/run_pipeline.py",
+    "--manifest",
+    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/games.json",
+    "--training-set-construction",
+    "active",
+    "--fusion-case",
+    "all",
+    "--official-validation-fusion-only"
+  ],
+  "models": {
+    "schema": "gpt-5.5",
+    "labeling": "gpt-5.2",
+    "fusion": "gpt-5.5"
+  },
+  "training_set_construction": "active",
+  "official_validation_fusion_only": true,
+  "fusion_case": "all",
+  "extra_args": []
+}

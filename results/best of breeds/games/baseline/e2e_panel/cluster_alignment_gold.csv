@@ -1,0 +1,16 @@
+silver_cluster_id,best_pipe_cluster_id,overlap_count,silver_size,pipe_size,jaccard
+metacritic_12057,dbpedia_23874,1,1,1,1.0
+metacritic_14164,dbpedia_64698,1,1,1,1.0
+metacritic_14340,dbpedia_38151,1,1,1,1.0
+metacritic_17161,dbpedia_36582,1,1,1,1.0
+metacritic_17606,dbpedia_53216,1,1,1,1.0
+metacritic_19234,dbpedia_57362,1,1,1,1.0
+metacritic_19481,dbpedia_22016,1,1,1,1.0
+metacritic_3124,dbpedia_12258,1,1,1,1.0
+metacritic_4212,dbpedia_42162,1,1,1,1.0
+metacritic_5286,dbpedia_3613,1,1,1,1.0
+metacritic_5860,dbpedia_1471,1,1,1,1.0
+metacritic_8567,dbpedia_56397,1,1,1,1.0
+metacritic_8878,metacritic_8878,1,1,1,1.0
+metacritic_9221,dbpedia_40208,1,1,1,1.0
+metacritic_9865,dbpedia_11644,1,1,1,1.0

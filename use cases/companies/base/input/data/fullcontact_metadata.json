@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "FullContact Company Profiles Sample (Large Companies)",
+  "description": "Dataset of approximately 2,000 large companies obtained via the FullContact API. For each company, the dataset includes year of founding, detailed contact information (postal address, web site, phone), and information about key persons in the company, partly including the founders. Due to the commercial origin of the data, a high data quality is expected. The dataset is meant to complement other company datasets for market research.",
+  "keywords": [
+    "companies",
+    "company profiles",
+    "founding year",
+    "contact information",
+    "key persons",
+    "founders",
+    "FullContact API"
+  ],
+  "identifier": "fullcontact-company-profiles-2014-large-brands",
+  "sameAs": "https://www.fullcontact.com/",
+  "datePublished": "2016-06-09",
+  "dateModified": "2016-06-09",
+  "numberOfItems": 1931,
+  "temporalCoverage": "2014-01-01/2014-06-01",
+  "creator": {
+    "@type": "Organization",
+    "url": "https://www.fullcontact.com/",
+    "name": "FullContact Inc."
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "fullcontact.csv"
+    }
+  ],
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_1",
+      "description": "First source attribute from the FullContact company profile export",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_2",
+      "description": "Second source attribute from the FullContact company profile export",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_3",
+      "description": "Third source attribute from the FullContact company profile export",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_4",
+      "description": "Fourth source attribute from the FullContact company profile export",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_5",
+      "description": "Fifth source attribute from the FullContact company profile export",
+      "unitText": "string"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Attribute_6",
+      "description": "Sixth source attribute from the FullContact company profile export",
+      "unitText": "string"
+    }
+  ]
+}

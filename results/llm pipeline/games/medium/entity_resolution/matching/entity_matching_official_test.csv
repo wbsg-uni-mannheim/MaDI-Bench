@@ -1,0 +1,2 @@
+left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
+dbpedia,sales,dbpedia__sales,MLBasedMatcher,0.4,0.7266666666666667,0.5860215053763441,0.956140350877193,400,114,286,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/games-augmented/medium/input/entitymatching/dbpedia_2_sales_test_corner_filled.csv

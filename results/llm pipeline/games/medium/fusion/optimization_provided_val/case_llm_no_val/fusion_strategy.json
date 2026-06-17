@@ -1,0 +1,24 @@
+{
+  "id_column": "id",
+  "include_singletons": true,
+  "rules": {
+    "ESRB": "voting",
+    "criticScore": "median",
+    "developer": "union",
+    "genres": "union",
+    "name": "longest_string",
+    "platform": "union",
+    "publisher": "union",
+    "releaseYear": "earliest",
+    "series": "most_complete",
+    "units_sold_mm": "median",
+    "userScore": "median"
+  },
+  "strategy_name": "llm_no_val_strategy",
+  "trust_key": "trust_score",
+  "trust_scores": {
+    "dbpedia": 1.0,
+    "metacritic": 2.9625315189068093,
+    "sales": 3.0
+  }
+}

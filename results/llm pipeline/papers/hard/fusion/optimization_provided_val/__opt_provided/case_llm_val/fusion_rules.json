@@ -1,0 +1,162 @@
+{
+  "attribute_rules": {
+    "Attribute_2": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "Attribute_8": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "Attribute_9": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "abstract_text": {
+      "kwargs": {},
+      "resolver": "most_complete"
+    },
+    "authors": {
+      "kwargs": {
+        "sources": [
+          "open_alex",
+          "crossref",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cited_by_count": {
+      "kwargs": {},
+      "resolver": "maximum"
+    },
+    "dx": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "first_page": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "issue": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "dblp",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "journal": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "kw": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "kw_list": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "last_page": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "pb": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publ": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publication_year": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "dblp",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "referenced_works_count": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "type": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "dblp",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "volume": {
+      "kwargs": {},
+      "resolver": "median"
+    }
+  }
+}

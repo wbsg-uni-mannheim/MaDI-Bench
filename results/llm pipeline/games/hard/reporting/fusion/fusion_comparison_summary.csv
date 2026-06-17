@@ -1,0 +1,2 @@
+variant,case,validation_accuracy,test_accuracy,test_correct,test_total,acc_ESRB,acc_criticScore,acc_developer,acc_name,acc_platform,acc_publisher,acc_releaseYear,acc_userScore
+provided,heuristic,0.869639794168096,0.7261904761904762,488,672,0.8809523809523809,0.9166666666666666,0.6190476190476191,0.8690476190476191,0.8214285714285714,0.11904761904761904,0.7976190476190477,0.7857142857142857

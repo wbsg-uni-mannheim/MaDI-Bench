@@ -1,0 +1,423 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) Use the validation feedback to understand which sources tend to be correct for each attribute.
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources (use kwargs.sources=['source1']), random_value
+
+Starting point (heuristic plan you can override):
+{
+  "abstract_text": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "authors": {
+    "kwargs": {
+      "separator": ";"
+    },
+    "resolver": "union"
+  },
+  "cited_by_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "first_page": {
+    "kwargs": {},
+    "resolver": "voting"
+  },
+  "issue": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "journal": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "last_page": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "publication_year": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "publisher_name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "referenced_works_count": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "topic_terms": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "volume": {
+    "kwargs": {},
+    "resolver": "median"
+  }
+}
+
+Attribute diagnostics:
+             attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    sample_values
+         abstract_text           True                  ,             False             False          False            False [With the development of social networks and online mobile communities, group recommendation systems support users’ inter, To obtain information about foreign markets is a very complex task for small‐ and medium‐sized enterprises. This work’s , The vehicular communication networks, which can employ mobile, intelligent sensing devices with participatory sensing to, Quasi‐cyclic (QC) LDPC codes play an important role in 5G communications and have been chosen as the standard codes for , Cities are highly dynamic systems, whose resilience is affected by the interconnectedness between “hard” and “soft” infr, We consider several classes of intersection graphs of line segments in the plane and prove new equality and separation r, We investigate the increasingly common business setting in which companies face the possibility of both observed and uno, Human Immunodeficiency Virus (HIV) is a virus that attacks or infects cells in the immune system that causes immune decl]
+               authors           True                  ;             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [Hsuan Hsiao; Jason Helge Anderson, Mark Clark; Avinash Kodi; Razvan C. Bunescu; Ahmed Louri, Yu-Kai Chuang; Kuan-Jung Chen; Kun-Lin Lin; Shao-Yun Fang; Bing Li 0005; Ulf Schlichtmann, Duy Thanh Nguyen; Nhut-Minh Ho; Ik-Joon Chang, Kosuke Watanabe; Eunsuk Kang; Chung-Wei Lin; Shinichi Shiraishi, Xingchen Man; Leibo Liu; Jianfeng Zhu 0001; Shaojun Wei, Zihao Liu; Tao Liu 0023; Wujie Wen; Lei Jiang 0001; Jie Xu 0001; Yanzhi Wang; Gang Quan, Ilgweon Kang; Dongwon Park; Changho Han; Chung-Kuan Cheng]
+        cited_by_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [18, 14, 10, 1, 10, 9, 10, 7]
+            first_page          False               None              True              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+                 issue          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [3, 2, 3, 1, 1, 3, 2, 3]
+               journal          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl., Comput. Optim. Appl.]
+             last_page          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [6.0, 6.0, 6.0, 6.0, 8.0, 6.0, 6.0, 6.0]
+      publication_year          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [2019, 2018, 2018, 2019, 2018, 2019, 2018, 2018]
+        publisher_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [SCITEPRESS - Science and Technology Publications, Wiley, Wiley, Association for Computational Linguistics, Engineering and Technology Publishing, Association for Computational Linguistics, Association for Computational Linguistics, Association for Computational Linguistics]
+referenced_works_count          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [0, 35, 60, 0, 17, 0, 0, 0]
+                 title          False               None             False             False          False            False                                                                                                                                                                                                                                                                            [Thread Weaving: Static Resource Scheduling for Multithreaded High-Level Synthesis., LEAD: learning-enabled energy-aware dynamic voltage/frequency scaling in NoCs., PlanarONoC: concurrent placement and routing considering crossing minimization for optical networks-on-chip., St-DRC: Stretchable DRAM Refresh Controller with No Parity-overhead Error Correction Scheme for Energy-efficient DNNs., Runtime monitoring for safety of intelligent vehicles., A General Pattern-Based Dynamic Compilation Framework for Coarse-Grained Reconfigurable Architectures., DeepN-JPEG: a deep neural network favorable JPEG-based image compression framework., Fast and precise routability analysis with conditional design rules.]
+           topic_terms           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [KEGG, Interaction network, Multiple sequence alignment, Homology, Partial derivative, Automatic differentiation, Physical law, Human language, Computational linguistics, Manifold (fluid mechanics), Pride, Feature (linguistics)]
+                  type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings, inproceedings]
+                volume          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [71, 73, 74, 74, 74, 76, 73, 72]
+
+Dataset overview:
+[
+  {
+    "dataset_name": "dblp",
+    "rows": 60591,
+    "columns": 10,
+    "trust_score": 1.0
+  },
+  {
+    "dataset_name": "crossref",
+    "rows": 60749,
+    "columns": 14,
+    "trust_score": 2.738450019370863
+  },
+  {
+    "dataset_name": "open_alex",
+    "rows": 60719,
+    "columns": 13,
+    "trust_score": 3.0
+  }
+]
+
+VALIDATION FEEDBACK:
+(Showing which source values were correct for sample entities)
+
+Attribute "authors":
+  - Sources: open_alex=Yu Zhang; Xiaofei Liao; Lin Gu; Hai Jin; Kan Hu; Haikun Liu; Bingsheng He, dblp=Yu Zhang 0027; Xiaofei Liao; Lin Gu 0002; Hai Jin 0001; Kan Hu; Haikun Liu; Bingsheng He, crossref=Yu Zhang;  Xiaofei Liao;  Lin Gu;  Hai Jin;  Kan Hu;  Haikun Liu;  Bingsheng He
+    → Correct: Yu Zhang; Xiaofei Liao; Lin Gu; Hai Jin; Kan Hu; Haikun Liu; Bingsheng He
+  - Sources: crossref=Bonnie Ruberg, open_alex=Bonnie Ruberg, dblp=Bonnie Ruberg
+    → Correct: Bonnie Ruberg
+  - Sources: open_alex=Supavich Pengnate; Frederick J. Riggins; Limin Zhang, crossref=Supavich (Fone) Pengnate;  Frederick J Riggins;  Limin Zhang, dblp=Supavich (Fone) Pengnate; Frederick J. Riggins; Limin Zhang
+    → Correct: Supavich (Fone) Pengnate; Frederick J. Riggins; Limin Zhang
+  - Sources: crossref=Yuliang Li;  Rui Miao;  Hongqiang Harry Liu;  Yan Zhuang;  Fei Feng;  Lingbo Tang;  Zheng Cao;  Ming Zhang;  Frank Kelly;  Mohammad Alizadeh;  Minlan Yu, open_alex=Yuliang Li; Rui Miao; Hongqiang Harry Liu; Yan Zhuang; Fei Feng; Lingbo Tang; Zheng Cao; Ming Zhang; F. P. Kelly; Mohammad Alizadeh; Minlan Yu, dblp=Yuliang Li; Rui Miao 0001; Hongqiang Harry Liu; Yan Zhuang; Fei Feng; Lingbo Tang; Zheng Cao 0003; Ming Zhang 0005; Frank Kelly; Mohammad Alizadeh; Minlan Yu
+    → Correct: Yuliang Li; Rui Miao; Hongqiang Harry Liu; Yan Zhuang; Fei Feng; Lingbo Tang; Zheng Cao; Ming Zhang; Frank Kelly; Mohammad Alizadeh; Minlan Yu
+  - Sources: open_alex=Shweta Yadav; Asif Ekbal; Sriparna Saha; Ankit Kumar; Pushpak Bhattacharyya, dblp=Shweta Yadav 0001; Asif Ekbal; Sriparna Saha 0001; Ankit Kumar; Pushpak Bhattacharyya, crossref=Shweta Yadav;  Asif Ekbal;  Sriparna Saha;  Ankit Kumar;  Pushpak Bhattacharyya
+    → Correct: Shweta Yadav; Asif Ekbal; Sriparna Saha; Ankit Kumar; Pushpak Bhattacharyya
+
+Attribute "cited_by_count":
+  - Sources: open_alex=14, crossref=15
+    → Correct: 15.0
+  - Sources: crossref=16, open_alex=24
+    → Correct: 27.0
+  - Sources: open_alex=25, crossref=22
+    → Correct: 31.0
+  - Sources: crossref=452, open_alex=420
+    → Correct: 338.0
+  - Sources: open_alex=77, crossref=58
+    → Correct: 74.0
+
+Attribute "first_page":
+  - Sources: open_alex=1, dblp=1.0, crossref=1
+    → Correct: 1
+  - Sources: crossref=632, open_alex=632
+    → Correct: 632
+  - Sources: open_alex=103, crossref=103
+    → Correct: 103
+  - Sources: crossref=44
+    → Correct: 44
+  - Sources: open_alex=18, crossref=18
+    → Correct: 18
+
+Attribute "issue":
+  - Sources: open_alex=4, dblp=4, crossref=4
+    → Correct: 4
+  - Sources: crossref=6, open_alex=6, dblp=6
+    → Correct: 6
+  - Sources: open_alex=2, crossref=2, dblp=2
+    → Correct: 2
+  - Sources: crossref=Supplement_1, open_alex=Supplement_1, dblp=Supplement-1
+    → Correct: Supplement_1
+  - Sources: dblp=4, open_alex=4, crossref=4
+    → Correct: 4
+
+Attribute "journal":
+  - Sources: open_alex=ACM Transactions on Architecture and Code Optimization, dblp=ACM Trans. Archit. Code Optim., crossref=ACM Transactions on Architecture and Code Optimization
+    → Correct: ACM Transactions on Architecture and Code Optimization
+  - Sources: crossref=Games and Culture, open_alex=Games and Culture, dblp=Games Cult.
+    → Correct: Games and Culture
+  - Sources: open_alex=Interacting with Computers, crossref=Interacting with Computers, dblp=Interact. Comput.
+    → Correct: Interacting with Computers
+  - Sources: open_alex=Knowledge-Based Systems, dblp=Knowl. Based Syst., crossref=Knowledge-Based Systems
+    → Correct: Knowledge-Based Systems
+  - Sources: crossref=Bioinformatics, open_alex=Bioinformatics, dblp=Bioinform.
+    → Correct: Bioinformatics
+
+Attribute "last_page":
+  - Sources: open_alex=21, dblp=21.0, crossref=21
+    → Correct: 21
+  - Sources: crossref=652, open_alex=652
+    → Correct: 652
+  - Sources: open_alex=117, crossref=117
+    → Correct: 117
+  - Sources: crossref=58
+    → Correct: 58
+  - Sources: open_alex=29, crossref=29
+    → Correct: 29
+
+Attribute "publication_year":
+  - Sources: open_alex=2020, dblp=2020, crossref=2020
+    → Correct: 2020
+  - Sources: crossref=2020, open_alex=2019, dblp=2020
+    → Correct: 2020
+  - Sources: open_alex=2020, crossref=2020, dblp=2020
+    → Correct: 2020
+  - Sources: crossref=2019, open_alex=2019, dblp=2019
+    → Correct: 2019
+  - Sources: open_alex=2018, dblp=2019, crossref=2019
+    → Correct: 2019
+
+Attribute "referenced_works_count":
+  - Sources: open_alex=29, crossref=38
+    → Correct: 38.0
+  - Sources: crossref=42, open_alex=21
+    → Correct: 42.0
+  - Sources: open_alex=79, crossref=79
+    → Correct: 79.0
+  - Sources: crossref=43, open_alex=42
+    → Correct: 44.0
+  - Sources: open_alex=76, crossref=72
+    → Correct: 60.0
+
+Attribute "title":
+  - Sources: open_alex=AsynGraph, dblp=AsynGraph: Maximizing Data Parallelism for Efficient Iterative Graph Processing on GPUs., crossref=AsynGraph
+    → Correct: AsynGraph: Maximizing Data Parallelism for Efficient Iterative Graph Processing on GPUs
+  - Sources: crossref=Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in <i>Gone Home</i>, open_alex=Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in <i>Gone Home</i>, dblp=Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in 
+    → Correct: Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in Gone Home
+  - Sources: open_alex=Understanding Users’ Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value, crossref=Understanding Users’ Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value, dblp=Understanding Users' Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value.
+    → Correct: Understanding Users' Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value
+  - Sources: crossref=HPCC, open_alex=HPCC, dblp=HPCC: high precision congestion control.
+    → Correct: HPCC: High Precision Congestion Control
+  - Sources: open_alex=Feature assisted stacked attentive shortest dependency path based Bi-LSTM model for protein–protein interaction, dblp=Feature assisted stacked attentive shortest dependency path based Bi-LSTM model for protein-protein interaction., crossref=Feature assisted stacked attentive shortest dependency path based Bi-LSTM model for protein–protein interaction
+    → Correct: Feature assisted stacked attentive shortest dependency path based Bi-LSTM model for protein–protein interaction
+
+Attribute "type":
+  - Sources: open_alex=article, dblp=article, crossref=article
+    → Correct: article
+  - Sources: crossref=article, open_alex=article, dblp=article
+    → Correct: article
+  - Sources: open_alex=article, crossref=article, dblp=article
+    → Correct: article
+  - Sources: crossref=inproceedings, open_alex=article, dblp=inproceedings
+    → Correct: inproceedings
+  - Sources: open_alex=article, dblp=article, crossref=article
+    → Correct: Article
+
+Attribute "volume":
+  - Sources: open_alex=17, dblp=17, crossref=17
+    → Correct: 17
+  - Sources: crossref=15, open_alex=15, dblp=15
+    → Correct: 15
+  - Sources: open_alex=32, crossref=32, dblp=32
+    → Correct: 32
+  - Sources: open_alex=166, dblp=166, crossref=166
+    → Correct: 166
+  - Sources: crossref=36, open_alex=36, dblp=36
+    → Correct: 36
+
+
+
+SOURCE ACCURACY STATISTICS (from validation set):
+
+Attribute "authors":
+  - crossref: 85% correct (85/100 values)
+  - dblp: 25% correct (25/100 values)
+  - open_alex: 43% correct (43/100 values)
+
+Attribute "cited_by_count":
+  - crossref: 42% correct (37/88 values)
+  - open_alex: 56% correct (49/88 values)
+
+Attribute "first_page":
+  - crossref: 98% correct (84/86 values)
+  - dblp: 96% correct (22/23 values)
+  - open_alex: 98% correct (82/84 values)
+
+Attribute "issue":
+  - crossref: 100% correct (80/80 values)
+  - dblp: 95% correct (74/78 values)
+  - open_alex: 100% correct (80/80 values)
+
+Attribute "journal":
+  - crossref: 92% correct (83/90 values)
+  - dblp: 1% correct (1/90 values)
+  - open_alex: 96% correct (87/91 values)
+
+Attribute "last_page":
+  - crossref: 98% correct (84/86 values)
+  - dblp: 91% correct (21/23 values)
+  - open_alex: 98% correct (82/84 values)
+
+Attribute "publication_year":
+  - crossref: 100% correct (100/100 values)
+  - dblp: 100% correct (100/100 values)
+  - open_alex: 100% correct (100/100 values)
+
+Attribute "referenced_works_count":
+  - crossref: 90% correct (80/89 values)
+  - open_alex: 61% correct (54/89 values)
+
+Attribute "title":
+  - crossref: 52% correct (52/100 values)
+  - dblp: 67% correct (67/100 values)
+  - open_alex: 53% correct (53/100 values)
+
+Attribute "type":
+  - crossref: 80% correct (80/100 values)
+  - dblp: 80% correct (80/100 values)
+  - open_alex: 66% correct (66/100 values)
+
+Attribute "volume":
+  - crossref: 100% correct (90/90 values)
+  - dblp: 98% correct (88/90 values)
+  - open_alex: 100% correct (90/90 values)
+
+RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
+consider using 'favour_sources' to prefer that source's values.
+
+PREVIOUS ITERATION RULES (you may keep, modify, or discard):
+{
+  "abstract_text": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "authors": {
+    "kwargs": {
+      "sources": [
+        "crossref"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "cited_by_count": {
+    "kwargs": {
+      "sources": [
+        "open_alex"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "first_page": {
+    "kwargs": {},
+    "resolver": "voting"
+  },
+  "issue": {
+    "kwargs": {
+      "sources": [
+        "crossref",
+        "open_alex"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "journal": {
+    "kwargs": {
+      "sources": [
+        "open_alex",
+        "crossref"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "last_page": {
+    "kwargs": {},
+    "resolver": "voting"
+  },
+  "publication_year": {
+    "kwargs": {
+      "sources": [
+        "crossref",
+        "dblp"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "publisher_name": {
+    "kwargs": {
+      "sources": [
+        "crossref"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "referenced_works_count": {
+    "kwargs": {
+      "sources": [
+        "crossref"
+      ]
+    },
+    "resolver": "favour_sources"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "topic_terms": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "type": {
+    "kwargs": {},
+    "resolver": "voting"
+  },
+  "volume": {
+    "kwargs": {},
+    "resolver": "voting"
+  }
+}
+
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.
+- For attributes where validation shows one source is consistently correct, consider using favour_sources.

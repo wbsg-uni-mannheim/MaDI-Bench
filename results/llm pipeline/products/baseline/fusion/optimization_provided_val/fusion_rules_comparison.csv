@@ -1,0 +1,157 @@
+case,optimization_mode,attribute,resolver,kwargs
+heuristic,none,brand,most_complete,{}
+heuristic,none,bus_type,most_complete,{}
+heuristic,none,chipset_name,longest_string,{}
+heuristic,none,cluster_id,median,{}
+heuristic,none,color,most_complete,{}
+heuristic,none,description,union,"{""separator"": "",""}"
+heuristic,none,form_factor,most_complete,{}
+heuristic,none,height_mm,median,{}
+heuristic,none,interface_type,most_complete,{}
+heuristic,none,length_mm,median,{}
+heuristic,none,memory_type,most_complete,{}
+heuristic,none,model,most_complete,{}
+heuristic,none,model_number,most_complete,{}
+heuristic,none,price,median,{}
+heuristic,none,priceCurrency,most_complete,{}
+heuristic,none,product_type,most_complete,{}
+heuristic,none,read_speed_mb_s,median,{}
+heuristic,none,storage_connection_type,most_complete,{}
+heuristic,none,storage_gb,median,{}
+heuristic,none,title,longest_string,{}
+heuristic,none,title_description,union,"{""separator"": "",""}"
+heuristic,none,url,most_complete,{}
+heuristic,none,vram_gb,median,{}
+heuristic,none,weight_g,median,{}
+heuristic,none,width_mm,median,{}
+heuristic,none,write_speed_mb_s,median,{}
+llm_no_val,none,brand,voting,{}
+llm_no_val,none,bus_type,voting,{}
+llm_no_val,none,chipset_name,voting,{}
+llm_no_val,none,cluster_id,voting,{}
+llm_no_val,none,color,most_complete,{}
+llm_no_val,none,description,union,"{""separator"": "",""}"
+llm_no_val,none,form_factor,voting,{}
+llm_no_val,none,height_mm,median,{}
+llm_no_val,none,interface_type,voting,{}
+llm_no_val,none,length_mm,median,{}
+llm_no_val,none,memory_type,voting,{}
+llm_no_val,none,model,most_complete,{}
+llm_no_val,none,model_number,voting,{}
+llm_no_val,none,price,median,{}
+llm_no_val,none,priceCurrency,voting,{}
+llm_no_val,none,product_type,voting,{}
+llm_no_val,none,read_speed_mb_s,median,{}
+llm_no_val,none,storage_connection_type,voting,{}
+llm_no_val,none,storage_gb,median,{}
+llm_no_val,none,title,longest_string,{}
+llm_no_val,none,title_description,union,"{""separator"": "",""}"
+llm_no_val,none,url,union,"{""separator"": ""|""}"
+llm_no_val,none,vram_gb,median,{}
+llm_no_val,none,weight_g,median,{}
+llm_no_val,none,width_mm,median,{}
+llm_no_val,none,write_speed_mb_s,median,{}
+llm_val,provided,brand,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,bus_type,voting,{}
+llm_val,provided,chipset_name,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,cluster_id,voting,{}
+llm_val,provided,color,longest_string,{}
+llm_val,provided,description,longest_string,{}
+llm_val,provided,form_factor,weighted_voting,{}
+llm_val,provided,height_mm,minimum,{}
+llm_val,provided,interface_type,longest_string,{}
+llm_val,provided,length_mm,minimum,{}
+llm_val,provided,memory_type,voting,{}
+llm_val,provided,model,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,model_number,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+llm_val,provided,price,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,priceCurrency,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,product_type,voting,{}
+llm_val,provided,read_speed_mb_s,maximum,{}
+llm_val,provided,storage_connection_type,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,storage_gb,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,title,longest_string,{}
+llm_val,provided,title_description,longest_string,{}
+llm_val,provided,url,favour_sources,"{""sources"": [""prod1""]}"
+llm_val,provided,vram_gb,weighted_voting,{}
+llm_val,provided,weight_g,prefer_higher_trust,"{""trust_key"": ""trust_score""}"
+llm_val,provided,width_mm,minimum,{}
+llm_val,provided,write_speed_mb_s,maximum,{}
+llm_val_stats,provided,brand,favour_sources,"{""sources"": [""prod1"", ""prod3"", ""prod2"", ""prod4""]}"
+llm_val_stats,provided,bus_type,voting,{}
+llm_val_stats,provided,chipset_name,voting,{}
+llm_val_stats,provided,cluster_id,voting,{}
+llm_val_stats,provided,color,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod4"", ""prod3""]}"
+llm_val_stats,provided,description,favour_sources,"{""sources"": [""prod1"", ""prod3"", ""prod2"", ""prod4""]}"
+llm_val_stats,provided,form_factor,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod3"", ""prod4""]}"
+llm_val_stats,provided,height_mm,favour_sources,"{""sources"": [""prod3"", ""prod1"", ""prod4"", ""prod2""]}"
+llm_val_stats,provided,interface_type,longest_string,{}
+llm_val_stats,provided,length_mm,favour_sources,"{""sources"": [""prod1"", ""prod3"", ""prod4"", ""prod2""]}"
+llm_val_stats,provided,memory_type,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod3"", ""prod4""]}"
+llm_val_stats,provided,model,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod3"", ""prod4""]}"
+llm_val_stats,provided,model_number,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod3"", ""prod2""]}"
+llm_val_stats,provided,price,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod2"", ""prod3""]}"
+llm_val_stats,provided,priceCurrency,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod2"", ""prod3""]}"
+llm_val_stats,provided,product_type,voting,{}
+llm_val_stats,provided,read_speed_mb_s,favour_sources,"{""sources"": [""prod1"", ""prod3"", ""prod2"", ""prod4""]}"
+llm_val_stats,provided,storage_connection_type,favour_sources,"{""sources"": [""prod3"", ""prod2"", ""prod1"", ""prod4""]}"
+llm_val_stats,provided,storage_gb,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod3"", ""prod2""]}"
+llm_val_stats,provided,title,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod4"", ""prod3""]}"
+llm_val_stats,provided,title_description,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod4"", ""prod3""]}"
+llm_val_stats,provided,url,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod4"", ""prod3""]}"
+llm_val_stats,provided,vram_gb,favour_sources,"{""sources"": [""prod1"", ""prod3"", ""prod2"", ""prod4""]}"
+llm_val_stats,provided,weight_g,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod2"", ""prod3""]}"
+llm_val_stats,provided,width_mm,favour_sources,"{""sources"": [""prod1"", ""prod4"", ""prod2"", ""prod3""]}"
+llm_val_stats,provided,write_speed_mb_s,favour_sources,"{""sources"": [""prod1"", ""prod2"", ""prod3"", ""prod4""]}"
+heuristic_stats,provided,brand,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,bus_type,most_complete,{}
+heuristic_stats,provided,chipset_name,longest_string,{}
+heuristic_stats,provided,cluster_id,median,{}
+heuristic_stats,provided,color,most_complete,{}
+heuristic_stats,provided,description,union,"{""separator"": "",""}"
+heuristic_stats,provided,form_factor,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,height_mm,favour_sources,"{""sources"": [""prod3""]}"
+heuristic_stats,provided,interface_type,most_complete,{}
+heuristic_stats,provided,length_mm,favour_sources,"{""sources"": [""prod4""]}"
+heuristic_stats,provided,memory_type,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,model,most_complete,{}
+heuristic_stats,provided,model_number,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,price,median,{}
+heuristic_stats,provided,priceCurrency,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,product_type,favour_sources,"{""sources"": [""prod2""]}"
+heuristic_stats,provided,read_speed_mb_s,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,storage_connection_type,favour_sources,"{""sources"": [""prod3""]}"
+heuristic_stats,provided,storage_gb,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,title,longest_string,{}
+heuristic_stats,provided,title_description,union,"{""separator"": "",""}"
+heuristic_stats,provided,url,most_complete,{}
+heuristic_stats,provided,vram_gb,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,weight_g,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,width_mm,favour_sources,"{""sources"": [""prod1""]}"
+heuristic_stats,provided,write_speed_mb_s,median,{}
+iterative,provided,brand,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,bus_type,voting,{}
+iterative,provided,chipset_name,voting,{}
+iterative,provided,cluster_id,voting,{}
+iterative,provided,color,longest_string,{}
+iterative,provided,description,longest_string,{}
+iterative,provided,form_factor,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,height_mm,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,interface_type,most_complete,{}
+iterative,provided,length_mm,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,memory_type,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,model,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,model_number,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,price,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,priceCurrency,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,product_type,voting,{}
+iterative,provided,read_speed_mb_s,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,storage_connection_type,favour_sources,"{""sources"": [""prod3""]}"
+iterative,provided,storage_gb,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,title,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,title_description,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,url,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,vram_gb,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,weight_g,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,width_mm,favour_sources,"{""sources"": [""prod1""]}"
+iterative,provided,write_speed_mb_s,favour_sources,"{""sources"": [""prod1""]}"

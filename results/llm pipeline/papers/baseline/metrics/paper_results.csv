@@ -1,0 +1,7 @@
+case,category,metric,item,split,value,numerator,denominator,source_file,note
+papers,schema_matching,f1,all_sources,official_gold,1.0,,,DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation from manifest schema_gold.
+papers,schema_matching,precision,all_sources,official_gold,1.0,31.0,31.0,DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation from manifest schema_gold.
+papers,schema_matching,recall,all_sources,official_gold,1.0,31.0,31.0,DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json,Official schema-matching gold evaluation from manifest schema_gold.
+papers,entity_matching,macro_f1,all_pairs,official_test,0.9664558218066867,,4.0,DI-Bench/runs/papers/entity_resolution/matching/entity_matching_official_test.csv,"Best final EM score for the configuration used, on the official held-out test set."
+papers,fusion,accuracy,best_selected_strategy,official_test,0.7838616714697406,816.0,1041.0,DI-Bench/runs/papers/fusion/optimization_provided_val/case_iterative__opt_provided/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.
+papers,consistency,schema_consistency_score,,final_output,0.8769957886187707,693245.0,790477.0,DI-Bench/runs/papers/metrics/consistency.json,

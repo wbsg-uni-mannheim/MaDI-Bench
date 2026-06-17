@@ -1,0 +1,140 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "usecase": "papers",
+    "schema_path": "usecases/papers/input/schemamatching/target_schema.json",
+    "fusion_output_path": "usecases/papers/output/data_fusion/fusion_debug_v5.jsonl",
+    "rows_evaluated": 56912,
+    "fused_table_source": "reconstructed_from_fusion_debug_jsonl",
+    "identifier_columns_excluded": true,
+    "open_taxonomy_policy": "non_exhaustive_membership_is_diagnostic_not_penalizing"
+  },
+  "result": {
+    "consistency_score": 0.9821683635947638,
+    "n_evaluated": 611890,
+    "n_consistent": 600979,
+    "n_inconsistent": 10911,
+    "per_column": {
+      "doi": {
+        "consistency_score": 1.0,
+        "n_evaluated": 56912,
+        "n_consistent": 56912,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "type": {
+        "consistency_score": 1.0,
+        "n_evaluated": 56912,
+        "n_consistent": 56912,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "title": {
+        "consistency_score": 1.0,
+        "n_evaluated": 56912,
+        "n_consistent": 56912,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "authors": {
+        "consistency_score": 1.0,
+        "n_evaluated": 56912,
+        "n_consistent": 56912,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "publication_year": {
+        "consistency_score": 0.9998242901321338,
+        "n_evaluated": 56912,
+        "n_consistent": 56902,
+        "n_inconsistent": 10,
+        "failure_counts": {
+          "maximum": 10
+        },
+        "excluded_from_dataset_score": false
+      },
+      "journal": {
+        "consistency_score": 1.0,
+        "n_evaluated": 45340,
+        "n_consistent": 45340,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "keywords": {
+        "consistency_score": 0.9957311232351839,
+        "n_evaluated": 48022,
+        "n_consistent": 47817,
+        "n_inconsistent": 205,
+        "failure_counts": {
+          "maxLength": 205
+        },
+        "excluded_from_dataset_score": false
+      },
+      "volume": {
+        "consistency_score": 1.0,
+        "n_evaluated": 43961,
+        "n_consistent": 43961,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "issue": {
+        "consistency_score": 0.9999294333497989,
+        "n_evaluated": 28342,
+        "n_consistent": 28340,
+        "n_inconsistent": 2,
+        "failure_counts": {
+          "pattern": 2
+        },
+        "excluded_from_dataset_score": false
+      },
+      "first_page": {
+        "consistency_score": 0.8985589793244859,
+        "n_evaluated": 52671,
+        "n_consistent": 47328,
+        "n_inconsistent": 5343,
+        "failure_counts": {
+          "page_locator.numeric_range": 5343
+        },
+        "excluded_from_dataset_score": false
+      },
+      "last_page": {
+        "consistency_score": 0.898405164230112,
+        "n_evaluated": 52670,
+        "n_consistent": 47319,
+        "n_inconsistent": 5351,
+        "failure_counts": {
+          "page_locator.numeric_comparison": 1,
+          "page_locator.numeric_range": 5350
+        },
+        "excluded_from_dataset_score": false
+      },
+      "referenced_works_count": {
+        "consistency_score": 1.0,
+        "n_evaluated": 56324,
+        "n_consistent": 56324,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [
+      "id",
+      "publisher",
+      "cited_by_count"
+    ],
+    "extra_columns_ignored": [
+      "_fusion_group_id",
+      "_id",
+      "crossref_id",
+      "dblp_id",
+      "open_alex_id"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

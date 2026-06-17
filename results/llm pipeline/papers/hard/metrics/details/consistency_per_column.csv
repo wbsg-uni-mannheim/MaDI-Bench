@@ -1,0 +1,13 @@
+column,consistency_score,n_evaluated,n_consistent,n_inconsistent,excluded_from_dataset_score,failure_counts,diagnostics,skipped,skip_reason
+id,,0,0,0,True,{},{},True,identifier_column
+type,0.941044847684095,93851,88318,5533,False,"{""enum"": 5533}",{},False,
+title,1.0,98363,98363,0,False,{},{},False,
+authors,0.8461620389600707,93891,79447,14444,False,"{""items.maxLength"": 1, ""items.minLength"": 237, ""items.type"": 1, ""maxItems"": 1, ""type"": 14204}",{},False,
+publication_year,0.932846746529596,93577,87293,6284,False,"{""maximum"": 177, ""minimum"": 1104, ""type"": 5003}",{},False,
+journal,1.0,61283,61283,0,False,{},{},False,
+volume,1.0,53274,53274,0,False,{},{},False,
+issue,0.9999613705721019,25887,25886,1,False,"{""pattern"": 1}",{},False,
+first_page,0.7429603636929353,57851,42981,14870,False,"{""page_locator.numeric_range"": 2905, ""pattern"": 11965}",{},False,
+last_page,0.7361557328911459,57894,42619,15275,False,"{""page_locator.numeric_comparison"": 65, ""page_locator.numeric_range"": 2933, ""pattern"": 12277}",{},False,
+referenced_works_count,0.926165347405453,68220,63183,5037,False,"{""type"": 5037}",{},False,
+cited_by_count,0.9431941551010827,68162,64290,3872,False,"{""type"": 3872}",{},False,

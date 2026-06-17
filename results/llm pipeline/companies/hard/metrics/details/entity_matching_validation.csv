@@ -1,0 +1,3 @@
+case,pair,split,f1,precision,recall,matcher,threshold,source_file,note
+companies-augmented-hard,dbpedia__forbes,pipeline_validation,0.953846153846154,0.9789473684210528,0.93,MLBasedMatcher,0.3,DI-Bench/runs/augmented/companies/hard/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.
+companies-augmented-hard,forbes__fullcontact,pipeline_validation,0.925531914893617,0.9886363636363636,0.87,MLBasedMatcher,0.3,DI-Bench/runs/augmented/companies/hard/entity_resolution/matching/matching_summary.csv,Validation-only matcher optimization score; not a paper test result.

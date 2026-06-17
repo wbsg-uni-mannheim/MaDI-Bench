@@ -1,0 +1,113 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "music",
+    "schema_path": "DI-Bench/usecases/music/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/music/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.9664561228311073,
+    "n_evaluated": 200275,
+    "n_consistent": 193557,
+    "n_inconsistent": 6718,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "name": {
+        "consistency_score": 1.0,
+        "n_evaluated": 31090,
+        "n_consistent": 31090,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "artist": {
+        "consistency_score": 1.0,
+        "n_evaluated": 31090,
+        "n_consistent": 31090,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "release-date": {
+        "consistency_score": 1.0,
+        "n_evaluated": 21835,
+        "n_consistent": 21835,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "release-country": {
+        "consistency_score": 1.0,
+        "n_evaluated": 23236,
+        "n_consistent": 23236,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "label": {
+        "consistency_score": 1.0,
+        "n_evaluated": 22627,
+        "n_consistent": 22627,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "genre": {
+        "consistency_score": 1.0,
+        "n_evaluated": 22425,
+        "n_consistent": 22425,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false,
+        "diagnostics": {
+          "taxonomy": {
+            "exhaustive": true,
+            "membership_enforced": true,
+            "n_values_checked": 22425,
+            "n_known_values": 22425,
+            "n_unknown_values": 0,
+            "known_value_rate": 1.0
+          }
+        }
+      },
+      "tracks": {
+        "consistency_score": 0.8217111611450627,
+        "n_evaluated": 31090,
+        "n_consistent": 25547,
+        "n_inconsistent": 5543,
+        "failure_counts": {
+          "items.minLength": 357,
+          "maxItems": 1,
+          "minItems": 5185
+        },
+        "excluded_from_dataset_score": false
+      },
+      "duration": {
+        "consistency_score": 0.9303992417959958,
+        "n_evaluated": 16882,
+        "n_consistent": 15707,
+        "n_inconsistent": 1175,
+        "failure_counts": {
+          "maximum": 1,
+          "type": 1174
+        },
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

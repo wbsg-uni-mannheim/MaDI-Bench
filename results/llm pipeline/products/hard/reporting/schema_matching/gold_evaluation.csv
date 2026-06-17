@@ -1,0 +1,6 @@
+Source,Precision,Recall,F1,Correct,Predicted,Gold,Missing
+All_Sources,0.98,0.98,0.98,98,100,100,2
+Products_1,1.0,1.0,1.0,25,25,25,0
+Products_2,1.0,1.0,1.0,25,25,25,0
+Products_3,0.92,0.92,0.92,23,25,25,2
+Products_4,1.0,1.0,1.0,25,25,25,0

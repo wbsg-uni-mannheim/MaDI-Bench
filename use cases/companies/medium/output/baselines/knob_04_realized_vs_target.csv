@@ -1,0 +1,10 @@
+label,coverage,fraction
+baseline,1,0.0
+baseline,2,0.739460370994941
+baseline,3,0.260539629005059
+target_medium,1,0.0
+target_medium,2,0.739460370994941
+target_medium,3,0.260539629005059
+realised_medium,1,0.0
+realised_medium,2,0.739460370994941
+realised_medium,3,0.260539629005059

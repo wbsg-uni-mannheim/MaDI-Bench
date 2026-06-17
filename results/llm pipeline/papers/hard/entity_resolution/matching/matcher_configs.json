@@ -1,0 +1,16 @@
+{
+  "dblp__crossref": {
+    "f1": 0.7738095238095238,
+    "matcher": "RuleBasedMatcher",
+    "precision": 0.9558823529411765,
+    "recall": 0.65,
+    "threshold": 0.5
+  },
+  "dblp__open_alex": {
+    "f1": 0.9637305699481865,
+    "matcher": "MLBasedMatcher",
+    "precision": 1.0,
+    "recall": 0.93,
+    "threshold": 0.3
+  }
+}

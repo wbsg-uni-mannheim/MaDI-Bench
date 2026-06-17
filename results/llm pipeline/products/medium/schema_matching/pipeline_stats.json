@@ -1,0 +1,30 @@
+{
+  "products_4": {
+    "rows": 703,
+    "mappings": 26,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "products_1": {
+    "rows": 810,
+    "mappings": 26,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "products_2": {
+    "rows": 810,
+    "mappings": 26,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "products_3": {
+    "rows": 780,
+    "mappings": 26,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  }
+}

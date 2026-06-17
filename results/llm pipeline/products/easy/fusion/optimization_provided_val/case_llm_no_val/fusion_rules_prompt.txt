@@ -1,0 +1,201 @@
+We are doing DATA FUSION: merge multiple records that refer to the same real-world entity.
+
+Task:
+1) Infer what the MAIN ENTITY is from dataset names and attribute names.
+2) For EACH attribute, choose EXACTLY ONE conflict resolution function (resolver) from the allowed list.
+3) The main goal is to correctly identify list-like attributes and choose a list resolver (usually 'union').
+
+Allowed resolvers (choose only from this list):
+['average', 'earliest', 'favour_sources', 'intersection', 'intersection_k_sources', 'longest_string', 'maximum', 'median', 'minimum', 'most_complete', 'most_recent', 'prefer_higher_trust', 'random_value', 'shortest_string', 'sum_values', 'union', 'voting', 'weighted_voting']
+
+Resolver guidance:
+- Lists/Sets: union, intersection, intersection_k_sources (if you choose union for string-lists, you may set kwargs.separator to ',', ';', or '|')
+- Strings: most_complete, longest_string, shortest_string
+- Numerics: median, average, maximum, minimum, sum_values
+- Dates: most_recent, earliest
+- Source-aware: prefer_higher_trust (use kwargs.trust_key='trust_score'), voting, weighted_voting, favour_sources, random_value
+
+Starting point (heuristic plan you can override):
+{
+  "brand": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "bus_type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "chipset_name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "cluster_id": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "color": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "description": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "form_factor": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "height_mm": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "interface_type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "length_mm": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "memory_type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "model": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "model_number": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "price": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "priceCurrency": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "product_type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "read_speed_mb_s": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "storage_connection_type": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "storage_gb": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "title_description": {
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
+  },
+  "url": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "vram_gb": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  },
+  "weight_g": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "width_mm": {
+    "kwargs": {},
+    "resolver": "median"
+  },
+  "write_speed_mb_s": {
+    "kwargs": {},
+    "resolver": "most_complete"
+  }
+}
+
+Attribute diagnostics (to help spot list-like attributes and separators):
+              attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             sample_values
+                  brand          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [Gigabyte, Corsair, MSI, Asus, ADATA, AMD, Samsung, Kingston]
+               bus_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [PCI Express x4, PCI Express x16, PCIe 4.0, PCI Express x16, PCI Express x8, SATA, USB 3.0, USB 3.0]
+           chipset_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [GeForce RTX 3080, GeForce GTX 1660 Ti, GeForce RTX 2060 Super, GeForce RTX 2070 Super, GeForce RTX 3080, GeForce GT 710, GeForce GT 710, GeForce GTX 1660 Ti]
+             cluster_id          False               None             False              True          False             True                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [1002037.0, 1007272.0, 1029916.0, 1038355.0, 1045382.0, 1050421.0, 1057972.0, 1068495.0]
+                  color          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [Silver, Zwart, Black/White, black, Alb, Indigo Blue, Black/Silver, Red]
+            description           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                               [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail, Huge 960GB storage capacity and super Rapid 3480Mbps read speed and amazingly Rapid 3000Mbps write speed., Twin Frozr 7 Thermal DesignRGB Mystic LightDragon Center, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd, ADATA XPG GAMMIX S11 PRO, AMD Radeon Pro WX 4100 4GB Workstation Video Card - 4GB GDDR5 128 bit - Peak Engine Clock: 1201MHz, Typical Engine Clock, ★★★★★ good prices, Fast delivery! If you order before 14.00 your goods will be sent the same everyday - Gulf Micro Syste, SSD disk interni, Patriot Burst 120GB]
+            form_factor          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [M.2 2280, M.2 2280, 2.5inch, 2.5-inch, 2.5-inch, 2.5-inch, 2.5-inch, 3.5-inch]
+              height_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [127.0, 6.1, 7.0, 7.0, 20.8, 21.2, 3.7, 3.5]
+         interface_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [NVMe, NVMe, SATA III, USB Type-C, USB Type-A, Micro B, SAS, SATA III]
+              length_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [247.0, 80.0, 118.1, 100.0, 80.0, 88.9, 67.0, 149.9]
+            memory_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [GDDR6, GDDR6, 3-bit MLC V-NAND, DDR3, GDDR6, GDDR6, GDDR6, GDDR5]
+                  model          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [GeForce RTX 3080 GAMING OC, MP510, GeForce GTX 1660 Ti GAMING X 6G, Strix Rtx 2060S Oc Evo, XPG GAMMIX S11 PRO, Radeon Pro WX 4100, EVO 860, DataTraveler microDuo]
+           model_number          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   [GV-N3080GAMING OC-10GD, CSSD-F960GBMP510, 912-V375-040, 90YV0DQ0-M0NA00, AGAMMIXS11P-1TT-C, PBU240GS25SSDR, DT100G3/256GB, 872481-B21]
+                  price           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [791.99, 2,124.0, 1,400.3, 10,819.98, 137.44, 569.0, 2,569.0, 5,999.0]
+          priceCurrency          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [USD, NOK, AED, ZAR, EUR, AUD, AED, RSD]
+           product_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [GPU, SSD, GPU, SSD, GPU, SSD, SSD, USB_STICK]
+        read_speed_mb_s          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [3,480.0 MB/s, 3500.0 MB/s, 550.0 MB/s, 100.0 MB/s, 130.0 MB/s, 550.0 MB/s, 130.0 MB/s, 2100.0 MB/s]
+storage_connection_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [M.2, 2,5, USB Type-C, USB Type-A, 2.5-inch SAS, 2.5-inch SATA, 2.5-inch SATA, M2]
+             storage_gb           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [960.0 GB, 1,000.0 GB, 4,000.0 GB, 240.0 GB, 128.0 GB, 256.0 GB, 3,000.0 GB, 1,800.0 GB]
+                  title          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail, Corsair MP510 M.2-2280 960GB, MSI GeForce GTX 1660 Ti GAMING X 6G PCI Express x16 3.0 6GB GDDR6 192-bit | 912-V375-040, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd, XPG GAMMIX S11 Pro M.2 1000 GB PCI Express 3.0 3D TLC NVMe, AMD Radeon Pro WX 4100 4GB Workstation Video Card, Samsung EVO 860 4TB Serie SSD 2,5 SATA-600 7mm- MZ-76E4T0B, Patriot Burst 240GB 2.5\\]
+      title_description           True                  ,             False             False          False            False [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail. Description: Gigabyte Video Ca, Corsair MP510 M.2-2280 960GB. Description: Huge 960GB storage capacity and super Rapid 3480Mbps read speed and amazingly, MSI GeForce GTX 1660 Ti GAMING X 6G PCI Express x16 3.0 6GB GDDR6 192-bit | 912-V375-040. Description: Twin Frozr 7 Ther, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd. Description: Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2X, XPG GAMMIX S11 Pro M.2 1000 GB PCI Express 3.0 3D TLC NVMe. Description: ADATA XPG GAMMIX S11 PRO, AMD Radeon Pro WX 4100 4GB Workstation Video Card. Description: AMD Radeon Pro WX 4100 4GB Workstation Video Card - 4GB , Samsung EVO 860 4TB Serie SSD 2,5 SATA-600 7mm- MZ-76E4T0B. Description: ★★★★★ good prices, Fast delivery! If you order , SSD 2.5 SATA3 6Gb/s 240GB Patriot Burst 555MBs/500MBs PBU240GS25SSDR. Description: SSD disk interni, Patriot Burst 120GB]
+                    url          False               None             False             False          False            False                                                                                                                                                                    [https://www.thekeykey.com/detail/GV-N3080GAMING-OC-10GD/?name=247479, https://www.cclonline.com/product/287495/CSSD-F960GBMP510/Solid-State-Drives-SSDs-/Corsair-Force-MP510-960GB-M-2-Solid-S, https://pcdubai.com/product/msi-geforce-gtx-1660-ti-gaming-x-6g-pci-express-x16-3-0-6gb-gddr6-192-bit-912-v375-040, https://sbsdomain.com/asus-strix-rtx-2060s-oc-evo-8gb-2xfan-2xhdmi-2xd, https://pcacierto.com/tienda/xpg-gammix-s11-pro-m-2-1000-gb-pci-express-3-0-3d-tlc-nvme, https://www.auspcmarket.com.au/video-cards/workstation-video-cards/amd-radeon-pro-wx-4100-4gb-workstation-video-card, https://www.gulfmicro.ae/samsung-evo-860-4tb-serie-ssd-2-5-sata-600-7mm-mz-76e4t0b-mz-76e4t0b-eu, https://www.symbolin.com/kupi/ssd-2-5-sata3-6gb-s-240gb-patriot-burst-555mbs-500mbs-pbu240gs25ssdr-3599]
+                vram_gb          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [10.0 GB, 10.0 GB, 2.0 GB, 2.0 GB, 8.0 GB, 2.0 GB, 2.0 GB, 8.0 GB]
+               weight_g          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [869.0, 11.0, 11.2, 8.0, 58.0, 3.134, 600.0000000000001, 230.0]
+               width_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [46.0, 22.0, 87.9, 60.0, 22.0, 22.0, 42.2, 147.0]
+       write_speed_mb_s          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        [3,000.0 MB/s, 3000.0 MB/s, 520.0 MB/s, 15.0 MB/s, 520.0 MB/s, 10.0 MB/s, 1500.0 MB/s, 520.0 MB/s]
+
+Dataset overview (trust_score may be missing; you can still use prefer_higher_trust if it makes sense):
+[
+  {
+    "dataset_name": "products_4",
+    "rows": 701,
+    "columns": 27,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "products_1",
+    "rows": 805,
+    "columns": 27,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "products_2",
+    "rows": 805,
+    "columns": 27,
+    "trust_score": null
+  },
+  {
+    "dataset_name": "products_3",
+    "rows": 784,
+    "columns": 27,
+    "trust_score": null
+  }
+]
+
+Return ONLY strict JSON in this schema:
+{
+  "main_entity": "<string>",
+  "attribute_rules": {
+    "<attribute>": {"resolver": "<resolver_name>", "kwargs": {...}},
+    ...
+  }
+}
+Notes:
+- Include every attribute listed in the heuristic plan.
+- Use kwargs only when needed. Do not invent new resolvers.

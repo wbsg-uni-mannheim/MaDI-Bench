@@ -1,0 +1,7 @@
+case,strategy,optimization_mode,split,accuracy,correct,total,source_file,note
+papers-augmented-hard,heuristic,none,provided_validation,0.5932914046121593,566,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-hard,llm_no_val,none,provided_validation,0.5870020964360587,560,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-hard,llm_val,provided,provided_validation,0.5859538784067087,559,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-hard,llm_val_stats,provided,provided_validation,0.5911949685534591,564,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-hard,heuristic_stats,provided,provided_validation,0.5849056603773585,558,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.
+papers-augmented-hard,iterative,provided,provided_validation,0.5859538784067087,559,954,DI-Bench/runs/augmented/papers/hard/fusion/optimization_provided_val/comparison_summary_validation.csv,Official validation_set.xml after conversion/import.

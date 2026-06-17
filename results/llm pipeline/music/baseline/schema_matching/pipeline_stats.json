@@ -1,0 +1,23 @@
+{
+  "discogs": {
+    "rows": 22627,
+    "mappings": 9,
+    "columns_normalized": 3,
+    "transformed": 65445,
+    "failed": 202
+  },
+  "lastfm": {
+    "rows": 9865,
+    "mappings": 5,
+    "columns_normalized": 1,
+    "transformed": 4635,
+    "failed": 0
+  },
+  "musicbrainz": {
+    "rows": 4763,
+    "mappings": 7,
+    "columns_normalized": 2,
+    "transformed": 9213,
+    "failed": 0
+  }
+}

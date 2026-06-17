@@ -1,0 +1,156 @@
+{
+  "metric": "consistency",
+  "metadata": {
+    "case": "papers-augmented-hard",
+    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/hard/input/schemamatching/target_schema.json",
+    "fused_output": "DI-Bench/runs/augmented/papers/hard/fusion/fused_clean.csv"
+  },
+  "result": {
+    "consistency_score": 0.9154215004668159,
+    "n_evaluated": 772253,
+    "n_consistent": 706937,
+    "n_inconsistent": 65316,
+    "per_column": {
+      "id": {
+        "consistency_score": null,
+        "n_evaluated": 0,
+        "n_consistent": 0,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": true,
+        "skipped": true,
+        "skip_reason": "identifier_column"
+      },
+      "type": {
+        "consistency_score": 0.941044847684095,
+        "n_evaluated": 93851,
+        "n_consistent": 88318,
+        "n_inconsistent": 5533,
+        "failure_counts": {
+          "enum": 5533
+        },
+        "excluded_from_dataset_score": false
+      },
+      "title": {
+        "consistency_score": 1.0,
+        "n_evaluated": 98363,
+        "n_consistent": 98363,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "authors": {
+        "consistency_score": 0.8461620389600707,
+        "n_evaluated": 93891,
+        "n_consistent": 79447,
+        "n_inconsistent": 14444,
+        "failure_counts": {
+          "items.maxLength": 1,
+          "items.minLength": 237,
+          "items.type": 1,
+          "maxItems": 1,
+          "type": 14204
+        },
+        "excluded_from_dataset_score": false
+      },
+      "publication_year": {
+        "consistency_score": 0.932846746529596,
+        "n_evaluated": 93577,
+        "n_consistent": 87293,
+        "n_inconsistent": 6284,
+        "failure_counts": {
+          "maximum": 177,
+          "minimum": 1104,
+          "type": 5003
+        },
+        "excluded_from_dataset_score": false
+      },
+      "journal": {
+        "consistency_score": 1.0,
+        "n_evaluated": 61283,
+        "n_consistent": 61283,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "volume": {
+        "consistency_score": 1.0,
+        "n_evaluated": 53274,
+        "n_consistent": 53274,
+        "n_inconsistent": 0,
+        "failure_counts": {},
+        "excluded_from_dataset_score": false
+      },
+      "issue": {
+        "consistency_score": 0.9999613705721019,
+        "n_evaluated": 25887,
+        "n_consistent": 25886,
+        "n_inconsistent": 1,
+        "failure_counts": {
+          "pattern": 1
+        },
+        "excluded_from_dataset_score": false
+      },
+      "first_page": {
+        "consistency_score": 0.7429603636929353,
+        "n_evaluated": 57851,
+        "n_consistent": 42981,
+        "n_inconsistent": 14870,
+        "failure_counts": {
+          "page_locator.numeric_range": 2905,
+          "pattern": 11965
+        },
+        "excluded_from_dataset_score": false
+      },
+      "last_page": {
+        "consistency_score": 0.7361557328911459,
+        "n_evaluated": 57894,
+        "n_consistent": 42619,
+        "n_inconsistent": 15275,
+        "failure_counts": {
+          "page_locator.numeric_comparison": 65,
+          "page_locator.numeric_range": 2933,
+          "pattern": 12277
+        },
+        "excluded_from_dataset_score": false
+      },
+      "referenced_works_count": {
+        "consistency_score": 0.926165347405453,
+        "n_evaluated": 68220,
+        "n_consistent": 63183,
+        "n_inconsistent": 5037,
+        "failure_counts": {
+          "type": 5037
+        },
+        "excluded_from_dataset_score": false
+      },
+      "cited_by_count": {
+        "consistency_score": 0.9431941551010827,
+        "n_evaluated": 68162,
+        "n_consistent": 64290,
+        "n_inconsistent": 3872,
+        "failure_counts": {
+          "type": 3872
+        },
+        "excluded_from_dataset_score": false
+      }
+    },
+    "columns_missing_from_dataframe": [
+      "doi"
+    ],
+    "extra_columns_ignored": [
+      "_id",
+      "_fusion_sources",
+      "kw_list",
+      "dx",
+      "Attribute_9",
+      "pb",
+      "Attribute_8",
+      "abstract_text",
+      "publ",
+      "kw",
+      "Attribute_2"
+    ],
+    "n_empty_columns_excluded": 0
+  }
+}

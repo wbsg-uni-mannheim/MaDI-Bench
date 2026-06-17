@@ -1,0 +1,7 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+fullcontact,id,Companies,id,0.95,llm_based_matching
+fullcontact,nm,Companies,name,0.95,llm_based_matching
+fullcontact,cn,Companies,country,0.95,llm_based_matching
+fullcontact,cy,Companies,city,0.95,llm_based_matching
+fullcontact,kp,Companies,keypeople,0.95,llm_based_matching
+fullcontact,fy,Companies,founded,0.95,llm_based_matching

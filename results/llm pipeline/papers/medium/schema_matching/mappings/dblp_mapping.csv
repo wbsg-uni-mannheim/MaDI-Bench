@@ -1,0 +1,13 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+dblp,id,Scholarly Paper,id,0.95,llm_based_matching
+dblp,typ,Scholarly Paper,type,0.95,llm_based_matching
+dblp,ttl,Scholarly Paper,title,0.95,llm_based_matching
+dblp,auth,Scholarly Paper,authors,0.95,llm_based_matching
+dblp,pub_yr,Scholarly Paper,publication_year,0.95,llm_based_matching
+dblp,jrnl,Scholarly Paper,journal,0.95,llm_based_matching
+dblp,vol,Scholarly Paper,volume,0.95,llm_based_matching
+dblp,iss,Scholarly Paper,issue,0.95,llm_based_matching
+dblp,fpage,Scholarly Paper,first_page,0.95,llm_based_matching
+dblp,lpage,Scholarly Paper,last_page,0.95,llm_based_matching
+dblp,ref_cnt,Scholarly Paper,referenced_works_count,0.95,llm_based_matching
+dblp,cite_cnt,Scholarly Paper,cited_by_count,0.95,llm_based_matching

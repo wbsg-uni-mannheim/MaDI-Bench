@@ -1,0 +1,11 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+sales,id,Videogames,id,0.95,llm_based_matching
+sales,Attribute_2,Videogames,name,0.95,llm_based_matching
+sales,Attribute_3,Videogames,releaseYear,0.95,llm_based_matching
+sales,Attribute_4,Videogames,developer,0.95,llm_based_matching
+sales,Attribute_5,Videogames,publisher,0.95,llm_based_matching
+sales,Attribute_6,Videogames,platform,0.95,llm_based_matching
+sales,Attribute_7,Videogames,genres,0.95,llm_based_matching
+sales,Attribute_8,Videogames,criticScore,0.95,llm_based_matching
+sales,Attribute_9,Videogames,userScore,0.95,llm_based_matching
+sales,Attribute_10,Videogames,ESRB,0.95,llm_based_matching

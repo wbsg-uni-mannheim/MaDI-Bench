@@ -1,0 +1,5 @@
+Source,Precision,Recall,F1,Correct,Predicted,Gold,Missing
+All_Sources,1.0,0.8333333333333334,0.9090909090909091,20,20,24,4
+Discogs,1.0,1.0,1.0,8,8,8,0
+Lastfm,1.0,0.5,0.6666666666666666,4,4,8,4
+Musicbrainz,1.0,1.0,1.0,8,8,8,0

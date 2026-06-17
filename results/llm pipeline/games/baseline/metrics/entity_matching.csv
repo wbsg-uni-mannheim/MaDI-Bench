@@ -1,0 +1,4 @@
+case,pair,split,f1,precision,recall,source_file,note
+games,dbpedia__metacritic,official_test,0.5630252100840336,0.5075757575757576,0.6320754716981132,DI-Bench/runs/games/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+games,dbpedia__sales,official_test,0.7,0.6319444444444444,0.7844827586206896,DI-Bench/runs/games/entity_resolution/matching/entity_matching_official_test.csv,Official held-out test score for the final configuration selected by validation.
+games,all_pairs,official_test,0.6315126050420168,,,DI-Bench/runs/games/entity_resolution/matching/entity_matching_official_test.csv,Unweighted mean across pair-level official test F1 values.

@@ -1,0 +1,37 @@
+{
+  "average_input_density": 0.548,
+  "data_density_change": 0.0482,
+  "density_change_vs_largest": -0.1961,
+  "fused_data_density": 0.5961,
+  "fused_output_columns": 13,
+  "fused_output_records": 60976,
+  "fusion_ratio": 0.1421,
+  "input_columns_target_schema": 12,
+  "input_sources": 3,
+  "largest_source_density": 0.7923,
+  "largest_source_name": "dbpedia",
+  "merged_records": 8215,
+  "per_source_stats": [
+    {
+      "columns": 7,
+      "density": 0.7923,
+      "name": "dbpedia",
+      "rows": 45358
+    },
+    {
+      "columns": 9,
+      "density": 0.8757,
+      "name": "metacritic",
+      "rows": 18735
+    },
+    {
+      "columns": 11,
+      "density": 0.8872,
+      "name": "sales",
+      "rows": 6985
+    }
+  ],
+  "row_gain_over_largest": 15618,
+  "row_gain_percentage": 34.43,
+  "total_input_records": 71078
+}

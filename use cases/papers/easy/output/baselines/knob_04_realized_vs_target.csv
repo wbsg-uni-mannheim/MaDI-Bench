@@ -1,0 +1,10 @@
+label,coverage,fraction
+baseline,1,0.0
+baseline,2,0.09324302179494183
+baseline,3,0.9067569782050582
+target_easy,1,0.0
+target_easy,2,0.1
+target_easy,3,0.9
+realised_easy,1,0.0
+realised_easy,2,0.09324302179494183
+realised_easy,3,0.9067569782050582

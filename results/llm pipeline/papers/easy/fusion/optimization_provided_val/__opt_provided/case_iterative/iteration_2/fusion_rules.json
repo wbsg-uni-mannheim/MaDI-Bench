@@ -1,0 +1,123 @@
+{
+  "attribute_rules": {
+    "abstract_text": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "authors": {
+      "kwargs": {
+        "sources": [
+          "open_alex",
+          "dblp",
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "cited_by_count": {
+      "kwargs": {
+        "sources": [
+          "open_alex",
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "first_page": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "issue": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "journal": {
+      "kwargs": {
+        "sources": [
+          "open_alex",
+          "crossref",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "keywords": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "dblp",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "last_page": {
+      "kwargs": {
+        "sources": [
+          "open_alex",
+          "crossref",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publication_year": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "dblp",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "publisher": {
+      "kwargs": {
+        "sources": [
+          "crossref"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "referenced_works_count": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "type": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "volume": {
+      "kwargs": {
+        "sources": [
+          "crossref",
+          "open_alex",
+          "dblp"
+        ]
+      },
+      "resolver": "favour_sources"
+    }
+  },
+  "main_entity": "scholarly publication"
+}

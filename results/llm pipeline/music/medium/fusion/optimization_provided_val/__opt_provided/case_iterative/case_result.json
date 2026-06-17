@@ -1,0 +1,214 @@
+{
+  "case_name": "iterative",
+  "rules": {
+    "artist": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "duration": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "genre": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "label": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "discogs"
+        ]
+      }
+    },
+    "name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      }
+    },
+    "release-country": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      }
+    },
+    "release-date": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "musicbrainz"
+        ]
+      }
+    },
+    "tracks": {
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
+    }
+  },
+  "accuracy_by_mode": {},
+  "source_stats": {
+    "name": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "name",
+        "correct": 94,
+        "total": 100,
+        "accuracy": 0.94
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "name",
+        "correct": 79,
+        "total": 84,
+        "accuracy": 0.9405
+      },
+      "lastfm": {
+        "source_name": "lastfm",
+        "attribute": "name",
+        "correct": 21,
+        "total": 43,
+        "accuracy": 0.4884
+      }
+    },
+    "artist": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "artist",
+        "correct": 87,
+        "total": 96,
+        "accuracy": 0.9062
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "artist",
+        "correct": 83,
+        "total": 84,
+        "accuracy": 0.9881
+      },
+      "lastfm": {
+        "source_name": "lastfm",
+        "attribute": "artist",
+        "correct": 27,
+        "total": 41,
+        "accuracy": 0.6585
+      }
+    },
+    "release-date": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "release-date",
+        "correct": 88,
+        "total": 98,
+        "accuracy": 0.898
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "release-date",
+        "correct": 69,
+        "total": 81,
+        "accuracy": 0.8519
+      }
+    },
+    "release-country": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "release-country",
+        "correct": 52,
+        "total": 95,
+        "accuracy": 0.5474
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "release-country",
+        "correct": 17,
+        "total": 82,
+        "accuracy": 0.2073
+      }
+    },
+    "duration": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "duration",
+        "correct": 15,
+        "total": 98,
+        "accuracy": 0.1531
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "duration",
+        "correct": 37,
+        "total": 46,
+        "accuracy": 0.8043
+      },
+      "lastfm": {
+        "source_name": "lastfm",
+        "attribute": "duration",
+        "correct": 0,
+        "total": 37,
+        "accuracy": 0.0
+      }
+    },
+    "label": {
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "label",
+        "correct": 63,
+        "total": 82,
+        "accuracy": 0.7683
+      }
+    },
+    "genre": {
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "genre",
+        "correct": 79,
+        "total": 82,
+        "accuracy": 0.9634
+      }
+    },
+    "tracks": {
+      "musicbrainz": {
+        "source_name": "musicbrainz",
+        "attribute": "tracks",
+        "correct": 49,
+        "total": 87,
+        "accuracy": 0.5632
+      },
+      "discogs": {
+        "source_name": "discogs",
+        "attribute": "tracks",
+        "correct": 42,
+        "total": 75,
+        "accuracy": 0.56
+      },
+      "lastfm": {
+        "source_name": "lastfm",
+        "attribute": "tracks",
+        "correct": 14,
+        "total": 42,
+        "accuracy": 0.3333
+      }
+    }
+  },
+  "iterations_used": 2,
+  "optimization_mode": "provided"
+}

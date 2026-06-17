@@ -1,0 +1,100 @@
+{
+  "steps": [
+    {
+      "name": "Step 1a: Schema Matching",
+      "runtime_seconds": 14.737172365188599,
+      "prompt_tokens": 8731,
+      "completion_tokens": 502,
+      "total_tokens": 9233,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 3,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 1b: Normalization",
+      "runtime_seconds": 515.9211094379425,
+      "prompt_tokens": 169777,
+      "completion_tokens": 139407,
+      "total_tokens": 309184,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 56,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 2: Validation & Training",
+      "runtime_seconds": 985.8605959415436,
+      "prompt_tokens": 357231,
+      "completion_tokens": 16030,
+      "total_tokens": 373261,
+      "embedding_tokens": 771918,
+      "total_cost_usd": 0.0,
+      "successful_requests": 2000,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 3: FAISS Candidate Generation",
+      "runtime_seconds": 11.28864312171936,
+      "prompt_tokens": 946,
+      "completion_tokens": 340,
+      "total_tokens": 1286,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 2,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 4: Active Learning Training Construction",
+      "runtime_seconds": 399.94002199172974,
+      "prompt_tokens": 189379,
+      "completion_tokens": 8320,
+      "total_tokens": 197699,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 1040,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 5: Matcher Optimization",
+      "runtime_seconds": 134.89196395874023,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 7.8: Fusion Optimization (Provided Val)",
+      "runtime_seconds": 245.79413485527039,
+      "prompt_tokens": 16358,
+      "completion_tokens": 11181,
+      "total_tokens": 27539,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 6,
+      "web_search_count": 0,
+      "from_cache": false
+    },
+    {
+      "name": "Step 7.6: End-to-End Metrics",
+      "runtime_seconds": 0.7047080993652344,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "embedding_tokens": 0,
+      "total_cost_usd": 0.0,
+      "successful_requests": 0,
+      "web_search_count": 0,
+      "from_cache": false
+    }
+  ]
+}

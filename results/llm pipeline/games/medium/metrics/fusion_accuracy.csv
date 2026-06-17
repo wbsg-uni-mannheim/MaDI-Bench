@@ -1,0 +1,2 @@
+case,strategy,split,accuracy,correct,total,source_file,note
+games-augmented-medium,heuristic,official_test,0.7847309136420526,627,799,DI-Bench/runs/augmented/games/medium/fusion/optimization_provided_val/case_heuristic/evaluation/eval_test.json,Official test_set.xml evaluation for the selected fusion strategy.

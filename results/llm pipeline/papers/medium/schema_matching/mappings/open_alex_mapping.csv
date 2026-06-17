@@ -1,0 +1,13 @@
+source_dataset,source_column,target_dataset,target_column,score,notes
+open_alex,id,Scholarly Paper,id,0.95,llm_based_matching
+open_alex,wt,Scholarly Paper,type,0.95,llm_based_matching
+open_alex,tt,Scholarly Paper,title,0.95,llm_based_matching
+open_alex,aus,Scholarly Paper,authors,0.95,llm_based_matching
+open_alex,pyr,Scholarly Paper,publication_year,0.95,llm_based_matching
+open_alex,jrn,Scholarly Paper,journal,0.95,llm_based_matching
+open_alex,vol,Scholarly Paper,volume,0.95,llm_based_matching
+open_alex,isu,Scholarly Paper,issue,0.95,llm_based_matching
+open_alex,fpa,Scholarly Paper,first_page,0.95,llm_based_matching
+open_alex,lpa,Scholarly Paper,last_page,0.95,llm_based_matching
+open_alex,rwn,Scholarly Paper,referenced_works_count,0.95,llm_based_matching
+open_alex,cby,Scholarly Paper,cited_by_count,0.95,llm_based_matching

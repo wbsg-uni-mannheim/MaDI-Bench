@@ -1,0 +1,31 @@
+{
+  "overall_accuracy": 0.4336448598130841,
+  "total_comparisons": 535,
+  "correct_comparisons": 232,
+  "per_attribute_accuracy": {
+    "founded": {
+      "accuracy": 0.7205882352941176,
+      "total": 68
+    },
+    "assets": {
+      "accuracy": 0.0,
+      "total": 100
+    },
+    "revenue": {
+      "accuracy": 0.01,
+      "total": 100
+    },
+    "country": {
+      "accuracy": 0.8383838383838383,
+      "total": 99
+    },
+    "name": {
+      "accuracy": 0.71,
+      "total": 100
+    },
+    "city": {
+      "accuracy": 0.4117647058823529,
+      "total": 68
+    }
+  }
+}

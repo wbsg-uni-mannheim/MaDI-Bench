@@ -1,0 +1,200 @@
+{
+  "auto": {
+    "best_case_key": null,
+    "validation_accuracy": null,
+    "test_accuracy": null,
+    "per_attribute_accuracy": {},
+    "rules": null
+  },
+  "provided": {
+    "best_case_key": "llm_no_val",
+    "validation_accuracy": 0.3813186813186813,
+    "test_accuracy": 0.3408179631114675,
+    "per_attribute_accuracy": {
+      "interface_type": {
+        "accuracy": 0.12345679012345678,
+        "total": 81
+      },
+      "brand": {
+        "accuracy": 0.8518518518518519,
+        "total": 81
+      },
+      "title_description": {
+        "accuracy": 0.0875,
+        "total": 80
+      },
+      "storage_gb": {
+        "accuracy": 0.2,
+        "total": 60
+      },
+      "write_speed_mb_s": {
+        "accuracy": 0.2653061224489796,
+        "total": 49
+      },
+      "bus_type": {
+        "accuracy": 0.48148148148148145,
+        "total": 81
+      },
+      "storage_connection_type": {
+        "accuracy": 0.40350877192982454,
+        "total": 57
+      },
+      "chipset_name": {
+        "accuracy": 0.23809523809523808,
+        "total": 21
+      },
+      "model_number": {
+        "accuracy": 0.25925925925925924,
+        "total": 81
+      },
+      "model": {
+        "accuracy": 0.25,
+        "total": 80
+      },
+      "title": {
+        "accuracy": 0.19753086419753085,
+        "total": 81
+      },
+      "read_speed_mb_s": {
+        "accuracy": 0.16071428571428573,
+        "total": 56
+      },
+      "description": {
+        "accuracy": 0.1111111111111111,
+        "total": 81
+      },
+      "priceCurrency": {
+        "accuracy": 0.30864197530864196,
+        "total": 81
+      },
+      "vram_gb": {
+        "accuracy": 0.47619047619047616,
+        "total": 21
+      },
+      "form_factor": {
+        "accuracy": 0.43283582089552236,
+        "total": 67
+      },
+      "price": {
+        "accuracy": 0.20987654320987653,
+        "total": 81
+      },
+      "product_type": {
+        "accuracy": 0.9259259259259259,
+        "total": 81
+      },
+      "memory_type": {
+        "accuracy": 0.5925925925925926,
+        "total": 27
+      }
+    },
+    "rules": {
+      "brand": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "bus_type": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "chipset_name": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "cluster_id": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "color": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "description": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "form_factor": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "height_mm": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "interface_type": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "length_mm": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "memory_type": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "model": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "model_number": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "price": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "priceCurrency": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "product_type": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "read_speed_mb_s": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "storage_connection_type": {
+        "kwargs": {},
+        "resolver": "voting"
+      },
+      "storage_gb": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "title": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "title_description": {
+        "kwargs": {},
+        "resolver": "most_complete"
+      },
+      "url": {
+        "kwargs": {
+          "separator": "|"
+        },
+        "resolver": "union"
+      },
+      "vram_gb": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "weight_g": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "width_mm": {
+        "kwargs": {},
+        "resolver": "median"
+      },
+      "write_speed_mb_s": {
+        "kwargs": {},
+        "resolver": "median"
+      }
+    }
+  }
+}
