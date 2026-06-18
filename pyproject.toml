@@ -1,0 +1,77 @@
+[project]
+name = "madi-bench"
+version = "0.1.0"
+description = "MaDI-Bench benchmark assets and synthetic variant-generation tools"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Data and Web Science Group, University of Mannheim" }
+]
+dependencies = [
+  "uma-pydi[synthetic] @ git+https://github.com/wbsg-uni-mannheim/PyDI.git",
+  "numpy>=2.1,<2.2",
+  "pandas>=2.0,<3.0",
+  "PyYAML>=6.0,<7.0",
+  "python-dotenv>=1.0,<1.1",
+  "rapidfuzz>=3.0,<4.0",
+  "scikit-learn>=1.3,<2.0",
+  "scipy>=1.11,<2.0",
+  "openpyxl>=3.1,<4.0",
+  "tqdm>=4.67,<5.0",
+]
+
+[project.optional-dependencies]
+llm = [
+  "langchain-openai>=1.1,<2.0",
+  "litellm>=1.83,<2.0",
+  "json-repair>=0.59,<1.0",
+]
+neural = [
+  "sentence-transformers>=5.0,<6.0",
+  "torch>=2.0,<3.0",
+  "transformers>=4.30,<5.0",
+]
+matchers = [
+  "bm25s>=0.3.4,<1.0",
+  "fuzzywuzzy>=0.18,<1.0",
+  "Levenshtein>=0.27,<1.0",
+  "mmh3>=5.0,<6.0",
+  "valentine>=0.5,<1.0",
+]
+test = [
+  "pytest>=9.0,<10.0",
+]
+dev = [
+  "pytest>=9.0,<10.0",
+]
+
+[project.scripts]
+madi-generate-variant = "usecases_synthetic.scripts.generate_variant:main"
+madi-measure-baseline = "usecases_synthetic.scripts.measure_baseline:main"
+madi-validate-variant = "usecases_synthetic.scripts.validate_variant:main"
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["usecases_synthetic*"]
+
+[tool.setuptools.package-data]
+usecases_synthetic = [
+  "config/**/*.yaml",
+  "pools/**/*.csv",
+  "pools/**/*.json",
+  "statistics/**/*.md",
+  "third_party/**/*.md",
+  "third_party/**/LICENSE*",
+  "usecases/**/*",
+  "OVERVIEW.md",
+  "PIPELINE.md",
+  "README.md",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["usecases_synthetic/tests"]
+pythonpath = ["."]

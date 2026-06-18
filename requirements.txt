@@ -1,0 +1,12 @@
+# Runtime environment for the MaDI-Bench synthetic variant-generation tools.
+#
+# Install from the repository root:
+#
+#   python -m pip install -r requirements.txt
+#
+# For local development against a sibling PyDI checkout instead of the GitHub
+# dependency declared in pyproject.toml:
+#
+#   python -m pip install -e ../PyDI[synthetic]
+#   python -m pip install -e . --no-deps
+-e .

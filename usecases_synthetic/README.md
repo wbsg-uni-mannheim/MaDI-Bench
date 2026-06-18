@@ -6,6 +6,46 @@ The generated tasks themselves live in [../use cases/](../use%20cases/); this di
 
 **Start here:** [PIPELINE.md](PIPELINE.md) — the ordered, status-tracked list of scripts to run in sequence. Read that file first; it's the runbook and the source of truth for what's built vs. planned.
 
+## Install
+
+From the repository root:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+`requirements.txt` installs this repository in editable mode via the root
+`pyproject.toml`. The variant pipeline depends on
+[`PyDI`](https://github.com/wbsg-uni-mannheim/PyDI) for the data-integration
+base classes and evaluators; the default install resolves it from GitHub as
+`uma-pydi[synthetic]`.
+
+If you have a sibling PyDI checkout and want to use that local version instead:
+
+```bash
+python -m pip install -e ../PyDI[synthetic]
+python -m pip install -e . --no-deps
+```
+
+The install exposes the main reproducibility entry points:
+
+```bash
+madi-generate-variant --domain companies --level easy
+madi-measure-baseline --domain companies
+madi-validate-variant --domain companies --level easy
+```
+
+The same modules can still be run directly:
+
+```bash
+python -m usecases_synthetic.scripts.generate_variant --domain companies --level easy
+python -m usecases_synthetic.scripts.measure_baseline --domain companies
+python -m usecases_synthetic.scripts.validate_variant --domain companies --level easy
+```
+
 ## Layout
 
 ```
@@ -19,7 +59,7 @@ usecases_synthetic/
       pool_stats.json      Counts, agreement breakdown, coverage notes
 ```
 
-## Scope (v1 prototype)
+## Scope 
 
 - **Domains covered:** companies, games, music, products, and papers.
 - **Pool sources (reuse only, no new matching runs):**
