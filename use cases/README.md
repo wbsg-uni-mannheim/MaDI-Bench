@@ -6,7 +6,7 @@ This directory holds the 20 integration tasks of MaDI-Bench: five domains, each 
 use cases/<domain>/<base|easy|medium|hard>/
 ```
 
-The base task is the real-world integration problem. The variants hold the same integration problem fixed but raise or lower the difficulty of the pipeline steps, derived with the difficulty knobs in [`../knobs/`](../knobs/). For the layout inside each task (inputs, ground truth, reference outputs), see the [top-level README](../README.md#use-cases--the-benchmark-tasks).
+The base task is the real-world integration problem. Each variant keeps that same problem but dials the difficulty of the pipeline steps up or down, using the difficulty knobs in [`../knobs/`](../knobs/). For the layout inside each task (inputs, ground truth, reference outputs), see the [top-level README](../README.md#use-cases--the-benchmark-tasks).
 
 ## Overview
 
@@ -31,6 +31,8 @@ Beyond the source tables, each task ships labeled splits for entity matching and
 | Scientific Papers | 2 | 10,666 | 2,666 | 13,332 | 100 | 100 |
 
 Across the five base tasks this amounts to more than 93,000 labeled record pairs for entity matching and 1,000 hand-annotated fusion records carrying close to 11,000 verified attribute values.
+
+Each fusion directory also ships a **Better Readability** CSV alongside every original validation/test split, named with the suffix `_better_readability.csv`. These files keep only the target-schema columns (from `input/schemamatching/target_schema.json`), in schema order, and drop the provenance and source-helper fields — which makes them easier to skim when first exploring a task. The original fusion files remain the authoritative artifacts: they retain the source attributes, provenance annotations, and raw left/right values needed for tracing and evaluation. When a target-schema field is absent from an original split, the Better Readability CSV leaves that column empty rather than inferring a value.
 
 ---
 

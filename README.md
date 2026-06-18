@@ -28,7 +28,7 @@ What the benchmark provides:
 
 - **20 integration tasks across 5 domains** — Games, Companies, Music, Products, and Scientific Papers. Each domain ships one base task plus *easy*, *medium*, and *hard* variants.
 - **Ground truth for every step** — a gold schema mapping, labeled entity-matching train/validation/test splits, and hand-annotated fusion validation/test records, in addition to the integrated reference output.
-- **A variant-generation method** built on eight controllable *difficulty knobs*, which derive easier and harder versions of each base task. The easy variants keep simpler, cheaper methods competitive; the hard variants keep headroom as systems improve, so the benchmark stays useful over time.
+- **A variant-generation method** built on eight controllable *difficulty knobs*, which derive easier and harder versions of each base task. The easy variants keep simpler, cheaper methods competitive; the hard variants preserve headroom as systems improve, so the benchmark stays useful over time.
 - **Validation runs from three reference pipelines** — a human-engineered pipeline, a best-of-breed pipeline, and an LLM-based pipeline.
 
 Across the five base tasks, the artifacts include more than **93,000 labeled record pairs** for entity matching, **1,000 hand-annotated fusion records** carrying close to **11,000 verified attribute values**, and a gold schema mapping per task. All artifacts are released in common formats (CSV, JSON, XML).
@@ -59,7 +59,7 @@ use cases/<domain>/<base|easy|medium|hard>/
 │   ├── schemamatching/    # target_schema.json (JSON Schema with value constraints),
 │   │                      # sm_mapping_gold.json (gold schema mapping), taxonomy CSVs
 │   ├── entitymatching/    # labeled pair splits: <srcA>_2_<srcB>_{train,val,test}.csv
-│   └── fusion/            # validation_set.xml, test_set.xml (annotated fusion records)
+│   └── fusion/            # annotated fusion records plus *_better_readability.csv views
 ├── config/                # difficulty.yaml for the variant (variants only)
 └── output/                # reference outputs from the human pipeline (metrics, schema
                            # matching, blocking evaluation, cluster analysis, data fusion,
