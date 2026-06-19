@@ -1,60 +1,637 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="E2EDI-Bench">
-  <title>E2EDI-Bench</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="MaDI-Bench: an end-to-end benchmark for the integration of relational tables, covering schema matching, value normalization, entity matching, and data fusion." />
+  <meta name="keywords" content="MaDI-Bench, data integration, schema matching, entity matching, data fusion, benchmark" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MaDI-Bench: An End-to-End Data Integration Benchmark</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
-    :root {
-      color-scheme: light;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #111827;
-      background: #ffffff;
-    }
+    body { font-family: "Noto Sans", sans-serif; }
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    .navbar.is-spaced { position: sticky; top: 0; z-index: 30; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.05), 0 4px 12px rgba(0,0,0,.04); padding-top: .6rem; padding-bottom: .6rem; }
+    .navbar-menu.is-active { box-shadow: 0 8px 12px rgba(0,0,0,.06); }
+    .publication-title, .publication-authors, .title { font-family: "Google Sans", sans-serif; }
+    .publication-authors a { color: hsl(204, 86%, 53%) !important; }
+    .publication-authors a:hover { text-decoration: underline; }
+    .author-block { display: inline-block; }
+    .section .content, .section .content p, .section p, .section li { text-align: justify; }
+    .link-block a { margin: 5px; }
+    .mono { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-    }
+    /* data source cards */
+    .dcard { border: 1px solid #dbdbdb; border-radius: 6px; overflow: hidden; background: #fff; height: 100%; }
+    .dcard .dh { background: #fafafa; border-bottom: 1px solid #ededed; padding: .5rem .75rem; font-weight: 600; font-size: .92rem; display: flex; align-items: center; gap: .45rem; }
+    .dcard .dh .file { margin-left: auto; color: #aaa; font-size: .72rem; font-family: ui-monospace, Menlo, monospace; font-weight: 400; }
+    .dot { width: .62rem; height: .62rem; border-radius: 50%; display: inline-block; flex: none; }
+    .dtab { width: 100%; border-collapse: collapse; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: .8rem; }
+    .dtab td { padding: .32rem .75rem; border-bottom: 1px solid #f1f1f1; vertical-align: top; }
+    .dtab tr:last-child td { border-bottom: 0; }
+    .dtab .k { color: #8a8a8a; white-space: nowrap; width: 47%; }
+    .dtab .k.op { color: #b25000; }
+    .dtab .v { color: #363636; }
+    .dtab .v.empty { color: #bbb; font-style: italic; }
 
-    header {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
+    /* schema mapping */
+    .maptab { width: 100%; border-collapse: collapse; font-family: ui-monospace, Menlo, monospace; font-size: .82rem; border: 1px solid #dbdbdb; border-radius: 6px; overflow: hidden; }
+    .maptab td { padding: .45rem .9rem; border-bottom: 1px solid #f1f1f1; }
+    .maptab tr:last-child td { border-bottom: 0; }
+    .maptab .src { color: #8a8a8a; }
+    .maptab .arr { text-align: center; color: #b25000; width: 2.4rem; }
+    .maptab .tgt { color: hsl(204, 70%, 40%); font-weight: 600; }
 
-    h1 {
-      margin: 0 0 12px;
-      font-size: 40px;
-      line-height: 1.1;
-      font-weight: 700;
-      letter-spacing: 0;
-    }
+    /* normalization + fused tables */
+    .ntab, .ftab { width: 100%; border-collapse: collapse; border: 1px solid #dbdbdb; border-radius: 6px; overflow: hidden; font-size: .9rem; background: #fff; }
+    .ntab th { background: #fafafa; text-align: left; padding: .55rem .9rem; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: #888; font-weight: 600; border-bottom: 1px solid #ededed; }
+    .ntab td { padding: .55rem .9rem; border-bottom: 1px solid #f1f1f1; vertical-align: top; }
+    .ntab tr:last-child td { border-bottom: 0; }
+    .ntab .attr { font-weight: 600; }
+    .ntab .raw { font-family: ui-monospace, Menlo, monospace; font-size: .8rem; color: #b25000; }
+    .ntab .norm { font-family: ui-monospace, Menlo, monospace; font-size: .8rem; color: hsl(204, 70%, 38%); font-weight: 600; }
 
-    .authors {
-      margin: 0 0 20px;
-      font-size: 18px;
-      line-height: 1.5;
-      color: #374151;
-    }
+    .ftab td { padding: .5rem .9rem; border-bottom: 1px solid #f1f1f1; vertical-align: middle; }
+    .ftab tr:last-child td { border-bottom: 0; }
+    .ftab .fk { font-family: ui-monospace, Menlo, monospace; font-size: .82rem; color: #777; width: 28%; }
+    .ftab .fv { font-weight: 600; }
+    .prov { font-family: ui-monospace, Menlo, monospace; font-size: .68rem; color: #7a7a7a; border: 1px solid #e3e3e3; border-radius: 4px; padding: 0 .35rem; margin-left: .3rem; font-weight: 400; }
+    .prov.v { color: #b25000; border-color: #f0d8c5; background: #fcf3ec; }
 
-    a {
-      color: #1f5fbf;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    /* matching pairs */
+    .pair { display: flex; align-items: center; gap: .6rem; border: 1px solid #ededed; border-radius: 6px; padding: .5rem .8rem; margin-bottom: .5rem; font-family: ui-monospace, Menlo, monospace; font-size: .82rem; flex-wrap: wrap; background:#fff; }
+    .pair .vs { color: #bbb; }
+    .pair .tag { margin-left: auto; }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    .chg { background: #fff5d6; border-radius: 3px; padding: 0 .22rem; }
+    .legend { font-size: .82rem; color: #888; margin-top: .6rem; text-align: left; }
+    .legend .prov { margin-left: 0; }
+
+    .step-tag { display:inline-block; font-family: ui-monospace, Menlo, monospace; font-size:.8rem; font-weight:600; color:#fff; background:#363636; border-radius:4px; padding:.05rem .5rem; margin-right:.5rem; }
+    .stepmeta { font-size:.85rem; color:#7a7a7a; margin:.1rem 0 .7rem; }
+    .stepmeta span { margin-right:1.3rem; white-space:nowrap; }
+    .stepmeta b { color:#4a4a4a; font-weight:600; }
+    .example { background:#fafafa; border:1px solid #ededed; border-left:3px solid #c4c4c4; border-radius:0 6px 6px 0; padding:1rem 1.1rem .6rem; margin:1rem 0 1.5rem; }
+    .example .ex-label { font-family: ui-monospace, Menlo, monospace; font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; color:#999; margin-bottom:.7rem; }
+    .example .ex-label b { color:#b25000; font-weight:600; }
+
+    .knob-box { border: 1px solid #ededed; border-radius: 6px; padding: .8rem 1rem; height: 100%; background:#fff; }
+    .knob-box .kn { font-family: ui-monospace, Menlo, monospace; font-size: .72rem; color: #b25000; font-weight: 600; }
+    .knob-box .kt { font-weight: 600; }
+    .knob-box .kd { font-size: .85rem; color: #555; }
+    .pipeline-rail { font-family: ui-monospace, Menlo, monospace; font-size: .82rem; color: #777; }
+    .pipeline-rail b { color: #363636; font-weight: 600; }
+    .tabs.is-toggle li.is-active a { background:#363636; border-color:#363636; }
+    .panel-v { display:none; }
+    .panel-v.is-active { display:block; }
+    .num-cell { font-family: ui-monospace, Menlo, monospace; text-align:right; }
+    .task-list .content p { margin-bottom: .8rem; }
+    .pl { border:1px solid #ededed; border-radius:6px; padding:1rem 1.2rem; height:100%; background:#fff; }
+    .pl .pl-h { font-weight:600; }
+    .pl .pl-tag { font-family: ui-monospace, Menlo, monospace; font-size:.7rem; color:#b25000; text-transform:uppercase; letter-spacing:.05em; }
+
+    /* variant base-vs-hard comparison */
+    .vtab { width:100%; border-collapse:collapse; border:1px solid #dbdbdb; border-radius:6px; overflow:hidden; font-size:.88rem; background:#fff; }
+    .vtab th { background:#fafafa; text-align:left; padding:.5rem .9rem; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; color:#888; font-weight:600; border-bottom:1px solid #ededed; }
+    .vtab td { padding:.5rem .9rem; border-bottom:1px solid #f1f1f1; vertical-align:middle; }
+    .vtab tr:last-child td { border-bottom:0; }
+    .vtab .fld { font-weight:600; }
+    .vtab .bv { font-family:ui-monospace,Menlo,monospace; font-size:.8rem; color:#999; }
+    .vtab .hv { font-family:ui-monospace,Menlo,monospace; font-size:.8rem; color:#363636; }
+    .vtab .hv .chg { background:#fff5d6; border-radius:3px; padding:0 .22rem; }
+    .vtab .drop { color:#b25000; font-style:italic; }
+    .ktag { font-family:ui-monospace,Menlo,monospace; font-size:.7rem; color:#b25000; background:#fcf3ec; border:1px solid #f0d8c5; border-radius:4px; padding:.02rem .4rem; white-space:nowrap; }
+    .ktag.none { color:#bbb; background:#f7f7f7; border-color:#eee; }
+    .knob-box .kst { font-family:ui-monospace,Menlo,monospace; font-size:.67rem; color:#999; text-transform:uppercase; letter-spacing:.04em; }
+    .kex { font-family:ui-monospace,Menlo,monospace; font-size:.72rem; color:#444; margin-top:.6rem; padding-top:.5rem; border-top:1px dashed #ececec; }
+    .kex .lab { color:#b25000; font-weight:600; font-size:.62rem; text-transform:uppercase; letter-spacing:.05em; margin-right:.4rem; }
+    .kex .b { color:#9a9a9a; }
+    .kex .a { background:#fff5d6; border-radius:3px; padding:0 .22rem; color:#363636; }
+
+    /* results table */
+    .rtab { width:100%; border-collapse:collapse; border:1px solid #dbdbdb; border-radius:6px; overflow:hidden; font-size:.86rem; background:#fff; }
+    .rtab th, .rtab td { padding:.45rem .7rem; border-bottom:1px solid #f1f1f1; text-align:right; }
+    .rtab thead th { background:#fafafa; color:#888; font-size:.72rem; text-transform:uppercase; letter-spacing:.03em; font-weight:600; border-bottom:1px solid #ededed; }
+    .rtab thead tr:first-child th { text-align:center; }
+    .rtab th:first-child, .rtab td:first-child { text-align:left; font-weight:600; }
+    .rtab tbody tr:last-child td { border-bottom:0; }
+    .rtab td.n { font-family:ui-monospace,Menlo,monospace; color:#555; }
+    .rtab td.best { color:#0a7a5a; font-weight:700; }
+    .rtab .grp { border-left:1px solid #e6e6e6; }
+
+    /* multi-record sample tables */
+    .samp-wrap { overflow-x:auto; border:1px solid #dbdbdb; border-radius:6px; margin-bottom:.8rem; }
+    .samp-wrap .sh { font-weight:600; font-size:.82rem; padding:.45rem .7rem; background:#f4f6f8; border-bottom:1px solid #e6e6e6; display:flex; align-items:center; gap:.45rem; }
+    .samp-wrap .sh .file { margin-left:auto; color:#aaa; font-size:.7rem; font-family:ui-monospace,Menlo,monospace; font-weight:400; }
+    .samp { width:100%; border-collapse:collapse; font-family:ui-monospace,Menlo,monospace; font-size:.72rem; background:#fff; }
+    .samp th { background:#fafafa; color:#999; text-align:left; padding:.34rem .6rem; border-bottom:1px solid #ededed; white-space:nowrap; font-weight:600; }
+    .samp td { padding:.3rem .6rem; border-bottom:1px solid #f3f3f3; white-space:nowrap; color:#444; }
+    .samp tr:last-child td { border-bottom:0; }
+    .samp .empty { color:#c0c0c0; font-style:italic; }
+
+    /* foldable example card */
+    .foldcard { border:1px solid #e3e3e3; border-radius:6px; margin:.3rem 0 1.4rem; background:#fff; }
+    .foldcard > summary { cursor:pointer; padding:.6rem .9rem; font-size:.85rem; font-weight:600; color:#555; list-style:none; display:flex; align-items:center; gap:.55rem; }
+    .foldcard > summary::-webkit-details-marker { display:none; }
+    .foldcard > summary::before { content:"\25B8"; color:#b25000; font-size:.8rem; transition:transform .15s ease; }
+    .foldcard[open] > summary::before { transform:rotate(90deg); }
+    .foldcard > summary:hover { color:#000; }
+    .foldcard[open] > summary { border-bottom:1px solid #f0f0f0; }
+    .foldbody { padding:.9rem .9rem .3rem; }
+    .chall { border-left:3px solid #b25000; background:#fcf7f3; border-radius:0 6px 6px 0; padding:.7rem 1rem .55rem; margin:.5rem 0 1.1rem; }
+    .chall .chall-l { font-family:ui-monospace,Menlo,monospace; font-size:.68rem; text-transform:uppercase; letter-spacing:.06em; color:#b25000; font-weight:600; }
+    .chall ul { margin:.4rem 0 0; padding-left:1.2rem; list-style:disc; }
+    .chall li { font-size:.9rem; color:#454545; text-align:left; margin-bottom:.18rem; line-height:1.45; display:list-item; list-style:disc; }
+    .chall li::marker { color:#d08a5a; }
+    .egl { font-size:.8rem; color:#999; }
+    .egl a { font-family:ui-monospace,Menlo,monospace; font-size:.76rem; }
   </style>
 </head>
 <body>
-  <header>
-    <h1>MaDI-Bench</h1>
-    <p class="authors">Aaron Steiner, Ralph Peeters, and Christian Bizer</p>
-    <a href="https://github.com/wbsg-uni-mannheim/E2EDI-Bench">GitHub</a>
-  </header>
+
+<!-- NAVBAR -->
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation" style="border-bottom:1px solid #f0f0f0;">
+  <div class="container is-max-desktop">
+    <div class="navbar-brand">
+      <a class="navbar-item has-text-weight-bold" href="#top" style="font-family:'Google Sans',sans-serif;">MaDI-Bench</a>
+      <a role="button" class="navbar-burger" data-target="navbarMenu" aria-label="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </a>
+    </div>
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#abstract">Abstract</a>
+        <a class="navbar-item" href="#tasks">Tasks</a>
+        <a class="navbar-item" href="#artifacts">Artifacts</a>
+        <a class="navbar-item" href="#pipeline">Pipeline</a>
+        <a class="navbar-item" href="#variants">Variants</a>
+        <a class="navbar-item" href="#validation">Validation</a>
+        <a class="navbar-item" href="#resources">Resources</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-body">
+    <div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-2 publication-title">MaDI-Bench: An End-to-End Data Integration Benchmark</h1>
+      <div class="is-size-5 publication-authors">
+        <span class="author-block"><a href="https://www.uni-mannheim.de/dws/people/researchers/phd-students/aaron-steiner/">Aaron Steiner</a>,</span>
+        <span class="author-block"><a href="https://www.uni-mannheim.de/dws/people/researchers/postdoctoral-research-fellows/dr-ralph-peeters/">Ralph Peeters</a>,</span>
+        <span class="author-block"><a href="https://www.uni-mannheim.de/dws/people/professors/prof-dr-christian-bizer/">Christian Bizer</a></span>
+      </div>
+      <div class="is-size-6 publication-authors" style="margin-top:.4rem;">
+        <span class="author-block"><a href="https://www.uni-mannheim.de/dws/research/focus-groups/web-based-systems-prof-bizer/">Data and Web Science Group, University of Mannheim</a></span>
+      </div>
+      <div class="column has-text-centered" style="margin-top:1rem;">
+        <div class="publication-links">
+          <!-- TODO: point Paper at the arXiv/PDF link once available -->
+          <span class="link-block"><a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-file-lines"></i></span><span>Paper</span></a></span>
+          <span class="link-block"><a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fab fa-github"></i></span><span>Code &amp; Data</span></a></span>
+          <span class="link-block"><a href="https://github.com/wbsg-uni-mannheim/PyDI" class="external-link button is-normal is-rounded is-dark"><span class="icon"><i class="fas fa-cube"></i></span><span>PyDI</span></a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABSTRACT -->
+<section class="section" id="abstract" style="padding-top:1rem;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Abstract</h2>
+    <div class="content is-size-6">
+      <p>Data integration combines heterogeneous data sets into a single, coherent representation. It involves a sequence of interdependent tasks: schema matching, value normalization, entity blocking, entity matching, and data fusion. Existing benchmarks either evaluate these steps in isolation or target only incomplete versions of the pipeline, leaving out specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods.</p>
+      <p>This paper fills the gap by introducing the <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b>, the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. MaDI-Bench contributes (i) a set of baseline end-to-end data integration tasks across several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a method for deriving variants of these tasks to prevent the quick saturation of the benchmark as systems improve. We validate the benchmark using a human-engineered pipeline, a best-of-breed pipeline, and an LLM-based pipeline. All benchmark artifacts are available for public download.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE BASE TASKS -->
+<section class="section" id="tasks" style="padding-top:0;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">The Base Tasks</h2>
+    <div class="content is-size-6">
+      <p>MaDI-Bench consists of five end-to-end data integration tasks: Games, Companies, Music, Products, and Scientific Papers. Each task takes several heterogeneous source tables in a domain and asks a system to return one fused target table, exercising schema matching, value normalization, entity matching, and data fusion together. The benchmark provides ground truth to score every step on its own, not only the final table: a gold schema mapping for schema matching, the target schema's constraints and taxonomies for value normalization (measured as consistency with the schema), labeled record pairs for blocking and entity matching, and hand-annotated records for data fusion, together with metrics for the end-to-end result. Each base task also ships in easy, medium, and hard variants, for 20 integration tasks in total.</p>
+      <p class="has-text-centered pipeline-rail" style="text-align:center;"><b>Schema matching</b> &nbsp;→&nbsp; <b>Value normalization</b> &nbsp;→&nbsp; <b>Entity blocking &amp; matching</b> &nbsp;→&nbsp; <b>Data fusion</b></p>
+    </div>
+    <nav class="level" style="margin:1.2rem 0 .5rem;">
+      <div class="level-item has-text-centered"><div><p class="title is-3">5</p><p class="heading">Domains</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">20</p><p class="heading">Tasks</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">93k+</p><p class="heading">Match pairs</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">1,000</p><p class="heading">Fused records</p></div></div>
+    </nav>
+
+    <div style="margin-top:1.5rem;"></div>
+    <div class="content is-size-6 task-list"><p><b>Games.</b> Integrates three video-game sources: Metacritic (review scores and ESRB ratings), a sales dataset (commercial performance), and DBpedia (release dates, developers, platforms, genres, and series). The target schema has ten attributes.</p></div>
+    <div class="chall"><span class="chall-l">Challenges</span>
+      <ul>
+        <li>The same game on a different platform is a separate entity, so a matcher must not over-rely on the title.</li>
+        <li>Identical titles recur across platforms and sequels, and special editions and downloadable content differ only slightly in name.</li>
+        <li>Platform, genre, date, and rating vocabularies must be normalized (taxonomies are provided).</li>
+      </ul>
+    </div>
+    <details class="foldcard">
+      <summary>Sample records from each source</summary>
+      <div class="foldbody">
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#0d6e5b"></span>DBpedia<span class="file">dbpedia.csv</span></div>
+        <table class="samp"><thead><tr><th>wiki_ref</th><th>title</th><th>launch_yr</th><th>studio</th><th>system</th><th>genre</th><th>franchise</th></tr></thead><tbody><tr><td>dbpedia_11</td><td>Mario Kart Arcade GP</td><td>2005-01-01</td><td>Namco</td><td>Arcade game</td><td>Racing video game</td><td>Mario Kart</td></tr><tr><td>dbpedia_101</td><td>Dr. Mario</td><td>1990-01-01</td><td>Nintendo Research &amp; Development 1</td><td>Game Boy Advance</td><td>Puzzle video game</td><td class="empty">(empty)</td></tr><tr><td>dbpedia_177</td><td>Sonic Jump</td><td>2012-01-01</td><td>Hardlight</td><td>Android (operating system)</td><td>Platform game</td><td>Sonic the Hedgehog (series)</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#3273dc"></span>Metacritic<span class="file">metacritic.csv</span></div>
+        <table class="samp"><thead><tr><th>mc_id</th><th>game_title</th><th>year_published</th><th>made_by</th><th>console</th><th>genres</th><th>press_rating</th><th>player_rating</th><th>age_rating</th></tr></thead><tbody><tr><td>metacritic_5</td><td>Super Mario Galaxy</td><td>2007-01-01</td><td>Nintendo</td><td>Wii</td><td>Action,Platformer,Platformer,3D,3D</td><td>97.0</td><td>9.1</td><td>E</td></tr><tr><td>metacritic_9</td><td>Super Mario Galaxy 2</td><td>2010-01-01</td><td>Nintendo EAD Tokyo</td><td>Wii</td><td>Action,Platformer,Platformer,3D,3D</td><td>97.0</td><td>9.1</td><td>E</td></tr><tr><td>metacritic_10</td><td>The Legend of Zelda: Ocarina of Time</td><td>1998-01-01</td><td>Nintendo</td><td>Nintendo 64</td><td>Action Adventure,Fantasy</td><td>99.0</td><td>9.0</td><td>E</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#b25000"></span>Sales<span class="file">sales.csv</span></div>
+        <table class="samp"><thead><tr><th>rec_id</th><th>prod_title</th><th>launch_dt</th><th>studio</th><th>dist</th><th>hw</th><th>genre</th><th>press_score</th><th>comm_rating</th><th>age_classification</th><th>units_sold_mm</th></tr></thead><tbody><tr><td>sales_2</td><td>Mario Kart Wii</td><td>2008-01-01</td><td>Nintendo</td><td>Nintendo</td><td>Wii</td><td>Racing</td><td>82</td><td>8.3</td><td>E</td><td>35</td></tr><tr><td>sales_4</td><td>New Super Mario Bros.</td><td>2006-01-01</td><td>Nintendo</td><td>Nintendo</td><td>DS</td><td>Platform</td><td>89</td><td>8.5</td><td>E</td><td>29</td></tr><tr><td>sales_7</td><td>Mario Kart DS</td><td>2005-01-01</td><td>Nintendo</td><td>Nintendo</td><td>DS</td><td>Racing</td><td>91</td><td>8.6</td><td>E</td><td>23</td></tr></tbody></table>
+      </div>
+      </div>
+    </details>
+    <div class="content is-size-6 task-list"><p><b>Companies.</b> Integrates the Forbes Global 2000 list, a DBpedia company extract, and a FullContact company-profile sample. The target schema has eight attributes.</p></div>
+    <div class="chall"><span class="chall-l">Challenges</span>
+      <ul>
+        <li>Company-name variants, spelling differences, and corporate hierarchies.</li>
+        <li>Companies span the globe, so legal suffixes and locations are hard to normalize and resolve.</li>
+        <li>Financial figures, countries, and industry categorization taxonomies must be normalized.</li>
+      </ul>
+    </div>
+    <details class="foldcard">
+      <summary>Sample records from each source</summary>
+      <div class="foldbody">
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#3273dc"></span>Forbes<span class="file">forbes.csv</span></div>
+        <table class="samp"><thead><tr><th>forbes_url</th><th>company</th><th>url</th><th>region</th><th>business_segment</th><th>asset_value</th><th>sales_figure</th></tr></thead><tbody><tr><td>http://www.forbes.com/companies/icbc/</td><td>ICBC</td><td>http://www.forbes.com/companies/icbc/</td><td>China</td><td>Major Banks</td><td>3124900000000</td><td>148700000000</td></tr><tr><td>http://www.forbes.com/companies/china-…</td><td>China Construction Bank</td><td>http://www.forbes.com/companies/china-…</td><td>China</td><td>Regional Banks</td><td>2449500000000</td><td>121300000000</td></tr><tr><td>http://www.forbes.com/companies/agricu…</td><td>Agricultural Bank of China</td><td>http://www.forbes.com/companies/agricu…</td><td>China</td><td>Regional Banks</td><td>2405400000000</td><td>136400000000</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#257942"></span>DBpedia<span class="file">dbpedia.csv</span></div>
+        <table class="samp"><thead><tr><th>entity_uri</th><th>org_name</th><th>established</th><th>nation</th><th>headquarters</th><th>sector</th><th>keypeople_name</th><th>total_assets_val</th><th>annual_income</th></tr></thead><tbody><tr><td>http://dbpedia.org/resource/%C3%80_la_…</td><td>À la Table de Spanghero</td><td>1970-01-01</td><td>France</td><td>Castelnaudary</td><td>Meat</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>http://dbpedia.org/resource/%C3%87al%C…</td><td>Çalık Enerji</td><td>1998-01-01</td><td>Turkey</td><td>Istanbul</td><td class="empty">(empty)</td><td>Çalık Holding</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>http://dbpedia.org/resource/%C3%87al%C…</td><td>Çalık Holding</td><td>1997-01-01</td><td>Turkey</td><td>Istanbul</td><td class="empty">(empty)</td><td>Ahmet Çalık</td><td>8</td><td>2.8</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#7a7a7a"></span>FullContact<span class="file">fullcontact.csv</span></div>
+        <table class="samp"><thead><tr><th>Attribute_1</th><th>Attribute_2</th><th>Attribute_3</th><th>Attribute_4</th><th>Attribute_5</th><th>Attribute_6</th></tr></thead><tbody><tr><td>fullcontact_1</td><td>BBMG</td><td>United States</td><td>Brooklyn</td><td>Raphael Bemporad</td><td class="empty">(empty)</td></tr><tr><td>fullcontact_2</td><td>CIT Group Inc (DEL)</td><td>Canada</td><td>Toronto</td><td class="empty">(empty)</td><td>1908-01-01</td></tr><tr><td>fullcontact_3</td><td>City &amp; National Employment</td><td>United States</td><td>Waterloo</td><td class="empty">(empty)</td><td>1957-01-01</td></tr></tbody></table>
+      </div>
+      </div>
+    </details>
+    <div class="content is-size-6 task-list"><p><b>Music.</b> Integrates release-level records from Discogs, Last.fm, and MusicBrainz that describe albums, EPs, and singles with partial overlap. The target schema has eight attributes.</p></div>
+    <div class="chall"><span class="chall-l">Challenges</span>
+      <ul>
+        <li>Heterogeneous value formats, for example album durations recorded in different ways across sources.</li>
+        <li>Title and artist variants, and sparse source records.</li>
+        <li>Dates, countries, and track lists must be normalized.</li>
+      </ul>
+    </div>
+    <details class="foldcard">
+      <summary>Sample records from each source</summary>
+      <div class="foldbody">
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#0d6e5b"></span>Discogs<span class="file">discogs.csv</span></div>
+        <table class="samp"><thead><tr><th>rec_uid</th><th>title_str</th><th>performer</th><th>pub_dt</th><th>origin_loc</th><th>duration</th><th>imprint</th><th>category</th><th>tracks_track-name</th></tr></thead><tbody><tr><td>discogs_3</td><td>Fermats Theorem / Sight Beyond</td><td>John B</td><td>1996-01-01</td><td>UK</td><td>0</td><td>New Identity Recordings</td><td>Electronic</td><td>[&#x27;Fermats Theorem&#x27;, &#x27;Sight Beyond&#x27;]</td></tr><tr><td>discogs_4</td><td>Tempest / Inner Sense</td><td>Psychosis</td><td>1998-01-01</td><td>UK</td><td>0</td><td>Renegade Hardware</td><td>Electronic</td><td>[&#x27;Tempest&#x27;, &#x27;Inner Sense&#x27;]</td></tr><tr><td>discogs_5</td><td>The Sign&#x27;s Alive</td><td>Lypid</td><td>2000-09-05</td><td>United States of America</td><td>0</td><td>Statra Recordings</td><td>Electronic</td><td>[&quot;The Sign&#x27;s Alive (Original Mix)&quot;, &quot;T…</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#3273dc"></span>Last.fm<span class="file">lastfm.csv</span></div>
+        <table class="samp"><thead><tr><th>item_code</th><th>album_title</th><th>band</th><th>album_length</th><th>tracks_track-name</th></tr></thead><tbody><tr><td>lastFM_1</td><td>John B -  Fermats Theorem / Sight Beyo…</td><td>John B</td><td>903</td><td>[&#x27;Fermats Theorem&#x27;, &#x27;Sight Beyond&#x27;]</td></tr><tr><td>lastFM_2</td><td>Tempest / Inner Sense</td><td>Psychosis</td><td>734</td><td>[&#x27;Tempest&#x27;, &#x27;Inner Sense&#x27;]</td></tr><tr><td>lastFM_4</td><td>Petalpusher -  Surrender</td><td>Petalpusher</td><td>1626</td><td>[&#x27;Surrender (Petalpusher Original)&#x27;, &quot;…</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#b25000"></span>MusicBrainz<span class="file">musicbrainz.csv</span></div>
+        <table class="samp"><thead><tr><th>Attribute_1</th><th>Attribute_2</th><th>Attribute_3</th><th>Attribute_4</th><th>Attribute_5</th><th>Attribute_6</th><th>Attribute_9</th></tr></thead><tbody><tr><td>mbrainz_1</td><td>Fermats Theorem / Sight Beyond</td><td>John B</td><td>1996-01-01</td><td>United Kingdom of Great Britain and No…</td><td>1055</td><td>[&#x27;Fermats Theorem&#x27;, &#x27;Sight Beyond&#x27;]</td></tr><tr><td>mbrainz_2</td><td>Tempest / Inner Sense</td><td>Psychosis</td><td>1998-12-14</td><td>United Kingdom of Great Britain and No…</td><td>724</td><td>[&#x27;Tempest&#x27;, &#x27;Inner Sense&#x27;]</td></tr><tr><td>mbrainz_3</td><td>The Sign&#x27;s Alive</td><td>Lypid</td><td>2000-09-05</td><td>United States of America</td><td>2384</td><td>[&quot;The Sign&#x27;s Alive (original mix)&quot;, &quot;T…</td></tr></tbody></table>
+      </div>
+      </div>
+    </details>
+    <div class="content is-size-6 task-list"><p><b>Products.</b> Based on a sample of the WDC Products benchmark, covering GPUs, SSDs, HDDs, and USB sticks. The target schema has 25 attributes, the largest in the benchmark.</p></div>
+    <div class="chall"><span class="chall-l">Challenges</span>
+      <ul>
+        <li>The large schema makes matching delicate: a small difference in a single technical attribute can separate a match from a non-match.</li>
+        <li>The same attribute appears under different naming conventions across sources.</li>
+        <li>Units, capacities, dimensions, and speeds must be normalized against taxonomies.</li>
+      </ul>
+    </div>
+    <details class="foldcard">
+      <summary>Sample records from each source</summary>
+      <div class="foldbody">
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#0d6e5b"></span>Dataset 1<span class="file">dataset_1.json</span></div>
+        <table class="samp"><thead><tr><th>id</th><th>manufacturer</th><th>product_name</th><th>product_description</th><th>list_price</th><th>currency_code</th><th>cluster_id</th><th>product_url</th><th>name_and_description</th><th>model_name</th><th>manufacturer_part_number</th><th>category</th><th>gpu_chipset</th><th>video_memory_gb</th><th>capacity_gb</th><th>sequential_read_mb_s</th><th>sequential_write_mb_s</th><th>bus_standard</th><th>interface</th><th>width_millimeters</th><th>length_millimeters</th><th>height_millimeters</th><th>weight_grams</th><th>connector</th><th>memory_technology</th><th>colour</th><th>form_factor</th></tr></thead><tbody><tr><td>12198483</td><td>Gigabyte</td><td>Gigabyte NVIDIA GeForce RTX 3080 Gamin…</td><td>CUDA Cores: 8704, Boost Clock: 1800MHz…</td><td>799.99</td><td>GBP</td><td>1002037</td><td>https://www.novatech.co.uk/products/gi…</td><td>Gigabyte NVIDIA GeForce RTX 3080 Gamin…</td><td>NVIDIA GeForce RTX 3080 Gaming OC</td><td class="empty">(empty)</td><td>GPU</td><td>GeForce RTX 3080</td><td>10</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>GDDR6X</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>78378158</td><td>Western Digital</td><td>WD Blue 6TB 3.5\&quot; SATA 3 HDD/Hard Driv…</td><td>6TB WD Blue WD60EZAZ, 3.5\&quot; HDD, SATA…</td><td>129.98</td><td>GBP</td><td>1004942</td><td>https://www.scan.co.uk/products/6tb-wd…</td><td>WD Blue 6TB 3.5\&quot; SATA 3 HDD/Hard Driv…</td><td>WD Blue</td><td>WD60EZAZ</td><td>HDD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>6000</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>SATA</td><td>SATA III</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch SATA</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch</td></tr><tr><td>80641070</td><td>Corsair</td><td>Corsair Force MP510 M.2 SSD - 960GB</td><td>Solid State Drive, 960 GB, intern, M.2…</td><td>2124.0</td><td>NOK</td><td>1007272</td><td>https://www.proshop.no/SSD/Corsair-For…</td><td>Corsair Force MP510 M.2 SSD - 960GB. D…</td><td>Force MP510</td><td class="empty">(empty)</td><td>SSD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>960</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>PCI Express x4</td><td>NVMe</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2 2280</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#3273dc"></span>Dataset 2<span class="file">dataset_2.json</span></div>
+        <table class="samp"><thead><tr><th>id</th><th>brandName</th><th>name</th><th>descriptionText</th><th>priceAmount</th><th>currency</th><th>cluster_id</th><th>productUrl</th><th>titleAndDescription</th><th>modelName</th><th>mpn</th><th>productCategory</th><th>chipset</th><th>vramGb</th><th>capacityGb</th><th>readSpeedMbps</th><th>writeSpeedMbps</th><th>busType</th><th>interfaceType</th><th>widthMm</th><th>depthMm</th><th>heightMm</th><th>weightG</th><th>connectionType</th><th>memoryType</th><th>color</th><th>formFactor</th></tr></thead><tbody><tr><td>19126355</td><td>Gigabyte</td><td>Gigabyte NVIDIA GeForce RTX 3080 10GB…</td><td>Gigabyte NVIDIA GeForce RTX 3080 GAMIN…</td><td>99999.99</td><td>GBP</td><td>1002037</td><td>https://www.scan.co.uk/products/gigaby…</td><td>Gigabyte NVIDIA GeForce RTX 3080 10GB…</td><td>GeForce RTX 3080 10GB GAMING OC</td><td class="empty">(empty)</td><td>GPU</td><td>GeForce RTX 3080</td><td>10</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>GDDR6X</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>42841911</td><td>Western Digital</td><td>WD Blue 6TB Desktop Hard Disk Drive -…</td><td>WD Blue 6TB Desktop Hard Disk Drive -…</td><td>128.99</td><td>USD</td><td>1004942</td><td>https://www.newegg.com/blue-wd60ezaz-6…</td><td>WD Blue 6TB Desktop Hard Disk Drive -…</td><td>WD Blue</td><td>WD60EZAZ</td><td>HDD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>6000</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>SATA</td><td>SATA III</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5 Inch</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch</td></tr><tr><td>46775597</td><td>Corsair</td><td>CORSAIR - Force Series MP510 960GB M.2…</td><td>CORSAIR Force Series MP510 960GB M.2 S…</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>1007272</td><td>https://www.dindator.se/corsair-force-…</td><td>CORSAIR - Force Series MP510 960GB M.2…</td><td>Force Series MP510</td><td>CSSD-F960GBMP510</td><td>SSD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>960</td><td>3480</td><td>3000</td><td>PCI Express x4</td><td>NVMe</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2 2280</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#b25000"></span>Dataset 3<span class="file">dataset_3.json</span></div>
+        <table class="samp"><thead><tr><th>id</th><th>Brand</th><th>ProductTitle</th><th>Details</th><th>Price</th><th>Currency</th><th>cluster_id</th><th>Link</th><th>TitleDetails</th><th>Model</th><th>PartNo</th><th>Type</th><th>Chipset</th><th>MemorySizeGB</th><th>CapacityGB</th><th>ReadMBs</th><th>WriteMBs</th><th>Bus</th><th>Interface</th><th>WidthMM</th><th>LengthMM</th><th>HeightMM</th><th>WeightG</th><th>Connector</th><th>MemoryType</th><th>Colour</th><th>FormFactor</th></tr></thead><tbody><tr><td>46320085</td><td>Gigabyte</td><td>GIGABYTE GeForce RTX 3080 GAMING OC 10…</td><td>To Avail the offer Click Here</td><td>73160.0</td><td>INR</td><td>1002037</td><td>https://www.pcstudio.in/product/gigaby…</td><td>GIGABYTE GeForce RTX 3080 GAMING OC 10…</td><td>GeForce RTX 3080 GAMING OC 10G</td><td>GV-N3080GAMING OC-10GD</td><td>GPU</td><td>GeForce RTX 3080</td><td>10</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>91583813</td><td>Western Digital</td><td>WD Blue 6TB SATA3 256MB 3.5&#x27; 5400RPM 6…</td><td>Western Digital WD Blue 3.5-inch PC ha…</td><td>278.0</td><td>AUD</td><td>1004942</td><td>https://netplus.com.au/products/wd-blu…</td><td>WD Blue 6TB SATA3 256MB 3.5&#x27; 5400RPM 6…</td><td>WD Blue</td><td class="empty">(empty)</td><td>HDD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>6000</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>SATA</td><td>SATA III</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>640.0</td><td>3.5-inch SATA</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch</td></tr><tr><td>86850217</td><td>Corsair</td><td>SSD 960GB Corsair Force MP510 NVMe</td><td>SSD 960GB Corsair Force MP510 NVMe</td><td>2316.0</td><td>SEK</td><td>1007272</td><td>https://www.nordwaystore.se/ssd-960gb-…</td><td>SSD 960GB Corsair Force MP510 NVMe. De…</td><td>Force MP510</td><td class="empty">(empty)</td><td>SSD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>960</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>NVMe</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#7a7a7a"></span>Dataset 4<span class="file">dataset_4.json</span></div>
+        <table class="samp"><thead><tr><th>id</th><th>mfr</th><th>name</th><th>desc</th><th>amt</th><th>cur</th><th>cluster_id</th><th>link</th><th>name_desc</th><th>mdl</th><th>pn</th><th>cat</th><th>chip</th><th>vram</th><th>cap_gb</th><th>rd_mbs</th><th>wr_mbs</th><th>bus</th><th>iface</th><th>w_mm</th><th>l_mm</th><th>h_mm</th><th>wt_g</th><th>conn</th><th>mem</th><th>clr</th><th>ff</th></tr></thead><tbody><tr><td>66956099</td><td>Gigabyte</td><td>Gigabyte Video Card GV-N3080GAMING OC-…</td><td>Gigabyte Video Card GV-N3080GAMING OC-…</td><td>791.99</td><td>USD</td><td>1002037</td><td>https://www.thekeykey.com/detail/GV-N3…</td><td>Gigabyte Video Card GV-N3080GAMING OC-…</td><td>GeForce RTX 3080 GAMING OC</td><td>GV-N3080GAMING OC-10GD</td><td>GPU</td><td>GeForce RTX 3080</td><td>10</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>GDDR6X</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>5078198</td><td>Western Digital</td><td>Western Digital HDD Blue 6TB 3,5\&quot; 256…</td><td>Dysk BLUE 6TB 3,5 256MB SATAIII/5400rp…</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>1004942</td><td>https://www.alsen.pl/podzespoly-komput…</td><td>Western Digital HDD Blue 6TB 3,5\&quot; 256…</td><td>Blue</td><td class="empty">(empty)</td><td>HDD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>6000</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>SATA</td><td>SATA III</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch SATA</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>3.5-inch</td></tr><tr><td>77571226</td><td>Corsair</td><td>Corsair MP510 M.2-2280 960GB</td><td>Huge 960GB storage capacity and super…</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>1007272</td><td>https://www.cclonline.com/product/2874…</td><td>Corsair MP510 M.2-2280 960GB. Descript…</td><td>MP510</td><td class="empty">(empty)</td><td>SSD</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>960</td><td>3480</td><td>3000</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>M.2 2280</td></tr></tbody></table>
+      </div>
+      </div>
+    </details>
+    <div class="content is-size-6 task-list"><p><b>Scientific Papers.</b> Integrates computer-science paper records from DBLP, Crossref, and OpenAlex. The target schema has 12 attributes.</p></div>
+    <div class="chall"><span class="chall-l">Challenges</span>
+      <ul>
+        <li>The largest task by row count, so blocking efficiency matters: a poor reduction ratio leads to hundreds of thousands of comparisons, which makes the task suited for evaluating efficiency as well as effectiveness.</li>
+        <li>Sources carry DOIs that should be removed during matching, and identifiers are often incomplete.</li>
+        <li>Title and author-list variants, publication-type and venue normalization, and sparse metadata for volume, issue, pages, and citation counts.</li>
+      </ul>
+    </div>
+    <details class="foldcard">
+      <summary>Sample records from each source</summary>
+      <div class="foldbody">
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#0d6e5b"></span>Crossref<span class="file">crossref.jsonl</span></div>
+        <table class="samp"><thead><tr><th>doi_code</th><th>work_type</th><th>title_text</th><th>contributor_names</th><th>issued_year</th><th>container_title</th><th>publisher_name</th><th>abstract_text</th><th>volume_id</th><th>issue_id</th><th>page_first</th><th>page_last</th><th>reference_total</th><th>cited_total</th></tr></thead><tbody><tr><td>10.5220/0006842100980105</td><td>inproceedings</td><td>A Simulation-driven Approach in Risk-a…</td><td>[&#x27;Ilaria Angela Amantea&#x27;, &#x27; Antonio Di…</td><td>2018</td><td class="empty">(empty)</td><td>SCITEPRESS - Science and Technology Pu…</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>98</td><td>105</td><td>0</td><td>18</td></tr><tr><td>10.1155/2018/6709607</td><td>article</td><td>Group Recommendation Systems Based on…</td><td>[&#x27;Guang Fang&#x27;, &#x27; Lei Su&#x27;, &#x27; Di Jiang&#x27;,…</td><td>2018</td><td>Wireless Communications and Mobile Com…</td><td>Wiley</td><td>With the development of social network…</td><td>2018</td><td>1</td><td>None</td><td>None</td><td>35</td><td>14</td></tr><tr><td>10.1155/2018/8571530</td><td>article</td><td>Relation of Country‐of‐Origin Effect,…</td><td>[&#x27;Juan Manuel Berbel-Pineda&#x27;, &#x27; Beatri…</td><td>2018</td><td>Complexity</td><td>Wiley</td><td>To obtain information about foreign ma…</td><td>2018</td><td>1</td><td>None</td><td>None</td><td>60</td><td>10</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#3273dc"></span>DBLP<span class="file">dblp.jsonl</span></div>
+        <table class="samp"><thead><tr><th>doi_ref</th><th>entry_type</th><th>publication_title</th><th>author_list</th><th>pub_year</th><th>venue_name</th><th>volume_no</th><th>issue_no</th><th>page_start</th><th>page_finish</th></tr></thead><tbody><tr><td>10.1145/3316781.3317924</td><td>inproceedings</td><td>Thread Weaving: Static Resource Schedu…</td><td>[&#x27;Hsuan Hsiao&#x27;, &#x27;Jason Helge Anderson&#x27;…</td><td>2019</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td></tr><tr><td>10.1109/DAC.2018.8465925</td><td>inproceedings</td><td>LEAD: learning-enabled energy-aware dy…</td><td>[&#x27;Mark Clark&#x27;, &#x27;Avinash Kodi&#x27;, &#x27;Razvan…</td><td>2018</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>1</td><td>6</td></tr><tr><td>10.1109/DAC.2018.8465775</td><td>inproceedings</td><td>PlanarONoC: concurrent placement and r…</td><td>[&#x27;Yu-Kai Chuang&#x27;, &#x27;Kuan-Jung Chen&#x27;, &#x27;K…</td><td>2018</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td class="empty">(empty)</td><td>1</td><td>6</td></tr></tbody></table>
+      </div>
+      <div class="samp-wrap">
+        <div class="sh"><span class="dot" style="background:#b25000"></span>OpenAlex<span class="file">open_alex.jsonl</span></div>
+        <table class="samp"><thead><tr><th>doi_value</th><th>work_kind</th><th>display_title</th><th>authors_list</th><th>year_published</th><th>source_name</th><th>topic_terms</th><th>volume_tag</th><th>issue_tag</th><th>start_page</th><th>end_page</th><th>refs_count</th><th>citations_count</th></tr></thead><tbody><tr><td>10.1093/nar/gky1131</td><td>article</td><td>STRING v11: protein–protein associatio…</td><td>[&#x27;Damian Szklarczyk&#x27;, &#x27;Annika L Gable&#x27;…</td><td>2018</td><td>Nucleic Acids Research</td><td>KEGG, Interaction network</td><td>47</td><td>D1</td><td>D607</td><td>D613</td><td>64</td><td>16038</td></tr><tr><td>10.1093/bioinformatics/bty191</td><td>article</td><td>Minimap2: pairwise alignment for nucle…</td><td>[&#x27;Heng Li&#x27;]</td><td>2018</td><td>Bioinformatics</td><td>Multiple sequence alignment</td><td>34</td><td>18</td><td>3094</td><td>3100</td><td>42</td><td>12292</td></tr><tr><td>10.1093/nar/gky427</td><td>article</td><td>SWISS-MODEL: homology modelling of pro…</td><td>[&#x27;Andrew Waterhouse&#x27;, &#x27;Martino Bertoni…</td><td>2018</td><td>Nucleic Acids Research</td><td>Homology</td><td>46</td><td>W1</td><td>W296</td><td>W303</td><td>73</td><td>11711</td></tr></tbody></table>
+      </div>
+      </div>
+    </details>
+
+    <p class="heading" style="margin-top:1.5rem;color:#888;">Source-level statistics (base task)</p>
+    <table class="table is-fullwidth is-hoverable">
+      <thead><tr><th>Task</th><th>Sources</th><th class="has-text-right">#</th><th class="has-text-right">Records</th><th class="has-text-right">Target fields</th></tr></thead>
+      <tbody>
+        <tr><td><b>Games</b></td><td>DBpedia, Metacritic, Sales</td><td class="num-cell">3</td><td class="num-cell">74,951</td><td class="num-cell">10</td></tr>
+        <tr><td><b>Companies</b></td><td>Forbes, DBpedia, FullContact</td><td class="num-cell">3</td><td class="num-cell">14,016</td><td class="num-cell">8</td></tr>
+        <tr><td><b>Music</b></td><td>Discogs, Last.fm, MusicBrainz</td><td class="num-cell">3</td><td class="num-cell">37,255</td><td class="num-cell">8</td></tr>
+        <tr><td><b>Products</b></td><td>Four WDC Products feeds</td><td class="num-cell">4</td><td class="num-cell">3,012</td><td class="num-cell">25</td></tr>
+        <tr><td><b>Scientific Papers</b></td><td>DBLP, Crossref, OpenAlex</td><td class="num-cell">3</td><td class="num-cell">182,059</td><td class="num-cell">12</td></tr>
+      </tbody>
+    </table>
+    <p class="legend">Record counts are for the base task. The <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/use%20cases">per-task pages in the repository</a> list the full sizes for every source and difficulty level.</p>
+  </div>
+</section>
+
+<!-- BENCHMARK ARTIFACTS -->
+<section class="section" id="artifacts">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Benchmark Artifacts</h2>
+    <div class="content is-size-6">
+      <p>Each task provides everything a system needs to run the pipeline and to be scored at every step, without labeling any data of its own:</p>
+      <ul>
+        <li><b>Source tables and metadata.</b> One table per source, each with a metadata file recording its origin, the columns it contains, and the date it was published. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes.csv">forbes.csv</a>, <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes_metadata.json">forbes_metadata.json</a></span></li>
+        <li><b>Target schema.</b> The columns of the fused table, with a value constraint per attribute (for example a valid founding-year range) and categorical attributes tied to standard taxonomies such as GICS industries and CLDR country names. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/schemamatching/target_schema.json">target_schema.json</a></span></li>
+        <li><b>Gold schema mapping.</b> A correspondence from every source column to the target schema. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/schemamatching/sm_mapping_gold.json">sm_mapping_gold.json</a></span></li>
+        <li><b>Entity matching sets.</b> Labeled train, validation, and test pairs for each pair of sources. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/entitymatching/forbes_2_dbpedia_train.csv">forbes_2_dbpedia_train.csv</a></span></li>
+        <li><b>Fusion validation and test sets.</b> 100 validation and 100 test entities per task, hand-annotated with the verified value for every attribute. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/fusion/validation_set.xml">validation_set.xml</a></span></li>
+        <li><b>Reference outputs.</b> The output of the human-engineered pipeline, used as a silver standard. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/use%20cases/companies/base/output">companies/base/output/</a></span></li>
+      </ul>
+      <p>The sources describe the same kind of entity but rarely agree on column names, value formats, or even the facts themselves, which is what makes the merge hard.</p>
+    </div>
+
+    <div class="example">
+      <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; one company in three sources (Companies task)</div>
+      <div class="columns is-multiline" style="margin-bottom:0;">
+        <div class="column is-4">
+          <div class="dcard">
+            <div class="dh"><span class="dot" style="background:#3273dc"></span>Forbes<span class="file">forbes.csv</span></div>
+            <table class="dtab">
+              <tr><td class="k">company</td><td class="v">Volkswagen Group</td></tr>
+              <tr><td class="k">region</td><td class="v empty">(empty)</td></tr>
+              <tr><td class="k">business_segment</td><td class="v">Auto &amp; Truck Manufacturers</td></tr>
+              <tr><td class="k">asset_value</td><td class="v">446900000000</td></tr>
+              <tr><td class="k">sales_figure</td><td class="v">261500000000</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="dcard">
+            <div class="dh"><span class="dot" style="background:#257942"></span>DBpedia<span class="file">dbpedia.csv</span></div>
+            <table class="dtab">
+              <tr><td class="k">org_name</td><td class="v">Volkswagen</td></tr>
+              <tr><td class="k">established</td><td class="v">1937-01-01</td></tr>
+              <tr><td class="k">nation</td><td class="v">Germany</td></tr>
+              <tr><td class="k">headquarters</td><td class="v">Wolfsburg</td></tr>
+              <tr><td class="k">sector</td><td class="v">Automotive industry</td></tr>
+              <tr><td class="k">total_assets_val</td><td class="v">323400000000</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="dcard">
+            <div class="dh"><span class="dot" style="background:#7a7a7a"></span>FullContact<span class="file">fullcontact.csv</span></div>
+            <table class="dtab">
+              <tr><td class="k op">Attribute_2</td><td class="v">Volkswagen Group</td></tr>
+              <tr><td class="k op">Attribute_3</td><td class="v">Germany</td></tr>
+              <tr><td class="k op">Attribute_4</td><td class="v">Wolfsburg</td></tr>
+              <tr><td class="k op">Attribute_5</td><td class="v empty">(empty)</td></tr>
+              <tr><td class="k op">Attribute_6</td><td class="v">1937-01-01</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <p class="legend" style="margin-top:.5rem;">The same company in three sources. Forbes leaves the country blank, FullContact hides fields behind names like <span class="mono">Attribute_2</span>, the asset figures disagree, and DBpedia gives a shorter name. We follow this company through each step below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE -->
+<section class="section" id="pipeline" style="background:#fafafa;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">The Integration Pipeline</h2>
+    <div class="content is-size-6">
+      <p class="has-text-centered">A task is solved as a chain of four steps. Each one has its own ground truth and metric, so a system can be built and scored one step at a time or end to end.</p>
+    </div>
+
+    <!-- 1 -->
+    <h4 class="title is-5" style="margin-top:1.75rem;"><span class="step-tag">1</span>Schema Matching</h4>
+    <div class="content is-size-6"><p>Sources rarely share column names, so every source column has to be matched to a column in the target schema before values can be combined. Names may be descriptive, abbreviated, or meaningless, and where a name gives nothing away, a matcher has to read the values instead.</p></div>
+    <p class="stepmeta"><span><b>Ground truth:</b> gold schema mapping</span><span><b>Metric:</b> F1 over column correspondences</span></p>
+    <div class="example">
+      <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; <span class="mono">company</span>, <span class="mono">org_name</span> and <span class="mono">Attribute_2</span> all map to <span class="mono">name</span></div>
+      <table class="maptab">
+        <tr><td class="src">forbes · company</td><td class="arr">→</td><td class="tgt">name</td></tr>
+        <tr><td class="src">dbpedia · established</td><td class="arr">→</td><td class="tgt">founded</td></tr>
+        <tr><td class="src">dbpedia · headquarters</td><td class="arr">→</td><td class="tgt">city</td></tr>
+        <tr><td class="src">fullcontact · Attribute_2 <span class="tag is-warning is-light" style="margin-left:.4rem;">from values only</span></td><td class="arr">→</td><td class="tgt">name</td></tr>
+        <tr><td class="src">fullcontact · Attribute_6 <span class="tag is-warning is-light" style="margin-left:.4rem;">from values only</span></td><td class="arr">→</td><td class="tgt">founded</td></tr>
+      </table>
+    </div>
+
+    <!-- 2 -->
+    <h4 class="title is-5" style="margin-top:1.75rem;"><span class="step-tag">2</span>Value Normalization</h4>
+    <div class="content is-size-6"><p>Matched columns still store values in different formats and vocabularies, so they are rewritten into the forms the target schema requires. The schema sets a constraint for every attribute: a data type, and where it applies a numeric range, a string pattern, or a date format. A founding date, for instance, must be an ISO <span class="mono">YYYY-MM-DD</span> inside an allowed range, and assets must be a non-negative integer in US dollars below an upper bound. Categorical attributes are pinned to taxonomies that ship with the task and fix both the allowed values and the level to normalize to: countries follow CLDR, industries follow GICS, and each task adds its own, such as platform, genre, and rating for Games. Normalization is scored as consistency, that is, whether the output values satisfy these schema constraints.</p></div>
+    <p class="stepmeta"><span><b>Defined by:</b> target-schema constraints &amp; taxonomies</span><span><b>Reference:</b> human-pipeline output</span></p>
+    <div class="example">
+      <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; the same fact, written many ways</div>
+      <table class="ntab">
+        <thead><tr><th>Field</th><th>As found in sources</th><th>Normalized to target</th></tr></thead>
+        <tbody>
+          <tr><td class="attr">industry</td><td class="raw">"Auto &amp; Truck Manufacturers", "Automotive industry"</td><td class="norm">Automobiles (GICS)</td></tr>
+          <tr><td class="attr">founded</td><td class="raw">"January 01, 1937", "01.01.1937"</td><td class="norm">1937-01-01</td></tr>
+          <tr><td class="attr">assets</td><td class="raw">"411 818 350 000,00", "323.40" (bn)</td><td class="norm">411818350000, 323400000000</td></tr>
+          <tr><td class="attr">country</td><td class="raw">"中华人民共和国", "U.S.A."</td><td class="norm">China, United States (CLDR)</td></tr>
+        </tbody>
+      </table>
+      <p class="legend" style="margin-top:.5rem;">These messy forms are real values from the easy and hard variants; the base task is cleaner.</p>
+    </div>
+
+    <!-- 3 -->
+    <h4 class="title is-5" style="margin-top:1.75rem;"><span class="step-tag">3</span>Entity Blocking &amp; Matching</h4>
+    <div class="content is-size-6"><p>Records that refer to the same entity have to be found across sources. Scoring the full cartesian product of record pairs is quadratic in the input size and computationally infeasible, so blocking first reduces it to a smaller set of candidate pairs, and matching then classifies each candidate as a match or a non-match. The hardest cases are look-alikes that fall into the same block but refer to different entities.</p></div>
+    <p class="stepmeta"><span><b>Ground truth:</b> labeled pairs</span><span><b>Metric:</b> pair completeness &amp; reduction ratio (blocking), F1 (matching)</span></p>
+    <div class="example">
+      <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; candidate pairs for one company</div>
+      <div class="pair"><span>forbes · Volkswagen Group</span><span class="vs">↔</span><span>dbpedia · Volkswagen</span><span class="tag is-success is-light">✓ match</span></div>
+      <div class="pair"><span>forbes · Volkswagen Group</span><span class="vs">↔</span><span>fullcontact_802 · Volkswagen Group</span><span class="tag is-success is-light">✓ match</span></div>
+      <div class="pair"><span>forbes · Volkswagen Group</span><span class="vs">↔</span><span>fullcontact_243 · CST Brands, Inc.</span><span class="tag is-danger is-light">✗ no match</span></div>
+      <div class="pair"><span>forbes · Volkswagen Group</span><span class="vs">↔</span><span>fullcontact_1462 · Intermountain Healthcare</span><span class="tag is-danger is-light">✗ no match</span></div>
+    </div>
+
+    <!-- 4 -->
+    <h4 class="title is-5" style="margin-top:1.75rem;"><span class="step-tag">4</span>Data Fusion</h4>
+    <div class="content is-size-6"><p>After matching groups the records of an entity into a cluster, fusion resolves the cluster into a single value for each attribute. Where the sources report conflicting values, fusion has to decide which value to keep, and this conflict resolution is the step where the benchmark leaves the most room for improvement. Each gold value was set by annotators who verified it against independent sources.</p></div>
+    <p class="stepmeta"><span><b>Ground truth:</b> hand-annotated fused records</span><span><b>Metric:</b> fusion accuracy</span></p>
+    <div class="example">
+      <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; one fused record, with where each value came from</div>
+      <table class="ftab">
+        <tbody>
+          <tr><td class="fk">name</td><td class="fv">Volkswagen Group<span class="prov">Forbes</span><span class="prov">FullContact</span></td></tr>
+          <tr><td class="fk">country</td><td class="fv">Germany<span class="prov">DBpedia</span><span class="prov">FullContact</span></td></tr>
+          <tr><td class="fk">founded</td><td class="fv">1937-01-01<span class="prov">DBpedia</span><span class="prov">FullContact</span></td></tr>
+          <tr><td class="fk">assets</td><td class="fv">447910000000<span class="prov v">verified</span></td></tr>
+          <tr><td class="fk">revenue</td><td class="fv">261910000000<span class="prov v">verified</span></td></tr>
+        </tbody>
+      </table>
+      <p class="legend" style="margin-top:.5rem;">Forbes reports <b>$446.9B</b> in assets, DBpedia reports <b>$323.4B</b>. Neither is taken at face value: the gold value, <b>$447.91B</b>, is the figure annotators confirmed by hand.</p>
+    </div>
+
+    <!-- end to end -->
+    <h4 class="title is-5" style="margin-top:1.75rem;">End-to-End Evaluation</h4>
+    <div class="content is-size-6"><p>Beyond the per-step scores, MaDI-Bench rates the final fused table along three quality dimensions: <b>coverage</b> (did the right entities and values make it in?), <b>consistency</b> (does the table fit the target schema?), and <b>correctness</b> (are the merged values right?). Each is reported at three reference levels: reference-free (structure only, no labels needed), silver (against the human pipeline output), and ground truth (against the annotated test sets).</p></div>
+  </div>
+</section>
+
+<!-- VARIANT GENERATION -->
+<section class="section" id="variants">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Variant Generation</h2>
+    <div class="content is-size-6">
+      <p>To keep the benchmark hard as systems improve, each base task also ships in easy, medium, and hard versions. The records and the correct answers stay the same; eight difficulty knobs perturb the data, each set to its own target for easy, medium, and hard. A harder level turns up the kinds of heterogeneity that real integration runs into.</p>
+    </div>
+
+    <h4 class="title is-5">A record changed by the knobs</h4>
+    <div class="content is-size-6"><p>Here is the DBpedia record for the Taisei Corporation, base against hard. Schema naming divergence (Knob 8) first renames every column to a cryptic code: <span class="mono">org_name→nm</span>, <span class="mono">established→ey</span>, <span class="mono">nation→cn</span>, <span class="mono">headquarters→hq</span>, <span class="mono">sector→sg</span>, <span class="mono">keypeople_name→kpn</span>, <span class="mono">total_assets_val→ta</span>, <span class="mono">annual_income→ai</span>. On top of that, the values change:</p></div>
+    <table class="vtab">
+      <thead><tr><th>Field</th><th>Base value</th><th>Hard value</th><th>Changed by</th></tr></thead>
+      <tbody>
+        <tr><td class="fld">name</td><td class="bv">Taisei Corporation</td><td class="hv">Taisei Corporation</td><td><span class="ktag none">unchanged</span></td></tr>
+        <tr><td class="fld">founded</td><td class="bv">1873-01-01</td><td class="hv"><span class="chg">01.01.1873</span></td><td><span class="ktag">Knob 5 · format</span></td></tr>
+        <tr><td class="fld">country</td><td class="bv">Japan</td><td class="hv"><span class="chg">Nippon</span></td><td><span class="ktag">Knob 1 · surface</span></td></tr>
+        <tr><td class="fld">city</td><td class="bv">TokyoShinjuku, Tokyo</td><td class="hv">TokyoShinjuku, Tokyo</td><td><span class="ktag none">unchanged</span></td></tr>
+        <tr><td class="fld">industry</td><td class="bv">Construction</td><td class="hv"><span class="chg">Constructi on</span></td><td><span class="ktag">Knob 6 · value noise</span></td></tr>
+        <tr><td class="fld">key people</td><td class="bv">Okura Kihachiro</td><td class="hv"><span class="drop">(dropped)</span></td><td><span class="ktag">Knob 3 · attribute drop</span></td></tr>
+        <tr><td class="fld">assets</td><td class="bv">3,650,187,000</td><td class="hv"><span class="chg">3650.19</span></td><td><span class="ktag">Knob 5 · unit scale</span></td></tr>
+        <tr><td class="fld">revenue</td><td class="bv">213,195,000</td><td class="hv"><span class="chg">167.18</span></td><td><span class="ktag">Knob 5 · unit + currency</span></td></tr>
+      </tbody>
+    </table>
+    <p class="legend">Eight changes from one base record: a renamed schema, a reformatted date, a reworded country, a corrupted industry string, a dropped person, and two rescaled financial figures. The easy level moves the same dials the other way, with descriptive column names, gentle date and number formats, and fewer dropped cells.</p>
+
+    <h4 class="title is-5" style="margin-top:1.5rem;">Difficulty Knobs</h4>
+    <div class="content is-size-6"><p>Each knob targets one or two pipeline stages and is set to an easy, medium, or hard target. MaDI-Bench uses eight:</p></div>
+    <div class="columns is-multiline" style="margin-top:.2rem;">
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 1</span> <span class="kst">Matching · Fusion</span><p class="kt">Surface augmentation</p><p class="kd">Rewrites attribute values into other surface forms using abbreviations, token reorderings, and dropped tokens. This erodes the surface overlap that blocking and matching depend on, and turns clean values into plausible-looking disagreements for fusion.</p><p class="kex"><span class="lab">example</span><span class="b">San Francisco</span> → <span class="a">Francisco San</span></p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 2</span> <span class="kst">Blocking · Matching</span><p class="kt">Entity niche density</p><p class="kd">Adds similar-but-distinct entities within the same domain niche, such as many products from one brand. Blocks fill up with non-matching pairs, and more candidate pairs sit close to the match / non-match boundary.</p><p class="kex"><span class="lab">example</span>generates a near-duplicate company and inserts it into a crowded niche</p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 3</span> <span class="kst">Blocking · Matching · Fusion</span><p class="kt">Attribute drop</p><p class="kd">Blanks a share of cells per source. Missing blocking keys make records unreachable, missing attributes weaken the evidence for matching, and sparse coverage leaves fusion less to cross-check.</p><p class="kex"><span class="lab">example</span><span class="b">revenue 358,500,000</span> → <span class="a">(dropped)</span></p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 4</span> <span class="kst">Fusion</span><p class="kt">Coverage skew</p><p class="kd">Varies how many sources describe each entity. This changes cluster sizes and thins the evidence available to resolve conflicts for entities that only one or two sources cover.</p><p class="kex"><span class="lab">example</span>Inter RAO: its DBpedia row is removed, leaving fewer sources</p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 5</span> <span class="kst">Normalization</span><p class="kt">Format &amp; unit diversity</p><p class="kd">Rewrites dates, numbers, and quantities into more formats, units, and scales, for example ISO against dotted dates, or raw figures against millions. More admissible forms per field make value standardization harder.</p><p class="kex"><span class="lab">example</span><span class="b">65,170,000,000</span> → <span class="a">65170</span> (millions)</p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 6</span> <span class="kst">Normalization · Matching · Fusion</span><p class="kt">Value noise</p><p class="kd">Corrupts a share of values with typos, encoding artefacts, and truncation. The damaged values lower string-similarity scores during matching and show up as spurious disagreements during fusion.</p><p class="kex"><span class="lab">example</span><span class="b">2005-01-01</span> → <span class="a">2o0t-01-o1</span></p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 8</span> <span class="kst">Schema matching</span><p class="kt">Schema naming divergence</p><p class="kd">Renames source columns along a scale from fully descriptive, through abbreviated, to opaque codes. At the hard end the column name carries no signal, so a matcher has to rely on the values alone.</p><p class="kex"><span class="lab">example</span><span class="b">total_assets_val</span> → <span class="a">ta</span></p></div></div>
+      <div class="column is-6"><div class="knob-box"><span class="kn">Knob 10</span> <span class="kst">Fusion</span><p class="kt">Source reliability</p><p class="kd">Reshuffles which source holds the correct value per attribute, so the most reliable source is right for only a share of entities. No fixed source-trust rule stays optimal.</p><p class="kex"><span class="lab">example</span>Accor: the verified name is reassigned to a different source</p></div></div>
+    </div>
+    <p class="legend">Two further knobs (value ambiguity and schema distractors) are specified for synthetic tasks. Full specifications for every knob are in <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/knobs">the repository</a>.</p>
+  </div>
+</section>
+
+<!-- VALIDATION -->
+<section class="section" id="validation" style="background:#fafafa;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Validation</h2>
+    <div class="content is-size-6">
+      <p>We validate MaDI-Bench with three pipelines that span the design space from hand-built to fully automated. Their per-step and end-to-end outputs are released in the repository under <span class="mono">results/</span>.</p>
+    </div>
+    <div class="columns is-multiline">
+      <div class="column is-4"><div class="pl"><span class="pl-tag">P1</span><p class="pl-h">Human-engineered</p><p class="is-size-6">Domain-specific workflows built on PyDI by data engineers. It scores 100% on the base tasks and serves as the silver reference.</p></div></div>
+      <div class="column is-4"><div class="pl"><span class="pl-tag">P2</span><p class="pl-h">Best-of-breed</p><p class="is-size-6">Chains the strongest available method per step, for example COMA and Magneto for schema matching, Ditto and Magellan for matching, and truth-discovery models for fusion, choosing each on the validation set.</p></div></div>
+      <div class="column is-4"><div class="pl"><span class="pl-tag">P3</span><p class="pl-h">LLM-based</p><p class="is-size-6">An LLM configures each step and builds its own training data, so the pipeline stays automatic while it scales.</p></div></div>
+    </div>
+    <h4 class="title is-5" style="margin-top:1.75rem;">Per-task results</h4>
+    <div class="content is-size-6"><p>Schema matching is close to solved: all three pipelines reach an F1 at or near 100 on every task, so the difficulty lies downstream. Entity matching is strong on some tasks and open on others, and data fusion is the hardest step for every pipeline, which is where new methods have the most room. Best scores per task are in green.</p></div>
+    <table class="rtab">
+      <thead>
+        <tr><th rowspan="2" style="text-align:left;vertical-align:bottom;">Task</th><th colspan="3">Entity matching F1</th><th colspan="3" class="grp">Data fusion accuracy</th></tr>
+        <tr><th>Human</th><th>BoB</th><th>LLM</th><th class="grp">Human</th><th>BoB</th><th>LLM</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Games</td><td class="n best">89.45</td><td class="n">67.30</td><td class="n">63.15</td><td class="n grp">71.70</td><td class="n">64.91</td><td class="n best">84.87</td></tr>
+        <tr><td>Companies</td><td class="n">87.65</td><td class="n">89.29</td><td class="n best">90.69</td><td class="n grp">44.70</td><td class="n">45.90</td><td class="n best">63.24</td></tr>
+        <tr><td>Music</td><td class="n">95.35</td><td class="n">94.84</td><td class="n best">98.11</td><td class="n grp">70.20</td><td class="n">76.92</td><td class="n best">83.12</td></tr>
+        <tr><td>Products</td><td class="n">70.37</td><td class="n best">84.09</td><td class="n">63.09</td><td class="n grp">40.20</td><td class="n best">56.68</td><td class="n">43.65</td></tr>
+        <tr><td>Scientific Papers</td><td class="n best">99.78</td><td class="n">99.70</td><td class="n">96.05</td><td class="n grp">78.90</td><td class="n">61.04</td><td class="n best">79.35</td></tr>
+      </tbody>
+    </table>
+    <p class="legend">Human is the human-engineered pipeline (P1), BoB is best-of-breed (P2), and LLM is the LLM-based pipeline (P3). The LLM pipeline leads fusion on four of five tasks; best-of-breed leads on Products. Efficiency differs by orders of magnitude: mean end-to-end runtime is 234 s for the human pipeline, 540 s for the LLM pipeline, and 5,900 s for best-of-breed. Full per-step and end-to-end results are in the <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results">repository</a>.</p>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="section" id="resources">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Resources</h2>
+    <div class="content is-size-6">
+      <p>Tasks are released as plain files (CSV, JSON, and XML), so any system can read them. PyDI adds the integration steps and an evaluator for every stage, so a run can be scored without labeling any data.</p>
+      <ul>
+        <li><a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench">Benchmark repository</a>: all 20 tasks, ground truth, and the validation runs of the three pipelines.</li>
+        <li><a href="https://github.com/wbsg-uni-mannheim/PyDI">PyDI</a>: the integration framework and the per-step evaluator classes.</li>
+        <li><a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/use%20cases">The tasks</a>: inputs, target schemas, labeled splits, and fused gold records.</li>
+      </ul>
+    </div>
+
+    <h3 class="title is-5" style="margin-top:1.5rem;">BibTeX</h3>
+    <pre style="background:#fff;border:1px solid #ededed;">@inproceedings{steiner2026madibench,
+  title     = {MaDI-Bench: An End-to-End Data Integration Benchmark},
+  author    = {Steiner, Aaron and Peeters, Ralph and Bizer, Christian},
+  year      = {2026},
+  note      = {Data and Web Science Group, University of Mannheim}
+}</pre>
+  </div>
+</section>
+
+<footer class="footer" style="padding:2.5rem 1.5rem;">
+  <div class="container is-max-desktop has-text-centered">
+    <p class="is-size-7 has-text-grey">
+      MaDI-Bench · Data and Web Science Group, University of Mannheim ·
+      <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench">GitHub</a> ·
+      <a href="https://github.com/wbsg-uni-mannheim/PyDI">PyDI</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.navbar-burger').forEach(function(b){
+    b.addEventListener('click',function(){
+      b.classList.toggle('is-active');
+      document.getElementById(b.dataset.target).classList.toggle('is-active');
+    });
+  });
+  document.querySelectorAll('.tabs li').forEach(function(li){
+    li.addEventListener('click',function(){
+      document.querySelectorAll('.tabs li').forEach(function(x){x.classList.remove('is-active')});
+      li.classList.add('is-active');
+      document.querySelectorAll('.panel-v').forEach(function(p){p.classList.remove('is-active')});
+      document.querySelector('.panel-v[data-panel="'+li.dataset.v+'"]').classList.add('is-active');
+    });
+  });
+</script>
 </body>
 </html>

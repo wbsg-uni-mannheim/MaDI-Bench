@@ -1,101 +1,101 @@
 id,name,founded,country,city,industry,assets,revenue,keypeople
-http://www.forbes.com/companies/industrial-alliance-insurance/,Industrial Alliance Insurance,1892-01-01,Canada,Cleveland,,39900000000,6300000000,
-http://www.forbes.com/companies/deutsche-telekom/,Deutsche Telekom,1991-01-01,Germany,Eschborn,,162800000000,79800000000,
-http://www.forbes.com/companies/eutelsat-communications/,Eutelsat Communications,1977-01-01,France,Paris,,8800000000,1700000000,
-http://www.forbes.com/companies/westfield-group/,Westfield Group,1935-01-01,Australia,Bergen,,31200000000,2300000000,"[""Frank Lowy""]"
-http://www.forbes.com/companies/credit-agricole/,Credit Agricole,1885-01-01,France,Paris,,2117699999999,65300000000,
-http://www.forbes.com/companies/randstad-holding/,Randstad Holding,1891-01-01,Netherlands,Amsterdam,,9100000000,22000000000,
-http://www.forbes.com/companies/prudential/,Prudential,1848-01-01,United Kingdom,Newark,,528500000000,81900000000,
-http://www.forbes.com/companies/byd/,BYD,1995-01-01,China,Los Angeles,,12900000000,8400000000,
-http://www.forbes.com/companies/dongbu-insurance/,Dongbu Insurance,1922-01-01,South Korea,Glenview,,28300000000,11100000000,
-http://www.forbes.com/companies/yamaha-motor/,Yamaha Motor,1946-01-01,Japan,Lahaina,,10900000000,14400000000,
-http://www.forbes.com/companies/schlumberger/,Schlumberger,1926-01-01,United States,London,,67099999999,45400000000,"[""Schlumberger brothers""]"
-http://www.forbes.com/companies/shoprite-holdings/,Shoprite Holdings,1979-01-01,South Africa,Marousi,,3800000000,10100000000,
-http://www.forbes.com/companies/bayer/,Bayer,1863-01-01,Germany,Leverkusen,,70700000000,53300000000,
-http://www.forbes.com/companies/manpower/,Manpower,1948-01-01,United States,Milwaukee,,7300000000,20200000000,"[""Elmer Winter"", ""Vidya Gowda""]"
-http://www.forbes.com/companies/level-3-communications/,Level 3 Communications,1987-01-01,United States,San Jose,,12900000000,6300000000,
-http://www.forbes.com/companies/crown-resorts/,Crown Resorts,1973-01-01,Australia,Baar,,5800000000,2800000000,
-http://www.forbes.com/companies/tdc/,TDC,1882-01-01,Denmark,København C,,11200000000,4400000000,
-http://www.forbes.com/companies/smiths-group/,Smiths Group,1831-01-01,United Kingdom,Newcastle upon Tyne,,5800000000,4800000000,"[""Samuel Smith (watchmaker)"", ""Candace Bradshaw""]"
-http://www.forbes.com/companies/banca-popolare-di-milano/,Banca Popolare di Milano,1849-01-01,Italy,Milano,,68000000000,2900000000,
-http://www.forbes.com/companies/china-communications-services/,China Communications Services,2006-01-01,China,Emery,,8000000000,11100000000,
-http://www.forbes.com/companies/bank-muscat/,Bank Muscat,1954-01-01,Oman,Muscat,,22000000000,1100000000,
-http://www.forbes.com/companies/nabors-industries/,Nabors Industries,1913-01-01,Bermuda,Moffett Field,,12200000000,6200000000,"[""Christopher Cassell"", ""James Wolff"", ""Jim Luebke""]"
-http://www.forbes.com/companies/qualcomm/,Qualcomm,1985-01-01,United States,San Diego,,46300000000,25500000000,"[""Irwin M. Jacobs"", ""Andrew Viterbi"", ""Bob Forutan"", ""Franklin P. Antonio""]"
-http://www.forbes.com/companies/dicks-sporting-goods/,Dick's Sporting Goods,1948-01-01,United States,Binghamton,,3100000000,6200000000,
-http://www.forbes.com/companies/herbalife/,Herbalife,1980-01-01,United States,Gurgaon,,2500000000,4800000000,"[""Mark R. Hughes""]"
-http://www.forbes.com/companies/chang-hwa-bank/,Chang Hwa Bank,1905-01-01,Taiwan,Taichung,,56670000000,860000000,"[""Wu Ju-Hsiang""]"
-http://www.forbes.com/companies/aurubis/,Aurubis,1866-01-01,Germany,Hamburg,,5600000000,15580000000,"[""Ferdinand Beit""]"
-http://www.forbes.com/companies/astrazeneca/,AstraZeneca,1999-01-01,United Kingdom,London,,55900000000,25710000000,"[""Astra AB"", ""Zeneca Group PLC""]"
-http://www.forbes.com/companies/accor/,Accor,1967-01-01,France,Paris,,9670000000,7490000000,"[""Gérard Pélisson"", ""Paul Dubrule""]"
-http://www.forbes.com/companies/verisign/,VeriSign,1995-01-01,United States,"Reston, Virginia",,2660000000,970000000,"[""James Bidzos""]"
-http://www.forbes.com/companies/grupo-carso/,Grupo Carso,1980-01-01,Mexico,Mexico City,,6920000000,6670000000,"[""Carlos Slim""]"
-http://www.forbes.com/companies/lyondellbasell-industries/,LyondellBasell,2007-01-01,Netherlands,"Houston, Texas",,27300000000,44060000000,"[""Leonard Blavatnik""]"
-http://www.forbes.com/companies/hyundai-hysco/,Hyundai EP,2000-01-01,South Korea,Dangjin,,518807356,870496776,"[""Shin Woo-Churl""]"
-http://www.forbes.com/companies/toyota-boshoku/,Toyota Boshoku,1918-01-01,Japan,Kariya,,6090000000,11790000000,"[""Sakichi Toyoda""]"
-http://www.forbes.com/companies/nec/,NEC,1899-01-01,Japan,"Minato, Tokyo",,24220000000,30230000000,"[""Nobuhiro Endo""]"
-http://www.forbes.com/companies/kone/,Kone,1910-01-01,Finland,Espoo,,7380000000,9240000000,"[""Harald Herlin""]"
-http://www.forbes.com/companies/rwe-group/,RWE Group,1898-01-01,Germany,Essen,,112390000000,67220000000,"[""Wilhelm Lahmeyer""]"
-http://www.forbes.com/companies/boeing/,Boeing,1916-01-01,United States,"Chicago, Illinois",,92660000000,86620000000,"[""William Boeing""]"
-http://www.forbes.com/companies/petrobras/,Petrobras,1953-01-01,Brazil,Rio de Janeiro,,321420000000,141460000000,"[""Government of Brazil""]"
-http://www.forbes.com/companies/sandisk/,SanDisk,1988-01-01,United States,"Milpitas, California",,10490000000,6170000000,"[""Eli Harari"", ""Sanjay Mehrotra"", ""Jack Yuan""]"
-http://www.forbes.com/companies/juniper-networks/,Juniper Networks,1996-01-01,United States,"Sunnyvale, California",,10330000000,4670000000,"[""Pradeep Sindhu""]"
-http://www.forbes.com/companies/amp/,AMP,2007-01-01,Australia,Berwyn,,18440000000,13470000000,"[""Tom Lynch""]"
-http://www.forbes.com/companies/krung-thai-bank/,Krung Thai Bank,1966-01-01,Thailand,Bangkok,,77830000000,2960000000,"[""Thai government""]"
-http://www.forbes.com/companies/lkq/,LKQ,1998-01-01,United States,"Chicago, Illinois",,4520000000,5060000000,"[""Donald Flynn""]"
-http://www.forbes.com/companies/continental-resources/,Continental Resources,1967-01-01,United States,Oklahoma City,,24540015360,3460000000,"[""Harold Hamm""]"
-http://www.forbes.com/companies/bp/,BP,1901-01-01,United Kingdom,London,,305690000000,379140000000,"[""William Knox D'Arcy"", ""Charles Greenway""]"
-http://www.forbes.com/companies/western-digital/,Western Digital,1970-01-01,United States,California,,15280000000,15270000000,"[""Alvin B. Phillips""]"
-http://www.forbes.com/companies/metro-group/,Metro Group,1964-01-01,Germany,Düsseldorf,,5873000000,473736370,"[""Otto Beisheim"", ""Ernst Schmidt"", ""Wilhelm Schmidt-Ruthenbeck""]"
-http://www.forbes.com/companies/mitsubishi-ufj-financial/,Mitsubishi UFJ Financial,2005-01-01,Japan,Tokyo,,2837434000000,55573000000,"[""Mitsubishi Tokyo Financial Group"", ""UFJ Holdings""]"
-http://www.forbes.com/companies/kroger/,Kroger,1883-01-01,United States,"Cincinnati, Ohio",,25480000000,98260000000,"[""Bernard Kroger""]"
-http://www.forbes.com/companies/iberdrola/,Iberdrola,1992-01-01,Spain,Valencia,,124000000000,42450000000,"[""Hidroeléctrica Española"", ""Iberduero""]"
-http://www.forbes.com/companies/bharat-petroleum/,Bharat Petroleum,1976-01-01,India,Mumbai,,14654103384,43615731908,"[""R K Singh""]"
-http://www.forbes.com/companies/cit-group/,CIT Group,1908-01-01,United States,New York,,47139000000,2390000000,"[""Henry Ittleson""]"
-http://www.forbes.com/companies/fresenius/,Fresenius,1912-01-01,Germany,Bad Homburg vor der Höhe,,45240000000,27040000000,"[""Eduard Fresenius""]"
-http://www.forbes.com/companies/pandora/,Pandora,1982-01-01,Denmark,Copenhagen,,1720000000,1610000000,"[""Per Enevoldsen"", ""Winnie Liljeborg""]"
-http://www.forbes.com/companies/steinhoff-international/,Steinhoff International,1964-01-01,Germany,Stellenbosch,,11428000000,6800000000,"[""Bruno Steinhoff""]"
-http://www.forbes.com/companies/hoya/,Hoya,1941-01-01,Japan,Tokyo,,6530000000,4340000000,"[""Shoichi Yamanaka"", ""Shigeru Yamanaka""]"
-http://www.forbes.com/companies/dish-network/,DISH Network,1980-01-01,United States,"Meridian, Colorado",,20360000000,13510000000,"[""Charlie Ergen""]"
-http://www.forbes.com/companies/michelin-group/,Michelin Group,1889-01-01,France,Clermont-Ferrand,,28560000000,27960000000,"[""Édouard Michelin"", ""André Michelin""]"
-http://www.forbes.com/companies/oracle/,Oracle,1997-01-01,United States,"Austin, Texas",,85240000000,37550000000,"[""Larry Ellison"", ""Bob Miner"", ""Ed Oates""]"
-http://www.forbes.com/companies/shimano/,Shimano,1921-01-01,Japan,Osaka,,3040000000,2730000000,"[""Shozaburo Shimano""]"
-http://www.forbes.com/companies/linde/,Linde,1879-01-01,Germany,Dublin,,20260000000,11930000000,"[""Carl von Linde""]"
-http://www.forbes.com/companies/rural-electrification/,Rural Electrification,1969-01-01,India,New Delhi,,21084590529,2203108389,"[""Government of India""]"
-http://www.forbes.com/companies/costco-wholesale/,Costco Wholesale,1983-01-01,United States,"Issaquah, Washington",,32320000000,106460000000,"[""James Sinegal"", ""Jeffrey Brotman""]"
-http://www.forbes.com/companies/kellogg/,Kellogg,1906-01-01,United States,Michigan,,15470000000,14790000000,"[""Will Keith Kellogg""]"
-http://www.forbes.com/companies/kuwait-projects/,Kuwait Projects,1975-01-01,Kuwait,Kuwait City,,30690000000,860000000,"[""Sheikh Nasser Sabah Al-Ahmad Al-Sabah""]"
-http://www.forbes.com/companies/amphenol/,Amphenol,1932-01-01,United States,"Wallingford, Connecticut",,6170000000,4610000000,"[""Arthur J. Schmitt""]"
-http://www.forbes.com/companies/shiseido/,Shiseido,1872-01-01,Japan,Tokyo,,7030000000,7360000000,"[""Arinobu Fukuhara""]"
-http://www.forbes.com/companies/mapfre/,Mapfre,1933-01-01,Spain,Majadahonda,,78480000000,28290000000,"[""Agrupación de Propietarios de Fincas Rústicas de España""]"
-http://www.forbes.com/companies/iliad/,Iliad,1999-01-01,France,Paris,,4776300000,3747900000,"[""Xavier Niel""]"
-http://www.forbes.com/companies/baywa/,BayWa,1923-01-01,Germany,Munich,,6930000000,21340000000,"[""Klaus Josef Lutz""]"
-http://www.forbes.com/companies/aberdeen-asset-management/,Aberdeen Asset Management,1983-01-01,United Kingdom,Aberdeen,,1687852500,2100000000,"[""Martin Gilbert""]"
-http://www.forbes.com/companies/vivendi/,Vivendi,1853-01-01,France,Paris,,67920000000,18920000000,"[""Napoleon III""]"
-http://www.forbes.com/companies/wistron/,Wistron,2001-01-01,Taiwan,Taipei,,9020000000,21290000000,"[""Simon Lin""]"
-http://www.forbes.com/companies/renault/,Renault,1899-01-01,France,Boulogne Billancourt,,103560000000,56530000000,"[""Fernand Renault"", ""Louis Renault"", ""Marcel Renault""]"
-http://www.forbes.com/companies/sumitomo-mitsui-trust/,Sumitomo Mitsui Trust,2002-01-01,Japan,Tokyo,,401210000000,10040000000,"[""Kunitaro Kitamura""]"
-http://www.forbes.com/companies/galaxy-entertainment/,Galaxy Entertainment,1999-01-01,Hong Kong,"Toronto, Ontario",,5970000000,8520000000,"[""Gerry Schwartz"", ""Ellis Jacob"", ""Stephen Brown""]"
-http://www.forbes.com/companies/thales/,Thales Group,2000-01-01,France,Paris,,25760000000,17540000000,"[""Patrice Caine""]"
-http://www.forbes.com/companies/areva/,Areva,2001-01-01,France,Paris,,44207184000,12729024000,"[""The French government""]"
-http://www.forbes.com/companies/davita/,DaVita,1990-01-01,United States,Denver,,17100000000,11760000000,"[""Kent Thiry""]"
-http://www.forbes.com/companies/empire/,Empire,1963-01-01,Canada,"Stellarton, Nova Scotia",,9810000000,18340000000,"[""Frank H. Sobey"", ""Donald C.R. Sobey"", ""David F. Sobey""]"
-http://www.forbes.com/companies/volkswagen-group/,Volkswagen Group,1937-01-01,Germany,Wolfsburg,,447910000000,261910000000,"[""German Labour Front""]"
-http://www.forbes.com/companies/salzgitter/,Salzgitter,1998-01-01,Germany,Salzgitter,,11390000000,12300000000,"[""Prof. Dr.-Ing. Heinz Jörg Fuhrmann""]"
-http://www.forbes.com/companies/orix/,Orix,1964-01-01,Japan,Tokyo,,85660000000,9000000000,"[""Nichimen Corporation"", ""Sanwa Bank""]"
-http://www.forbes.com/companies/ugi/,UGI,1882-01-01,United States,Pennsylvania,,10660000000,7500000000,"[""John Walsh""]"
-http://www.forbes.com/companies/mtr/,MTR,1975-01-01,Hong Kong,Kowloon,,27830000000,4990000000,"[""Hong Kong Government""]"
-http://www.forbes.com/companies/konica-minolta/,Konica Minolta,2003-01-01,Japan,Tokyo,,9510000000,9270000000,"[""Konica"", ""Minolta""]"
-http://www.forbes.com/companies/edp-energias-de-portugal/,EDP-Energias de Portugal,1976-01-01,Portugal,Lisbon,,58090000000,21530000000,"[""The Portuguese Government""]"
-http://www.forbes.com/companies/tenaris/,Tenaris,2001-01-01,Luxembourg,Luxembourg (city),,15930000000,10600000000,"[""Agostino Rocca""]"
-http://www.forbes.com/companies/wendel/,Wendel,1704-01-01,France,Paris,,18950000000,7560000000,"[""Jean-Martin Wendel""]"
-http://www.forbes.com/companies/coloplast/,Coloplast,1957-01-01,Denmark,Humlebæk,,1560000000,2110000000,"[""Aage Louis-Hansen""]"
-http://www.forbes.com/companies/prudential-financial/,Prudential Financial,1875-01-01,United States,"Newark, New Jersey",,731780000000,41410000000,"[""John F. Dryden""]"
-http://www.forbes.com/companies/hermes-international/,Hermès International,1837-01-01,France,Paris,,5440000000,5190000000,"[""Thierry Hermès""]"
-http://www.forbes.com/companies/zijin-mining-group/,Zijin Mining Group,2000-01-01,China,"Shanghang, Longyan, Fujian",,11050000000,8130000000,"[""Chen Jinghe""]"
-http://www.forbes.com/companies/china-mobile/,China Mobile,1997-01-01,China,Beijing,,192900000000,102500000000,"[""Li Yue""]"
-http://www.forbes.com/companies/toshiba/,Toshiba,1939-01-01,Japan,Tokyo,,61700000000,63690000000,"[""Hisashige Tanaka"", ""Chisuke Fujioka""]"
-http://www.forbes.com/companies/lafarge/,Lafarge,1924-01-01,France,Paris,,51074520000,20936764800,"[""Joseph-Auguste Pavin de Lafarge""]"
-http://www.forbes.com/companies/panasonic/,Panasonic,1918-01-01,Japan,Tokyo,,52190000000,76050000000,"[""Konosuke Matsushita""]"
-http://www.forbes.com/companies/exelon/,Exelon,2000-01-01,United States,Chicago,,79920000000,24890000000,"[""John W. Rowe""]"
-http://www.forbes.com/companies/liberty-global/,Liberty Global,2004-01-01,United Kingdom,London,,67710000000,14180000000,"[""Liberty Media International"", ""UnitedGlobalCom""]"
+http://www.forbes.com/companies/industrial-alliance-insurance/,Industrial Alliance Insurance,1892-01-01,Canada,Cleveland,Insurance,39900000000,6300000000,
+http://www.forbes.com/companies/deutsche-telekom/,Deutsche Telekom,1991-01-01,Germany,Eschborn,Diversified Telecommunication Services,162800000000,79800000000,
+http://www.forbes.com/companies/eutelsat-communications/,Eutelsat Communications,1977-01-01,France,Paris,Diversified Telecommunication Services,8800000000,1700000000,
+http://www.forbes.com/companies/westfield-group/,Westfield Group,1935-01-01,Australia,Bergen,Retail REITs,31200000000,2300000000,Frank Lowy
+http://www.forbes.com/companies/credit-agricole/,Credit Agricole,1885-01-01,France,Paris,Banks,2117699999999,65300000000,
+http://www.forbes.com/companies/randstad-holding/,Randstad Holding,1891-01-01,Netherlands,Amsterdam,Professional Services,9100000000,22000000000,
+http://www.forbes.com/companies/prudential/,Prudential,1848-01-01,United Kingdom,Newark,Insurance,528500000000,81900000000,
+http://www.forbes.com/companies/byd/,BYD,1995-01-01,China,Los Angeles,Automobiles,12900000000,8400000000,
+http://www.forbes.com/companies/dongbu-insurance/,Dongbu Insurance,1922-01-01,South Korea,Glenview,Insurance,28300000000,11100000000,
+http://www.forbes.com/companies/yamaha-motor/,Yamaha Motor,1946-01-01,Japan,Lahaina,Automobiles,10900000000,14400000000,
+http://www.forbes.com/companies/schlumberger/,Schlumberger,1926-01-01,United States,London,Energy Equipment & Services,67099999999,45400000000,Schlumberger brothers
+http://www.forbes.com/companies/shoprite-holdings/,Shoprite Holdings,1979-01-01,South Africa,Marousi,Consumer Staples Distribution & Retail,3800000000,10100000000,
+http://www.forbes.com/companies/bayer/,Bayer,1863-01-01,Germany,Leverkusen,Pharmaceuticals,70700000000,53300000000,
+http://www.forbes.com/companies/manpower/,Manpower,1948-01-01,United States,Milwaukee,Professional Services,7300000000,20200000000,Elmer Winter; Vidya Gowda
+http://www.forbes.com/companies/level-3-communications/,Level 3 Communications,1987-01-01,United States,San Jose,Diversified Telecommunication Services,12900000000,6300000000,
+http://www.forbes.com/companies/crown-resorts/,Crown Resorts,1973-01-01,Australia,Baar,Hotels Restaurants & Leisure,5800000000,2800000000,
+http://www.forbes.com/companies/tdc/,TDC,1882-01-01,Denmark,København C,Diversified Telecommunication Services,11200000000,4400000000,
+http://www.forbes.com/companies/smiths-group/,Smiths Group,1831-01-01,United Kingdom,Newcastle upon Tyne,Industrial Conglomerates,5800000000,4800000000,Samuel Smith (watchmaker); Candace Bradshaw
+http://www.forbes.com/companies/banca-popolare-di-milano/,Banca Popolare di Milano,1849-01-01,Italy,Milano,Banks,68000000000,2900000000,
+http://www.forbes.com/companies/china-communications-services/,China Communications Services,2006-01-01,China,Emery,IT Services,8000000000,11100000000,
+http://www.forbes.com/companies/bank-muscat/,Bank Muscat,1954-01-01,Oman,Muscat,Banks,22000000000,1100000000,
+http://www.forbes.com/companies/nabors-industries/,Nabors Industries,1913-01-01,Bermuda,Moffett Field,Energy Equipment & Services,12200000000,6200000000,Christopher Cassell; James Wolff; Jim Luebke
+http://www.forbes.com/companies/qualcomm/,Qualcomm,1985-01-01,United States,San Diego,Semiconductors & Semiconductor Equipment,46300000000,25500000000,Irwin M. Jacobs; Andrew Viterbi; Bob Forutan; Franklin P. Antonio
+http://www.forbes.com/companies/dicks-sporting-goods/,Dick's Sporting Goods,1948-01-01,United States,Binghamton,Specialty Retail,3100000000,6200000000,
+http://www.forbes.com/companies/herbalife/,Herbalife,1980-01-01,United States,Gurgaon,Personal Care Products,2500000000,4800000000,Mark R. Hughes
+http://www.forbes.com/companies/chang-hwa-bank/,Chang Hwa Bank,1905-01-01,Taiwan,Taichung,Banks,56670000000,860000000,Wu Ju-Hsiang
+http://www.forbes.com/companies/aurubis/,Aurubis,1866-01-01,Germany,Hamburg,Metals & Mining,5600000000,15580000000,Ferdinand Beit
+http://www.forbes.com/companies/astrazeneca/,AstraZeneca,1999-01-01,United Kingdom,London,Pharmaceuticals,55900000000,25710000000,Astra AB; Zeneca Group PLC
+http://www.forbes.com/companies/accor/,Accor,1967-01-01,France,Paris,Hotels Restaurants & Leisure,9670000000,7490000000,Gérard Pélisson; Paul Dubrule
+http://www.forbes.com/companies/verisign/,VeriSign,1995-01-01,United States,"Reston, Virginia",IT Services,2660000000,970000000,James Bidzos
+http://www.forbes.com/companies/grupo-carso/,Grupo Carso,1980-01-01,Mexico,Mexico City,Industrial Conglomerates,6920000000,6670000000,Carlos Slim
+http://www.forbes.com/companies/lyondellbasell-industries/,LyondellBasell,2007-01-01,Netherlands,"Houston, Texas",Chemicals,27300000000,44060000000,Leonard Blavatnik
+http://www.forbes.com/companies/hyundai-hysco/,Hyundai EP,2000-01-01,South Korea,Dangjin,Metals & Mining,518807356,870496776,Shin Woo-Churl
+http://www.forbes.com/companies/toyota-boshoku/,Toyota Boshoku,1918-01-01,Japan,Kariya,Automobile Components,6090000000,11790000000,Sakichi Toyoda
+http://www.forbes.com/companies/nec/,NEC,1899-01-01,Japan,"Minato, Tokyo",IT Services,24220000000,30230000000,Nobuhiro Endo
+http://www.forbes.com/companies/kone/,Kone,1910-01-01,Finland,Espoo,Machinery,7380000000,9240000000,Harald Herlin
+http://www.forbes.com/companies/rwe-group/,RWE Group,1898-01-01,Germany,Essen,Independent Power and Renewable Electricity Producers,112390000000,67220000000,Wilhelm Lahmeyer
+http://www.forbes.com/companies/boeing/,Boeing,1916-01-01,United States,"Chicago, Illinois",Aerospace & Defense,92660000000,86620000000,William Boeing
+http://www.forbes.com/companies/petrobras/,Petrobras,1953-01-01,Brazil,Rio de Janeiro,Oil Gas & Consumable Fuels,321420000000,141460000000,Government of Brazil
+http://www.forbes.com/companies/sandisk/,SanDisk,1988-01-01,United States,"Milpitas, California",Technology Hardware Storage & Peripherals,10490000000,6170000000,Eli Harari; Sanjay Mehrotra; Jack Yuan
+http://www.forbes.com/companies/juniper-networks/,Juniper Networks,1996-01-01,United States,"Sunnyvale, California",Communications Equipment,10330000000,4670000000,Pradeep Sindhu
+http://www.forbes.com/companies/amp/,AMP,2007-01-01,Australia,Berwyn,Capital Markets,18440000000,13470000000,Tom Lynch
+http://www.forbes.com/companies/krung-thai-bank/,Krung Thai Bank,1966-01-01,Thailand,Bangkok,Banks,77830000000,2960000000,Thai government
+http://www.forbes.com/companies/lkq/,LKQ,1998-01-01,United States,"Chicago, Illinois",Distributors,4520000000,5060000000,Donald Flynn
+http://www.forbes.com/companies/continental-resources/,Continental Resources,1967-01-01,United States,Oklahoma City,Oil Gas & Consumable Fuels,24540015360,3460000000,Harold Hamm
+http://www.forbes.com/companies/bp/,BP,1901-01-01,United Kingdom,London,Oil Gas & Consumable Fuels,305690000000,379140000000,William Knox D'Arcy; Charles Greenway
+http://www.forbes.com/companies/western-digital/,Western Digital,1970-01-01,United States,California,Technology Hardware Storage & Peripherals,15280000000,15270000000,Alvin B. Phillips
+http://www.forbes.com/companies/metro-group/,Metro Group,1964-01-01,Germany,Düsseldorf,Consumer Staples Distribution & Retail,5873000000,473736370,Otto Beisheim; Ernst Schmidt; Wilhelm Schmidt-Ruthenbeck
+http://www.forbes.com/companies/mitsubishi-ufj-financial/,Mitsubishi UFJ Financial,2005-01-01,Japan,Tokyo,Banks,2837434000000,55573000000,Mitsubishi Tokyo Financial Group; UFJ Holdings
+http://www.forbes.com/companies/kroger/,Kroger,1883-01-01,United States,"Cincinnati, Ohio",Consumer Staples Distribution & Retail,25480000000,98260000000,Bernard Kroger
+http://www.forbes.com/companies/iberdrola/,Iberdrola,1992-01-01,Spain,Valencia,Electric Utilities,124000000000,42450000000,Hidroeléctrica Española; Iberduero
+http://www.forbes.com/companies/bharat-petroleum/,Bharat Petroleum,1976-01-01,India,Mumbai,Oil Gas & Consumable Fuels,14654103384,43615731908,R K Singh
+http://www.forbes.com/companies/cit-group/,CIT Group,1908-01-01,United States,New York,Financial Services,47139000000,2390000000,Henry Ittleson
+http://www.forbes.com/companies/fresenius/,Fresenius,1912-01-01,Germany,Bad Homburg vor der Höhe,Health Care Providers & Services,45240000000,27040000000,Eduard Fresenius
+http://www.forbes.com/companies/pandora/,Pandora,1982-01-01,Denmark,Copenhagen,Textiles Apparel & Luxury Goods,1720000000,1610000000,Per Enevoldsen; Winnie Liljeborg
+http://www.forbes.com/companies/steinhoff-international/,Steinhoff International,1964-01-01,Germany,Stellenbosch,Household Durables,11428000000,6800000000,Bruno Steinhoff
+http://www.forbes.com/companies/hoya/,Hoya,1941-01-01,Japan,Tokyo,Health Care Equipment & Supplies,6530000000,4340000000,Shoichi Yamanaka; Shigeru Yamanaka
+http://www.forbes.com/companies/dish-network/,DISH Network,1980-01-01,United States,"Meridian, Colorado",Media,20360000000,13510000000,Charlie Ergen
+http://www.forbes.com/companies/michelin-group/,Michelin Group,1889-01-01,France,Clermont-Ferrand,Automobile Components,28560000000,27960000000,Édouard Michelin; André Michelin
+http://www.forbes.com/companies/oracle/,Oracle,1997-01-01,United States,"Austin, Texas",Software,85240000000,37550000000,Larry Ellison; Bob Miner; Ed Oates
+http://www.forbes.com/companies/shimano/,Shimano,1921-01-01,Japan,Osaka,Leisure Products,3040000000,2730000000,Shozaburo Shimano
+http://www.forbes.com/companies/linde/,Linde,1879-01-01,Germany,Dublin,Chemicals,20260000000,11930000000,Carl von Linde
+http://www.forbes.com/companies/rural-electrification/,Rural Electrification,1969-01-01,India,New Delhi,Financial Services,21084590529,2203108389,Government of India
+http://www.forbes.com/companies/costco-wholesale/,Costco Wholesale,1983-01-01,United States,"Issaquah, Washington",Consumer Staples Distribution & Retail,32320000000,106460000000,James Sinegal; Jeffrey Brotman
+http://www.forbes.com/companies/kellogg/,Kellogg,1906-01-01,United States,Michigan,Food Products,15470000000,14790000000,Will Keith Kellogg
+http://www.forbes.com/companies/kuwait-projects/,Kuwait Projects,1975-01-01,Kuwait,Kuwait City,Financial Services,30690000000,860000000,Sheikh Nasser Sabah Al-Ahmad Al-Sabah
+http://www.forbes.com/companies/amphenol/,Amphenol,1932-01-01,United States,"Wallingford, Connecticut",Electronic Equipment Instruments & Components,6170000000,4610000000,Arthur J. Schmitt
+http://www.forbes.com/companies/shiseido/,Shiseido,1872-01-01,Japan,Tokyo,Personal Care Products,7030000000,7360000000,Arinobu Fukuhara
+http://www.forbes.com/companies/mapfre/,Mapfre,1933-01-01,Spain,Majadahonda,Insurance,78480000000,28290000000,Agrupación de Propietarios de Fincas Rústicas de España
+http://www.forbes.com/companies/iliad/,Iliad,1999-01-01,France,Paris,Diversified Telecommunication Services,4776300000,3747900000,Xavier Niel
+http://www.forbes.com/companies/baywa/,BayWa,1923-01-01,Germany,Munich,Trading Companies & Distributors,6930000000,21340000000,Klaus Josef Lutz
+http://www.forbes.com/companies/aberdeen-asset-management/,Aberdeen Asset Management,1983-01-01,United Kingdom,Aberdeen,Capital Markets,1687852500,2100000000,Martin Gilbert
+http://www.forbes.com/companies/vivendi/,Vivendi,1853-01-01,France,Paris,Media,67920000000,18920000000,Napoleon III
+http://www.forbes.com/companies/wistron/,Wistron,2001-01-01,Taiwan,Taipei,Technology Hardware Storage & Peripherals,9020000000,21290000000,Simon Lin
+http://www.forbes.com/companies/renault/,Renault,1899-01-01,France,Boulogne Billancourt,Automobiles,103560000000,56530000000,Fernand Renault; Louis Renault; Marcel Renault
+http://www.forbes.com/companies/sumitomo-mitsui-trust/,Sumitomo Mitsui Trust,2002-01-01,Japan,Tokyo,Banks,401210000000,10040000000,Kunitaro Kitamura
+http://www.forbes.com/companies/galaxy-entertainment/,Galaxy Entertainment,1999-01-01,Hong Kong,"Toronto, Ontario",Hotels Restaurants & Leisure,5970000000,8520000000,Gerry Schwartz; Ellis Jacob; Stephen Brown
+http://www.forbes.com/companies/thales/,Thales Group,2000-01-01,France,Paris,Aerospace & Defense,25760000000,17540000000,Patrice Caine
+http://www.forbes.com/companies/areva/,Areva,2001-01-01,France,Paris,Energy Equipment & Services,44207184000,12729024000,The French government
+http://www.forbes.com/companies/davita/,DaVita,1990-01-01,United States,Denver,Health Care Providers & Services,17100000000,11760000000,Kent Thiry
+http://www.forbes.com/companies/empire/,Empire,1963-01-01,Canada,"Stellarton, Nova Scotia",Consumer Staples Distribution & Retail,9810000000,18340000000,Frank H. Sobey; Donald C.R. Sobey; David F. Sobey
+http://www.forbes.com/companies/volkswagen-group/,Volkswagen Group,1937-01-01,Germany,Wolfsburg,Automobiles,447910000000,261910000000,German Labour Front
+http://www.forbes.com/companies/salzgitter/,Salzgitter,1998-01-01,Germany,Salzgitter,Metals & Mining,11390000000,12300000000,Prof. Dr.-Ing. Heinz Jörg Fuhrmann
+http://www.forbes.com/companies/orix/,Orix,1964-01-01,Japan,Tokyo,Financial Services,85660000000,9000000000,Nichimen Corporation; Sanwa Bank
+http://www.forbes.com/companies/ugi/,UGI,1882-01-01,United States,Pennsylvania,Gas Utilities,10660000000,7500000000,John Walsh
+http://www.forbes.com/companies/mtr/,MTR,1975-01-01,Hong Kong,Kowloon,Ground Transportation,27830000000,4990000000,Hong Kong Government
+http://www.forbes.com/companies/konica-minolta/,Konica Minolta,2003-01-01,Japan,Tokyo,Technology Hardware Storage & Peripherals,9510000000,9270000000,Konica; Minolta
+http://www.forbes.com/companies/edp-energias-de-portugal/,EDP-Energias de Portugal,1976-01-01,Portugal,Lisbon,Electric Utilities,58090000000,21530000000,The Portuguese Government
+http://www.forbes.com/companies/tenaris/,Tenaris,2001-01-01,Luxembourg,Luxembourg (city),Energy Equipment & Services,15930000000,10600000000,Agostino Rocca
+http://www.forbes.com/companies/wendel/,Wendel,1704-01-01,France,Paris,Capital Markets,18950000000,7560000000,Jean-Martin Wendel
+http://www.forbes.com/companies/coloplast/,Coloplast,1957-01-01,Denmark,Humlebæk,Health Care Equipment & Supplies,1560000000,2110000000,Aage Louis-Hansen
+http://www.forbes.com/companies/prudential-financial/,Prudential Financial,1875-01-01,United States,"Newark, New Jersey",Insurance,731780000000,41410000000,John F. Dryden
+http://www.forbes.com/companies/hermes-international/,Hermès International,1837-01-01,France,Paris,Textiles Apparel & Luxury Goods,5440000000,5190000000,Thierry Hermès
+http://www.forbes.com/companies/zijin-mining-group/,Zijin Mining Group,2000-01-01,China,"Shanghang, Longyan, Fujian",Metals & Mining,11050000000,8130000000,Chen Jinghe
+http://www.forbes.com/companies/china-mobile/,China Mobile,1997-01-01,China,Beijing,Wireless Telecommunication Services,192900000000,102500000000,Li Yue
+http://www.forbes.com/companies/toshiba/,Toshiba,1939-01-01,Japan,Tokyo,Industrial Conglomerates,61700000000,63690000000,Hisashige Tanaka; Chisuke Fujioka
+http://www.forbes.com/companies/lafarge/,Lafarge,1924-01-01,France,Paris,Construction Materials,51074520000,20936764800,Joseph-Auguste Pavin de Lafarge
+http://www.forbes.com/companies/panasonic/,Panasonic,1918-01-01,Japan,Tokyo,Household Durables,52190000000,76050000000,Konosuke Matsushita
+http://www.forbes.com/companies/exelon/,Exelon,2000-01-01,United States,Chicago,Electric Utilities,79920000000,24890000000,John W. Rowe
+http://www.forbes.com/companies/liberty-global/,Liberty Global,2004-01-01,United Kingdom,London,Diversified Telecommunication Services,67710000000,14180000000,Liberty Media International; UnitedGlobalCom
