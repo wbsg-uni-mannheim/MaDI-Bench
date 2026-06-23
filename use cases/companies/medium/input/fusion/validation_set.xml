@@ -93,7 +93,7 @@
     <company>
         <id>http://www.forbes.com/companies/dongbu-insurance/</id>
         <name provenance="http://www.forbes.com/companies/dongbu-insurance/">Dongbu Insurance</name>
-        <country provenance="http://www.forbes.com/companies/dongbu-insurance/">Korea, Republic of</country>
+        <country provenance="http://www.forbes.com/companies/dongbu-insurance/">South Korea</country>
         <city provenance="http://dbpedia.org/resource/Combined_Insurance">Glenview</city>
         <industry>Insurance</industry>
         <assets provenance="http://www.forbes.com/companies/dongbu-insurance/">28300000000</assets>
@@ -325,7 +325,7 @@
     <company>
         <id>http://www.forbes.com/companies/astrazeneca/</id>
         <name provenance="http://www.forbes.com/companies/astrazeneca/">AstraZeneca</name>
-        <country provenance="http://www.forbes.com/companies/astrazeneca/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/astrazeneca/">United Kingdom</country>
         <city provenance="fullcontact_114">London</city>
         <industry>Pharmaceuticals</industry>
         <assets provenance="manual">55900000000</assets>
@@ -353,7 +353,7 @@
     <company>
         <id>http://www.forbes.com/companies/verisign/</id>
         <name provenance="http://www.forbes.com/companies/verisign/+http://dbpedia.org/resource/Verisign+fullcontact_790">VeriSign</name>
-        <country provenance="http://www.forbes.com/companies/verisign/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/verisign/">United States</country>
         <city provenance="http://dbpedia.org/resource/Verisign">Reston, Virginia</city>
         <industry>IT Services</industry>
         <assets provenance="manual">2660000000</assets>
@@ -457,7 +457,7 @@
     <company>
         <id>http://www.forbes.com/companies/boeing/</id>
         <name provenance="http://www.forbes.com/companies/boeing/">Boeing</name>
-        <country provenance="http://www.forbes.com/companies/boeing/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/boeing/">United States</country>
         <city provenance="manual">Chicago, Illinois</city>
         <industry>Aerospace &amp; Defense</industry>
         <assets provenance="manual">92660000000</assets>
@@ -483,7 +483,7 @@
     <company>
         <id>http://www.forbes.com/companies/sandisk/</id>
         <name provenance="http://www.forbes.com/companies/sandisk/+http://dbpedia.org/resource/SanDisk+fullcontact_642">SanDisk</name>
-        <country provenance="http://www.forbes.com/companies/sandisk/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/sandisk/">United States</country>
         <city provenance="manual">Milpitas, California</city>
         <industry>Technology Hardware Storage &amp; Peripherals</industry>
         <assets provenance="manual">10490000000</assets>
@@ -498,7 +498,7 @@
     <company>
         <id>http://www.forbes.com/companies/juniper-networks/</id>
         <name provenance="http://www.forbes.com/companies/juniper-networks/+fullcontact_447">Juniper Networks</name>
-        <country provenance="http://www.forbes.com/companies/juniper-networks/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/juniper-networks/">United States</country>
         <city provenance="manual">Sunnyvale, California</city>
         <industry>Communications Equipment</industry>
         <assets provenance="manual">10330000000</assets>
@@ -537,7 +537,7 @@
     <company>
         <id>http://www.forbes.com/companies/lkq/</id>
         <name provenance="http://www.forbes.com/companies/lkq/">LKQ</name>
-        <country provenance="http://www.forbes.com/companies/lkq/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/lkq/">United States</country>
         <city provenance="manual">Chicago, Illinois</city>
         <industry>Distributors</industry>
         <assets provenance="manual">4520000000</assets>
@@ -550,7 +550,7 @@
     <company>
         <id>http://www.forbes.com/companies/continental-resources/</id>
         <name provenance="http://www.forbes.com/companies/continental-resources/">Continental Resources</name>
-        <country provenance="http://www.forbes.com/companies/continental-resources/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/continental-resources/">United States</country>
         <city provenance="manual">Oklahoma City</city>
         <industry>Oil Gas &amp; Consumable Fuels</industry>
         <assets provenance="manual">24540015360</assets>
@@ -563,7 +563,7 @@
     <company>
         <id>http://www.forbes.com/companies/bp/</id>
         <name provenance="http://www.forbes.com/companies/bp/+http://dbpedia.org/resource/BP">BP</name>
-        <country provenance="http://www.forbes.com/companies/bp/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/bp/">United Kingdom</country>
         <city provenance="http://dbpedia.org/resource/BP+fullcontact_166">London</city>
         <industry>Oil Gas &amp; Consumable Fuels</industry>
         <assets provenance="manual">305690000000</assets>
@@ -577,7 +577,7 @@
     <company>
         <id>http://www.forbes.com/companies/western-digital/</id>
         <name provenance="http://www.forbes.com/companies/western-digital/+http://dbpedia.org/resource/Western_Digital">Western Digital</name>
-        <country provenance="http://www.forbes.com/companies/western-digital/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/western-digital/">United States</country>
         <city provenance="manual">California</city>
         <industry>Technology Hardware Storage &amp; Peripherals</industry>
         <assets provenance="manual">15280000000</assets>
@@ -619,7 +619,7 @@
     <company>
         <id>http://www.forbes.com/companies/kroger/</id>
         <name provenance="http://www.forbes.com/companies/kroger/+http://dbpedia.org/resource/Kroger">Kroger</name>
-        <country provenance="http://www.forbes.com/companies/kroger/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/kroger/">United States</country>
         <city provenance="manual">Cincinnati, Ohio</city>
         <industry>Consumer Staples Distribution &amp; Retail</industry>
         <assets provenance="manual">25480000000</assets>
@@ -659,7 +659,7 @@
     <company>
         <id>http://www.forbes.com/companies/cit-group/</id>
         <name provenance="http://www.forbes.com/companies/cit-group/">CIT Group</name>
-        <country provenance="http://www.forbes.com/companies/cit-group/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/cit-group/">United States</country>
         <city provenance="manual">New York</city>
         <industry>Financial Services</industry>
         <assets provenance="manual">47139000000</assets>
@@ -726,7 +726,7 @@
     <company>
         <id>http://www.forbes.com/companies/dish-network/</id>
         <name provenance="http://www.forbes.com/companies/dish-network/+http://dbpedia.org/resource/Dish_Network">DISH Network</name>
-        <country provenance="http://www.forbes.com/companies/dish-network/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/dish-network/">United States</country>
         <city provenance="http://dbpedia.org/resource/Dish_Network">Meridian, Colorado</city>
         <industry>Media</industry>
         <assets provenance="manual">20360000000</assets>
@@ -753,7 +753,7 @@
     <company>
         <id>http://www.forbes.com/companies/oracle/</id>
         <name provenance="http://www.forbes.com/companies/oracle/">Oracle</name>
-        <country provenance="http://www.forbes.com/companies/oracle/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/oracle/">United States</country>
         <city provenance="manual">Austin, Texas</city>
         <industry>Software</industry>
         <assets provenance="manual">85240000000</assets>
@@ -807,7 +807,7 @@
     <company>
         <id>http://www.forbes.com/companies/costco-wholesale/</id>
         <name provenance="http://www.forbes.com/companies/costco-wholesale/">Costco Wholesale</name>
-        <country provenance="http://www.forbes.com/companies/costco-wholesale/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/costco-wholesale/">United States</country>
         <city provenance="manual">Issaquah, Washington</city>
         <industry>Consumer Staples Distribution &amp; Retail</industry>
         <assets provenance="manual">32320000000</assets>
@@ -821,7 +821,7 @@
     <company>
         <id>http://www.forbes.com/companies/kellogg/</id>
         <name provenance="http://www.forbes.com/companies/kellogg/">Kellogg</name>
-        <country provenance="http://www.forbes.com/companies/kellogg/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/kellogg/">United States</country>
         <city provenance="manual">Michigan</city>
         <industry>Food Products</industry>
         <assets provenance="manual">15470000000</assets>
@@ -847,7 +847,7 @@
     <company>
         <id>http://www.forbes.com/companies/amphenol/</id>
         <name provenance="http://www.forbes.com/companies/amphenol/+http://dbpedia.org/resource/Amphenol">Amphenol</name>
-        <country provenance="http://www.forbes.com/companies/amphenol/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/amphenol/">United States</country>
         <city provenance="http://dbpedia.org/resource/Amphenol">Wallingford, Connecticut</city>
         <industry>Electronic Equipment Instruments &amp; Components</industry>
         <assets provenance="manual">6170000000</assets>
@@ -912,7 +912,7 @@
     <company>
         <id>http://www.forbes.com/companies/aberdeen-asset-management/</id>
         <name provenance="http://www.forbes.com/companies/aberdeen-asset-management/+fullcontact_46">Aberdeen Asset Management</name>
-        <country provenance="http://www.forbes.com/companies/aberdeen-asset-management/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/aberdeen-asset-management/">United Kingdom</country>
         <city provenance="fullcontact_46">Aberdeen</city>
         <industry>Capital Markets</industry>
         <assets provenance="manual">1687852500</assets>
@@ -1020,7 +1020,7 @@
     <company>
         <id>http://www.forbes.com/companies/davita/</id>
         <name provenance="http://www.forbes.com/companies/davita/">DaVita</name>
-        <country provenance="http://www.forbes.com/companies/davita/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/davita/">United States</country>
         <city provenance="manual">Denver</city>
         <industry>Health Care Providers &amp; Services</industry>
         <assets provenance="manual">17100000000</assets>
@@ -1088,7 +1088,7 @@
     <company>
         <id>http://www.forbes.com/companies/ugi/</id>
         <name provenance="http://www.forbes.com/companies/ugi/">UGI</name>
-        <country provenance="http://www.forbes.com/companies/ugi/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/ugi/">United States</country>
         <city provenance="manual">Pennsylvania</city>
         <industry>Gas Utilities</industry>
         <assets provenance="manual">10660000000</assets>
@@ -1180,7 +1180,7 @@
     <company>
         <id>http://www.forbes.com/companies/prudential-financial/</id>
         <name provenance="http://www.forbes.com/companies/prudential-financial/+http://dbpedia.org/resource/Prudential_Financial">Prudential Financial</name>
-        <country provenance="http://www.forbes.com/companies/prudential-financial/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/prudential-financial/">United States</country>
         <city provenance="manual">Newark, New Jersey</city>
         <industry>Insurance</industry>
         <assets provenance="manual">731780000000</assets>
@@ -1272,7 +1272,7 @@
     <company>
         <id>http://www.forbes.com/companies/exelon/</id>
         <name provenance="http://www.forbes.com/companies/exelon/+http://dbpedia.org/resource/Exelon+fullcontact_1541">Exelon</name>
-        <country provenance="http://www.forbes.com/companies/exelon/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/exelon/">United States</country>
         <city provenance="fullcontact_1541">Chicago</city>
         <industry>Electric Utilities</industry>
         <assets provenance="manual">79920000000</assets>
@@ -1285,7 +1285,7 @@
     <company>
         <id>http://www.forbes.com/companies/liberty-global/</id>
         <name provenance="http://www.forbes.com/companies/liberty-global/">Liberty Global</name>
-        <country provenance="http://www.forbes.com/companies/liberty-global/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/liberty-global/">United Kingdom</country>
         <city provenance="manual">London</city>
         <industry>Diversified Telecommunication Services</industry>
         <assets provenance="manual">67710000000</assets>

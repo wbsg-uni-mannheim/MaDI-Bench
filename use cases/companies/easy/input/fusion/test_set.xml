@@ -238,7 +238,7 @@
     <company>
         <id>http://www.forbes.com/companies/hollyfrontier/</id>
         <name provenance="http://www.forbes.com/companies/hollyfrontier/+http://dbpedia.org/resource/HollyFrontier">HollyFrontier</name>
-        <country provenance="http://www.forbes.com/companies/hollyfrontier/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/hollyfrontier/">United States</country>
         <city provenance="manual">Dallas, Texas</city>
         <industry>Oil Gas &amp; Consumable Fuels</industry>
         <assets provenance="manual">10060000000</assets>
@@ -252,7 +252,7 @@
     <company>
         <id>http://www.forbes.com/companies/standard-chartered/</id>
         <name provenance="http://www.forbes.com/companies/standard-chartered/+http://dbpedia.org/resource/Standard_Chartered+fullcontact_1297">Standard Chartered</name>
-        <country provenance="http://www.forbes.com/companies/standard-chartered/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/standard-chartered/">United Kingdom</country>
         <city provenance="http://dbpedia.org/resource/Standard_Chartered">London</city>
         <industry>Banks</industry>
         <assets provenance="manual">674380000000</assets>
@@ -266,7 +266,7 @@
     <company>
         <id>http://www.forbes.com/companies/frontier-communications/</id>
         <name provenance="http://www.forbes.com/companies/frontier-communications/+http://dbpedia.org/resource/Frontier_Communications">Frontier Communications</name>
-        <country provenance="http://www.forbes.com/companies/frontier-communications/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/frontier-communications/">United States</country>
         <city provenance="http://dbpedia.org/resource/Frontier_Communications">Stamford, Connecticut</city>
         <industry>Diversified Telecommunication Services</industry>
         <assets provenance="manual">16635000000</assets>
@@ -294,7 +294,7 @@
     <company>
         <id>http://www.forbes.com/companies/united-continental-holdings/</id>
         <name provenance="http://www.forbes.com/companies/united-continental-holdings/+http://dbpedia.org/resource/United_Continental_Holdings">United Continental Holdings</name>
-        <country provenance="http://www.forbes.com/companies/united-continental-holdings/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/united-continental-holdings/">United States</country>
         <city provenance="manual">Chicago, Illinois</city>
         <industry>Passenger Airlines</industry>
         <assets provenance="manual">36810000000</assets>
@@ -307,7 +307,7 @@
     <company>
         <id>http://www.forbes.com/companies/royal-bank-of-scotland/</id>
         <name provenance="http://www.forbes.com/companies/royal-bank-of-scotland/">Royal Bank of Scotland</name>
-        <country provenance="http://www.forbes.com/companies/royal-bank-of-scotland/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/royal-bank-of-scotland/">United Kingdom</country>
         <city provenance="manual">Edinburgh</city>
         <industry>Banks</industry>
         <assets provenance="manual">1019934000000</assets>
@@ -320,7 +320,7 @@
     <company>
         <id>http://www.forbes.com/companies/microsoft/</id>
         <name provenance="http://www.forbes.com/companies/microsoft/+http://dbpedia.org/resource/Microsoft+fullcontact_512">Microsoft</name>
-        <country provenance="http://www.forbes.com/companies/microsoft/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/microsoft/">United States</country>
         <city provenance="http://dbpedia.org/resource/Microsoft">Microsoft Redmond CampusRedmond, Washington</city>
         <industry>Software</industry>
         <assets provenance="manual">153540000000</assets>
@@ -347,7 +347,7 @@
     <company>
         <id>http://www.forbes.com/companies/bunzl/</id>
         <name provenance="http://www.forbes.com/companies/bunzl/">Bunzl</name>
-        <country provenance="http://www.forbes.com/companies/bunzl/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/bunzl/">United Kingdom</country>
         <city provenance="manual">London</city>
         <industry>Trading Companies &amp; Distributors</industry>
         <assets provenance="manual">5240000000</assets>
@@ -375,7 +375,7 @@
     <company>
         <id>http://www.forbes.com/companies/smith-nephew/</id>
         <name provenance="http://www.forbes.com/companies/smith-nephew/">Smith &amp; Nephew</name>
-        <country provenance="http://www.forbes.com/companies/smith-nephew/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/smith-nephew/">United Kingdom</country>
         <city provenance="manual">Watford</city>
         <industry>Health Care Equipment &amp; Supplies</industry>
         <assets provenance="manual">5820000000</assets>
@@ -415,7 +415,7 @@
     <company>
         <id>http://www.forbes.com/companies/crown-holdings/</id>
         <name provenance="http://www.forbes.com/companies/crown-holdings/">Crown Holdings</name>
-        <country provenance="http://www.forbes.com/companies/crown-holdings/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/crown-holdings/">United States</country>
         <city provenance="manual">Philadelphia, Pennsylvania</city>
         <industry>Containers &amp; Packaging</industry>
         <assets provenance="manual">8030000000</assets>
@@ -513,7 +513,7 @@
     <company>
         <id>http://www.forbes.com/companies/noble-energy/</id>
         <name provenance="http://www.forbes.com/companies/noble-energy/+http://dbpedia.org/resource/Noble_Energy+fullcontact_1881">Noble Energy</name>
-        <country provenance="http://www.forbes.com/companies/noble-energy/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/noble-energy/">United States</country>
         <city provenance="manual">Houston, Texas</city>
         <industry>Oil Gas &amp; Consumable Fuels</industry>
         <assets provenance="manual">19642000000</assets>
@@ -553,7 +553,7 @@
     <company>
         <id>http://www.forbes.com/companies/bae-systems/</id>
         <name provenance="http://www.forbes.com/companies/bae-systems/">BAE Systems</name>
-        <country provenance="http://www.forbes.com/companies/bae-systems/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/bae-systems/">United Kingdom</country>
         <city provenance="manual">London</city>
         <industry>Aerospace &amp; Defense</industry>
         <assets provenance="manual">32460000000</assets>
@@ -580,7 +580,7 @@
     <company>
         <id>http://www.forbes.com/companies/health-care-reit/</id>
         <name provenance="fullcontact_787">Ventas, Inc.</name>
-        <country provenance="http://www.forbes.com/companies/health-care-reit/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/health-care-reit/">United States</country>
         <city provenance="fullcontact_787">Chicago</city>
         <industry>Health Care REITs</industry>
         <assets provenance="manual">19730000000</assets>
@@ -593,7 +593,7 @@
     <company>
         <id>http://www.forbes.com/companies/mondi/</id>
         <name provenance="http://www.forbes.com/companies/mondi/">Mondi</name>
-        <country provenance="http://www.forbes.com/companies/mondi/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/mondi/">United Kingdom</country>
         <city provenance="manual">Weybridge</city>
         <industry>Containers &amp; Packaging</industry>
         <assets provenance="manual">8620000000</assets>
@@ -700,7 +700,7 @@
     <company>
         <id>http://www.forbes.com/companies/nordstrom/</id>
         <name provenance="http://www.forbes.com/companies/nordstrom/+http://dbpedia.org/resource/Nordstrom+fullcontact_1446">Nordstrom</name>
-        <country provenance="http://www.forbes.com/companies/nordstrom/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/nordstrom/">United States</country>
         <city provenance="manual">Seattle, Washington</city>
         <industry>Broadline Retail</industry>
         <assets provenance="manual">8590000000</assets>
@@ -713,7 +713,7 @@
     <company>
         <id>http://www.forbes.com/companies/b-e-aerospace/</id>
         <name provenance="http://www.forbes.com/companies/b-e-aerospace/+http://dbpedia.org/resource/B/E_Aerospace+fullcontact_144">B/E Aerospace</name>
-        <country provenance="http://www.forbes.com/companies/b-e-aerospace/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/b-e-aerospace/">United States</country>
         <city provenance="http://dbpedia.org/resource/B/E_Aerospace">Wellington, Florida</city>
         <industry>Aerospace &amp; Defense</industry>
         <assets provenance="manual">5700000000</assets>
@@ -741,7 +741,7 @@
     <company>
         <id>http://www.forbes.com/companies/nomos-bank/</id>
         <name provenance="http://www.forbes.com/companies/nomos-bank/">Nomos Bank</name>
-        <country provenance="http://www.forbes.com/companies/nomos-bank/">Russian Federation</country>
+        <country provenance="http://www.forbes.com/companies/nomos-bank/">Russia</country>
         <city provenance="http://dbpedia.org/resource/NOMOS-BANK">Moscow</city>
         <industry>Banks</industry>
         <assets provenance="manual">42044444142</assets>
@@ -782,7 +782,7 @@
     <company>
         <id>http://www.forbes.com/companies/oneok/</id>
         <name provenance="http://www.forbes.com/companies/oneok/+http://dbpedia.org/resource/ONEOK">Oneok</name>
-        <country provenance="http://www.forbes.com/companies/oneok/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/oneok/">United States</country>
         <city provenance="http://dbpedia.org/resource/ONEOK">Tulsa, Oklahoma</city>
         <industry>Oil Gas &amp; Consumable Fuels</industry>
         <assets provenance="manual">17740000000</assets>
@@ -796,7 +796,7 @@
     <company>
         <id>http://www.forbes.com/companies/sears-holdings/</id>
         <name provenance="http://www.forbes.com/companies/sears-holdings/">Sears Holdings</name>
-        <country provenance="http://www.forbes.com/companies/sears-holdings/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/sears-holdings/">United States</country>
         <city provenance="manual">Hoffman Estates, Illinois</city>
         <industry>Broadline Retail</industry>
         <assets provenance="manual">18261000000</assets>
@@ -825,7 +825,7 @@
     <company>
         <id>http://www.forbes.com/companies/clorox/</id>
         <name provenance="http://www.forbes.com/companies/clorox/+http://dbpedia.org/resource/Clorox">Clorox</name>
-        <country provenance="http://www.forbes.com/companies/clorox/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/clorox/">United States</country>
         <city provenance="manual">California</city>
         <industry>Household Products</industry>
         <assets provenance="manual">4390000000</assets>
@@ -842,7 +842,7 @@
     <company>
         <id>http://www.forbes.com/companies/mcdonalds/</id>
         <name provenance="http://www.forbes.com/companies/mcdonalds/">McDonald's</name>
-        <country provenance="http://www.forbes.com/companies/mcdonalds/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/mcdonalds/">United States</country>
         <city provenance="manual">Chicago, Illionois</city>
         <industry>Hotels Restaurants &amp; Leisure</industry>
         <assets provenance="manual">36630000000</assets>
@@ -869,7 +869,7 @@
     <company>
         <id>http://www.forbes.com/companies/meadwestvaco/</id>
         <name provenance="http://www.forbes.com/companies/meadwestvaco/">MeadWestvaco</name>
-        <country provenance="http://www.forbes.com/companies/meadwestvaco/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/meadwestvaco/">United States</country>
         <city provenance="manual">Richmond, Virginia</city>
         <industry>Containers &amp; Packaging</industry>
         <assets provenance="manual">10285000000</assets>
@@ -962,7 +962,7 @@
     <company>
         <id>http://www.forbes.com/companies/g4s/</id>
         <name provenance="http://www.forbes.com/companies/g4s/+fullcontact_336">G4S</name>
-        <country provenance="http://www.forbes.com/companies/g4s/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/g4s/">United Kingdom</country>
         <city provenance="fullcontact_336">London</city>
         <industry>Commercial Services &amp; Supplies</industry>
         <assets provenance="manual">8862912000</assets>
@@ -1030,7 +1030,7 @@
     <company>
         <id>http://www.forbes.com/companies/carnival/</id>
         <name provenance="http://www.forbes.com/companies/carnival/">Carnival</name>
-        <country provenance="http://www.forbes.com/companies/carnival/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/carnival/">United States</country>
         <city provenance="manual">Florida</city>
         <industry>Hotels Restaurants &amp; Leisure</industry>
         <assets provenance="manual">40100000000</assets>
@@ -1043,7 +1043,7 @@
     <company>
         <id>http://www.forbes.com/companies/integrys-energy/</id>
         <name provenance="http://www.forbes.com/companies/integrys-energy/+http://dbpedia.org/resource/Integrys_Energy_Group">Integrys Energy Group</name>
-        <country provenance="http://www.forbes.com/companies/integrys-energy/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/integrys-energy/">United States</country>
         <city provenance="manual">Chicago, Illionois</city>
         <industry>Multi-Utilities</industry>
         <assets provenance="manual">11243500000</assets>
@@ -1070,7 +1070,7 @@
     <company>
         <id>http://www.forbes.com/companies/anglo-american/</id>
         <name provenance="http://www.forbes.com/companies/anglo-american/+fullcontact_97">Anglo American</name>
-        <country provenance="http://www.forbes.com/companies/anglo-american/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/anglo-american/">United Kingdom</country>
         <city provenance="http://dbpedia.org/resource/Anglo_American_plc+fullcontact_97">London</city>
         <industry>Metals &amp; Mining</industry>
         <assets provenance="manual">71170000000</assets>
@@ -1197,7 +1197,7 @@
     <company>
         <id>http://www.forbes.com/companies/weir-group/</id>
         <name provenance="http://www.forbes.com/companies/weir-group/+http://dbpedia.org/resource/Weir_Group">Weir Group</name>
-        <country provenance="http://www.forbes.com/companies/weir-group/">United Kingdom of Great Britain and Northern Ireland</country>
+        <country provenance="http://www.forbes.com/companies/weir-group/">United Kingdom</country>
         <city provenance="http://dbpedia.org/resource/Weir_Group">Glasgow</city>
         <industry>Machinery</industry>
         <assets provenance="manual">5220000000</assets>
@@ -1237,7 +1237,7 @@
     <company>
         <id>http://www.forbes.com/companies/masco/</id>
         <name provenance="http://www.forbes.com/companies/masco/+http://dbpedia.org/resource/Masco">Masco</name>
-        <country provenance="http://www.forbes.com/companies/masco/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/masco/">United States</country>
         <city provenance="manual">Livonia, Michigan</city>
         <industry>Building Products</industry>
         <assets provenance="manual">6960000000</assets>
@@ -1276,7 +1276,7 @@
     <company>
         <id>http://www.forbes.com/companies/pge/</id>
         <name provenance="http://www.forbes.com/companies/pge/">PG&amp;E</name>
-        <country provenance="http://www.forbes.com/companies/pge/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/pge/">United States</country>
         <city provenance="manual">San Francisco, California</city>
         <industry>Multi-Utilities</industry>
         <assets provenance="manual">55610000000</assets>
@@ -1343,7 +1343,7 @@
     <company>
         <id>http://www.forbes.com/companies/towers-watson/</id>
         <name provenance="http://www.forbes.com/companies/towers-watson/">Towers Watson &amp; Co.</name>
-        <country provenance="http://www.forbes.com/companies/towers-watson/">United States of America</country>
+        <country provenance="http://www.forbes.com/companies/towers-watson/">United States</country>
         <city provenance="manual">London</city>
         <industry>Professional Services</industry>
         <assets provenance="manual">14800000000</assets>

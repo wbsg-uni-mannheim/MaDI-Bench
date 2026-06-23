@@ -22,10 +22,10 @@
         <developer>PopCap</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>81</criticScore>
         <userScore>7.9</userScore>
         <ESRB>E10+</ESRB>
@@ -36,10 +36,11 @@
         <releaseYear>2014-09-30</releaseYear>
         <developer>Arc System Works</developer>
         <genres>
-            <genre>Fighting</genre>
+            <genre>Action</genre>
+
         </genres>
         <publisher>Atlus</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>84</criticScore>
         <userScore>7.6</userScore>
         <ESRB>T</ESRB>
@@ -50,11 +51,11 @@
         <releaseYear>2004-11-17</releaseYear>
         <developer>KCEJ</developer>
         <genres>
-            <genre>Action</genre>
-            <genre>Stealth game</genre>
+            <genre>Action-Adventure</genre>
+
         </genres>
         <publisher>Konami Digital Entertainment</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>91</criticScore>
         <userScore>9.3</userScore>
         <ESRB>M</ESRB>
@@ -65,10 +66,11 @@
         <releaseYear>2003-11-18</releaseYear>
         <developer>SquareSoft</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>85</criticScore>
         <userScore>7.2</userScore>
         <ESRB>T</ESRB>
@@ -82,7 +84,7 @@
             <genre>Sports</genre>
         </genres>
         <publisher>Take-Two Interactive</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>90</criticScore>
         <userScore>6.8</userScore>
         <ESRB>T</ESRB>
@@ -110,7 +112,7 @@
             <genre>Strategy</genre>
         </genres>
         <publisher>Take-Two Interactive</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>90</criticScore>
         <userScore>8.1</userScore>
         <ESRB>E10+</ESRB>
@@ -139,7 +141,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Nordic Games</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>81</criticScore>
         <userScore>7.9</userScore>
         <ESRB>M</ESRB>
@@ -153,7 +155,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>71</criticScore>
         <userScore>7</userScore>
         <ESRB>E10+</ESRB>
@@ -165,7 +167,8 @@
         <developer>Southend Interactive</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Deep Silver</publisher>
         <platform>Xbox 360</platform>
@@ -213,7 +216,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>BAM! Entertainment</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>58</criticScore>
         <userScore>6.3</userScore>
         <ESRB>E</ESRB>
@@ -225,10 +228,10 @@
         <developer>Coffee Stain Studios</developer>
         <genres>
             <genre>Simulation</genre>
-            <genre>General</genre>
+
         </genres>
         <publisher>Coffee Stain Studios,Double Eleven</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>61</criticScore>
         <userScore>5.9</userScore>
         <ESRB>T</ESRB>
@@ -239,10 +242,11 @@
         <releaseYear>2005-09-20</releaseYear>
         <developer>Raven Software</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Activision</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>82</criticScore>
         <userScore>7.8</userScore>
         <ESRB>T</ESRB>
@@ -270,7 +274,7 @@
             <genre>Strategy</genre>
         </genres>
         <publisher>Wizards of the Coast</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>76</criticScore>
         <userScore>7.5</userScore>
         <ESRB>T</ESRB>
@@ -284,7 +288,7 @@
             <genre>Strategy</genre>
         </genres>
         <publisher>Ubisoft</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>64</criticScore>
         <userScore>6.6</userScore>
         <ESRB>E10+</ESRB>
@@ -296,7 +300,7 @@
         <developer>Climax Group</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>NovaLogic</publisher>
         <platform>Xbox</platform>
@@ -325,10 +329,10 @@
         <developer>Examu</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Fighting</genre>
+
         </genres>
         <publisher>Examu,Aksys Games Localization,Arc System Works</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>71</criticScore>
         <userScore>6.9</userScore>
         <ESRB>T</ESRB>
@@ -343,7 +347,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Psyonix</publisher>
-        <platform>Switch</platform>
+        <platform>Nintendo Switch</platform>
         <criticScore>86</criticScore>
         <userScore>7.9</userScore>
         <ESRB>E</ESRB>
@@ -359,7 +363,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Ubisoft</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>88</criticScore>
         <userScore>8.5</userScore>
         <ESRB>T</ESRB>
@@ -370,7 +374,8 @@
         <releaseYear>2017-10-17</releaseYear>
         <developer>Ubisoft San Francisco</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Ubisoft</publisher>
         <platform>Xbox One</platform>
@@ -387,7 +392,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Atari</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>60</criticScore>
         <userScore>6.3</userScore>
         <ESRB>E</ESRB>
@@ -399,10 +404,11 @@
         <developer>Bungie</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Bungie</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>79</criticScore>
         <userScore>7.7</userScore>
         <ESRB>T</ESRB>
@@ -416,7 +422,7 @@
             <genre>Sports</genre>
         </genres>
         <publisher>2K Games</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>71</criticScore>
         <userScore>7</userScore>
         <ESRB>E10+</ESRB>
@@ -428,7 +434,7 @@
         <developer>High Moon Studios</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Activision</publisher>
         <platform>Xbox 360</platform>
@@ -501,12 +507,10 @@
         <developer>Atomic Planet Entertainment</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Platformer</genre>
-            <genre>Role-playing</genre>
-            <genre>Adventure</genre>
+
         </genres>
         <publisher>Capcom</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>82</criticScore>
         <userScore>7.6</userScore>
         <ESRB>E</ESRB>
@@ -520,7 +524,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Acclaim Entertainment</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>88</criticScore>
         <userScore>8.2</userScore>
         <ESRB>E</ESRB>
@@ -531,8 +535,8 @@
         <releaseYear>2009-08-24</releaseYear>
         <developer>Retro Studios</developer>
         <genres>
-            <genre>Action</genre>
-            <genre>Shooter</genre>
+            <genre>Action-Adventure</genre>
+
         </genres>
         <publisher>Retro Studios</publisher>
         <platform>Wii</platform>
@@ -549,7 +553,7 @@
             <genre>Sports</genre>
         </genres>
         <publisher>Sony Computer Entertainment</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>59</criticScore>
         <userScore>6.2</userScore>
         <ESRB>E</ESRB>
@@ -560,11 +564,12 @@
         <releaseYear>2011-01-25</releaseYear>
         <developer>Visceral Games</developer>
         <genres>
+            <genre>Horror</genre>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>88</criticScore>
         <userScore>8.5</userScore>
         <ESRB>M</ESRB>
@@ -578,7 +583,7 @@
             <genre>Sports</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>77</criticScore>
         <userScore>7.6</userScore>
         <ESRB>E</ESRB>
@@ -593,7 +598,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Square Enix</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>60</criticScore>
         <userScore>6.7</userScore>
         <ESRB>M</ESRB>
@@ -607,7 +612,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Disney Interactive,LucasArts</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>77</criticScore>
         <userScore>7.4</userScore>
         <ESRB>T</ESRB>
@@ -622,7 +627,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Modus Games,3goo</publisher>
-        <platform>Switch</platform>
+        <platform>Nintendo Switch</platform>
         <criticScore>72</criticScore>
         <userScore>7.2</userScore>
         <ESRB>T</ESRB>
@@ -637,7 +642,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Atari</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>72</criticScore>
         <userScore>7</userScore>
         <ESRB>T</ESRB>
@@ -666,7 +671,7 @@
             <genre>Simulation</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>74</criticScore>
         <userScore>7.2</userScore>
         <ESRB>E</ESRB>
@@ -677,10 +682,11 @@
         <releaseYear>2011-07-14</releaseYear>
         <developer>FuRyu</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>FuRyu,Xseed Games</publisher>
-        <platform>3DS</platform>
+        <platform>Nintendo 3DS</platform>
         <criticScore>64</criticScore>
         <userScore>6.5</userScore>
         <ESRB>T</ESRB>
@@ -692,7 +698,7 @@
         <developer>Toys for Bob</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Platformer</genre>
+
         </genres>
         <publisher>Activision</publisher>
         <platform>PlayStation 5</platform>
@@ -707,7 +713,7 @@
         <developer>Edge of Reality</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Activision</publisher>
         <platform>Xbox 360</platform>
@@ -738,7 +744,7 @@
             <genre>Sports</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>90</criticScore>
         <userScore>8.1</userScore>
         <ESRB>E</ESRB>
@@ -752,7 +758,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>WayForward,Intergrow</publisher>
-        <platform>3DS</platform>
+        <platform>Nintendo 3DS</platform>
         <criticScore>87</criticScore>
         <userScore>8.5</userScore>
         <ESRB>E10+</ESRB>
@@ -767,7 +773,7 @@
             <genre>Strategy</genre>
         </genres>
         <publisher>Modus Games,3goo</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>72</criticScore>
         <userScore>7.2</userScore>
         <ESRB>T</ESRB>
@@ -782,7 +788,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Spike Chunsoft,THQ</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>84</criticScore>
         <userScore>8.2</userScore>
         <ESRB>M</ESRB>
@@ -797,7 +803,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Namco Bandai Games</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>77</criticScore>
         <userScore>7.6</userScore>
         <ESRB>T</ESRB>
@@ -812,7 +818,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Rockstar Games</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>65</criticScore>
         <userScore>6</userScore>
         <ESRB>M</ESRB>
@@ -827,7 +833,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Koei</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>49</criticScore>
         <userScore>5.8</userScore>
         <ESRB>T</ESRB>
@@ -842,7 +848,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Pocketwatch Games</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>82</criticScore>
         <userScore>7.8</userScore>
         <ESRB>T</ESRB>
@@ -883,7 +889,7 @@
         <developer>Monolith Productions</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Warner Bros</publisher>
         <platform>Xbox 360</platform>
@@ -911,8 +917,8 @@
         <releaseYear>2010-07-13</releaseYear>
         <developer>Hothead Games</developer>
         <genres>
-            <genre>Action</genre>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>Xbox 360</platform>
@@ -929,7 +935,7 @@
             <genre>Strategy</genre>
         </genres>
         <publisher>Stardock</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>85</criticScore>
         <userScore>8.4</userScore>
         <ESRB>T</ESRB>
@@ -941,11 +947,10 @@
         <developer>Insomniac Games</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
-            <genre>Adventure</genre>
+
         </genres>
         <publisher>Sony Computer Entertainment</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>85</criticScore>
         <userScore>8.2</userScore>
         <ESRB>M</ESRB>
@@ -959,7 +964,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Sony Computer Entertainment,Annapurna Games</publisher>
-        <platform>PS3</platform>
+        <platform>PlayStation 3</platform>
         <criticScore>79</criticScore>
         <userScore>8.1</userScore>
         <ESRB>E10+</ESRB>
@@ -988,7 +993,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Marvelous Entertainment</publisher>
-        <platform>3DS</platform>
+        <platform>Nintendo 3DS</platform>
         <criticScore>59</criticScore>
         <userScore>6.5</userScore>
         <ESRB>M</ESRB>
@@ -1017,7 +1022,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Codemasters</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>84</criticScore>
         <userScore>8.1</userScore>
         <ESRB>E</ESRB>
@@ -1028,11 +1033,11 @@
         <releaseYear>2004-07-29</releaseYear>
         <developer>Capcom</developer>
         <genres>
-            <genre>Role-Playing</genre>
-            <genre>Console-style RPG</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Capcom</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>67</criticScore>
         <userScore>6.5</userScore>
         <ESRB>E</ESRB>
@@ -1046,7 +1051,7 @@
             <genre>Simulation</genre>
         </genres>
         <publisher>Natsume</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>79</criticScore>
         <userScore>7.6</userScore>
         <ESRB>E</ESRB>
@@ -1060,7 +1065,7 @@
             <genre>Puzzle</genre>
         </genres>
         <publisher>Nintendo</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>77</criticScore>
         <userScore>6.6</userScore>
         <ESRB>E</ESRB>
@@ -1075,7 +1080,7 @@
             <genre>Simulation</genre>
         </genres>
         <publisher>Sunflowers, Paradox Interactive</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>79</criticScore>
         <userScore>7.7</userScore>
         <ESRB>E10+</ESRB>
@@ -1090,7 +1095,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Capcom</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>80</criticScore>
         <userScore>7.8</userScore>
         <ESRB>M</ESRB>
@@ -1120,7 +1125,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Ubisoft</publisher>
-        <platform>PS4</platform>
+        <platform>PlayStation 4</platform>
         <criticScore>77</criticScore>
         <userScore>7.5</userScore>
         <ESRB>E</ESRB>
@@ -1135,7 +1140,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Acclaim Entertainment</publisher>
-        <platform>GameCube</platform>
+        <platform>Nintendo GameCube</platform>
         <criticScore>76</criticScore>
         <userScore>7.5</userScore>
         <ESRB>T</ESRB>
@@ -1149,7 +1154,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>D3Publisher</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>62</criticScore>
         <userScore>6.4</userScore>
         <ESRB>E</ESRB>
@@ -1164,7 +1169,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Sony Computer Entertainment</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>81</criticScore>
         <userScore>7.9</userScore>
         <ESRB>E</ESRB>
@@ -1175,8 +1180,8 @@
         <releaseYear>2018-01-30</releaseYear>
         <developer>Funcom</developer>
         <genres>
-            <genre>Action Adventure</genre>
-            <genre>Survival</genre>
+            <genre>Action-Adventure</genre>
+
         </genres>
         <publisher>Funcom</publisher>
         <platform>Xbox One</platform>
@@ -1191,7 +1196,7 @@
         <developer>Visceral Games</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>Xbox 360</platform>
@@ -1206,7 +1211,7 @@
         <developer>Ruffian Games</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Microsoft Game Studios</publisher>
         <platform>Xbox 360</platform>
@@ -1224,7 +1229,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Activision</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>59</criticScore>
         <userScore>6.2</userScore>
         <ESRB>E</ESRB>
@@ -1238,7 +1243,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Oxygen Interactive</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>43</criticScore>
         <userScore/>
         <ESRB>E</ESRB>
@@ -1250,7 +1255,7 @@
         <developer>Arc System Works</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Fighting</genre>
+
         </genres>
         <publisher>Aksys Games Localization</publisher>
         <platform>Xbox 360</platform>
@@ -1279,10 +1284,10 @@
         <developer>Croteam</developer>
         <genres>
             <genre>Action</genre>
-            <genre>Shooter</genre>
+
         </genres>
         <publisher>Gathering of Developers</publisher>
-        <platform>PC</platform>
+        <platform>Windows PC</platform>
         <criticScore>83</criticScore>
         <userScore>7.9</userScore>
         <ESRB>M</ESRB>
@@ -1297,7 +1302,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Konami Digital Entertainment</publisher>
-        <platform>PS2</platform>
+        <platform>PlayStation 2</platform>
         <criticScore>94</criticScore>
         <userScore>8.6</userScore>
         <ESRB>M</ESRB>
@@ -1341,7 +1346,7 @@
             <genre>Adventure</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>34</criticScore>
         <userScore>4.8</userScore>
         <ESRB>E</ESRB>
@@ -1352,10 +1357,11 @@
         <releaseYear>2014-12-18</releaseYear>
         <developer>Racjin</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Square Enix</publisher>
-        <platform>3DS</platform>
+        <platform>Nintendo 3DS</platform>
         <criticScore>64</criticScore>
         <userScore>6.6</userScore>
         <ESRB>E10+</ESRB>
@@ -1381,11 +1387,11 @@
         <releaseYear>2006-12-21</releaseYear>
         <developer>Alfa System</developer>
         <genres>
-            <genre>Action</genre>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>Namco Bandai Games</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>79</criticScore>
         <userScore>7.5</userScore>
         <ESRB>T</ESRB>
@@ -1396,10 +1402,11 @@
         <releaseYear>2011-07-14</releaseYear>
         <developer>ART</developer>
         <genres>
-            <genre>Role-playing</genre>
+            <genre>Role-Playing Game (RPG)</genre>
+
         </genres>
         <publisher>FuRyu, Xseed Games</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>64</criticScore>
         <userScore>6.5</userScore>
         <ESRB>T</ESRB>
@@ -1413,7 +1420,7 @@
             <genre>Racing</genre>
         </genres>
         <publisher>Namco</publisher>
-        <platform>Playstation Portable</platform>
+        <platform>PlayStation Portable (PSP)</platform>
         <criticScore>87</criticScore>
         <userScore>8.4</userScore>
         <ESRB>E</ESRB>
@@ -1427,7 +1434,7 @@
             <genre>Action</genre>
         </genres>
         <publisher>Disney Interactive Studios</publisher>
-        <platform>DS</platform>
+        <platform>Nintendo DS</platform>
         <criticScore>78</criticScore>
         <userScore>7.3</userScore>
         <ESRB>E10+</ESRB>
