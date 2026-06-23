@@ -4,13 +4,13 @@
 Data and Web Science Group, University of Mannheim, Germany
 *\*These authors contributed equally to this work.*
 
-🌐 **Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ · **Pipeline framework (PyDI):** https://github.com/wbsg-uni-mannheim/PyDI
+**Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ 
 
 ---
 
 ## Abstract
 
-> Data integration combines heterogeneous data sets into a single, coherent representation. Data integration involves a sequence of interdependent tasks including schema matching, value normalization, entity blocking, entity matching, and data fusion. Existing benchmarks either evaluate these steps in isolation or target only incomplete versions of the data integration pipeline leaving out specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods. This paper fills this gap by introducing the Mannheim Data Integration Benchmark (MaDI-Bench), the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. MaDI-Bench contributes (i) a set of baseline end-to-end data integration tasks spanning several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a generic method for deriving variants of these tasks to prevent the quick saturation of the benchmark as data integration systems progress. We validate the benchmark using human-engineered pipelines, a best-of-breed pipeline, and an LLM-based pipeline. The validation shows the utility of the benchmark for measuring the step-wise as well as the end-to-end performance of data integration pipelines. All benchmark artifacts are available for public download.
+> Data integration combines heterogeneous data sets into a single, coherent representation. Data integration involves a sequence of interdependent tasks including schema matching, value normalization, entity blocking, entity matching, and data fusion. Existing benchmarks either evaluate these steps in isolation or cover only incomplete versions of the data integration pipeline, omitting specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods that address the integration process as a whole. The Mannheim Data Integration Benchmark (MaDI-Bench) fills this gap. MaDI-Bench is the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. MaDI-Bench contributes (i) a set of base end-to-end data integration tasks spanning several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a generic method for deriving task variants that mitigates rapid benchmark saturation as data integration systems advance. We validate the benchmark using human-engineered pipelines, a best-of-breed pipeline, and an LLM-based pipeline. The validation demonstrates the utility of the benchmark for measuring the step-wise as well as the end-to-end performance of data integration pipelines. All benchmark artifacts are available for public download..
 
 **Keywords:** data integration, data lakes, schema matching, entity matching, data fusion, end-to-end evaluation, large language models
 
@@ -18,22 +18,22 @@ Data and Web Science Group, University of Mannheim, Germany
 
 ## What is MaDI-Bench?
 
-MaDI-Bench is the first public benchmark for the **full, end-to-end integration of relational tables**. Each task takes several heterogeneous source tables in a domain and asks a system to produce a single fused target table that conforms to a given target schema and contains one record per real-world entity. Solving a task exercises every step of the data integration pipeline together:
+The Mannheim Data Integration Benchmark (MaDI-Bench) is the first public benchmark for evaluating the **full, end-to-end integration of relational tables**. Each MaDI task takes several heterogeneous source tables as input and asks the system under test to produce a single output table that conforms to a given target schema and contains only a single record per real-world entity. Solving a task requires to handle all steps of the data integration process together:
 
 **Schema Matching → Value Normalization → Entity Blocking → Entity Matching → Data Fusion**
 
-Rather than evaluating each step on its own dataset, MaDI-Bench provides ground truth for every step *and* for the integrated output, so a system can be scored step-by-step and end-to-end on the same task.
+MaDI-Bench provides ground truth for every step of the integration process *and* for the final output, so a system can be scored step-by-step and end-to-end. As errors propagate through the pipeline, end-to-end scoring reveals their impact on the final integrated result..
 
 What the benchmark provides:
 
 - **20 integration tasks across 5 domains** — Games, Companies, Music, Products, and Scientific Papers. Each domain ships one base task plus *easy*, *medium*, and *hard* variants.
-- **Ground truth for every step** — a gold schema mapping, labeled entity-matching train/validation/test splits, and hand-annotated fusion validation/test records, in addition to the integrated reference output.
+- **Ground truth for every step** — a gold schema mapping, labeled entity-matching train/validation/test splits, and human-verified data fusion validation and test sets.
 - **A variant-generation method** built on eight controllable *difficulty knobs*, which derive easier and harder versions of each base task. The easy variants keep simpler, cheaper methods competitive; the hard variants preserve headroom as systems improve, so the benchmark stays useful over time.
 - **Validation runs from three reference pipelines** — a human-engineered pipeline, a best-of-breed pipeline, and an LLM-based pipeline.
 
-Across the five base tasks, the artifacts include more than **93,000 labeled record pairs** for entity matching, **1,000 hand-annotated fusion records** carrying close to **11,000 verified attribute values**, and a gold schema mapping per task. All artifacts are released in common formats (CSV, JSON, XML).
+Across the five base tasks, the artifacts include more than **93,000 labeled record pairs** for entity matching, **1,000 human-verified fused records** carrying close to **11,000 human-verified attribute values**, and a gold schema mapping per task. All artifacts are released using common formats (CSV, JSON, XML).
 
-The tasks build on and are evaluated with **[PyDI](https://github.com/wbsg-uni-mannheim/PyDI)**, which provides the integration functions and a specialized evaluator class for each step, so a system can be developed and scored without annotating any data of its own.
+The data integration pipelines that are used for the validation of the benchmark build on the **[PyDI - Data Integration Framework](https://github.com/wbsg-uni-mannheim/PyDI)**, which provides alternative integration methods and a specialized evaluator classes for each step of the data integration pipeline.
 
 ---
 
