@@ -5,7 +5,7 @@
   <meta name="description" content="MaDI-Bench: an end-to-end benchmark for the integration of relational tables, covering schema matching, value normalization, entity matching, and data fusion." />
   <meta name="keywords" content="MaDI-Bench, data integration, schema matching, entity matching, data fusion, benchmark, data spaces" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mannheim Data Integration Benchmark (MaDI-Bench)</title>
+  <title>MaDI-Bench: Mannheim Data Integration Benchmark</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
@@ -224,12 +224,12 @@
     <nav class="level" style="margin:1.2rem 0 .5rem;">
       <div class="level-item has-text-centered"><div><p class="title is-3">5</p><p class="heading">Domains</p></div></div>
       <div class="level-item has-text-centered"><div><p class="title is-3">20</p><p class="heading">Tasks</p></div></div>
-      <div class="level-item has-text-centered"><div><p class="title is-3">93k+</p><p class="heading">Matching records</p></div></div>
-      <div class="level-item has-text-centered"><div><p class="title is-3">1,000</p><p class="heading">Human-verified output records</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">93,000</p><p class="heading">Matching records</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">11,000</p><p class="heading">Human-verified values</p></div></div>
     </nav>
 
     <div style="margin-top:1.5rem;"></div>
-    <div class="content is-size-6 task-list"><p><b>Games.</b> Integrates three video-game sources: Metacritic (review scores and ESRB ratings), a sales dataset (commercial performance), and DBpedia (release dates, developers, platforms, genres, and series). The target schema has ten attributes.</p></div>
+    <div class="content is-size-6 task-list"><p><b>Games.</b> This task requires the integration of three video-game datasets: Metacritic (review scores and ESRB ratings), a sales dataset (commercial performance), and DBpedia (release dates, developers, platforms, genres, and series). The target schema has ten attributes.</p></div>
     <div class="chall"><span class="chall-l">Challenges</span>
       <ul>
         <li>The same game on a different platform is a separate entity, so a matcher must not over-rely on the title.</li>
@@ -254,7 +254,7 @@
       </div>
       </div>
     </details>
-    <div class="content is-size-6 task-list"><p><b>Companies.</b> Integrates the Forbes Global 2000 list, a DBpedia company extract, and a FullContact company-profile sample. The target schema has eight attributes.</p></div>
+    <div class="content is-size-6 task-list"><p><b>Companies.</b> This task requires the integration of the Forbes Global 2000 list, a DBpedia company extract, and a FullContact company-profile sample. The target schema has eight attributes.</p></div>
     <div class="chall"><span class="chall-l">Challenges</span>
       <ul>
         <li>Company-name variants, spelling differences, and corporate hierarchies.</li>
@@ -359,9 +359,9 @@
       </div>
     </details>
 
-    <p class="heading" style="margin-top:1.5rem;color:#888;">Source-level statistics (base task)</p>
+    <p class="heading" style="margin-top:1.5rem;color:#888;">Dataset statistics</p>
     <table class="table is-fullwidth is-hoverable">
-      <thead><tr><th>Task</th><th>Sources</th><th class="has-text-right">#</th><th class="has-text-right">Records</th><th class="has-text-right">Target fields</th></tr></thead>
+      <thead><tr><th>Task</th><th>Dataset</th><th class="has-text-right">#</th><th class="has-text-right">Records</th><th class="has-text-right">Attributes</th></tr></thead>
       <tbody>
         <tr><td><b>Games</b></td><td>DBpedia, Metacritic, Sales</td><td class="num-cell">3</td><td class="num-cell">74,951</td><td class="num-cell">10</td></tr>
         <tr><td><b>Companies</b></td><td>Forbes, DBpedia, FullContact</td><td class="num-cell">3</td><td class="num-cell">14,016</td><td class="num-cell">8</td></tr>
@@ -377,11 +377,11 @@
 <!-- BENCHMARK ARTIFACTS -->
 <section class="section" id="artifacts">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Benchmark Artifacts</h2>
+    <h2 class="title is-3 has-text-centered">Artifacts per Task</h2>
     <div class="content is-size-6">
-      <p>Each task provides everything a system needs to run the pipeline and to be scored at every step, without labeling any data of its own:</p>
+      <p>MaDI provides the following artefacts for each of the base tasks:</p>
       <ul>
-        <li><b>Source tables and metadata.</b> One table per source, each with a metadata file recording its origin, the columns it contains, and the date it was published. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes.csv">forbes.csv</a>, <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes_metadata.json">forbes_metadata.json</a></span></li>
+        <li><b>Source tables and table metadata.</b> One table per source, each with a metadata file recording its origin, the columns it contains, and the date it was published. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes.csv">forbes.csv</a>, <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/data/forbes_metadata.json">forbes_metadata.json</a></span></li>
         <li><b>Target schema.</b> The columns of the fused table, with a value constraint per attribute (for example a valid founding-year range) and categorical attributes tied to standard taxonomies such as GICS industries and CLDR country names. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/schemamatching/target_schema.json">target_schema.json</a></span></li>
         <li><b>Gold schema mapping.</b> A correspondence from every source column to the target schema. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/schemamatching/sm_mapping_gold.json">sm_mapping_gold.json</a></span></li>
         <li><b>Entity matching sets.</b> Labeled train, validation, and test pairs for each pair of sources. <span class="egl">Example: <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/entitymatching/forbes_2_dbpedia_train.csv">forbes_2_dbpedia_train.csv</a></span></li>
@@ -442,7 +442,7 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">The Integration Pipeline</h2>
     <div class="content is-size-6">
-      <p class="has-text-centered">A task is solved as a chain of four steps. Each one has its own ground truth and metric, so a system can be built and scored one step at a time or end to end.</p>
+      <p class="has-text-centered">A system under test (SUT) needs to handle the following four subtasks of the overall integration task. MaDI-Bench provides ground truth for each subtask as well as for the output of the overall integration (fused dataset). Thus, a SUT can be evaluated one task at a time or in an end-to-end fashion.</p>
     </div>
 
     <!-- 1 -->
@@ -560,10 +560,10 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Validation</h2>
     <div class="content is-size-6">
-      <p>We validate MaDI-Bench with three pipelines that span the design space from hand-built to fully automated. Their per-step and end-to-end outputs are released in the repository under <span class="mono">results/</span>.</p>
+      <p>We validate MaDI-Bench using three pipelines that span the design space from human-engineered to fully automated. Their per-step and end-to-end outputs are released in the repository under <span class="mono">results/</span>.</p>
     </div>
     <div class="columns is-multiline">
-      <div class="column is-4"><div class="pl"><span class="pl-tag">P1</span><p class="pl-h">Human-engineered</p><p class="is-size-6">Domain-specific workflows built on PyDI by data engineers. It scores 100% on the base tasks and serves as the silver reference.</p></div></div>
+      <div class="column is-4"><div class="pl"><span class="pl-tag">P1</span><p class="pl-h">Human-engineered</p><p class="is-size-6">Domain-specific workflows built on PyDI by human data engineers. It scores 100% on the base tasks and serves as the silver reference.</p></div></div>
       <div class="column is-4"><div class="pl"><span class="pl-tag">P2</span><p class="pl-h">Best-of-breed</p><p class="is-size-6">Chains the strongest available method per step, for example COMA and Magneto for schema matching, Ditto and Magellan for matching, and truth-discovery models for fusion, choosing each on the validation set.</p></div></div>
       <div class="column is-4"><div class="pl"><span class="pl-tag">P3</span><p class="pl-h">LLM-based</p><p class="is-size-6">An LLM configures each step and builds its own training data, so the pipeline stays automatic while it scales.</p></div></div>
     </div>
@@ -586,10 +586,10 @@
   </div>
 </section>
 
-<!-- RESOURCES -->
+<!-- DOWNLOADS -->
 <section class="section" id="resources">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Resources</h2>
+    <h2 class="title is-3 has-text-centered">Downloads</h2>
     <div class="content is-size-6">
       <p>Tasks are released as plain files (CSV, JSON, and XML), so any system can read them. PyDI adds the integration steps and an evaluator for every stage, so a run can be scored without labeling any data.</p>
       <ul>
