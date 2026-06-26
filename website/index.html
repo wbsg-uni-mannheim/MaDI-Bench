@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="description" content="MaDI-Bench: an end-to-end benchmark for the integration of relational tables, covering schema matching, value normalization, entity matching, and data fusion." />
-  <meta name="keywords" content="MaDI-Bench, data integration, schema matching, entity matching, data fusion, benchmark" />
+  <meta name="keywords" content="MaDI-Bench, data integration, schema matching, entity matching, data fusion, benchmark, data spaces" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MaDI-Bench: An End-to-End Data Integration Benchmark</title>
+  <title>Mannheim Data Integration Benchmark (MaDI-Bench)</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
@@ -205,8 +205,10 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">Abstract</h2>
     <div class="content is-size-6">
-      <p>Data integration combines heterogeneous data sets into a single, coherent representation. It involves a sequence of interdependent tasks: schema matching, value normalization, entity blocking, entity matching, and data fusion. Existing benchmarks either evaluate these steps in isolation or target only incomplete versions of the pipeline, leaving out specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods.</p>
-      <p>This paper fills the gap by introducing the <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b>, the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. MaDI-Bench contributes (i) a set of baseline end-to-end data integration tasks across several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a method for deriving variants of these tasks to prevent the quick saturation of the benchmark as systems improve. We validate the benchmark using a human-engineered pipeline, a best-of-breed pipeline, and an LLM-based pipeline. All benchmark artifacts are available for public download.</p>
+      <p>Data integration combines heterogeneous data sets into a single, coherent representation. It involves a sequence of interdependent tasks: schema matching, value normalization, entity blocking, entity matching, and data fusion. 
+        Existing benchmarks either evaluate these steps in isolation or cover only incomplete versions of the data integration pipeline, omitting specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods that address the integration process as a whole.</p>
+      <p>The <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b> fills this gap. MaDI-Bench is the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. 
+        MaDI-Bench contributes (i) a set of base end-to-end data integration tasks spanning several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a generic method for deriving task variants that mitigates rapid benchmark saturation as data integration systems advance. We validate the benchmark using human-engineered pipelines, a best-of-breed pipeline, and an LLM-based pipeline. The validation demonstrates the utility of the benchmark for measuring the step-wise as well as the end-to-end performance of data integration pipelines. All benchmark artifacts are available for public download.</p>
     </div>
   </div>
 </section>
@@ -216,14 +218,14 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">The Base Tasks</h2>
     <div class="content is-size-6">
-      <p>MaDI-Bench consists of five end-to-end data integration tasks: Games, Companies, Music, Products, and Scientific Papers. Each task takes several heterogeneous source tables in a domain and asks a system to return one fused target table, exercising schema matching, value normalization, entity matching, and data fusion together. The benchmark provides ground truth to score every step on its own, not only the final table: a gold schema mapping for schema matching, the target schema's constraints and taxonomies for value normalization (measured as consistency with the schema), labeled record pairs for blocking and entity matching, and hand-annotated records for data fusion, together with metrics for the end-to-end result. Each base task also ships in easy, medium, and hard variants, for 20 integration tasks in total.</p>
+      <p>MaDI-Bench consists of five end-to-end data integration tasks: Games, Companies, Music, Products, and Scientific Papers. Each task takes several heterogeneous source tables in a domain and asks a system to return one fused target table, exercising schema matching, value normalization, entity matching, and data fusion together. The benchmark provides ground truth to score every step on its own, not only the final table: a gold schema mapping for schema matching, the target schema's constraints and taxonomies for value normalization (measured as consistency with the schema), labeled record pairs for blocking and entity matching, and hand-verified records for data fusion, together with metrics for the end-to-end result. Each base task also ships in easy, medium, and hard variants, for 20 integration tasks in total.</p>
       <p class="has-text-centered pipeline-rail" style="text-align:center;"><b>Schema matching</b> &nbsp;→&nbsp; <b>Value normalization</b> &nbsp;→&nbsp; <b>Entity blocking &amp; matching</b> &nbsp;→&nbsp; <b>Data fusion</b></p>
     </div>
     <nav class="level" style="margin:1.2rem 0 .5rem;">
       <div class="level-item has-text-centered"><div><p class="title is-3">5</p><p class="heading">Domains</p></div></div>
       <div class="level-item has-text-centered"><div><p class="title is-3">20</p><p class="heading">Tasks</p></div></div>
-      <div class="level-item has-text-centered"><div><p class="title is-3">93k+</p><p class="heading">Match pairs</p></div></div>
-      <div class="level-item has-text-centered"><div><p class="title is-3">1,000</p><p class="heading">Fused records</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">93k+</p><p class="heading">Matching records</p></div></div>
+      <div class="level-item has-text-centered"><div><p class="title is-3">1,000</p><p class="heading">Human-verified output records</p></div></div>
     </nav>
 
     <div style="margin-top:1.5rem;"></div>
@@ -491,7 +493,7 @@
     <!-- 4 -->
     <h4 class="title is-5" style="margin-top:1.75rem;"><span class="step-tag">4</span>Data Fusion</h4>
     <div class="content is-size-6"><p>After matching groups the records of an entity into a cluster, fusion resolves the cluster into a single value for each attribute. Where the sources report conflicting values, fusion has to decide which value to keep, and this conflict resolution is the step where the benchmark leaves the most room for improvement. Each gold value was set by annotators who verified it against independent sources.</p></div>
-    <p class="stepmeta"><span><b>Ground truth:</b> hand-annotated fused records</span><span><b>Metric:</b> fusion accuracy</span></p>
+    <p class="stepmeta"><span><b>Ground truth:</b> hand-verified fused records</span><span><b>Metric:</b> fusion accuracy</span></p>
     <div class="example">
       <div class="ex-label"><b>Example</b> &nbsp;·&nbsp; one fused record, with where each value came from</div>
       <table class="ftab">
