@@ -6,14 +6,15 @@
 # (easy/medium/hard), compromise_rate_per_level, corr_strength_per_level,
 # and concentration_cap are carried over verbatim from music.
 #
-# Papers is target-shaped: all three sources (dblp, crossref, open_alex)
-# carry the SAME 14 canonical columns, so attribute_mapping is IDENTITY
-# and every attribute has 3 eligible sources after the (no-op) remap.
+# Papers is target-shaped after load: all three sources (dblp, crossref,
+# open_alex) expose the same released canonical value columns, so
+# attribute_mapping is IDENTITY and every attribute has 3 eligible sources
+# after the (no-op) remap.
 #
 # Eligible attributes = the attributes the papers notebook ("Version_5")
-# actually fuses; publisher and cited_by_count are dropped by the
-# notebook and so are NOT targeted here. id and doi are never targeted
-# by value knobs (doi is the fusion-gold join key).
+# actually fuses; publisher and keywords are NOT targeted here. id is
+# never targeted by value knobs.
+# DOI is absent from released source data and target schema.
 #
 # Per-attribute winner identity is seeded from the Version_5 fuser /
 # trust intent (NOT a measured baseline B[s,a] — papers has no signed-off
@@ -26,7 +27,7 @@
 #                                         {crossref:3, open_alex:1, dblp:1})
 #   referenced_works_count -> crossref  (prefer_higher_trust trust_map
 #                                         {crossref:3, open_alex:1, dblp:1})
-#   keywords               -> open_alex (prefer_higher_trust trust_map
+#   cited_by_count         -> open_alex (prefer_higher_trust trust_map
 #                                         {crossref:1, open_alex:3, dblp:1})
 #   type, publication_year, journal, volume, issue, first_page
 #                          -> voting / most_recent fusers => no single
@@ -43,8 +44,8 @@ id_columns:
 # Identity mapping: the data is already target-shaped, so each source's
 # canonical column maps to itself. Per-source attribute_classes are
 # identical across the three sources (target_schema.json canonical names).
-# Only the fused attributes are listed (publisher, cited_by_count are
-# dropped by the notebook fuser and excluded).
+# Only the fused attributes are listed (publisher and keywords are
+# excluded from the notebook fuser).
 attribute_mapping:
   dblp:
     title: title
@@ -52,36 +53,36 @@ attribute_mapping:
     publication_year: publication_year
     journal: journal
     authors: authors
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page
     last_page: last_page
     referenced_works_count: referenced_works_count
+    cited_by_count: cited_by_count
   crossref:
     title: title
     type: type
     publication_year: publication_year
     journal: journal
     authors: authors
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page
     last_page: last_page
     referenced_works_count: referenced_works_count
+    cited_by_count: cited_by_count
   open_alex:
     title: title
     type: type
     publication_year: publication_year
     journal: journal
     authors: authors
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page
     last_page: last_page
     referenced_works_count: referenced_works_count
+    cited_by_count: cited_by_count
 
 # --- Per-attribute target distributions per level (T[a, s]) ---
 # Sums to 1.0 per (attr, level). Trust-winner attributes concentrate on
@@ -159,21 +160,6 @@ attribute_targets:
       dblp: 0.30
       crossref: 0.40
       open_alex: 0.30
-  # prefer_higher_trust trust_map {crossref:1, open_alex:3, dblp:1}
-  # -> open_alex wins.
-  keywords:
-    easy:
-      dblp: 0.05
-      crossref: 0.10
-      open_alex: 0.85
-    medium:
-      dblp: 0.15
-      crossref: 0.20
-      open_alex: 0.65
-    hard:
-      dblp: 0.30
-      crossref: 0.30
-      open_alex: 0.40
   # voting fuser -> no winner; mass stays spread across the 3 sources.
   volume:
     easy:
@@ -246,6 +232,21 @@ attribute_targets:
       dblp: 0.30
       crossref: 0.40
       open_alex: 0.30
+  # prefer_higher_trust trust_map {crossref:1, open_alex:3, dblp:1}
+  # -> open_alex wins.
+  cited_by_count:
+    easy:
+      dblp: 0.05
+      crossref: 0.10
+      open_alex: 0.85
+    medium:
+      dblp: 0.15
+      crossref: 0.20
+      open_alex: 0.65
+    hard:
+      dblp: 0.30
+      crossref: 0.30
+      open_alex: 0.40
 
 # --- Compromise rates per level (carried over verbatim from music) ---
 compromise_rate_per_level:

@@ -1,31 +1,19 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "title": "Scholarly Paper",
-  "description": "Target schema for scholarly paper metadata integrated from DBLP, Crossref, and OpenAlex.",
+  "description": "Target schema for scholarly paper metadata integrated from DBLP, Crossref, and OpenAlex. DOI values are intentionally excluded from the benchmark input and target attributes; they were used only to derive the entity-matching and fusion splits.",
   "type": "object",
   "properties": {
     "id": {
       "type": "string",
       "title": "Record ID",
-      "description": "Stable source-prefixed record identifier used by entity matching and fusion.",
+      "description": "Stable source-prefixed record identifier used by entity matching. Fusion gold records reference all contributing source records via the source_ids helper field.",
       "minLength": 1,
       "maxLength": 128,
       "examples": [
         "dblp-00000",
         "crossref-00000",
         "open_alex-00000"
-      ]
-    },
-    "doi": {
-      "type": "string",
-      "title": "DOI",
-      "description": "Digital Object Identifier normalized without the https://doi.org/ prefix.",
-      "minLength": 6,
-      "maxLength": 255,
-      "pattern": "^10\\.\\d{4,9}/\\S+$",
-      "examples": [
-        "10.1145/3316781.3317924",
-        "10.1093/nar/gky1131"
       ]
     },
     "type": {
@@ -153,14 +141,13 @@
     "cited_by_count": {
       "type": "integer",
       "title": "Cited By Count",
-      "description": "Number of citing works reported by the source.",
+      "description": "Number of citing works reported by the source as of May 30, 2026.",
       "minimum": 0,
       "maximum": 100000
     }
   },
   "required": [
     "id",
-    "doi",
     "title"
   ],
   "additionalProperties": false

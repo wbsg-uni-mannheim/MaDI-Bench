@@ -9,7 +9,6 @@
     "scholarly metadata",
     "computer science",
     "papers",
-    "DOI",
     "bibliographic metadata",
     "source schema",
     "schema matching",
@@ -18,7 +17,7 @@
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "identifier": "dblp-papers-downsampled-source-schema-2018-2020",
-  "version": "1.1",
+  "version": "1.2",
   "datePublished": "2026-05-28",
   "numberOfItems": 60591,
   "temporalCoverage": "2018-01-01/2020-12-31",
@@ -42,8 +41,8 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "doi_ref",
-      "description": "DOI extracted from DBLP records for benchmark alignment",
+      "name": "id",
+      "description": "Stable source-prefixed DBLP record identifier used in entity matching and fusion source_ids.",
       "unitText": "string"
     },
     {

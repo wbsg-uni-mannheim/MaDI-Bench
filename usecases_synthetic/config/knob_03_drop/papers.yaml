@@ -3,14 +3,14 @@
 # Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
 # to be validated/tuned before a real papers run.
 #
-# Papers data is already target-shaped: all three sources (dblp, crossref,
-# open_alex) ship the SAME 14 canonical columns, so every attribute_mapping
-# is identity and the per-source attribute_classes are identical across the
-# three sources (expressed with a YAML anchor below).
+# Papers data is already target-shaped after load: all three sources (dblp,
+# crossref, open_alex) expose the SAME 13 canonical value columns, so every
+# attribute_mapping is identity and the per-source attribute_classes are
+# identical across the three sources (expressed with a YAML anchor below).
 #
-# id and doi are NEVER targeted by value knobs: id is the synthetic record
-# id and doi is the fusion-gold join key, so neither is listed in
-# attribute_classes / attribute_mapping here.
+# id is NEVER targeted by value knobs and is not listed in attribute_classes /
+# attribute_mapping here. DOI is absent from released source data and target
+# schema.
 
 domain: papers
 

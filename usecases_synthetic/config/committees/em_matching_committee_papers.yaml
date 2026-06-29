@@ -15,8 +15,8 @@
 #   * `publication_year` is a bare integer year (2018-2020 only), NOT a
 #     date string — it is hinted to magellan via `numeric_attributes`, and
 #     `date_attributes` is empty.
-#   * `doi` is the fusion-gold join key and `id` is the primary key; neither
-#     is ever exposed as a matching field.
+#   * `id` is the primary key and is never exposed as a matching field. DOI is
+#     absent from released source data and target schema.
 #   * No trained papers Ditto checkpoint exists yet — the path below is a
 #     papers-namespaced placeholder. It must be (re)trained for papers; the
 #     runtime loudly disables a missing checkpoint.
@@ -59,11 +59,9 @@ members:
       class: MagellanMatcher
       module: usecases_synthetic.lib.magellan_em_matcher
       params:
-        # Explicit attribute scope (no auto-detect). ``doi`` is EXCLUDED: it
-        # is a near-unique document identifier, so comparing it leaks the
-        # match label (records sharing a DOI are trivially the same paper).
-        # ditto/comem/llm_matcher already scope to their ``fields`` lists and
-        # blocking excludes doi; this closes the last EM path that used it.
+        # Explicit attribute scope (no auto-detect). DOI is absent from the
+        # released source data; ditto/comem/llm_matcher already scope to their
+        # ``fields`` lists.
         attributes: [title, authors, journal, publication_year, type, volume, issue, first_page, last_page, referenced_works_count, cited_by_count]
         numeric_attributes: [publication_year, first_page, last_page, referenced_works_count, cited_by_count]
         date_attributes: []

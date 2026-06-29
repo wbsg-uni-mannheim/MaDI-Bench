@@ -6,12 +6,12 @@
 # compression/stretch factors are inherited from music and have NOT been
 # recalibrated for the papers sources.
 #
-# Papers data is already target-shaped: all three sources (dblp, crossref,
-# open_alex) carry the SAME 14 canonical columns, so per-source
+# Papers data is already target-shaped after load: all three sources (dblp,
+# crossref, open_alex) expose the SAME 13 canonical value columns, so per-source
 # attribute_classes are IDENTICAL across sources and every
-# attribute_mapping is identity. ``id`` and ``doi`` are NEVER targeted by
-# the value knobs (doi is the fusion-gold join key), so neither appears in
-# attribute_classes / attribute_mapping / numeric_attributes.
+# attribute_mapping is identity. ``id`` is NEVER targeted by the value knobs
+# and DOI is absent from released source data and target schema, so neither
+# appears in attribute_classes / attribute_mapping / numeric_attributes.
 #
 # Unlike music/games this domain has NO controlled-vocabulary taxonomy CSV,
 # so the ``taxonomies`` block is OMITTED entirely and the music

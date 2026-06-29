@@ -2,14 +2,13 @@
   "@context": "https://schema.org/",
   "@type": "Dataset",
   "name": "OpenAlex Computer Science Papers Downsampled Source-Schema Subset",
-  "description": "Downsampled OpenAlex works used as benchmark input for the papers web-data-integration usecase. The file preserves an OpenAlex-shaped source schema instead of the integrated schema. Rows are ordered like the schema-mapped OpenAlex subset so existing identity-resolution identifiers remain stable. Records are taken from the local OpenAlex source snapshots where available; missing DOI rows are represented in the same OpenAlex-shaped schema from the downsampled values.",
+  "description": "Downsampled OpenAlex works used as benchmark input for the papers web-data-integration usecase. The file preserves an OpenAlex-shaped source schema instead of the integrated schema. Rows are ordered like the schema-mapped OpenAlex subset so existing identity-resolution identifiers remain stable. Records are taken from the local OpenAlex source snapshots where available; missing rows are represented in the same OpenAlex-shaped schema from the downsampled values.",
   "url": "https://openalex.org/",
   "keywords": [
     "OpenAlex",
     "scholarly metadata",
     "computer science",
     "papers",
-    "DOI",
     "bibliographic metadata",
     "source schema",
     "schema matching",
@@ -18,7 +17,7 @@
   ],
   "license": "https://creativecommons.org/publicdomain/zero/1.0/",
   "identifier": "openalex-cs-papers-downsampled-source-schema-2018-2020",
-  "version": "1.1",
+  "version": "1.2",
   "datePublished": "2026-05-28",
   "numberOfItems": 60719,
   "temporalCoverage": "2018-01-01/2020-12-31",
@@ -42,8 +41,8 @@
   "variableMeasured": [
     {
       "@type": "PropertyValue",
-      "name": "doi_value",
-      "description": "OpenAlex DOI value normalized for the benchmark input",
+      "name": "id",
+      "description": "Stable source-prefixed OpenAlex record identifier used in entity matching and fusion source_ids.",
       "unitText": "string"
     },
     {

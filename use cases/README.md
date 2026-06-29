@@ -30,7 +30,7 @@ Beyond the source tables, each task ships labeled splits for entity matching and
 | Products | 3 | 4,488 | 600 | 600 | 100 | 100 |
 | Scientific Papers | 2 | 10,666 | 2,666 | 13,332 | 100 | 100 |
 
-Across the five base tasks this amounts to more than 93,000 labeled record pairs for entity matching and 1,000 hand-annotated fusion records carrying close to 11,000 verified attribute values.
+Across the five base tasks this amounts to more than 93,000 labeled record pairs for entity matching and 1,000 hand-annotated fusion records carrying close to 10,000 verified attribute values.
 
 Each fusion directory also ships a **Better Readability** CSV alongside every original validation/test split, named with the suffix `_better_readability.csv`. These files keep only the target-schema columns (from `input/schemamatching/target_schema.json`), in schema order, and drop the provenance and source-helper fields — which makes them easier to skim when first exploring a task. The original fusion files remain the authoritative artifacts: they retain the source attributes, provenance annotations, and raw left/right values needed for tracing and evaluation. When a target-schema field is absent from an original split, the Better Readability CSV leaves that column empty rather than inferring a value.
 
@@ -91,7 +91,7 @@ Target schema: 25 attributes (plus an `id`). Base sources are JSON; the variants
 
 ## Scientific Papers
 
-Computer-science paper records from **DBLP**, **Crossref**, and **OpenAlex**. Each source annotates papers with DOIs, which should be removed during matching, and with bibliographic attributes such as title, authors, publication year, venue, page range, and citation counts. This is the largest task by row count, so blocking efficiency is a challenge: a blocker with a poor reduction ratio leads to hundreds of thousands of record-pair comparisons, which makes the task well suited for evaluating efficiency as well as effectiveness. Further challenges involve title and author-list variants, incomplete identifiers, publication-type and venue normalization, and sparse metadata for volume, issue, pages, and citation counts.
+Computer-science paper records from **DBLP**, **Crossref**, and **OpenAlex**. DOIs were used only to derive the entity-matching pairs and fusion splits; released source files omit DOI and expose stable source-record ids instead. The fusion ground truth uses a `source_ids` helper list (for example `dblp-...`, `crossref-...`, `open_alex-...`) to identify the source records that describe each fused paper. Bibliographic attributes include title, authors, publication year, venue, page range, and citation counts. This is the largest task by row count, so blocking efficiency is a challenge: a blocker with a poor reduction ratio leads to hundreds of thousands of record-pair comparisons, which makes the task well suited for evaluating efficiency as well as effectiveness. Further challenges involve title and author-list variants, incomplete identifiers, publication-type and venue normalization, and sparse metadata for volume, issue, pages, and citation counts.
 
 | Source | What it contributes | Cols | Density | base | easy | medium | hard |
 |---|---|---:|---:|---:|---:|---:|---:|

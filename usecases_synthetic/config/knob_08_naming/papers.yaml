@@ -6,14 +6,15 @@
 # UNTUNED starting point and the name variants below should be reviewed
 # before a real papers run.
 #
-# All three sources (dblp, crossref, open_alex) are already target-shaped:
-# each ships the SAME 14 canonical columns
-# (`doi, type, title, authors, publication_year, journal, publisher,
-# keywords, volume, issue, first_page, last_page, referenced_works_count,
-# cited_by_count`) plus the load-time-minted `id`. Baseline naming is
+# All three sources (dblp, crossref, open_alex) are target-shaped after
+# load: each exposes the same 13 canonical value columns
+# (`type, title, authors, publication_year, journal, publisher, keywords,
+# volume, issue, first_page, last_page, referenced_works_count,
+# cited_by_count`) plus the stable source-record `id`. DOI is intentionally
+# absent from source files and the target schema. Baseline naming is
 # uniformly descriptive (matches spec call "papers @ easy"). K8 only
-# renames headers, so even rarely-populated columns cost nothing to
-# author. dblp is the anchor source.
+# renames headers, so even rarely-populated columns cost nothing to author.
+# dblp is the anchor source.
 
 level_assignments:
   easy:
@@ -32,13 +33,11 @@ level_assignments:
 # Ground-truth schema mapping: source_col -> target_col.
 # Data is already canonical, so every mapping is identity (src_col == target_col).
 # Canonical target names match input/schemamatching/target_schema.json and the
-# K10 sign-off attribute_mapping. `id` is included (load-time-minted record id).
-# `doi` is included here as a real schema column -- K8 only renames the HEADER;
-# value knobs still never perturb doi (it is the fusion-gold join key).
+# K10 sign-off attribute_mapping. `id` is included as the stable source-record
+# id; DOI is intentionally absent.
 sm_mapping:
   dblp:
     id: id
-    doi: doi
     type: type
     title: title
     authors: authors
@@ -54,7 +53,6 @@ sm_mapping:
     cited_by_count: cited_by_count
   crossref:
     id: id
-    doi: doi
     type: type
     title: title
     authors: authors
@@ -70,7 +68,6 @@ sm_mapping:
     cited_by_count: cited_by_count
   open_alex:
     id: id
-    doi: doi
     type: type
     title: title
     authors: authors
@@ -87,17 +84,6 @@ sm_mapping:
 
 rename_table:
   dblp:
-    # ``doi`` is the fusion-gold join key, NOT a schema-matching target
-    # (it is excluded from SM / EM the same way it is from the value
-    # knobs). Its HEADER must stay ``doi`` at every rung, otherwise the
-    # fusion doi-join cannot find it on the renamed variant sources and
-    # fusion silently scores 0 (this is exactly what broke hard:
-    # overall_accuracy=0.0 while baseline/easy/medium kept doi as "doi").
-    doi:
-      descriptive: doi
-      abbreviated: doi
-      cryptic: doi
-      anonymized: doi
     type:
       descriptive: type
       abbreviated: typ
@@ -165,12 +151,6 @@ rename_table:
       anonymized: Attribute_15
 
   crossref:
-    # doi header pinned to "doi" at every rung — fusion join key, see dblp note.
-    doi:
-      descriptive: doi
-      abbreviated: doi
-      cryptic: doi
-      anonymized: doi
     type:
       descriptive: type
       abbreviated: typ
@@ -238,12 +218,6 @@ rename_table:
       anonymized: Attribute_15
 
   open_alex:
-    # doi header pinned to "doi" at every rung — fusion join key, see dblp note.
-    doi:
-      descriptive: doi
-      abbreviated: doi
-      cryptic: doi
-      anonymized: doi
     type:
       descriptive: type
       abbreviated: work_type

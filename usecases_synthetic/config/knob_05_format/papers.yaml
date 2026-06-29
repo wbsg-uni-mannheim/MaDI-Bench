@@ -6,7 +6,7 @@
 # verbatim from the music K5 config as seeds, NOT papers-tuned figures.
 #
 # Papers baseline (DBLP / Crossref / OpenAlex; all three share the same
-# 14 canonical columns, so per-source attribute_classes are IDENTICAL):
+# 13 canonical value columns, so per-source attribute_classes are IDENTICAL):
 #   - publication_year is a bare 4-digit year INTEGER (2018-2020 only —
 #     very low cardinality). It is the only temporal attribute. The date
 #     format pool is THIN by construction: the only operator that does
@@ -33,9 +33,8 @@
 #     unit_pool_per_level stays empty (number reformatting is
 #     locale-only, no magnitude scaling).
 #
-# id and doi are NEVER targeted: id is the minted synthetic record id and
-# doi is the fusion-gold join key (perturbing doi would break fusion-by-doi
-# scoring). Neither appears in attribute_classes.
+# id is NEVER targeted and does not appear in attribute_classes. DOI is absent
+# from released source data and target schema.
 
 domain: papers
 

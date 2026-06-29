@@ -6,8 +6,8 @@
 # Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
 # to be validated/tuned before a real papers run.
 #
-# Papers data is already TARGET-SHAPED: all three sources (dblp,
-# crossref, open_alex) carry the SAME 14 canonical columns on disk, so
+# Papers data is already TARGET-SHAPED after load: all three sources (dblp,
+# crossref, open_alex) carry the SAME 13 canonical value columns, so
 # every attribute_mapping is IDENTITY and per-source attribute_classes
 # are IDENTICAL across the three sources. dblp is the anchor source.
 # Column-name remap: none (sources already ship canonical names).
@@ -16,8 +16,8 @@
 #   title (primary), journal + type (key), authors + keywords +
 #   publisher (secondary). publication_year, volume, issue, first_page,
 #   last_page, referenced_works_count, cited_by_count are NOT paraphrase
-#   targets (temporal / short-id-like / numeric). id and doi are NEVER
-#   targeted by value knobs (doi is the fusion-gold join key).
+#   targets (temporal / short-id-like / numeric). id is NEVER targeted by
+#   value knobs. DOI is absent from released source data and target schema.
 #
 # Baseline easy -> medium for short fields. No `paraphrase_long`. Hard
 # LLM paraphrase keeps the tightest contamination check - paper titles
@@ -35,7 +35,7 @@ id_columns:
 # Per-source column -> attribute class. IDENTICAL across the three
 # sources (data is already target-shaped). Columns NOT listed here are
 # never touched by Knob 01 (publication_year, volume, issue, first_page,
-# last_page, referenced_works_count, cited_by_count, doi).
+# last_page, referenced_works_count, cited_by_count).
 attribute_classes:
   dblp:
     title: primary

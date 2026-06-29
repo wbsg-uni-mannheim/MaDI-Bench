@@ -19,9 +19,9 @@
 # Eligible attributes for papers (SM ∩ fusion ∩ kind):
 #   title, journal, keywords, publication_year, first_page, last_page,
 #   referenced_works_count, cited_by_count.
-# (id + doi are NEVER normalized — id is the synthetic record id and doi
-# is the fusion-gold join key. type/authors/publisher/volume/issue carry
-# no rule-normalizer candidate below and are covered by llm_only /
+# (id is NEVER normalized and DOI is absent from released source data and
+# target schema. type/authors/publisher/volume/issue carry no
+# rule-normalizer candidate below and are covered by llm_only /
 # passthrough only; publisher + cited_by_count are dropped by the fusion
 # notebook but cited_by_count keeps a numeric candidate for forward-compat.)
 

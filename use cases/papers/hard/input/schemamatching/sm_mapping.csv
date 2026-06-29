@@ -1,6 +1,5 @@
 source_dataset,source_column,target_dataset,target_column,score
 crossref,id,papers,id,1.0
-crossref,doi,papers,doi,1.0
 crossref,typ,papers,type,1.0
 crossref,ttl,papers,title,1.0
 crossref,auth_list,papers,authors,1.0
@@ -15,7 +14,6 @@ crossref,pg_last,papers,last_page,1.0
 crossref,ref_count,papers,referenced_works_count,1.0
 crossref,cited_count,papers,cited_by_count,1.0
 dblp,id,papers,id,1.0
-dblp,doi,papers,doi,1.0
 dblp,ty,papers,type,1.0
 dblp,t,papers,title,1.0
 dblp,au,papers,authors,1.0
@@ -30,7 +28,6 @@ dblp,lp,papers,last_page,1.0
 dblp,rc,papers,referenced_works_count,1.0
 dblp,cc,papers,cited_by_count,1.0
 open_alex,id,papers,id,1.0
-open_alex,doi,papers,doi,1.0
 open_alex,Attribute_3,papers,type,1.0
 open_alex,Attribute_4,papers,title,1.0
 open_alex,Attribute_5,papers,authors,1.0

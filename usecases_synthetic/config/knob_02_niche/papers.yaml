@@ -19,11 +19,10 @@ domain: papers
 # so build_canonical_view groups via the pool here -> ~76k true entities.
 canonical_grouping: pool
 
-# All three sources are already target-shaped: they carry the SAME 14
-# canonical columns. The synthetic loader renames each source primary id
-# column to `id` (minted at load time as <source>-NNNNN; see
-# config/domains/papers.yaml). `id` and `doi` are NEVER targeted by value
-# knobs (doi is the fusion-gold join key).
+# All three sources are already target-shaped after load: they carry the SAME
+# 13 canonical value columns plus stable source-record ids. `id` is NEVER
+# targeted by value knobs. DOI is absent from released source data and target
+# schema.
 id_columns:
   dblp: id
   crossref: id
@@ -34,9 +33,9 @@ primary_column_per_source:
   crossref: title
   open_alex: title
 
-# The 14 canonical attributes (data is already target-shaped; all three
-# sources ship every column). `id` + `doi` are excluded from value-knob
-# targeting and are not listed here.
+# The 13 canonical value attributes (data is already target-shaped after load;
+# all three sources expose every column). `id` is excluded from value-knob
+# targeting and is not listed here.
 canonical_schema:
   - title
   - type
@@ -231,7 +230,7 @@ pool_quality: two_system
 # PLACEHOLDER and MUST be (re)trained for papers (do NOT reuse music's
 # checkpoint). The runtime loudly disables the gate if the checkpoint is
 # missing. plm_fields mirror text_concat_order — the strongest matching
-# signals (id/doi are never gate fields). theta/threshold seeds carried
+# signals (`id` is never a gate field). theta/threshold seeds carried
 # over from music (UNTUNED).
 hard_negative_gate:
   enabled: true

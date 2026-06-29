@@ -1,6 +1,6 @@
 seed: 42
 fused_id_column: id
-gold_id_column: id
+gold_id_column: source_ids
 trust_scores:
   products_1: 4
   products_2: 3
@@ -116,28 +116,26 @@ column_mapping:
     clr: color
     ff: form_factor
 evaluation_functions:
-  title: tokenized_match
   brand: tokenized_match
-  description: tokenized_match
-  price: numeric_tolerance_match
-  priceCurrency: tokenized_match
-  title_description: tokenized_match
-  product_type: tokenized_match
   model: tokenized_match
   model_number: tokenized_match
+  product_type: tokenized_match
   chipset_name: tokenized_match
   vram_gb: numeric_tolerance_match
   storage_gb: numeric_tolerance_match
-  bus_type: tokenized_match
-  interface_type: tokenized_match
-  memory_type: tokenized_match
-  storage_connection_type: tokenized_match
-  form_factor: tokenized_match
   read_speed_mb_s: numeric_tolerance_match
   write_speed_mb_s: numeric_tolerance_match
+  bus_type: tokenized_match
+  interface_type: tokenized_match
+  width_mm: numeric_tolerance_match
+  length_mm: numeric_tolerance_match
+  height_mm: numeric_tolerance_match
+  weight_g: numeric_tolerance_match
+  storage_connection_type: tokenized_match
+  memory_type: tokenized_match
+  color: tokenized_match
+  form_factor: tokenized_match
 evaluation_params:
-  price:
-    tolerance: 0.1
   vram_gb:
     tolerance: 0.15
   storage_gb:
@@ -146,26 +144,34 @@ evaluation_params:
     tolerance: 0.15
   write_speed_mb_s:
     tolerance: 0.15
+  width_mm:
+    tolerance: 0.15
+  length_mm:
+    tolerance: 0.15
+  height_mm:
+    tolerance: 0.15
+  weight_g:
+    tolerance: 0.15
 attribute_types:
-  title: string
   brand: categorical
-  description: string
-  price: numeric
-  priceCurrency: categorical
-  title_description: string
-  product_type: categorical
   model: string
   model_number: string
+  product_type: categorical
   chipset_name: string
   vram_gb: numeric
   storage_gb: numeric
-  bus_type: categorical
-  interface_type: categorical
-  memory_type: categorical
-  storage_connection_type: categorical
-  form_factor: categorical
   read_speed_mb_s: numeric
   write_speed_mb_s: numeric
+  bus_type: categorical
+  interface_type: categorical
+  width_mm: numeric
+  length_mm: numeric
+  height_mm: numeric
+  weight_g: numeric
+  storage_connection_type: categorical
+  memory_type: categorical
+  color: categorical
+  form_factor: categorical
 pydi_candidates:
   string:
   - name: voting

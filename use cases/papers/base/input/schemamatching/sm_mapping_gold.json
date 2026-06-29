@@ -15,9 +15,25 @@
   "mappings": [
     {
       "source_dataset": "open_alex",
-      "source_column": "doi_value",
+      "source_column": "id",
       "target_dataset": "target_schema",
-      "target_column": "doi",
+      "target_column": "id",
+      "score": 1.0,
+      "label": true
+    },
+    {
+      "source_dataset": "dblp",
+      "source_column": "id",
+      "target_dataset": "target_schema",
+      "target_column": "id",
+      "score": 1.0,
+      "label": true
+    },
+    {
+      "source_dataset": "crossref",
+      "source_column": "id",
+      "target_dataset": "target_schema",
+      "target_column": "id",
       "score": 1.0,
       "label": true
     },
@@ -111,14 +127,6 @@
     },
     {
       "source_dataset": "dblp",
-      "source_column": "doi_ref",
-      "target_dataset": "target_schema",
-      "target_column": "doi",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "dblp",
       "source_column": "entry_type",
       "target_dataset": "target_schema",
       "target_column": "type",
@@ -186,14 +194,6 @@
       "source_column": "page_finish",
       "target_dataset": "target_schema",
       "target_column": "last_page",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "crossref",
-      "source_column": "doi_code",
-      "target_dataset": "target_schema",
-      "target_column": "doi",
       "score": 1.0,
       "label": true
     },
@@ -315,6 +315,7 @@
   "notes": [
     "The mappings array contains positive gold correspondences suitable for SchemaMappingEvaluator.",
     "Known no-match source columns are recorded separately because LLMBasedSchemaMatcher omits null mappings from its result DataFrame.",
-    "The papers workflow uses target_dataset='target' in an intermediate DataFrame; this file uses target_schema consistently and records target as an alias."
+    "The papers workflow uses target_dataset='target' in an intermediate DataFrame; this file uses target_schema consistently and records target as an alias.",
+    "DOI columns are intentionally absent from the source files and target schema; DOI values were used only to derive the gold pairs and fusion source_ids."
   ]
 }

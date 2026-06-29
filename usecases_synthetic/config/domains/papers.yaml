@@ -3,12 +3,11 @@ master_seed: 42
 
 # Papers (2026) — scholarly-paper metadata integrated from DBLP,
 # Crossref, and OpenAlex. Unlike every pre-2026 synthetic domain the
-# sources ship as JSON-lines (``*.jsonl``) with NO on-disk id column;
-# the stable ``<source>-NNNNN`` ids that the EM + fusion gold reference
-# are minted at load time by ``PyDI.io.load_json(add_index=True)`` (dash
-# separator, 5-digit zero-pad). The synthetic loader gained native
-# ``jsonl`` support for this domain (``loaders._FORMAT_LOADERS``); the
-# per-source ``reader_kwargs`` opt into the dash-id generation.
+# sources ship as JSON-lines (``*.jsonl``) with stable on-disk
+# ``<source>-NNNNN`` ids that the EM gold and fusion ``source_ids``
+# reference. ``PyDI.io.load_json(add_index=True)`` preserves those ids;
+# the setting remains for compatibility with older generated files that
+# lacked a physical id column.
 #
 # NOTE on the two id_prefix values below (intentional, not a typo):
 #   * top-level ``id_prefix: "<src>-"`` is the prefix the minted ids
@@ -58,14 +57,13 @@ source_pairs:
   - [dblp, crossref]
   - [dblp, open_alex]
 
-# Fusion gold is JSON-lines (one flat fused gold record per line, joined
-# to fused output on ``doi``), not the per-attribute-provenance XML the
-# pre-2026 domains use. ``variant_loader._load_fusion_file`` dispatches on
-# the ``.jsonl`` extension. Because the gold carries no provenance/cluster
-# structure (the notebook rebuilds clusters from the EM correspondences at
-# eval time), source-attribution fusion metrics are unavailable for papers
-# — only value-correctness by the ``doi`` join. The fusion committee roster
-# sets ``gold_id_column: doi`` accordingly.
+# Fusion gold is JSON-lines (one flat fused gold record per line) rather
+# than the per-attribute-provenance XML the pre-2026 domains use. Each
+# record carries ``source_ids``: the list of source-record ids
+# (``dblp-...``, ``crossref-...``, ``open_alex-...``) that describe the
+# same paper. The fusion committee roster sets
+# ``gold_id_column: source_ids`` so the evaluator aligns gold rows to EM
+# clusters without exposing DOI as a benchmark attribute.
 fusion_files:
   validation: fusion_val.jsonl
   test: fusion_test.jsonl
@@ -79,10 +77,8 @@ fusion_files:
 #               reliability routing): publication type, year (2018-2020),
 #               and venue
 #   secondary-> the remaining bibliographic detail
-# ``id`` and ``doi`` are intentionally OMITTED: ``id`` is the synthetic
-# record id and ``doi`` is the fusion-gold join key, so neither is
-# perturbed by the value knobs (perturbing doi would break the
-# fusion-by-doi scoring join).
+# ``id`` is intentionally OMITTED: it is the record id and is not
+# perturbed by the value knobs.
 attribute_classes:
   title: primary
   type: key

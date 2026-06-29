@@ -11,19 +11,18 @@
 # Per-domain fork rather than a single canonical file because
 # attribute_types + pydi_candidates depend on the schema.
 #
-# Scope: the fusion committee scores exactly the attributes present in
-# the GIVEN fusion val/test gold (validation_set.xml / test_set.xml,
-# 100 records each) = 19 attrs. The gold is fixed/given and is NOT
-# regenerated; attributes absent from it are simply NOT fusion-scored.
-# The 5 sparse dims (color, width_mm, length_mm, height_mm, weight_g)
-# ARE in the 24-attr norm (schema_constraints) + K-knob scope, but are
-# NOT in this gold, so they are deliberately absent here — same
-# principle as companies (industry stays mapped but unscored).
+# Scope: the fusion committee scores exactly the current products fusion
+# gold attributes after removing helper/descriptive/commercial fields
+# that are not meaningful fusion targets (title, description, price,
+# priceCurrency, url, title_description). Those columns stay mapped for
+# earlier stages but are not fusion-scored. The readable CSV gold carries
+# 19 scored attributes; XML variants may omit all-empty sparse tags and
+# PyDI then evaluates the common attributes present in both frames.
 
 seed: 42
 
 fused_id_column: id
-gold_id_column: id
+gold_id_column: source_ids
 
 # Trust scores: R9 trust sub-sweep (2026-05-28) on products tried all
 # 24 permutations of (4, 3, 2, 1) across the 4 sources. All 24 cells
@@ -155,39 +154,32 @@ column_mapping:
     ff: form_factor
 
 evaluation_functions:
-  # Full data_cleaned_final wide schema (plan_revision §R1 / §R10-L).
-  # Fusion gold XML refreshed 2026-06-01 from 6 -> 19 attrs (the prior
-  # narrow set was a generator bug). Committee convention: tokenized_match
-  # for string/categorical/tech attrs, numeric_tolerance_match for
-  # numerics. (Per the 2026-06-01 decision we keep the committee's
-  # tokenized convention rather than the human-baseline notebook's
-  # exact/hardware_strict tech-string matchers; only the baseline's
-  # numeric tolerance value is adopted below.)
-  title: tokenized_match
+  # Committee convention: tokenized_match for string/categorical/tech attrs,
+  # numeric_tolerance_match for numerics. Per the 2026-06-01 decision we keep
+  # the committee's tokenized convention rather than the human-baseline
+  # notebook's exact/hardware_strict tech-string matchers; only the baseline's
+  # numeric tolerance value is adopted below.
   brand: tokenized_match
-  description: tokenized_match
-  price: numeric_tolerance_match
-  priceCurrency: tokenized_match
-  title_description: tokenized_match
-  product_type: tokenized_match
   model: tokenized_match
   model_number: tokenized_match
+  product_type: tokenized_match
   chipset_name: tokenized_match
   vram_gb: numeric_tolerance_match
   storage_gb: numeric_tolerance_match
-  bus_type: tokenized_match
-  interface_type: tokenized_match
-  memory_type: tokenized_match
-  storage_connection_type: tokenized_match
-  form_factor: tokenized_match
   read_speed_mb_s: numeric_tolerance_match
   write_speed_mb_s: numeric_tolerance_match
+  bus_type: tokenized_match
+  interface_type: tokenized_match
+  width_mm: numeric_tolerance_match
+  length_mm: numeric_tolerance_match
+  height_mm: numeric_tolerance_match
+  weight_g: numeric_tolerance_match
+  storage_connection_type: tokenized_match
+  memory_type: tokenized_match
+  color: tokenized_match
+  form_factor: tokenized_match
 
 evaluation_params:
-  # price is not covered by the human-baseline hardware schema; left at
-  # its original 0.1.
-  price:
-    tolerance: 0.1
   # Numeric tolerances sourced from the human-baseline notebook
   # (usecases/products/products_workflow_v2.ipynb, 2026-06-01 per user):
   # tolerance=0.15 for every numeric hardware attr. NOTE: PyDI
@@ -203,31 +195,39 @@ evaluation_params:
     tolerance: 0.15
   write_speed_mb_s:
     tolerance: 0.15
+  width_mm:
+    tolerance: 0.15
+  length_mm:
+    tolerance: 0.15
+  height_mm:
+    tolerance: 0.15
+  weight_g:
+    tolerance: 0.15
 
 # Per-attribute semantic type. Drives member dispatch:
 # string/categorical/date attributes route to a TD member's native
 # method; numeric attributes route to val-best PyDI for non-native TD
 # members.
 attribute_types:
-  title: string
   brand: categorical
-  description: string
-  price: numeric
-  priceCurrency: categorical
-  title_description: string
-  product_type: categorical
   model: string
   model_number: string
+  product_type: categorical
   chipset_name: string
   vram_gb: numeric
   storage_gb: numeric
-  bus_type: categorical
-  interface_type: categorical
-  memory_type: categorical
-  storage_connection_type: categorical
-  form_factor: categorical
   read_speed_mb_s: numeric
   write_speed_mb_s: numeric
+  bus_type: categorical
+  interface_type: categorical
+  width_mm: numeric
+  length_mm: numeric
+  height_mm: numeric
+  weight_g: numeric
+  storage_connection_type: categorical
+  memory_type: categorical
+  color: categorical
+  form_factor: categorical
 
 # PyDI candidate registry for val-selection sweeps. Used by
 # pydi_per_attribute_optimal (across every attribute) and by the TD

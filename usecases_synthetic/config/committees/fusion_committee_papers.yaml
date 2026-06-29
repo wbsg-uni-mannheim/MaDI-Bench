@@ -18,17 +18,18 @@
 # attribute_types + pydi_candidates depend on the schema.
 #
 # Papers fusion gold is JSON-lines (fusion_val.jsonl / fusion_test.jsonl),
-# one flat fused gold record per line, joined to the fused output on
-# ``doi`` — NOT on the synthetic record ``id``. Hence gold_id_column is
-# ``doi`` here (see config/domains/papers.yaml). The gold carries no
-# per-attribute provenance/cluster structure, so source-attribution
-# fusion metrics are unavailable for papers; only value-correctness by
-# the ``doi`` join is scored.
+# one flat fused gold record per line. Each row carries ``source_ids``:
+# the source-record ids that describe the same paper. The evaluator uses
+# that list to align gold rows to EM-clustered fused output without
+# exposing DOI as a benchmark attribute. The gold carries no per-attribute
+# provenance/cluster structure, so source-attribution fusion metrics are
+# unavailable for papers; only value-correctness by source-id cluster is
+# scored.
 
 seed: 42
 
 fused_id_column: id
-gold_id_column: doi
+gold_id_column: source_ids
 
 # Papers ships ``authors`` as a list of display-name strings. The runner
 # literal_eval's these columns before evaluation (same mechanism music
@@ -38,10 +39,10 @@ gold_list_columns:
 
 # Global trust scores (CANONICAL papers spec): dblp=1, crossref=3,
 # open_alex=1. crossref is the most reliable bibliographic source overall.
-# NOTE: two per-attribute fusers in the papers notebook ("Version_5")
-# override this global ordering with their own trust maps — keywords and
-# last_page/referenced_works_count prefer open_alex / crossref
-# respectively. Those overrides are expressed per-attribute by the K10
+# NOTE: the per-attribute fusers in the papers notebook ("Version_5")
+# can override this global ordering with their own trust maps:
+# last_page/referenced_works_count prefer crossref and cited_by_count
+# prefers open_alex. Those overrides are expressed per-attribute by the K10
 # fuser choices (prefer_higher_trust with an attribute-local trust_map),
 # not here; this single global table is what the trust-based committee
 # members (prefer_higher_trust_only, the TD members' trust priors) use.
@@ -72,12 +73,12 @@ column_mapping: {}
 # member's val-selection sweeps over) are, per attribute:
 #   type=voting; title=longest_string; authors=prefer_higher_trust;
 #   publication_year=most_recent; journal=voting;
-#   keywords=prefer_higher_trust (trust_map {crossref:1, open_alex:3, dblp:1});
 #   volume=voting; issue=voting; first_page=voting;
 #   last_page=prefer_higher_trust (trust_map {crossref:3, open_alex:1, dblp:1});
-#   referenced_works_count=prefer_higher_trust (trust_map {crossref:3, open_alex:1, dblp:1})
+#   referenced_works_count=prefer_higher_trust (trust_map {crossref:3, open_alex:1, dblp:1});
+#   cited_by_count=prefer_higher_trust (trust_map {crossref:1, open_alex:3, dblp:1})
 # Those are fuser names and live in K10, not in this match-function map.
-# publisher and cited_by_count are NOT fused by the notebook, so they are
+# publisher and keywords are NOT fused by the notebook, so they are
 # deliberately absent from evaluation_functions below (not scored).
 evaluation_functions:
   type: tokenized_match
@@ -85,12 +86,12 @@ evaluation_functions:
   authors: tokenized_match
   publication_year: year_only_match
   journal: tokenized_match
-  keywords: tokenized_match
   volume: tokenized_match
   issue: tokenized_match
   first_page: numeric_tolerance_match
   last_page: numeric_tolerance_match
   referenced_works_count: numeric_tolerance_match
+  cited_by_count: numeric_tolerance_match
 
 evaluation_params:
   # Numeric tolerances. numeric_tolerance_match applies the value as an
@@ -99,10 +100,7 @@ evaluation_params:
   #
   # referenced_works_count / cited_by_count carry a 0.10 tolerance per
   # the canonical papers spec. On integer counts this is effectively
-  # near-exact (the band is <1). cited_by_count is NOT in
-  # evaluation_functions above (the notebook does not fuse it), so this
-  # entry is presently inert — kept for spec completeness and so the
-  # tolerance is already in place if cited_by_count is ever fused.
+  # near-exact (the band is <1).
   referenced_works_count:
     tolerance: 0.10
   cited_by_count:
@@ -115,7 +113,7 @@ evaluation_params:
 # string/categorical/date attributes route to a TD member's native
 # method (or PyDI for cell_local members); numeric + list attributes
 # route to val-best PyDI for non-native TD members. Mirrors the scored
-# attribute set in evaluation_functions (publisher + cited_by_count are
+# attribute set in evaluation_functions (publisher + keywords are
 # not fused, so they are absent here too).
 attribute_types:
   type: categorical
@@ -123,12 +121,12 @@ attribute_types:
   authors: list
   publication_year: date
   journal: categorical
-  keywords: string
   volume: string
   issue: string
   first_page: numeric
   last_page: numeric
   referenced_works_count: numeric
+  cited_by_count: numeric
 
 # PyDI candidate registry for val-selection sweeps. Used by
 # pydi_per_attribute_optimal (across every attribute) and by the TD

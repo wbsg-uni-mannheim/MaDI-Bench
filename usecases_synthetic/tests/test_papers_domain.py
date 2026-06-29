@@ -1,11 +1,12 @@
 """Fold-in regression guard for the 2026 ``papers`` domain.
 
-Papers is the first synthetic domain whose sources ship as JSON-lines
-(``*.jsonl`` with no on-disk id), whose EM gold is header-bearing with
-0/1 integer labels under a condensed ``dblp_<other>_<split>.csv`` naming,
-and whose fusion gold is flat-by-DOI JSON-lines (not the per-attribute
-``provenance`` XML the pre-2026 domains use). The loader extensions that
-make this work (``loaders._FORMAT_LOADERS["jsonl"]``, header-aware
+Papers is the first synthetic domain whose sources ship as JSON-lines with
+stable source-record ids, whose EM gold is header-bearing with 0/1 integer
+labels under a condensed ``dblp_<other>_<split>.csv`` naming, and whose
+fusion gold is flat JSON-lines with a ``source_ids`` list (not the
+per-attribute ``provenance`` XML the pre-2026 domains use). DOI is absent
+from released source data and fusion gold. The loader extensions that make
+this work (``loaders._FORMAT_LOADERS["jsonl"]``, header-aware
 ``read_em_gold_csv``, ``em_gold_candidates``, ``variant_loader.
 _load_fusion_file``) are shared with every other domain, so this module
 both exercises the papers happy path and pins the guarded behaviour so a
@@ -114,10 +115,12 @@ def test_em_gold_candidates_canonical_first_then_condensed() -> None:
 
 
 def test_load_fusion_file_dispatches_jsonl() -> None:
-    fusion_dir = REPO_ROOT / "usecases" / "papers" / "input" / "fusion"
+    fusion_dir = REPO_ROOT / "use cases" / "papers" / "base" / "input" / "fusion"
     df = _load_fusion_file(fusion_dir / "fusion_test.jsonl", "fusion_test_set")
     assert len(df) == 100
-    assert "doi" in df.columns
+    assert "source_ids" in df.columns
+    assert "doi" not in df.columns
+    assert df["source_ids"].map(bool).all()
 
 
 # ---------------------------------------------------------------------------
@@ -135,6 +138,7 @@ def test_sources_load_with_dash_ids(papers_bundle: VariantBundle) -> None:
     for name in PAPERS_SOURCES:
         df = papers_bundle.sources[name]
         assert "id" in df.columns
+        assert "doi" not in df.columns
         assert len(df) > 50_000
         first = str(df["id"].iloc[0])
         assert first.startswith(f"{name}-"), first
@@ -150,23 +154,16 @@ def test_em_gold_int_labels_and_pairs(papers_bundle: VariantBundle) -> None:
         assert set(g["label"].unique()) == {0, 1}
 
 
-def test_em_gold_ids_resolve_and_positives_share_doi(
+def test_em_gold_ids_resolve(
     papers_bundle: VariantBundle,
 ) -> None:
-    """The minted source ids align with the EM gold ids (add_index order
-    matches the gold-generation order): every gold id resolves to a source
-    row, and positive pairs point at the same paper (shared doi)."""
+    """The source ids on disk align with the EM gold ids."""
     dblp = papers_bundle.sources["dblp"].set_index("id")
     for pair in PAPERS_PAIRS:
         right = papers_bundle.sources[pair[1]].set_index("id")
         g = papers_bundle.em_gold[pair]
         assert (~g["id1"].isin(dblp.index)).sum() == 0
         assert (~g["id2"].isin(right.index)).sum() == 0
-        pos = g[g["label"].astype(bool)].head(500)
-        share = (
-            dblp.loc[pos["id1"], "doi"].values == right.loc[pos["id2"], "doi"].values
-        ).mean()
-        assert share > 0.95, f"{pair} positives doi-match only {share:.3f}"
 
 
 def test_em_splits_present(papers_bundle: VariantBundle) -> None:
@@ -175,11 +172,15 @@ def test_em_splits_present(papers_bundle: VariantBundle) -> None:
         assert {"train", "val", "test"}.issubset(splits)
 
 
-def test_fusion_gold_jsonl_joined_on_doi(papers_bundle: VariantBundle) -> None:
+def test_fusion_gold_jsonl_uses_source_ids(papers_bundle: VariantBundle) -> None:
     assert len(papers_bundle.fusion_gold) == 100
-    assert "doi" in papers_bundle.fusion_gold.columns
+    assert "source_ids" in papers_bundle.fusion_gold.columns
+    assert "doi" not in papers_bundle.fusion_gold.columns
+    assert papers_bundle.fusion_gold["source_ids"].map(bool).all()
     assert papers_bundle.fusion_validation is not None
     assert len(papers_bundle.fusion_validation) == 100
+    assert "source_ids" in papers_bundle.fusion_validation.columns
+    assert "doi" not in papers_bundle.fusion_validation.columns
 
 
 # ---------------------------------------------------------------------------
@@ -233,7 +234,8 @@ def test_knob_08_rename_table_invariants() -> None:
     for src in PAPERS_SOURCES:
         cols = rt[src]
         assert "id" not in cols, f"{src}: rename_table must omit id"
-        assert len(cols) == 14, f"{src}: expected 14 renamed columns"
+        assert "doi" not in cols, f"{src}: rename_table must omit doi"
+        assert len(cols) == 13, f"{src}: expected 13 renamed columns"
         for col, rungs in cols.items():
             assert set(rungs) == _RUNGS, f"{src}.{col} rungs {set(rungs)}"
             assert len(set(rungs.values())) == 4, f"{src}.{col} rung collision"

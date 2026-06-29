@@ -90,7 +90,7 @@
     "assets": {
       "type": "integer",
       "title": "Assets",
-      "description": "Total assets of the company in US$, represented as a non-negative integer.",
+      "description": "Total assets of the company in US$, represented as a non-negative integer. For fusion evaluation this value uses 2016 as the task-level temporal target (gold curated on 2026-04-26) and should not be replaced by a current company profile.",
       "minimum": 0,
       "maximum": 4000000000000,
       "examples": [
@@ -101,7 +101,7 @@
     "revenue": {
       "type": "integer",
       "title": "Revenue",
-      "description": "Total revenue of the company in US$, represented as a non-negative integer.",
+      "description": "Total revenue of the company in US$, represented as a non-negative integer. For fusion evaluation this value uses 2016 as the task-level temporal target (gold curated on 2026-04-26) and should not be replaced by a current company profile.",
       "minimum": 0,
       "maximum": 1000000000000,
       "examples": [
@@ -112,7 +112,7 @@
     "keypeople": {
       "type": "array",
       "title": "Key People",
-      "description": "List of key people associated with the company, such as founders, executives, and board members.",
+      "description": "List of key people associated with the company, such as founders, executives, and board members. For fusion evaluation this value uses 2016 as the task-level temporal target (gold curated on 2026-04-26) and should not be replaced by a current company profile.",
       "minItems": 1,
       "maxItems": 20,
       "items": {
