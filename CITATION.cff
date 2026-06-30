@@ -28,5 +28,16 @@ keywords:
   - data fusion
   - end-to-end evaluation
   - large language models
-# TODO: add publication venue, year, and DOI once available, and a
-# preferred-citation block pointing to the paper.
+preferred-citation:
+  type: article
+  title: "MaDI-Bench: An End-to-End Data Integration Benchmark"
+  authors:
+    - family-names: Steiner
+      given-names: Aaron
+    - family-names: Peeters
+      given-names: Ralph
+    - family-names: Bizer
+      given-names: Christian
+  year: 2026
+  url: "https://arxiv.org/abs/2606.30371"
+  notes: "arXiv:2606.30371"

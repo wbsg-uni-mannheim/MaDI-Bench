@@ -4,7 +4,7 @@
 Data and Web Science Group, University of Mannheim, Germany
 *\*These authors contributed equally to this work.*
 
-**Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ 
+**Paper:** https://arxiv.org/abs/2606.30371 · **Website:** https://wbsg-uni-mannheim.github.io/MaDI-Bench/ 
 
 ---
 
@@ -101,10 +101,13 @@ To reproduce or compare against the reference pipelines and to use the per-step 
 If you use MaDI-Bench, please cite:
 
 ```bibtex
-@inproceedings{steiner2026madibench,
-  title     = {MaDI-Bench: An End-to-End Data Integration Benchmark},
-  author    = {Steiner, Aaron and Peeters, Ralph and Bizer, Christian},
-  year      = {2026},
-  note      = {Data and Web Science Group, University of Mannheim}
+@misc{steiner2026madibench,
+  title         = {MaDI-Bench: An End-to-End Data Integration Benchmark},
+  author        = {Steiner, Aaron and Peeters, Ralph and Bizer, Christian},
+  year          = {2026},
+  eprint        = {2606.30371},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.DB},
+  url           = {https://arxiv.org/abs/2606.30371}
 }
 ```

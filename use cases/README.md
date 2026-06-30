@@ -16,7 +16,7 @@ The base task is the real-world integration problem. Each variant keeps that sam
 | [Companies](companies/) | 3 | CSV | 8 | 14,016 | 14,180 |
 | [Music](music/) | 3 | CSV | 8 | 37,255 | 35,169 |
 | [Products](products/) | 4 | JSON / CSV | 25 | 3,012 | 2,365 |
-| [Scientific Papers](papers/) | 3 | JSONL / CSV | 12 | 182,059 | 136,876 |
+| [Scientific Papers](papers/) | 3 | JSONL / CSV | 11 | 182,059 | 136,876 |
 
 ### Labeled ground-truth resources (base tasks)
 
@@ -100,4 +100,4 @@ Computer-science paper records from **DBLP**, **Crossref**, and **OpenAlex**. DO
 | OpenAlex | type, title, authors, source, topics, pages, citations | 13 | 89.5% | 60,719 | 60,818 | 60,723 | 39,988 |
 | **Total** | | | | **182,059** | **182,213** | **182,067** | **136,876** |
 
-Target schema: 12 attributes (plus an `id`). Base sources are JSONL; the variants are CSV, which expose a few additional fields.
+Target schema: 11 attributes (plus an `id`). Base sources are JSONL; the variants are CSV, which expose a few additional fields.
