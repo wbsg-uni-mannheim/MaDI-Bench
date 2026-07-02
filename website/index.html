@@ -845,18 +845,46 @@
             </div>
         </section>
 
-<!-- ABSTRACT -->
-<section class="section" id="abstract" style="padding-top:1rem;">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Abstract</h2>
-    <div class="content is-size-6">
-      <p>Data integration combines heterogeneous data sets into a single, coherent representation. It involves a sequence of interdependent tasks: schema matching, value normalization, entity blocking, entity matching, and data fusion. 
-        Existing benchmarks either evaluate these steps in isolation or cover only incomplete versions of the data integration pipeline, omitting specific steps. The lack of public end-to-end data integration benchmarks hinders research on data integration methods that address the integration process as a whole.</p>
-      <p>The <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b> fills this gap. MaDI-Bench is the first benchmark for the end-to-end integration of relational tables covering all steps of the integration process. 
-        MaDI-Bench contributes (i) a set of base end-to-end data integration tasks spanning several application domains, each requiring the full schema matching, value normalization, entity matching, and conflict resolution pipeline; and (ii) a generic method for deriving task variants that mitigates rapid benchmark saturation as data integration systems advance. We validate the benchmark using human-engineered pipelines, a best-of-breed pipeline, and an LLM-based pipeline. The validation demonstrates the utility of the benchmark for measuring the step-wise as well as the end-to-end performance of data integration pipelines. All benchmark artefacts are available for public download.</p>
-    </div>
-  </div>
-</section>
+        <!-- ABSTRACT -->
+        <section class="section" id="abstract" style="padding-top: 1rem">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">Abstract</h2>
+                <div class="content is-size-6">
+                    <p>
+                        Data integration combines heterogeneous data sets into a
+                        single, coherent representation. It involves a sequence
+                        of interdependent tasks: schema matching, value
+                        normalization, entity blocking, entity matching, and
+                        data fusion. Existing benchmarks either evaluate these
+                        steps in isolation or cover only incomplete versions of
+                        the data integration pipeline, omitting specific steps.
+                        The lack of public end-to-end data integration
+                        benchmarks hinders research on data integration methods
+                        that address the integration process as a whole.
+                    </p>
+                    <p>
+                        The
+                        <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b>
+                        fills this gap. MaDI-Bench is the first benchmark for
+                        the end-to-end integration of relational tables covering
+                        all steps of the integration process. MaDI-Bench
+                        contributes (i) a set of base end-to-end data
+                        integration tasks spanning several application domains,
+                        each requiring the full schema matching, value
+                        normalization, entity matching, and conflict resolution
+                        pipeline; and (ii) a generic method for deriving task
+                        variants that mitigates rapid benchmark saturation as
+                        data integration systems advance. We validate the
+                        benchmark using human-engineered pipelines, a
+                        best-of-breed pipeline, and an LLM-based pipeline. The
+                        validation demonstrates the utility of the benchmark for
+                        measuring the step-wise as well as the end-to-end
+                        performance of data integration pipelines. All benchmark
+                        artefacts are available for public download.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- THE BASE TASKS -->
         <section class="section" id="tasks" style="padding-top: 0">
@@ -1146,7 +1174,7 @@
                         <b>Companies.</b> This task requires the integration of
                         the Forbes Global 2000 list, a DBpedia company extract,
                         and a FullContact company-profile sample. The target
-                        schema has eight attributes.
+                        schema has nine attributes.
                     </p>
                 </div>
                 <div class="chall">
@@ -2604,7 +2632,7 @@
                             <td>Forbes, DBpedia, FullContact</td>
                             <td class="num-cell">3</td>
                             <td class="num-cell">14,016</td>
-                            <td class="num-cell">8</td>
+                            <td class="num-cell">9</td>
                         </tr>
                         <tr>
                             <td><b>Music</b></td>
@@ -2646,8 +2674,8 @@
                 <h2 class="title is-3 has-text-centered">Artifacts per Task</h2>
                 <div class="content is-size-6">
                     <p>
-                        MaDI provides the following artefacts for each of the
-                        base tasks:
+                        MaDI-Bench provides the following artifacts for each of
+                        the base tasks:
                     </p>
                     <ul>
                         <li>
@@ -2872,11 +2900,12 @@
                 <div class="content is-size-6">
                     <p class="has-text-centered">
                         A system under test (SUT) needs to handle the following
-                        four subtasks of the overall integration task.
-                        MaDI-Bench provides ground truth for each subtask as
-                        well as for the output of the overall integration (fused
-                        dataset). Thus, a SUT can be evaluated one task at a
-                        time or in an end-to-end fashion.
+                        four steps of the overall integration task. MaDI-Bench
+                        provides ground truth or a reference signal for each
+                        step as well as for the output of the overall
+                        integration (fused dataset). Thus, a SUT can be
+                        evaluated one step at a time or in an end-to-end
+                        fashion.
                     </p>
                 </div>
 
@@ -3188,12 +3217,15 @@
                     <p>
                         We validate MaDI-Bench with three pipelines that span
                         the design space from human-engineered to fully
-                        automated. All three build on the
+                        automated. The human-engineered and LLM-based pipelines
+                        build on the
                         <a href="https://github.com/wbsg-uni-mannheim/PyDI"
                             >PyDI</a
                         >
-                        integration framework, and their per-step and end-to-end
-                        outputs are released in the repository under
+                        integration framework, while the best-of-breed pipeline
+                        chains specialized systems from the literature. The
+                        per-step and end-to-end outputs of all three are
+                        released in the repository under
                         <span class="mono">results/</span> and the per-task
                         <span class="mono">output/</span> folders.
                     </p>
@@ -3369,8 +3401,8 @@
                         steps. Schema matching is close to perfect for all
                         three, entity matching covers a wide range across tasks,
                         and data fusion is the hardest step for every pipeline.
-                        Every number below is per task, and the strongest
-                        pipeline in each row is shown in
+                        Every number below is per task, and where the pipelines
+                        differ, the best score per task is shown in
                         <span style="color: #0a7a5a; font-weight: 700"
                             >green</span
                         >. The columns are the human-engineered pipeline (Human,
@@ -3384,13 +3416,14 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        The three pipelines reach close to optimal F1 by using the LLM Schema matcher provided in PyDI, which reads
-                        column names and values together. The label-based and
-                        instance-based matchers are shown for reference: their
-                        much lower scores show that schema matching is genuinely
-                        difficult in the benchmark, while state-of-the-art LLMs
-                        reach close to perfect performance once they are given
-                        both the headers and the values. Values are F1 (%).
+                        The three pipelines reach close to optimal F1 by using
+                        the PyDI LLM schema matcher, which reads column names
+                        and values together. The label-based and instance-based
+                        matchers are shown for reference: their much lower
+                        scores show that schema matching is genuinely difficult
+                        in the benchmark, while state-of-the-art LLMs reach
+                        close to perfect performance once they are given both
+                        the headers and the values. Values are F1 (%).
                     </p>
                 </div>
                 <table class="rtab">
@@ -3516,7 +3549,7 @@
                                 <td class="n">100.00</td>
                                 <td class="n grp">99.34</td>
                                 <td class="n">99.24</td>
-                                <td class="n">99.69</td>
+                                <td class="n">99.67</td>
                                 <td class="n grp">87.65</td>
                                 <td class="n">89.29</td>
                                 <td class="n best">90.69</td>
@@ -3549,12 +3582,12 @@
                                 <td>Scientific Papers</td>
                                 <td class="n">97.90</td>
                                 <td class="n">97.90</td>
-                                <td class="n">99.69</td>
+                                <td class="n">97.69</td>
                                 <td class="n grp">99.98</td>
                                 <td class="n">99.98</td>
                                 <td class="n">99.97</td>
-                                <td class="n grp best">99.78</td>
-                                <td class="n">99.70</td>
+                                <td class="n grp">98.45</td>
+                                <td class="n best">99.70</td>
                                 <td class="n">96.05</td>
                             </tr>
                         </tbody>
@@ -3574,7 +3607,8 @@
                         Fusion is the hardest step for every pipeline. The LLM
                         pipeline produces the most accurate fused values on four
                         of the five tasks. Best-of-breed leads on Products.
-                        Values are accuracy (%). the best per task is in green.
+                        Values are accuracy (%). The best score per task is in
+                        green.
                     </p>
                 </div>
                 <table class="rtab">
@@ -3634,7 +3668,7 @@
                         while the human and LLM pipelines use lighter matchers.
                         On Companies, where best-of-breed instead picks the
                         cheaper Magellan, it runs about as fast as the others.
-                        Values are end-to-end wall-clock seconds. 
+                        Values are end-to-end wall-clock seconds.
                     </p>
                 </div>
                 <table class="rtab">
@@ -3795,11 +3829,11 @@
                     <p>
                         To keep the benchmark hard as systems improve, each base
                         task also ships in easy, medium, and hard versions. The
-                        records and the correct answers stay the same. Eight
-                        difficulty knobs perturb the data, each set to its own
-                        target for easy, medium, and hard. A harder level turns
-                        up the kinds of heterogeneity that real integration runs
-                        into.
+                        underlying entities and their true matches stay the
+                        same. Eight difficulty knobs perturb the data, each set
+                        to its own target for easy, medium, and hard. A harder
+                        level turns up the kinds of heterogeneity that real
+                        integration runs into.
                     </p>
                 </div>
 
@@ -3807,7 +3841,7 @@
                 <div class="content is-size-6">
                     <p>
                         Here is the DBpedia record for the Taisei Corporation,
-                        base against hard. Schema naming divergence (Knob 8)
+                        base against hard. Schema naming divergence (Knob 7)
                         first renames every column to a cryptic code:
                         <span class="mono">org_name→nm</span>,
                         <span class="mono">established→ey</span>,
@@ -3899,7 +3933,7 @@
                     </tbody>
                 </table>
                 <p class="legend">
-                    Eight changes from one base record: a renamed schema, a
+                    One base record touched by five knobs: a renamed schema, a
                     reformatted date, a reworded country, a corrupted industry
                     string, a dropped person, and two rescaled financial
                     figures. The easy level moves the same dials the other way,
@@ -3981,7 +4015,7 @@
                     <div class="column is-6">
                         <div class="knob-box">
                             <span class="kn">Knob 4</span>
-                            <span class="kst">Fusion</span>
+                            <span class="kst">Matching · Fusion</span>
                             <p class="kt">Coverage skew</p>
                             <p class="kd">
                                 Varies how many sources describe each entity.
@@ -4023,7 +4057,7 @@
                             <p class="kt">Value noise</p>
                             <p class="kd">
                                 Corrupts a share of values with typos, encoding
-                                artefacts, and truncation. The damaged values
+                                artifacts, and truncation. The damaged values
                                 lower string-similarity scores during matching
                                 and show up as spurious disagreements during
                                 fusion.
@@ -4037,7 +4071,7 @@
                     </div>
                     <div class="column is-6">
                         <div class="knob-box">
-                            <span class="kn">Knob 8</span>
+                            <span class="kn">Knob 7</span>
                             <span class="kst">Schema matching</span>
                             <p class="kt">Schema naming divergence</p>
                             <p class="kd">
@@ -4056,7 +4090,7 @@
                     </div>
                     <div class="column is-6">
                         <div class="knob-box">
-                            <span class="kn">Knob 10</span>
+                            <span class="kn">Knob 8</span>
                             <span class="kst">Fusion</span>
                             <p class="kt">Source reliability</p>
                             <p class="kd">
@@ -4412,14 +4446,33 @@
         </section>
 
         <!-- CONCLUSION -->
-<section class="section" id="conclusion">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Conclusion</h2>
-    <div class="content is-size-6">
-      <p>This paper introduced the MaDI-Bench integration benchmark. The benchmark models the full complexity of the data integration process, including schema matching, value normalization, entity matching, and conflict resolution, while at the same time taking into account the dependencies between the subtasks. To prevent a quick saturation of the benchmark as agentic systems progress, we introduce a generic variant-generation method for deriving harder variants from the base tasks. We validated MaDI-Bench and the generated variants using human-designed pipelines, an LLM-based pipeline, and a best-of-breed pipeline. The validation showed the benchmark's utility for measuring the step-wise as well as end-to-end performance of data integration systems. We hope that the benchmark will prove useful for the community and will support the development of fully automatic as well as human-in-the-loop data integration systems.</p>
-    </div>
-  </div>
-</section>
+        <section class="section" id="conclusion">
+            <div class="container is-max-desktop">
+                <h2 class="title is-3 has-text-centered">Conclusion</h2>
+                <div class="content is-size-6">
+                    <p>
+                        This paper introduced the MaDI-Bench integration
+                        benchmark. The benchmark models the full complexity of
+                        the data integration process, including schema matching,
+                        value normalization, entity matching, and conflict
+                        resolution, while at the same time taking into account
+                        the dependencies between the subtasks. To prevent a
+                        quick saturation of the benchmark as agentic systems
+                        progress, we introduce a generic variant-generation
+                        method for deriving harder variants from the base tasks.
+                        We validated MaDI-Bench and the generated variants using
+                        human-designed pipelines, an LLM-based pipeline, and a
+                        best-of-breed pipeline. The validation showed the
+                        benchmark's utility for measuring the step-wise as well
+                        as end-to-end performance of data integration systems.
+                        We hope that the benchmark will prove useful for the
+                        community and will support the development of fully
+                        automatic as well as human-in-the-loop data integration
+                        systems.
+                    </p>
+                </div>
+            </div>
+        </section>
 
         <!-- DOWNLOADS -->
         <section class="section" id="resources">
