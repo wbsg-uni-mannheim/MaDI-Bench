@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta
             name="description"
-            content="MaDI-Bench: an end-to-end benchmark for the integration of relational tables, covering schema matching, value normalization, entity matching, and data fusion."
+            content="MaDI-Bench is an end-to-end benchmark for the integration of relational tables, covering schema matching, value normalization, entity matching, and data fusion."
         />
         <meta
             name="keywords"
@@ -851,11 +851,11 @@
                 <h2 class="title is-3 has-text-centered">Abstract</h2>
                 <div class="content is-size-6">
                     <p>
-                        Data integration combines heterogeneous data sets into a
-                        single, coherent representation. It involves a sequence
+                        Data integration combines heterogeneous data from multiple sources into a
+                        single, coherent data set. Data integration involves a sequence
                         of interdependent tasks: schema matching, value
                         normalization, entity blocking, entity matching, and
-                        data fusion. Existing benchmarks either evaluate these
+                        data fusion. Existing data integration benchmarks either evaluate these
                         steps in isolation or cover only incomplete versions of
                         the data integration pipeline, omitting specific steps.
                         The lack of public end-to-end data integration
@@ -872,10 +872,8 @@
                         integration tasks spanning several application domains,
                         each requiring the full schema matching, value
                         normalization, entity matching, and conflict resolution
-                        pipeline; and (ii) a generic method for deriving task
-                        variants that mitigates rapid benchmark saturation as
-                        data integration systems advance. We validate the
-                        benchmark using human-engineered pipelines, a
+                        pipeline; and (ii) a generic method for deriving variants of the base tasks that mitigates the rapid saturation of the benchmark as
+                        data integration systems advance. We validate MaDI-Bench using human-engineered pipelines, a
                         best-of-breed pipeline, and an LLM-based pipeline. The
                         validation demonstrates the utility of the benchmark for
                         measuring the step-wise as well as the end-to-end
@@ -893,21 +891,16 @@
                 <div class="content is-size-6">
                     <p>
                         MaDI-Bench consists of five end-to-end data integration
-                        tasks: Games, Companies, Music, Products, and Scientific
-                        Papers. Each task takes several heterogeneous source
-                        tables in a domain and asks a system to return one fused
-                        target table, exercising schema matching, value
-                        normalization, entity matching, and data fusion
-                        together. The benchmark provides ground truth to score
+                        tasks. These base task require the integration of data about Games, Companies, Music, Products, and Scientific
+                        Papers. Each task takes several heterogeneous tables as input and asks the system under test (SUT) to integrate these tables into a single output table conforming to a given target schema. The integration requires the SUT to perform schema matching, value
+                        normalization, entity matching, and data fusion. The benchmark provides ground truth to score
                         every step on its own, not only the final table: a gold
                         schema mapping for schema matching, the target schema's
                         constraints and taxonomies for value normalization
                         (measured as consistency with the schema), labeled
                         record pairs for blocking and entity matching, and
                         hand-verified records for data fusion, together with
-                        metrics for the end-to-end result. Each base task also
-                        ships in easy, medium, and hard variants, for 20
-                        integration tasks in total.
+                        metrics for the end-to-end result. MaDI-Bench offers easy, medium, and hard variants of each base task.
                     </p>
                     <p
                         class="has-text-centered pipeline-rail"
@@ -972,7 +965,7 @@
                         </li>
                         <li>
                             Platform, genre, date, and rating vocabularies must
-                            be normalized (taxonomies are provided).
+                            be normalized using given taxonomies.
                         </li>
                     </ul>
                 </div>
@@ -1182,7 +1175,7 @@
                     <ul>
                         <li>
                             Company-name variants, spelling differences, and
-                            corporate hierarchies.
+                            corporate hierarchies make entity matching difficult.
                         </li>
                         <li>
                             Companies span the globe, so legal suffixes and
@@ -1378,7 +1371,7 @@
                 </details>
                 <div class="content is-size-6 task-list">
                     <p>
-                        <b>Music.</b> Integrates release-level records from
+                        <b>Music.</b> Integrates data from
                         Discogs, Last.fm, and MusicBrainz that describe albums,
                         EPs, and singles with partial overlap. The target schema
                         has eight attributes.
@@ -1599,9 +1592,9 @@
                 </details>
                 <div class="content is-size-6 task-list">
                     <p>
-                        <b>Products.</b> Based on a sample of the WDC Products
-                        benchmark, covering GPUs, SSDs, HDDs, and USB sticks.
-                        The target schema has 25 attributes, the largest in the
+                        <b>Products.</b> This task is based on a subset of the <a href="https://webdatacommons.org/largescaleproductcorpus/wdc-products/">WDC Products</a>
+                        benchmark, covering GPUs, SSDs, HDDs, and USB sticks. 
+                        The target schema has 25 attributes, making it the largest in the
                         benchmark.
                     </p>
                 </div>
@@ -2287,29 +2280,29 @@
                 </details>
                 <div class="content is-size-6 task-list">
                     <p>
-                        <b>Scientific Papers.</b> Integrates computer-science
-                        paper records from DBLP, Crossref, and OpenAlex. The
-                        target schema has 11 attributes.
+                        <b>Scientific Papers.</b> This task requires the integration of data about computer-science
+                        papers from DBLP, Crossref, and OpenAlex. The
+                        target schema has 11 attributes. 
                     </p>
                 </div>
                 <div class="chall">
                     <span class="chall-l">Challenges</span>
                     <ul>
                         <li>
-                            The largest task by row count, so blocking
-                            efficiency matters: a poor reduction ratio leads to
-                            hundreds of thousands of comparisons, which makes
+                            With a total of 180,000 records, Scientific Papers is the largest task in MaDI-Bench. So blocking
+                            matters: a poor reduction ratio can lead to
+                            millions of comparisons, which makes
                             the task suited for evaluating efficiency as well as
                             effectiveness.
                         </li>
                         <li>
-                            DOIs are not part of the released source data;
+                            DOIs or other IDs can not be used for entity matching;
                             fusion rows use a <code>source_ids</code> helper
                             list to point back to the contributing source
                             records.
                         </li>
                         <li>
-                            Title and author-list variants, publication-type and
+                            Title and author-list variations, publication-type and
                             venue normalization, and sparse metadata for volume,
                             issue, pages, and citation counts.
                         </li>
@@ -2992,13 +2985,8 @@
                         founding date, for instance, must be an ISO
                         <span class="mono">YYYY-MM-DD</span> inside an allowed
                         range, and assets must be a non-negative integer in US
-                        dollars below an upper bound. Categorical attributes are
-                        pinned to taxonomies that ship with the task and fix
-                        both the allowed values and the level to normalize to:
-                        countries follow CLDR, industries follow GICS, and each
-                        task adds its own, such as platform, genre, and rating
-                        for Games. Normalization is scored as consistency, that
-                        is, whether the output values satisfy these schema
+                        dollars below an upper bound. For categorical attributes, the task provides taxonomies that specify which values are allowed and how detailed the normalized values should be. Some attributes use standard taxonomies, e.g. countries follow CLDR, industries uses GICS. In addition, some tasks also use propretary taxonomies, for instance for platform, genre, and rating in the Games task. Normalization is scored as consistency, that
+                        is, whether the output values satisfy the given schema
                         constraints.
                     </p>
                 </div>
@@ -3066,14 +3054,7 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        Records that refer to the same entity have to be found
-                        across sources. Scoring the full cartesian product of
-                        record pairs is quadratic in the input size and
-                        computationally infeasible, so blocking first reduces it
-                        to a smaller set of candidate pairs, and matching then
-                        classifies each candidate as a match or a non-match. The
-                        hardest cases are look-alikes that fall into the same
-                        block but refer to different entities.
+                        The SUT must identify records referring to the same real-world entity across sources. Since comparing all record pairs requires scoring the full Cartesian product and is therefore quadratic in the input size, this quickly becomes computationally infeasible. Blocking addresses this issue by reducing the search space to a smaller set of candidate pairs, after which matching classifies each candidate as either a match or a non-match. The MaDI-Bench entity matching test sets are designed to contain a decent amount of hard-to-decide corner case record pairs.
                     </p>
                 </div>
                 <p class="stepmeta">
@@ -3120,14 +3101,8 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        After matching groups the records of an entity into a
-                        cluster, fusion resolves the cluster into a single value
-                        for each attribute. Where the sources report conflicting
-                        values, fusion has to decide which value to keep, and
-                        this conflict resolution is the step where the benchmark
-                        leaves the most room for improvement. Each gold value
-                        was set by annotators who verified it against
-                        independent sources.
+                        After matching, records referring to the same real-world entities form clusters. Data fusion consolidates these clusters into a single record per cluster.  When records provide conflicting values, the SUT must apply a conflict resolution heuristic to decide which value to retain. The values in the MaDI-Bench data fusion test sets are verified by humans who checked them against
+                        data from relevant websites.
                     </p>
                 </div>
                 <p class="stepmeta">
@@ -3195,15 +3170,15 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        Beyond the per-step scores, MaDI-Bench rates the final
-                        fused table along three quality dimensions:
+                        Beyond the per-step evaluation, MaDI-Bench also provides code for assessing the final
+                        output table along three quality dimensions:
                         <b>coverage</b> (did the right entities and values make
-                        it in?), <b>consistency</b> (does the table fit the
-                        target schema?), and <b>correctness</b> (are the merged
-                        values right?). Each is reported at three reference
-                        levels: reference-free (structure only, no labels
-                        needed), silver (against the human pipeline output), and
-                        ground truth (against the annotated test sets).
+                        it into the output table?), <b>consistency</b> (does the table fit the
+                        target schema?), and <b>correctness</b> (are the fused
+                        values correct?). MaDi-Bench provides for assessing these quality dimension using different types of reference
+                        data: reference-free (no ground truth
+                        used, only structural comparison to imput), silver (comparison to the output of the human-designed pipelines), and
+                        ground truth (evaluation against the human-verified test sets). While the silver evaluation checks all values of the output table, the round truth-based evaluation covers only a subset of all records.
                     </p>
                 </div>
             </div>
@@ -3215,7 +3190,7 @@
                 <h2 class="title is-3 has-text-centered">Validation</h2>
                 <div class="content is-size-6">
                     <p>
-                        We validate MaDI-Bench with three pipelines that span
+                        We validate MaDI-Bench using three pipelines that span
                         the design space from human-engineered to fully
                         automated. The human-engineered and LLM-based pipelines
                         build on the
@@ -3224,8 +3199,8 @@
                         >
                         integration framework, while the best-of-breed pipeline
                         chains specialized systems from the literature. The
-                        per-step and end-to-end outputs of all three are
-                        released in the repository under
+                        per-step and end-to-end outputs of all three pipelines are
+                        found in the repository under
                         <span class="mono">results/</span> and the per-task
                         <span class="mono">output/</span> folders.
                     </p>
@@ -3234,28 +3209,26 @@
                 <div class="pdetail">
                     <div class="pd-head">
                         <span class="ptag">P1</span
-                        ><span class="pd-title">Human-engineered pipeline</span
+                        ><span class="pd-title">Human-engineered Pipelines</span
                         ><span class="pd-role">silver reference</span>
                     </div>
                     <p>
-                        Domain-specific workflows that master's and PhD students
-                        built and refined on PyDI. Every workflow runs the same
-                        order: PyDI's LLM schema matcher proposes
-                        correspondences, an engineer inspects and hand-corrects
-                        them, and the sources are mapped to the target schema. A
+                        The humain-engineered pipelines are task workflows that were coded by master's and PhD students
+                        using the PyDI framework. The students improved their workflows over multiple iterations using the MaDi-Bench validation sets. 
+						Every workflow involves the same sequence of steps: PyDI's LLM schema matcher proposes
+                        attribute correspondences between the input tables, an human data engineer inspects and hand-corrects
+                        the mapping, and the input tables are translated into the target schema. A
                         normalization step then parses dates and numbers,
                         converts units, and applies the taxonomy mappings.
-                        Blocking uses embedding or task-specific keys tuned to
-                        at least 97% pair completeness. Entity matching combines
-                        rule-based and learned tree-based matchers with a global
-                        one-to-one assignment, and fusion applies per-attribute
-                        PyDI heuristics such as source trust, longest or
-                        shortest string, numeric aggregation, and set union.
+                        Blocking uses embedding or task-specific blocking keys tuned to
+                        reach at least 97% pair completeness. Entity matching combines
+                        rule-based or trained tree-based matchers with a global
+                        one-to-one correspondence creation step. Data fusion applies per-attribute
+                        conclict resolution heuristics such as source trust, longest or
+                        shortest string, numeric aggregation, and set union. The heuristics were selected by the students from the set of fusion heuristics offered by PyDI.
                     </p>
                     <p>
-                        It is a practical human reference rather than an
-                        optimum, and its fused output serves as the benchmark's
-                        silver standard.
+                        The human-engineered pipelines set a practical reference point on how data engineers would approach the MaDI integration tasks. The pipelines are likely not the optimum. In order to compare the performance of SUTs to human data-engineering, we use output of the human-engineered pipelines as silver standard.
                     </p>
                     <p class="pd-links">
                         Code and outputs:
@@ -3278,15 +3251,13 @@
                 <div class="pdetail">
                     <div class="pd-head">
                         <span class="ptag">P2</span
-                        ><span class="pd-title">Best-of-breed pipeline</span
+                        ><span class="pd-title">Best-of-breed Pipeline</span
                         ><span class="pd-role">committee per step</span>
                     </div>
                     <p>
-                        Chains state-of-the-art methods from the literature, one
-                        per integration step. It runs the four stages once: at
-                        each stage a committee of competing methods is scored on
-                        the validation set, and the winner's output is passed to
-                        the next stage.
+                        The best-of-breed pipeline chains methods from the literature into an integration pipeline. For each step of the integration process, the method runs a committee of competing methods and scores their results on
+                        the validation sets. The winning method is selected for the best-of-breed pipeline and the winner's output is passed to
+                        the next stage of the process. Below, we list the methods that are tested for the different steps of each integration task:
                     </p>
                     <p>
                         <b>Schema matching:</b>
@@ -3347,34 +3318,26 @@
                 <div class="pdetail">
                     <div class="pd-head">
                         <span class="ptag">P3</span
-                        ><span class="pd-title">LLM-based pipeline</span
+                        ><span class="pd-title">LLM-based Pipeline</span
                         ><span class="pd-role"
                             >automatic, self-configuring</span
                         >
                     </div>
                     <p>
-                        Showcases how well an LLM can configure an end-to-end
-                        data integration pipeline. It uses the same PyDI methods
-                        as the human pipeline, but an LLM, not a person, sets
-                        them up. GPT-5.5 performs schema matching, and the
+                        The LLM-based pipeline uses an LLM to configure a end-to-end
+                        data integration pipeline which employs scalable, traditional integration methods for each step of the pipeline. The LLM-based pipeline uses the same PyDI methods as the human pipeline, but an LLM, not a human, configures them. GPT-5.5 performs schema matching, and the
                         values are normalized by mapping them to the predefined
                         taxonomies, with a column profiler selecting a
                         normalization function for the remaining attributes. An
-                        embedding blocker then reduces the sources to candidate
-                        pairs.
-                    </p>
-                    <p>
-                        From a sample of those pairs the pipeline builds its own
-                        machine-labeled training and validation sets with
-                        GPT-5.2 as the labeler, independent of the labels the
-                        benchmark provides, and uses them to configure an entity
-                        matcher chosen among rule-based and feature-based models
-                        such as random forest and XGBoost. For fusion it writes
+                        embedding blocker then generates candidate
+                        pairs. Using a subset of those pairs, the pipeline generates its own
+                        machine-labeled training and validation sets using
+                        GPT-5.2 as the labeler. Thus, the pipeline uses training and validation sets that differ from the 
+                        sets provided by the benchmark. The pipeline uses the machine-labeled sets to train and validate different similarity feature-based matchers using random forests and XGBoost. For fusion it writes
                         a configuration that assigns each attribute a
                         conflict-resolution heuristic. The LLM only configures
                         the pipeline and generates the training artifacts; it
-                        plays no part in the integration itself, which is what
-                        lets the pipeline scale to the largest tasks.
+                        is not involved in the integration itself, which keeps costs low and enables the pipeline to scale to large tasks.
                     </p>
                     <p class="pd-links">
                         Code:
@@ -3412,7 +3375,7 @@
                 </div>
 
                 <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Schema matching
+                    Schema Matching
                 </h4>
                 <div class="content is-size-6">
                     <p>
@@ -3482,7 +3445,7 @@
                 </table>
 
                 <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Blocking and entity matching
+                    Blocking and Entity Matching
                 </h4>
                 <div class="content is-size-6">
                     <p>
@@ -3600,7 +3563,7 @@
                 </p>
 
                 <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Data fusion
+                    Data Fusion
                 </h4>
                 <div class="content is-size-6">
                     <p>
@@ -3608,7 +3571,7 @@
                         pipeline produces the most accurate fused values on four
                         of the five tasks. Best-of-breed leads on Products.
                         Values are accuracy (%). The best score per task is in
-                        green.
+                        green. The strong results of the LLM-based pipeline are due not only to its choice of conflict resolution method, but also to its more comprehensive value normalization.
                     </p>
                 </div>
                 <table class="rtab">
@@ -3721,7 +3684,7 @@
                 </table>
 
                 <h4 class="title is-5" style="margin-top: 1.5rem">
-                    End to end
+                    End-to-End Evaluation
                 </h4>
                 <div class="content is-size-6">
                     <p>
@@ -3729,15 +3692,12 @@
                         along three dimensions: <b>coverage</b> (are the right
                         entities and values present), <b>consistency</b> (does
                         the output fit the target schema), and
-                        <b>correctness</b> (are the merged values right). Each
-                        is reported at three reference levels: reference-free,
-                        against the human pipeline (silver), and against the
-                        annotated test sets (ground truth). The table gives the
-                        mean over the five tasks under the ground-truth
-                        reference, with the better pipeline per metric in
+                        <b>correctness</b> (are the merged values right). The table shows
+                        mean values over the five tasks calculated using ground-truth
+                        test sets. The results of the better pipeline per metric are set in
                         <span style="color: #0a7a5a; font-weight: 700"
                             >green</span
-                        >.
+                        >. 
                     </p>
                 </div>
                 <table class="rtab">
@@ -3815,8 +3775,7 @@
                     reference levels are in the
                     <a
                         href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results"
-                        >results directory</a
-                    >.
+                        >results directory</a> as well as in  in the <a href="https://arxiv.org/abs/2606.30371">MaDI-Bench Arxiv paper</a>. 
                 </p>
             </div>
         </section>
