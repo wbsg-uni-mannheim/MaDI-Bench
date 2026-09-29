@@ -1,0 +1,31 @@
+{
+  "description": "Unmodified P4 no-labels, no-PyDI prompt and skill snapshots from the five reported base runs. Paths in the snapshots refer to the original agent workspace.",
+  "runs": {
+    "games": "runs/games_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070613Z/tasks/games",
+    "companies": "runs/companies_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070616Z/tasks/companies",
+    "music": "runs/music_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070616Z/tasks/music",
+    "products": "runs/products_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260923T222103Z/tasks/products",
+    "papers": "runs/papers_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070619Z/tasks/papers"
+  },
+  "files": {
+    "prompts/companies/SUBMISSION_SPEC.md": "f83ced0bc39d3a72650ae939668a4c2557eb8a640bdf4e6878f552f1cf862602",
+    "prompts/companies/task_brief.md": "e2453daf24bca742bf9d634ebdda2fee6811bf3a672e1056fc9adc52d6dce0fe",
+    "prompts/games/SUBMISSION_SPEC.md": "0f7d54fa7f179b13de48c1750f98ed08ca58dc934e9652bd6fe3a675e1d7e7f2",
+    "prompts/games/task_brief.md": "46f555622349a6ee6f4feff90177ecf521c4844c183b39d56e0a1fbc90869c01",
+    "prompts/music/SUBMISSION_SPEC.md": "85d463117b2e553f34580f19e79ce46d8a86c18226e8eae44c14a332b19f7801",
+    "prompts/music/task_brief.md": "55f3e238fb91f5cd98bce22765828a846439d06708156d3bc18bdd9a8f17e6ac",
+    "prompts/orientation.md": "ddbba0bfda8be953b195f6cb8865a8b2fa33925adae6057e0a6e2703bd606a1f",
+    "prompts/papers/SUBMISSION_SPEC.md": "722ea465dfb98267ccbd3f1734a9c517bcdff5192d3cf80f82b84137afb32efe",
+    "prompts/papers/task_brief.md": "e37d79f4ffe00f69b645b323346ec181a5dbdafea7ae2d19003b979c16454475",
+    "prompts/products/SUBMISSION_SPEC.md": "a8fb60686579470645d2a23c061b81438b01db2bb5d0a888f222ad8369e06e60",
+    "prompts/products/task_brief.md": "933b3052f9216e35857ffb67942efaf71411f7b16f6406adf62fbfb6aeb4f9a5",
+    "skills/INDEX.md": "5518e16a98c0ae67b7140d7b4516502dd199e4f06859f3c956fe44e09685495e",
+    "skills/blocking/SKILL.md": "a58f60186de3b579b53f4b7c08e091b537ad4a21f896a660635078f0a0d0ff82",
+    "skills/entity-matching/SKILL.md": "c0fa05179c8134d3b617b8b16b5cb2269c09bb06abc674e437b613dfc34d1454",
+    "skills/fusion/SKILL.md": "9f93f0d000ffd8d3f29eeb0501f6ab2fa07ce2cbd2338e742b4912d521975978",
+    "skills/normalization/SKILL.md": "2c911739bbf5f8d23b53bdb9881a11ade629e7e10d768b0f7ce54bb68012c9ff",
+    "skills/pipeline-diagnosis/SKILL.md": "0a988b0e45773a98a0a550bf614dab774199d531c84baf5caba0a9e6fc8dff33",
+    "skills/refinement-clustering/SKILL.md": "b56be41f3e50ad920c90df74b8b6f6cf11d4a5dcd27aebe412909be88cec3219",
+    "skills/schema-matching/SKILL.md": "0c39072f52bf7f4daeca98e40c1c571ba524d58f3e816b2a987b4e21ccc51ac0"
+  }
+}

@@ -43,6 +43,7 @@ The data integration pipelines that are used for the validation of the benchmark
 |---|---|
 | [`use cases/`](use%20cases/) | **The benchmark itself** — all 20 integration tasks, with inputs, ground truth, and reference outputs. |
 | [`results/`](results/) | **Validation runs** of the three reference pipelines: [`best of breeds/`](results/best%20of%20breeds/) and [`llm pipeline/`](results/llm%20pipeline/). |
+| [`baselines/claude-code/`](baselines/claude-code/) | **Claude Code baseline (P4)** — the seven knowledge skills and archived prompts used in the reported base runs. |
 | [`knobs/`](knobs/) | Specification of the eight difficulty knobs used to generate the task variants. |
 | [`difficulty_dimensions.md`](difficulty_dimensions.md) | The underlying per-stage difficulty dimensions the knobs operationalize. |
 | [`usecases_synthetic/`](usecases_synthetic/) | Code, configuration, and tests for the variant-generation pipeline. |
