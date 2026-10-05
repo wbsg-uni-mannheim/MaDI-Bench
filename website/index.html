@@ -851,34 +851,39 @@
                 <h2 class="title is-3 has-text-centered">Abstract</h2>
                 <div class="content is-size-6">
                     <p>
-                        Data integration combines heterogeneous data from multiple sources into a
-                        single, coherent data set. Data integration involves a sequence
-                        of interdependent tasks: schema matching, value
-                        normalization, entity blocking, entity matching, and
-                        data fusion. Existing data integration benchmarks either evaluate these
-                        steps in isolation or cover only incomplete versions of
-                        the data integration pipeline, omitting specific steps.
-                        The lack of public end-to-end data integration
-                        benchmarks hinders research on data integration methods
-                        that address the integration process as a whole.
+                        Data integration is the process of combining data from
+                        multiple, heterogeneous sources into a consistent,
+                        unified representation. Data integration involves a
+                        sequence of interdependent tasks including schema
+                        matching, value normalization, blocking, entity
+                        matching, and data fusion. Existing table-based
+                        benchmarks either evaluate these steps in isolation or
+                        cover only incomplete versions of the data integration
+                        pipeline, omitting specific steps. The lack of public
+                        end-to-end data integration benchmarks hinders research
+                        on data integration methods that address the
+                        integration process as a whole and account for the
+                        interdependencies among the different tasks.
                     </p>
                     <p>
-                        The
-                        <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b>
-                        fills this gap. MaDI-Bench is the first benchmark for
-                        the end-to-end integration of relational tables covering
-                        all steps of the integration process. MaDI-Bench
-                        contributes (i) a set of base end-to-end data
-                        integration tasks spanning several application domains,
-                        each requiring the full schema matching, value
-                        normalization, entity matching, and conflict resolution
-                        pipeline; and (ii) a generic method for deriving variants of the base tasks that mitigates the rapid saturation of the benchmark as
-                        data integration systems advance. We validate MaDI-Bench using human-engineered pipelines, a
-                        best-of-breed pipeline, and an LLM-based pipeline. The
-                        validation demonstrates the utility of the benchmark for
-                        measuring the step-wise as well as the end-to-end
-                        performance of data integration pipelines. All benchmark
-                        artefacts are available for public download.
+                        This paper fills this gap by introducing the
+                        <b>Mannheim Data Integration Benchmark (MaDI-Bench)</b>,
+                        the first benchmark for the end-to-end integration of
+                        relational tables covering all steps of the integration
+                        process. MaDI-Bench contributes (i) a set of end-to-end
+                        data integration tasks spanning several application
+                        domains, each requiring the full schema matching, value
+                        normalization, entity matching, and data fusion
+                        pipeline, and (ii) a generic method for deriving task
+                        variants that mitigates rapid benchmark saturation as
+                        data integration systems advance. We validate the
+                        benchmark using human-engineered pipelines, a
+                        best-of-breed pipeline, an LLM workflow, and a pipeline
+                        written by a coding agent. The validation demonstrates
+                        the utility of the benchmark for measuring the step-wise
+                        as well as the end-to-end performance of data
+                        integration pipelines. All benchmark artifacts are
+                        available for public download.
                     </p>
                 </div>
             </div>
@@ -890,17 +895,24 @@
                 <h2 class="title is-3 has-text-centered">The Base Tasks</h2>
                 <div class="content is-size-6">
                     <p>
-                        MaDI-Bench consists of five end-to-end data integration
-                        tasks. These base task require the integration of data about Games, Companies, Music, Products, and Scientific
-                        Papers. Each task takes several heterogeneous tables as input and asks the system under test (SUT) to integrate these tables into a single output table conforming to a given target schema. The integration requires the SUT to perform schema matching, value
-                        normalization, entity matching, and data fusion. The benchmark provides ground truth to score
+                        MaDI-Bench consists of five base end-to-end data
+                        integration tasks. These base tasks require the
+                        integration of data about Games, Companies, Music,
+                        Products, and Scientific Papers. Each task takes several
+                        heterogeneous tables as input and asks the system under
+                        test (SUT) to integrate these tables into a single
+                        output table conforming to a given target schema. The
+                        integration requires the SUT to perform schema matching,
+                        value normalization, blocking, entity matching, and data
+                        fusion. The benchmark provides ground truth to score
                         every step on its own, not only the final table: a gold
-                        schema mapping for schema matching, the target schema's
-                        constraints and taxonomies for value normalization
-                        (measured as consistency with the schema), labeled
+                        schema mapping for schema matching, labeled
+                        normalization sets for value normalization, labeled
                         record pairs for blocking and entity matching, and
-                        hand-verified records for data fusion, together with
-                        metrics for the end-to-end result. MaDI-Bench offers easy, medium, and hard variants of each base task.
+                        human-verified records for data fusion, together with
+                        metrics for the end-to-end result. MaDI-Bench offers an
+                        easy, a medium, and a hard variant of each base task, 20
+                        tasks in total.
                     </p>
                     <p
                         class="has-text-centered pipeline-rail"
@@ -927,17 +939,27 @@
                     </div>
                     <div class="level-item has-text-centered">
                         <div>
-                            <p class="title is-3">93,000</p>
-                            <p class="heading">Matching records</p>
+                            <p class="title is-3">93,439</p>
+                            <p class="heading">Labeled record pairs</p>
                         </div>
                     </div>
                     <div class="level-item has-text-centered">
                         <div>
-                            <p class="title is-3">11,000</p>
-                            <p class="heading">Human-verified values</p>
+                            <p class="title is-3">1,745</p>
+                            <p class="heading">Normalization cells</p>
+                        </div>
+                    </div>
+                    <div class="level-item has-text-centered">
+                        <div>
+                            <p class="title is-3">7,724</p>
+                            <p class="heading">Verified fusion values</p>
                         </div>
                     </div>
                 </nav>
+                <p class="legend" style="text-align: center">
+                    Labeled resources of the five base tasks. The variants
+                    provide the same kinds of resources for their own records.
+                </p>
 
                 <div style="margin-top: 1.5rem"></div>
                 <div class="content is-size-6 task-list">
@@ -959,13 +981,13 @@
                             title.
                         </li>
                         <li>
-                            Identical titles recur across platforms and sequels,
-                            and special editions and downloadable content differ
+                            Identical titles recur across platforms, and sequels,
+                            special editions, and downloadable content differ
                             only slightly in name.
                         </li>
                         <li>
-                            Platform, genre, date, and rating vocabularies must
-                            be normalized using given taxonomies.
+                            Platform, genre, and ESRB rating values must be
+                            normalized using the given taxonomies.
                         </li>
                     </ul>
                 </div>
@@ -1167,7 +1189,7 @@
                         <b>Companies.</b> This task requires the integration of
                         the Forbes Global 2000 list, a DBpedia company extract,
                         and a FullContact company-profile sample. The target
-                        schema has nine attributes.
+                        schema has eight attributes.
                     </p>
                 </div>
                 <div class="chall">
@@ -1371,8 +1393,8 @@
                 </details>
                 <div class="content is-size-6 task-list">
                     <p>
-                        <b>Music.</b> Integrates data from
-                        Discogs, Last.fm, and MusicBrainz that describe albums,
+                        <b>Music.</b> This task requires the integration of data
+                        from Discogs, Last.fm, and MusicBrainz that describe albums,
                         EPs, and singles with partial overlap. The target schema
                         has eight attributes.
                     </p>
@@ -1594,7 +1616,7 @@
                     <p>
                         <b>Products.</b> This task is based on a subset of the <a href="https://webdatacommons.org/largescaleproductcorpus/wdc-products/">WDC Products</a>
                         benchmark, covering GPUs, SSDs, HDDs, and USB sticks. 
-                        The target schema has 25 attributes, making it the largest in the
+                        The target schema has 24 attributes, making it the largest in the
                         benchmark.
                     </p>
                 </div>
@@ -1611,8 +1633,11 @@
                             conventions across sources.
                         </li>
                         <li>
-                            Units, capacities, dimensions, and speeds must be
-                            normalized against taxonomies.
+                            Capacities, speeds, dimensions, and weights must be
+                            converted to the units that the target schema fixes,
+                            and product types, storage interfaces, and GPU
+                            memory types must be mapped onto the given
+                            taxonomies.
                         </li>
                     </ul>
                 </div>
@@ -1638,9 +1663,7 @@
                                         <th>product_description</th>
                                         <th>list_price</th>
                                         <th>currency_code</th>
-                                        <th>cluster_id</th>
                                         <th>product_url</th>
-                                        <th>name_and_description</th>
                                         <th>model_name</th>
                                         <th>manufacturer_part_number</th>
                                         <th>category</th>
@@ -1665,31 +1688,16 @@
                                     <tr>
                                         <td>12198483</td>
                                         <td>Gigabyte</td>
-                                        <td>
-                                            Gigabyte NVIDIA GeForce RTX 3080
-                                            Gamin…
-                                        </td>
-                                        <td>
-                                            CUDA Cores: 8704, Boost Clock:
-                                            1800MHz…
-                                        </td>
+                                        <td>Gigabyte NVIDIA GeForce RTX 3080 Gamin…</td>
+                                        <td>CUDA Cores: 8704, Boost Clock: 1800MHz…</td>
                                         <td>799.99</td>
                                         <td>GBP</td>
-                                        <td>1002037</td>
-                                        <td>
-                                            https://www.novatech.co.uk/products/gi…
-                                        </td>
-                                        <td>
-                                            Gigabyte NVIDIA GeForce RTX 3080
-                                            Gamin…
-                                        </td>
-                                        <td>
-                                            NVIDIA GeForce RTX 3080 Gaming OC
-                                        </td>
+                                        <td>https://www.novatech.co.uk/products/gi…</td>
+                                        <td>NVIDIA GeForce RTX 3080 Gaming OC</td>
                                         <td class="empty">(empty)</td>
                                         <td>GPU</td>
                                         <td>GeForce RTX 3080</td>
-                                        <td>10</td>
+                                        <td>10.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1706,35 +1714,22 @@
                                     </tr>
                                     <tr>
                                         <td>78378158</td>
-                                        <td>Western Digital</td>
-                                        <td>
-                                            WD Blue 6TB 3.5\&quot; SATA 3
-                                            HDD/Hard Driv…
-                                        </td>
-                                        <td>
-                                            6TB WD Blue WD60EZAZ, 3.5\&quot;
-                                            HDD, SATA…
-                                        </td>
+                                        <td>WD</td>
+                                        <td>WD Blue 6TB 3.5\&quot; SATA 3 HDD/Hard Drive</td>
+                                        <td>6TB WD Blue WD60EZAZ, 3.5\&quot; HDD, SATA…</td>
                                         <td>129.98</td>
                                         <td>GBP</td>
-                                        <td>1004942</td>
-                                        <td>
-                                            https://www.scan.co.uk/products/6tb-wd…
-                                        </td>
-                                        <td>
-                                            WD Blue 6TB 3.5\&quot; SATA 3
-                                            HDD/Hard Driv…
-                                        </td>
+                                        <td>https://www.scan.co.uk/products/6tb-wd…</td>
                                         <td>WD Blue</td>
                                         <td>WD60EZAZ</td>
                                         <td>HDD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>6000</td>
+                                        <td>6.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
+                                        <td>SATA III - 6Gb/s</td>
                                         <td>SATA</td>
-                                        <td>SATA III</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1742,37 +1737,25 @@
                                         <td>3.5-inch SATA</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>3.5-inch</td>
+                                        <td>3.5&quot;</td>
                                     </tr>
                                     <tr>
                                         <td>80641070</td>
                                         <td>Corsair</td>
-                                        <td>
-                                            Corsair Force MP510 M.2 SSD - 960GB
-                                        </td>
-                                        <td>
-                                            Solid State Drive, 960 GB, intern,
-                                            M.2…
-                                        </td>
-                                        <td>2124.0</td>
+                                        <td>Corsair Force MP510 M.2 SSD - 960GB</td>
+                                        <td>Solid State Drive, 960 GB, intern, M.2…</td>
+                                        <td>2124.00</td>
                                         <td>NOK</td>
-                                        <td>1007272</td>
-                                        <td>
-                                            https://www.proshop.no/SSD/Corsair-For…
-                                        </td>
-                                        <td>
-                                            Corsair Force MP510 M.2 SSD - 960GB.
-                                            D…
-                                        </td>
+                                        <td>https://www.proshop.no/SSD/Corsair-For…</td>
                                         <td>Force MP510</td>
                                         <td class="empty">(empty)</td>
                                         <td>SSD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>960</td>
+                                        <td>960.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>PCI Express x4</td>
+                                        <td>PCI Express 3.0 x4</td>
                                         <td>NVMe</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1805,9 +1788,7 @@
                                         <th>descriptionText</th>
                                         <th>priceAmount</th>
                                         <th>currency</th>
-                                        <th>cluster_id</th>
                                         <th>productUrl</th>
-                                        <th>titleAndDescription</th>
                                         <th>modelName</th>
                                         <th>mpn</th>
                                         <th>productCategory</th>
@@ -1832,29 +1813,16 @@
                                     <tr>
                                         <td>19126355</td>
                                         <td>Gigabyte</td>
-                                        <td>
-                                            Gigabyte NVIDIA GeForce RTX 3080
-                                            10GB…
-                                        </td>
-                                        <td>
-                                            Gigabyte NVIDIA GeForce RTX 3080
-                                            GAMIN…
-                                        </td>
+                                        <td>Gigabyte NVIDIA GeForce RTX 3080 10GB…</td>
+                                        <td>Gigabyte NVIDIA GeForce RTX 3080 GAMIN…</td>
                                         <td>99999.99</td>
                                         <td>GBP</td>
-                                        <td>1002037</td>
-                                        <td>
-                                            https://www.scan.co.uk/products/gigaby…
-                                        </td>
-                                        <td>
-                                            Gigabyte NVIDIA GeForce RTX 3080
-                                            10GB…
-                                        </td>
+                                        <td>https://www.scan.co.uk/products/gigaby…</td>
                                         <td>GeForce RTX 3080 10GB GAMING OC</td>
                                         <td class="empty">(empty)</td>
                                         <td>GPU</td>
                                         <td>GeForce RTX 3080</td>
-                                        <td>10</td>
+                                        <td>10.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1871,35 +1839,22 @@
                                     </tr>
                                     <tr>
                                         <td>42841911</td>
-                                        <td>Western Digital</td>
-                                        <td>
-                                            WD Blue 6TB Desktop Hard Disk Drive
-                                            -…
-                                        </td>
-                                        <td>
-                                            WD Blue 6TB Desktop Hard Disk Drive
-                                            -…
-                                        </td>
+                                        <td>WD</td>
+                                        <td>WD Blue 6TB Desktop Hard Disk Drive -…</td>
+                                        <td>WD Blue 6TB Desktop Hard Disk Drive -…</td>
                                         <td>128.99</td>
                                         <td>USD</td>
-                                        <td>1004942</td>
-                                        <td>
-                                            https://www.newegg.com/blue-wd60ezaz-6…
-                                        </td>
-                                        <td>
-                                            WD Blue 6TB Desktop Hard Disk Drive
-                                            -…
-                                        </td>
+                                        <td>https://www.newegg.com/blue-wd60ezaz-6…</td>
                                         <td>WD Blue</td>
                                         <td>WD60EZAZ</td>
                                         <td>HDD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>6000</td>
+                                        <td>6000.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
+                                        <td>SATA 6Gb/s</td>
                                         <td>SATA</td>
-                                        <td>SATA III</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1907,38 +1862,25 @@
                                         <td>3.5 Inch</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>3.5-inch</td>
+                                        <td>3.5 Inch</td>
                                     </tr>
                                     <tr>
                                         <td>46775597</td>
-                                        <td>Corsair</td>
-                                        <td>
-                                            CORSAIR - Force Series MP510 960GB
-                                            M.2…
-                                        </td>
-                                        <td>
-                                            CORSAIR Force Series MP510 960GB M.2
-                                            S…
-                                        </td>
+                                        <td>CORSAIR</td>
+                                        <td>CORSAIR - Force Series MP510 960GB M.2…</td>
+                                        <td>CORSAIR Force Series MP510 960GB M.2 S…</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>1007272</td>
-                                        <td>
-                                            https://www.dindator.se/corsair-force-…
-                                        </td>
-                                        <td>
-                                            CORSAIR - Force Series MP510 960GB
-                                            M.2…
-                                        </td>
+                                        <td>https://www.dindator.se/corsair-force-…</td>
                                         <td>Force Series MP510</td>
                                         <td>CSSD-F960GBMP510</td>
                                         <td>SSD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>960</td>
-                                        <td>3480</td>
-                                        <td>3000</td>
-                                        <td>PCI Express x4</td>
+                                        <td>960.0</td>
+                                        <td>3480.0</td>
+                                        <td>3000.0</td>
+                                        <td>PCIe Gen3 x4</td>
                                         <td>NVMe</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -1947,7 +1889,7 @@
                                         <td>M.2</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>M.2 2280</td>
+                                        <td>M.2</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -1971,9 +1913,7 @@
                                         <th>Details</th>
                                         <th>Price</th>
                                         <th>Currency</th>
-                                        <th>cluster_id</th>
                                         <th>Link</th>
-                                        <th>TitleDetails</th>
                                         <th>Model</th>
                                         <th>PartNo</th>
                                         <th>Type</th>
@@ -1997,27 +1937,17 @@
                                 <tbody>
                                     <tr>
                                         <td>46320085</td>
-                                        <td>Gigabyte</td>
-                                        <td>
-                                            GIGABYTE GeForce RTX 3080 GAMING OC
-                                            10…
-                                        </td>
+                                        <td>GIGABYTE</td>
+                                        <td>GIGABYTE GeForce RTX 3080 GAMING OC 10…</td>
                                         <td>To Avail the offer Click Here</td>
-                                        <td>73160.0</td>
+                                        <td>73160.00</td>
                                         <td>INR</td>
-                                        <td>1002037</td>
-                                        <td>
-                                            https://www.pcstudio.in/product/gigaby…
-                                        </td>
-                                        <td>
-                                            GIGABYTE GeForce RTX 3080 GAMING OC
-                                            10…
-                                        </td>
+                                        <td>https://www.pcstudio.in/product/gigaby…</td>
                                         <td>GeForce RTX 3080 GAMING OC 10G</td>
                                         <td>GV-N3080GAMING OC-10GD</td>
                                         <td>GPU</td>
                                         <td>GeForce RTX 3080</td>
-                                        <td>10</td>
+                                        <td>10.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -2034,69 +1964,45 @@
                                     </tr>
                                     <tr>
                                         <td>91583813</td>
-                                        <td>Western Digital</td>
-                                        <td>
-                                            WD Blue 6TB SATA3 256MB 3.5&#x27;
-                                            5400RPM 6…
-                                        </td>
-                                        <td>
-                                            Western Digital WD Blue 3.5-inch PC
-                                            ha…
-                                        </td>
-                                        <td>278.0</td>
+                                        <td>WD</td>
+                                        <td>WD Blue 6TB SATA3 256MB 3.5&#x27; 5400RPM 6…</td>
+                                        <td>Western Digital WD Blue 3.5-inch PC ha…</td>
+                                        <td>278.00</td>
                                         <td>AUD</td>
-                                        <td>1004942</td>
-                                        <td>
-                                            https://netplus.com.au/products/wd-blu…
-                                        </td>
-                                        <td>
-                                            WD Blue 6TB SATA3 256MB 3.5&#x27;
-                                            5400RPM 6…
-                                        </td>
+                                        <td>https://netplus.com.au/products/wd-blu…</td>
                                         <td>WD Blue</td>
                                         <td class="empty">(empty)</td>
                                         <td>HDD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>6000</td>
+                                        <td>6.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
+                                        <td>SATA3</td>
                                         <td>SATA</td>
-                                        <td>SATA III</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>640.0</td>
+                                        <td>0.64</td>
                                         <td>3.5-inch SATA</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>3.5-inch</td>
+                                        <td>3.5 inch</td>
                                     </tr>
                                     <tr>
                                         <td>86850217</td>
                                         <td>Corsair</td>
-                                        <td>
-                                            SSD 960GB Corsair Force MP510 NVMe
-                                        </td>
-                                        <td>
-                                            SSD 960GB Corsair Force MP510 NVMe
-                                        </td>
-                                        <td>2316.0</td>
+                                        <td>SSD 960GB Corsair Force MP510 NVMe</td>
+                                        <td>SSD 960GB Corsair Force MP510 NVMe</td>
+                                        <td>2316.00</td>
                                         <td>SEK</td>
-                                        <td>1007272</td>
-                                        <td>
-                                            https://www.nordwaystore.se/ssd-960gb-…
-                                        </td>
-                                        <td>
-                                            SSD 960GB Corsair Force MP510 NVMe.
-                                            De…
-                                        </td>
+                                        <td>https://www.nordwaystore.se/ssd-960gb-…</td>
                                         <td>Force MP510</td>
                                         <td class="empty">(empty)</td>
                                         <td>SSD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>960</td>
+                                        <td>960.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -2132,9 +2038,7 @@
                                         <th>desc</th>
                                         <th>amt</th>
                                         <th>cur</th>
-                                        <th>cluster_id</th>
                                         <th>link</th>
-                                        <th>name_desc</th>
                                         <th>mdl</th>
                                         <th>pn</th>
                                         <th>cat</th>
@@ -2159,29 +2063,16 @@
                                     <tr>
                                         <td>66956099</td>
                                         <td>Gigabyte</td>
-                                        <td>
-                                            Gigabyte Video Card GV-N3080GAMING
-                                            OC-…
-                                        </td>
-                                        <td>
-                                            Gigabyte Video Card GV-N3080GAMING
-                                            OC-…
-                                        </td>
+                                        <td>Gigabyte Video Card GV-N3080GAMING OC-…</td>
+                                        <td>Gigabyte Video Card GV-N3080GAMING OC-…</td>
                                         <td>791.99</td>
                                         <td>USD</td>
-                                        <td>1002037</td>
-                                        <td>
-                                            https://www.thekeykey.com/detail/GV-N3…
-                                        </td>
-                                        <td>
-                                            Gigabyte Video Card GV-N3080GAMING
-                                            OC-…
-                                        </td>
+                                        <td>https://www.thekeykey.com/detail/GV-N3…</td>
                                         <td>GeForce RTX 3080 GAMING OC</td>
                                         <td>GV-N3080GAMING OC-10GD</td>
                                         <td>GPU</td>
                                         <td>GeForce RTX 3080</td>
-                                        <td>10</td>
+                                        <td>10.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -2199,69 +2090,46 @@
                                     <tr>
                                         <td>5078198</td>
                                         <td>Western Digital</td>
-                                        <td>
-                                            Western Digital HDD Blue 6TB
-                                            3,5\&quot; 256…
-                                        </td>
-                                        <td>
-                                            Dysk BLUE 6TB 3,5 256MB
-                                            SATAIII/5400rp…
-                                        </td>
+                                        <td>Western Digital HDD Blue 6TB 3,5\&quot; 256…</td>
+                                        <td>Dysk BLUE 6TB 3,5 256MB SATAIII/5400rpm</td>
+                                        <td>0</td>
                                         <td class="empty">(empty)</td>
-                                        <td class="empty">(empty)</td>
-                                        <td>1004942</td>
-                                        <td>
-                                            https://www.alsen.pl/podzespoly-komput…
-                                        </td>
-                                        <td>
-                                            Western Digital HDD Blue 6TB
-                                            3,5\&quot; 256…
-                                        </td>
+                                        <td>https://www.alsen.pl/podzespoly-komput…</td>
                                         <td>Blue</td>
                                         <td class="empty">(empty)</td>
                                         <td>HDD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>6000</td>
+                                        <td>6000.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
+                                        <td>SATAIII</td>
                                         <td>SATA</td>
-                                        <td>SATA III</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>3.5-inch SATA</td>
+                                        <td>3,5&quot; SATA</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>3.5-inch</td>
+                                        <td>3,5&quot;</td>
                                     </tr>
                                     <tr>
                                         <td>77571226</td>
                                         <td>Corsair</td>
                                         <td>Corsair MP510 M.2-2280 960GB</td>
-                                        <td>
-                                            Huge 960GB storage capacity and
-                                            super…
-                                        </td>
+                                        <td>Huge 960GB storage capacity and super…</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>1007272</td>
-                                        <td>
-                                            https://www.cclonline.com/product/2874…
-                                        </td>
-                                        <td>
-                                            Corsair MP510 M.2-2280 960GB.
-                                            Descript…
-                                        </td>
+                                        <td>https://www.cclonline.com/product/2874…</td>
                                         <td>MP510</td>
                                         <td class="empty">(empty)</td>
                                         <td>SSD</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>960</td>
-                                        <td>3480</td>
-                                        <td>3000</td>
+                                        <td>960.0</td>
+                                        <td>3480.0</td>
+                                        <td>3000.0</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
@@ -2271,7 +2139,7 @@
                                         <td>M.2</td>
                                         <td class="empty">(empty)</td>
                                         <td class="empty">(empty)</td>
-                                        <td>M.2 2280</td>
+                                        <td>M.2-2280</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -2289,17 +2157,18 @@
                     <span class="chall-l">Challenges</span>
                     <ul>
                         <li>
-                            With a total of 180,000 records, Scientific Papers is the largest task in MaDI-Bench. So blocking
-                            matters: a poor reduction ratio can lead to
-                            millions of comparisons, which makes
-                            the task suited for evaluating efficiency as well as
-                            effectiveness.
+                            With more than 180,000 records, Scientific Papers is
+                            the largest task in MaDI-Bench, so blocking matters:
+                            a blocker with a poor reduction ratio leads to
+                            hundreds of thousands of record pair comparisons,
+                            which makes the task suited for evaluating
+                            efficiency as well as effectiveness.
                         </li>
                         <li>
-                            DOIs or other IDs can not be used for entity matching;
-                            fusion rows use a <code>source_ids</code> helper
-                            list to point back to the contributing source
-                            records.
+                            The sources have no DOI column or other shared
+                            identifier that could be used for entity matching;
+                            the fusion sets use a <code>source_ids</code> list
+                            to point back to the contributing source records.
                         </li>
                         <li>
                             Title and author-list variations, publication-type and
@@ -2609,7 +2478,7 @@
                             <th>Dataset</th>
                             <th class="has-text-right">#</th>
                             <th class="has-text-right">Records</th>
-                            <th class="has-text-right">Attributes</th>
+                            <th class="has-text-right">Target attributes</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -2625,7 +2494,7 @@
                             <td>Forbes, DBpedia, FullContact</td>
                             <td class="num-cell">3</td>
                             <td class="num-cell">14,016</td>
-                            <td class="num-cell">9</td>
+                            <td class="num-cell">8</td>
                         </tr>
                         <tr>
                             <td><b>Music</b></td>
@@ -2639,7 +2508,7 @@
                             <td>Four WDC Products feeds</td>
                             <td class="num-cell">4</td>
                             <td class="num-cell">3,012</td>
-                            <td class="num-cell">25</td>
+                            <td class="num-cell">24</td>
                         </tr>
                         <tr>
                             <td><b>Scientific Papers</b></td>
@@ -2651,12 +2520,13 @@
                     </tbody>
                 </table>
                 <p class="legend">
-                    Record counts are for the base task. The
+                    Record counts are for the base tasks. Target attributes
+                    are counted without the identifier. The
                     <a
                         href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/use%20cases"
-                        >per-task pages in the repository</a
+                        >task overview in the repository</a
                     >
-                    list the full sizes for every source and difficulty level.
+                    lists the sizes of every source and difficulty level.
                 </p>
             </div>
         </section>
@@ -2703,8 +2573,9 @@
                             >
                         </li>
                         <li>
-                            <b>Gold schema mapping.</b> A correspondence from
-                            every source column to the target schema.
+                            <b>Gold schema mapping.</b> The correspondences
+                            from the source columns to the attributes of the
+                            target schema.
                             <span class="egl"
                                 >Example:
                                 <a
@@ -2714,8 +2585,27 @@
                             >
                         </li>
                         <li>
+                            <b>Normalization sets.</b> A validation and a test
+                            set of source cells, each paired with its correctly
+                            normalized value; 1,745 cells across the five base
+                            tasks. Most cells need a formatting rule or a
+                            mapping onto a vocabulary that the task provides;
+                            some already hold the correct value and test that a
+                            normalizer leaves it intact.
+                            <span class="egl"
+                                >Example:
+                                <a
+                                    href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/blob/main/use%20cases/companies/base/input/normalization/test.csv"
+                                    >test.csv</a
+                                ></span
+                            >
+                        </li>
+                        <li>
                             <b>Entity matching sets.</b> Labeled train,
-                            validation, and test pairs for each pair of sources.
+                            validation, and test pairs for two pairs of sources
+                            per task (three for Products); more than 93,000
+                            pairs across the five base tasks. The test pairs
+                            also evaluate blocking.
                             <span class="egl"
                                 >Example:
                                 <a
@@ -2726,9 +2616,12 @@
                         </li>
                         <li>
                             <b>Fusion validation and test sets.</b> 100
-                            validation and 100 test entities per task,
-                            hand-annotated with the verified value for every
-                            attribute.
+                            validation and 100 test entities per task with
+                            human-verified attribute values; close to 8,000
+                            values across the five base tasks. All tasks use
+                            version 2 of the fusion gold, which leaves out the
+                            values that cannot be obtained from any source
+                            record of the entity, even after normalization.
                             <span class="egl"
                                 >Example:
                                 <a
@@ -2739,8 +2632,7 @@
                         </li>
                         <li>
                             <b>Reference outputs.</b> The output of the
-                            human-engineered pipeline, used as a silver
-                            standard.
+                            human-engineered pipeline (P1), whose clusters with at least two source records form the silver reference for the end-to-end metrics.
                             <span class="egl"
                                 >Example:
                                 <a
@@ -2750,6 +2642,12 @@
                             >
                         </li>
                     </ul>
+                    <p>
+                        The easy, medium, and hard variants come with their own
+                        source tables, gold schema mapping, and entity matching
+                        and normalization sets. They keep the fusion entities
+                        and gold values of their base task.
+                    </p>
                     <p>
                         The sources describe the same kind of entity but rarely
                         agree on column names, value formats, or even the facts
@@ -2812,7 +2710,7 @@
                                 <table class="dtab">
                                     <tr>
                                         <td class="k">org_name</td>
-                                        <td class="v">Volkswagen</td>
+                                        <td class="v">Volkswagen Group</td>
                                     </tr>
                                     <tr>
                                         <td class="k">established</td>
@@ -2877,8 +2775,9 @@
                         The same company in three sources. Forbes leaves the
                         country blank, FullContact hides fields behind names
                         like <span class="mono">Attribute_2</span>, the asset
-                        figures disagree, and DBpedia gives a shorter name. We
-                        follow this company through each step below.
+                        figures disagree, and Forbes and DBpedia describe the
+                        industry with different vocabularies. We follow this
+                        company through each step below.
                     </p>
                 </div>
             </div>
@@ -2892,13 +2791,11 @@
                 </h2>
                 <div class="content is-size-6">
                     <p class="has-text-centered">
-                        A system under test (SUT) needs to handle the following
-                        four steps of the overall integration task. MaDI-Bench
-                        provides ground truth or a reference signal for each
-                        step as well as for the output of the overall
-                        integration (fused dataset). Thus, a SUT can be
-                        evaluated one step at a time or in an end-to-end
-                        fashion.
+                        A system under test (SUT) needs to handle the following steps of the overall integration task. MaDI-Bench
+                        provides ground truth for each step as well as for the
+                        output of the overall integration (fused dataset).
+                        Thus, a SUT can be evaluated one step at a time or in an
+                        end-to-end fashion.
                     </p>
                 </div>
 
@@ -2908,9 +2805,7 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        Sources rarely share column names, so every source
-                        column has to be matched to a column in the target
-                        schema before values can be combined. Names may be
+                        Sources rarely share column names, so the source columns have to be matched to the attributes of the target schema before values can be combined. Source columns without a matching target attribute stay unmapped. Names may be
                         descriptive, abbreviated, or meaningless, and where a
                         name gives nothing away, a matcher has to read the
                         values instead.
@@ -2985,16 +2880,24 @@
                         founding date, for instance, must be an ISO
                         <span class="mono">YYYY-MM-DD</span> inside an allowed
                         range, and assets must be a non-negative integer in US
-                        dollars below an upper bound. For categorical attributes, the task provides taxonomies that specify which values are allowed and how detailed the normalized values should be. Some attributes use standard taxonomies, e.g. countries follow CLDR, industries uses GICS. In addition, some tasks also use propretary taxonomies, for instance for platform, genre, and rating in the Games task. Normalization is scored as consistency, that
-                        is, whether the output values satisfy the given schema
-                        constraints.
+                        dollars below an upper bound. For categorical
+                        attributes, the task provides taxonomies that specify
+                        which values are allowed and how detailed the normalized
+                        values should be. The taxonomies ship with the task:
+                        some follow a standard, for example CLDR for countries
+                        and GICS for industries; others cover domain
+                        vocabularies such as the platforms, genres, and ESRB
+                        ratings of the Games task. Normalization is scored as
+                        accuracy on the normalization test set: each test cell
+                        pairs a source value with its correctly normalized
+                        value. The test cells include values that are already
+                        correct, so a normalizer that changes correct values
+                        loses accuracy.
                     </p>
                 </div>
                 <p class="stepmeta">
-                    <span
-                        ><b>Defined by:</b> target-schema constraints &amp;
-                        taxonomies</span
-                    ><span><b>Reference:</b> human-pipeline output</span>
+                    <span><b>Ground truth:</b> normalization test set</span
+                    ><span><b>Metric:</b> accuracy over the test cells</span>
                 </p>
                 <div class="example">
                     <div class="ex-label">
@@ -3034,7 +2937,7 @@
                             </tr>
                             <tr>
                                 <td class="attr">country</td>
-                                <td class="raw">"中华人民共和国", "U.S.A."</td>
+                                <td class="raw">"中华人民共和国", "USA"</td>
                                 <td class="norm">
                                     China, United States (CLDR)
                                 </td>
@@ -3042,8 +2945,9 @@
                         </tbody>
                     </table>
                     <p class="legend" style="margin-top: 0.5rem">
-                        These messy forms are real values from the easy and hard
-                        variants; the base task is cleaner.
+                        These messy forms are real source values, most of them
+                        from the easy, medium, and hard variants; the base task
+                        is cleaner.
                     </p>
                 </div>
 
@@ -3054,7 +2958,7 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        The SUT must identify records referring to the same real-world entity across sources. Since comparing all record pairs requires scoring the full Cartesian product and is therefore quadratic in the input size, this quickly becomes computationally infeasible. Blocking addresses this issue by reducing the search space to a smaller set of candidate pairs, after which matching classifies each candidate as either a match or a non-match. The MaDI-Bench entity matching test sets are designed to contain a decent amount of hard-to-decide corner case record pairs.
+                        The SUT must identify records referring to the same real-world entity across sources. Since comparing all record pairs requires scoring the full Cartesian product and is therefore quadratic in the input size, this quickly becomes computationally infeasible. Blocking addresses this issue by reducing the search space to a smaller set of candidate pairs, after which matching classifies each candidate as either a match or a non-match. The MaDI-Bench entity matching test sets are designed to contain many hard-to-decide corner-case record pairs.
                     </p>
                 </div>
                 <p class="stepmeta">
@@ -3072,7 +2976,7 @@
                     <div class="pair">
                         <span>forbes · Volkswagen Group</span
                         ><span class="vs">↔</span
-                        ><span>dbpedia · Volkswagen</span
+                        ><span>dbpedia · Volkswagen Group</span
                         ><span class="tag is-success is-light">✓ match</span>
                     </div>
                     <div class="pair">
@@ -3101,13 +3005,13 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        After matching, records referring to the same real-world entities form clusters. Data fusion consolidates these clusters into a single record per cluster.  When records provide conflicting values, the SUT must apply a conflict resolution heuristic to decide which value to retain. The values in the MaDI-Bench data fusion test sets are verified by humans who checked them against
+                        After matching, records referring to the same real-world entities form clusters. Data fusion consolidates these clusters into a single record per cluster.  When records provide conflicting values, the SUT must resolve the conflict and decide which value to retain, for example with a conflict resolution heuristic or a learned truth-discovery model. The values in the MaDI-Bench data fusion test sets are verified by humans who checked them against
                         data from relevant websites.
                     </p>
                 </div>
                 <p class="stepmeta">
                     <span><b>Ground truth:</b> hand-verified fused records</span
-                    ><span><b>Metric:</b> fusion accuracy</span>
+                    ><span><b>Metric:</b> fusion accuracy (share of verified cells with a correct value)</span>
                 </p>
                 <div class="example">
                     <div class="ex-label">
@@ -3121,6 +3025,7 @@
                                 <td class="fv">
                                     Volkswagen Group<span class="prov"
                                         >Forbes</span
+                                    ><span class="prov">DBpedia</span
                                     ><span class="prov">FullContact</span>
                                 </td>
                             </tr>
@@ -3170,15 +3075,18 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        Beyond the per-step evaluation, MaDI-Bench also provides code for assessing the final
-                        output table along three quality dimensions:
+                        Beyond the per-step evaluation, MaDI-Bench assesses the
+                        final output table along three quality dimensions:
                         <b>coverage</b> (did the right entities and values make
-                        it into the output table?), <b>consistency</b> (does the table fit the
-                        target schema?), and <b>correctness</b> (are the fused
-                        values correct?). MaDi-Bench provides for assessing these quality dimension using different types of reference
-                        data: reference-free (no ground truth
-                        used, only structural comparison to imput), silver (comparison to the output of the human-designed pipelines), and
-                        ground truth (evaluation against the human-verified test sets). While the silver evaluation checks all values of the output table, the round truth-based evaluation covers only a subset of all records.
+                        it into the output table?), <b>consistency</b> (does the
+                        table fit the target schema?), and <b>correctness</b>
+                        (are the fused values correct?). The metrics use three
+                        types of reference data: reference-free (no ground truth, structural and schema checks of the output, some of them relative to the input tables), silver (comparison with the clusters of the human-engineered pipeline P1 that combine at least two source records), and ground truth
+                        (comparison with the human-verified fusion test sets).
+                        The silver reference covers a much larger part of the
+                        output table, while the ground truth covers only the
+                        test entities but gives the stronger guarantee of
+                        correctness.
                     </p>
                 </div>
             </div>
@@ -3190,19 +3098,18 @@
                 <h2 class="title is-3 has-text-centered">Validation</h2>
                 <div class="content is-size-6">
                     <p>
-                        We validate MaDI-Bench using three pipelines that span
+                        We validate MaDI-Bench using four pipelines that span
                         the design space from human-engineered to fully
-                        automated. The human-engineered and LLM-based pipelines
-                        build on the
+                        LLM-driven. The human-engineered pipelines (P1) and the
+                        LLM workflow (P3) build on the
                         <a href="https://github.com/wbsg-uni-mannheim/PyDI"
                             >PyDI</a
                         >
-                        integration framework, while the best-of-breed pipeline
-                        chains specialized systems from the literature. The
-                        per-step and end-to-end outputs of all three pipelines are
-                        found in the repository under
-                        <span class="mono">results/</span> and the per-task
-                        <span class="mono">output/</span> folders.
+                        integration framework. The best-of-breed pipeline (P2)
+                        chooses, for each step, between specialized methods from
+                        the literature and methods of PyDI. The coding agent
+                        Claude Code (P4) writes and runs its own integration
+                        code without PyDI.
                     </p>
                 </div>
 
@@ -3213,22 +3120,31 @@
                         ><span class="pd-role">silver reference</span>
                     </div>
                     <p>
-                        The humain-engineered pipelines are task workflows that were coded by master's and PhD students
-                        using the PyDI framework. The students improved their workflows over multiple iterations using the MaDi-Bench validation sets. 
-						Every workflow involves the same sequence of steps: PyDI's LLM schema matcher proposes
-                        attribute correspondences between the input tables, an human data engineer inspects and hand-corrects
+                        The human-engineered pipelines are task workflows that were coded by master's and PhD students
+                        using the PyDI framework. The students improved their workflows over multiple iterations using the MaDI-Bench validation sets.
+                        Every workflow involves the same sequence of steps: PyDI's LLM schema matcher with GPT-5 proposes
+                        attribute correspondences between the input tables, a human data engineer inspects and hand-corrects
                         the mapping, and the input tables are translated into the target schema. A
                         normalization step then parses dates and numbers,
                         converts units, and applies the taxonomy mappings.
                         Blocking uses embedding or task-specific blocking keys tuned to
-                        reach at least 97% pair completeness. Entity matching combines
-                        rule-based or trained tree-based matchers with a global
-                        one-to-one correspondence creation step. Data fusion applies per-attribute
-                        conclict resolution heuristics such as source trust, longest or
-                        shortest string, numeric aggregation, and set union. The heuristics were selected by the students from the set of fusion heuristics offered by PyDI.
+                        reach at least 97% pair completeness. Entity matching uses
+                        rule-based or trained tree-based matchers, followed by a
+                        global one-to-one matching step where the engineers found
+                        it necessary. Data fusion applies per-attribute
+                        conflict resolution heuristics such as voting, source
+                        trust, longest or shortest string, numeric aggregation,
+                        and set union. The heuristics were selected by the
+                        students from the set of fusion heuristics offered by
+                        PyDI.
                     </p>
                     <p>
-                        The human-engineered pipelines set a practical reference point on how data engineers would approach the MaDI integration tasks. The pipelines are likely not the optimum. In order to compare the performance of SUTs to human data-engineering, we use output of the human-engineered pipelines as silver standard.
+                        The human-engineered pipelines set a practical reference
+                        point on how data engineers would approach the MaDI-Bench
+                        integration tasks. The pipelines are likely not the
+                        optimum. In order to compare the performance of SUTs to
+                        human data engineering, we use the output of the
+                        human-engineered pipelines as the silver standard.
                     </p>
                     <p class="pd-links">
                         Code and outputs:
@@ -3255,9 +3171,15 @@
                         ><span class="pd-role">committee per step</span>
                     </div>
                     <p>
-                        The best-of-breed pipeline chains methods from the literature into an integration pipeline. For each step of the integration process, the method runs a committee of competing methods and scores their results on
-                        the validation sets. The winning method is selected for the best-of-breed pipeline and the winner's output is passed to
-                        the next stage of the process. Below, we list the methods that are tested for the different steps of each integration task:
+                        The best-of-breed pipeline chains methods from the
+                        literature and from PyDI into an integration pipeline.
+                        For each step of the integration process, the pipeline
+                        runs a committee of competing methods and scores their
+                        results on the validation sets. The winning method is
+                        selected for the best-of-breed pipeline and the
+                        winner's output is passed to the next step of the
+                        process. Below, we list the methods that are tested for
+                        the different steps of each integration task:
                     </p>
                     <p>
                         <b>Schema matching:</b>
@@ -3271,20 +3193,26 @@
                             >Sentence-BERT</a
                         >
                         embedding matcher, and PyDI's label-, instance-,
-                        duplicate- and LLM-based matchers.
+                        duplicate- and LLM-based matchers (GPT-5.4-mini).
+                        <b>Normalization:</b> the source values left unchanged,
+                        or a rule-based normalizer that applies a type-specific
+                        rule per attribute (text cleaning, date parsing,
+                        locale-aware number parsing, country-code or taxonomy
+                        lookup).
                         <b>Blocking:</b> standard, token and sorted-neighborhood
                         blocking,
                         <a href="https://dl.acm.org/doi/10.1561/1500000019"
                             >BM25</a
                         >, Sentence-BERT, and
                         <a href="https://arxiv.org/abs/2303.03132">SC-Block</a>,
-                        keeping the blocker that clears 97% pair completeness at
-                        the highest reduction ratio. <b>Entity matching:</b>
+                        keeping for each pair of sources the blocker with the
+                        highest reduction ratio among those that reach 97% pair completeness on the validation set. Blockers with more than five million candidate pairs are excluded. If no blocker reaches 97%, the one with the highest pair completeness is kept.
+                        <b>Entity matching:</b>
                         <a href="https://arxiv.org/abs/2004.00584">Ditto</a> and
                         <a
-                            href="https://www.vldb.org/pvldb/vol9/p1581-konda.pdf"
+                            href="https://www.vldb.org/pvldb/vol9/p1197-pkonda.pdf"
                             >Magellan</a
-                        >. <b>Fusion:</b> PyDI heuristics plus the
+                        >. <b>Fusion:</b> PyDI heuristics with a per-attribute selector that keeps the heuristic with the best validation score for each attribute, plus the
                         <a href="https://dl.acm.org/doi/10.1145/1281192.1281309"
                             >TruthFinder</a
                         >, <a href="https://arxiv.org/abs/1203.0058">LTM</a>,
@@ -3299,10 +3227,15 @@
                             href="https://dl.acm.org/doi/10.14778/3648160.3648174"
                             >FusionQuery</a
                         >
-                        truth-discovery models, with a per-attribute selector.
+                        truth-discovery models.
                     </p>
                     <p class="pd-links">
-                        Outputs:
+                        Code:
+                        <a
+                            href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/pipelines"
+                            >pipelines</a
+                        >
+                        &middot; Outputs:
                         <a
                             href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results/best%20of%20breeds"
                             >results/best of breeds</a
@@ -3318,32 +3251,42 @@
                 <div class="pdetail">
                     <div class="pd-head">
                         <span class="ptag">P3</span
-                        ><span class="pd-title">LLM-based Pipeline</span
+                        ><span class="pd-title">LLM Workflow</span
                         ><span class="pd-role"
                             >automatic, self-configuring</span
                         >
                     </div>
                     <p>
-                        The LLM-based pipeline uses an LLM to configure a end-to-end
-                        data integration pipeline which employs scalable, traditional integration methods for each step of the pipeline. The LLM-based pipeline uses the same PyDI methods as the human pipeline, but an LLM, not a human, configures them. GPT-5.5 performs schema matching, and the
-                        values are normalized by mapping them to the predefined
-                        taxonomies, with a column profiler selecting a
-                        normalization function for the remaining attributes. An
-                        embedding blocker then generates candidate
-                        pairs. Using a subset of those pairs, the pipeline generates its own
-                        machine-labeled training and validation sets using
-                        GPT-5.2 as the labeler. Thus, the pipeline uses training and validation sets that differ from the 
-                        sets provided by the benchmark. The pipeline uses the machine-labeled sets to train and validate different similarity feature-based matchers using random forests and XGBoost. For fusion it writes
-                        a configuration that assigns each attribute a
-                        conflict-resolution heuristic. The LLM only configures
-                        the pipeline and generates the training artifacts; it
-                        is not involved in the integration itself, which keeps costs low and enables the pipeline to scale to large tasks.
+                        The LLM workflow uses an LLM to configure an end-to-end
+                        data integration pipeline that employs scalable,
+                        traditional integration methods for each step. It uses
+                        the same PyDI methods as the human-engineered pipelines,
+                        but an LLM, not a human, configures them. GPT-5.5 performs schema matching, taxonomy mapping, and the fusion configuration, and the values are normalized
+                        by mapping them to the predefined taxonomies, with a
+                        column profiler selecting a normalization function for
+                        the remaining attributes. An embedding blocker then
+                        generates candidate pairs. Using a sample of those
+                        pairs, the workflow generates its own machine-labeled
+                        training and validation sets, with GPT-5.2 as the
+                        labeler. These sets are independent of the sets that
+                        the benchmark provides. The workflow uses them to train
+                        and validate rule-based matchers and similarity
+                        feature-based models such as random forests and
+                        XGBoost. For fusion, the LLM assigns each attribute a
+                        conflict-resolution heuristic from PyDI. The workflow
+                        builds several such configurations, some of them tuned
+                        on the fusion validation set of the benchmark, and keeps
+                        the one with the highest accuracy on that set.
+                        Apart from schema matching and taxonomy mapping, the LLM
+                        configures the methods and generates the training data
+                        but does not integrate the records itself, which keeps
+                        costs low and lets the workflow scale to large tasks.
                     </p>
                     <p class="pd-links">
                         Code:
                         <a
-                            href="https://github.com/wbsg-uni-mannheim/automatic-data-integration"
-                            >automatic-data-integration</a
+                            href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/baselines/llm-pipeline"
+                            >baselines/llm-pipeline</a
                         >
                         &middot; Outputs:
                         <a
@@ -3358,425 +3301,74 @@
                     </p>
                 </div>
 
-                <div class="content is-size-6">
-                    <p style="margin-top: 1rem">
-                        The three pipelines behave very differently across the
-                        steps. Schema matching is close to perfect for all
-                        three, entity matching covers a wide range across tasks,
-                        and data fusion is the hardest step for every pipeline.
-                        Every number below is per task, and where the pipelines
-                        differ, the best score per task is shown in
-                        <span style="color: #0a7a5a; font-weight: 700"
-                            >green</span
-                        >. The columns are the human-engineered pipeline (Human,
-                        P1), the best-of-breed pipeline (BoB, P2), and the
-                        LLM-based pipeline (LLM, P3).
+                <div class="pdetail">
+                    <div class="pd-head">
+                        <span class="ptag">P4</span
+                        ><span class="pd-title">Claude Code Pipeline</span
+                        ><span class="pd-role">coding agent, no labels</span>
+                    </div>
+                    <p>
+                        P4 uses the coding agent Claude Code 2.1.280 with Claude
+                        Opus 5.5 to write and execute its own integration
+                        pipeline for each task. The agent runs unsupervised in
+                        an isolated workspace. It receives the source tables
+                        with their metadata files, the target schema, the
+                        taxonomies, and a short description of what counts as
+                        an entity in the domain. It receives no labeled data,
+                        PyDI and its documentation are not available, and web
+                        search and web fetching are disabled. Instead, the
+                        agent receives seven skills written by the authors, for
+                        schema matching, normalization, blocking, entity
+                        matching, clustering, fusion, and pipeline diagnosis,
+                        which describe possible methods, typical errors, and
+                        checks for each step. An OpenAI embeddings endpoint is
+                        available; the agent used it only on the three
+                        Companies variants. The agent inspects the sources,
+                        writes code for every step, runs it, checks diagnostics
+                        such as missing values, schema conformity, and cluster
+                        sizes, and revises the code in the same run. Each run is
+                        limited to 18 hours of wall-clock time and 100 US
+                        dollars of LLM spend.
+                    </p>
+                    <p class="pd-links">
+                        Skills and prompts:
+                        <a
+                            href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/baselines/claude-code"
+                            >baselines/claude-code</a
+                        >
+                        &middot; Outputs and code of the 20 runs:
+                        <a
+                            href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results/claude%20code"
+                            >results/claude code</a
+                        >
                     </p>
                 </div>
 
-                <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Schema Matching
-                </h4>
-                <div class="content is-size-6">
-                    <p>
-                        The three pipelines reach close to optimal F1 by using
-                        the PyDI LLM schema matcher, which reads column names
-                        and values together. The label-based and instance-based
-                        matchers are shown for reference: their much lower
-                        scores show that schema matching is genuinely difficult
-                        in the benchmark, while state-of-the-art LLMs reach
-                        close to perfect performance once they are given both
-                        the headers and the values. Values are F1 (%).
-                    </p>
-                </div>
-                <table class="rtab">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">Task</th>
-                            <th>Human</th>
-                            <th>BoB</th>
-                            <th>LLM</th>
-                            <th class="grp">Label-based</th>
-                            <th>Instance-based</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Games</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n grp">30.00</td>
-                            <td class="n">60.50</td>
-                        </tr>
-                        <tr>
-                            <td>Companies</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n">97.56</td>
-                            <td class="n grp">26.10</td>
-                            <td class="n">53.80</td>
-                        </tr>
-                        <tr>
-                            <td>Music</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n grp">28.60</td>
-                            <td class="n">64.50</td>
-                        </tr>
-                        <tr>
-                            <td>Products</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n">100</td>
-                            <td class="n grp">61.60</td>
-                            <td class="n">7.70</td>
-                        </tr>
-                        <tr>
-                            <td>Scientific Papers</td>
-                            <td class="n">100</td>
-                            <td class="n">97.14</td>
-                            <td class="n">100</td>
-                            <td class="n grp">73.80</td>
-                            <td class="n">33.30</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Blocking and Entity Matching
-                </h4>
-                <div class="content is-size-6">
-                    <p>
-                        Pair completeness stays between 94.4 and 100% for every
-                        pipeline, so the candidate sets keep almost all of the
-                        labeled test matches. Reduction ratio is above 99% on
-                        every task except Products, where the LLM pipeline's
-                        embedding blocker prunes 97.5% of the pairs against
-                        71.9% for the other two. Entity matching itself spans a
-                        wide range, from near the ceiling on Papers and Music to
-                        clearly more open on Games and Products. Values are
-                        percentages. The best entity-matching score per task is
-                        in green.
-                    </p>
-                </div>
-                <div style="overflow-x: auto">
-                    <table class="rtab" style="min-width: 760px">
-                        <thead>
-                            <tr>
-                                <th
-                                    rowspan="2"
-                                    style="
-                                        text-align: left;
-                                        vertical-align: bottom;
-                                    "
-                                >
-                                    Task
-                                </th>
-                                <th colspan="3">Pair completeness</th>
-                                <th colspan="3" class="grp">Reduction ratio</th>
-                                <th colspan="3" class="grp">
-                                    Entity matching F1
-                                </th>
-                            </tr>
-                            <tr>
-                                <th>Human</th>
-                                <th>BoB</th>
-                                <th>LLM</th>
-                                <th class="grp">Human</th>
-                                <th>BoB</th>
-                                <th>LLM</th>
-                                <th class="grp">Human</th>
-                                <th>BoB</th>
-                                <th>LLM</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Games</td>
-                                <td class="n">99.55</td>
-                                <td class="n">100.00</td>
-                                <td class="n">96.85</td>
-                                <td class="n grp">99.93</td>
-                                <td class="n">99.90</td>
-                                <td class="n">99.96</td>
-                                <td class="n grp best">89.45</td>
-                                <td class="n">67.30</td>
-                                <td class="n">63.15</td>
-                            </tr>
-                            <tr>
-                                <td>Companies</td>
-                                <td class="n">97.73</td>
-                                <td class="n">94.37</td>
-                                <td class="n">100.00</td>
-                                <td class="n grp">99.34</td>
-                                <td class="n">99.24</td>
-                                <td class="n">99.67</td>
-                                <td class="n grp">87.65</td>
-                                <td class="n">89.29</td>
-                                <td class="n best">90.69</td>
-                            </tr>
-                            <tr>
-                                <td>Music</td>
-                                <td class="n">96.55</td>
-                                <td class="n">96.34</td>
-                                <td class="n">99.85</td>
-                                <td class="n grp">99.67</td>
-                                <td class="n">99.67</td>
-                                <td class="n">99.88</td>
-                                <td class="n grp">95.35</td>
-                                <td class="n">94.84</td>
-                                <td class="n best">98.11</td>
-                            </tr>
-                            <tr>
-                                <td>Products</td>
-                                <td class="n">100.00</td>
-                                <td class="n">100.00</td>
-                                <td class="n">98.00</td>
-                                <td class="n grp">71.91</td>
-                                <td class="n">71.91</td>
-                                <td class="n">97.54</td>
-                                <td class="n grp">70.37</td>
-                                <td class="n best">84.09</td>
-                                <td class="n">63.09</td>
-                            </tr>
-                            <tr>
-                                <td>Scientific Papers</td>
-                                <td class="n">97.90</td>
-                                <td class="n">97.90</td>
-                                <td class="n">97.69</td>
-                                <td class="n grp">99.98</td>
-                                <td class="n">99.98</td>
-                                <td class="n">99.97</td>
-                                <td class="n grp">98.45</td>
-                                <td class="n best">99.70</td>
-                                <td class="n">96.05</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p class="legend">
-                    Pair completeness and reduction ratio measure blocking
-                    quality on the labeled entity-matching test set. Entity
-                    matching F1 is on the same test set.
-                </p>
-
-                <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Data Fusion
-                </h4>
-                <div class="content is-size-6">
-                    <p>
-                        Fusion is the hardest step for every pipeline. The LLM
-                        pipeline produces the most accurate fused values on four
-                        of the five tasks. Best-of-breed leads on Products.
-                        Values are accuracy (%). The best score per task is in
-                        green. The strong results of the LLM-based pipeline are due not only to its choice of conflict resolution method, but also to its more comprehensive value normalization.
-                    </p>
-                </div>
-                <table class="rtab">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">Task</th>
-                            <th>Human</th>
-                            <th>BoB</th>
-                            <th>LLM</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Games</td>
-                            <td class="n">71.70</td>
-                            <td class="n">64.91</td>
-                            <td class="n best">84.87</td>
-                        </tr>
-                        <tr>
-                            <td>Companies</td>
-                            <td class="n">44.70</td>
-                            <td class="n">45.90</td>
-                            <td class="n best">63.24</td>
-                        </tr>
-                        <tr>
-                            <td>Music</td>
-                            <td class="n">70.20</td>
-                            <td class="n">76.92</td>
-                            <td class="n best">83.12</td>
-                        </tr>
-                        <tr>
-                            <td>Products</td>
-                            <td class="n">40.20</td>
-                            <td class="n best">56.68</td>
-                            <td class="n">43.65</td>
-                        </tr>
-                        <tr>
-                            <td>Scientific Papers</td>
-                            <td class="n">78.90</td>
-                            <td class="n">61.04</td>
-                            <td class="n best">79.35</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4 class="title is-5" style="margin-top: 1.5rem">
-                    Efficiency
-                </h4>
-                <div class="content is-size-6">
-                    <p>
-                        All three pipelines are preconfigured, so the times
-                        below cover only the final integration run, not any
-                        configuration search or design effort. The main
-                        difference comes from entity matching: best-of-breed
-                        mostly selects Ditto, a pre-trained language model whose
-                        per-task fine-tuning and inference dominate its runtime,
-                        while the human and LLM pipelines use lighter matchers.
-                        On Companies, where best-of-breed instead picks the
-                        cheaper Magellan, it runs about as fast as the others.
-                        Values are end-to-end wall-clock seconds.
-                    </p>
-                </div>
-                <table class="rtab">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">Task</th>
-                            <th>Human</th>
-                            <th>BoB</th>
-                            <th>LLM</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Games</td>
-                            <td class="n">180</td>
-                            <td class="n">5,736</td>
-                            <td class="n">196</td>
-                        </tr>
-                        <tr>
-                            <td>Companies</td>
-                            <td class="n">70</td>
-                            <td class="n">213</td>
-                            <td class="n">203</td>
-                        </tr>
-                        <tr>
-                            <td>Music</td>
-                            <td class="n">184</td>
-                            <td class="n">5,980</td>
-                            <td class="n">211</td>
-                        </tr>
-                        <tr>
-                            <td>Products</td>
-                            <td class="n">98</td>
-                            <td class="n">1,388</td>
-                            <td class="n">718</td>
-                        </tr>
-                        <tr>
-                            <td>Scientific Papers</td>
-                            <td class="n">637</td>
-                            <td class="n">16,184</td>
-                            <td class="n">1,374</td>
-                        </tr>
-                        <tr style="font-weight: 700">
-                            <td>Mean</td>
-                            <td class="n">234</td>
-                            <td class="n">5,900</td>
-                            <td class="n">540</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h4 class="title is-5" style="margin-top: 1.5rem">
-                    End-to-End Evaluation
-                </h4>
-                <div class="content is-size-6">
-                    <p>
-                        MaDI-Bench also scores the final fused table as a whole,
-                        along three dimensions: <b>coverage</b> (are the right
-                        entities and values present), <b>consistency</b> (does
-                        the output fit the target schema), and
-                        <b>correctness</b> (are the merged values right). The table shows
-                        mean values over the five tasks calculated using ground-truth
-                        test sets. The results of the better pipeline per metric are set in
-                        <span style="color: #0a7a5a; font-weight: 700"
-                            >green</span
-                        >. 
-                    </p>
-                </div>
-                <table class="rtab">
-                    <thead>
-                        <tr>
-                            <th style="text-align: left">
-                                Metric (ground-truth reference, mean over tasks)
-                            </th>
-                            <th>Best-of-breed</th>
-                            <th>LLM-based</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                Entity recovery &nbsp;<span
-                                    style="color: #999; font-weight: 400"
-                                    >coverage, higher is better</span
-                                >
-                            </td>
-                            <td class="n best">0.90</td>
-                            <td class="n">0.81</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Value drift &nbsp;<span
-                                    style="color: #999; font-weight: 400"
-                                    >coverage, lower is better</span
-                                >
-                            </td>
-                            <td class="n best">0.48</td>
-                            <td class="n">0.56</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                BCubed F1 &nbsp;<span
-                                    style="color: #999; font-weight: 400"
-                                    >clustering correctness, higher is
-                                    better</span
-                                >
-                            </td>
-                            <td class="n best">0.97</td>
-                            <td class="n">0.94</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Fusion accuracy &nbsp;<span
-                                    style="color: #999; font-weight: 400"
-                                    >value correctness, higher is better</span
-                                >
-                            </td>
-                            <td class="n">0.61</td>
-                            <td class="n best">0.71</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Fully-correct rate &nbsp;<span
-                                    style="color: #999; font-weight: 400"
-                                    >every attribute right at once, higher is
-                                    better</span
-                                >
-                            </td>
-                            <td class="n">0.05</td>
-                            <td class="n best">0.14</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="legend">
-                    Best-of-breed wins on coverage and clustering. The LLM
-                    pipeline wins on value correctness. The fully-correct rate,
-                    which needs every attribute of an entity right at once,
-                    stays low for both, so the integrated task is far from
-                    solved. Schema validity (consistency) is close, near 0.95
-                    for both pipelines. Full per-task numbers at all three
-                    reference levels are in the
-                    <a
-                        href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results"
-                        >results directory</a> as well as in  in the <a href="https://arxiv.org/abs/2606.30371">MaDI-Bench Arxiv paper</a>. 
-                </p>
+                <h4 class="title is-5" style="margin-top: 1.75rem">Results</h4>
+                <div class="content is-size-6"><p>Each pipeline is run once per task. The tables report every step on the five base tasks, with the human-engineered pipeline (Human, P1), the best-of-breed pipeline (BoB, P2), the LLM workflow (LLM, P3), and the Claude Code pipeline (CC, P4). Where the pipelines differ, the best score per task is in <span style="color: #0a7a5a; font-weight: 700">green</span>. The values are those of the paper. The outputs and scores of every run are in the <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results">results/</a> folder of the repository, and the cells of each paper table with their sources in <a href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/results/paper_tables">results/paper_tables/</a>.</p></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Schema Matching</h4>
+                <div class="content is-size-6"><p>All four pipelines reach at least 92.68 F1 on every task, and 15 of the 20 pipeline scores are 100. The label-based and instance-based matchers of PyDI are shown for reference. They fail in complementary places. Label-based matching falls to 26.1 on Companies, where FullContact uses anonymized column names such as <code>Attribute_2</code>. Instance-based matching falls to 7.7 on Products, possibly because several numeric attributes, such as read and write speeds, draw values from similar ranges. Neither reference matcher reaches more than 74 F1 on any task. Values are F1 (%).</p></div>
+                <div style="overflow-x: auto"><table class="rtab"><thead><tr><th style="text-align: left">Task</th><th>Human (P1)</th><th>BoB (P2)</th><th>LLM (P3)</th><th>CC (P4)</th><th class=grp>Label-based</th><th>Instance-based</th></tr></thead><tbody><tr><td>Games</td><td class="n best">100.00</td><td class="n best">100.00</td><td class="n best">100.00</td><td class="n">93.88</td><td class="n grp">30.00</td><td class="n">60.50</td></tr><tr><td>Companies</td><td class="n">95.00</td><td class="n">97.67</td><td class="n">92.68</td><td class="n best">100.00</td><td class="n grp">26.10</td><td class="n">53.80</td></tr><tr><td>Music</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">100.00</td><td class="n grp">28.60</td><td class="n">64.50</td></tr><tr><td>Products</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">100.00</td><td class="n grp">61.60</td><td class="n">7.70</td></tr><tr><td>Scientific Papers</td><td class="n">95.38</td><td class="n best">100.00</td><td class="n best">100.00</td><td class="n best">100.00</td><td class="n grp">73.80</td><td class="n">33.30</td></tr></tbody></table></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Value Normalization</h4>
+                <div class="content is-size-6"><p>Normalization accuracy is measured on the normalization test sets. It covers cells that need a transformation and cells whose value is already correct, so a normalizer that changes correct values loses accuracy. Averaged over the tasks, normalization is the lowest step score of every pipeline, between 28.45 (P2) and 60.12 (P4), and every pipeline scores below 40 on at least one task. Games is the hardest task for P1, P2, and P4: 171 of its 182 test cells need a transformation, mostly a mapping of genres and platform aliases onto the target taxonomies. Values are accuracy (%).</p></div>
+                <div style="overflow-x: auto"><table class="rtab"><thead><tr><th style="text-align: left">Task</th><th>Human (P1)</th><th>BoB (P2)</th><th>LLM (P3)</th><th>CC (P4)</th></tr></thead><tbody><tr><td>Games</td><td class="n">6.59</td><td class="n">6.04</td><td class="n best">37.91</td><td class="n">8.79</td></tr><tr><td>Companies</td><td class="n">34.78</td><td class="n">29.35</td><td class="n">84.78</td><td class="n best">97.83</td></tr><tr><td>Music</td><td class="n">63.75</td><td class="n">55.00</td><td class="n best">75.00</td><td class="n">56.25</td></tr><tr><td>Products</td><td class="n">64.00</td><td class="n">22.00</td><td class="n">30.00</td><td class="n best">73.20</td></tr><tr><td>Scientific Papers</td><td class="n">52.02</td><td class="n">29.84</td><td class="n">29.84</td><td class="n best">64.52</td></tr></tbody></table></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Blocking and Entity Matching</h4>
+                <div class="content is-size-6"><p>Pair completeness lies between 93.33 and 100 for all pipelines and tasks. Reduction ratios exceed 97% on every task except Products, where P1 removes 71.89% of the possible record pairs. On Scientific Papers, the largest task, every pipeline removes at least 99.97%. Entity matching F1 ranges from 64.98 to 99.83. Games and Products separate the pipelines most. On Games, identical titles recur across platforms, and the same game on another platform is a different entity. Values are percentages, averaged over the source pairs. The best entity matching F1 per task is in <span style="color: #0a7a5a; font-weight: 700">green</span>.</p></div>
+                <div style="overflow-x: auto"><table class="rtab" style="min-width: 760px"><thead><tr><th rowspan="2" style="text-align: left; vertical-align: bottom">Task</th><th colspan="4">Pair completeness</th><th colspan="4" class="grp">Reduction ratio</th><th colspan="4" class="grp">Entity matching F1</th></tr><tr><th>P1</th><th>P2</th><th>P3</th><th>P4</th><th class=grp>P1</th><th>P2</th><th>P3</th><th>P4</th><th class=grp>P1</th><th>P2</th><th>P3</th><th>P4</th></tr></thead><tbody><tr><td>Games</td><td class="n">99.53</td><td class="n">98.58</td><td class="n">96.85</td><td class="n">97.21</td><td class="n grp">99.92</td><td class="n">99.88</td><td class="n">99.96</td><td class="n">99.99</td><td class="n best grp">89.47</td><td class="n">67.30</td><td class="n">64.98</td><td class="n">85.40</td></tr><tr><td>Companies</td><td class="n">97.88</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">99.12</td><td class="n grp">99.30</td><td class="n">97.16</td><td class="n">99.40</td><td class="n">99.82</td><td class="n grp">86.84</td><td class="n">89.29</td><td class="n best">92.63</td><td class="n">91.20</td></tr><tr><td>Music</td><td class="n">96.55</td><td class="n">99.85</td><td class="n">99.85</td><td class="n">100.00</td><td class="n grp">99.67</td><td class="n">99.64</td><td class="n">99.85</td><td class="n">99.62</td><td class="n grp">95.37</td><td class="n">94.84</td><td class="n best">98.10</td><td class="n">95.48</td></tr><tr><td>Products</td><td class="n">100.00</td><td class="n">100.00</td><td class="n">93.33</td><td class="n">100.00</td><td class="n grp">71.89</td><td class="n">96.50</td><td class="n">97.54</td><td class="n">97.85</td><td class="n grp">67.94</td><td class="n">85.48</td><td class="n">66.00</td><td class="n best">88.48</td></tr><tr><td>Scientific Papers</td><td class="n">97.90</td><td class="n">99.55</td><td class="n">97.69</td><td class="n">99.88</td><td class="n grp">99.98</td><td class="n">99.97</td><td class="n">99.97</td><td class="n">99.99</td><td class="n grp">98.31</td><td class="n">99.70</td><td class="n">96.83</td><td class="n best">99.83</td></tr></tbody></table></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Data Fusion</h4>
+                <div class="content is-size-6"><p>Fusion accuracy is the share of the verified cells of the fusion test set for which the fused output holds a correct value. A fused value can be wrong because matching kept the record with the correct value out of the cluster, because matching added records of other entities, or because conflict resolution chose a wrong value. P4 reaches the highest accuracy on Games, Companies, Music, and Products, and P1 on Scientific Papers. The best score per task still leaves 8.89 (Scientific Papers) to 22.19 (Games) points open. Values are accuracy (%).</p></div>
+                <div style="overflow-x: auto"><table class="rtab"><thead><tr><th style="text-align: left">Task</th><th>Human (P1)</th><th>BoB (P2)</th><th>LLM (P3)</th><th>CC (P4)</th></tr></thead><tbody><tr><td>Games</td><td class="n">53.29</td><td class="n">65.70</td><td class="n">71.37</td><td class="n best">77.81</td></tr><tr><td>Companies</td><td class="n">60.47</td><td class="n">66.39</td><td class="n">75.74</td><td class="n best">81.97</td></tr><tr><td>Music</td><td class="n">45.02</td><td class="n">81.40</td><td class="n">75.21</td><td class="n best">86.64</td></tr><tr><td>Products</td><td class="n">71.12</td><td class="n">79.31</td><td class="n">61.48</td><td class="n best">82.78</td></tr><tr><td>Scientific Papers</td><td class="n best">91.11</td><td class="n">90.24</td><td class="n">78.42</td><td class="n">85.57</td></tr></tbody></table></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">End-to-End Evaluation</h4>
+                <div class="content is-size-6"><p>MaDI-Bench also scores the final fused table as a whole, along three dimensions: <b>coverage</b> (are the right entities and values present), <b>consistency</b> (does the output fit the target schema), and <b>correctness</b> (are the merged values right). The reference-free metrics need no reference. The silver reference consists of the clusters of the P1 output that combine at least two source records, so P1 itself is not listed. The ground-truth reference consists of the human-verified fusion test sets. The table shows the means over the five tasks. For metrics with a preferred direction, the best pipeline is in <span style="color: #0a7a5a; font-weight: 700">green</span>.</p></div>
+                <div style="overflow-x: auto"><table class="rtab"><thead><tr><th style="text-align: left">Metric (mean over the five tasks)</th><th>BoB (P2)</th><th>LLM (P3)</th><th>CC (P4)</th></tr></thead><tbody><tr><td colspan="4" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Reference-free</td></tr><tr><td>Record gain &nbsp;<span style="color: #999; font-weight: 400">coverage</span></td><td class="n">+0.28</td><td class="n">+0.35</td><td class="n">+0.19</td></tr><tr><td>Output density &nbsp;<span style="color: #999; font-weight: 400">coverage, higher is better</span></td><td class="n">0.70</td><td class="n">0.70</td><td class="n best">0.71</td></tr><tr><td>Fusion ratio &nbsp;<span style="color: #999; font-weight: 400">coverage</span></td><td class="n">0.39</td><td class="n">0.35</td><td class="n">0.46</td></tr><tr><td>Schema validity &nbsp;<span style="color: #999; font-weight: 400">consistency, higher is better</span></td><td class="n">0.95</td><td class="n">0.98</td><td class="n best">1.00</td></tr><tr><td colspan="4" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Silver reference</td></tr><tr><td>Entity recovery &nbsp;<span style="color: #999; font-weight: 400">coverage, higher is better</span></td><td class="n">0.56</td><td class="n">0.47</td><td class="n best">0.61</td></tr><tr><td>BCubed F1 &nbsp;<span style="color: #999; font-weight: 400">clustering correctness, higher is better</span></td><td class="n">0.80</td><td class="n">0.74</td><td class="n best">0.82</td></tr><tr><td>Fusion accuracy &nbsp;<span style="color: #999; font-weight: 400">value correctness, higher is better</span></td><td class="n best">0.71</td><td class="n">0.62</td><td class="n">0.69</td></tr><tr><td>Fully-correct rate &nbsp;<span style="color: #999; font-weight: 400">every attribute right at once, higher is better</span></td><td class="n best">0.22</td><td class="n">0.05</td><td class="n">0.14</td></tr><tr><td colspan="4" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Ground-truth reference</td></tr><tr><td>Entity recovery &nbsp;<span style="color: #999; font-weight: 400">coverage, higher is better</span></td><td class="n">0.77</td><td class="n">0.58</td><td class="n best">0.87</td></tr><tr><td>Value drift &nbsp;<span style="color: #999; font-weight: 400">coverage, lower is better</span></td><td class="n">0.46</td><td class="n">0.43</td><td class="n best">0.40</td></tr><tr><td>BCubed F1 &nbsp;<span style="color: #999; font-weight: 400">clustering correctness, higher is better</span></td><td class="n">0.92</td><td class="n">0.83</td><td class="n best">0.96</td></tr><tr><td>Fusion accuracy &nbsp;<span style="color: #999; font-weight: 400">value correctness, higher is better</span></td><td class="n">0.77</td><td class="n">0.72</td><td class="n best">0.83</td></tr><tr><td>Fully-correct rate &nbsp;<span style="color: #999; font-weight: 400">every attribute right at once, higher is better</span></td><td class="n">0.17</td><td class="n">0.10</td><td class="n best">0.25</td></tr></tbody></table></div>
+                <p class="legend">The output tables fit the target schema well, with a mean schema validity of 0.95 to 1.00. Their ground-truth fully-correct rates, which need every evaluated attribute of an entity right at once, stay between 0.10 and 0.25. The two references also rank P2 and P4 differently on fusion accuracy: P2 is closer to the silver reference, P4 to the ground truth. The per-task values follow below.</p>
+                <details class="foldcard">
+                    <summary>All end-to-end metrics per task</summary>
+                    <div style="overflow-x: auto"><table class="rtab" style="min-width: 1100px"><thead><tr><th rowspan="2" style="text-align: left; vertical-align: bottom">Metric</th><th colspan="3" class="grp">Games</th><th colspan="3" class="grp">Companies</th><th colspan="3" class="grp">Music</th><th colspan="3" class="grp">Products</th><th colspan="3" class="grp">Scientific Papers</th><th colspan="3" class="grp">Mean</th></tr><tr><th class=grp>P2</th><th>P3</th><th>P4</th><th class=grp>P2</th><th>P3</th><th>P4</th><th class=grp>P2</th><th>P3</th><th>P4</th><th class=grp>P2</th><th>P3</th><th>P4</th><th class=grp>P2</th><th>P3</th><th>P4</th><th class=grp>P2</th><th>P3</th><th>P4</th></tr></thead><tbody><tr><td colspan="19" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Reference-free</td></tr><tr><td style="white-space: nowrap">Record Gain</td><td class="n grp">+0.40</td><td class="n">+0.32</td><td class="n">+0.09</td><td class="n grp">+0.19</td><td class="n">+0.28</td><td class="n">+0.24</td><td class="n grp">+0.38</td><td class="n">+0.37</td><td class="n">+0.31</td><td class="n grp">+0.17</td><td class="n">+0.39</td><td class="n">+0.08</td><td class="n grp">+0.24</td><td class="n">+0.37</td><td class="n">+0.25</td><td class="n grp">+0.28</td><td class="n">+0.35</td><td class="n">+0.19</td></tr><tr><td style="white-space: nowrap">Density Gain ↑</td><td class="n grp">&minus;0.25</td><td class="n">&minus;0.26</td><td class="n best">&minus;0.24</td><td class="n grp">&minus;0.05</td><td class="n best">&minus;0.02</td><td class="n best">&minus;0.02</td><td class="n grp">&minus;0.18</td><td class="n best">&minus;0.14</td><td class="n">&minus;0.17</td><td class="n best grp">+0.06</td><td class="n">+0.04</td><td class="n best">+0.06</td><td class="n best grp">&minus;0.03</td><td class="n">&minus;0.05</td><td class="n best">&minus;0.03</td><td class="n grp">&minus;0.09</td><td class="n">&minus;0.09</td><td class="n best">&minus;0.08</td></tr><tr><td style="white-space: nowrap">Output Density ↑</td><td class="n grp">0.66</td><td class="n">0.65</td><td class="n best">0.67</td><td class="n grp">0.57</td><td class="n">0.60</td><td class="n best">0.61</td><td class="n grp">0.81</td><td class="n best">0.84</td><td class="n">0.81</td><td class="n best grp">0.57</td><td class="n">0.55</td><td class="n best">0.57</td><td class="n best grp">0.88</td><td class="n">0.86</td><td class="n best">0.88</td><td class="n grp">0.70</td><td class="n">0.70</td><td class="n best">0.71</td></tr><tr><td style="white-space: nowrap">Fusion Ratio</td><td class="n grp">0.11</td><td class="n">0.17</td><td class="n">0.31</td><td class="n grp">0.13</td><td class="n">0.08</td><td class="n">0.11</td><td class="n grp">0.14</td><td class="n">0.15</td><td class="n">0.20</td><td class="n grp">0.84</td><td class="n">0.69</td><td class="n">0.94</td><td class="n grp">0.74</td><td class="n">0.66</td><td class="n">0.73</td><td class="n grp">0.39</td><td class="n">0.35</td><td class="n">0.46</td></tr><tr><td style="white-space: nowrap">Schema validity ↑</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n grp">0.94</td><td class="n">0.99</td><td class="n best">1.00</td><td class="n grp">0.84</td><td class="n">0.97</td><td class="n best">1.00</td><td class="n best grp">1.00</td><td class="n">0.95</td><td class="n best">1.00</td><td class="n grp">0.98</td><td class="n">0.98</td><td class="n">0.98</td><td class="n grp">0.95</td><td class="n">0.98</td><td class="n best">1.00</td></tr><tr><td colspan="19" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Silver reference</td></tr><tr><td style="white-space: nowrap">Entity recovery ↑</td><td class="n grp">0.50</td><td class="n">0.41</td><td class="n best">0.78</td><td class="n best grp">0.37</td><td class="n">0.33</td><td class="n">0.31</td><td class="n grp">0.76</td><td class="n">0.77</td><td class="n best">0.78</td><td class="n grp">0.22</td><td class="n">0.05</td><td class="n best">0.26</td><td class="n best grp">0.93</td><td class="n">0.82</td><td class="n">0.92</td><td class="n grp">0.56</td><td class="n">0.47</td><td class="n best">0.61</td></tr><tr><td style="white-space: nowrap">Value drift ↓</td><td class="n best grp">0.20</td><td class="n">0.26</td><td class="n">0.22</td><td class="n best grp">0.35</td><td class="n">0.41</td><td class="n">0.41</td><td class="n best grp">0.39</td><td class="n">0.47</td><td class="n">0.47</td><td class="n best grp">0.07</td><td class="n">0.13</td><td class="n">0.09</td><td class="n grp">0.01</td><td class="n best">0.00</td><td class="n">0.01</td><td class="n best grp">0.20</td><td class="n">0.25</td><td class="n">0.24</td></tr><tr><td style="white-space: nowrap">Value-density Δ</td><td class="n grp">&minus;0.23</td><td class="n">&minus;0.23</td><td class="n">&minus;0.22</td><td class="n grp">&minus;0.30</td><td class="n">&minus;0.27</td><td class="n">&minus;0.26</td><td class="n grp">&minus;0.11</td><td class="n">&minus;0.07</td><td class="n">&minus;0.10</td><td class="n grp">&minus;0.02</td><td class="n">&minus;0.04</td><td class="n">&minus;0.02</td><td class="n grp">&minus;0.01</td><td class="n">&minus;0.04</td><td class="n">&minus;0.02</td><td class="n grp">&minus;0.13</td><td class="n">&minus;0.13</td><td class="n">&minus;0.12</td></tr><tr><td style="white-space: nowrap">Schema validity Δ ↑</td><td class="n grp">+0.00</td><td class="n">+0.00</td><td class="n">+0.00</td><td class="n grp">+0.08</td><td class="n best">+0.13</td><td class="n best">+0.13</td><td class="n grp">&minus;0.10</td><td class="n">+0.03</td><td class="n best">+0.06</td><td class="n best grp">+0.00</td><td class="n">&minus;0.05</td><td class="n best">+0.00</td><td class="n grp">&minus;0.00</td><td class="n">&minus;0.00</td><td class="n">+0.00</td><td class="n grp">&minus;0.01</td><td class="n">+0.02</td><td class="n best">+0.04</td></tr><tr><td style="white-space: nowrap">BCubed precision ↑</td><td class="n best grp">1.00</td><td class="n">0.94</td><td class="n best">1.00</td><td class="n grp">0.95</td><td class="n best">0.99</td><td class="n best">0.99</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n best grp">0.68</td><td class="n">0.51</td><td class="n best">0.68</td><td class="n grp">0.99</td><td class="n">0.99</td><td class="n">0.99</td><td class="n grp">0.92</td><td class="n">0.89</td><td class="n best">0.93</td></tr><tr><td style="white-space: nowrap">BCubed recall ↑</td><td class="n grp">0.63</td><td class="n">0.57</td><td class="n best">0.81</td><td class="n best grp">0.66</td><td class="n">0.63</td><td class="n">0.62</td><td class="n grp">0.69</td><td class="n">0.70</td><td class="n best">0.71</td><td class="n grp">0.60</td><td class="n">0.43</td><td class="n best">0.64</td><td class="n best grp">0.97</td><td class="n">0.91</td><td class="n best">0.97</td><td class="n grp">0.71</td><td class="n">0.65</td><td class="n best">0.75</td></tr><tr><td style="white-space: nowrap">BCubed F1 ↑</td><td class="n grp">0.77</td><td class="n">0.71</td><td class="n best">0.90</td><td class="n best grp">0.77</td><td class="n best">0.77</td><td class="n">0.76</td><td class="n grp">0.82</td><td class="n">0.82</td><td class="n best">0.83</td><td class="n grp">0.64</td><td class="n">0.47</td><td class="n best">0.66</td><td class="n best grp">0.98</td><td class="n">0.95</td><td class="n best">0.98</td><td class="n grp">0.80</td><td class="n">0.74</td><td class="n best">0.82</td></tr><tr><td style="white-space: nowrap">Fusion acc. ↑</td><td class="n grp">0.79</td><td class="n">0.68</td><td class="n best">0.90</td><td class="n best grp">0.55</td><td class="n">0.51</td><td class="n">0.48</td><td class="n best grp">0.71</td><td class="n best">0.71</td><td class="n">0.62</td><td class="n best grp">0.58</td><td class="n">0.45</td><td class="n">0.57</td><td class="n best grp">0.91</td><td class="n">0.74</td><td class="n">0.85</td><td class="n best grp">0.71</td><td class="n">0.62</td><td class="n">0.69</td></tr><tr><td style="white-space: nowrap">Fully-correct rate ↑</td><td class="n grp">0.29</td><td class="n">0.08</td><td class="n best">0.46</td><td class="n best grp">0.11</td><td class="n">0.02</td><td class="n">0.03</td><td class="n best grp">0.13</td><td class="n best">0.13</td><td class="n">0.05</td><td class="n best grp">0.03</td><td class="n">0.00</td><td class="n">0.02</td><td class="n best grp">0.55</td><td class="n">0.01</td><td class="n">0.13</td><td class="n best grp">0.22</td><td class="n">0.05</td><td class="n">0.14</td></tr><tr><td colspan="19" style="background: #fafafa; color: #888; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em">Ground-truth reference</td></tr><tr><td style="white-space: nowrap">Entity recovery ↑</td><td class="n grp">0.46</td><td class="n">0.31</td><td class="n best">0.85</td><td class="n best grp">0.91</td><td class="n">0.77</td><td class="n">0.81</td><td class="n grp">0.87</td><td class="n">0.91</td><td class="n best">0.96</td><td class="n grp">0.59</td><td class="n">0.08</td><td class="n best">0.76</td><td class="n best grp">1.00</td><td class="n">0.83</td><td class="n">0.99</td><td class="n grp">0.77</td><td class="n">0.58</td><td class="n best">0.87</td></tr><tr><td style="white-space: nowrap">Value drift ↓</td><td class="n grp">0.40</td><td class="n best">0.34</td><td class="n">0.41</td><td class="n grp">0.63</td><td class="n">0.54</td><td class="n best">0.45</td><td class="n grp">0.61</td><td class="n">0.55</td><td class="n best">0.51</td><td class="n grp">0.28</td><td class="n">0.33</td><td class="n best">0.25</td><td class="n grp">0.38</td><td class="n best">0.37</td><td class="n best">0.37</td><td class="n grp">0.46</td><td class="n">0.43</td><td class="n best">0.40</td></tr><tr><td style="white-space: nowrap">Value-density Δ</td><td class="n grp">&minus;0.19</td><td class="n">&minus;0.20</td><td class="n">&minus;0.18</td><td class="n grp">&minus;0.18</td><td class="n">&minus;0.15</td><td class="n">&minus;0.15</td><td class="n grp">&minus;0.10</td><td class="n">&minus;0.07</td><td class="n">&minus;0.10</td><td class="n grp">+0.04</td><td class="n">+0.02</td><td class="n">+0.05</td><td class="n grp">&minus;0.03</td><td class="n">+0.03</td><td class="n">+0.04</td><td class="n grp">&minus;0.09</td><td class="n">&minus;0.08</td><td class="n">&minus;0.07</td></tr><tr><td style="white-space: nowrap">Schema validity Δ ↑</td><td class="n grp">+0.13</td><td class="n">+0.13</td><td class="n">+0.13</td><td class="n grp">&minus;0.03</td><td class="n">+0.02</td><td class="n best">+0.03</td><td class="n grp">&minus;0.16</td><td class="n">&minus;0.03</td><td class="n best">+0.00</td><td class="n best grp">&minus;0.00</td><td class="n">&minus;0.05</td><td class="n best">&minus;0.00</td><td class="n grp">&minus;0.02</td><td class="n">&minus;0.02</td><td class="n">&minus;0.02</td><td class="n grp">&minus;0.02</td><td class="n">+0.01</td><td class="n best">+0.03</td></tr><tr><td style="white-space: nowrap">BCubed precision ↑</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n grp">0.98</td><td class="n">0.90</td><td class="n best">0.99</td><td class="n grp">1.00</td><td class="n">1.00</td><td class="n">1.00</td><td class="n best grp">1.00</td><td class="n">0.98</td><td class="n best">1.00</td></tr><tr><td style="white-space: nowrap">BCubed recall ↑</td><td class="n grp">0.67</td><td class="n">0.56</td><td class="n best">0.89</td><td class="n best grp">0.95</td><td class="n">0.88</td><td class="n">0.90</td><td class="n grp">0.93</td><td class="n">0.96</td><td class="n best">0.98</td><td class="n grp">0.81</td><td class="n">0.44</td><td class="n best">0.90</td><td class="n best grp">1.00</td><td class="n">0.92</td><td class="n best">1.00</td><td class="n grp">0.87</td><td class="n">0.75</td><td class="n best">0.93</td></tr><tr><td style="white-space: nowrap">BCubed F1 ↑</td><td class="n grp">0.80</td><td class="n">0.71</td><td class="n best">0.94</td><td class="n best grp">0.97</td><td class="n">0.93</td><td class="n">0.95</td><td class="n grp">0.97</td><td class="n">0.98</td><td class="n best">0.99</td><td class="n grp">0.89</td><td class="n">0.59</td><td class="n best">0.94</td><td class="n best grp">1.00</td><td class="n">0.96</td><td class="n best">1.00</td><td class="n grp">0.92</td><td class="n">0.83</td><td class="n best">0.96</td></tr><tr><td style="white-space: nowrap">Fusion acc. ↑</td><td class="n grp">0.66</td><td class="n">0.71</td><td class="n best">0.78</td><td class="n grp">0.66</td><td class="n">0.76</td><td class="n best">0.82</td><td class="n grp">0.81</td><td class="n">0.75</td><td class="n best">0.87</td><td class="n grp">0.79</td><td class="n">0.61</td><td class="n best">0.83</td><td class="n best grp">0.90</td><td class="n">0.78</td><td class="n">0.86</td><td class="n grp">0.77</td><td class="n">0.72</td><td class="n best">0.83</td></tr><tr><td style="white-space: nowrap">Fully-correct rate ↑</td><td class="n grp">0.00</td><td class="n best">0.10</td><td class="n">0.08</td><td class="n grp">0.02</td><td class="n">0.21</td><td class="n best">0.32</td><td class="n grp">0.21</td><td class="n">0.04</td><td class="n best">0.36</td><td class="n grp">0.26</td><td class="n">0.10</td><td class="n best">0.31</td><td class="n best grp">0.36</td><td class="n">0.07</td><td class="n">0.16</td><td class="n grp">0.17</td><td class="n">0.10</td><td class="n best">0.25</td></tr></tbody></table></div>
+                </details>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Efficiency</h4>
+                <div class="content is-size-6"><p>The runtimes measure the execution of the final pipeline in wall-clock seconds. Model training is part of the runtime, while the configuration search and the human design effort are not. The mean runtimes differ by a factor of 15, from 358 seconds for P4 to 5,205 seconds for P2. Scientific Papers, the largest task, is the most expensive task for every pipeline. The last two columns give the estimated API cost of the two LLM-driven pipelines in US dollars. The fastest pipeline per task is in <span style="color: #0a7a5a; font-weight: 700">green</span>.</p></div>
+                <div style="overflow-x: auto"><table class="rtab" style="min-width: 640px"><thead><tr><th style="text-align: left">Task</th><th>Human (P1)</th><th>BoB (P2)</th><th>LLM (P3)</th><th>CC (P4)</th><th class="grp">LLM (P3) cost (USD)</th><th>CC (P4) cost (USD)</th></tr></thead><tbody><tr><td>Games</td><td class="n">789</td><td class="n">2612</td><td class="n best">196</td><td class="n">374</td><td class="n grp">3.17</td><td class="n">3.06</td></tr><tr><td>Companies</td><td class="n">269</td><td class="n">455</td><td class="n">203</td><td class="n best">180</td><td class="n grp">0.87</td><td class="n">4.22</td></tr><tr><td>Music</td><td class="n">728</td><td class="n">7231</td><td class="n best">211</td><td class="n">290</td><td class="n grp">3.25</td><td class="n">3.58</td></tr><tr><td>Products</td><td class="n">441</td><td class="n">1029</td><td class="n">363</td><td class="n best">22</td><td class="n grp">5.79</td><td class="n">5.95</td></tr><tr><td>Scientific Papers</td><td class="n">1944</td><td class="n">14699</td><td class="n">1374</td><td class="n best">922</td><td class="n grp">6.70</td><td class="n">2.47</td></tr><tr style="border-top: 1px solid #dbdbdb"><td>Mean</td><td class="n">834</td><td class="n">5205</td><td class="n">469</td><td class="n best">358</td><td class="n grp">3.96</td><td class="n">3.86</td></tr></tbody></table></div>
             </div>
         </section>
 
@@ -3787,12 +3379,10 @@
                 <div class="content is-size-6">
                     <p>
                         To keep the benchmark hard as systems improve, each base
-                        task also ships in easy, medium, and hard versions. The
-                        underlying entities and their true matches stay the
-                        same. Eight difficulty knobs perturb the data, each set
+                        task also ships in easy, medium, and hard versions. The knobs keep the identity of every retained record and its true matches. Two knobs add near-duplicate entities or remove records from some sources. Eight difficulty knobs perturb the data, each set
                         to its own target for easy, medium, and hard. A harder
                         level turns up the kinds of heterogeneity that real
-                        integration runs into.
+                        integration runs into, while the easy level supports the evaluation of simpler and cheaper methods. The easy level makes schema and entity matching easier, but not fusion.
                     </p>
                 </div>
 
@@ -3801,7 +3391,7 @@
                     <p>
                         Here is the DBpedia record for the Taisei Corporation,
                         base against hard. Schema naming divergence (Knob 7)
-                        first renames every column to a cryptic code:
+                        renames every column to a cryptic code:
                         <span class="mono">org_name→nm</span>,
                         <span class="mono">established→ey</span>,
                         <span class="mono">nation→cn</span>,
@@ -3905,8 +3495,8 @@
                 </h4>
                 <div class="content is-size-6">
                     <p>
-                        Each knob targets one or two pipeline stages and is set
-                        to an easy, medium, or hard target. MaDI-Bench uses
+                        Each knob targets one or more pipeline stages and is
+                        set to an easy, medium, or hard target. MaDI-Bench uses
                         eight:
                     </p>
                 </div>
@@ -3914,7 +3504,7 @@
                     <div class="column is-6">
                         <div class="knob-box">
                             <span class="kn">Knob 1</span>
-                            <span class="kst">Matching · Fusion</span>
+                            <span class="kst">Blocking · Matching · Fusion</span>
                             <p class="kt">Surface augmentation</p>
                             <p class="kd">
                                 Rewrites attribute values into other surface
@@ -4067,341 +3657,30 @@
                     </div>
                 </div>
                 <p class="legend">
-                    Two further knobs (value ambiguity and schema distractors)
-                    are specified for synthetic tasks. Full specifications for
-                    every knob are in
+                    Full specifications for every knob are in
                     <a
                         href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/knobs"
                         >the repository</a
+                    >. The knob cards there use an older numbering from 01 to
+                    10: knobs 1 to 6 above are cards 01 to 06, knob 7 is card
+                    08, and knob 8 is card 10. Cards 07 (value ambiguity) and 09
+                    (schema completeness and distractors) are specified but not
+                    used in the released variants. The variant generator and the committees
+                    that measure the difficulty of the variants are in
+                    <a
+                        href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/usecases_synthetic"
+                        >usecases_synthetic</a
                     >.
                 </p>
-            </div>
 
-            <h4 class="title is-5" style="margin-top: 1.75rem">
-                Difficulty across the variants
-            </h4>
-            <div class="content is-size-6">
-                <p>
-                    The variants produce the intended difficulty gradient,
-                    clearest for data fusion: at the hard level fusion accuracy
-                    falls in every domain, by up to about 23 points for
-                    best-of-breed (Papers) and 28 for the LLM pipeline (Papers).
-                    Schema matching stays robust across the levels, and entity
-                    matching stays resilient once the matcher is re-tuned per
-                    variant. The hard variants raise the difficulty in every
-                    domain, while the easy variants keep simpler methods
-                    competitive. Values are percentages: schema matching and
-                    entity matching F1, and fusion accuracy.
-                </p>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Difficulty across the variants</h4>
+                <div class="content is-size-6"><p>The difficulty of each variant is measured with a committee of methods per step. The committee mean is the average over all members, the ceiling the score of the strongest member. From medium to hard, the committee mean declines for schema matching, entity matching, and fusion in every domain. The signal is clearest for fusion, whose mean falls by 10.9 to 24.0 points and whose ceiling by 10.6 to 28.1 points from base to hard. The easy level lowers the difficulty of schema and entity matching, while its fusion mean lies below the base score in four domains. Rows are in thousands, density and scores in %.</p></div>
+                <div style="overflow-x: auto"><table class="rtab" style="min-width: 760px"><thead><tr><th rowspan="2" style="text-align: left; vertical-align: bottom">Domain</th><th rowspan="2" style="text-align: left; vertical-align: bottom">Level</th><th colspan="2" class="grp">Sources</th><th colspan="4" class="grp">Committee mean</th><th colspan="4" class="grp">Best-member ceiling</th></tr><tr><th class="grp">Rows (k)</th><th>Density</th><th class=grp>SM</th><th>Norm.</th><th>EM</th><th>Fusion</th><th class=grp>SM</th><th>Norm.</th><th>EM</th><th>Fusion</th></tr></thead><tbody><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Companies</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">14.0</td><td class="n">66</td><td class="n grp">68.6</td><td class="n">35.9</td><td class="n">88.4</td><td class="n">56.9</td><td class="n grp">100.0</td><td class="n">43.5</td><td class="n">89.5</td><td class="n">62.4</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">14.0</td><td class="n">63</td><td class="n grp">88.5</td><td class="n">20.3</td><td class="n">89.9</td><td class="n">41.1</td><td class="n grp">100.0</td><td class="n">22.2</td><td class="n">93.4</td><td class="n">44.6</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">14.3</td><td class="n">59</td><td class="n grp">79.5</td><td class="n">27.2</td><td class="n">87.2</td><td class="n">49.3</td><td class="n grp">100.0</td><td class="n">31.2</td><td class="n">88.2</td><td class="n">53.3</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">14.2</td><td class="n">58</td><td class="n grp">66.4</td><td class="n">29.9</td><td class="n">86.8</td><td class="n">37.5</td><td class="n grp">100.0</td><td class="n">34.6</td><td class="n">88.1</td><td class="n">38.6</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Games</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">75.0</td><td class="n">94</td><td class="n grp">69.6</td><td class="n">8.1</td><td class="n">60.9</td><td class="n">68.1</td><td class="n grp">100.0</td><td class="n">12.1</td><td class="n">71.6</td><td class="n">70.7</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">78.5</td><td class="n">84</td><td class="n grp">88.1</td><td class="n">7.0</td><td class="n">63.3</td><td class="n">66.8</td><td class="n grp">100.0</td><td class="n">9.8</td><td class="n">71.8</td><td class="n">68.9</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">75.3</td><td class="n">83</td><td class="n grp">78.5</td><td class="n">19.9</td><td class="n">64.8</td><td class="n">63.4</td><td class="n grp">100.0</td><td class="n">24.4</td><td class="n">75.5</td><td class="n">66.2</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">71.1</td><td class="n">83</td><td class="n grp">69.3</td><td class="n">22.4</td><td class="n">55.3</td><td class="n">57.2</td><td class="n grp">100.0</td><td class="n">25.0</td><td class="n">71.5</td><td class="n">60.1</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Music</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">37.3</td><td class="n">90</td><td class="n grp">67.0</td><td class="n">48.8</td><td class="n">82.4</td><td class="n">74.5</td><td class="n grp">100.0</td><td class="n">61.3</td><td class="n">95.3</td><td class="n">82.0</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">39.7</td><td class="n">86</td><td class="n grp">91.8</td><td class="n">23.2</td><td class="n">88.3</td><td class="n">75.5</td><td class="n grp">100.0</td><td class="n">29.3</td><td class="n">95.1</td><td class="n">80.4</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">37.3</td><td class="n">82</td><td class="n grp">85.4</td><td class="n">46.8</td><td class="n">82.7</td><td class="n">55.8</td><td class="n grp">100.0</td><td class="n">61.6</td><td class="n">94.8</td><td class="n">62.0</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">35.2</td><td class="n">80</td><td class="n grp">77.3</td><td class="n">40.5</td><td class="n">79.2</td><td class="n">50.5</td><td class="n grp">100.0</td><td class="n">53.1</td><td class="n">92.9</td><td class="n">53.9</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Products</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">3.0</td><td class="n">53</td><td class="n grp">71.7</td><td class="n">45.7</td><td class="n">89.7</td><td class="n">80.4</td><td class="n grp">100.0</td><td class="n">85.2</td><td class="n">95.5</td><td class="n">82.8</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">3.1</td><td class="n">47</td><td class="n grp">79.1</td><td class="n">45.1</td><td class="n">92.6</td><td class="n">78.6</td><td class="n grp">100.0</td><td class="n">86.6</td><td class="n">96.4</td><td class="n">81.8</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">3.1</td><td class="n">42</td><td class="n grp">72.1</td><td class="n">47.0</td><td class="n">88.9</td><td class="n">71.2</td><td class="n grp">100.0</td><td class="n">90.7</td><td class="n">96.6</td><td class="n">76.6</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">2.4</td><td class="n">45</td><td class="n grp">65.7</td><td class="n">46.6</td><td class="n">85.8</td><td class="n">60.9</td><td class="n grp">98.0</td><td class="n">91.3</td><td class="n">97.4</td><td class="n">65.3</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Scientific Papers</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">182.1</td><td class="n">82</td><td class="n grp">75.0</td><td class="n">35.6</td><td class="n">96.6</td><td class="n">81.9</td><td class="n grp">98.5</td><td class="n">66.9</td><td class="n">100.0</td><td class="n">92.3</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">182.2</td><td class="n">64</td><td class="n grp">82.3</td><td class="n">35.0</td><td class="n">96.5</td><td class="n">79.4</td><td class="n grp">100.0</td><td class="n">64.8</td><td class="n">99.9</td><td class="n">89.5</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">182.1</td><td class="n">60</td><td class="n grp">74.9</td><td class="n">35.7</td><td class="n">95.3</td><td class="n">77.3</td><td class="n grp">100.0</td><td class="n">68.0</td><td class="n">99.9</td><td class="n">86.1</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">136.9</td><td class="n">57</td><td class="n grp">62.9</td><td class="n">36.8</td><td class="n">92.2</td><td class="n">66.6</td><td class="n grp">98.6</td><td class="n">70.3</td><td class="n">99.4</td><td class="n">70.6</td></tr></tbody></table></div>
+                <h4 class="title is-5" style="margin-top: 1.5rem">Pipeline scores on the variants</h4>
+                <div class="content is-size-6"><p>The validation pipelines P2, P3, and P4 were also run on every variant. Fusion shows the clearest difficulty gradient. For every pipeline and domain, fusion accuracy on the hard variant lies below the base task, with losses of 16.7 to 30.0 points for P2, 13.1 to 29.7 for P3, and 2.0 to 14.6 for P4. On the hard variants, no pipeline exceeds 75.8 fusion accuracy in any domain. Schema matching stays at or above 91.3 F1 on every level. Values are percentages.</p></div>
+                <div style="overflow-x: auto"><table class="rtab" style="min-width: 760px"><thead><tr><th rowspan="2" style="text-align: left; vertical-align: bottom">Domain</th><th rowspan="2" style="text-align: left; vertical-align: bottom">Level</th><th colspan="4" class="grp">BoB (P2)</th><th colspan="4" class="grp">LLM (P3)</th><th colspan="4" class="grp">CC (P4)</th></tr><tr><th class=grp>SM</th><th>Norm.</th><th>EM</th><th>Fusion</th><th class=grp>SM</th><th>Norm.</th><th>EM</th><th>Fusion</th><th class=grp>SM</th><th>Norm.</th><th>EM</th><th>Fusion</th></tr></thead><tbody><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Companies</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">97.7</td><td class="n">29.3</td><td class="n">89.3</td><td class="n">66.4</td><td class="n grp">92.7</td><td class="n">84.8</td><td class="n">92.6</td><td class="n">75.7</td><td class="n grp">100.0</td><td class="n">97.8</td><td class="n">91.2</td><td class="n">82.0</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">100.0</td><td class="n">22.2</td><td class="n">93.6</td><td class="n">49.2</td><td class="n grp">100.0</td><td class="n">57.6</td><td class="n">90.0</td><td class="n">52.6</td><td class="n grp">100.0</td><td class="n">73.7</td><td class="n">96.0</td><td class="n">81.5</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">100.0</td><td class="n">29.9</td><td class="n">88.9</td><td class="n">58.5</td><td class="n grp">100.0</td><td class="n">65.0</td><td class="n">77.4</td><td class="n">62.8</td><td class="n grp">100.0</td><td class="n">86.6</td><td class="n">90.2</td><td class="n">79.8</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">91.3</td><td class="n">24.4</td><td class="n">94.5</td><td class="n">40.6</td><td class="n grp">100.0</td><td class="n">64.7</td><td class="n">88.5</td><td class="n">51.1</td><td class="n grp">100.0</td><td class="n">59.6</td><td class="n">95.1</td><td class="n">71.2</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Games</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">100.0</td><td class="n">6.0</td><td class="n">67.3</td><td class="n">65.7</td><td class="n grp">100.0</td><td class="n">37.9</td><td class="n">65.0</td><td class="n">71.4</td><td class="n grp">93.9</td><td class="n">8.8</td><td class="n">85.4</td><td class="n">77.8</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">100.0</td><td class="n">9.8</td><td class="n">66.9</td><td class="n">62.7</td><td class="n grp">100.0</td><td class="n">43.7</td><td class="n">78.8</td><td class="n">72.8</td><td class="n grp">100.0</td><td class="n">44.7</td><td class="n">94.1</td><td class="n">81.1</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">100.0</td><td class="n">24.4</td><td class="n">69.7</td><td class="n">62.4</td><td class="n grp">100.0</td><td class="n">50.0</td><td class="n">72.2</td><td class="n">70.0</td><td class="n grp">100.0</td><td class="n">36.7</td><td class="n">79.3</td><td class="n">71.6</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">100.0</td><td class="n">22.4</td><td class="n">79.2</td><td class="n">49.0</td><td class="n grp">100.0</td><td class="n">50.4</td><td class="n">81.3</td><td class="n">58.3</td><td class="n grp">100.0</td><td class="n">51.8</td><td class="n">92.7</td><td class="n">75.8</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Music</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">100.0</td><td class="n">55.0</td><td class="n">94.8</td><td class="n">81.4</td><td class="n grp">100.0</td><td class="n">75.0</td><td class="n">98.1</td><td class="n">75.2</td><td class="n grp">100.0</td><td class="n">56.3</td><td class="n">95.5</td><td class="n">86.6</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">100.0</td><td class="n">17.4</td><td class="n">94.9</td><td class="n">75.2</td><td class="n grp">100.0</td><td class="n">20.7</td><td class="n">97.8</td><td class="n">69.1</td><td class="n grp">100.0</td><td class="n">21.7</td><td class="n">95.3</td><td class="n">79.8</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">100.0</td><td class="n">56.5</td><td class="n">93.2</td><td class="n">61.0</td><td class="n grp">100.0</td><td class="n">19.4</td><td class="n">90.7</td><td class="n">64.9</td><td class="n grp">100.0</td><td class="n">67.1</td><td class="n">96.2</td><td class="n">81.4</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">100.0</td><td class="n">42.0</td><td class="n">94.3</td><td class="n">53.9</td><td class="n grp">100.0</td><td class="n">19.1</td><td class="n">88.2</td><td class="n">53.2</td><td class="n grp">100.0</td><td class="n">64.8</td><td class="n">96.5</td><td class="n">72.0</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Products</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">100.0</td><td class="n">22.0</td><td class="n">85.5</td><td class="n">79.3</td><td class="n grp">100.0</td><td class="n">30.0</td><td class="n">66.0</td><td class="n">61.5</td><td class="n grp">100.0</td><td class="n">73.2</td><td class="n">88.5</td><td class="n">82.8</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">100.0</td><td class="n">18.8</td><td class="n">96.9</td><td class="n">81.6</td><td class="n grp">100.0</td><td class="n">29.8</td><td class="n">51.2</td><td class="n">69.1</td><td class="n grp">100.0</td><td class="n">53.1</td><td class="n">95.9</td><td class="n">85.9</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">100.0</td><td class="n">20.4</td><td class="n">86.0</td><td class="n">73.9</td><td class="n grp">100.0</td><td class="n">29.9</td><td class="n">20.9</td><td class="n">54.9</td><td class="n grp">100.0</td><td class="n">69.0</td><td class="n">85.0</td><td class="n">75.2</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">98.0</td><td class="n">18.5</td><td class="n">79.2</td><td class="n">54.4</td><td class="n grp">100.0</td><td class="n">30.0</td><td class="n">50.1</td><td class="n">37.0</td><td class="n grp">100.0</td><td class="n">53.1</td><td class="n">91.7</td><td class="n">74.7</td></tr><tr style="border-top: 1px solid #dbdbdb"><td rowspan="4" style="text-align: left; vertical-align: top">Scientific Papers</td><td style="text-align: left; font-weight: 400">Base</td><td class="n grp">100.0</td><td class="n">29.8</td><td class="n">99.7</td><td class="n">90.2</td><td class="n grp">100.0</td><td class="n">29.8</td><td class="n">96.8</td><td class="n">78.4</td><td class="n grp">100.0</td><td class="n">64.5</td><td class="n">99.8</td><td class="n">85.6</td></tr><tr><td style="text-align: left; font-weight: 400">Easy</td><td class="n grp">100.0</td><td class="n">40.2</td><td class="n">99.5</td><td class="n">88.0</td><td class="n grp">100.0</td><td class="n">40.2</td><td class="n">90.6</td><td class="n">72.1</td><td class="n grp">100.0</td><td class="n">72.3</td><td class="n">99.6</td><td class="n">84.8</td></tr><tr><td style="text-align: left; font-weight: 400">Medium</td><td class="n grp">98.6</td><td class="n">39.0</td><td class="n">99.2</td><td class="n">85.2</td><td class="n grp">100.0</td><td class="n">39.0</td><td class="n">87.2</td><td class="n">69.8</td><td class="n grp">100.0</td><td class="n">75.7</td><td class="n">99.6</td><td class="n">81.8</td></tr><tr><td style="text-align: left; font-weight: 400">Hard</td><td class="n grp">100.0</td><td class="n">39.1</td><td class="n">96.7</td><td class="n">60.2</td><td class="n grp">100.0</td><td class="n">43.2</td><td class="n">77.7</td><td class="n">48.7</td><td class="n grp">100.0</td><td class="n">51.0</td><td class="n">95.1</td><td class="n">71.6</td></tr></tbody></table></div>
+                <p class="legend">SM is schema matching F1, Norm. is normalization accuracy, EM is entity matching F1, and Fusion is fusion accuracy. The human-engineered pipeline (P1) is not run on the variants.</p>
             </div>
-            <div style="overflow-x: auto">
-                <table class="rtab" style="min-width: 700px">
-                    <thead>
-                        <tr>
-                            <th
-                                rowspan="2"
-                                style="text-align: left; vertical-align: bottom"
-                            >
-                                Domain
-                            </th>
-                            <th
-                                rowspan="2"
-                                style="text-align: left; vertical-align: bottom"
-                            >
-                                Level
-                            </th>
-                            <th colspan="3">Best-of-breed (P2)</th>
-                            <th colspan="3" class="grp">LLM-based (P3)</th>
-                        </tr>
-                        <tr>
-                            <th>SM</th>
-                            <th>EM</th>
-                            <th>Fusion</th>
-                            <th class="grp">SM</th>
-                            <th>EM</th>
-                            <th>Fusion</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td
-                                rowspan="4"
-                                style="
-                                    text-align: left;
-                                    font-weight: 600;
-                                    vertical-align: middle;
-                                "
-                            >
-                                Companies
-                            </td>
-                            <td style="text-align: left; font-weight: 400">
-                                Base
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">89.3</td>
-                            <td class="n">45.9</td>
-                            <td class="n grp">97.6</td>
-                            <td class="n">90.7</td>
-                            <td class="n">63.2</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Easy
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">93.6</td>
-                            <td class="n">40.3</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">88.2</td>
-                            <td class="n">42.3</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Medium
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">88.9</td>
-                            <td class="n">39.6</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">77.0</td>
-                            <td class="n">56.8</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Hard
-                            </td>
-                            <td class="n">91.3</td>
-                            <td class="n">94.5</td>
-                            <td class="n">33.3</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">87.4</td>
-                            <td class="n">44.4</td>
-                        </tr>
-                        <tr style="border-top: 2px solid #e0e0e0">
-                            <td
-                                rowspan="4"
-                                style="
-                                    text-align: left;
-                                    font-weight: 600;
-                                    vertical-align: middle;
-                                "
-                            >
-                                Games
-                            </td>
-                            <td style="text-align: left; font-weight: 400">
-                                Base
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">67.3</td>
-                            <td class="n">64.9</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">63.2</td>
-                            <td class="n">84.9</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Easy
-                            </td>
-                            <td class="n">98.1</td>
-                            <td class="n">66.9</td>
-                            <td class="n">62.1</td>
-                            <td class="n grp">97.9</td>
-                            <td class="n">76.0</td>
-                            <td class="n">81.4</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Medium
-                            </td>
-                            <td class="n">98.1</td>
-                            <td class="n">69.7</td>
-                            <td class="n">63.6</td>
-                            <td class="n grp">97.9</td>
-                            <td class="n">72.7</td>
-                            <td class="n">78.5</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Hard
-                            </td>
-                            <td class="n">98.1</td>
-                            <td class="n">79.2</td>
-                            <td class="n">52.5</td>
-                            <td class="n grp">97.9</td>
-                            <td class="n">82.0</td>
-                            <td class="n">72.6</td>
-                        </tr>
-                        <tr style="border-top: 2px solid #e0e0e0">
-                            <td
-                                rowspan="4"
-                                style="
-                                    text-align: left;
-                                    font-weight: 600;
-                                    vertical-align: middle;
-                                "
-                            >
-                                Music
-                            </td>
-                            <td style="text-align: left; font-weight: 400">
-                                Base
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">94.8</td>
-                            <td class="n">76.9</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">98.1</td>
-                            <td class="n">83.1</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Easy
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">94.9</td>
-                            <td class="n">85.4</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">97.7</td>
-                            <td class="n">77.4</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Medium
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">93.2</td>
-                            <td class="n">65.1</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">90.9</td>
-                            <td class="n">71.0</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Hard
-                            </td>
-                            <td class="n">92.0</td>
-                            <td class="n">94.3</td>
-                            <td class="n">54.5</td>
-                            <td class="n grp">90.9</td>
-                            <td class="n">88.0</td>
-                            <td class="n">58.6</td>
-                        </tr>
-                        <tr style="border-top: 2px solid #e0e0e0">
-                            <td
-                                rowspan="4"
-                                style="
-                                    text-align: left;
-                                    font-weight: 600;
-                                    vertical-align: middle;
-                                "
-                            >
-                                Products
-                            </td>
-                            <td style="text-align: left; font-weight: 400">
-                                Base
-                            </td>
-                            <td class="n">100.0</td>
-                            <td class="n">84.1</td>
-                            <td class="n">56.7</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">63.1</td>
-                            <td class="n">43.6</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Easy
-                            </td>
-                            <td class="n">99.5</td>
-                            <td class="n">91.5</td>
-                            <td class="n">51.6</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">27.5</td>
-                            <td class="n">49.3</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Medium
-                            </td>
-                            <td class="n">98.1</td>
-                            <td class="n">88.1</td>
-                            <td class="n">59.3</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">36.9</td>
-                            <td class="n">45.9</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Hard
-                            </td>
-                            <td class="n">98.1</td>
-                            <td class="n">85.3</td>
-                            <td class="n">49.5</td>
-                            <td class="n grp">98.0</td>
-                            <td class="n">51.0</td>
-                            <td class="n">34.1</td>
-                        </tr>
-                        <tr style="border-top: 2px solid #e0e0e0">
-                            <td
-                                rowspan="4"
-                                style="
-                                    text-align: left;
-                                    font-weight: 600;
-                                    vertical-align: middle;
-                                "
-                            >
-                                Scientific Papers
-                            </td>
-                            <td style="text-align: left; font-weight: 400">
-                                Base
-                            </td>
-                            <td class="n">97.1</td>
-                            <td class="n">99.7</td>
-                            <td class="n">61.0</td>
-                            <td class="n grp">100.0</td>
-                            <td class="n">96.0</td>
-                            <td class="n">79.3</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Easy
-                            </td>
-                            <td class="n">92.9</td>
-                            <td class="n">99.5</td>
-                            <td class="n">58.1</td>
-                            <td class="n grp">91.7</td>
-                            <td class="n">90.9</td>
-                            <td class="n">64.6</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Medium
-                            </td>
-                            <td class="n">90.5</td>
-                            <td class="n">99.2</td>
-                            <td class="n">47.7</td>
-                            <td class="n grp">91.7</td>
-                            <td class="n">87.6</td>
-                            <td class="n">62.3</td>
-                        </tr>
-                        <tr>
-                            <td style="text-align: left; font-weight: 400">
-                                Hard
-                            </td>
-                            <td class="n">92.9</td>
-                            <td class="n">96.7</td>
-                            <td class="n">37.8</td>
-                            <td class="n grp">91.7</td>
-                            <td class="n">78.1</td>
-                            <td class="n">51.1</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="legend">
-                SM is schema matching F1, EM is entity matching F1, Fusion is
-                data fusion accuracy. The human pipeline is not run on the
-                variants. These are the per-stage scores from the paper (Table
-                XII).
-            </p>
         </section>
 
         <!-- CONCLUSION -->
@@ -4410,24 +3689,26 @@
                 <h2 class="title is-3 has-text-centered">Conclusion</h2>
                 <div class="content is-size-6">
                     <p>
-                        This paper introduced the MaDI-Bench integration
-                        benchmark. The benchmark models the full complexity of
-                        the data integration process, including schema matching,
-                        value normalization, entity matching, and conflict
-                        resolution, while at the same time taking into account
-                        the dependencies between the subtasks. To prevent a
-                        quick saturation of the benchmark as agentic systems
-                        progress, we introduce a generic variant-generation
-                        method for deriving harder variants from the base tasks.
-                        We validated MaDI-Bench and the generated variants using
-                        human-designed pipelines, an LLM-based pipeline, and a
-                        best-of-breed pipeline. The validation showed the
+                        This paper introduced the Mannheim Data Integration
+                        Benchmark (MaDI-Bench). The benchmark covers all steps
+                        of the data integration process, from schema matching
+                        and value normalization through blocking and entity
+                        matching to data fusion, and evaluates each step as
+                        well as the integrated output, taking into account the
+                        dependencies between the steps. To prevent a quick
+                        saturation of the benchmark as agentic systems
+                        progress, we introduced a generic variant-generation
+                        method for deriving harder as well as easier variants
+                        from the base tasks. We validated MaDI-Bench and the
+                        generated variants using human-designed pipelines, an
+                        LLM workflow, a best-of-breed pipeline, and a Claude
+                        Code integration agent. The validation showed the
                         benchmark's utility for measuring the step-wise as well
-                        as end-to-end performance of data integration systems.
-                        We hope that the benchmark will prove useful for the
-                        community and will support the development of fully
-                        automatic as well as human-in-the-loop data integration
-                        systems.
+                        as end-to-end performance of data integration
+                        pipelines. We hope that the benchmark will prove useful
+                        for the community and will support the development of
+                        fully automatic as well as human-in-the-loop data
+                        integration systems.
                     </p>
                 </div>
             </div>
@@ -4439,18 +3720,28 @@
                 <h2 class="title is-3 has-text-centered">Downloads</h2>
                 <div class="content is-size-6">
                     <p>
-                        Tasks are released as plain files (CSV, JSON, and XML),
-                        so any system can read them. PyDI adds the integration
-                        steps and an evaluator for every stage, so a run can be
-                        scored without labeling any data.
+                        Tasks are released as plain files (CSV, JSON, JSON
+                        Lines, and XML), so any system can read them. The
+                        evaluation package of the repository scores value
+                        normalization and data fusion; schema matching,
+                        blocking, entity matching, and the end-to-end metrics
+                        are scored with the evaluators of PyDI at the commit
+                        that the repository pins. The
+                        <a
+                            href="https://github.com/wbsg-uni-mannheim/MaDI-Bench#evaluating-a-system"
+                            >repository README</a
+                        >
+                        describes the submission formats and the commands.
                     </p>
                     <ul>
                         <li>
                             <a
                                 href="https://github.com/wbsg-uni-mannheim/MaDI-Bench"
                                 >Benchmark repository</a
-                            >: all 20 tasks, ground truth, and the validation
-                            runs of the three pipelines.
+                            >: all 20 tasks with their ground truth, the
+                            evaluation code, the variant generator, the code of
+                            P1, P2, and P3, the skills and prompts of P4, and
+                            the outputs and scores of the validation runs.
                         </li>
                         <li>
                             <a href="https://github.com/wbsg-uni-mannheim/PyDI"
@@ -4462,8 +3753,9 @@
                             <a
                                 href="https://github.com/wbsg-uni-mannheim/MaDI-Bench/tree/main/use%20cases"
                                 >The tasks</a
-                            >: inputs, target schemas, labeled splits, and fused
-                            gold records.
+                            >: source tables, target schemas and taxonomies,
+                            gold schema mappings, and the labeled entity
+                            matching, normalization, and fusion sets.
                         </li>
                     </ul>
                 </div>
