@@ -1,14 +1,21 @@
 [project]
 name = "madi-bench"
-version = "0.1.0"
-description = "MaDI-Bench benchmark assets and synthetic variant-generation tools"
+version = "0.2.0"
+description = "MaDI-Bench benchmark assets, evaluation package and synthetic variant-generation tools"
 readme = "README.md"
 requires-python = ">=3.12"
 authors = [
   { name = "Data and Web Science Group, University of Mannheim" }
 ]
 dependencies = [
-  "uma-pydi[synthetic] @ git+https://github.com/wbsg-uni-mannheim/PyDI.git",
+  # PyDI is pinned to commit cd51e25 (head of PyDI's synthetic-usecases branch on
+  # 2026-10-01); the repository's test suites pass with it. PyDI's default branch
+  # (main) has neither the `synthetic` extra nor the PyDI.evaluation package that
+  # the P2 pipeline and the variant generator import.
+  # PyDI.evaluation also computes the end-to-end panels (paper Table 8). They ran
+  # with pycountry 26.2.16, which PyDI's own requirement (pycountry>=24.0,<25.0)
+  # excludes; the pin is in [tool.uv] below.
+  "uma-pydi[synthetic] @ git+https://github.com/wbsg-uni-mannheim/PyDI.git@cd51e25e5e7f0493c45f678d0d0ef6e123d9133a",
   "numpy>=2.1,<2.2",
   "pandas>=2.0,<3.0",
   "PyYAML>=6.0,<7.0",
@@ -27,6 +34,10 @@ llm = [
   "json-repair>=0.59,<1.0",
 ]
 neural = [
+  # faiss-cpu: nearest-neighbour index of the SC-Block blocker
+  # (usecases_synthetic/lib/sc_block_blocker.py); without it the blocker falls back
+  # to scikit-learn. Same bounds as PyDI's `faiss` extra.
+  "faiss-cpu>=1.7.4,<2.0",
   "sentence-transformers>=5.0,<6.0",
   "torch>=2.0,<3.0",
   "transformers>=4.30,<5.0",
@@ -46,6 +57,8 @@ dev = [
 ]
 
 [project.scripts]
+madi-score-fusion = "madi_bench.evaluation.cli:score_fusion_main"
+madi-score-normalization = "madi_bench.evaluation.cli:score_normalization_main"
 madi-generate-variant = "usecases_synthetic.scripts.generate_variant:main"
 madi-measure-baseline = "usecases_synthetic.scripts.measure_baseline:main"
 madi-validate-variant = "usecases_synthetic.scripts.validate_variant:main"
@@ -56,11 +69,12 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["usecases_synthetic*"]
+include = ["madi_bench*", "usecases_synthetic*"]
 
 [tool.setuptools.package-data]
 usecases_synthetic = [
   "config/**/*.yaml",
+  "config/**/*.txt",
   "pools/**/*.csv",
   "pools/**/*.json",
   "statistics/**/*.md",
@@ -73,5 +87,19 @@ usecases_synthetic = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["usecases_synthetic/tests"]
+testpaths = ["tests", "usecases_synthetic/tests"]
 pythonpath = ["."]
+
+[tool.uv]
+# pycountry 26.2.16 is the version the paper's end-to-end panels (Table 8) ran with.
+# PyDI's schema-validity check looks up Products `priceCurrency` codes in pycountry;
+# pycountry 26.2.16 drops six withdrawn currency codes (ANG, BGN, CUC, HRK, SLL, ZWL),
+# and with pycountry 24.6.1 six Products schema-validity values differ by up to 0.0004.
+# PyDI at the pinned commit requires pycountry>=24.0,<25.0, so pycountry==26.2.16
+# cannot be an ordinary requirement: neither pip nor uv can resolve it. uv applies this
+# override whenever it reads this file: in project mode (`uv sync`, `uv lock`, `uv run`)
+# and for `uv pip install` / `uv pip compile` run from the repository root. pip ignores
+# it and installs pycountry 24.6.1; for the Table 8 values, run
+# `python -m pip install pycountry==26.2.16` afterwards (pip then reports the conflict
+# with PyDI's declared range; the repository's test suites pass with either version).
+override-dependencies = ["pycountry==26.2.16"]

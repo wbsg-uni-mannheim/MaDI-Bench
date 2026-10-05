@@ -22,6 +22,9 @@ level_assignments:
     products_4: cryptic
 
 sm_mapping:
+  # cluster_id is not a target-schema attribute: the generator's copy of the data keeps
+  # it (the WDC product grouping), but it is not a schema-matching correspondence
+  # (SM gold rows to attributes outside the target schema are dropped).
   products_1:
     id: id
     manufacturer: brand
@@ -29,9 +32,7 @@ sm_mapping:
     product_description: description
     list_price: price
     currency_code: priceCurrency
-    cluster_id: cluster_id
     product_url: url
-    name_and_description: title_description
     model_name: model
     manufacturer_part_number: model_number
     category: product_type
@@ -57,9 +58,7 @@ sm_mapping:
     descriptionText: description
     priceAmount: price
     currency: priceCurrency
-    cluster_id: cluster_id
     productUrl: url
-    titleAndDescription: title_description
     modelName: model
     mpn: model_number
     productCategory: product_type
@@ -85,9 +84,7 @@ sm_mapping:
     Details: description
     Price: price
     Currency: priceCurrency
-    cluster_id: cluster_id
     Link: url
-    TitleDetails: title_description
     Model: model
     PartNo: model_number
     Type: product_type
@@ -113,9 +110,7 @@ sm_mapping:
     desc: description
     amt: price
     cur: priceCurrency
-    cluster_id: cluster_id
     link: url
-    name_desc: title_description
     mdl: model
     pn: model_number
     cat: product_type
@@ -166,11 +161,6 @@ rename_table:
       abbreviated: cur
       cryptic: ccy
       anonymized: Attribute_6
-    name_and_description:
-      descriptive: title_description
-      abbreviated: t_desc
-      cryptic: tdsc
-      anonymized: Attribute_7
     category:
       descriptive: product_type
       abbreviated: prd_typ
@@ -287,11 +277,6 @@ rename_table:
       abbreviated: cur
       cryptic: ccy
       anonymized: Attribute_6
-    titleAndDescription:
-      descriptive: title_description
-      abbreviated: t_desc
-      cryptic: tdsc
-      anonymized: Attribute_7
     productCategory:
       descriptive: product_type
       abbreviated: prd_typ
@@ -408,11 +393,6 @@ rename_table:
       abbreviated: cur
       cryptic: ccy
       anonymized: Attribute_6
-    TitleDetails:
-      descriptive: title_description
-      abbreviated: t_desc
-      cryptic: tdsc
-      anonymized: Attribute_7
     Type:
       descriptive: product_type
       abbreviated: prd_typ
@@ -529,11 +509,6 @@ rename_table:
       abbreviated: cur
       cryptic: ccy
       anonymized: Attribute_6
-    name_desc:
-      descriptive: title_description
-      abbreviated: t_desc
-      cryptic: tdsc
-      anonymized: Attribute_7
     cat:
       descriptive: product_type
       abbreviated: prd_typ

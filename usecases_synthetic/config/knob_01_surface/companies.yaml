@@ -117,8 +117,7 @@ baseline_above_target_rules:
 
 # Companies abbreviation table (bidirectional).
 # Coverage: legal-form suffixes, common-word contractions, country
-# forms, industry vocab, frequent-entity aliases. Roughly 30 entries
-# per the 2026-05-07 K1 sign-off discussion.
+# forms, industry vocab, frequent-entity aliases. Roughly 30 entries.
 abbreviation_table:
   # Legal-form suffixes
   Incorporated: "Inc."
@@ -202,22 +201,20 @@ key_token_skiplist:
 key_token_skiplist_global: []
 
 # Hard-path LLM config. Default model is gpt-5.4-mini for cost
-# (~5x cheaper than full gpt-5.4); per the 2026-05-06 LLM-model-default
-# policy in plans/plan_s1_scale.md, ask the user before each K1 hard run
-# whether to bump to gpt-5.4 (invalidates cache).
-# R10-D 2026-05-29: prompt_version bumped to v2 -- minimum-divergence
+# (~5x cheaper than full gpt-5.4). Prompt version v2: minimum-divergence
 # rule, <UNCHANGED> sentinel escape, per-attribute-class prompt
 # split (primary/key -> short_v2, secondary -> secondary_v2,
-# categorical -> categorical_v2). Cache key under
-# cache/knob_01_paraphrases/<domain>/<level>/ rotates on this bump.
+# categorical -> categorical_v2). The prompt version and the model id
+# are part of the cache key under
+# cache/knob_01_paraphrases/<domain>/<level>/, so changing either
+# invalidates the cache.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0
 
 # Anchor-survivor floor: per-entity, at least 1 source keeps a clean
 # primary. Hard constraint at every level. Per-cell clean-survivor
-# floor is opt-in per attribute class; will be re-evaluated against
-# the Pending #5 closeness contract before R6.1.
+# floor is opt-in per attribute class.
 anchor_survivor_floor:
   primary: true
   key: false

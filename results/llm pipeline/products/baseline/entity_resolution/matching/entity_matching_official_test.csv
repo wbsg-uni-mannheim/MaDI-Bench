@@ -1,4 +1,4 @@
 left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
-prod1,prod2,prod1__prod2,RuleBasedMatcher,0.5,0.5714285714285714,0.4736842105263157,0.72,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod2_test.csv
-prod1,prod3,prod1__prod3,RuleBasedMatcher,0.5,0.591304347826087,0.5230769230769231,0.68,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod3_test.csv
-prod1,prod4,prod1__prod4,RuleBasedMatcher,0.3,0.7299270072992701,0.5747126436781609,1.0,200,50,150,DI-Bench/usecases/products/input/entitymatching/prod1_2_prod4_test.csv
+products_1,products_2,products_1__products_2,MLBasedMatcher,0.4,0.64,0.64,0.64,200,50,150,p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_2_test.csv
+products_1,products_3,products_1__products_3,RuleBasedMatcher,0.4,0.6271186440677965,0.5441176470588235,0.74,200,50,150,p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_3_test.csv
+products_1,products_4,products_1__products_4,RuleBasedMatcher,0.4,0.6972477064220184,0.6440677966101694,0.76,200,50,150,p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_4_test.csv

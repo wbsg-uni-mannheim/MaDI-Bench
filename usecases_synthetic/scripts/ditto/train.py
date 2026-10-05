@@ -48,7 +48,7 @@ def _resolve_field_scope(
     *,
     cli_fields_given: bool,
 ) -> List[str]:
-    """Apply the R10-I ``--domain`` train-fields wiring.
+    """Apply the ``--domain`` train-fields wiring.
 
     When ``domain`` is set, the field scope is sourced from the canonical
     wide committee list (``committee_ditto_fields`` == ``DOMAIN_TEXT_COLS``
@@ -182,7 +182,7 @@ def main() -> None:
             "canonical wide committee list (DOMAIN_TEXT_COLS == "
             "em_matching ditto_plm.fields == sc_block.text_cols), overriding "
             "any stale narrow 'fields' default in --config. This is the "
-            "R10-I train-fields wiring: it makes a baseline (R10-H) retrain "
+            "train-fields wiring: it makes a baseline retrain "
             "train on the same wide surface wide inference serializes, so it "
             "can't silently train on a narrow field set. If --fields is ALSO "
             "passed it must match the canonical scope exactly (else error)."
@@ -265,7 +265,7 @@ def main() -> None:
 
     fields = _parse_fields(fields_raw)
 
-    # R10-I: --domain sources the field scope from the canonical wide
+    # --domain sources the field scope from the canonical wide
     # committee list so a baseline/variant Ditto retrain trains on exactly
     # the surface wide inference serializes (see _resolve_field_scope).
     fields = _resolve_field_scope(

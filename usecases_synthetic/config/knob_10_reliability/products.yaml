@@ -1,10 +1,8 @@
 # Knob 10 — Source Reliability Differentiation: Products domain config.
 #
-# Per-domain notes (placeholder until products baseline is measured in S11):
-# all four sources share the same schema and there is no a-priori winner
-# per attribute. The targets below distribute mass roughly uniformly at
-# easy with a slight bias toward products_1 (anchor source); medium and
-# hard flatten further. S13 will recalibrate after baseline measurement.
+# Per-domain notes: there is no a-priori winner per attribute. The
+# targets put the most mass on products_1 (anchor source) at easy (0.55)
+# and flatten to uniform at hard (0.25 each).
 
 domain: products
 
@@ -27,7 +25,6 @@ attribute_mapping:
     capacity_gb: storage_gb
     currency_code: priceCurrency
     manufacturer_part_number: model_number
-    name_and_description: title_description
     bus_standard: bus_type
     interface: interface_type
     memory_technology: memory_type
@@ -52,7 +49,6 @@ attribute_mapping:
     capacityGb: storage_gb
     currency: priceCurrency
     mpn: model_number
-    titleAndDescription: title_description
     busType: bus_type
     interfaceType: interface_type
     memoryType: memory_type
@@ -77,7 +73,6 @@ attribute_mapping:
     CapacityGB: storage_gb
     Currency: priceCurrency
     PartNo: model_number
-    TitleDetails: title_description
     Bus: bus_type
     Interface: interface_type
     MemoryType: memory_type
@@ -102,7 +97,6 @@ attribute_mapping:
     cap_gb: storage_gb
     cur: priceCurrency
     pn: model_number
-    name_desc: title_description
     bus: bus_type
     iface: interface_type
     mem: memory_type
@@ -149,7 +143,6 @@ attribute_targets:
   # NEW (10 entries):
   priceCurrency: *target_distribution
   model_number: *target_distribution
-  title_description: *target_distribution
   bus_type: *target_distribution
   interface_type: *target_distribution
   memory_type: *target_distribution
@@ -157,7 +150,7 @@ attribute_targets:
   form_factor: *target_distribution
   read_speed_mb_s: *target_distribution
   write_speed_mb_s: *target_distribution
-  # NEW (5 sparse dims, 2026-06-02 scope decision):
+  # 5 sparse dims (full target-schema scope):
   color: *target_distribution
   width_mm: *target_distribution
   length_mm: *target_distribution

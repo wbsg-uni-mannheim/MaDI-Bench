@@ -183,6 +183,31 @@ def test_fusion_gold_jsonl_uses_source_ids(papers_bundle: VariantBundle) -> None
     assert "doi" not in papers_bundle.fusion_validation.columns
 
 
+def test_fusion_gold_source_ids_are_evaluator_strings(papers_bundle: VariantBundle) -> None:
+    """The loader hands the evaluator a comma-joined member string (a JSON
+    list would reach it as its repr and align no row), the anchor first."""
+    from usecases_synthetic.lib.fusion_gold_keys import gold_anchor, source_id_members
+
+    for frame in (papers_bundle.fusion_gold, papers_bundle.fusion_validation):
+        values = frame["source_ids"].tolist()
+        assert all(isinstance(v, str) and v for v in values)
+        anchors = [gold_anchor(source_id_members(v), "papers") for v in values]
+        assert [v.split(",")[0] for v in values] == anchors
+
+
+def test_perfect_clusters_key_every_gold_record(papers_bundle: VariantBundle) -> None:
+    """The fusion committee's perfect clusters (measure_baseline /
+    validate_variant, STAGES=fusion) find every papers gold entity."""
+    from usecases_synthetic.lib.fusion_gold_keys import source_id_members
+    from usecases_synthetic.lib.fusion_perfect_clusters import build_perfect_clusters
+
+    clusters = build_perfect_clusters("papers", papers_bundle)
+    assert len(clusters) == 100
+    for value in papers_bundle.fusion_gold["source_ids"]:
+        members = source_id_members(value)
+        assert set(members) <= clusters[members[0]]
+
+
 # ---------------------------------------------------------------------------
 # Per-knob configs
 # ---------------------------------------------------------------------------

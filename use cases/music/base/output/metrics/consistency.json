@@ -2,8 +2,8 @@
   "metric": "consistency",
   "metadata": {
     "usecase": "music",
-    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music/input/schemamatching/target_schema.json",
-    "fusion_output_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music/output/data_fusion/debug_fusion.jsonl",
+    "schema_path": "<run_root>/music/base/input/schemamatching/target_schema.json",
+    "fusion_output_path": "<run_root>/music/base/output/data_fusion/debug_fusion.jsonl",
     "rows_evaluated": 3624,
     "fused_table_source": "music_workflow.fused",
     "identifier_columns_excluded": true,

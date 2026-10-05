@@ -6,7 +6,6 @@ description,description,description,description,description
 price,price,price,price,price
 priceCurrency,priceCurrency,priceCurrency,priceCurrency,priceCurrency
 url,product_url,productUrl,Link,link
-title_description,title_description,title_description,title_description,title_description
 model,model,model,model,model
 model_number,model_number,model_number,model_number,model_number
 product_type,product_type,product_type,product_type,product_type
@@ -25,4 +24,4 @@ storage_connection_type,storage_connection_type,storage_connection_type,storage_
 memory_type,memory_type,memory_type,memory_type,memory_type
 color,color,color,color,color
 form_factor,form_factor,form_factor,form_factor,form_factor
-Mapped,26/26,26/26,26/26,26/26
+Mapped,25/25,25/25,25/25,25/25

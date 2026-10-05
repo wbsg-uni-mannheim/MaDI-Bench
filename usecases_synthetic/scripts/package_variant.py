@@ -12,8 +12,7 @@ This script is meant to be called by :mod:`generate_variant` after all
 knob scripts have run, but is exposed as a CLI for re-packaging from an
 existing work directory.
 
-Variant layout produced (per ``plan.md`` §"Scenario 1: Augmented use
-cases")::
+Variant layout produced::
 
     usecases/<domain>-augmented/<level>/
       input/
@@ -64,6 +63,8 @@ from usecases_synthetic.lib.domain_config import (
     DomainConfig,
     data_root_for_domain,
     load_domain_config,
+    task_dir,
+    variant_dir,
 )
 from usecases_synthetic.lib.provenance import PROVENANCE_COLUMNS, ProvenanceLog
 
@@ -116,13 +117,13 @@ def default_variant_dir(domain: str, level: str) -> Path:
     Returns
     -------
     Path
-        ``usecases/<domain>-augmented/<level>`` under the repo root.
+        ``use cases/<domain>/<level>`` under the repo root.
     """
-    # Augmented outputs always land at ``usecases/<domain>-augmented/<level>``
+    # Augmented outputs always land at ``use cases/<domain>/<level>``
     # for cross-domain consistency; the per-domain ``data_root`` override
-    # applies only to *input* data (see ``variant_loader._variant_root``
+    # applies only to *input* data (see ``variant_loader.variant_root``
     # for the symmetric read path).
-    return USECASES_DIR / f"{domain}-augmented" / level
+    return variant_dir(domain, level, root=USECASES_DIR)
 
 
 def default_work_dir(domain: str, level: str) -> Path:
@@ -246,7 +247,7 @@ def copy_regenerated_em(
     Looks for files matching ``*_{train,val,test}_{baseline_pruned,
     corner_filled}.csv`` in the orchestrator work directory's
     entitymatching folder and copies each into the variant output
-    directory. Since C11 (plan_revision.md, 2026-05-22) the regen writer
+    directory. The regen writer
     emits two parallel versions per (pair, split) — ``baseline_pruned``
     (Set 1, survivors only) and ``corner_filled`` (Set 2, survivors +
     corner backfill) — named ``<src1>_2_<src2>_<split>_<version>.csv`` by
@@ -254,8 +255,8 @@ def copy_regenerated_em(
     per-split shape mirrors the original EM gold so downstream consumers
     can treat the variant as a drop-in benchmark replacement.
 
-    R10-F (2026-05-29): this previously globbed ``*_regenerated.csv`` —
-    a suffix the C11 writer never emits — so the regen files silently
+    This previously globbed ``*_regenerated.csv`` —
+    a suffix the current writer never emits — so the regen files silently
     never reached the variant directory and every dual-test surface fell
     back to the baseline gold.
 
@@ -372,8 +373,10 @@ def copy_schemamatching(
 
     # Original target schema, if present.
     src_sm = (
-        (data_root_for_domain(domain_config.domain) or USECASES_DIR)
-        / domain_config.domain
+        task_dir(
+            domain_config.domain,
+            root=data_root_for_domain(domain_config.domain) or USECASES_DIR,
+        )
         / "input"
         / "schemamatching"
     )
@@ -667,7 +670,7 @@ def main() -> None:
         type=Path,
         default=None,
         help="Variant output directory "
-        "(default: usecases/<domain>-augmented/<level>)",
+        "(default: use cases/<domain>/<level>)",
     )
     args = parser.parse_args()
 

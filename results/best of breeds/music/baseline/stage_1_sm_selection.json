@@ -6,26 +6,27 @@
   "test_score": 1.0,
   "per_member_val": {
     "duplicate_majority": 0.8648648648648648,
-    "label_jw": 0.32,
-    "instance_tf_cosine": 0.7317073170731706,
-    "embedding_sbert": 0.7567567567567567,
+    "label_jw": 0.0909090909090909,
+    "instance_tf_cosine": 0.7619047619047619,
+    "embedding_sbert": 0.7692307692307692,
     "llm_openai": 1.0,
-    "magneto_slm_llm": 0.975609756097561,
-    "coma_hybrid": 0.5517241379310345
+    "magneto_slm_llm": 0.9500000000000001,
+    "coma_hybrid": 0.25
   },
   "per_member_test": {
     "duplicate_majority": 0.8648648648648648,
-    "label_jw": 0.32,
-    "instance_tf_cosine": 0.7317073170731706,
-    "embedding_sbert": 0.7567567567567567,
+    "label_jw": 0.0909090909090909,
+    "instance_tf_cosine": 0.7619047619047619,
+    "embedding_sbert": 0.7692307692307692,
     "llm_openai": 1.0,
-    "magneto_slm_llm": 0.975609756097561,
-    "coma_hybrid": 0.5517241379310345
+    "magneto_slm_llm": 0.9500000000000001,
+    "coma_hybrid": 0.25
   },
-  "runtime_s": 64.16576854896266,
+  "runtime_s": 159.79068013187498,
   "notes": {
     "test_eq_val": true,
-    "test_eq_val_reason": "no held-out SM test split for baseline"
+    "test_eq_val_reason": "no held-out SM test split for baseline",
+    "sm_input": "shipped_raw_20260926"
   },
-  "peak_memory_mb": 2114.5
+  "peak_memory_mb": 2281.953125
 }

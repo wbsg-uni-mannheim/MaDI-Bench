@@ -146,7 +146,7 @@ members:
       class: SCBlockBlocker
       module: usecases_synthetic.lib.sc_block_blocker
       params:
-        text_cols: [title, brand, description, price, priceCurrency, title_description, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
+        text_cols: [title, brand, description, price, priceCurrency, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
         top_k: 100
         threshold: 0.5
         checkpoint_path: usecases_synthetic/cache/sc_block_checkpoints/products/best
@@ -175,7 +175,6 @@ column_mapping:
     currency_code: priceCurrency
     cluster_id: cluster_id
     product_url: url
-    name_and_description: title_description
     model_name: model
     manufacturer_part_number: model_number
     category: product_type
@@ -202,7 +201,6 @@ column_mapping:
     currency: priceCurrency
     cluster_id: cluster_id
     productUrl: url
-    titleAndDescription: title_description
     modelName: model
     mpn: model_number
     productCategory: product_type
@@ -229,7 +227,6 @@ column_mapping:
     Currency: priceCurrency
     cluster_id: cluster_id
     Link: url
-    TitleDetails: title_description
     Model: model
     PartNo: model_number
     Type: product_type
@@ -256,7 +253,6 @@ column_mapping:
     cur: priceCurrency
     cluster_id: cluster_id
     link: url
-    name_desc: title_description
     mdl: model
     pn: model_number
     cat: product_type

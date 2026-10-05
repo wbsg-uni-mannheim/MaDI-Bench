@@ -12,17 +12,13 @@
       "kwargs": {},
       "resolver": "most_complete"
     },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
-    },
     "color": {
       "kwargs": {},
       "resolver": "voting"
     },
     "description": {
       "kwargs": {},
-      "resolver": "longest_string"
+      "resolver": "most_complete"
     },
     "form_factor": {
       "kwargs": {},
@@ -77,10 +73,6 @@
       "resolver": "median"
     },
     "title": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
-    "title_description": {
       "kwargs": {},
       "resolver": "longest_string"
     },

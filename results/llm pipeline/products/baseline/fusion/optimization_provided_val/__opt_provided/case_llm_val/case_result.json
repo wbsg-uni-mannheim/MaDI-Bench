@@ -2,43 +2,39 @@
   "case_name": "llm_val",
   "rules": {
     "brand": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "voting",
+      "kwargs": {}
     },
     "bus_type": {
-      "resolver": "voting",
+      "resolver": "most_complete",
       "kwargs": {}
     },
     "chipset_name": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
-    },
-    "cluster_id": {
-      "resolver": "voting",
+      "resolver": "longest_string",
       "kwargs": {}
     },
     "color": {
-      "resolver": "longest_string",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
     },
     "description": {
       "resolver": "longest_string",
       "kwargs": {}
     },
     "form_factor": {
-      "resolver": "weighted_voting",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
     },
     "height_mm": {
-      "resolver": "minimum",
+      "resolver": "maximum",
       "kwargs": {}
     },
     "interface_type": {
@@ -46,7 +42,7 @@
       "kwargs": {}
     },
     "length_mm": {
-      "resolver": "minimum",
+      "resolver": "median",
       "kwargs": {}
     },
     "memory_type": {
@@ -54,92 +50,70 @@
       "kwargs": {}
     },
     "model": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "longest_string",
+      "kwargs": {}
     },
     "model_number": {
-      "resolver": "prefer_higher_trust",
-      "kwargs": {
-        "trust_key": "trust_score"
-      }
+      "resolver": "voting",
+      "kwargs": {}
     },
     "price": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "median",
+      "kwargs": {}
     },
     "priceCurrency": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "voting",
+      "kwargs": {}
     },
     "product_type": {
       "resolver": "voting",
       "kwargs": {}
     },
     "read_speed_mb_s": {
-      "resolver": "maximum",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_3"
+        ]
+      }
     },
     "storage_connection_type": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "most_complete",
+      "kwargs": {}
     },
     "storage_gb": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
+      "resolver": "median",
+      "kwargs": {}
     },
     "title": {
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "title_description": {
-      "resolver": "longest_string",
-      "kwargs": {}
-    },
     "url": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      }
-    },
-    "vram_gb": {
-      "resolver": "weighted_voting",
-      "kwargs": {}
-    },
-    "weight_g": {
       "resolver": "prefer_higher_trust",
       "kwargs": {
         "trust_key": "trust_score"
       }
     },
+    "vram_gb": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "weight_g": {
+      "resolver": "median",
+      "kwargs": {}
+    },
     "width_mm": {
-      "resolver": "minimum",
+      "resolver": "maximum",
       "kwargs": {}
     },
     "write_speed_mb_s": {
-      "resolver": "maximum",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_3"
+        ]
+      }
     }
   },
   "accuracy_by_mode": {},

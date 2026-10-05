@@ -1,43 +1,43 @@
 {
   "input_sources": 4,
-  "total_input_records": 2365,
-  "fused_output_records": 998,
-  "fusion_ratio": 0.578,
-  "row_gain_over_largest": 345,
-  "row_gain_percentage": 52.83,
-  "merged_records": 569,
-  "input_columns_target_schema": 27,
-  "fused_output_columns": 28,
-  "average_input_density": 0.4972,
-  "fused_data_density": 0.5568,
+  "total_input_records": 2367,
+  "fused_output_records": 862,
+  "fusion_ratio": 0.6358,
+  "row_gain_over_largest": 202,
+  "row_gain_percentage": 30.61,
+  "merged_records": 619,
+  "input_columns_target_schema": 25,
+  "fused_output_columns": 26,
+  "average_input_density": 0.4728,
+  "fused_data_density": 0.5324,
   "data_density_change": 0.0596,
   "largest_source_name": "products_1",
-  "largest_source_density": 0.5186,
-  "density_change_vs_largest": 0.0383,
+  "largest_source_density": 0.4986,
+  "density_change_vs_largest": 0.0338,
   "per_source_stats": [
     {
-      "name": "products_4",
-      "rows": 496,
-      "columns": 27,
-      "density": 0.4857
+      "name": "products_1",
+      "rows": 660,
+      "columns": 25,
+      "density": 0.4986
     },
     {
-      "name": "products_1",
-      "rows": 653,
-      "columns": 27,
-      "density": 0.5186
+      "name": "products_3",
+      "rows": 574,
+      "columns": 25,
+      "density": 0.4532
     },
     {
       "name": "products_2",
       "rows": 635,
-      "columns": 27,
-      "density": 0.4961
+      "columns": 25,
+      "density": 0.4736
     },
     {
-      "name": "products_3",
-      "rows": 581,
-      "columns": 27,
-      "density": 0.4843
+      "name": "products_4",
+      "rows": 498,
+      "columns": 25,
+      "density": 0.4601
     }
   ]
 }

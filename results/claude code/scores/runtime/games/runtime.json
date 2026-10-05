@@ -1,0 +1,71 @@
+{
+  "original_task": "<p4-run:games_base>",
+  "stages": [
+    {
+      "command": [
+        "bash",
+        "work/rebuild.sh"
+      ],
+      "seconds": 373.5455275620334,
+      "returncode": 0
+    }
+  ],
+  "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+  "original_sha256": {
+    "<p4-run:games_base>/workspace/task/input/schemamatching/Gaming_Platforms_Taxonomy.csv": "5c50b18e39696cb7389ce39de50369d208e3d67fdf07f3da2dc7a40cea49f572",
+    "<p4-run:games_base>/workspace/task/input/schemamatching/ESRB_Rating_Taxonomy.csv": "3068183234cae431e9cf3d1ad39604c180bf751202cb270b0f7130dea7775ea1",
+    "<p4-run:games_base>/workspace/task/input/schemamatching/Video_Game_Genres_Taxonomy.csv": "9239ac6da7c1fc772b1c98f624c22bcf77550e434e5d2a18757bc57f5d5b4917",
+    "<p4-run:games_base>/workspace/task/input/schemamatching/target_schema.json": "db3357047845d8920e7f4195d903fc8811a2fc01ae8b118633a6ebac3569ec70",
+    "<p4-run:games_base>/workspace/task/input/data/sales_metadata.json": "dd166af088f64da45d7b138c4640ce494d388e21492fe85b375d7181401a4b40",
+    "<p4-run:games_base>/workspace/task/input/data/metacritic.csv": "08e1dfa5d8c00a9196a0c4de285eac44977acb37f95fdbdd4c56ebd8064a572e",
+    "<p4-run:games_base>/workspace/task/input/data/dbpedia_metadata.json": "8b2c41fb1ac65d0c4c30148a0b7064040c9e59ea192ab604bb2205f124d2de91",
+    "<p4-run:games_base>/workspace/task/input/data/dbpedia.csv": "e7c7e4677e8dc95b245c83ab320428b5ec3fca65217143a7c90e7871221ea4c0",
+    "<p4-run:games_base>/workspace/task/input/data/sales.csv": "184d4c4fc93c0775b5f283c6cda7118f4fe5bf22fa4ca579ada06701dc3cc5fd",
+    "<p4-run:games_base>/workspace/task/input/data/metacritic_metadata.json": "e118e92ca3d09293a12c92a1904d4fc2035c202bbdce151940d0ce3a95bd735f",
+    "<p4-run:games_base>/workspace/work/norm.py": "e98cd3380904999e6a58ada41332d2b13e514db9c8345ba28970e89cd2aa01bf",
+    "<p4-run:games_base>/workspace/work/s3_blocking.py": "bcd10b25b1dcb5f872e8ce6b808afc81b4dabc1d460aa997c8b1ab3190ac7f70",
+    "<p4-run:games_base>/workspace/work/s7_export_diag.py": "a64e2c2e36a32a56d756cea436bbb57c727e11f6386039b95124f4bb7431e626",
+    "<p4-run:games_base>/workspace/work/s1_schema.py": "686f601ab6ae285c7cc53eb03606aa792e120c848e10930f74e6d3c6667ffd6d",
+    "<p4-run:games_base>/workspace/work/s2_normalize.py": "151fdd02c3a974eeed38b12740647112d5271af1f8241d4d899744403ef6eb9c",
+    "<p4-run:games_base>/workspace/work/rebuild.sh": "84afe63fbaac4a0923a0d705153b09639d1302f0f569eaad84de54f42823d03c",
+    "<p4-run:games_base>/workspace/work/s4_matching.py": "0eedaa03544f8ce50b57ac9eebb8049d51738b0615976a403d86c2310a6b534c",
+    "<p4-run:games_base>/workspace/work/s5_cluster.py": "29c1ff3e134bb18ae9abdf81ec72af10ed2487093ecc9b420cb02ed5ba5ff889",
+    "<p4-run:games_base>/workspace/work/s6_fusion.py": "962e27455c6b5a74132b69993b3b284f475b539a2754b665da6b4c162737ddc2",
+    "<p4-run:games_base>/submission/sm_mapping.csv": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+    "<p4-run:games_base>/submission/blocking/candidates.csv": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+    "<p4-run:games_base>/submission/correspondences.csv": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+    "<p4-run:games_base>/submission/membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+    "<p4-run:games_base>/submission/fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b"
+  },
+  "fresh_state_verified": true,
+  "wall_seconds": 373.54554978059605,
+  "artifact_checks": {
+    "sm_mapping.csv": {
+      "original_sha256": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+      "replay_sha256": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+      "bytes_identical": true
+    },
+    "blocking/candidates.csv": {
+      "original_sha256": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+      "replay_sha256": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+      "bytes_identical": true
+    },
+    "correspondences.csv": {
+      "original_sha256": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+      "replay_sha256": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+      "bytes_identical": true
+    },
+    "membership.csv": {
+      "original_sha256": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+      "replay_sha256": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+      "bytes_identical": true
+    },
+    "fused.csv": {
+      "original_sha256": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+      "replay_sha256": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+      "bytes_identical": true
+    }
+  },
+  "originals_unchanged": true,
+  "status": "executed"
+}

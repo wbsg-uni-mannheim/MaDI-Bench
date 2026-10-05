@@ -1,0 +1,61 @@
+row,column,printed,value,formatted,status,source,note
+Games,PC P1,99.53,0.9952830188679245,99.53,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Games,PC P2,98.58,0.9858490566037736,98.58,match,"table6/blocking_em_per_pair.csv, unweighted mean over 1 row(s)",games: the blockers the stored P2 run selected on the test split
+Games,PC P3,96.85,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,PC P4,97.21,0.9721047495120365,97.21,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Games,RR P1,99.92,0.9992210445635897,99.92,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Games,RR P2,99.88,0.9988233520558314,99.88,match,"table6/blocking_em_per_pair.csv, unweighted mean over 1 row(s)",
+Games,RR P3,99.96,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,RR P4,99.99,0.9998614687148236,99.99,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Games,F1 P1,89.47,0.894681411269089,89.47,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Games,F1 P2,67.30,0.6729661133214433,67.30,match,results/scores_v2.json p2_best_of_breeds stages.em_f1,mean of the per-pair F1 in table6/blocking_em_per_pair.csv = 0.672966
+Games,F1 P3,64.98,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,F1 P4,85.40,0.8540092165898618,85.40,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,PC P1,97.88,0.9787891557803061,97.88,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,PC P2,100.00,1.0,100.00,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,PC P3,100.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,PC P4,99.12,0.9911504424778761,99.12,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,RR P1,99.30,0.9929615732483111,99.30,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,RR P2,97.16,0.9716277513738094,97.16,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,RR P3,99.40,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,RR P4,99.82,0.9981681649788297,99.82,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,F1 P1,86.84,0.8683812902378136,86.84,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Companies,F1 P2,89.29,0.8928571428571428,89.29,match,results/scores_v2.json p2_best_of_breeds stages.em_f1,mean of the per-pair F1 in table6/blocking_em_per_pair.csv = 0.892857
+Companies,F1 P3,92.63,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,F1 P4,91.20,0.912029554375433,91.20,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,PC P1,96.55,0.9654654654654655,96.55,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,PC P2,99.85,0.9984984984984985,99.85,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,PC P3,99.85,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,PC P4,100.00,1.0,100.00,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,RR P1,99.67,0.9967093861799174,99.67,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,RR P2,99.64,0.9963609134326803,99.64,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,RR P3,99.85,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,RR P4,99.62,0.9962433571516816,99.62,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,F1 P1,95.37,0.9537170852307328,95.37,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Music,F1 P2,94.84,0.9483985986030724,94.84,match,results/scores_v2.json p2_best_of_breeds stages.em_f1,mean of the per-pair F1 in table6/blocking_em_per_pair.csv = 0.948399
+Music,F1 P3,98.10,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,F1 P4,95.48,0.9548199256214523,95.48,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Products,PC P1,100.00,1.0,100.00,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,PC P2,100.00,1.0,100.00,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,PC P3,93.33,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,PC P4,100.00,1.0,100.00,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,RR P1,71.89,0.718921377515576,71.89,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,RR P2,96.50,0.9649606853742588,96.50,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,RR P3,97.54,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,RR P4,97.85,0.9785473918215217,97.85,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,F1 P1,67.94,0.6793779580797836,67.94,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Products,F1 P2,85.48,0.8548248048248048,85.48,match,results/scores_v2.json p2_best_of_breeds stages.em_f1,mean of the per-pair F1 in table6/blocking_em_per_pair.csv = 0.854825
+Products,F1 P3,66.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,F1 P4,88.48,0.8848194435016673,88.48,match,"table6/blocking_em_per_pair.csv, unweighted mean over 3 row(s)",
+Papers,PC P1,97.90,0.9789915966386555,97.90,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,PC P2,99.55,0.9954981992797118,99.55,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,PC P3,97.69,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,PC P4,99.88,0.9987995198079231,99.88,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,RR P1,99.98,0.9997607692727425,99.98,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,RR P2,99.97,0.9996706951424248,99.97,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,RR P3,99.97,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,RR P4,99.99,0.9998935045436694,99.99,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,F1 P1,98.31,0.9830583278421658,98.31,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",
+Papers,F1 P2,99.70,0.996989401649921,99.70,match,results/scores_v2.json p2_best_of_breeds stages.em_f1,mean of the per-pair F1 in table6/blocking_em_per_pair.csv = 0.996989
+Papers,F1 P3,96.83,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,F1 P4,99.83,0.9983465879217417,99.83,match,"table6/blocking_em_per_pair.csv, unweighted mean over 2 row(s)",

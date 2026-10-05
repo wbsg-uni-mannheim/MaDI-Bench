@@ -1,0 +1,68 @@
+{
+  "original_task": "<p4-run:papers_base>",
+  "stages": [
+    {
+      "command": [
+        "bash",
+        "work/rebuild.sh"
+      ],
+      "seconds": 921.9161017620936,
+      "returncode": 0
+    }
+  ],
+  "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+  "original_sha256": {
+    "<p4-run:papers_base>/workspace/task/input/schemamatching/target_schema.json": "d1a6c65493ea3850e5d44d75d10b0919bc48b61e33ac6365a0a0c068f37be0ab",
+    "<p4-run:papers_base>/workspace/task/input/data/dblp_metadata.json": "6d92bb27fd5107e76d2ab01b4d8c8d13e380b7e7f6fe1059da600726b41efac9",
+    "<p4-run:papers_base>/workspace/task/input/data/open_alex_metadata.json": "d6b9b90ec98aca28ed538b4b4d098481493d54a99257a5e4bedbd404c814eee1",
+    "<p4-run:papers_base>/workspace/task/input/data/open_alex.jsonl": "1c3941b2af896eb45c0671d779333849bd3035dc749bdd23a9a381a4c23e7ed9",
+    "<p4-run:papers_base>/workspace/task/input/data/dblp.jsonl": "644a2c3ee63787e9745127c40c16dc6d903296dadd19760db9ece86aa10ebdf6",
+    "<p4-run:papers_base>/workspace/task/input/data/crossref_metadata.json": "cd9a2930d3143b57a02ee64658cb71e56e226093ea12969d1077d695b3c76845",
+    "<p4-run:papers_base>/workspace/task/input/data/crossref.jsonl": "5cf23872c9e62fac835312aa969291f1897186cfed764fc2fc401d4aeb333530",
+    "<p4-run:papers_base>/workspace/work/s3_blocking.py": "fe59d7badb0a2a736b0b6b3b58d71dc201cbc8895a5b2994104e12a501c662d8",
+    "<p4-run:papers_base>/workspace/work/s4_match.py": "ecd41944d513dc399fcef02f203e8f985f389fde8b6c16d32576d874cf8e5a3f",
+    "<p4-run:papers_base>/workspace/work/s1_schema.py": "d1e3b8bd94da139f073bd35bd76f3690329e48b710883f401f562cac8e876055",
+    "<p4-run:papers_base>/workspace/work/s2_normalize.py": "14af6766e0fa70ebf46ea3675689b223604a7e754e9cb046ef568a9b86ba4033",
+    "<p4-run:papers_base>/workspace/work/rebuild.sh": "e62ce54e6bf53ecf690842c478ad94887d73cb4387cb8785c5b1e252abb03f18",
+    "<p4-run:papers_base>/workspace/work/s5_cluster.py": "d6c789b267eb5f6eeda102449b148b8e2b2beaad06beb27925e68ff06a2adb2d",
+    "<p4-run:papers_base>/workspace/work/s4_features.py": "888142eb2b8819046d31f3303653b3cb1f3e37e978af4d6fee0f35104700d3f8",
+    "<p4-run:papers_base>/workspace/work/s7_diagnostics.py": "bbf3aa7540eff9a6964f241f79793c501f099f8ff10e322b4663ea65dcc41984",
+    "<p4-run:papers_base>/workspace/work/s6_fusion.py": "a4ccbadbf6e078556dd5b8003f1ed7c309b4ae832cb4463abc448cc31a045c35",
+    "<p4-run:papers_base>/submission/sm_mapping.csv": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+    "<p4-run:papers_base>/submission/blocking/candidates.csv": "0d0cb8c510a9adf3d0b368cd65bba94e290e4a7746195d3b2d0910733cd8f470",
+    "<p4-run:papers_base>/submission/correspondences.csv": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+    "<p4-run:papers_base>/submission/membership.csv": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+    "<p4-run:papers_base>/submission/fused.csv": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d"
+  },
+  "fresh_state_verified": true,
+  "wall_seconds": 921.916126254946,
+  "artifact_checks": {
+    "sm_mapping.csv": {
+      "original_sha256": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+      "replay_sha256": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+      "bytes_identical": true
+    },
+    "blocking/candidates.csv": {
+      "original_sha256": "0d0cb8c510a9adf3d0b368cd65bba94e290e4a7746195d3b2d0910733cd8f470",
+      "replay_sha256": "22b1e012e39d60c53e7df403bd617d20bacf3afa806704d2ce411501d52fa38d",
+      "bytes_identical": false
+    },
+    "correspondences.csv": {
+      "original_sha256": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+      "replay_sha256": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+      "bytes_identical": true
+    },
+    "membership.csv": {
+      "original_sha256": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+      "replay_sha256": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+      "bytes_identical": true
+    },
+    "fused.csv": {
+      "original_sha256": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d",
+      "replay_sha256": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d",
+      "bytes_identical": true
+    }
+  },
+  "originals_unchanged": true,
+  "status": "executed"
+}

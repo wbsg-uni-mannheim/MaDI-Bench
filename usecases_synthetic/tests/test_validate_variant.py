@@ -1074,3 +1074,130 @@ class TestParseStages:
     def test_invalid(self) -> None:
         with pytest.raises(ValueError, match="Unknown stage"):
             _parse_stages("sm,xxx")
+
+
+# ---------------------------------------------------------------------------
+# Tests: fusion per-attribute CSV / report table on the C12 block shape
+# ---------------------------------------------------------------------------
+
+
+def _c12_fusion_block(scale: float) -> dict[str, Any]:
+    """A C12 fusion stage block (committee_fusion_c12 per_attribute shape:
+    one accuracy per member + best/mean member accuracy, no ``spread``)."""
+    return {
+        "stage": "fusion",
+        "per_attribute": {
+            "title": {
+                "voting_only": 0.8 * scale,
+                "prefer_higher_trust_only": 0.6 * scale,
+                "best_member_accuracy": 0.8 * scale,
+                "mean_member_accuracy": 0.7 * scale,
+            },
+            "authors": {
+                "voting_only": 0.5 * scale,
+                "prefer_higher_trust_only": 0.5 * scale,
+                "best_member_accuracy": 0.5 * scale,
+                "mean_member_accuracy": 0.5 * scale,
+            },
+        },
+    }
+
+
+class TestFusionPerAttributeC12:
+    """``fusion_per_attribute.csv`` read only the legacy keys
+    (``best_strategy_accuracy`` / ``spread``), so on the C12 block every
+    value was 0.0 for every domain. The file format stays unchanged."""
+
+    def test_summary_c12_shape(self) -> None:
+        from usecases_synthetic.scripts.validate_variant import (
+            _fusion_attribute_summary,
+        )
+
+        best, mean, spread = _fusion_attribute_summary(
+            _c12_fusion_block(1.0)["per_attribute"]["title"]
+        )
+        assert best == pytest.approx(0.8)
+        assert mean == pytest.approx(0.7)
+        assert spread == pytest.approx(0.2)
+
+    def test_summary_ignores_baseline_and_delta_twins(self) -> None:
+        from usecases_synthetic.scripts.validate_variant import (
+            _fusion_attribute_summary,
+        )
+
+        augmented = {
+            "voting_only": 0.8,
+            "voting_only_baseline": 0.1,
+            "voting_only_delta": 0.7,
+            "prefer_higher_trust_only": 0.6,
+            "best_member_accuracy": 0.8,
+            "best_member_accuracy_baseline": 0.9,
+        }
+        best, mean, spread = _fusion_attribute_summary(augmented)
+        assert best == pytest.approx(0.8)
+        assert mean == pytest.approx(0.7)
+        assert spread == pytest.approx(0.2)
+
+    def test_summary_legacy_shape_unchanged(self) -> None:
+        from usecases_synthetic.scripts.validate_variant import (
+            _fusion_attribute_summary,
+        )
+
+        legacy = {
+            "best_strategy_accuracy": 0.75,
+            "mean_strategy_accuracy": 0.725,
+            "spread": 0.05,
+            "voting": 0.75,
+            "longest_string": 0.70,
+        }
+        assert _fusion_attribute_summary(legacy) == pytest.approx((0.75, 0.725, 0.05))
+        assert _fusion_attribute_summary({}) == (0.0, 0.0, 0.0)
+
+    def test_csv_real_values_same_format(self, tmp_path: Path) -> None:
+        from usecases_synthetic.scripts.validate_variant import (
+            _write_fusion_per_attribute_csv,
+        )
+
+        path = _write_fusion_per_attribute_csv(
+            tmp_path / "fusion_per_attribute.csv",
+            _c12_fusion_block(1.0),
+            _c12_fusion_block(0.5),
+        )
+        df = pd.read_csv(path)
+        assert df.columns.tolist() == [
+            "attribute",
+            "best_accuracy",
+            "best_accuracy_baseline",
+            "best_accuracy_delta",
+            "mean_accuracy",
+            "mean_accuracy_baseline",
+            "mean_accuracy_delta",
+            "spread",
+            "spread_baseline",
+            "spread_delta",
+        ]
+        row = df.set_index("attribute").loc["title"]
+        assert row["best_accuracy"] == pytest.approx(0.8)
+        assert row["best_accuracy_baseline"] == pytest.approx(0.4)
+        assert row["best_accuracy_delta"] == pytest.approx(0.4)
+        assert row["mean_accuracy"] == pytest.approx(0.7)
+        assert row["mean_accuracy_baseline"] == pytest.approx(0.35)
+        assert row["spread"] == pytest.approx(0.2)
+        assert row["spread_baseline"] == pytest.approx(0.1)
+        assert row["spread_delta"] == pytest.approx(0.1)
+        authors = df.set_index("attribute").loc["authors"]
+        assert authors["spread"] == pytest.approx(0.0)
+        assert authors["best_accuracy"] == pytest.approx(0.5)
+
+    def test_report_table_real_values(self) -> None:
+        from usecases_synthetic.scripts.validate_variant import (
+            _fusion_per_attribute_table,
+        )
+
+        lines = _fusion_per_attribute_table(
+            _c12_fusion_block(1.0), _c12_fusion_block(0.5)
+        )
+        title = next(line for line in lines if line.startswith("| title |"))
+        assert title == (
+            "| title | 0.8000 | 0.4000 | 0.4000 | 0.2000 | 0.1000 | 0.1000 |"
+        )

@@ -15,7 +15,6 @@ attribute_classes:
     product_description: secondary
     list_price: secondary
     currency_code: secondary
-    name_and_description: secondary
     category: key
     model_name: secondary
     manufacturer_part_number: secondary
@@ -40,7 +39,6 @@ attribute_classes:
     descriptionText: secondary
     priceAmount: secondary
     currency: secondary
-    titleAndDescription: secondary
     productCategory: key
     modelName: secondary
     mpn: secondary
@@ -65,7 +63,6 @@ attribute_classes:
     Details: secondary
     Price: secondary
     Currency: secondary
-    TitleDetails: secondary
     Type: key
     Model: secondary
     PartNo: secondary
@@ -90,7 +87,6 @@ attribute_classes:
     desc: secondary
     amt: secondary
     cur: secondary
-    name_desc: secondary
     cat: key
     mdl: secondary
     pn: secondary
@@ -117,7 +113,6 @@ attribute_mapping:
     product_description: description
     list_price: price
     currency_code: priceCurrency
-    name_and_description: title_description
     category: product_type
     model_name: model
     manufacturer_part_number: model_number
@@ -142,7 +137,6 @@ attribute_mapping:
     descriptionText: description
     priceAmount: price
     currency: priceCurrency
-    titleAndDescription: title_description
     productCategory: product_type
     modelName: model
     mpn: model_number
@@ -167,7 +161,6 @@ attribute_mapping:
     Details: description
     Price: price
     Currency: priceCurrency
-    TitleDetails: title_description
     Type: product_type
     Model: model
     PartNo: model_number
@@ -192,7 +185,6 @@ attribute_mapping:
     desc: description
     amt: price
     cur: priceCurrency
-    name_desc: title_description
     cat: product_type
     mdl: model
     pn: model_number
@@ -237,7 +229,7 @@ stretch_factor: 1.5
 single_source_survivor_cap_hard: 0.05
 per_cell_ceiling_delta: 0.10
 
-# Products R1 + cross-knob extension columns: tighten K3 ceiling for already-sparse
+# Products extension columns: tighten K3 ceiling for already-sparse
 # attributes so stretch never demands negative headroom. Mirrors companies dbpedia
 # financials + games dbpedia.franchise pattern.
 per_source_attribute_overrides:

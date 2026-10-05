@@ -1,0 +1,383 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+products_1_10006478,products_1,products_1_10006478,bus_type,bus_type,SATA,SATA,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",12
+products_1_10006478,products_3,products_3_13012302,bus_type,bus_type,SATA III,SATA,normalization,bus_qualifier_drop,,14
+products_1_10006478,products_4,products_4_39947591,bus_type,bus_type,SATA 6Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",17
+products_1_10006478,products_1,products_1_10006478,form_factor,form_factor,"2.5""",2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",24
+products_1_10006478,products_2,products_2_8399803,form_factor,form_factor,"2.5""",2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",24
+products_1_10006478,products_3,products_3_13012302,form_factor,form_factor,2.5-Inch,2.5-inch,normalization,inch_notation,,5
+products_1_10006478,products_4,products_4_39947591,form_factor,form_factor,2.5-Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",5
+products_1_10006478,products_1,products_1_10006478,storage_connection_type,storage_connection_type,2.5-inch SATA,2.5-inch SATA,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""identity""]]}",25
+products_1_10006478,products_2,products_2_8399803,storage_connection_type,storage_connection_type,2.5-inch SATA,2.5-inch SATA,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",25
+products_1_10006478,products_3,products_3_13012302,storage_connection_type,storage_connection_type,"2.5"" SATA",2.5-inch SATA,normalization,inch_notation,,5
+products_1_10565065,products_4,products_4_38328055,brand,brand,Western Digital,Western Digital,identity,,"{""product_type"": ""SSD""}",18
+products_1_10565065,products_1,products_1_10565065,form_factor,form_factor,M.2 2280,M.2 2280,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""identity""]]}",17
+products_1_10565065,products_1,products_1_10565065,read_speed_mb_s,read_speed_mb_s,"2,400.0",2400.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",8
+products_1_10565065,products_2,products_2_72827975,read_speed_mb_s,read_speed_mb_s,"2,400.0",2400.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_10565065,products_3,products_3_36838708,read_speed_mb_s,read_speed_mb_s,"2,400.0",2400.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_10565065,products_4,products_4_38328055,read_speed_mb_s,read_speed_mb_s,"2,400.0",2400.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_1088849,products_4,products_4_21085676,brand,brand,ADATA,ADATA,identity,,"{""product_type"": ""SSD""}",11
+products_1_1088849,products_1,products_1_1088849,color,color,black,Black,normalization,title_case_from_uniform,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_2,products_2_21120495,color,color,black,Black,normalization,title_case_from_uniform,"{""product_type"": ""SSD""}",4
+products_1_1088849,products_3,products_3_18576054,color,color,black,Black,normalization,title_case_from_uniform,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_4,products_4_21085676,color,color,black,Black,normalization,title_case_from_uniform,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_3,products_3_18576054,form_factor,form_factor,M.2 2280,M.2 2280,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",17
+products_1_1088849,products_1,products_1_1088849,read_speed_mb_s,read_speed_mb_s,"3,500.0",3500.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",9
+products_1_1088849,products_3,products_3_18576054,read_speed_mb_s,read_speed_mb_s,"3,500.0",3500.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",9
+products_1_1088849,products_4,products_4_21085676,read_speed_mb_s,read_speed_mb_s,"3,500.0",3500.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",9
+products_1_1088849,products_1,products_1_1088849,weight_g,weight_g,8.0,8.0,identity,,"{""product_type"": ""SSD""}",4
+products_1_1088849,products_2,products_2_21120495,weight_g,weight_g,8.0,8.0,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_3,products_3_18576054,weight_g,weight_g,8.0,8.0,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_4,products_4_21085676,weight_g,weight_g,8.0,8.0,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_1088849,products_2,products_2_21120495,write_speed_mb_s,write_speed_mb_s,"3,000.0",3000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",9
+products_1_1088849,products_3,products_3_18576054,write_speed_mb_s,write_speed_mb_s,"3,000.0",3000.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",9
+products_1_1088849,products_4,products_4_21085676,write_speed_mb_s,write_speed_mb_s,"3,000.0",3000.0,normalization,number_locale,"{""product_type"": ""SSD""}",9
+products_1_12049659,products_4,products_4_80286980,bus_type,bus_type,USB 3.0,USB 3.0,identity,,"{""product_type"": ""USB_STICK""}",36
+products_1_12424905,products_1,products_1_12424905,bus_type,bus_type,USB 3.0,USB 3.0,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",36
+products_1_12424905,products_2,products_2_23846849,bus_type,bus_type,USB 3.0,USB 3.0,identity,,"{""product_type"": ""USB_STICK""}",36
+products_1_12424905,products_3,products_3_96863812,bus_type,bus_type,USB 3.0,USB 3.0,identity,,"{""product_type"": ""USB_STICK""}",36
+products_1_1252810,products_1,products_1_1252810,brand,brand,Kingston Technology,Kingston,normalization,brand_suffix_strip,"{""product_type"": ""USB_STICK""}",7
+products_1_1252810,products_2,products_2_3708141,brand,brand,Kingston,Kingston,identity,,"{""product_type"": ""USB_STICK""}",29
+products_1_1252810,products_3,products_3_22646558,brand,brand,Kingston Technology,Kingston,normalization,brand_suffix_strip,"{""product_type"": ""USB_STICK""}",7
+products_1_1252810,products_4,products_4_60975501,brand,brand,Kingston Technology,Kingston,normalization,brand_suffix_strip,"{""product_type"": ""USB_STICK""}",7
+products_1_1252810,products_3,products_3_22646558,bus_type,bus_type,USB 2.0,USB 2.0,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",15
+products_1_1252810,products_1,products_1_1252810,interface_type,interface_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""10"", ""identity""]]}",10
+products_1_1252810,products_2,products_2_3708141,interface_type,interface_type,Type-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_1252810,products_3,products_3_22646558,interface_type,interface_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",10
+products_1_1252810,products_4,products_4_60975501,interface_type,interface_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK""}",10
+products_1_1252810,products_2,products_2_3708141,storage_connection_type,storage_connection_type,Type-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_1252810,products_3,products_3_22646558,storage_connection_type,storage_connection_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",14
+products_1_13600999,products_1,products_1_13600999,bus_type,bus_type,USB 3.1 Gen 1,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",2
+products_1_13600999,products_2,products_2_88687859,bus_type,bus_type,USB 3.1 Gen 1,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",2
+products_1_13600999,products_2,products_2_88687859,color,color,Black,Black,identity,,"{""product_type"": ""USB_STICK""}",21
+products_1_14296399,products_1,products_1_14296399,bus_type,bus_type,SAS 6Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",10
+products_1_14296399,products_2,products_2_51932172,bus_type,bus_type,SAS 6Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",10
+products_1_14296399,products_4,products_4_51893803,bus_type,bus_type,6Gb/s SAS,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",2
+products_1_14296399,products_1,products_1_14296399,form_factor,form_factor,2.5-inch,2.5-inch,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+products_1_14296399,products_1,products_1_14296399,storage_connection_type,storage_connection_type,2.5-inch SAS,2.5-inch SAS,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",5
+products_1_15871125,products_2,products_2_43883075,form_factor,form_factor,M.2 (2280),M.2 2280,normalization,paren_unwrap,"{""product_type"": ""SSD""}",3
+products_1_15871125,products_1,products_1_15871125,read_speed_mb_s,read_speed_mb_s,"1,550.0",1550.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",2
+products_1_15871125,products_3,products_3_23016862,read_speed_mb_s,read_speed_mb_s,1550.0,1550.0,identity,,"{""product_type"": ""SSD""}",1
+products_1_15871125,products_4,products_4_67488123,read_speed_mb_s,read_speed_mb_s,"1,550.0",1550.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",2
+products_1_16479164,products_1,products_1_16479164,bus_type,bus_type,USB 3.0,USB 3.0,identity,,"{""product_type"": ""USB_STICK""}",36
+products_1_16588524,products_1,products_1_16588524,bus_type,bus_type,USB 3.2 Gen 1 (USB 3.0),USB 3.0,normalization,usb_if_fold+bus_qualifier_drop,"{""product_type"": ""USB_STICK""}",2
+products_1_16588524,products_1,products_1_16588524,interface_type,interface_type,USB-A and Lightning,USB Type-A and Lightning,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_16588524,products_1,products_1_16588524,storage_connection_type,storage_connection_type,USB-A and Lightning,USB Type-A and Lightning,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",3
+products_1_16588524,products_2,products_2_33848192,storage_connection_type,storage_connection_type,USB-A and Lightning,USB Type-A and Lightning,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_16588524,products_3,products_3_82272597,storage_connection_type,storage_connection_type,USB-A and Lightning,USB Type-A and Lightning,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_16849538,products_1,products_1_16849538,bus_type,bus_type,USB 3.2 Gen 1 (USB 3.0),USB 3.0,normalization,usb_if_fold+bus_qualifier_drop,"{""product_type"": ""USB_STICK""}",2
+products_1_16849538,products_1,products_1_16849538,interface_type,interface_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",3
+products_1_16849538,products_2,products_2_36176263,interface_type,interface_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_16849538,products_3,products_3_61906477,interface_type,interface_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_16849538,products_1,products_1_16849538,storage_connection_type,storage_connection_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",3
+products_1_16849538,products_2,products_2_36176263,storage_connection_type,storage_connection_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_16849538,products_3,products_3_61906477,storage_connection_type,storage_connection_type,USB-A,USB Type-A,normalization,interface_alias,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_18374077,products_1,products_1_18374077,memory_type,memory_type,GDDR5,GDDR5,identity,,"{""product_type"": ""GPU""}",28
+products_1_18374077,products_2,products_2_54337235,memory_type,memory_type,GDDR5,GDDR5,identity,,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",28
+products_1_18374077,products_1,products_1_18374077,vram_gb,vram_gb,2.0,2.0,identity,,"{""product_type"": ""GPU""}",13
+products_1_18374077,products_2,products_2_54337235,vram_gb,vram_gb,2.0,2.0,identity,,"{""product_type"": ""GPU""}",13
+products_1_18406024,products_2,products_2_41211362,bus_type,bus_type,SATA 6Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",17
+products_1_18406024,products_3,products_3_91452319,bus_type,bus_type,SATA 6Gb/s,SATA,normalization,bus_qualifier_drop,,17
+products_1_18406024,products_1,products_1_18406024,form_factor,form_factor,"3.5""",3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",15
+products_1_18406024,products_4,products_4_3817876,form_factor,form_factor,"3.5""",3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",15
+products_1_18406024,products_1,products_1_18406024,storage_gb,storage_gb,"8,000.0",8000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",5
+products_1_18406024,products_3,products_3_91452319,storage_gb,storage_gb,"8,000.0",8000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""provenance"": [[""5"", ""reformat_number""]]}",5
+products_1_18406024,products_4,products_4_3817876,storage_gb,storage_gb,8000.0,8000.0,identity,,"{""product_type"": ""HDD""}",5
+products_1_18451047,products_3,products_3_80768725,bus_type,bus_type,USB3.0,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",1
+products_1_19001308,products_1,products_1_19001308,memory_type,memory_type,GDDR5,GDDR5,identity,,"{""product_type"": ""GPU""}",28
+products_1_19001308,products_3,products_3_18687923,memory_type,memory_type,GDDR5,GDDR5,identity,,"{""product_type"": ""GPU""}",28
+products_1_19001308,products_1,products_1_19001308,vram_gb,vram_gb,4.0,4.0,identity,,"{""product_type"": ""GPU"", ""provenance"": [[""10"", ""identity""]]}",5
+products_1_19001308,products_3,products_3_18687923,vram_gb,vram_gb,4.0,4.0,identity,,"{""product_type"": ""GPU""}",5
+products_1_19001308,products_4,products_4_22290248,vram_gb,vram_gb,4096.0,4.0,normalization,mb_to_gb,"{""product_type"": ""GPU""}",1
+products_1_19001308,products_1,products_1_19001308,weight_g,weight_g,0.6000000000000001,600.0,normalization,float_noise+kg_to_g,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_19001308,products_2,products_2_55013364,weight_g,weight_g,0.6000000000000001,600.0,normalization,float_noise+kg_to_g,"{""product_type"": ""GPU""}",4
+products_1_19001308,products_3,products_3_18687923,weight_g,weight_g,0.6000000000000001,600.0,normalization,float_noise+kg_to_g,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_19001308,products_4,products_4_22290248,weight_g,weight_g,0.6000000000000001,600.0,normalization,float_noise+kg_to_g,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_19453676,products_2,products_2_69750969,form_factor,form_factor,M.2 2280,M.2 2280,identity,,"{""product_type"": ""SSD""}",17
+products_1_19453676,products_1,products_1_19453676,read_speed_mb_s,read_speed_mb_s,"2,000.0",2000.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_19453676,products_2,products_2_69750969,read_speed_mb_s,read_speed_mb_s,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_19453676,products_3,products_3_38275815,read_speed_mb_s,read_speed_mb_s,"2,000.0",2000.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_19453676,products_4,products_4_54530409,read_speed_mb_s,read_speed_mb_s,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_19453676,products_1,products_1_19453676,storage_gb,storage_gb,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_19453676,products_3,products_3_38275815,storage_gb,storage_gb,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_19453676,products_1,products_1_19453676,write_speed_mb_s,write_speed_mb_s,"1,700.0",1700.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_19453676,products_2,products_2_69750969,write_speed_mb_s,write_speed_mb_s,"1,700.0",1700.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",3
+products_1_19453676,products_3,products_3_38275815,write_speed_mb_s,write_speed_mb_s,"1,700.0",1700.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_19453676,products_4,products_4_54530409,write_speed_mb_s,write_speed_mb_s,1700.0,1700.0,identity,,"{""product_type"": ""SSD""}",1
+products_1_19733045,products_1,products_1_19733045,memory_type,memory_type,GDDR6,GDDR6,identity,,"{""product_type"": ""GPU""}",28
+products_1_19733045,products_2,products_2_90143852,memory_type,memory_type,GDDR6,GDDR6,identity,,"{""product_type"": ""GPU""}",28
+products_1_19733045,products_3,products_3_93281278,memory_type,memory_type,GDDR6,GDDR6,identity,,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",28
+products_1_19807424,products_1,products_1_19807424,vram_gb,vram_gb,6.0,6.0,identity,,"{""product_type"": ""GPU""}",10
+products_1_19807424,products_2,products_2_8975311,vram_gb,vram_gb,6.0,6.0,identity,,"{""product_type"": ""GPU""}",10
+products_1_21446102,products_1,products_1_21446102,brand,brand,Western Digital,Western Digital,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""identity""]]}",18
+products_1_21446102,products_1,products_1_21446102,color,color,White,White,identity,,"{""product_type"": ""HDD""}",2
+products_1_21446102,products_2,products_2_25776315,color,color,White,White,identity,,"{""product_type"": ""HDD""}",2
+products_1_21446102,products_1,products_1_21446102,storage_gb,storage_gb,"1,000.0",1000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_21663730,products_1,products_1_21663730,bus_type,bus_type,SAS,SAS,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",9
+products_1_21663730,products_2,products_2_58710753,bus_type,bus_type,SAS 12Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",3
+products_1_21663730,products_4,products_4_50360533,bus_type,bus_type,SAS,SAS,identity,,"{""product_type"": ""HDD""}",9
+products_1_21663730,products_1,products_1_21663730,form_factor,form_factor,2.5-inch,2.5-inch,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""identity""]]}",4
+products_1_21663730,products_3,products_3_18175862,form_factor,form_factor,2.5-inch,2.5-inch,identity,,"{""product_type"": ""HDD""}",4
+products_1_21663730,products_4,products_4_50360533,form_factor,form_factor,"2.5""",2.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",24
+products_1_21663730,products_2,products_2_58710753,storage_connection_type,storage_connection_type,2.5-inch SAS,2.5-inch SAS,identity,,"{""product_type"": ""HDD""}",5
+products_1_21663730,products_3,products_3_18175862,storage_connection_type,storage_connection_type,2.5-inch SAS,2.5-inch SAS,identity,,"{""product_type"": ""HDD""}",5
+products_1_22055981,products_1,products_1_22055981,bus_type,bus_type,PCI Express  x16,PCI Express x16,normalization,whitespace,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_22055981,products_2,products_2_30142035,bus_type,bus_type,PCI Express  x16,PCI Express x16,normalization,whitespace,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_22055981,products_3,products_3_85807926,bus_type,bus_type,PCI Express  x16,PCI Express x16,normalization,whitespace,"{""product_type"": ""GPU"", ""provenance"": [[""6"", ""whitespace_corrupt""]]}",3
+products_1_22326836,products_1,products_1_22326836,brand,brand,Sapphire Technology,Sapphire,normalization,brand_suffix_strip,"{""product_type"": ""GPU""}",1
+products_1_22326836,products_2,products_2_62202192,brand,brand,Sapphire,Sapphire,identity,,"{""product_type"": ""GPU""}",7
+products_1_22326836,products_3,products_3_47205216,brand,brand,Sapphire,Sapphire,identity,,"{""product_type"": ""GPU""}",7
+products_1_22326836,products_4,products_4_76264958,memory_type,memory_type,GDDR5,GDDR5,identity,,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",28
+products_1_2237933,products_2,products_2_7582500,brand,brand,Kingston Technology,Kingston,normalization,brand_suffix_strip,"{""product_type"": ""USB_STICK""}",7
+products_1_2237933,products_3,products_3_5160662,color,color,Black,Black,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",21
+products_1_2237933,products_1,products_1_2237933,interface_type,interface_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",10
+products_1_2237933,products_2,products_2_7582500,interface_type,interface_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK""}",10
+products_1_2237933,products_1,products_1_2237933,storage_connection_type,storage_connection_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",14
+products_1_2237933,products_2,products_2_7582500,storage_connection_type,storage_connection_type,USB Type-A,USB Type-A,identity,,"{""product_type"": ""USB_STICK""}",14
+products_1_23418968,products_2,products_2_35250546,bus_type,bus_type,SAS 12Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",3
+products_1_23418968,products_3,products_3_56747635,bus_type,bus_type,SAS,SAS,identity,,"{""product_type"": ""HDD""}",9
+products_1_23418968,products_1,products_1_23418968,form_factor,form_factor,3.5-inch,3.5-inch,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",7
+products_1_23418968,products_3,products_3_56747635,form_factor,form_factor,"3.5""",3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",15
+products_1_23418968,products_4,products_4_74691870,form_factor,form_factor,3.5 inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",3
+products_1_23418968,products_1,products_1_23418968,storage_gb,storage_gb,"4,000.0",4000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",6
+products_1_23418968,products_2,products_2_35250546,storage_gb,storage_gb,4000.0,4000.0,identity,,"{""product_type"": ""HDD""}",7
+products_1_23418968,products_3,products_3_56747635,storage_gb,storage_gb,"4,000.0",4000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",6
+products_1_23694723,products_2,products_2_28963007,brand,brand,Kingston Technology,Kingston,normalization,brand_suffix_strip,"{""product_type"": ""USB_STICK""}",7
+products_1_23694723,products_1,products_1_23694723,color,color,"White,Yellow",White/Yellow,normalization,color_separator,"{""product_type"": ""USB_STICK""}",3
+products_1_23694723,products_2,products_2_28963007,color,color,"White,Yellow",White/Yellow,normalization,color_separator,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_23694723,products_3,products_3_61198101,color,color,"White,Yellow",White/Yellow,normalization,color_separator,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_24038266,products_1,products_1_24038266,brand,brand,ADATA,ADATA,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",11
+products_1_24038266,products_3,products_3_98078792,brand,brand,A-DATA,ADATA,normalization,hyphen_collapse,"{""product_type"": ""USB_STICK""}",7
+products_1_24038266,products_4,products_4_8387407,brand,brand,A-DATA,ADATA,normalization,hyphen_collapse,"{""product_type"": ""USB_STICK""}",7
+products_1_24038266,products_2,products_2_68662600,bus_type,bus_type,USB 3.2 Gen 1,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",1
+products_1_24614355,products_1,products_1_24614355,memory_type,memory_type,GDDR6,GDDR6,identity,,"{""product_type"": ""GPU""}",28
+products_1_25370721,products_1,products_1_25370721,form_factor,form_factor,2.5,2.5-inch,normalization,bare_inch,"{""product_type"": ""SSD""}",12
+products_1_25370721,products_2,products_2_85950331,form_factor,form_factor,2.5,2.5-inch,normalization,bare_inch,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",12
+products_1_25370721,products_3,products_3_86362376,form_factor,form_factor,2.5,2.5-inch,normalization,bare_inch,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",12
+products_1_25370721,products_4,products_4_87017633,form_factor,form_factor,2.5,2.5-inch,normalization,bare_inch,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",12
+products_1_25370721,products_1,products_1_25370721,storage_gb,storage_gb,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_25370721,products_3,products_3_86362376,storage_gb,storage_gb,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_25541170,products_1,products_1_25541170,read_speed_mb_s,read_speed_mb_s,"3,500.0",3500.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",9
+products_1_25541170,products_2,products_2_63895377,read_speed_mb_s,read_speed_mb_s,"3,500.0",3500.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",9
+products_1_25541170,products_2,products_2_63895377,write_speed_mb_s,write_speed_mb_s,"3,000.0",3000.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",9
+products_1_26353099,products_1,products_1_26353099,storage_gb,storage_gb,1.0,1000.0,normalization,tb_to_gb,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""reassign_gold_carrier""]]}",3
+products_1_26353099,products_2,products_2_55562405,storage_gb,storage_gb,1.0,1000.0,normalization,tb_to_gb,"{""product_type"": ""SSD""}",3
+products_1_26353099,products_3,products_3_9744227,storage_gb,storage_gb,"1,000.0",1000.0,normalization,number_locale,"{""product_type"": ""SSD""}",7
+products_1_26544937,products_3,products_3_55362281,memory_type,memory_type,DDR6,GDDR6,knowledge,gddr_prefix,"{""product_type"": ""GPU""}",1
+products_1_28212814,products_1,products_1_28212814,form_factor,form_factor,Dual-Slot,Dual Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_28212814,products_2,products_2_39418692,form_factor,form_factor,Dual-Slot,Dual Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_28212814,products_3,products_3_40032101,form_factor,form_factor,Dual-Slot,Dual Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_28212814,products_4,products_4_18197151,form_factor,form_factor,Dual-Slot,Dual Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU""}",4
+products_1_28212814,products_4,products_4_18197151,memory_type,memory_type,GDDR6,GDDR6,identity,,"{""product_type"": ""GPU""}",28
+products_1_28606757,products_1,products_1_28606757,brand,brand,Western Digital,Western Digital,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""identity""]]}",18
+products_1_28606757,products_1,products_1_28606757,form_factor,form_factor,"2.5""",2.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",24
+products_1_28606757,products_3,products_3_5834181,form_factor,form_factor,"2.5""",2.5-inch,normalization,inch_notation,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",24
+products_1_28606757,products_2,products_2_1830308,storage_gb,storage_gb,1.0,1000.0,normalization,tb_to_gb,"{""product_type"": ""HDD""}",3
+products_1_28606757,products_3,products_3_5834181,storage_gb,storage_gb,"1,000.0",1000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_31239709,products_1,products_1_31239709,bus_type,bus_type,SATA-6GBPS,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",4
+products_1_31239709,products_2,products_2_52606639,bus_type,bus_type,SATA 6 Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",5
+products_1_31239709,products_4,products_4_87067165,bus_type,bus_type,SATA 6 Gb/s,SATA,normalization,bus_qualifier_drop,,5
+products_1_31239709,products_1,products_1_31239709,color,color,RED,Red,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_31239709,products_2,products_2_52606639,color,color,RED,Red,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_31239709,products_3,products_3_76507424,color,color,RED,Red,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_31239709,products_4,products_4_87067165,color,color,RED,Red,normalization,title_case_from_uniform,,4
+products_1_31239709,products_1,products_1_31239709,form_factor,form_factor,"3.5""",3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",15
+products_1_31239709,products_2,products_2_52606639,form_factor,form_factor,3.5-inch,3.5-inch,identity,,"{""product_type"": ""HDD""}",7
+products_1_31239709,products_4,products_4_87067165,form_factor,form_factor,3.5 Inch,3.5-inch,normalization,inch_notation,,5
+products_1_31239709,products_1,products_1_31239709,storage_gb,storage_gb,8000.0,8000.0,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",5
+products_1_31239709,products_2,products_2_52606639,storage_gb,storage_gb,8.0,8000.0,normalization,tb_to_gb,"{""product_type"": ""HDD""}",1
+products_1_31239709,products_3,products_3_76507424,storage_gb,storage_gb,"8,000.0",8000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",5
+products_1_31663634,products_1,products_1_31663634,brand,brand,Intel,Intel,identity,,"{""product_type"": ""SSD""}",8
+products_1_31663634,products_2,products_2_6540379,brand,brand,Intel,Intel,identity,,"{""product_type"": ""SSD""}",8
+products_1_31663634,products_3,products_3_79517683,brand,brand,Intel,Intel,identity,,"{""product_type"": ""SSD""}",8
+products_1_31663634,products_4,products_4_39481519,brand,brand,Intel,Intel,identity,,"{""product_type"": ""SSD""}",8
+products_1_32738830,products_1,products_1_32738830,bus_type,bus_type,SATA III,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",14
+products_1_32738830,products_1,products_1_32738830,form_factor,form_factor,2.5,2.5-inch,normalization,bare_inch,"{""product_type"": ""SSD""}",12
+products_1_32738830,products_2,products_2_35384524,form_factor,form_factor,2.5'',2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_32738830,products_2,products_2_35384524,storage_connection_type,storage_connection_type,2.5'' SATA,2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",1
+products_1_36708398,products_2,products_2_44040429,storage_connection_type,storage_connection_type,"2.5"" SATA",2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",5
+products_1_39143445,products_3,products_3_63864528,vram_gb,vram_gb,2.0,2.0,identity,,"{""product_type"": ""GPU""}",13
+products_1_42551174,products_1,products_1_42551174,bus_type,bus_type,SATA-6GBPS,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",4
+products_1_42551174,products_2,products_2_22018751,bus_type,bus_type,SATA,SATA,identity,,"{""product_type"": ""HDD""}",12
+products_1_42551174,products_2,products_2_22018751,form_factor,form_factor,"3.5""",3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",15
+products_1_42551174,products_3,products_3_42008504,form_factor,form_factor,3.5-Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_42551174,products_4,products_4_67818648,form_factor,form_factor,3.5-inch,3.5-inch,identity,,"{""product_type"": ""HDD""}",7
+products_1_42551174,products_1,products_1_42551174,storage_gb,storage_gb,"3,000.0",3000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",2
+products_1_42551174,products_2,products_2_22018751,storage_gb,storage_gb,3000.0,3000.0,identity,,"{""product_type"": ""HDD""}",2
+products_1_42551174,products_3,products_3_42008504,storage_gb,storage_gb,"3,000.0",3000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",2
+products_1_42551174,products_4,products_4_67818648,storage_gb,storage_gb,3000.0,3000.0,identity,,"{""product_type"": ""HDD""}",2
+products_1_44551871,products_1,products_1_44551871,bus_type,bus_type,SAS,SAS,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",9
+products_1_44551871,products_4,products_4_46802224,bus_type,bus_type,SAS 12Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",3
+products_1_44551871,products_1,products_1_44551871,storage_gb,storage_gb,"2,400.0",2400.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",2
+products_1_44551871,products_2,products_2_63973332,storage_gb,storage_gb,2.4,2400.0,normalization,tb_to_gb,"{""product_type"": ""HDD""}",1
+products_1_44551871,products_3,products_3_17899082,storage_gb,storage_gb,"2,400.0",2400.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",2
+products_1_4586576,products_3,products_3_84832709,bus_type,bus_type,SAS 6Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",10
+products_1_4586576,products_2,products_2_82047845,form_factor,form_factor,2.5-inch,2.5-inch,identity,,"{""product_type"": ""HDD""}",4
+products_1_4586576,products_2,products_2_82047845,storage_connection_type,storage_connection_type,"2.5"" SAS",2.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_46100256,products_1,products_1_46100256,vram_gb,vram_gb,4.0,4.0,identity,,"{""product_type"": ""GPU""}",5
+products_1_46100256,products_3,products_3_54755582,vram_gb,vram_gb,4.0,4.0,identity,,"{""product_type"": ""GPU""}",5
+products_1_46100256,products_4,products_4_60529926,vram_gb,vram_gb,4.0,4.0,identity,,"{""product_type"": ""GPU""}",5
+products_1_46937084,products_1,products_1_46937084,memory_type,memory_type,DDR5,GDDR5,knowledge,gddr_prefix,"{""product_type"": ""GPU"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+products_1_46937084,products_4,products_4_7695737,memory_type,memory_type,DDR5,GDDR5,knowledge,gddr_prefix,"{""product_type"": ""GPU""}",4
+products_1_47203114,products_2,products_2_86393668,bus_type,bus_type,SATA III,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",14
+products_1_47203114,products_1,products_1_47203114,form_factor,form_factor,3.5 inches,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",1
+products_1_47203114,products_1,products_1_47203114,storage_gb,storage_gb,4000.0,4000.0,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",7
+products_1_47203114,products_2,products_2_86393668,storage_gb,storage_gb,4.0,4000.0,normalization,tb_to_gb,"{""product_type"": ""HDD""}",1
+products_1_47930825,products_1,products_1_47930825,bus_type,bus_type,SATA III,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",14
+products_1_47930825,products_2,products_2_61698087,bus_type,bus_type,SATA 6 GB/S,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",1
+products_1_47930825,products_4,products_4_4601555,bus_type,bus_type,SATA III,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",14
+products_1_47930825,products_4,products_4_4601555,form_factor,form_factor,3.5,3.5-inch,normalization,bare_inch,"{""product_type"": ""HDD""}",5
+products_1_47930825,products_1,products_1_47930825,storage_connection_type,storage_connection_type,3.5-inch SATA,3.5-inch SATA,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""identity""]]}",11
+products_1_47930825,products_1,products_1_47930825,storage_gb,storage_gb,"10,000.0",10000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_47930825,products_3,products_3_693299,storage_gb,storage_gb,"10,000.0",10000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_48281373,products_1,products_1_48281373,bus_type,bus_type,SAS 6Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",10
+products_1_48281373,products_2,products_2_91504889,bus_type,bus_type,6Gb/s SAS,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",2
+products_1_48281373,products_4,products_4_68607451,bus_type,bus_type,SAS 6Gb/s,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",10
+products_1_48281373,products_3,products_3_58718563,form_factor,form_factor,3.5-inch,3.5-inch,identity,,"{""product_type"": ""HDD""}",7
+products_1_48281373,products_1,products_1_48281373,height_mm,height_mm,1.0,25.4,normalization,dim_to_mm,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_48281373,products_2,products_2_91504889,height_mm,height_mm,1.0,25.4,normalization,dim_to_mm,"{""product_type"": ""HDD""}",4
+products_1_48281373,products_3,products_3_58718563,height_mm,height_mm,1.0,25.4,normalization,dim_to_mm,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_48281373,products_4,products_4_68607451,height_mm,height_mm,1.0,25.4,normalization,dim_to_mm,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_48281373,products_1,products_1_48281373,storage_connection_type,storage_connection_type,"3.5"" SAS",3.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_48281373,products_4,products_4_68607451,storage_connection_type,storage_connection_type,"3.5"" SAS",3.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_53672855,products_1,products_1_53672855,form_factor,form_factor,3.5 inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",3
+products_1_53672855,products_3,products_3_55948609,form_factor,form_factor,3.5 inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",3
+products_1_53672855,products_1,products_1_53672855,storage_gb,storage_gb,"4,000.0",4000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",6
+products_1_53672855,products_4,products_4_57859900,storage_gb,storage_gb,4000.0,4000.0,identity,,"{""product_type"": ""HDD""}",7
+products_1_5371368,products_1,products_1_5371368,form_factor,form_factor,Single Slot,Single Slot,identity,,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_5371368,products_3,products_3_18402228,form_factor,form_factor,Single Slot,Single Slot,identity,,"{""product_type"": ""GPU""}",4
+products_1_61307663,products_4,products_4_70539715,color,color,Black,Black,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",21
+products_1_61307663,products_1,products_1_61307663,storage_gb,storage_gb,"1,000.0",1000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_61307663,products_4,products_4_70539715,storage_gb,storage_gb,1000.0,1000.0,identity,,"{""product_type"": ""SSD""}",5
+products_1_61786604,products_3,products_3_84153542,read_speed_mb_s,read_speed_mb_s,3500.0,3500.0,identity,,"{""product_type"": ""SSD""}",1
+products_1_6186646,products_3,products_3_40157515,bus_type,bus_type,SATA III (6GB/s),SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",1
+products_1_6186646,products_1,products_1_6186646,form_factor,form_factor,2.5-Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""identity""]]}",5
+products_1_6186646,products_1,products_1_6186646,storage_connection_type,storage_connection_type,2.5-Inch SATA,2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",1
+products_1_62078047,products_1,products_1_62078047,bus_type,bus_type,SATA 6Gbps,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",1
+products_1_62078047,products_2,products_2_7450716,form_factor,form_factor,2.5'',2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_62078047,products_2,products_2_7450716,storage_connection_type,storage_connection_type,"2.5"" SATA",2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",5
+products_1_62078047,products_4,products_4_22696080,storage_connection_type,storage_connection_type,"2.5"" SATA",2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",5
+products_1_62078047,products_1,products_1_62078047,storage_gb,storage_gb,"1,000.0",1000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",7
+products_1_62078047,products_2,products_2_7450716,storage_gb,storage_gb,1000.0,1000.0,identity,,"{""product_type"": ""SSD""}",5
+products_1_62078047,products_1,products_1_62078047,write_speed_mb_s,write_speed_mb_s,530.0,530.0,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""], [""10"", ""reassign_gold_carrier""]]}",1
+products_1_62156844,products_1,products_1_62156844,bus_type,bus_type,SATA 6 Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",5
+products_1_62156844,products_1,products_1_62156844,color,color,Blue,Blue,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_62156844,products_2,products_2_11565762,color,color,Blue,Blue,identity,,"{""product_type"": ""SSD""}",8
+products_1_62156844,products_3,products_3_34301207,color,color,Blue,Blue,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_62156844,products_4,products_4_52586114,color,color,Blue,Blue,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_62156844,products_1,products_1_62156844,form_factor,form_factor,2.5 Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",2
+products_1_6557275,products_1,products_1_6557275,storage_gb,storage_gb,"4,000.0",4000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",6
+products_1_6557275,products_3,products_3_64571081,storage_gb,storage_gb,"4,000.0",4000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",6
+products_1_65837616,products_1,products_1_65837616,brand,brand,A-DATA,ADATA,normalization,hyphen_collapse,"{""product_type"": ""USB_STICK""}",7
+products_1_65837616,products_1,products_1_65837616,color,color,White+Blue,White/Blue,normalization,color_separator,"{""product_type"": ""USB_STICK"", ""provenance"": [[""10"", ""identity""]]}",1
+products_1_66284906,products_1,products_1_66284906,brand,brand,A-DATA,ADATA,normalization,hyphen_collapse,"{""product_type"": ""USB_STICK""}",7
+products_1_66284906,products_1,products_1_66284906,color,color,Black+Blue,Black/Blue,normalization,color_separator,"{""product_type"": ""USB_STICK"", ""provenance"": [[""10"", ""identity""]]}",2
+products_1_66284906,products_2,products_2_94735407,color,color,Black/ Blue,Black/Blue,normalization,color_separator,"{""product_type"": ""USB_STICK""}",1
+products_1_675322,products_4,products_4_77070657,bus_type,bus_type,SATA,SATA,identity,,"{""product_type"": ""SSD""}",12
+products_1_675322,products_1,products_1_675322,color,color,Blue,Blue,identity,,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",8
+products_1_675322,products_1,products_1_675322,form_factor,form_factor,2.5-Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""], [""10"", ""reassign_gold_carrier""]]}",5
+products_1_67813666,products_1,products_1_67813666,bus_type,bus_type,SATA 6Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",17
+products_1_67813666,products_1,products_1_67813666,form_factor,form_factor,2.5-Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",5
+products_1_67813666,products_1,products_1_67813666,storage_gb,storage_gb,"1,900.0",1900.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""identity""]]}",1
+products_1_67813666,products_4,products_4_93635611,storage_gb,storage_gb,1900.0,1900.0,identity,,"{""product_type"": ""SSD""}",2
+products_1_6817605,products_2,products_2_9479923,brand,brand,Sapphire,Sapphire,identity,,"{""product_type"": ""GPU""}",7
+products_1_6817605,products_4,products_4_45991513,memory_type,memory_type,Gddr5,GDDR5,normalization,taxonomy_spelling,"{""product_type"": ""GPU""}",1
+products_1_68277426,products_1,products_1_68277426,vram_gb,vram_gb,6 .0,6.0,normalization,number_locale,"{""product_type"": ""GPU"", ""provenance"": [[""6"", ""whitespace_corrupt""]]}",1
+products_1_68277426,products_2,products_2_98699269,vram_gb,vram_gb,6.0,6.0,identity,,"{""product_type"": ""GPU""}",10
+products_1_68277426,products_4,products_4_65320459,vram_gb,vram_gb,6.0,6.0,identity,,"{""product_type"": ""GPU""}",10
+products_1_70026799,products_3,products_3_17471458,bus_type,bus_type,USB-C 3.2 Gen 1,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",2
+products_1_70026799,products_4,products_4_20551993,bus_type,bus_type,USB-C 3.2 Gen 1,USB 3.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",2
+products_1_70026799,products_1,products_1_70026799,interface_type,interface_type,Type-C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_70026799,products_2,products_2_8846424,interface_type,interface_type,USB Type C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_70026799,products_3,products_3_17471458,interface_type,interface_type,USB-C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",2
+products_1_70026799,products_4,products_4_20551993,interface_type,interface_type,USB-C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",2
+products_1_70026799,products_1,products_1_70026799,storage_connection_type,storage_connection_type,Type-C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_70026799,products_2,products_2_8846424,storage_connection_type,storage_connection_type,USB Type C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_70026799,products_3,products_3_17471458,storage_connection_type,storage_connection_type,USB-C,USB Type-C,normalization,interface_alias,"{""product_type"": ""USB_STICK""}",1
+products_1_705891,products_1,products_1_705891,read_speed_mb_s,read_speed_mb_s,"3,100.0",3100.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""identity""]]}",1
+products_1_705891,products_3,products_3_93741977,write_speed_mb_s,write_speed_mb_s,"1,100.0",1100.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",1
+products_1_70715850,products_1,products_1_70715850,bus_type,bus_type,SATA-6GBPS,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_70715850,products_4,products_4_51881114,bus_type,bus_type,SATA-6GBPS,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",4
+products_1_70715850,products_4,products_4_51881114,form_factor,form_factor,2.5 Inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_70715850,products_1,products_1_70715850,storage_gb,storage_gb,2000.0,2000.0,identity,,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""reassign_gold_carrier""]]}",5
+products_1_70715850,products_2,products_2_71688211,storage_gb,storage_gb,"2,048.0",2000.0,normalization,number_locale+binary_gb,"{""product_type"": ""HDD""}",1
+products_1_71883742,products_1,products_1_71883742,bus_type,bus_type,SATA 6GB/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",1
+products_1_71883742,products_1,products_1_71883742,form_factor,form_factor,3.5 Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_71883742,products_2,products_2_75172014,form_factor,form_factor,3.5,3.5-inch,normalization,bare_inch,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",5
+products_1_71883742,products_3,products_3_29257602,form_factor,form_factor,3.5,3.5-inch,normalization,bare_inch,"{""product_type"": ""HDD""}",5
+products_1_71883742,products_1,products_1_71883742,storage_connection_type,storage_connection_type,3.5 Inch SATA,3.5-inch SATA,normalization,inch_notation,"{""product_type"": ""HDD""}",1
+products_1_71883742,products_1,products_1_71883742,storage_gb,storage_gb,"10,000.0",10000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_71883742,products_3,products_3_29257602,storage_gb,storage_gb,"10,000.0",10000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_72884596,products_1,products_1_72884596,bus_type,bus_type,SATA 6Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",17
+products_1_72884596,products_2,products_2_10329471,bus_type,bus_type,SATA-6Gbps,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""SSD""}",1
+products_1_72884596,products_1,products_1_72884596,form_factor,form_factor,2.5'',2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_72884596,products_4,products_4_63700999,form_factor,form_factor,2.5 inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_74635538,products_1,products_1_74635538,read_speed_mb_s,read_speed_mb_s,"3,470.0",3470.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_74635538,products_2,products_2_80184260,read_speed_mb_s,read_speed_mb_s,"3,470.0",3470.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_74635538,products_3,products_3_22323468,read_speed_mb_s,read_speed_mb_s,"3,470.0",3470.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_74635538,products_4,products_4_98406611,read_speed_mb_s,read_speed_mb_s,"3,470.0",3470.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_74635538,products_1,products_1_74635538,write_speed_mb_s,write_speed_mb_s,"2,600.0",2600.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_74635538,products_2,products_2_80184260,write_speed_mb_s,write_speed_mb_s,"2,600.0",2600.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_74635538,products_3,products_3_22323468,write_speed_mb_s,write_speed_mb_s,"2,600.0",2600.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_74635538,products_4,products_4_98406611,write_speed_mb_s,write_speed_mb_s,"2,600.0",2600.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_7871781,products_2,products_2_52338887,brand,brand,A-DATA,ADATA,normalization,hyphen_collapse,"{""product_type"": ""USB_STICK""}",7
+products_1_7871781,products_2,products_2_52338887,bus_type,bus_type,USB2.0,USB 2.0,normalization,usb_if_fold,"{""product_type"": ""USB_STICK""}",1
+products_1_79539273,products_3,products_3_67086760,form_factor,form_factor,3.5-Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_79539273,products_1,products_1_79539273,storage_connection_type,storage_connection_type,"3.5"" SAS",3.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",5
+products_1_79539273,products_2,products_2_3427495,storage_connection_type,storage_connection_type,3.5-inch SAS,3.5-inch SAS,identity,,"{""product_type"": ""HDD""}",4
+products_1_79539273,products_3,products_3_67086760,storage_connection_type,storage_connection_type,3.5-inch SAS,3.5-inch SAS,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_80641070,products_1,products_1_80641070,read_speed_mb_s,read_speed_mb_s,"3,480.0",3480.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_80641070,products_2,products_2_46775597,read_speed_mb_s,read_speed_mb_s,"3,480.0",3480.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_80641070,products_3,products_3_86850217,read_speed_mb_s,read_speed_mb_s,"3,480.0",3480.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_80641070,products_4,products_4_77571226,read_speed_mb_s,read_speed_mb_s,"3,480.0",3480.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",4
+products_1_80641070,products_1,products_1_80641070,write_speed_mb_s,write_speed_mb_s,"3,000.0",3000.0,normalization,number_locale,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",9
+products_1_80641070,products_4,products_4_77571226,write_speed_mb_s,write_speed_mb_s,3000.0,3000.0,identity,,"{""product_type"": ""SSD""}",1
+products_1_82091590,products_1,products_1_82091590,form_factor,form_factor,3.5inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""identity""]]}",1
+products_1_82091590,products_4,products_4_62327624,form_factor,form_factor,3.5,3.5-inch,normalization,bare_inch,"{""product_type"": ""HDD""}",5
+products_1_82091590,products_1,products_1_82091590,storage_connection_type,storage_connection_type,3.5-inch SAS,3.5-inch SAS,identity,,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+products_1_8217265,products_1,products_1_8217265,form_factor,form_factor,M.2 (2280),M.2 2280,normalization,paren_unwrap,"{""product_type"": ""SSD"", ""provenance"": [[""10"", ""identity""]]}",3
+products_1_8217265,products_4,products_4_59583035,form_factor,form_factor,M.2 (2280),M.2 2280,normalization,paren_unwrap,"{""product_type"": ""SSD"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_8217265,products_1,products_1_8217265,read_speed_mb_s,read_speed_mb_s,"2,400.0",2400.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""SSD"", ""provenance"": [[""5"", ""reformat_number""]]}",8
+products_1_83479410,products_3,products_3_82786105,storage_connection_type,storage_connection_type,"3.5"" SAS",3.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_84704597,products_2,products_2_1856731,form_factor,form_factor,2.5 inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_84704597,products_4,products_4_51924648,form_factor,form_factor,2.5 inch,2.5-inch,normalization,inch_notation,"{""product_type"": ""SSD""}",3
+products_1_84704597,products_1,products_1_84704597,storage_connection_type,storage_connection_type,"2.5"" SATA",2.5-inch SATA,normalization,inch_notation,"{""product_type"": ""SSD""}",5
+products_1_86835292,products_2,products_2_95926675,bus_type,bus_type,USB 3.0 (3.1 Gen 1),USB 3.0,normalization,bus_qualifier_drop,"{""product_type"": ""USB_STICK""}",1
+products_1_87572356,products_3,products_3_30114774,storage_connection_type,storage_connection_type,"2.5"" SAS",2.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_92213757,products_2,products_2_63735890,bus_type,bus_type,SATA 6Gb/S,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",1
+products_1_92213757,products_3,products_3_50853852,bus_type,bus_type,SATA 6 Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",5
+products_1_92213757,products_1,products_1_92213757,color,color,PURPLE,Purple,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_92213757,products_2,products_2_63735890,color,color,PURPLE,Purple,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_92213757,products_3,products_3_50853852,color,color,PURPLE,Purple,normalization,title_case_from_uniform,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_92213757,products_4,products_4_92930814,color,color,PURPLE,Purple,normalization,title_case_from_uniform,"{""product_type"": ""HDD""}",4
+products_1_92213757,products_2,products_2_63735890,storage_connection_type,storage_connection_type,"3.5"" SATA",3.5-inch SATA,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_92213757,products_1,products_1_92213757,storage_gb,storage_gb,"8,000.0",8000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",5
+products_1_92213757,products_3,products_3_50853852,storage_gb,storage_gb,"8,000.0",8000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""]]}",5
+products_1_92213757,products_4,products_4_92930814,storage_gb,storage_gb,8000.0,8000.0,identity,,"{""product_type"": ""HDD""}",5
+products_1_94807470,products_1,products_1_94807470,color,color,Black/Blue,Black/Blue,identity,,"{""product_type"": ""USB_STICK""}",3
+products_1_94807470,products_2,products_2_27226970,color,color,Black+Blue,Black/Blue,normalization,color_separator,"{""product_type"": ""USB_STICK""}",2
+products_1_94807470,products_3,products_3_78086660,color,color,Black/Blue,Black/Blue,identity,,"{""product_type"": ""USB_STICK""}",3
+products_1_94807470,products_4,products_4_79085544,color,color,Black/Blue,Black/Blue,identity,,"{""product_type"": ""USB_STICK"", ""provenance"": [[""3"", ""propagate_fill""]]}",3
+products_1_95573755,products_1,products_1_95573755,bus_type,bus_type,SAS-6GBPS,SAS,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",1
+products_1_95573755,products_1,products_1_95573755,form_factor,form_factor,3.5 Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD"", ""provenance"": [[""10"", ""reassign_gold_carrier""]]}",5
+products_1_95573755,products_2,products_2_42633194,form_factor,form_factor,3.5Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",1
+products_1_95573755,products_2,products_2_42633194,storage_connection_type,storage_connection_type,"3.5"" SAS",3.5-inch SAS,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_95573755,products_1,products_1_95573755,storage_gb,storage_gb,"2,000.0",2000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""identity""]]}",7
+products_1_9569117,products_1,products_1_9569117,form_factor,form_factor,Single-Slot,Single Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_9569117,products_2,products_2_15708615,form_factor,form_factor,Single-Slot,Single Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_9569117,products_3,products_3_56037532,form_factor,form_factor,Single-Slot,Single Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_9569117,products_4,products_4_90172558,form_factor,form_factor,Single-Slot,Single Slot,normalization,hyphen_to_space,"{""product_type"": ""GPU""}",4
+products_1_97905619,products_2,products_2_37669303,bus_type,bus_type,SATA III 6Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",1
+products_1_97905619,products_2,products_2_37669303,form_factor,form_factor,3.5,3.5-inch,normalization,bare_inch,"{""product_type"": ""HDD""}",5
+products_1_97905619,products_1,products_1_97905619,storage_connection_type,storage_connection_type,"3.5"" SATA",3.5-inch SATA,normalization,inch_notation,"{""product_type"": ""HDD""}",2
+products_1_97905619,products_4,products_4_9556599,storage_connection_type,storage_connection_type,3.5-inch SATA,3.5-inch SATA,identity,,"{""product_type"": ""HDD""}",11
+products_1_97905619,products_1,products_1_97905619,storage_gb,storage_gb,"16,000.0",16000.0,normalization,number_locale,"{""k5_locale"": ""en_US"", ""product_type"": ""HDD"", ""provenance"": [[""5"", ""reformat_number""], [""10"", ""identity""]]}",1
+products_1_97905619,products_3,products_3_66040433,storage_gb,storage_gb,16.0,16000.0,normalization,tb_to_gb,"{""product_type"": ""HDD""}",1
+products_1_98557440,products_2,products_2_13794201,memory_type,memory_type,DDR5,GDDR5,knowledge,gddr_prefix,"{""product_type"": ""GPU"", ""provenance"": [[""3"", ""propagate_fill""]]}",4
+products_1_98557440,products_3,products_3_12404184,memory_type,memory_type,DDR5,GDDR5,knowledge,gddr_prefix,"{""product_type"": ""GPU""}",4
+products_1_98557440,products_4,products_4_75418922,vram_gb,vram_gb,2. 0,2.0,normalization,number_locale,"{""product_type"": ""GPU"", ""provenance"": [[""6"", ""whitespace_corrupt""]]}",1
+products_1_98624308,products_1,products_1_98624308,bus_type,bus_type,SATA 6 Gb/s,SATA,normalization,bus_qualifier_drop,"{""product_type"": ""HDD""}",5
+products_1_98624308,products_1,products_1_98624308,form_factor,form_factor,3.5 Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",5
+products_1_98624308,products_2,products_2_38470155,form_factor,form_factor,3.5'',3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD""}",1
+products_1_98624308,products_3,products_3_82337278,form_factor,form_factor,3.5 Inch,3.5-inch,normalization,inch_notation,"{""product_type"": ""HDD"", ""provenance"": [[""3"", ""propagate_fill""]]}",5
+products_1_98624308,products_2,products_2_38470155,storage_connection_type,storage_connection_type,3.5'' SATA,3.5-inch SATA,normalization,inch_notation,"{""product_type"": ""HDD""}",1
+products_1_98624308,products_2,products_2_38470155,storage_gb,storage_gb,2000.0,2000.0,identity,,"{""product_type"": ""HDD""}",5

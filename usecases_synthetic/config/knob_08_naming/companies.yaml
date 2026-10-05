@@ -3,11 +3,10 @@
 # Rename tables per source per column at each rung on the
 # descriptive -> abbreviated -> cryptic -> anonymized ladder.
 #
-# Refreshed against the 2026-05-04 CSV sources (post-loader column
-# names). FullContact ships physically anonymized as `Attribute_1..6`,
-# so its rename_table keys ARE the `Attribute_X` strings; the
-# descriptive rung lifts to canonical target attribute names per the
-# K10 attribute_mapping sign-off.
+# Keyed on the post-loader column names. FullContact ships physically
+# anonymized as `Attribute_1..6`, so its rename_table keys ARE the
+# `Attribute_X` strings; the descriptive rung lifts to the canonical
+# target attribute names.
 
 # Which rung each source lands on at each difficulty level.
 level_assignments:
@@ -26,7 +25,7 @@ level_assignments:
 
 # Ground-truth schema mapping: source_col -> target_col.
 # Only columns with a target correspondence are listed.
-# Canonical target names follow the K10 sign-off attribute_mapping.
+# Canonical target names are the target_schema.json attribute names.
 sm_mapping:
   dbpedia:
     id: id
@@ -50,9 +49,9 @@ sm_mapping:
     Attribute_2: name
     Attribute_3: country
     Attribute_4: city
-    # R10-N (2026-06-02): fixed industry -> keypeople. Attribute_5 holds
-    # people-names ("Raphael Bemporad", "['Fernand Renault', ...]"); fullcontact
-    # has no industry column. Matches the committee/K2 column_mapping + the data.
+    # Attribute_5 holds people-names ("Raphael Bemporad",
+    # "['Fernand Renault', ...]"); fullcontact has no industry column.
+    # Matches the committee/K2 column_mapping + the data.
     Attribute_5: keypeople
     Attribute_6: founded
 

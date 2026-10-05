@@ -2,15 +2,15 @@
 """Phase 3 per-variant validation runner.
 
 Runs the SM, EM, and Fusion committees against a packaged variant
-(produced by M6 / ``generate_variant.py`` + ``package_variant.py``),
-compares each stage's metrics to the baseline (from M5), and persists
+(produced by ``generate_variant.py`` + ``package_variant.py``),
+compares each stage's metrics to the baseline (from ``measure_baseline.py``), and persists
 per-level metrics, per-pair / per-attribute CSVs, and a human-readable
 markdown rollup under
 ``usecases_synthetic/validation/<domain>/<level>/``.
 
-This is PIPELINE.md Phase 3 (currently ``[todo]``). It is deliberately
-measurement-only: monotonicity analysis (M8), collapse handling, and
-ablation (M9) live in downstream modules.
+This is PIPELINE.md Phase 3. It is deliberately
+measurement-only: monotonicity analysis (``analyze_monotonicity.py``), collapse handling, and
+ablation (``run_ablation_validation.py`` / ``analyze_ablation.py``) live in downstream modules.
 
 Usage
 -----
@@ -126,10 +126,10 @@ def _file_sha256(path: Path) -> str:
 
 
 # Keep in sync with ``measure_baseline._STAGE_YAML_BASE_NAMES``.  EM is a
-# pair of YAMLs after the C2.4b split; both files feed the EM runtime
+# pair of YAMLs after the blocking/matching split; both files feed the EM runtime
 # and must be hashed so drift detection catches edits to either side.
-# Filenames are *base names* (no ``.yaml`` suffix); per S10 of
-# ``plans/plan_s1_scale.md``, ``resolve_committee_path`` picks the
+# Filenames are *base names* (no ``.yaml`` suffix);
+# ``resolve_committee_path`` picks the
 # canonical companies file or the per-domain fork.
 _STAGE_YAML_BASE_NAMES: dict[Stage, tuple[str, ...]] = {
     "sm": ("sm_committee",),
@@ -409,7 +409,7 @@ def _run_em_blocking(
     ``pair_recall`` / ``reduction_ratio``; the matching half is run
     separately by :func:`_run_em_matching` so LLM matchers are fed the
     labelled gold pairs directly (not the full blocker output —
-    plan_s1_final.md S.7 path).
+    the closed-set path).
     """
     runner = EMBlockingCommitteeRunner(
         resolve_committee_path(
@@ -431,7 +431,7 @@ def _run_em_matching(
     blocker output), so LLM matchers cost O(|gold|) prompts rather than
     O(|blocker candidates|). Score primary headline is
     ``macro_f1_regen_test`` per the closed-set semantic on the
-    corner-filled test split (plan_revision.md C10/C11).
+    corner-filled test split.
     """
     runner = EMMatchingCommitteeRunner(
         resolve_committee_path(
@@ -502,7 +502,7 @@ def _write_em_per_pair_csv(
                     "f1_delta": f1 - f1_baseline,
                     "precision": float(pair_metrics.get("precision", 0.0)),
                     "recall": float(pair_metrics.get("recall", 0.0)),
-                    # R7b dual-model dual-test (4 cells per pair × member).
+                    # Dual-model dual-test (4 cells per pair × member).
                     "f1_baseline_model_on_baseline_test": float(
                         pair_metrics.get(
                             "f1_baseline_model_on_baseline_test", float("nan")
@@ -524,7 +524,7 @@ def _write_em_per_pair_csv(
                     "variant_model_distinct": float(
                         pair_metrics.get("variant_model_distinct", 0.0)
                     ),
-                    # Pre-R7b legacy aliases (= baseline-model surfaces).
+                    # Single-model legacy aliases (= baseline-model surfaces).
                     "f1_baseline_test": float(
                         pair_metrics.get("f1_baseline_test", float("nan"))
                     ),
@@ -550,13 +550,13 @@ def _write_em_per_pair_csv(
         "f1_delta",
         "precision",
         "recall",
-        # R7b dual-model dual-test.
+        # Dual-model dual-test.
         "f1_baseline_model_on_baseline_test",
         "f1_baseline_model_on_regen_test",
         "f1_variant_model_on_baseline_test",
         "f1_variant_model_on_regen_test",
         "variant_model_distinct",
-        # Pre-R7b legacy aliases.
+        # Single-model legacy aliases.
         "f1_baseline_test",
         "f1_regen_test",
         "f1_vs_pool",
@@ -573,12 +573,74 @@ def _write_em_per_pair_csv(
     return path
 
 
+# Summary keys of a fusion ``per_attribute`` entry: the legacy
+# per-(attribute, strategy) committee writes ``best_strategy_accuracy`` /
+# ``mean_strategy_accuracy`` / ``spread``; the coherent-member committee writes one
+# accuracy per member plus ``best_member_accuracy`` /
+# ``mean_member_accuracy`` (committee_fusion_c12.C12FusionCommitteeRunner).
+_FUSION_ATTR_SUMMARY_KEYS: frozenset[str] = frozenset(
+    {
+        "best_strategy_accuracy",
+        "mean_strategy_accuracy",
+        "spread",
+        "best_member_accuracy",
+        "mean_member_accuracy",
+    }
+)
+
+
+def _fusion_attribute_summary(
+    metrics: Mapping[str, Any] | None,
+) -> tuple[float, float, float]:
+    """Return ``(best, mean, spread)`` accuracy of one fusion attribute.
+
+    Reads the legacy keys (``best_strategy_accuracy`` /
+    ``mean_strategy_accuracy`` / ``spread``) when present, else the coherent-member
+    shape: ``best_member_accuracy`` / ``mean_member_accuracy`` and the
+    spread ``max - min`` over the per-member accuracies (the coherent-member committee writes no
+    ``spread``). Looking up only the legacy keys on a coherent-member block read 0.0
+    for every attribute, so ``fusion_per_attribute.csv`` and the level
+    report's fusion table were all zeros for every domain. ``*_baseline`` /
+    ``*_delta`` twins (an augmented block) are never taken for members.
+    """
+    metrics = metrics or {}
+    if "best_strategy_accuracy" in metrics:
+        return (
+            float(metrics.get("best_strategy_accuracy", 0.0)),
+            float(metrics.get("mean_strategy_accuracy", 0.0)),
+            float(metrics.get("spread", 0.0)),
+        )
+    member_accs = [
+        float(value)
+        for key, value in metrics.items()
+        if key not in _FUSION_ATTR_SUMMARY_KEYS
+        and not key.endswith(("_baseline", "_delta"))
+        and isinstance(value, (int, float))
+        and not isinstance(value, bool)
+    ]
+    if not member_accs:
+        return (
+            float(metrics.get("best_member_accuracy", 0.0)),
+            float(metrics.get("mean_member_accuracy", 0.0)),
+            0.0,
+        )
+    best = float(metrics.get("best_member_accuracy", max(member_accs)))
+    mean = float(
+        metrics.get("mean_member_accuracy", sum(member_accs) / len(member_accs))
+    )
+    return best, mean, max(member_accs) - min(member_accs)
+
+
 def _write_fusion_per_attribute_csv(
     path: Path,
     measured_block: Mapping[str, Any],
     baseline_block: Mapping[str, Any],
 ) -> Path:
     """Write the per-attribute fusion CSV with best-strategy accuracy + deltas.
+
+    ``best_accuracy`` / ``mean_accuracy`` / ``spread`` are the best, mean
+    and max-min accuracy over the committee's strategies (legacy) or
+    members (coherent-member committee), see :func:`_fusion_attribute_summary`.
 
     Parameters
     ----------
@@ -600,12 +662,10 @@ def _write_fusion_per_attribute_csv(
     rows: list[dict[str, Any]] = []
     for attr, metrics in measured_attrs.items():
         b_metrics = baseline_attrs.get(attr, {}) or {}
-        best = float(metrics.get("best_strategy_accuracy", 0.0))
-        best_baseline = float(b_metrics.get("best_strategy_accuracy", 0.0))
-        spread = float(metrics.get("spread", 0.0))
-        spread_baseline = float(b_metrics.get("spread", 0.0))
-        mean_acc = float(metrics.get("mean_strategy_accuracy", 0.0))
-        mean_baseline = float(b_metrics.get("mean_strategy_accuracy", 0.0))
+        best, mean_acc, spread = _fusion_attribute_summary(metrics)
+        best_baseline, mean_baseline, spread_baseline = _fusion_attribute_summary(
+            b_metrics
+        )
         rows.append(
             {
                 "attribute": attr,
@@ -673,9 +733,9 @@ def _stage_summary_row(
     list of str
         Cells: ``[stage, metric_name, measured, baseline, delta]``.
     """
-    # R7b: EM stage headline = variant_model_on_regen_test (the
-    # load-bearing surface for monotonicity per plan_revision.md R7b).
-    # Pre-R7b runs that don't carry the new key fall back to the legacy
+    # EM stage headline = variant_model_on_regen_test (the
+    # load-bearing surface for monotonicity).
+    # Older single-model runs that don't carry the new key fall back to the legacy
     # ``macro_f1_regen_test`` / ``macro_pair_recall`` aliases.
     if stage == "em_blocking":
         if "macro_pair_recall_variant_model_on_regen_test" in measured:
@@ -901,10 +961,8 @@ def _fusion_per_attribute_table(
     for attr in sorted(measured_attrs):
         m = measured_attrs[attr]
         b = baseline_attrs.get(attr, {}) or {}
-        best = float(m.get("best_strategy_accuracy", 0.0))
-        best_b = float(b.get("best_strategy_accuracy", 0.0))
-        spread = float(m.get("spread", 0.0))
-        spread_b = float(b.get("spread", 0.0))
+        best, _, spread = _fusion_attribute_summary(m)
+        best_b, _, spread_b = _fusion_attribute_summary(b)
         lines.append(
             "| "
             + " | ".join(
@@ -1068,7 +1126,7 @@ def validate_variant(
         logger.info("Running EM blocking committee...")
         em_blocking_result = _run_em_blocking(bundle)
         measured_per_stage["em_blocking"] = em_blocking_result.as_dict()
-        # R7b: log the variant-model-on-regen surface (load-bearing for
+        # Log the variant-model-on-regen surface (load-bearing for
         # monotonicity), falling back to the legacy macro_pair_recall
         # alias for older committee outputs.
         em_blk_agg = em_blocking_result.aggregated
@@ -1100,10 +1158,10 @@ def validate_variant(
         )
 
     # --- Fusion ---
-    # Per R5 Fusion design (plans/plan_s1_scale.md, 2026-05-12): every
+    # Per the fusion committee design, every
     # committee is evaluated against the **perfect** output of the prior
     # pipeline step. For fusion that means assuming EM produced the
-    # ground-truth clusters declared in the R3 pool — record IDs survive
+    # ground-truth clusters declared in the likely-positive pool — record IDs survive
     # every K-knob mutation per the variant provenance contract, so the
     # same pool defines perfect clusters for both baseline AND every
     # variant of the same domain.
@@ -1280,7 +1338,7 @@ def main(argv: list[str] | None = None) -> None:
         help=(
             "Override the variant root directory to load. Used by the "
             "ablation runner to point validate_variant at "
-            "usecases/<domain>-augmented/ablation_knob_<id>/ while "
+            "use cases/<domain>/ablation_knob_<id>/ while "
             "still running as level=hard. Default: derived from --level."
         ),
     )

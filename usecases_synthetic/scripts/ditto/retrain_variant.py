@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R10-G: retrain the *variant* Ditto checkpoint for one (domain, level).
+"""Retrain the *variant* Ditto checkpoint for one (domain, level).
 
 Builds Ditto WDC training data from the K2-regenerated
 ``<pair>_train_corner_filled.csv`` splits joined against the *variant*
@@ -9,7 +9,7 @@ checkpoint path the committee runner reads:
 ``cache/ditto_checkpoints/<domain>/variant_<level>/best``
 (see :func:`committee_em._resolve_variant_checkpoint_path`).
 
-R10-I (2026-05-29): the training data is built on the *wide* committee
+The training data is built on the *wide* committee
 field scope (``ditto_plm.fields`` == ``DOMAIN_TEXT_COLS``), column-mapped
 exactly the way the committee EM runner maps sources before inference, so
 the variant checkpoint trains on the same surface it scores against. The
@@ -18,8 +18,7 @@ handled by translating the committee ``column_mapping`` through K8 via
 ``VariantBundle.resolve_column_mapping`` (the same call the committee
 runner makes), which restores every column to its canonical name.
 
-Phase 1 (R10-G) is code-only: this script + a smoke test. The actual
-training runs per-domain in phase 2 of each domain's step-5 cascade,
+The per-domain training runs are
 driven by ``scripts/retrain_variant_cascade.py``.
 """
 
@@ -201,11 +200,11 @@ def retrain_variant_ditto(
 
     bundle = load_variant(domain, level, root_override=root_override)
     # knob-02 still supplies the PLM *hyperparameters* (batch size, seq /
-    # field length) — the R2 winner recipe. The *field scope* now comes from
+    # field length) — the original Ditto sweep winner recipe. The *field scope* now comes from
     # the wide committee list, not knob-02 canonical_schema.
     knob02 = load_knob_config(2, domain)
 
-    # R10-I: wide committee field scope + the committee's own column_mapping,
+    # Wide committee field scope + the committee's own column_mapping,
     # translated through this variant's K8 renames so a mapped source carries
     # exactly the canonical column names the DittoMatcher reads at inference.
     fields = committee_ditto_fields(domain)
@@ -266,7 +265,7 @@ def retrain_variant_ditto(
     if not train_records:
         raise RuntimeError(
             f"No corner_filled train records for {domain}/{level}; "
-            "did generate_variant + package_variant (R10-F) land the "
+            "did generate_variant + package_variant land the "
             "*_train_corner_filled.csv files?"
         )
     if not val_records:
@@ -276,7 +275,7 @@ def retrain_variant_ditto(
         )
 
     # Guard against a DEGENERATE retrain on field-stripped records. The
-    # apply_column_mapping collision bug (fixed 2026-06-05) stripped canonical
+    # apply_column_mapping collision bug (since fixed) stripped canonical
     # columns from already-canonical variant sources, so every serialized field
     # came out empty and the trained model predicted ZERO pairs (f1=0) while
     # still being flagged variant_model_distinct=1 — a silent corruption. Fail

@@ -1,0 +1,158 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+http://www.forbes.com/companies/abu-dhabi-commercial/,dbpedia,http://dbpedia.org/resource/Abu_Dhabi_Commercial_Bank,est_yr,founded,1985-01-01,1985-01-01,identity,,,2
+http://www.forbes.com/companies/abu-dhabi-commercial/,dbpedia,http://dbpedia.org/resource/Abu_Dhabi_Commercial_Bank,sect,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/abu-dhabi-commercial/,forbes,http://www.forbes.com/companies/abu-dhabi-commercial/,industry,industry,Regional Banks,Banks,normalization,gics_label_map,,6
+http://www.forbes.com/companies/abu-dhabi-commercial/,forbes,http://www.forbes.com/companies/abu-dhabi-commercial/,revenue,revenue,2.50,2500000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/acer/,dbpedia,http://dbpedia.org/resource/Acer_Inc.,ctry,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/acer/,forbes,http://www.forbes.com/companies/acer/,country,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/acer/,fullcontact,fullcontact_52,cn,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/alpha-bank/,forbes,http://www.forbes.com/companies/alpha-bank/,industry,industry,Regional Banks,Banks,normalization,gics_label_map,,6
+http://www.forbes.com/companies/anglo-american/,dbpedia,http://dbpedia.org/resource/Anglo_American_plc,ctry,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,8
+http://www.forbes.com/companies/anglo-american/,forbes,http://www.forbes.com/companies/anglo-american/,country,country,United Kingdom,United Kingdom,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+http://www.forbes.com/companies/anheuser-busch-inbev/,forbes,http://www.forbes.com/companies/anheuser-busch-inbev/,revenue,revenue,43.20,43200000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/atlantia/,dbpedia,http://dbpedia.org/resource/Atlantia_(company),org_nm,name,Atlantia (company),Atlantia,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/atlantia/,forbes,http://www.forbes.com/companies/atlantia/,name,name,Atlantia,Atlantia,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+http://www.forbes.com/companies/avago-technologies/,forbes,http://www.forbes.com/companies/avago-technologies/,country,country,United States,United States,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",29
+http://www.forbes.com/companies/avago-technologies/,fullcontact,fullcontact_122,fy,founded,01.01.2005,2005-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/avago-technologies/,forbes,http://www.forbes.com/companies/avago-technologies/,industry,industry,Semiconductors,Semiconductors & Semiconductor Equipment,normalization,gics_label_map,,2
+http://www.forbes.com/companies/avago-technologies/,forbes,http://www.forbes.com/companies/avago-technologies/,revenue,revenue,2.70,2700000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/b-e-aerospace/,dbpedia,http://dbpedia.org/resource/B/E_Aerospace,ctry,country,United States of America,United States,normalization,country_alias,,17
+http://www.forbes.com/companies/b-e-aerospace/,forbes,http://www.forbes.com/companies/b-e-aerospace/,country,country,United States,United States,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",29
+http://www.forbes.com/companies/b-e-aerospace/,fullcontact,fullcontact_144,cn,country,United States,United States,identity,,,29
+http://www.forbes.com/companies/b-e-aerospace/,forbes,http://www.forbes.com/companies/b-e-aerospace/,industry,industry,Aerospace & Defense,Aerospace & Defense,identity,,,4
+http://www.forbes.com/companies/b-e-aerospace/,forbes,http://www.forbes.com/companies/b-e-aerospace/,revenue,revenue,3.50,3500000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/bae-systems/,forbes,http://www.forbes.com/companies/bae-systems/,country,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",8
+http://www.forbes.com/companies/bae-systems/,forbes,http://www.forbes.com/companies/bae-systems/,industry,industry,Aerospace & Defense,Aerospace & Defense,identity,,,4
+http://www.forbes.com/companies/banco-santander/,forbes,http://www.forbes.com/companies/banco-santander/,industry,industry,Major Banks,Banks,normalization,gics_label_map,,7
+http://www.forbes.com/companies/bbmg/,dbpedia,http://dbpedia.org/resource/BBMG,est_yr,founded,1996-01-01,1996-01-01,identity,,,3
+http://www.forbes.com/companies/bbmg/,dbpedia,http://dbpedia.org/resource/BBMG,sect,industry,Building material,Construction Materials,normalization,gics_label_map,,1
+http://www.forbes.com/companies/bbmg/,forbes,http://www.forbes.com/companies/bbmg/,industry,industry,Construction Materials,Construction Materials,identity,,,1
+http://www.forbes.com/companies/bouygues/,dbpedia,http://dbpedia.org/resource/Bouygues,est_yr,founded,1952-01-01,1952-01-01,identity,,,1
+http://www.forbes.com/companies/bouygues/,fullcontact,fullcontact_165,fy,founded,01.01.1952,1952-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/brookfield-asset-management/,dbpedia,http://dbpedia.org/resource/Brookfield_Asset_Management,est_yr,founded,1899-01-01,1899-01-01,identity,,,1
+http://www.forbes.com/companies/brookfield-asset-management/,fullcontact,fullcontact_172,fy,founded,01.01.1899,1899-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/brookfield-asset-management/,dbpedia,http://dbpedia.org/resource/Brookfield_Asset_Management,sect,industry,Asset management,Capital Markets,normalization,gics_label_map,,1
+http://www.forbes.com/companies/bunzl/,forbes,http://www.forbes.com/companies/bunzl/,country,country,United Kingdom,United Kingdom,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+http://www.forbes.com/companies/carnival/,forbes,http://www.forbes.com/companies/carnival/,country,country,United States of America,United States,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",17
+http://www.forbes.com/companies/carnival/,fullcontact,fullcontact_195,fy,founded,01.01.1972,1972-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/carnival/,forbes,http://www.forbes.com/companies/carnival/,industry,industry,Hotels & Motels,Hotels Restaurants & Leisure,normalization,gics_label_map,,1
+http://www.forbes.com/companies/china-shenhua-energy/,dbpedia,http://dbpedia.org/resource/China_Shenhua_Energy_Company,est_yr,founded,1995-01-01,1995-01-01,identity,,,1
+http://www.forbes.com/companies/china-shenhua-energy/,forbes,http://www.forbes.com/companies/china-shenhua-energy/,revenue,revenue,42.80,42800000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/clorox/,dbpedia,http://dbpedia.org/resource/Clorox,ctry,country,United States of America,United States,normalization,country_alias,,17
+http://www.forbes.com/companies/cp-all/,dbpedia,http://dbpedia.org/resource/CP_ALL,est_yr,founded,1988-01-01,1988-01-01,identity,,,1
+http://www.forbes.com/companies/cp-all/,dbpedia,http://dbpedia.org/resource/CP_ALL,sect,industry,Convenience store,Consumer Staples Distribution & Retail,normalization,gics_label_map,,1
+http://www.forbes.com/companies/cp-all/,forbes,http://www.forbes.com/companies/cp-all/,revenue,revenue,8.90,8900000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+http://www.forbes.com/companies/crown-holdings/,dbpedia,http://dbpedia.org/resource/Crown_Media_Holdings,ctry,country,United States,United States,identity,,,29
+http://www.forbes.com/companies/eads/,forbes,http://www.forbes.com/companies/eads/,industry,industry,Aerospace & Defense,Aerospace & Defense,identity,,,4
+http://www.forbes.com/companies/eaton/,fullcontact,fullcontact_277,fy,founded,01.01.1911,1911-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/edf/,dbpedia,http://dbpedia.org/resource/%C3%89lectricit%C3%A9_de_France,sect,industry,Electric utility,Electric Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/edf/,forbes,http://www.forbes.com/companies/edf/,industry,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/eletrobras/,fullcontact,fullcontact_285,fy,founded,01.01.1962,1962-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/eletrobras/,dbpedia,http://dbpedia.org/resource/Eletrobras,sect,industry,Electricity,Electric Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/eletrobras/,forbes,http://www.forbes.com/companies/eletrobras/,industry,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/g4s/,forbes,http://www.forbes.com/companies/g4s/,country,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",8
+http://www.forbes.com/companies/gd-power-development/,dbpedia,http://dbpedia.org/resource/GD_Power_Development_Company,sect,industry,Electricity generation,Electric Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/gd-power-development/,forbes,http://www.forbes.com/companies/gd-power-development/,industry,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/gd-power-development/,forbes,http://www.forbes.com/companies/gd-power-development/,revenue,revenue,10.80,10800000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/health-care-reit/,forbes,http://www.forbes.com/companies/health-care-reit/,country,country,United States of America,United States,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",17
+http://www.forbes.com/companies/hewlett-packard/,dbpedia,http://dbpedia.org/resource/Hewlett-Packard,est_yr,founded,1939-01-01,1939-01-01,identity,,,1
+http://www.forbes.com/companies/hewlett-packard/,fullcontact,fullcontact_389,fy,founded,01.01.1939,1939-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/hewlett-packard/,forbes,http://www.forbes.com/companies/hewlett-packard/,revenue,revenue,112.10,112100000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/hikvision/,fullcontact,fullcontact_379,fy,founded,01.01.2001,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/hitachi/,dbpedia,http://dbpedia.org/resource/Hitachi,est_yr,founded,1910-01-01,1910-01-01,identity,,,1
+http://www.forbes.com/companies/hitachi/,fullcontact,fullcontact_382,fy,founded,01.01.1910,1910-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/hitachi/,forbes,http://www.forbes.com/companies/hitachi/,revenue,revenue,95.70,95700000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/hollyfrontier/,dbpedia,http://dbpedia.org/resource/HollyFrontier,sect,industry,List of oil exploration and production companies,Oil Gas & Consumable Fuels,normalization,gics_label_map,,1
+http://www.forbes.com/companies/hyundai-steel/,dbpedia,http://dbpedia.org/resource/Hyundai_Steel,ctry,country,South Korea,South Korea,identity,,,2
+http://www.forbes.com/companies/hyundai-steel/,forbes,http://www.forbes.com/companies/hyundai-steel/,country,country,Korea (Republic of),South Korea,normalization,country_alias,,2
+http://www.forbes.com/companies/hyundai-steel/,forbes,http://www.forbes.com/companies/hyundai-steel/,industry,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,3
+http://www.forbes.com/companies/inditex/,dbpedia,http://dbpedia.org/resource/Inditex,est_yr,founded,1985-01-01,1985-01-01,identity,,,2
+http://www.forbes.com/companies/inditex/,forbes,http://www.forbes.com/companies/inditex/,industry,industry,Apparel/Footwear Retail,Specialty Retail,normalization,gics_label_map,,1
+http://www.forbes.com/companies/infosys/,dbpedia,http://dbpedia.org/resource/Infosys,est_yr,founded,1981-01-01,1981-01-01,identity,,,1
+http://www.forbes.com/companies/infosys/,fullcontact,fullcontact_418,fy,founded,01.01.1981,1981-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/infosys/,dbpedia,http://dbpedia.org/resource/Infosys,sect,industry,Information technology consulting,IT Services,normalization,gics_label_map,,1
+http://www.forbes.com/companies/infosys/,forbes,http://www.forbes.com/companies/infosys/,revenue,revenue,8.10,8100000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/integrys-energy/,dbpedia,http://dbpedia.org/resource/Integrys_Energy_Group,ctry,country,United States,United States,identity,,,29
+http://www.forbes.com/companies/integrys-energy/,dbpedia,http://dbpedia.org/resource/Integrys_Energy_Group,est_yr,founded,2007-01-01,2007-01-01,identity,,,3
+http://www.forbes.com/companies/israel-discount-bank/,forbes,http://www.forbes.com/companies/israel-discount-bank/,industry,industry,Regional Banks,Banks,normalization,gics_label_map,,6
+http://www.forbes.com/companies/israel-discount-bank/,dbpedia,http://dbpedia.org/resource/Israel_Discount_Bank,ann_inc,revenue,4,4000000,normalization,implicit_millions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/jyske-bank/,forbes,http://www.forbes.com/companies/jyske-bank/,industry,industry,Regional Banks,Banks,normalization,gics_label_map,,6
+http://www.forbes.com/companies/kasikornbank/,forbes,http://www.forbes.com/companies/kasikornbank/,industry,industry,Major Banks,Banks,normalization,gics_label_map,,7
+http://www.forbes.com/companies/l-3-communications/,forbes,http://www.forbes.com/companies/l-3-communications/,assets,assets,14,14000000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+http://www.forbes.com/companies/l-3-communications/,dbpedia,http://dbpedia.org/resource/L-3_Communications,sect,industry,Military,Aerospace & Defense,normalization,gics_label_map,,1
+http://www.forbes.com/companies/l-3-communications/,forbes,http://www.forbes.com/companies/l-3-communications/,industry,industry,Aerospace & Defense,Aerospace & Defense,identity,,,4
+http://www.forbes.com/companies/lg-uplus/,dbpedia,http://dbpedia.org/resource/LG_Uplus,ctry,country,South Korea,South Korea,identity,,,2
+http://www.forbes.com/companies/lg-uplus/,dbpedia,http://dbpedia.org/resource/LG_Uplus,est_yr,founded,1996-01-01,1996-01-01,identity,,,3
+http://www.forbes.com/companies/mcdonalds/,forbes,http://www.forbes.com/companies/mcdonalds/,industry,industry,Restaurants,Hotels Restaurants & Leisure,normalization,gics_label_map,,1
+http://www.forbes.com/companies/meadwestvaco/,forbes,http://www.forbes.com/companies/meadwestvaco/,revenue,revenue,5.40,5400000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/microsoft/,fullcontact,fullcontact_512,cn,country,United States of America,United States,normalization,country_alias,,17
+http://www.forbes.com/companies/mitsubishi-corp/,forbes,http://www.forbes.com/companies/mitsubishi-corp/,industry,industry,Trading Companies,Trading Companies & Distributors,normalization,gics_label_map,,1
+http://www.forbes.com/companies/mitsubishi-materials/,fullcontact,fullcontact_513,fy,founded,01.01.1950,1950-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/mitsubishi-motors/,forbes,http://www.forbes.com/companies/mitsubishi-motors/,industry,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,2
+http://www.forbes.com/companies/mondi/,fullcontact,fullcontact_517,fy,founded,01.01.1967,1967-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/ncc-group/,forbes,http://www.forbes.com/companies/ncc-group/,revenue,revenue,8.90,8900000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+http://www.forbes.com/companies/noble-energy/,dbpedia,http://dbpedia.org/resource/Noble_Energy,est_yr,founded,1932-01-01,1932-01-01,identity,,,1
+http://www.forbes.com/companies/noble-energy/,fullcontact,fullcontact_1881,fy,founded,01.01.1932,1932-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/nomos-bank/,dbpedia,http://dbpedia.org/resource/NOMOS-BANK,ctry,country,Russian Federation,Russia,normalization,country_alias,,2
+http://www.forbes.com/companies/nomos-bank/,forbes,http://www.forbes.com/companies/nomos-bank/,country,country,Russia,Russia,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",2
+http://www.forbes.com/companies/nomos-bank/,dbpedia,http://dbpedia.org/resource/NOMOS-BANK,sect,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/nomos-bank/,forbes,http://www.forbes.com/companies/nomos-bank/,industry,industry,Regional Banks,Banks,normalization,gics_label_map,,6
+http://www.forbes.com/companies/nordstrom/,fullcontact,fullcontact_1446,fy,founded,01.01.1901,1901-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/nordstrom/,forbes,http://www.forbes.com/companies/nordstrom/,industry,industry,Department Stores,Broadline Retail,normalization,gics_label_map,,2
+http://www.forbes.com/companies/pegatron/,dbpedia,http://dbpedia.org/resource/Pegatron,ctry,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/pegatron/,forbes,http://www.forbes.com/companies/pegatron/,country,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/pegatron/,dbpedia,http://dbpedia.org/resource/Pegatron,est_yr,founded,2007-01-01,2007-01-01,identity,,,3
+http://www.forbes.com/companies/petronas-chemicals/,forbes,http://www.forbes.com/companies/petronas-chemicals/,industry,industry,Specialized Chemicals,Chemicals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/pge/,fullcontact,fullcontact_587,fy,founded,01.01.1905,1905-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/pge/,forbes,http://www.forbes.com/companies/pge/,revenue,revenue,15.60,15600000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/ppg-industries/,dbpedia,http://dbpedia.org/resource/PPG_Industries,est_yr,founded,1883-01-01,1883-01-01,identity,,,1
+http://www.forbes.com/companies/ppg-industries/,fullcontact,fullcontact_7,fy,founded,01.01.1883,1883-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/prada/,dbpedia,http://dbpedia.org/resource/Prada,sect,industry,Clothing,Textiles Apparel & Luxury Goods,normalization,gics_label_map,,1
+http://www.forbes.com/companies/prada/,forbes,http://www.forbes.com/companies/prada/,industry,industry,Apparel/Accessories,Textiles Apparel & Luxury Goods,normalization,gics_label_map,,2
+http://www.forbes.com/companies/royal-bank-of-scotland/,forbes,http://www.forbes.com/companies/royal-bank-of-scotland/,industry,industry,Major Banks,Banks,normalization,gics_label_map,,7
+http://www.forbes.com/companies/saic-motor/,dbpedia,http://dbpedia.org/resource/SAIC_Motor,sect,industry,Automotive industry,Automobiles,normalization,gics_label_map,,1
+http://www.forbes.com/companies/saic-motor/,forbes,http://www.forbes.com/companies/saic-motor/,industry,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,2
+http://www.forbes.com/companies/sampo/,forbes,http://www.forbes.com/companies/sampo/,industry,industry,Diversified Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/sears-holdings/,forbes,http://www.forbes.com/companies/sears-holdings/,industry,industry,Department Stores,Broadline Retail,normalization,gics_label_map,,2
+http://www.forbes.com/companies/sherwin-williams/,forbes,http://www.forbes.com/companies/sherwin-williams/,assets,assets,"6.382.000.000,0",6382000000,normalization,number_locale,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+http://www.forbes.com/companies/siemens/,fullcontact,fullcontact_670,fy,founded,01.01.1847,1847-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/siemens/,forbes,http://www.forbes.com/companies/siemens/,industry,industry,Conglomerates,Industrial Conglomerates,normalization,gics_label_map,,1
+http://www.forbes.com/companies/sistema/,forbes,http://www.forbes.com/companies/sistema/,country,country,Russian Federation,Russia,normalization,country_alias,,2
+http://www.forbes.com/companies/sistema/,fullcontact,fullcontact_678,cn,country,Russia,Russia,identity,,,2
+http://www.forbes.com/companies/sistema/,fullcontact,fullcontact_678,fy,founded,01.01.1993,1993-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/sistema/,forbes,http://www.forbes.com/companies/sistema/,revenue,revenue,35.50,35500000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/sk-holdings/,forbes,http://www.forbes.com/companies/sk-holdings/,country,country,Korea (Republic of),South Korea,normalization,country_alias,,2
+http://www.forbes.com/companies/smith-nephew/,fullcontact,fullcontact_684,cn,country,United Kingdom,United Kingdom,identity,,,4
+http://www.forbes.com/companies/smith-nephew/,fullcontact,fullcontact_684,fy,founded,01.01.1856,1856-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/societe-generale/,forbes,http://www.forbes.com/companies/societe-generale/,industry,industry,Major Banks,Banks,normalization,gics_label_map,,7
+http://www.forbes.com/companies/standard-chartered/,dbpedia,http://dbpedia.org/resource/Standard_Chartered,ctry,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,8
+http://www.forbes.com/companies/standard-chartered/,forbes,http://www.forbes.com/companies/standard-chartered/,country,country,United Kingdom,United Kingdom,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",4
+http://www.forbes.com/companies/standard-chartered/,forbes,http://www.forbes.com/companies/standard-chartered/,industry,industry,Major Banks,Banks,normalization,gics_label_map,,7
+http://www.forbes.com/companies/swatch-group/,forbes,http://www.forbes.com/companies/swatch-group/,industry,industry,Apparel/Accessories,Textiles Apparel & Luxury Goods,normalization,gics_label_map,,2
+http://www.forbes.com/companies/swatch-group/,forbes,http://www.forbes.com/companies/swatch-group/,revenue,revenue,9.10,9100000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/swiss-life-holding/,forbes,http://www.forbes.com/companies/swiss-life-holding/,industry,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/tcl-corp/,fullcontact,fullcontact_55,fy,founded,01.01.2001,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/telefonica/,dbpedia,http://dbpedia.org/resource/Telef%C3%B3nica,est_yr,founded,1924-01-01,1924-01-01,identity,,,2
+http://www.forbes.com/companies/ternium/,fullcontact,fullcontact_736,fy,founded,01.01.2005,2005-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/ternium/,forbes,http://www.forbes.com/companies/ternium/,industry,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,3
+http://www.forbes.com/companies/teva-pharmaceutical/,dbpedia,http://dbpedia.org/resource/Teva_Pharmaceutical_Industries,est_yr,founded,1901-01-01,1901-01-01,identity,,,2
+http://www.forbes.com/companies/teva-pharmaceutical/,dbpedia,http://dbpedia.org/resource/Teva_Pharmaceutical_Industries,sect,industry,Pharmaceutical drug,Pharmaceuticals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/teva-pharmaceutical/,forbes,http://www.forbes.com/companies/teva-pharmaceutical/,industry,industry,Pharmaceuticals,Pharmaceuticals,identity,,,1
+http://www.forbes.com/companies/thomson-reuters/,forbes,http://www.forbes.com/companies/thomson-reuters/,revenue,revenue,12.70,12700000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/tokyo-electron/,dbpedia,http://dbpedia.org/resource/Tokyo_Electron,sect,industry,Semiconductor,Semiconductors & Semiconductor Equipment,normalization,gics_label_map,,1
+http://www.forbes.com/companies/tokyo-electron/,forbes,http://www.forbes.com/companies/tokyo-electron/,industry,industry,Semiconductors,Semiconductors & Semiconductor Equipment,normalization,gics_label_map,,2
+http://www.forbes.com/companies/tokyu/,forbes,http://www.forbes.com/companies/tokyu/,industry,industry,Railroads,Ground Transportation,normalization,gics_label_map,,1
+http://www.forbes.com/companies/unibail-rodamco/,dbpedia,http://dbpedia.org/resource/Unibail-Rodamco,est_yr,founded,2007-01-01,2007-01-01,identity,,,3
+http://www.forbes.com/companies/united-continental-holdings/,forbes,http://www.forbes.com/companies/united-continental-holdings/,industry,industry,Airline,Passenger Airlines,normalization,gics_label_map,,1
+http://www.forbes.com/companies/upm-kymmene/,dbpedia,http://dbpedia.org/resource/UPM_(company),est_yr,founded,1996-01-01,1996-01-01,identity,,,3
+http://www.forbes.com/companies/upm-kymmene/,fullcontact,fullcontact_778,fy,founded,01.01.1996,1996-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/upm-kymmene/,dbpedia,http://dbpedia.org/resource/UPM_(company),sect,industry,Lumber,Paper & Forest Products,normalization,gics_label_map,,1
+http://www.forbes.com/companies/vakifbank/,fullcontact,fullcontact_782,fy,founded,01.01.1954,1954-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/vale/,forbes,http://www.forbes.com/companies/vale/,industry,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,3
+http://www.forbes.com/companies/vale/,forbes,http://www.forbes.com/companies/vale/,revenue,revenue,47.60,47600000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/vestas-wind-systems/,dbpedia,http://dbpedia.org/resource/Vestas,sect,industry,Electrical equipment,Electrical Equipment,normalization,gics_label_map,,1
+http://www.forbes.com/companies/vestas-wind-systems/,forbes,http://www.forbes.com/companies/vestas-wind-systems/,industry,industry,Electrical Equipment,Electrical Equipment,identity,,,1
+http://www.forbes.com/companies/weir-group/,dbpedia,http://dbpedia.org/resource/Weir_Group,ctry,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,8
+http://www.forbes.com/companies/weir-group/,forbes,http://www.forbes.com/companies/weir-group/,country,country,Scotland,United Kingdom,normalization,country_alias,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+http://www.forbes.com/companies/wells-fargo/,fullcontact,fullcontact_812,fy,founded,01.01.1852,1852-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/woolworths/,dbpedia,http://dbpedia.org/resource/Woolworths_Limited,est_yr,founded,1924-01-01,1924-01-01,identity,,,2

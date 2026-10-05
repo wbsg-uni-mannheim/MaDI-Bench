@@ -1,14 +1,19 @@
 # Knob 06 — Value Noise Injection Rate — Music
 #
-# Refreshed 2026-05-07 against the schema.org-style CSV sources at
-# usecases/music/input/data/. id_columns are native ``id`` on all
-# three sources (no loader rename needed). New blocks: ``taxonomies``
-# (Pending #4 — Music_Genres) and ``numeric_attributes`` (Pending #6).
-#
-# musicbrainz/lastfm have an empty ``genre`` column on the refreshed
-# CSV (verified 2026-05-07); only discogs.genre is populated. K6 already
-# no-ops on null cells, so the empty bindings cost nothing — they exist
-# so a future refresh that backfills the column needs no config change.
+# Keyed on the LOADED column names of the base sources at
+# use cases/music/base/input/data/ (2026-09-25 remap). The 2026-06-03
+# header rewrite put raw WDC headers on disk and dropped the all-empty
+# columns; the loader renames each native id column (musicbrainz.
+# Attribute_1 / discogs.rec_uid / lastfm.item_code) to ``id``:
+#   musicbrainz: Attribute_2=name, _3=artist, _4=release-date,
+#                _5=release-country, _6=duration (no genre / label)
+#   discogs:     title_str, performer, pub_dt, origin_loc, duration,
+#                imprint (label), category (genre)
+#   lastfm:      album_title, band, album_length (duration)
+#                (no release-country / genre / release-date / label)
+# Blocks: ``taxonomies`` (taxonomy_walk bindings for Music_Genres,
+# discogs.category only) and ``numeric_attributes`` (±2% relative
+# jitter cap).
 
 domain: music
 
@@ -19,58 +24,46 @@ id_columns:
 
 attribute_classes:
   musicbrainz:
-    name: primary
-    artist: key
-    release-country: key
-    genre: key
-    release-date: secondary
-    duration: secondary
-    label: secondary
+    Attribute_2: primary
+    Attribute_3: key
+    Attribute_5: key
+    Attribute_4: secondary
+    Attribute_6: secondary
   discogs:
-    name: primary
-    artist: key
-    release-country: key
-    genre: key
-    release-date: secondary
+    title_str: primary
+    performer: key
+    origin_loc: key
+    category: key
+    pub_dt: secondary
     duration: secondary
-    label: secondary
+    imprint: secondary
   lastfm:
-    name: primary
-    artist: key
-    release-country: key
-    genre: key
-    release-date: secondary
-    duration: secondary
-    label: secondary
+    album_title: primary
+    band: key
+    album_length: secondary
 
 # Source column to canonical attribute (per
 # config/domains/music.yaml: name / artist / release-country / genre /
 # release-date / duration / label).
 attribute_mapping:
   musicbrainz:
-    name: name
-    artist: artist
-    release-country: release-country
-    genre: genre
-    release-date: release-date
-    duration: duration
-    label: label
+    Attribute_2: name
+    Attribute_3: artist
+    Attribute_5: release-country
+    Attribute_4: release-date
+    Attribute_6: duration
   discogs:
-    name: name
-    artist: artist
-    release-country: release-country
-    genre: genre
-    release-date: release-date
+    title_str: name
+    performer: artist
+    origin_loc: release-country
+    category: genre
+    pub_dt: release-date
     duration: duration
-    label: label
+    imprint: label
   lastfm:
-    name: name
-    artist: artist
-    release-country: release-country
-    genre: genre
-    release-date: release-date
-    duration: duration
-    label: label
+    album_title: name
+    band: artist
+    album_length: duration
 
 noise_rates_per_level:
   easy:
@@ -129,7 +122,7 @@ soft_global_primary_cap_hard: 0.35
 compression_factor: 0.5
 stretch_factor: 1.5
 
-# Pending #4: taxonomy bindings. Music_Genres_Taxonomy is 3-level
+# Taxonomy bindings. Music_Genres_Taxonomy is 3-level
 # (Genre → Subgenre → Sub-Subgenre).
 taxonomies:
   genre:
@@ -139,33 +132,28 @@ taxonomies:
       - Subgenre Name
       - Sub-Subgenre Name
     bind:
-      musicbrainz:
-        genre: genre
       discogs:
-        genre: genre
-      lastfm:
-        genre: genre
+        category: genre
 
-# Pending #6: ±2 % relative jitter cap. ``duration`` is in seconds (raw
-# float / int) per K5 sign-off — cap applies to seconds.
+# ±2 % relative jitter cap. ``duration`` is in seconds (raw
+# float / int), so the cap applies to seconds.
 numeric_jitter_max_relative: 0.02
 
 numeric_attributes:
   musicbrainz:
-    release-date: date
-    duration: continuous
+    Attribute_4: date
+    Attribute_6: continuous
   discogs:
-    release-date: date
+    pub_dt: date
     duration: continuous
   lastfm:
-    release-date: date
-    duration: continuous
+    album_length: continuous
 
-# Easy-only cleanup rules: lastfm.name carries an "Artist - Title"
-# prefix on 1365/9865 records (verified 2026-05-07). Strip the leading
-# "<artist> - " segment at easy.
+# Easy-only cleanup rules: lastfm.album_title (= name) carries an
+# "Artist - Title" prefix on 1365/9865 records (verified 2026-05-07).
+# Strip the leading "<artist> - " segment at easy.
 cleanup_rules:
   - source: lastfm
-    attribute: name
+    attribute: album_title
     pattern: '^.+?\s+-\s+'
     replacement: ""

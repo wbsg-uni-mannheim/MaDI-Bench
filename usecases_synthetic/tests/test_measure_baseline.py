@@ -138,7 +138,7 @@ def _fixture_em_matching_result(domain: str = "companies") -> CommitteeResult:
 
     Mirrors the keys emitted by
     :class:`EMMatchingCommitteeRunner` post-2026-05-13 EM stage split
-    (closed-set scoring per plan_revision.md §C10).
+    (closed-set scoring).
     """
     return CommitteeResult(
         stage="em_matching",

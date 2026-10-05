@@ -2,7 +2,7 @@
   "metric": "consistency",
   "metadata": {
     "case": "music-augmented-medium",
-    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/medium/input/schemamatching/target_schema.json",
+    "schema_path": "PyDI/usecases/music-augmented/medium/input/schemamatching/target_schema.json",
     "fused_output": "DI-Bench/runs/augmented/music/medium/fusion/fused_clean.csv"
   },
   "result": {

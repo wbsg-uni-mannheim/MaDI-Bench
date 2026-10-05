@@ -3,38 +3,58 @@
     "brand": {
       "kwargs": {
         "sources": [
-          "prod1"
+          "products_3",
+          "products_1",
+          "products_2",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     },
     "bus_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "kwargs": {
+        "sources": [
+          "products_3",
+          "products_1",
+          "products_2",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "chipset_name": {
       "kwargs": {},
-      "resolver": "voting"
-    },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
     },
     "color": {
-      "kwargs": {},
-      "resolver": "longest_string"
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "description": {
       "kwargs": {},
       "resolver": "longest_string"
     },
     "form_factor": {
-      "kwargs": {},
-      "resolver": "voting"
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_4",
+          "products_3",
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "height_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "interface_type": {
       "kwargs": {},
@@ -49,78 +69,61 @@
       "resolver": "voting"
     },
     "model": {
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "longest_string"
     },
     "model_number": {
+      "kwargs": {},
+      "resolver": "voting"
+    },
+    "price": {
       "kwargs": {
         "trust_key": "trust_score"
       },
       "resolver": "prefer_higher_trust"
     },
-    "price": {
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      },
-      "resolver": "favour_sources"
-    },
     "priceCurrency": {
       "kwargs": {
-        "sources": [
-          "prod1"
-        ]
+        "trust_key": "trust_score"
       },
-      "resolver": "favour_sources"
+      "resolver": "prefer_higher_trust"
     },
     "product_type": {
       "kwargs": {},
       "resolver": "voting"
     },
     "read_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "maximum"
+      "kwargs": {
+        "sources": [
+          "products_3",
+          "products_2",
+          "products_1",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "storage_connection_type": {
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "most_complete"
     },
     "storage_gb": {
-      "kwargs": {
-        "sources": [
-          "prod1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
     "url": {
       "kwargs": {
-        "sources": [
-          "prod1"
-        ]
+        "trust_key": "trust_score"
       },
-      "resolver": "favour_sources"
+      "resolver": "prefer_higher_trust"
     },
     "vram_gb": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "median"
     },
     "weight_g": {
       "kwargs": {},
@@ -128,11 +131,18 @@
     },
     "width_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "write_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "maximum"
+      "kwargs": {
+        "sources": [
+          "products_3",
+          "products_2",
+          "products_1",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
     }
   },
   "main_entity": "computer hardware product"

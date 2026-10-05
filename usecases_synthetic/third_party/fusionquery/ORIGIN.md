@@ -6,7 +6,7 @@
 - Upstream commit: `3b8b4db184aea88da1971b7b4d77a4ae4ce88594` (2025-03-11)
 - Upstream license: Apache License, Version 2.0 — verbatim copy at [LICENSE](LICENSE)
 - Vendored on: 2026-04-23
-- Vendored by: synthetic-usecases (committee finalization plan §C3.4)
+- Vendored for: the fusion committee of the variant generator
 
 ## What was copied
 
@@ -23,9 +23,8 @@ intra-package import rewrites were required because the upstream files do not im
 
 ## What was deliberately excluded
 
-The upstream repo's matching subsystem and training driver are out of scope for the synthetic fusion committee — see
-[plans/plan_committee_finalization.md §C3.3 user decision](../../../plans/plan_committee_finalization.md#c3--data-fusion-committee)
-("Strip `sentence-transformers` / FAISS deps; keep numpy core").
+The upstream repo's matching subsystem and training driver are out of scope for the fusion committee: the
+`sentence-transformers` / FAISS dependencies are stripped and only the numpy core is kept.
 
 | Upstream path | Reason for exclusion |
 |---|---|
@@ -42,11 +41,11 @@ The upstream repo's matching subsystem and training driver are out of scope for 
 |---|---|---|
 | `MajorityVoter` | baseline.py | (used internally by `CASEFusion`) |
 | `DARTFusion` | baseline.py | not adapted — paradigm overlap with `TruthFinder` |
-| `TruthFinder` | baseline.py | [`usecases_synthetic/lib/truthfinder_fusion.py`](../../lib/truthfinder_fusion.py) |
-| `CASEFusion` | baseline.py | [`usecases_synthetic/lib/casefusion_fusion.py`](../../lib/casefusion_fusion.py) |
-| `LTMFusion` | baseline.py | [`usecases_synthetic/lib/ltm_fusion.py`](../../lib/ltm_fusion.py) |
-| `EMFusioner` | fusion.py | [`usecases_synthetic/lib/fusionquery_fusion.py`](../../lib/fusionquery_fusion.py) |
+| `TruthFinder` | baseline.py | [`usecases_synthetic/lib/td_batch_fusion.py`](../../lib/td_batch_fusion.py) |
+| `CASEFusion` | baseline.py | [`usecases_synthetic/lib/td_batch_fusion.py`](../../lib/td_batch_fusion.py) |
+| `LTMFusion` | baseline.py | [`usecases_synthetic/lib/td_batch_fusion.py`](../../lib/td_batch_fusion.py) |
+| `EMFusioner` | fusion.py | [`usecases_synthetic/lib/td_batch_fusion.py`](../../lib/td_batch_fusion.py) |
 
-The adapter files convert PyDI's per-cell `ConflictResolutionFunction` contract
-(`(values, **kwargs) -> (value, confidence, metadata)`) into the upstream's
-`prepare_for_fusion(cand_answer)` + `iterate_fusion(threshold=...)` interface.
+`td_batch_fusion.py` fits each upstream method once per attribute on the full attribute corpus and
+exposes the winning values through PyDI's per-cell `ConflictResolutionFunction` contract
+(`(values, **kwargs) -> (value, confidence, metadata)`).

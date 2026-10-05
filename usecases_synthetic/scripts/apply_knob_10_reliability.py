@@ -19,12 +19,10 @@ Inputs
 ------
 - Source DataFrames from ``usecases/<domain>/input/data/``
 - Fusion gold from ``usecases/<domain>/input/fusion/{validation_set,test_set}.xml``
-  (both files are read; their union is the protected fusion universe per
-  the §"Terminology convention" pass in plan_s1_scale.md)
+  (both files are read; their union is the protected fusion universe)
 - Per-domain K10 config at ``usecases_synthetic/config/knob_10_reliability/<domain>.yaml``
 - Per-attribute kind map from
   :data:`usecases_synthetic.lib.protection._DEFAULT_KIND_BY_DOMAIN_ATTR`
-  (Pending #5 strict + infra-aligned wire-up, 2026-05-07)
 
 Outputs (under *output_dir*)
 ------
@@ -102,7 +100,7 @@ def fusion_protected_paths(domain: str) -> list[Path]:
     the caller skips non-existent paths via :func:`load_fusion_gold` per
     file.
 
-    Per §"Terminology convention" in plan_s1_scale.md: both fusion val and
+    Both fusion val and
     test entities are protected at every value- and entity-mutating knob,
     K10 included.
     """
@@ -246,7 +244,7 @@ def apply_knob_10(
         if not path.exists():
             logger.info("Fusion gold file not present: %s", path)
             continue
-        partial = load_fusion_gold(path)
+        partial = load_fusion_gold(path, domain)
         # Test wins on conflicting entity IDs (val read first if listed
         # first per fusion_protected_paths).
         fusion_gold.update(partial)
@@ -288,9 +286,9 @@ def apply_knob_10(
     concentration_cap: float = config.get("concentration_cap", 0.99)
 
     # --- Resolve per-attribute kinds from protection.py ---
-    # Pending #5 strict + infra-aligned wire-up (2026-05-07): kind taxonomy
+    # Kind taxonomy
     # is sourced from protection._DEFAULT_KIND_BY_DOMAIN_ATTR (the canonical
-    # locked map from K1/K5/K6 sign-offs), not from K5 attribute_classes
+    # map shared by K1/K5/K6), not from K5 attribute_classes
     # reconciliation. is_gold_aligned semantics are unchanged (canonical-
     # form equality); only the kind source-of-truth moves.
     source_names = sorted(sources.keys())
@@ -429,7 +427,7 @@ def apply_knob_10(
         columns=["source", "entity_id", "compromised", "knob", "level"],
     )
 
-    # Realised summary (plan_revision.md R-1 / C3 K10): swap_rate is the
+    # Realised summary: swap_rate is the
     # rate-based intensity metric that monotonicity Check B needs to
     # detect K10 hard's compromised-mask depopulation against the shrinking
     # post-K3 entity pool. ``swap_cells`` counts distinct (entity, attribute)
@@ -483,7 +481,7 @@ def write_outputs(
     """Write K10 artifacts to *output_dir*.
 
     ``realised_df`` is the per-level swap-rate summary produced by
-    :func:`apply_knob_10` (plan_revision.md R-1 / C3 K10). Optional for
+    :func:`apply_knob_10`. Optional for
     backwards compatibility with older callers; when omitted, the
     ``knob_10_realised.csv`` artifact is skipped.
     """
@@ -512,7 +510,7 @@ def write_outputs(
         baselines_dir / "knob_10_baseline_alignment.csv", index=False
     )
 
-    # Realised swap-rate (C3 K10): per-level summary for the audit.
+    # Realised swap-rate: per-level summary for the audit.
     if realised_df is not None and not realised_df.empty:
         realised_df.to_csv(baselines_dir / "knob_10_realised.csv", index=False)
         logger.info(

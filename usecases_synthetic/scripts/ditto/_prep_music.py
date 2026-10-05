@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R2.1 helper (PyDI-data variant): build Ditto json.gz files for music.
+"""Helper (PyDI-data variant): build Ditto json.gz files for music.
 
 Per pair:
 
@@ -13,7 +13,7 @@ Per pair:
     val   = PyDI musicbrainz_2_lastfm_val.csv    (~8k pairs)
     test  = PyDI musicbrainz_2_lastfm_test.csv   (1,000 pairs)
 
-Music uses **option (b) from the R2.2 redo: pure PyDI throughout** —
+Music uses **pure PyDI throughout** —
 PyDI's gold for music is 15× larger than ADI's training pool (~36k vs
 2.4k pairs), so the ADI-train approach (used for companies/games) is
 not the best lever here. PyDI's natural train/val/test splits are
@@ -24,7 +24,7 @@ no id1↔id2 swap is needed — the canonical (src_left, src_right) order
 is `(musicbrainz, discogs)` and `(musicbrainz, lastfm)` matching the
 PyDI filename convention.
 
-Field projection (R10-I): the **wide committee scope**
+Field projection: the **wide committee scope**
 (``committee_ditto_fields("music")`` == ``DOMAIN_TEXT_COLS["music"]`` ==
 ``em_matching_committee_music.yaml`` ``ditto_plm.fields`` — `[name, artist,
 release-date, release-country, duration, label, genre, tracks]`),
@@ -62,7 +62,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR
+from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR, task_dir
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
     build_ditto_pair_records_committee_scope,
@@ -72,7 +72,7 @@ from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
 )
 
 DOMAIN = "music"
-PYDI_EM_GOLD_DIR = USECASES_DIR / DOMAIN / "input" / "entitymatching"
+PYDI_EM_GOLD_DIR = task_dir(DOMAIN, root=USECASES_DIR) / "input" / "entitymatching"
 OUTPUT_DIR = SYNTHETIC_DIR / "output" / "ditto" / DOMAIN
 
 
@@ -177,7 +177,7 @@ def _dedupe_by_pair(records: list[dict], split_label: str) -> list[dict]:
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-    # R10-I: wide committee field scope, column-mapped off the base PyDI
+    # Wide committee field scope, column-mapped off the base PyDI
     # sources the way the committee runner maps them at inference (music uses
     # an identity column_mapping). Committee baseline Ditto trains on base.
     sources = load_domain_sources(DOMAIN)

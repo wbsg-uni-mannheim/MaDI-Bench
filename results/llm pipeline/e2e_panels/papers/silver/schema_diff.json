@@ -1,0 +1,61 @@
+{
+  "columns_shared": [
+    "_fusion_source_datasets",
+    "_fusion_sources",
+    "authors",
+    "cited_by_count",
+    "first_page",
+    "issue",
+    "journal",
+    "last_page",
+    "publication_year",
+    "referenced_works_count",
+    "title",
+    "type",
+    "volume"
+  ],
+  "columns_silver_only": [
+    "cluster_id",
+    "crossref_id",
+    "dblp_id",
+    "open_alex_id"
+  ],
+  "columns_pipe_only": [
+    "_id",
+    "abstract_text",
+    "id",
+    "publisher_name",
+    "topic_terms"
+  ],
+  "dtype_mismatches": [
+    {
+      "column": "cited_by_count",
+      "pipe_dtype": "float64",
+      "silver_dtype": "int64"
+    }
+  ],
+  "column_types_used": {
+    "type": "categorical",
+    "title": "text",
+    "authors": "list",
+    "publication_year": "datetime",
+    "journal": "text",
+    "volume": "categorical",
+    "issue": "categorical",
+    "first_page": "numerical",
+    "last_page": "numerical",
+    "referenced_works_count": "numerical",
+    "cited_by_count": "numerical"
+  },
+  "skipped_columns_for_per_column_metrics": [
+    "_id",
+    "abstract_text",
+    "cluster_id",
+    "crossref_id",
+    "dblp_id",
+    "id",
+    "open_alex_id",
+    "publisher_name",
+    "topic_terms"
+  ]
+}

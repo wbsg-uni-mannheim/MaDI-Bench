@@ -1,0 +1,69 @@
+{
+  "columns_shared": [
+    "_fusion_source_datasets",
+    "_fusion_sources",
+    "brand",
+    "bus_type",
+    "chipset_name",
+    "color",
+    "description",
+    "form_factor",
+    "height_mm",
+    "id",
+    "interface_type",
+    "length_mm",
+    "memory_type",
+    "model",
+    "model_number",
+    "price",
+    "priceCurrency",
+    "product_type",
+    "read_speed_mb_s",
+    "storage_connection_type",
+    "storage_gb",
+    "title",
+    "url",
+    "vram_gb",
+    "weight_g",
+    "width_mm",
+    "write_speed_mb_s"
+  ],
+  "columns_silver_only": [
+    "cluster_id",
+    "p1_id"
+  ],
+  "columns_pipe_only": [
+    "_id"
+  ],
+  "dtype_mismatches": [],
+  "column_types_used": {
+    "title": "text",
+    "brand": "categorical",
+    "description": "text",
+    "price": "numerical",
+    "priceCurrency": "categorical",
+    "product_type": "categorical",
+    "model": "text",
+    "model_number": "text",
+    "chipset_name": "text",
+    "vram_gb": "numerical",
+    "storage_gb": "numerical",
+    "read_speed_mb_s": "numerical",
+    "write_speed_mb_s": "numerical",
+    "bus_type": "categorical",
+    "interface_type": "categorical",
+    "width_mm": "numerical",
+    "length_mm": "numerical",
+    "height_mm": "numerical",
+    "weight_g": "numerical",
+    "storage_connection_type": "categorical",
+    "memory_type": "categorical",
+    "color": "categorical",
+    "form_factor": "categorical"
+  },
+  "skipped_columns_for_per_column_metrics": [
+    "_id",
+    "cluster_id",
+    "p1_id"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "original_task": "<p4-run:companies_base>",
+  "stages": [
+    {
+      "command": [
+        "bash",
+        "work/rebuild.sh"
+      ],
+      "seconds": 179.79063267679885,
+      "returncode": 0
+    }
+  ],
+  "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+  "original_sha256": {
+    "<p4-run:companies_base>/workspace/task/input/schemamatching/GICS_Industry_Taxonomy.csv": "6753135c3f2854101167bc4724742d8c1eabbef43756215a59f04592d343027a",
+    "<p4-run:companies_base>/workspace/task/input/schemamatching/CLDR_Country_Taxonomy.csv": "ee9ef8ea3e6f0ed4150e1d608f247ec33ca4de3697bbbb58506bcafadf22c7d1",
+    "<p4-run:companies_base>/workspace/task/input/schemamatching/target_schema.json": "2b198a554bab5d2f72fcf6e5972d3855e9ac47bd1ae88ccacebbb1a6c5601e81",
+    "<p4-run:companies_base>/workspace/task/input/data/dbpedia_metadata.json": "beb102f80e8f592f47b300590a23049f3f888ea7d384193e87b0e828a747e9cf",
+    "<p4-run:companies_base>/workspace/task/input/data/forbes.csv": "1b95f9a611e6500aac69bf7dea27c1e1aa2b067181cea069158119da0f6580f3",
+    "<p4-run:companies_base>/workspace/task/input/data/fullcontact.csv": "40947bea53f0ccbc8b0e159d6a0b4081678fb087c946ab8605f2d7ff621449a3",
+    "<p4-run:companies_base>/workspace/task/input/data/dbpedia.csv": "c3e154fdd068d939b1724b57b4b2cd84b157a977a532646004a206cd2b418a37",
+    "<p4-run:companies_base>/workspace/task/input/data/forbes_metadata.json": "63b806ff8acb6e14d71708345a182ed75b00cfbf69a51515c9772ec5455db497",
+    "<p4-run:companies_base>/workspace/task/input/data/fullcontact_metadata.json": "4834fae0c70200950abe3281b17e7041d84eddcd3443cdb7453bfd930840cdc2",
+    "<p4-run:companies_base>/workspace/work/s3_blocking.py": "ed3b1f6cf1eab99e6334d341c14337a45df6b8d13841eccafc359240dd0064c7",
+    "<p4-run:companies_base>/workspace/work/s4_match.py": "21e8ffc803f88562e814b662efa6ea1b6d180544979d7a65577cfa53d4be03d9",
+    "<p4-run:companies_base>/workspace/work/common.py": "e84eefc6b40b3d386bef033ccdfb6fb96d4ddf621a6d36b00f5ed1f7af362d34",
+    "<p4-run:companies_base>/workspace/work/s1_schema.py": "65ae9ae3d39c1954dcd279871133f779cdc88e18404b671222f7cfcb983be681",
+    "<p4-run:companies_base>/workspace/work/s2_normalize.py": "f6c1b18fbd0c801bcd60e80c1c586a73e2ae0b9e958bfa7aa1399b854b067348",
+    "<p4-run:companies_base>/workspace/work/diagnostics.py": "ff93d19b5c55196f6d34daff24141e5bd58d0c670d0a16ebdddf2639dd7ea84f",
+    "<p4-run:companies_base>/workspace/work/industry_map.py": "59646b0f5148c9095f09a72a26db5081aaf8a7adea78ca9ecdc758fa28f68131",
+    "<p4-run:companies_base>/workspace/work/s7_export.py": "b461042489396dd75c78aa0195cb19b6ade2b8979fb4f37db4077fd5acc89df8",
+    "<p4-run:companies_base>/workspace/work/rebuild.sh": "4c0313e86992b6b35dd60c9ee4be87def300e75bc2fd3e04e1c9ff310131dc37",
+    "<p4-run:companies_base>/workspace/work/s5_cluster.py": "3da65eae698a0a1909e956825c4496cdbd0d78300b5faf62e00a58936abc1032",
+    "<p4-run:companies_base>/workspace/work/s4_features.py": "39777337b5522e6774a6f4392e2bf28e9268795e52bfd3a7aac251cc587a1383",
+    "<p4-run:companies_base>/workspace/work/s6_fusion.py": "d5ae9b9dd28df1f9d9486fa3f4caa9897a735092948638b763491cfef1e7c7de",
+    "<p4-run:companies_base>/submission/sm_mapping.csv": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+    "<p4-run:companies_base>/submission/blocking/candidates.csv": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+    "<p4-run:companies_base>/submission/correspondences.csv": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+    "<p4-run:companies_base>/submission/membership.csv": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+    "<p4-run:companies_base>/submission/fused.csv": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46"
+  },
+  "fresh_state_verified": true,
+  "wall_seconds": 179.79065548395738,
+  "artifact_checks": {
+    "sm_mapping.csv": {
+      "original_sha256": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+      "replay_sha256": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+      "bytes_identical": true
+    },
+    "blocking/candidates.csv": {
+      "original_sha256": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+      "replay_sha256": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+      "bytes_identical": true
+    },
+    "correspondences.csv": {
+      "original_sha256": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+      "replay_sha256": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+      "bytes_identical": true
+    },
+    "membership.csv": {
+      "original_sha256": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+      "replay_sha256": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+      "bytes_identical": true
+    },
+    "fused.csv": {
+      "original_sha256": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46",
+      "replay_sha256": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46",
+      "bytes_identical": true
+    }
+  },
+  "originals_unchanged": true,
+  "status": "executed"
+}

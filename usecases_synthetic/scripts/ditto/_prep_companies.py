@@ -4,7 +4,7 @@
 Two training-data sources (selected via ``--train-source``):
 
 * ``--train-source pydi`` **(default, committee-correct per
-  plan_revision.md R6-3)**: train/val/test all come from
+  the design)**: train/val/test all come from
   ``usecases/companies/input/entitymatching/<pydi_pair>_<split>.csv``.
   The committee Ditto checkpoint must train on the same gold
   distribution the committee evaluates against — ADI's labeled pool is
@@ -14,9 +14,9 @@ Two training-data sources (selected via ``--train-source``):
 * ``--train-source adi`` **(legacy / pool-builder path)**: train from
   ``automatic-data-integration/scripts/output/companies_0302/entity_resolution/training/training_<adi_pair>_latest.csv``,
   val from ``.../validation/similarity_validation_faiss_<adi_pair>.csv``,
-  test from PyDI. This is the R2.2 setup used by the pool builder
+  test from PyDI. This is the original setup used by the pool builder
   (which lives in ``lib/pool_builder.py`` + ``scripts/build_pool.py``);
-  it must NOT be wired to the committee per R6-3.
+  it must NOT be wired to the committee.
   Output: ``usecases_synthetic/output/ditto/companies/``.
 
 **Leak removal**: pairs appearing in train ∩ PyDI-test or
@@ -52,7 +52,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR
+from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR, task_dir
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
     build_ditto_pair_records_committee_scope,
@@ -71,7 +71,7 @@ ADI_DIR = (
     / "companies_0302"
     / "entity_resolution"
 )
-PYDI_EM_GOLD_DIR = USECASES_DIR / DOMAIN / "input" / "entitymatching"
+PYDI_EM_GOLD_DIR = task_dir(DOMAIN, root=USECASES_DIR) / "input" / "entitymatching"
 OUTPUT_DIR_ADI = SYNTHETIC_DIR / "output" / "ditto" / DOMAIN
 OUTPUT_DIR_PYDI = SYNTHETIC_DIR / "output" / "ditto" / f"{DOMAIN}_pydi"
 
@@ -242,9 +242,9 @@ def main() -> None:
         description=(
             "Prepare Ditto train/val/test json.gz files for companies. "
             "Default --train-source pydi is committee-correct per "
-            "plan_revision.md R6-3 (committee Ditto must train on the "
+            "design (committee Ditto must train on the "
             "same gold distribution it evaluates against). --train-source "
-            "adi is the legacy R2.2 setup reserved for the pool builder."
+            "adi is the legacy setup reserved for the pool builder."
         )
     )
     parser.add_argument(
@@ -265,7 +265,7 @@ def main() -> None:
     output_dir = OUTPUT_DIR_PYDI if train_source == "pydi" else OUTPUT_DIR_ADI
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # R10-I: the committee (pydi) path builds the wide committee field scope
+    # The committee (pydi) path builds the wide committee field scope
     # column-mapped off the base sources; the legacy ADI path stays narrow.
     use_committee_scope = train_source == "pydi"
     sources: dict[str, pd.DataFrame] = (

@@ -5,40 +5,48 @@
       "resolver": "favour_sources",
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_3"
         ]
       }
     },
     "bus_type": {
-      "resolver": "most_complete",
-      "kwargs": {}
-    },
-    "chipset_name": {
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "cluster_id": {
-      "resolver": "voting",
-      "kwargs": {}
+    "chipset_name": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
     },
     "color": {
-      "resolver": "most_complete",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
     },
     "description": {
       "resolver": "most_complete",
       "kwargs": {}
     },
     "form_factor": {
-      "resolver": "voting",
-      "kwargs": {}
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
     },
     "height_mm": {
       "resolver": "median",
       "kwargs": {}
     },
     "interface_type": {
-      "resolver": "most_complete",
+      "resolver": "longest_string",
       "kwargs": {}
     },
     "length_mm": {
@@ -54,24 +62,24 @@
       }
     },
     "model": {
-      "resolver": "most_complete",
+      "resolver": "longest_string",
       "kwargs": {}
     },
     "model_number": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
-    },
-    "price": {
-      "resolver": "minimum",
-      "kwargs": {}
-    },
-    "priceCurrency": {
       "resolver": "voting",
       "kwargs": {}
+    },
+    "price": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
+    },
+    "priceCurrency": {
+      "resolver": "prefer_higher_trust",
+      "kwargs": {
+        "trust_key": "trust_score"
+      }
     },
     "product_type": {
       "resolver": "voting",
@@ -86,22 +94,14 @@
       }
     },
     "storage_connection_type": {
-      "resolver": "most_complete",
-      "kwargs": {}
-    },
-    "storage_gb": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
-    },
-    "title": {
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "title_description": {
+    "storage_gb": {
+      "resolver": "median",
+      "kwargs": {}
+    },
+    "title": {
       "resolver": "longest_string",
       "kwargs": {}
     },
@@ -112,12 +112,8 @@
       }
     },
     "vram_gb": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
+      "resolver": "median",
+      "kwargs": {}
     },
     "weight_g": {
       "resolver": "median",

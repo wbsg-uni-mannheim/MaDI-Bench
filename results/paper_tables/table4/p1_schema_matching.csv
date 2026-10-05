@@ -1,0 +1,6 @@
+domain,correct,predicted,gold_correspondences,precision,recall,f1,run
+games,26,26,26,1.0,1.0,1.0,2026-09-24 P1 run (LLM schema matcher; logged responses replayed)
+companies,19,19,21,1.0,0.9047619047619048,0.9500000000000001,2026-09-24 P1 run (LLM schema matcher; logged responses replayed)
+music,21,21,21,1.0,1.0,1.0,2026-09-24 P1 run (LLM schema matcher; logged responses replayed)
+products,100,100,100,1.0,1.0,1.0,"2026-09-26 P1 products run (hand-written mapping, no LLM)"
+papers,31,31,34,1.0,0.9117647058823529,0.9538461538461539,"2026-09-24 P1 run (hand-written correspondences, no LLM)"

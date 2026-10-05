@@ -1,11 +1,26 @@
 {
-  "description": "Unmodified P4 no-labels, no-PyDI prompt and skill snapshots from the five reported base runs. Paths in the snapshots refer to the original agent workspace.",
+  "description": "Unmodified P4 no-labels, no-PyDI prompt and skill snapshots from the five reported base runs. Paths in the snapshots refer to the agent workspace.",
   "runs": {
-    "games": "runs/games_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070613Z/tasks/games",
-    "companies": "runs/companies_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070616Z/tasks/companies",
-    "music": "runs/music_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070616Z/tasks/music",
-    "products": "runs/products_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260923T222103Z/tasks/products",
-    "papers": "runs/papers_base-claudecode-skills-no-labels-no-pydi-opus55-subscription/20260924T070619Z/tasks/papers"
+    "games": {
+      "outputs": "results/claude code/games/baseline",
+      "run_started_utc": "20260924T070613Z"
+    },
+    "companies": {
+      "outputs": "results/claude code/companies/baseline",
+      "run_started_utc": "20260924T070616Z"
+    },
+    "music": {
+      "outputs": "results/claude code/music/baseline",
+      "run_started_utc": "20260924T070616Z"
+    },
+    "products": {
+      "outputs": "results/claude code/products/baseline",
+      "run_started_utc": "20260923T222103Z"
+    },
+    "papers": {
+      "outputs": "results/claude code/papers/baseline",
+      "run_started_utc": "20260924T070619Z"
+    }
   },
   "files": {
     "prompts/companies/SUBMISSION_SPEC.md": "f83ced0bc39d3a72650ae939668a4c2557eb8a640bdf4e6878f552f1cf862602",

@@ -1,12 +1,11 @@
 """Tune the fusion committee per-domain.
 
-R5 Fusion sign-off (plans/plan_s1_scale.md, 2026-05-12).
 
 Each fusion sweep cell uses **perfect-cluster correspondences** as input
 (see ``lib/fusion_perfect_clusters.py``) — the cluster ground truth
 declared in the fusion validation + test XMLs. This isolates the
 "how good is this fusion strategy" signal from "how good is the
-upstream EM committee", per the R5 design directive.
+upstream EM committee".
 
 Sub-sweeps (each opt-in via ``--sub-sweeps``):
 
@@ -165,10 +164,10 @@ def _score_run(
     }
 
 
-# Mapping from per-sub-sweep "method name" (kept from the pre-C12 script
-# for backward-compat of the sub-sweep names) to the C12 member name
-# in ``members:``. Under C12, each pre-C12 TD strategy is a coherent
-# end-to-end member with the ``_only`` suffix (per plan_revision.md §C12).
+# Mapping from per-sub-sweep "method name" (kept from the earlier per-attribute script
+# for backward-compat of the sub-sweep names) to the coherent member name
+# in ``members:``. Each former per-attribute TD strategy is a coherent
+# end-to-end member with the ``_only`` suffix.
 _METHOD_TO_MEMBER: dict[str, str] = {
     "truthfinder": "truthfinder_only",
     "accusim": "accusim_only",
@@ -182,12 +181,12 @@ _METHOD_TO_MEMBER: dict[str, str] = {
 def _mutate_member_params(
     base: dict[str, Any], method_name: str, new_params: dict[str, Any]
 ) -> dict[str, Any]:
-    """Deep-copy ``base`` and override the C12 member's params block.
+    """Deep-copy ``base`` and override the member's params block.
 
     Method-name → member-name lookup uses ``_METHOD_TO_MEMBER`` (e.g.
-    ``"truthfinder"`` → ``"truthfinder_only"``). Pre-C12 the sweep
-    helper targeted per-(attribute, strategy) blocks; the C12 restructure
-    (plan_revision.md §C12) collapsed those into per-member coherent
+    ``"truthfinder"`` → ``"truthfinder_only"``). Previously the sweep
+    helper targeted per-(attribute, strategy) blocks; the coherent-member restructure
+    collapsed those into per-member coherent
     approaches, so a single sweep cell now overrides one member's
     ``params:`` block.
     """
@@ -204,14 +203,14 @@ def _mutate_member_params(
         raise ValueError(
             f"_mutate_member_params: member {member_name!r} (from method "
             f"{method_name!r}) not found in YAML — the domain's fusion "
-            f"committee may not include this coherent member, or the C12 "
+            f"committee may not include this coherent member, or the "
             f"member name mapping in _METHOD_TO_MEMBER is wrong."
         )
     return mutated
 
 
 def _disable_llm_judge(base: dict[str, Any]) -> dict[str, Any]:
-    """Deep-copied YAML with the C12 ``llm_only`` member's
+    """Deep-copied YAML with the ``llm_only`` member's
     ``llm_callable`` set to None (effectively disables the LLM judge,
     forcing the deterministic fallback path)."""
     mutated = copy.deepcopy(base)
@@ -237,7 +236,7 @@ def _sub_trust(
     """Sweep ``trust_scores`` permutations across the domain's sources.
 
     Permutes the descending integer sequence ``[N, N-1, ..., 1]`` across
-    the N sources declared in ``trust_scores``. Pre-C12 the script
+    the N sources declared in ``trust_scores``. Previously the script
     hardcoded ``[3, 2, 1]`` which fails for products' 4-source layout.
     For N=3 the behaviour is unchanged (6 perms); for N=4 it produces
     24 perms (~10s each ≈ 4 min total at cached runtimes).
@@ -296,7 +295,7 @@ def _sub_trim(
 ) -> list[dict[str, Any]]:
     """Sweep ``trimmed_mean.trim`` across {0.05, 0.10, 0.20, 0.30}.
 
-    Under C12, ``trimmed_mean`` is a registered val-selectable candidate
+    ``trimmed_mean`` is a registered val-selectable candidate
     inside ``pydi_candidates.numeric`` (and ``pydi_candidates.list`` if
     the domain declares one). The val-selection inside coherent members
     (``pydi_per_attribute_optimal`` and TD members' numeric/list

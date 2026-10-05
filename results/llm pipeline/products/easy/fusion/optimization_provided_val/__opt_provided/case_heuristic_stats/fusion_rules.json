@@ -3,7 +3,7 @@
     "brand": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
@@ -16,13 +16,13 @@
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "median"
-    },
     "color": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "description": {
       "kwargs": {
@@ -31,12 +31,8 @@
       "resolver": "union"
     },
     "form_factor": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "most_complete"
     },
     "height_mm": {
       "kwargs": {},
@@ -47,8 +43,12 @@
       "resolver": "most_complete"
     },
     "length_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "sources": [
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "memory_type": {
       "kwargs": {
@@ -89,52 +89,56 @@
       "resolver": "favour_sources"
     },
     "read_speed_mb_s": {
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
+    },
+    "storage_connection_type": {
       "kwargs": {},
       "resolver": "most_complete"
     },
-    "storage_connection_type": {
+    "storage_gb": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     },
-    "storage_gb": {
-      "kwargs": {
-        "separator": ","
-      },
-      "resolver": "union"
-    },
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
-    },
-    "title_description": {
-      "kwargs": {
-        "separator": ","
-      },
-      "resolver": "union"
     },
     "url": {
       "kwargs": {},
       "resolver": "most_complete"
     },
     "vram_gb": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "sources": [
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "weight_g": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "sources": [
+          "products_2"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "width_mm": {
       "kwargs": {},
       "resolver": "median"
     },
     "write_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     }
   }
 }

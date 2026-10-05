@@ -1,8 +1,6 @@
 """Functional tests for :class:`MagellanMatcher` (EM matching committee).
 
-Beyond a shape-only smoke test per the process requirement in
-``plans/plan_committee_finalization.md`` §"Process requirement for every
-implementation row".  Exercises: API contract (columns, types), training
+Beyond a shape-only smoke test.  Exercises: API contract (columns, types), training
 lifecycle (lazy train-on-first-call + caching), ranking sanity (strong
 positive pairs score higher than strong negatives), determinism (same
 seed → same outputs), NaN tolerance, and edge cases (empty frames,

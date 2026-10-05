@@ -1,0 +1,122 @@
+{
+ "validation": {
+  "task": "games_base",
+  "split": "validation",
+  "gold_version": "v2",
+  "rules": "strict",
+  "overall_accuracy_all_gold": 0.5705555555555556,
+  "overall_accuracy_evaluated": 0.7222222222222222,
+  "gold_coverage": 0.79,
+  "attribute_cell_coverage": 1.0,
+  "n_gold": 100,
+  "n_gold_evaluated": 79,
+  "n_gold_missing": 21,
+  "n_gold_aligned": 79,
+  "gold_cells_total": 775,
+  "gold_cells_gradeable": 775,
+  "n_submitted_aligned": 6972,
+  "n_duplicate_anchor_rows": 0,
+  "missing_attributes": [],
+  "missing_schema_attributes": [],
+  "dtype_mismatches": [
+   "criticScore",
+   "userScore"
+  ],
+  "per_attribute_accuracy_all_gold": {
+   "name": 0.76,
+   "releaseYear": 0.7,
+   "developer": 0.7686486486486487,
+   "genres": 0.36,
+   "publisher": 0.6207142857142858,
+   "platform": 0.31,
+   "criticScore": 0.40816666666666673,
+   "userScore": 0.2697560975609756,
+   "ESRB": 0.79
+  },
+  "per_attribute_accuracy_evaluated": {
+   "name": 0.9620253164556962,
+   "releaseYear": 0.8860759493670886,
+   "developer": 0.972972972972973,
+   "genres": 0.45569620253164556,
+   "publisher": 0.7857142857142857,
+   "platform": 0.3924050632911392,
+   "criticScore": 0.5166666666666667,
+   "userScore": 0.34146341463414637,
+   "ESRB": 1.0
+  },
+  "per_attribute_count": {
+   "name": 79,
+   "releaseYear": 79,
+   "developer": 74,
+   "genres": 79,
+   "publisher": 42,
+   "platform": 79,
+   "criticScore": 60,
+   "userScore": 41,
+   "ESRB": 79
+  },
+  "macro_accuracy_evaluated": 0.7014466524037379,
+  "total_evaluations": 612,
+  "total_correct": 442
+ },
+ "test": {
+  "task": "games_base",
+  "split": "test",
+  "gold_version": "v2",
+  "rules": "strict",
+  "overall_accuracy_all_gold": 0.5329268292682927,
+  "overall_accuracy_evaluated": 0.7105691056910569,
+  "gold_coverage": 0.75,
+  "attribute_cell_coverage": 1.0,
+  "n_gold": 100,
+  "n_gold_evaluated": 75,
+  "n_gold_missing": 25,
+  "n_gold_aligned": 77,
+  "gold_cells_total": 793,
+  "gold_cells_gradeable": 793,
+  "n_submitted_aligned": 6972,
+  "n_duplicate_anchor_rows": 0,
+  "missing_attributes": [],
+  "missing_schema_attributes": [],
+  "dtype_mismatches": [
+   "criticScore",
+   "userScore"
+  ],
+  "per_attribute_accuracy_all_gold": {
+   "name": 0.7207792207792207,
+   "releaseYear": 0.7012987012987013,
+   "developer": 0.6699999999999999,
+   "genres": 0.36038961038961037,
+   "publisher": 0.6428571428571428,
+   "platform": 0.20454545454545453,
+   "criticScore": 0.43965517241379304,
+   "userScore": 0.234375,
+   "ESRB": 0.7305194805194806
+  },
+  "per_attribute_accuracy_evaluated": {
+   "name": 0.961038961038961,
+   "releaseYear": 0.935064935064935,
+   "developer": 0.8933333333333333,
+   "genres": 0.4805194805194805,
+   "publisher": 0.8571428571428571,
+   "platform": 0.2727272727272727,
+   "criticScore": 0.5862068965517241,
+   "userScore": 0.3125,
+   "ESRB": 0.974025974025974
+  },
+  "per_attribute_count": {
+   "name": 77,
+   "releaseYear": 77,
+   "developer": 75,
+   "genres": 77,
+   "publisher": 49,
+   "platform": 77,
+   "criticScore": 58,
+   "userScore": 48,
+   "ESRB": 77
+  },
+  "macro_accuracy_evaluated": 0.6969510789338376,
+  "total_evaluations": 615,
+  "total_correct": 437
+ }
+}

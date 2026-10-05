@@ -1,0 +1,22 @@
+{
+  "case": "games",
+  "data_dir": "DI-Bench/usecases/games/input/data",
+  "schema": "DI-Bench/usecases/games/input/schemamatching/target_schema.json",
+  "entitymatching_dir": "DI-Bench/usecases/games/input/entitymatching",
+  "fusion_dir": "DI-Bench/usecases/games/input/fusion",
+  "pairs": [
+    {
+      "left": "dbpedia",
+      "right": "metacritic"
+    },
+    {
+      "left": "dbpedia",
+      "right": "sales"
+    }
+  ],
+  "notes": [
+    "Pairs are restricted to source combinations with provided ground-truth labels.",
+    "JSON/JSONL source files were converted to CSV where needed for the local automatic pipeline.",
+    "Non-XML fusion validation/test files were converted to XML during import."
+  ]
+}

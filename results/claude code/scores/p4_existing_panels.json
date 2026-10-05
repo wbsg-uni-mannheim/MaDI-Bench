@@ -1,0 +1,749 @@
+{
+  "domains": {
+    "games": {
+      "task_dir": "<p4-run:games_base>",
+      "silver": {
+        "P4": {
+          "fused_path": "<p4-run:games_base>/submission/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.779833620195066,
+            "value_drift": 0.2188772693337504,
+            "value_density_delta": -0.22230983727714765,
+            "schema_validity_delta": 0.0006139330489853823,
+            "bcubed_precision": 0.9999373256870671,
+            "bcubed_recall": 0.8121538255305415,
+            "bcubed_f1": 0.8963157552001174,
+            "fusion_accuracy": 0.8964011987467535,
+            "fully_correct_rate": 0.46471600688468157
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "correctness.cluster.SR.bcubed.f1 = 0.896 looks healthy but coverage.source_based.SR.same_source_collision_rate.pipe is 0.121. The pipeline is lumping multiple records from the same source into one cluster \u2014 likely EM false positives that BCubed averages over. Read coverage.source_based.SR.same_source_collision_rate.by_source for the offending sources.",
+            "Source coverage dropped by more than 15pp for 3 source(s); worst: metacritic delta=-0.560. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source."
+          ]
+        },
+        "P2": {
+          "fused_path": "MaDI-Bench/results/best of breeds/games/baseline/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.4991394148020654,
+            "value_drift": 0.20133594348997028,
+            "value_density_delta": -0.2325744926713586,
+            "schema_validity_delta": 0.0005858030603077546,
+            "bcubed_precision": 0.9976653818432517,
+            "bcubed_recall": 0.6312102114053405,
+            "bcubed_f1": 0.7732162961925612,
+            "fusion_accuracy": 0.7976401273023566,
+            "fully_correct_rate": 0.28585771658060816
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 3 source(s); worst: metacritic delta=-0.649. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source."
+          ]
+        },
+        "P3": {
+          "fused_path": "MaDI-Bench/results/llm pipeline/games/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.41078600114744696,
+            "value_drift": 0.25632939618730155,
+            "value_density_delta": -0.23485079941492676,
+            "schema_validity_delta": -0.0011503876875310626,
+            "bcubed_precision": 0.9434834383128076,
+            "bcubed_recall": 0.5733360157019891,
+            "bcubed_f1": 0.713246436774408,
+            "fusion_accuracy": 0.6999809805347811,
+            "fully_correct_rate": 0.09409064830751578
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 3 source(s); worst: metacritic delta=-0.630. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['developer', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        }
+      },
+      "errors": {},
+      "source_equivalence": {
+        "dbpedia": {
+          "rows": 46580,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "metacritic": {
+          "rows": 20494,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "sales": {
+          "rows": 7877,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        }
+      },
+      "blocking": {
+        "source_sizes": {
+          "dbpedia": 46580,
+          "metacritic": 20494,
+          "sales": 7877
+        },
+        "submitted_rows": 219768,
+        "unique_candidates": 219768,
+        "all_source_pair_counts": {
+          "dbpedia__sales": 54936,
+          "dbpedia__metacritic": 121557,
+          "metacritic__sales": 43275
+        },
+        "per_pair": {
+          "dbpedia__metacritic": {
+            "candidates": 121557,
+            "possible_pairs": 954610520,
+            "reduction_ratio": 0.9998726632511865
+          },
+          "dbpedia__sales": {
+            "candidates": 54936,
+            "possible_pairs": 366910660,
+            "reduction_ratio": 0.9998502741784607
+          }
+        },
+        "mean_rr": 0.9998614687148236,
+        "definition": "Unweighted mean over the benchmark evaluated source pairs; full submitted candidate pool, not only gold-labeled IDs.",
+        "independent_groupby_counts_agree": true
+      },
+      "reference": {
+        "source": "PyDI/usecases/games/base/output/data_fusion/fused.csv",
+        "snapshot_sha256": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847",
+        "clusters": 6972,
+        "membership_rows": 21274,
+        "source_repairs": 0,
+        "reference_policy": "P1 output frozen from 2026-09-24; identical reference and evaluator for all compared pipelines."
+      }
+    },
+    "companies": {
+      "task_dir": "<p4-run:companies_base>",
+      "silver": {
+        "P4": {
+          "fused_path": "<p4-run:companies_base>/submission/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.31242807825086305,
+            "value_drift": 0.41109904133769704,
+            "value_density_delta": -0.2587442937773247,
+            "schema_validity_delta": 0.1324349055818983,
+            "bcubed_precision": 0.9877693880761366,
+            "bcubed_recall": 0.6185307535000786,
+            "bcubed_f1": 0.760711809801027,
+            "fusion_accuracy": 0.4873390581003653,
+            "fully_correct_rate": 0.03049482163406214
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: forbes delta=-0.840. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P2": {
+          "fused_path": "MaDI-Bench/results/best of breeds/companies/baseline/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.36823935558112775,
+            "value_drift": 0.34507180080712446,
+            "value_density_delta": -0.29695964823053944,
+            "schema_validity_delta": 0.0753779035480745,
+            "bcubed_precision": 0.9454145036967123,
+            "bcubed_recall": 0.6556551832625452,
+            "bcubed_f1": 0.7743147281210252,
+            "fusion_accuracy": 0.5548507004459329,
+            "fully_correct_rate": 0.11392405063291139
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: forbes delta=-0.834. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P3": {
+          "fused_path": "MaDI-Bench/results/llm pipeline/companies/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.33141542002301494,
+            "value_drift": 0.4100953878811943,
+            "value_density_delta": -0.30419630446167606,
+            "schema_validity_delta": 0.1254506737648422,
+            "bcubed_precision": 0.9884379424256725,
+            "bcubed_recall": 0.627103979864716,
+            "bcubed_f1": 0.7673627765296871,
+            "fusion_accuracy": 0.516711726746316,
+            "fully_correct_rate": 0.023590333716915997
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: forbes delta=-0.845. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        }
+      },
+      "errors": {},
+      "source_equivalence": {
+        "dbpedia": {
+          "rows": 10085,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "forbes": {
+          "rows": 2000,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "fullcontact": {
+          "rows": 1931,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        }
+      },
+      "blocking": {
+        "source_sizes": {
+          "dbpedia": 10085,
+          "forbes": 2000,
+          "fullcontact": 1931
+        },
+        "submitted_rows": 65339,
+        "unique_candidates": 65339,
+        "within_source_candidates": 142,
+        "all_source_pair_counts": {
+          "dbpedia__fullcontact": 28017,
+          "forbes__fullcontact": 8695,
+          "dbpedia__forbes": 28485,
+          "dbpedia__dbpedia": 59,
+          "fullcontact__fullcontact": 77,
+          "forbes__forbes": 6
+        },
+        "per_pair": {
+          "forbes__dbpedia": {
+            "candidates": 28485,
+            "possible_pairs": 20170000,
+            "reduction_ratio": 0.998587754090233
+          },
+          "forbes__fullcontact": {
+            "candidates": 8695,
+            "possible_pairs": 3862000,
+            "reduction_ratio": 0.9977485758674262
+          }
+        },
+        "within_source_policy": "Recorded separately; excluded from cross-source RR denominators.",
+        "mean_rr": 0.9981681649788297,
+        "definition": "Unweighted mean over the benchmark evaluated source pairs; full submitted candidate pool, not only gold-labeled IDs.",
+        "independent_groupby_counts_agree": true
+      },
+      "reference": {
+        "source": "PyDI/usecases/companies/base/output/data_fusion/fused.csv",
+        "snapshot_sha256": "91b98f56384c608af714f34b73d04af9ab1c2f6309c644f66d2790e65a64b5b4",
+        "clusters": 1738,
+        "membership_rows": 4238,
+        "source_repairs": 0,
+        "reference_policy": "P1 output frozen from 2026-09-24; identical reference and evaluator for all compared pipelines."
+      }
+    },
+    "music": {
+      "task_dir": "<p4-run:music_base>",
+      "silver": {
+        "P4": {
+          "fused_path": "<p4-run:music_base>/submission/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.7836644591611479,
+            "value_drift": 0.4662174135310527,
+            "value_density_delta": -0.10360741791039428,
+            "schema_validity_delta": 0.06098208864602306,
+            "bcubed_precision": 0.9997115745147243,
+            "bcubed_recall": 0.7088180817125109,
+            "bcubed_f1": 0.829501130320532,
+            "fusion_accuracy": 0.6218514028750235,
+            "fully_correct_rate": 0.05022075055187638
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.839. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['artist', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P2": {
+          "fused_path": "MaDI-Bench/results/best of breeds/music/baseline/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.7555187637969095,
+            "value_drift": 0.38897959469126314,
+            "value_density_delta": -0.10606262796294343,
+            "schema_validity_delta": -0.10305702133338746,
+            "bcubed_precision": 0.999077038447117,
+            "bcubed_recall": 0.6943441739853944,
+            "bcubed_f1": 0.8192921122227692,
+            "fusion_accuracy": 0.7203103520085966,
+            "fully_correct_rate": 0.1272075055187638
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.847. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['artist', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+            "Schema consistency dropped by \u2265 5pp vs silver on 2 column(s); worst: 'release-date' delta=-0.603. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+          ]
+        },
+        "P3": {
+          "fused_path": "MaDI-Bench/results/llm pipeline/music/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.766832229580574,
+            "value_drift": 0.4712665447613765,
+            "value_density_delta": -0.07164627928104476,
+            "schema_validity_delta": 0.02753540210509353,
+            "bcubed_precision": 0.9994808341265035,
+            "bcubed_recall": 0.7008474018619394,
+            "bcubed_f1": 0.8239392030105946,
+            "fusion_accuracy": 0.5803681716045397,
+            "fully_correct_rate": 0.022350993377483443
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.847. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['artist', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+            "Schema consistency dropped by \u2265 5pp vs silver on 2 column(s); worst: 'tracks' delta=-0.178. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+          ]
+        }
+      },
+      "errors": {},
+      "source_equivalence": {
+        "discogs": {
+          "rows": 22627,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "lastfm": {
+          "rows": 9865,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "musicbrainz": {
+          "rows": 4763,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        }
+      },
+      "blocking": {
+        "source_sizes": {
+          "discogs": 22627,
+          "lastfm": 9865,
+          "musicbrainz": 4763
+        },
+        "submitted_rows": 1039147,
+        "unique_candidates": 1039147,
+        "all_source_pair_counts": {
+          "discogs__musicbrainz": 405494,
+          "discogs__lastfm": 457415,
+          "lastfm__musicbrainz": 176238
+        },
+        "per_pair": {
+          "musicbrainz__discogs": {
+            "candidates": 405494,
+            "possible_pairs": 107772401,
+            "reduction_ratio": 0.9962374968337209
+          },
+          "musicbrainz__lastfm": {
+            "candidates": 176238,
+            "possible_pairs": 46986995,
+            "reduction_ratio": 0.9962492174696423
+          }
+        },
+        "mean_rr": 0.9962433571516816,
+        "definition": "Unweighted mean over the benchmark evaluated source pairs; full submitted candidate pool, not only gold-labeled IDs.",
+        "independent_groupby_counts_agree": true
+      },
+      "reference": {
+        "source": "PyDI/usecases/music/base/output/data_fusion/fused.csv",
+        "snapshot_sha256": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475",
+        "clusters": 3624,
+        "membership_rows": 11557,
+        "source_repairs": 0,
+        "reference_policy": "P1 output frozen from 2026-09-24; identical reference and evaluator for all compared pipelines."
+      }
+    },
+    "products": {
+      "task_dir": "<p4-run:products_base>",
+      "silver": {
+        "P4": {
+          "fused_path": "<p4-run:products_base>/submission/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.04648074369189907,
+            "value_drift": 0.10289515359039289,
+            "value_density_delta": -0.028717976143592238,
+            "schema_validity_delta": 0.0014864468240216588,
+            "bcubed_precision": 0.4074074074074074,
+            "bcubed_recall": 0.37006478425620337,
+            "bcubed_f1": 0.38783929751620966,
+            "fusion_accuracy": 0.4527423205026066,
+            "fully_correct_rate": 0.010624169986719787
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P2": {
+          "fused_path": "MaDI-Bench/results/best of breeds/products/baseline/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.041168658698539175,
+            "value_drift": 0.13217822952870145,
+            "value_density_delta": -0.0255996279367356,
+            "schema_validity_delta": 0.0014257587709373132,
+            "bcubed_precision": 0.41498594303874836,
+            "bcubed_recall": 0.363953061972864,
+            "bcubed_f1": 0.38779777023079587,
+            "fusion_accuracy": 0.420702101594687,
+            "fully_correct_rate": 0.0013280212483399733
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P3": {
+          "fused_path": "MaDI-Bench/results/llm pipeline/products/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.027888446215139442,
+            "value_drift": 0.1406836483684316,
+            "value_density_delta": -0.039181142319678425,
+            "schema_validity_delta": 0.00094261741139956,
+            "bcubed_precision": 0.39536731450922863,
+            "bcubed_recall": 0.34561789512284563,
+            "bcubed_f1": 0.3688225278043035,
+            "fusion_accuracy": 0.3582001085773488,
+            "fully_correct_rate": 0.0
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: products_1 delta=-0.181. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        }
+      },
+      "errors": {},
+      "source_equivalence": {
+        "products_1": {
+          "rows": 812,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "products_2": {
+          "rows": 812,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "products_3": {
+          "rows": 762,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "products_4": {
+          "rows": 626,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        }
+      },
+      "blocking": {
+        "source_sizes": {
+          "products_1": 812,
+          "products_2": 812,
+          "products_3": 762,
+          "products_4": 626
+        },
+        "submitted_rows": 73855,
+        "unique_candidates": 73855,
+        "all_source_pair_counts": {
+          "products_3__products_4": 11103,
+          "products_1__products_4": 11675,
+          "products_1__products_2": 13502,
+          "products_2__products_4": 11685,
+          "products_2__products_3": 12951,
+          "products_1__products_3": 12939
+        },
+        "per_pair": {
+          "products_1__products_2": {
+            "candidates": 13502,
+            "possible_pairs": 659344,
+            "reduction_ratio": 0.9795220704215098
+          },
+          "products_1__products_3": {
+            "candidates": 12939,
+            "possible_pairs": 618744,
+            "reduction_ratio": 0.9790882820681898
+          },
+          "products_1__products_4": {
+            "candidates": 11675,
+            "possible_pairs": 508312,
+            "reduction_ratio": 0.9770318229748658
+          }
+        },
+        "mean_rr": 0.9785473918215217,
+        "definition": "Unweighted mean over the benchmark evaluated source pairs; full submitted candidate pool, not only gold-labeled IDs.",
+        "independent_groupby_counts_agree": true
+      },
+      "reference": {
+        "source": "PyDI/usecases/products/base/output/data_fusion/fused.csv",
+        "snapshot_sha256": "020f0471f557042b2d66f710a71ec2e22974d66d2047de44ee17aa283268246e",
+        "clusters": 753,
+        "membership_rows": 2727,
+        "source_repairs": 0,
+        "reference_policy": "P1 output frozen from 2026-09-24; identical reference and evaluator for all compared pipelines."
+      }
+    },
+    "papers": {
+      "task_dir": "<p4-run:papers_base>",
+      "silver": {
+        "P4": {
+          "fused_path": "<p4-run:papers_base>/submission/fused.csv",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.9240301059348175,
+            "value_drift": 0.005820645559869015,
+            "value_density_delta": -0.019995646934017453,
+            "schema_validity_delta": 0.00016290375756233821,
+            "bcubed_precision": 0.9940285840170716,
+            "bcubed_recall": 0.966882092452382,
+            "bcubed_f1": 0.9802674326832108,
+            "fusion_accuracy": 0.8548148325700978,
+            "fully_correct_rate": 0.13027691114518886
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "coverage.fact.SR.per_column_drift is low (max 0.026) but correctness.fact.SR.macro_accuracy is 0.855. This is the fingerprint of histogram-preserving record swaps \u2014 distributional metrics see the right column shape, but individual records have wrong values. Read cluster_attribute_correctness.csv or correctness.fact.SR.per_attribute.",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: dblp delta=-0.204. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P2": {
+          "fused_path": "MaDI-Bench/results/best of breeds/papers/baseline/fused.csv",
+          "membership_source_repairs": 182059,
+          "metrics": {
+            "entity_recovery": 0.9308162797666262,
+            "value_drift": 0.00538447460097607,
+            "value_density_delta": -0.014582713781935031,
+            "schema_validity_delta": -0.002043571066634442,
+            "bcubed_precision": 0.992182947455194,
+            "bcubed_recall": 0.9699784574214283,
+            "bcubed_f1": 0.9809550656338072,
+            "fusion_accuracy": 0.9136302164646152,
+            "fully_correct_rate": 0.5458903988860099
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "Source coverage dropped by more than 15pp for 2 source(s); worst: dblp delta=-0.195. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        },
+        "P3": {
+          "fused_path": "MaDI-Bench/results/llm pipeline/papers/baseline/fusion/optimization_provided_val/case_llm_val_stats__opt_provided/fused.csv.gz",
+          "membership_source_repairs": 0,
+          "metrics": {
+            "entity_recovery": 0.8155570831791021,
+            "value_drift": 0.003671485014320193,
+            "value_density_delta": -0.036663859779253676,
+            "schema_validity_delta": -0.0007981836865567082,
+            "bcubed_precision": 0.9938884861922428,
+            "bcubed_recall": 0.9127596631967074,
+            "bcubed_f1": 0.9515980388963259,
+            "fusion_accuracy": 0.804428295535551,
+            "fully_correct_rate": 0.055893395378351224
+          },
+          "warnings": [
+            "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+            "coverage.fact.SR.per_column_drift is low (max 0.018) but correctness.fact.SR.macro_accuracy is 0.804. This is the fingerprint of histogram-preserving record swaps \u2014 distributional metrics see the right column shape, but individual records have wrong values. Read cluster_attribute_correctness.csv or correctness.fact.SR.per_attribute.",
+            "Source coverage dropped by more than 15pp for 3 source(s); worst: dblp delta=-0.272. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+            "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['journal', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+          ]
+        }
+      },
+      "errors": {},
+      "source_equivalence": {
+        "crossref": {
+          "rows": 60749,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "dblp": {
+          "rows": 60591,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        },
+        "open_alex": {
+          "rows": 60719,
+          "equal_values_ignoring_order_and_withheld_cluster_id": true
+        }
+      },
+      "blocking": {
+        "source_sizes": {
+          "crossref": 60749,
+          "dblp": 60591,
+          "open_alex": 60719
+        },
+        "submitted_rows": 1182375,
+        "unique_candidates": 1182375,
+        "within_source_candidates": 0,
+        "all_source_pair_counts": {
+          "crossref__dblp": 389042,
+          "dblp__open_alex": 394749,
+          "crossref__open_alex": 398584
+        },
+        "per_pair": {
+          "dblp__crossref": {
+            "candidates": 389042,
+            "possible_pairs": 3680842659,
+            "reduction_ratio": 0.9998943062673302
+          },
+          "dblp__open_alex": {
+            "candidates": 394749,
+            "possible_pairs": 3679024929,
+            "reduction_ratio": 0.9998927028200085
+          }
+        },
+        "within_source_policy": "Recorded separately; excluded from cross-source RR denominators.",
+        "mean_rr": 0.9998935045436694,
+        "definition": "Unweighted mean over the benchmark evaluated source pairs; full submitted candidate pool, not only gold-labeled IDs.",
+        "independent_groupby_counts_agree": true
+      },
+      "reference": {
+        "source": "PyDI/usecases/papers/base/output/data_fusion/fused.csv",
+        "snapshot_sha256": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+        "clusters": 56733,
+        "membership_rows": 164171,
+        "source_repairs": 0,
+        "reference_policy": "P1 output frozen from 2026-09-24; identical reference and evaluator for all compared pipelines."
+      },
+      "p4_provenance": "Original submission digests pinned by the verified 2026-09-24 collection; checked again here and by complete replay. Silver snapshot digests agree across all three scoring jobs."
+    }
+  },
+  "input_sha256": {
+    "<analysis>/p3_rescore_20260924T072306Z/normalization/rechecked_stages/scores_full.json": "ea4b88513c1168d880386d8bd89c5010346531cc04a4120aaa973431392e28a1",
+    "<scorer>/notebook_fusion_eval.py": "c761b411a85aaa6901623f16c59c52a520f69b7179177104d5f37f7d2e912ca0",
+    "<scorer>/adapters.py": "751039a1934996798975547f813bef0d53f774a12f712cdc574cbafd7d36953c",
+    "<scorer>/__init__.py": "5920d562784f6eceae12b61b2a2c3500d5bffecb2f76b358eb0f2ddd79b67f47",
+    "<scorer>/comparison_spec.py": "e3a8cc8f2a7405d234ae21912e931e321509ccb008d02bbe0b977ff5e1ca20e5",
+    "<scorer>/score_e2e.py": "ee186f97fe4fba7f16dfe9da0b5a905f65741b48d9f4a36f8b255e69713112a2",
+    "<scorer>/score_sm.py": "3b2a76d06f4a5a864b4d344e979f86759b8aef00f777ef8c33ec18ab07f2de1a",
+    "<scorer>/audit_fusion_generator.py": "ee0c0c0d706313bfd48c46e1265137fcddb3e6253bd4ecb699c17b6e1eb33807",
+    "<scorer>/score_fusion.py": "dc7e13c85b631daecc5aaf850d146ad2b4ed2e39ebcdc12064603996ecba30d9",
+    "<scorer>/aliases.py": "f036cace5eb9f13d5b9fc2acce2cbc88ffd07cd9c9ce0b29778bf5c05e319a7a",
+    "<scorer>/gold.py": "84a1c15ef8095431938c3069fa3846a22ab7153e0e7889c6dc9dde27dc25c414",
+    "<scorer>/score_em.py": "cfb72282bdfe34752c74b6c3d953a2585fe6de57cc86c6cfcd3f1cf657ce5d51",
+    "<scorer>/score_blocking.py": "3acf7c79d8f23f58cf4e6e352590f9d4f7be4aab099bcbf4b661fe391a126cdb",
+    "<scorer>/score_normalization.py": "242d552a5ba56fe5959e681d3297ee3fa1e7346b0796e231711ca6aeb5173d25",
+    "<scorer>/norm_replay/agenticdi.py": "fa08dc866ba8e33a3ad1680804e67a3d565efb5b0663af5f66435f94bf17a6e9",
+    "<scorer>/norm_replay/__init__.py": "adfdb85aa54b681bf60e20a43b99a19c3951a2beaa11c942cac1f3c333e76676",
+    "<scorer>/norm_replay/cc_bare/companies.py": "b8379448f167ce612df4e8975e22e50dde14f44166413cce8b747f0ce7a7fbb3",
+    "<scorer>/norm_replay/cc_bare/__init__.py": "5f1d404d398bd2b99201c844e89f0964176df28a70b7bcec435d24d140cb7728",
+    "<scorer>/norm_replay/cc_bare/music.py": "b2734db9ae70279f3d615035f4162150a33f0b0f4b017396adf184a24b19159d",
+    "<scorer>/norm_replay/cc_bare/papers.py": "0db11613d88aabc7c0d25634d857b006b26d5dca37d1563349e8c05914d1e4f9",
+    "<scorer>/norm_replay/cc_bare/games.py": "c542b2ea4c351640579c259d5e19c028a0e15d6080620d626c6eee087d620727",
+    "<scorer>/norm_replay/cc_bare/products.py": "4d4e1f1d67aa8afe768aa14ec269f729c8bf6b3c1c57d9a2a9d729bd9683cd6c",
+    "PyDI/PyDI/evaluation/panel.py": "96e358c81a176030dfc5809c13596c53831ffba69245735adde9935d9b8d4d4c",
+    "PyDI/PyDI/evaluation/__init__.py": "1fd2a6acb8647e24b5469b4f585517d8d8cc130e1ef9d40b31a44c5a73e0600e",
+    "PyDI/PyDI/evaluation/constraint_validity.py": "59e52c9c246a6b66b5ef532606bfa35e373fc4fe3d27a5ee98aeb9ec26fea5f3",
+    "PyDI/PyDI/evaluation/source_composition.py": "4f0c94d2f1af33888ab88e053d34834b73ce96d85ef393612b0dd16c10b3da2e",
+    "PyDI/PyDI/evaluation/distributional.py": "58649f4d0eced612335af5f0187f3027cf578a65d1e508a1aa7f39084d2af1f4",
+    "PyDI/PyDI/evaluation/composite.py": "9999c0d67a430ba76d62c5fd9a32d1ba02c3d20e29fc8116af8f0102a738f78d",
+    "PyDI/PyDI/evaluation/clustering.py": "a23c7fa6682d0c0d13b72cae921f203263d7a380496512965e9123c7fa2c8763",
+    "PyDI/PyDI/evaluation/attribute_quality.py": "dcde3278158b7edf717360e4b95ecadf27bc9ff2dcf19cf0f2984369564a349a",
+    "PyDI/PyDI/evaluation/schema_consistency.py": "8ef85f3acc13995d4dd7e58299fb3ecef46cbb5d383701bda2aa60f789ce592e",
+    "PyDI/PyDI/evaluation/cell_provenance.py": "59741af47b327e421e715e92e00e3a0133a6f99dfa6dc47cffd3bbe0dbe5eeff",
+    "PyDI/PyDI/evaluation/silver_standard.py": "bb7af1f554d68e36d2a162194e5aa83c1dd1c0856e3f080276204f43cf7e757f",
+    "configs/panel/companies.yaml": "399eef1cc9bfd39959e2b4bf74eda7df357f61bbc78244dfbb44072c49e84f03",
+    "configs/panel/games.yaml": "1597333930db6ecc3ebd279640bb9ee461d5c0a157462d612fd4cee8f28c0f68",
+    "configs/panel/products.yaml": "5797ea7da675a3092d57380d57eb3198bf206e6ba681c034243956fed288ba5d",
+    "configs/panel/music.yaml": "13ad9cd57eba72924af76b46ade86586842e8336e01af9cc49c088cf8209960f",
+    "configs/panel/papers.yaml": "e8916a4e69a2adf60bb271a54995ec1a907305dba07681b5546b345ea5cff166",
+    "<p4-run:games_base>/workspace/task/input/data/dbpedia.csv": "e7c7e4677e8dc95b245c83ab320428b5ec3fca65217143a7c90e7871221ea4c0",
+    "PyDI/usecases/games/base/input/data/dbpedia.csv": "e7c7e4677e8dc95b245c83ab320428b5ec3fca65217143a7c90e7871221ea4c0",
+    "<p4-run:games_base>/workspace/task/input/data/metacritic.csv": "08e1dfa5d8c00a9196a0c4de285eac44977acb37f95fdbdd4c56ebd8064a572e",
+    "PyDI/usecases/games/base/input/data/metacritic.csv": "08e1dfa5d8c00a9196a0c4de285eac44977acb37f95fdbdd4c56ebd8064a572e",
+    "<p4-run:games_base>/workspace/task/input/data/sales.csv": "184d4c4fc93c0775b5f283c6cda7118f4fe5bf22fa4ca579ada06701dc3cc5fd",
+    "PyDI/usecases/games/base/input/data/sales.csv": "184d4c4fc93c0775b5f283c6cda7118f4fe5bf22fa4ca579ada06701dc3cc5fd",
+    "<p4-run:games_base>/submission/blocking/candidates.csv": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+    "PyDI/usecases/games/base/input/schemamatching/target_schema.json": "db3357047845d8920e7f4195d903fc8811a2fc01ae8b118633a6ebac3569ec70",
+    "PyDI/usecases/games/base/input/schemamatching/Gaming_Platforms_Taxonomy.csv": "5c50b18e39696cb7389ce39de50369d208e3d67fdf07f3da2dc7a40cea49f572",
+    "PyDI/usecases/games/base/input/schemamatching/ESRB_Rating_Taxonomy.csv": "3068183234cae431e9cf3d1ad39604c180bf751202cb270b0f7130dea7775ea1",
+    "PyDI/usecases/games/base/input/schemamatching/sm_mapping_gold.json": "4dd6e0f099879d803b8a4257ebd482fb56874a1d23baafe5700e17b84549c01b",
+    "PyDI/usecases/games/base/input/schemamatching/Video_Game_Genres_Taxonomy.csv": "9239ac6da7c1fc772b1c98f624c22bcf77550e434e5d2a18757bc57f5d5b4917",
+    "PyDI/usecases/games/base/output/data_fusion/fused.csv": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847",
+    "<analysis>/p4_completion_20260925T090407Z/silver_reference_current/games/original_fused.csv": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847",
+    "<p4-run:games_base>/submission/fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+    "<p4-run:games_base>/submission/membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+    "MaDI-Bench/results/best of breeds/games/baseline/fused.csv": "2426e7482d2c82a83bd61f0cf93c0e011b2fb03431be6f485b754a1ba79c170a",
+    "MaDI-Bench/results/llm pipeline/games/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv": "56e8b0d9fd76958c97256b46da5f28ce511d53871b32baa12398b9ee58458534",
+    "<p4-run:companies_base>/workspace/task/input/data/dbpedia.csv": "c3e154fdd068d939b1724b57b4b2cd84b157a977a532646004a206cd2b418a37",
+    "PyDI/usecases/companies/base/input/data/dbpedia.csv": "c3e154fdd068d939b1724b57b4b2cd84b157a977a532646004a206cd2b418a37",
+    "<p4-run:companies_base>/workspace/task/input/data/forbes.csv": "1b95f9a611e6500aac69bf7dea27c1e1aa2b067181cea069158119da0f6580f3",
+    "PyDI/usecases/companies/base/input/data/forbes.csv": "1b95f9a611e6500aac69bf7dea27c1e1aa2b067181cea069158119da0f6580f3",
+    "<p4-run:companies_base>/workspace/task/input/data/fullcontact.csv": "40947bea53f0ccbc8b0e159d6a0b4081678fb087c946ab8605f2d7ff621449a3",
+    "PyDI/usecases/companies/base/input/data/fullcontact.csv": "40947bea53f0ccbc8b0e159d6a0b4081678fb087c946ab8605f2d7ff621449a3",
+    "<p4-run:companies_base>/submission/blocking/candidates.csv": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+    "PyDI/usecases/companies/base/input/schemamatching/target_schema.json": "2b198a554bab5d2f72fcf6e5972d3855e9ac47bd1ae88ccacebbb1a6c5601e81",
+    "PyDI/usecases/companies/base/input/schemamatching/GICS_Industry_Taxonomy.csv": "6753135c3f2854101167bc4724742d8c1eabbef43756215a59f04592d343027a",
+    "PyDI/usecases/companies/base/input/schemamatching/sm_mapping_gold.json": "e43ee4bdc6bbcbd60edee930d3e8847477d8892fd51d78d90311a8eb4df7ca01",
+    "PyDI/usecases/companies/base/input/schemamatching/CLDR_Country_Taxonomy.csv": "ee9ef8ea3e6f0ed4150e1d608f247ec33ca4de3697bbbb58506bcafadf22c7d1",
+    "PyDI/usecases/companies/base/output/data_fusion/fused.csv": "91b98f56384c608af714f34b73d04af9ab1c2f6309c644f66d2790e65a64b5b4",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/companies/silver_reference_current/companies/original_fused.csv": "91b98f56384c608af714f34b73d04af9ab1c2f6309c644f66d2790e65a64b5b4",
+    "<p4-run:companies_base>/submission/fused.csv": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46",
+    "<p4-run:companies_base>/submission/membership.csv": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+    "MaDI-Bench/results/best of breeds/companies/baseline/fused.csv": "74e7a1f85d01d5f522888c23552d6c839f6d604d1b2a6e8cee57a16ecfb15d60",
+    "MaDI-Bench/results/llm pipeline/companies/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv": "6d2f4cf9a008833a824d67dab2376d65ffccdab61e2250889767fec87c167d60",
+    "<p4-run:music_base>/workspace/task/input/data/discogs.csv": "0fab4d11a01d8ef2db38a2b7ae98279f351583bba2459e21e0c62c778f3e3a9e",
+    "PyDI/usecases/music/base/input/data/discogs.csv": "0fab4d11a01d8ef2db38a2b7ae98279f351583bba2459e21e0c62c778f3e3a9e",
+    "<p4-run:music_base>/workspace/task/input/data/lastfm.csv": "5c12950dc9ecda3c097f98de64302f32f2f9ae0c25f72ac483ee2446a007984c",
+    "PyDI/usecases/music/base/input/data/lastfm.csv": "5c12950dc9ecda3c097f98de64302f32f2f9ae0c25f72ac483ee2446a007984c",
+    "<p4-run:music_base>/workspace/task/input/data/musicbrainz.csv": "746c14c4ef6d0f7a4882272501591ad91c3ac2ff4552dff57656fdb2dc53445a",
+    "PyDI/usecases/music/base/input/data/musicbrainz.csv": "746c14c4ef6d0f7a4882272501591ad91c3ac2ff4552dff57656fdb2dc53445a",
+    "<p4-run:music_base>/submission/blocking/candidates.csv": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+    "PyDI/usecases/music/base/input/schemamatching/target_schema.json": "ac167d52a0623b2c8b78282f5cf97f7e6c5b6f3f17119c3d7c18a5cf7cbb12ec",
+    "PyDI/usecases/music/base/input/schemamatching/sm_mapping_gold.json": "e94c90c39b3d82456eb4d9e4320143f14be23e531ee817dbfa5e68f776463361",
+    "PyDI/usecases/music/base/input/schemamatching/Music_Genres_Taxonomy.csv": "be785bdc1941ab83bae13ecef63637bca3079ad573d9bc52711f758a9a624a26",
+    "PyDI/usecases/music/base/output/data_fusion/fused.csv": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/music/silver_reference_current/music/original_fused.csv": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475",
+    "<p4-run:music_base>/submission/fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+    "<p4-run:music_base>/submission/membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+    "MaDI-Bench/results/best of breeds/music/baseline/fused.csv": "f9d54230799c300def199220c6335f13e705b39b08d8b9eb8aac45eb9b27d395",
+    "MaDI-Bench/results/llm pipeline/music/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv": "a4b482954e2065fcc45e18db49fc9bee6f5c051782c9d4ffd05067ce011e40f8",
+    "<p4-run:products_base>/workspace/task/input/data/dataset_1.json": "4eba8972eefcc11326949054f359b42545f67754711f47568c519951dea142c3",
+    "PyDI/usecases/products/base/input/data/dataset_1.json": "a5e57ecce52541fe7af599911b278aa32a167735001ab813db9056f55f6bff59",
+    "<p4-run:products_base>/workspace/task/input/data/dataset_2.json": "2913723155dc579895efbcbefc6a97f1464900d9cd608163e394c467822aeb20",
+    "PyDI/usecases/products/base/input/data/dataset_2.json": "0fed9aa9511ca8d9af07143db97518b83a8a07fae95f8699d599f4ff97434fb0",
+    "<p4-run:products_base>/workspace/task/input/data/dataset_3.json": "f8e98de7045b492ed869c1c051561331e5df2c70fc76200a4dd57fb903902a75",
+    "PyDI/usecases/products/base/input/data/dataset_3.json": "8fd75b0b1de77a33d3c9501ace9e553ad543065ad97c9c363d580460d4e5990a",
+    "<p4-run:products_base>/workspace/task/input/data/dataset_4.json": "be007d13284c4727f21b6855ce3a6160a7a17f746ee27e430c85454a78a9ddc2",
+    "PyDI/usecases/products/base/input/data/dataset_4.json": "bee5d3964e597f974095176c309947c0095f25de26314dd4dd57c9ca3ba3a3f1",
+    "<p4-run:products_base>/submission/blocking/candidates.csv": "4e7ffa833f4cda246a33889554823b20aab545a3ebd0eeda7a8d9f7db9a4a4c2",
+    "PyDI/usecases/products/base/input/schemamatching/target_schema.json": "88e30ec050fd7871ffc6214c74b1b2cd43d4d8c2c72e7ab88b3b344683cb6d5b",
+    "PyDI/usecases/products/base/input/schemamatching/Storage_Interface_Taxonomy.csv": "9ec7830f1382a608cca3abe93600dd0d85421e551a4a59c045110e0b12dd73ef",
+    "PyDI/usecases/products/base/input/schemamatching/GPU_Memory_Taxonomy.csv": "258bf6a1a86aa0f0ef732734d3853d3184ebccd8b2ebef51047479a3bad84b8f",
+    "PyDI/usecases/products/base/input/schemamatching/sm_mapping_gold.json": "2bd3715378ba3ff1046280d2693dbe31cda6c6364adc663eee6d76b438f11241",
+    "PyDI/usecases/products/base/input/schemamatching/Product_Type_Taxonomy.csv": "d7d7b2b6c55408850a543b4b497e88ea8e5345fd90cca03223356a08b1af2d14",
+    "PyDI/usecases/products/base/output/data_fusion/fused.csv": "020f0471f557042b2d66f710a71ec2e22974d66d2047de44ee17aa283268246e",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/products/silver_reference_current/products/original_fused.csv": "020f0471f557042b2d66f710a71ec2e22974d66d2047de44ee17aa283268246e",
+    "<p4-run:products_base>/submission/fused.csv": "fd4b3485aa7891d74bb4ff092d453e6770d4f5ff231d2e21e99c08f1507a4d99",
+    "<p4-run:products_base>/submission/membership.csv": "6bcca6c1e363a277522768f7f9023fab30d4b0fec1fcf9c5b9777d4017b20bcd",
+    "MaDI-Bench/results/best of breeds/products/baseline/fused.csv": "e21216652ce7ee6ff9a49256964dd60b65a16aba995815f4219d1f6c1ffad49b",
+    "MaDI-Bench/results/llm pipeline/products/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv": "074032406b6857b99cfed94cd10950e3dcff1d8cfca4939cd52b51950df984a1",
+    "<analysis>/p4_completion_20260925T090407Z/score_tables_sparse.py": "854cf17752ff4850ff45e3989cc8392a427ad6e5497a0cfc1bf23858f06b87ba",
+    "<analysis>/p4_completion_20260925T090407Z/sparse_alignment.py": "211ad26818246f432604c8344d4f7ad3d263d42145dca9869c8895c66fc1d21d",
+    "<analysis>/p4_completion_20260925T090407Z/alignment_equivalence.json": "3d6e293f452d7ac380f12a994d98ec149ab149f0d8e89727ade9629f92e303da",
+    "<p4-run:papers_base>/workspace/task/input/data/crossref.jsonl": "5cf23872c9e62fac835312aa969291f1897186cfed764fc2fc401d4aeb333530",
+    "PyDI/usecases/papers/base/input/data/crossref.jsonl": "5cf23872c9e62fac835312aa969291f1897186cfed764fc2fc401d4aeb333530",
+    "<p4-run:papers_base>/workspace/task/input/data/dblp.jsonl": "644a2c3ee63787e9745127c40c16dc6d903296dadd19760db9ece86aa10ebdf6",
+    "PyDI/usecases/papers/base/input/data/dblp.jsonl": "644a2c3ee63787e9745127c40c16dc6d903296dadd19760db9ece86aa10ebdf6",
+    "<p4-run:papers_base>/workspace/task/input/data/open_alex.jsonl": "1c3941b2af896eb45c0671d779333849bd3035dc749bdd23a9a381a4c23e7ed9",
+    "PyDI/usecases/papers/base/input/data/open_alex.jsonl": "1c3941b2af896eb45c0671d779333849bd3035dc749bdd23a9a381a4c23e7ed9",
+    "<p4-run:papers_base>/submission/blocking/candidates.csv": "0d0cb8c510a9adf3d0b368cd65bba94e290e4a7746195d3b2d0910733cd8f470",
+    "PyDI/usecases/papers/base/input/schemamatching/target_schema.json": "d1a6c65493ea3850e5d44d75d10b0919bc48b61e33ac6365a0a0c068f37be0ab",
+    "PyDI/usecases/papers/base/input/schemamatching/sm_mapping_gold.json": "585fc57a9f10fe64597f1a6b0c51a3d4e19aecbbfd1168b924a90db5ebc618a7",
+    "PyDI/usecases/papers/base/output/data_fusion/fused.csv": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/papers_fast_P2/silver_reference_current/papers/original_fused.csv": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+    "MaDI-Bench/results/best of breeds/papers/baseline/fused.csv": "bc9b67a6a2fdf64bb543596c4d44111e64103287fd96fbadb945632e30badcd7",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/papers_fast_P3/silver_reference_current/papers/original_fused.csv": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+    "MaDI-Bench/results/llm pipeline/papers/baseline/fusion/optimization_provided_val/case_llm_val_stats__opt_provided/fused.csv.gz": "86b69651f7e3bb99cdfbb71f5ca570403940987ddbed4a8d299c56d284dc13f9",
+    "<analysis>/p4_completion_20260925T090407Z/parallel/papers_fast_P4/silver_reference_current/papers/original_fused.csv": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+    "<p4-run:papers_base>/submission/fused.csv": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d",
+    "<p4-run:papers_base>/submission/membership.csv": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+    "<p4-run:papers_base>/submission/sm_mapping.csv": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+    "<p4-run:papers_base>/submission/correspondences.csv": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+    "PyDI/usecases/papers/base/input/entitymatching/dblp_crossref_test.csv": "193370bae19b96929fbc69ebed6c06f38d0bc88bc26134ef3edbb03754f1549b",
+    "PyDI/usecases/papers/base/input/entitymatching/dblp_openalex_test.csv": "c505718e9e0601c75ba11f0524461b0ad0f8c142ede5e87b88c89c8ba8a812ec"
+  },
+  "changed_inputs": [],
+  "validated_inputs_unchanged": true,
+  "complete": true
+}

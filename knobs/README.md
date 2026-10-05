@@ -1,6 +1,6 @@
 # Knobs — Difficulty Generation Spec
 
-Specification of the eight difficulty knobs used to derive the *easy*, *medium*, and *hard* task variants from the base tasks. Each knob is its own card; this README is the index and the verification artifacts (back-mapping, canonical order, ablations cross-link).
+Specification of the eight difficulty knobs used to derive the *easy*, *medium*, and *hard* task variants from the base tasks. The paper numbers the eight knobs 1 to 8; the cards use their own numbering from 1 to 10: cards 1 to 6 are paper knobs 1 to 6, card 8 is paper knob 7 and card 10 is paper knob 8, and cards 7 and 9 are specified but not used for the released variants. Each knob is its own card; this README is the index and the verification artifacts (back-mapping, canonical order).
 
 For the underlying dimensions, see [../difficulty_dimensions.md](../difficulty_dimensions.md). For cross-cutting policies that apply to every knob (committee mechanism, profile model, provenance schema, test-set treatment), see [cross_cutting.md](cross_cutting.md).
 
@@ -14,7 +14,7 @@ For the underlying dimensions, see [../difficulty_dimensions.md](../difficulty_d
 | 4 | Per-entity source coverage skew | Fusion | S1 + S2 | [knob_04_coverage_skew.md](knob_04_coverage_skew.md) |
 | 5 | Format / unit diversity | Normalization | S1 + S2 | [knob_05_format_unit.md](knob_05_format_unit.md) |
 | 6 | Value-noise injection rate | Norm, EM, Fusion | S1 + S2 | [knob_06_value_noise.md](knob_06_value_noise.md) |
-| 7 | Value ambiguity / collision rate | Norm, Fusion | S1 + S2 (specced, not built v1) | [knob_07_value_ambiguity.md](knob_07_value_ambiguity.md) |
+| 7 | Value ambiguity / collision rate | Norm, Fusion | S1 + S2 (specified, not used in the released variants) | [knob_07_value_ambiguity.md](knob_07_value_ambiguity.md) |
 | 8 | Schema naming divergence | SM | S1 + S2 | [knob_08_schema_naming.md](knob_08_schema_naming.md) |
 | 9 | Schema completeness / distractors | SM | **S2 only** | [knob_09_schema_completeness.md](knob_09_schema_completeness.md) |
 | 10 | Source reliability differentiation | Fusion | S1 + S2 | [knob_10_source_reliability.md](knob_10_source_reliability.md) |
@@ -31,7 +31,7 @@ Single source of truth for the order in which knobs are applied by the generator
 
 Rationale: Knob 4 takes Knob 2's placements as fixed input; Knobs 1/5/6/7 run before Knob 3 so drops happen on perturbed data; Knob 10 reshuffles among whatever variants 1/5/6/7 produced; Knob 8 is header-only and orthogonal, so last; Knob 9 fixes the column set so it goes first in S2.
 
-## Dimension → profile back-mapping (Step 3 verification)
+## Dimension → profile back-mapping
 
 Every dimension in [../difficulty_dimensions.md](../difficulty_dimensions.md) is covered by ≥1 knob. Each dimension's level under a profile equals the level set on its driving knob(s).
 
@@ -43,7 +43,7 @@ Every dimension in [../difficulty_dimensions.md](../difficulty_dimensions.md) is
 | Norm | Format Heterogeneity | 5 |
 | Norm | Unit & Scale Diversity | 5 |
 | Norm | Noise & Corruption | 6 |
-| Norm | Value Ambiguity | 7 (specced, not built v1) |
+| Norm | Value Ambiguity | 7 (specified, not used in the released variants) |
 | Block | Representation Heterogeneity | 1 (primary), 5 (residual) |
 | Block | Candidate Density | 2 |
 | Block | Blocking Key Completeness | 3 |
@@ -56,8 +56,4 @@ Every dimension in [../difficulty_dimensions.md](../difficulty_dimensions.md) is
 | Fusion | Conflict Subtlety | 1, 7 |
 | Fusion | Trust Ambiguity | 10 |
 
-**S1-only gaps:** Schema Completeness and Semantic Ambiguity are not exercised in S1 by design (Knob 9 is S2-only). Value Ambiguity / Conflict Subtlety from Knob 7 are under-stressed in v1 (Knob 7 specced but not built — re-opens if the parked accepted-sets discussion lands favorably).
-
-## Ablation candidates
-
-See [ablations.md](ablations.md). Provisional shortlist (final cut deferred to after the easy/medium/hard prototype runs): Knobs **2, 3, 5, 8**, with Knob **1** as alternate.
+**S1-only gaps:** Schema Completeness and Semantic Ambiguity are not exercised in S1 by design (Knob 9 is S2-only). Value Ambiguity / Conflict Subtlety from Knob 7 are under-stressed (Knob 7 is specified but not used in the released variants).

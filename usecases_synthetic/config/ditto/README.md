@@ -16,15 +16,15 @@ and driver scripts live under
 
 ## Dependencies
 
-The `plm` extra in [../../../pyproject.toml](../../../pyproject.toml) already
+The `neural` extra in [../../../pyproject.toml](../../../pyproject.toml) already
 covers `torch`, `transformers`, and `sentence-transformers`; `pandas` is a
 top-level dependency. `spacy` + `nltk` are only needed if you pass
 `--summarize` or `--dk` (domain-knowledge injector); neither is used by the
-D5 smoke test, so they are not required for initial wiring.
+smoke test, so they are not required for initial wiring.
 
 ## Typical invocations
 
-### Smoke test (D5, CPU-tractable)
+### Smoke test (CPU-tractable)
 
 ```
 python usecases_synthetic/scripts/ditto/train.py \
@@ -38,7 +38,7 @@ python usecases_synthetic/scripts/ditto/train.py \
   --output-dir usecases_synthetic/output/ditto/trial_companies/runs/
 ```
 
-### Production checkpoint (D8, GPU recommended)
+### Production checkpoint (GPU recommended)
 
 ```
 python usecases_synthetic/scripts/ditto/train.py \
@@ -62,9 +62,7 @@ EM gold with roberta-base / 10–15 epochs / batch 16–32 runs on a CUDA GPU or
 Apple Silicon (MPS) in a few minutes; the training and inference paths
 auto-select the best available accelerator (CUDA → MPS → CPU). Without any
 accelerator, fall back to `distilbert-base-uncased --epochs 3` on CPU and
-accept lower PLM quality (narrows S3's margin band but does not block the
-policy — see [../../../plans/plan_s1_scale.md](../../../plans/plan_s1_scale.md)
-"Hard blockers").
+accept lower PLM quality (narrows the margin band of the hard-negative policy but does not block it).
 
 `lr: 5e-5` in [default_train.yaml](default_train.yaml) is the original WDC
 recipe default; for small domain-specific training sets (e.g. the ~450-pair
@@ -76,7 +74,6 @@ interacts with the learning rate: if you see the val F1 stuck at exactly
 
 ## Current companies checkpoint
 
-Trained as part of R2.2 in [../../../plans/plan_s1_scale.md](../../../plans/plan_s1_scale.md).
 Apple Silicon (M5 Max, MPS, bf16 autocast). Trained on ADI's labeled
 pool across **3 pairs** — dbpedia_forbes, forbes_fullcontact,
 **dbpedia_fullcontact** (no PyDI gold for this 3rd pair, but ADI provides
@@ -99,8 +96,8 @@ ordering so the model sees a consistent left/right schema. Prep script:
 
 ### θ-tuning disabled (`--fixed-threshold 0.5`)
 
-Per the analysis in R2.2's first sweep, val-tuned θ over-fit val and lost
-~0.4–1.8 pp test F1 vs fixed θ=0.5. Trainer flag added in this round
+In a first sweep, val-tuned θ over-fit val and lost
+~0.4–1.8 pp test F1 vs fixed θ=0.5. The `--fixed-threshold` trainer flag
 disables per-epoch threshold tuning entirely — both checkpoint selection
 (by val F1 at θ=0.5) and deploy use the same threshold.
 
@@ -175,7 +172,7 @@ python usecases_synthetic/scripts/ditto/train.py \
 ```
 
 `cache/ditto_checkpoints/companies/best` symlinks to the winner's
-`checkpoints/best/`. The S3 hard-negative gate at
+`checkpoints/best/`. The hard-negative gate at
 `config/knob_02_niche/companies.yaml §hard_negative_gate` is pinned to
 `plm_threshold_theta: 0.5`, `plm_max_len: 256`, `plm_max_field_len: 350`,
 `plm_batch_size: 32` to match this recipe.
@@ -189,19 +186,17 @@ python usecases_synthetic/scripts/ditto/train.py \
 - Train (9.4% pos) and val (31.2% pos) come from different sampling
   distributions: ADI's training pool is FAISS-mined-hard-negatives-heavy,
   while ADI's val is balanced. Token-length distribution at the actual
-  tokenizer maxes at 73 tokens, so `max_len=256` is overkill — could be
-  dropped to 128 for a free ~2× training-time speedup on future runs.
+  tokenizer maxes at 73 tokens, so `max_len=256` is overkill.
 - Token-length: median 43, p99 59, max 73 → `max_len=256` is way over-
   provisioned. No truncation is happening.
 
 ## Current games checkpoint
 
-Trained as part of R2.2 in [../../../plans/plan_s1_scale.md](../../../plans/plan_s1_scale.md).
 Apple Silicon (M5 Max, MPS, bf16 autocast). Trained on ADI's labeled
 pool for **2 of 3 pairs** — dbpedia_metacritic, dbpedia_sales. The 3rd
 pair (metacritic_sales) has no ADI data and the top-level PyDI
 train/test files are byte-identical, so it is **test-only / transfer-
-learned** (option A from the R2.2 redo).
+learned**.
 
 ### Data setup
 
@@ -215,8 +210,8 @@ learned** (option A from the R2.2 redo).
   `dbpedia_2_metacritic_test.csv` (337), `dbpedia_2_sales_test.csv` (402),
   `metacritic_2_sales_test.csv` (582) → **1,321 pairs (357 pos / 964 neg, 27.0% pos)**.
 
-The top-level `*_2_*` files are used (not the `train_test/` subdir) per
-user direction. The `train_test/` subdir was discarded because its
+The top-level `*_2_*` files are used (not the `train_test/` subdir).
+The `train_test/` subdir was discarded because its
 test files reference dbpedia IDs that no longer resolve in the
 refreshed source (~22% attrition). The top-level test files for the 2
 ADI pairs have **0% missing IDs** — clean.
@@ -273,8 +268,8 @@ Pattern observations vs companies (which had 9.4% pos train):
 **Notable**: `metacritic_sales` — the test-only pair with zero
 training rows — is the **highest-F1 pair** (0.971). The PLM transfers
 strongly because the entity shape (game title + platform + genres +
-developer + year) is consistent across all 3 sources. This validates
-option (A) for handling the no-ADI-data pair.
+developer + year) is consistent across all 3 sources. This supports
+test-only transfer for the no-ADI-data pair.
 
 ### Comparison vs PyDI + ADI baselines
 
@@ -308,7 +303,7 @@ python usecases_synthetic/scripts/ditto/train.py \
 ```
 
 `cache/ditto_checkpoints/games/best` symlinks to the winner's
-`checkpoints/best/`. The S3 hard-negative gate at
+`checkpoints/best/`. The hard-negative gate at
 `config/knob_02_niche/games.yaml §hard_negative_gate` is pinned to
 `plm_threshold_theta: 0.5`, `plm_max_len: 256`, `plm_max_field_len: 350`,
 `plm_batch_size: 32`, fields `[name, platform, genres, developer, releaseYear]`
@@ -319,8 +314,8 @@ python usecases_synthetic/scripts/ditto/train.py \
 - ADI provides labels for only 2 of 3 source-pairs (db↔mc + db↔sales).
   metacritic↔sales has no ADI training data, and the top-level PyDI
   train/test files for it are byte-identical (582-pair file appears
-  twice under different names). Option (A) was chosen: train on the 2
-  ADI pairs, test on all 3, transfer-learn mc↔sales — the result
+  twice under different names). The checkpoint is trained on the 2
+  ADI pairs, tested on all 3, and transfer-learns mc↔sales — the result
   (0.971 on the transfer-only pair) is empirically the best of the
   three pairs.
 - ADI training pool has substantial intra-file duplicates: the
@@ -333,9 +328,8 @@ python usecases_synthetic/scripts/ditto/train.py \
 
 ## Current music checkpoint
 
-Trained as part of R2.2 in [../../../plans/plan_s1_scale.md](../../../plans/plan_s1_scale.md).
-Apple Silicon (M5 Max, MPS, bf16 autocast). **Music uses option (b) —
-pure PyDI throughout** (PyDI's gold for music is 15× larger than ADI's
+Apple Silicon (M5 Max, MPS, bf16 autocast). **Music uses PyDI data
+throughout** (PyDI's gold for music is 15× larger than ADI's
 training pool, ~36k vs 2.4k pairs, so the ADI-train approach used for
 companies/games is the wrong lever here).
 
@@ -370,14 +364,14 @@ Per-source coverage (refreshed CSVs share identical column set):
 | release-country  | 84%  | 97%     | 0%     | yes           |
 | **duration**     | 90%  | 57%     | 46%    | **yes (added)** |
 | genre            | 0%   | 100%    | 0%     | **no (single-source — empty on at least one side of every pair)** |
-| label            | 0%   | 100%    | 0%     | no (single-source + S11 reserved-name collision) |
+| label            | 0%   | 100%    | 0%     | no (single-source + reserved-name collision) |
 
 `genre` was originally in the committee's `ditto_plm.fields` but is
 **0% on both sides for every pair** (only discogs has it; mb↔discogs
 and mb↔lastfm both have musicbrainz on the left, which has 0% genre).
 Replaced with `duration`, which is 41-51% both-sides — meaningful
-signal even if not "everywhere". `label` stays excluded per the S11
-reserved-name fix (Ditto reserves "label" for the binary class column).
+signal even if not "everywhere". `label` stays excluded (Ditto
+reserves "label" for the binary class column).
 `tracks` is also 100% in all 3 but is a list field, not serialized.
 
 ### LR × class-balance sweep (8 runs, `--fixed-threshold 0.5`)
@@ -458,7 +452,7 @@ python usecases_synthetic/scripts/ditto/train.py \
 ```
 
 `cache/ditto_checkpoints/music/best` symlinks to the winner's
-`checkpoints/best/`. The S3 hard-negative gate at
+`checkpoints/best/`. The hard-negative gate at
 `config/knob_02_niche/music.yaml §hard_negative_gate` is pinned to
 `plm_threshold_theta: 0.5`, `plm_max_len: 256`, `plm_max_field_len: 350`,
 `plm_batch_size: 32`, fields `[name, artist, release-date, release-country, duration]`.
@@ -470,8 +464,7 @@ python usecases_synthetic/scripts/ditto/train.py \
   `COL duration VAL 0` rather than the bridge stripping them, so the
   model has to learn that "duration=0 vs absent on the other side"
   is equivalent to "both sides missing". Empirically this didn't
-  block the 0.984 result, but a follow-up could clean these to NaN
-  in `_prep_music.py`.
+  block the 0.984 result.
 - The 0.998 test recall is suspiciously high — only 1 FN out of 666
   positives. PyDI test (33.3% pos balanced 1,000-per-pair) is easier
   than ADI's FAISS-mined eval. Don't read this as Ditto being a

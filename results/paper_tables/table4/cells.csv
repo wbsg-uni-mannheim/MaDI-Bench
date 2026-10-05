@@ -1,0 +1,31 @@
+row,column,printed,value,formatted,status,source,note
+Games,P1,100.00,1.0,100.00,match,table4/p1_schema_matching.csv f1,"26 correct of 26 predicted, 26 gold correspondences; 2026-09-24 P1 run (LLM schema matcher; logged responses replayed)"
+Games,P2,100.00,1.0,100.00,match,results/scores_v2.json p2_best_of_breeds stages.sm_f1,
+Games,P3,100.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,P4,93.88,,,as printed,,P4 (Claude Code): value of the P4 runs; their outputs and scores are in results/claude code/
+Games,Label-based,30.00,,,as printed,,reference matchers: results/schema_matching_references/
+Games,Instance-based,60.50,,,as printed,,reference matchers: results/schema_matching_references/
+Companies,P1,95.00,0.9500000000000001,95.00,match,table4/p1_schema_matching.csv f1,"19 correct of 19 predicted, 21 gold correspondences; 2026-09-24 P1 run (LLM schema matcher; logged responses replayed)"
+Companies,P2,97.67,0.9767441860465117,97.67,match,results/scores_v2.json p2_best_of_breeds stages.sm_f1,
+Companies,P3,92.68,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,P4,100.00,,,as printed,,P4 (Claude Code): value of the P4 runs; their outputs and scores are in results/claude code/
+Companies,Label-based,26.10,,,as printed,,reference matchers: results/schema_matching_references/
+Companies,Instance-based,53.80,,,as printed,,reference matchers: results/schema_matching_references/
+Music,P1,100.00,1.0,100.00,match,table4/p1_schema_matching.csv f1,"21 correct of 21 predicted, 21 gold correspondences; 2026-09-24 P1 run (LLM schema matcher; logged responses replayed)"
+Music,P2,100.00,1.0,100.00,match,results/scores_v2.json p2_best_of_breeds stages.sm_f1,
+Music,P3,100.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,P4,100.00,,,as printed,,P4 (Claude Code): value of the P4 runs; their outputs and scores are in results/claude code/
+Music,Label-based,28.60,,,as printed,,reference matchers: results/schema_matching_references/
+Music,Instance-based,64.50,,,as printed,,reference matchers: results/schema_matching_references/
+Products,P1,100.00,1.0,100.00,match,table4/p1_schema_matching.csv f1,"100 correct of 100 predicted, 100 gold correspondences; 2026-09-26 P1 products run (hand-written mapping, no LLM)"
+Products,P2,100.00,1.0,100.00,match,results/scores_v2.json p2_best_of_breeds stages.sm_f1,
+Products,P3,100.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,P4,100.00,,,as printed,,P4 (Claude Code): value of the P4 runs; their outputs and scores are in results/claude code/
+Products,Label-based,61.60,,,as printed,,reference matchers: results/schema_matching_references/
+Products,Instance-based,7.70,,,as printed,,reference matchers: results/schema_matching_references/
+Papers,P1,95.38,0.9538461538461539,95.38,match,table4/p1_schema_matching.csv f1,"31 correct of 31 predicted, 34 gold correspondences; 2026-09-24 P1 run (hand-written correspondences, no LLM)"
+Papers,P2,100.00,1.0,100.00,match,results/scores_v2.json p2_best_of_breeds stages.sm_f1,
+Papers,P3,100.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,P4,100.00,,,as printed,,P4 (Claude Code): value of the P4 runs; their outputs and scores are in results/claude code/
+Papers,Label-based,73.80,,,as printed,,reference matchers: results/schema_matching_references/
+Papers,Instance-based,33.30,,,as printed,,reference matchers: results/schema_matching_references/

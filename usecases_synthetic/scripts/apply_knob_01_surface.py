@@ -178,10 +178,10 @@ def build_realised_df(
         Count of ``reason == 'strict_cache_miss'`` rows in
         ``skipped_df``. Surfaces K1 cache dormancy (the same cache-miss
         failure mode that landed K2 hard at 0 interpolations on the
-        last music/games run; see plan_revision.md G9).
+        last music/games run).
     llm_unchanged_count : int
         Count of ``reason == 'llm_unchanged_sentinel'`` rows -- cells
-        where the LLM returned the v2 ``<UNCHANGED>`` sentinel (R10-D).
+        where the LLM returned the v2 ``<UNCHANGED>`` sentinel.
         Calibration signal: rising rate at hard signals the prompt is
         too permissive about declaring inputs unparaphrasable.
     llm_near_identity_count : int
@@ -189,7 +189,7 @@ def build_realised_df(
         the LLM output passed ``paraphrase != value`` but shared the
         input's lowercased token set (casing / punctuation /
         whitespace only). Surfaces shallow-paraphrase laziness that
-        the v2 post-filter intercepts (R10-D).
+        the v2 post-filter intercepts.
     """
     committed = int(len(provenance_df))
     skipped_count = int(len(skipped_df))
@@ -473,7 +473,7 @@ def _apply_baseline_above_target_rules(
 ) -> dict[str, pd.DataFrame]:
     """Easy path: replace (source, attribute) cells with a canonical sibling form.
 
-    K1 follow-up #1 (2026-05-07): when a fusion target value is authored
+    When a fusion target value is authored
     for the (entity, canonical_attribute) cell, filter siblings to those
     within tolerance of the target before picking. Prevents normalize-
     down from inheriting an obviously-wrong sibling value (companies easy
@@ -546,7 +546,7 @@ def _apply_baseline_above_target_rules(
                     if member_rid in canonical_lookup:
                         siblings.append(canonical_lookup[member_rid])
 
-            # K1 follow-up #1: gate normalize-down on closeness when a
+            # Gate normalize-down on closeness when a
             # fusion target is authored for this (entity, canonical_attr).
             if (
                 closeness_ctx is not None
@@ -608,8 +608,8 @@ def _check_clean_primary_floor(
 
     Singletons (entities with no cross-source matches) have no anchor to
     preserve — the floor is vacuously True so paraphrase is allowed.
-    K1 follow-up #2 from the 2026-05-07 sign-off (was returning False
-    pre-Pending #5, which over-fired on ~233/1397/540 cells in the
+    (Was returning False
+    before the closeness contract, which over-fired on ~233/1397/540 cells in the
     medium smoke).
     """
     members = entity_groups.get(entity_group_id, [])
@@ -622,7 +622,7 @@ def _check_clean_primary_floor(
 
 
 class _ClosenessContext:
-    """Per-call resources for the closeness contract (Pending #5).
+    """Per-call resources for the closeness contract.
 
     ``protection_source`` selects between gold-only protection (the
     original behavior — fusion val/test entities only) and
@@ -697,7 +697,7 @@ def _check_close_survivor_floor(
     sources_in_progress: dict[str, pd.DataFrame],
     ctx: _ClosenessContext,
 ) -> bool:
-    """Closeness contract — Pending #5 (locked 2026-05-06).
+    """Closeness contract.
 
     Returns True iff committing *candidate_value* still leaves ≥1
     record across the entity's sources within tolerance of a fusion
@@ -814,8 +814,7 @@ def apply_knob_01(
     realised_df : DataFrame
         Per-level K1 audit summary (one row). Columns per
         :data:`REALISED_COLUMNS`. Powers ``knob_01_realised_*`` audit
-        rows in ``monotonicity_report.csv``
-        (plan_revision.md R-1 / G9 step 4f).
+        rows in ``monotonicity_report.csv``.
     """
     if level not in VALID_LEVELS:
         raise ValueError(f"Invalid level: {level!r}. Valid: {VALID_LEVELS}")
@@ -857,12 +856,12 @@ def apply_knob_01(
     if entity_groups:
         id_to_group = _build_id_to_entity_group(entity_groups)
 
-    # Closeness contract (Pending #5): replaces the strict per-cell
+    # Closeness contract: replaces the strict per-cell
     # clean-survivor floor with an "≥1 record within tolerance" gate.
     # ``protection_source`` selects the target universe: gold-only
-    # (legacy) or silver-augmented (plan_revision.md C9, gold wins for
+    # (legacy) or silver-augmented (gold wins for
     # fusion val/test entities; silver fills the rest of the pool).
-    # ``surviving_record_ids`` enables the C13 intact-cluster rule when
+    # ``surviving_record_ids`` enables the intact-cluster rule when
     # silver is active: silver targets only apply to clusters whose
     # entire original member set survived K2. Caller derives it from
     # post-K2 sources.
@@ -877,7 +876,7 @@ def apply_knob_01(
     )
 
     # Easy path: normalize-to-canonical pass first (gated on closeness
-    # to fix K1 follow-up #1 — siblings must be within tolerance of the
+    # so siblings must be within tolerance of the
     # fusion target before being eligible).
     if level == "easy":
         sources = _apply_baseline_above_target_rules(
@@ -919,7 +918,7 @@ def apply_knob_01(
 
     # Load prompt templates (hard level only). Resolution is
     # version-aware: ``llm_prompt_version`` selects the template suffix
-    # (R10-D: v2 adds a secondary-specific template + <UNCHANGED>
+    # (v2 adds a secondary-specific template + <UNCHANGED>
     # escape + minimum-divergence rule). v1 has no secondary template,
     # so secondary attributes fall back to the short template under v1.
     prompt_version = str(config.get("llm_prompt_version", "v1"))
@@ -930,7 +929,7 @@ def apply_knob_01(
     prompt_secondary = _load_prompt_template(f"prompt_secondary_{prompt_version}.txt")
     if not prompt_secondary:
         # v1 has no secondary template -- fall back to short for
-        # back-compat. v2 ships a real secondary template (R10-D).
+        # back-compat. v2 ships a real secondary template.
         prompt_secondary = prompt_short
     ngram_n = _load_contamination_params().get("ngram_overlap_threshold", 8)
 
@@ -981,9 +980,9 @@ def apply_knob_01(
                 if not cell_str or cell_str.lower() in ("null", "nan", "none"):
                     continue
 
-                # R10-A: level-independent per-cell selection so the
+                # Level-independent per-cell selection so the
                 # perturbed-cell set nests across levels (easy subset of
-                # medium subset of hard). Option B -- the operator/value
+                # medium subset of hard). The operator/value
                 # drawn below still uses the level-keyed ``col_rng`` so
                 # each level keeps its own per-level operator mix.
                 if (
@@ -1041,7 +1040,7 @@ def apply_knob_01(
                         )
                         continue
 
-                # (per-cell strict floor superseded by Pending #5
+                # (per-cell strict floor superseded by the
                 # closeness gate; check happens post-mutation below)
 
                 # Draw an operator.
@@ -1120,7 +1119,7 @@ def apply_knob_01(
                         continue
                     new_value, params = llm_result
                     transform_fn = params.pop("transform_fn")
-                    # R10-D: <UNCHANGED> sentinel means the LLM judged
+                    # <UNCHANGED> sentinel means the LLM judged
                     # the cell unparaphrasable. Skip the cell (no value
                     # change) but record it in provenance under a
                     # dedicated reason so we can count rates.
@@ -1133,7 +1132,7 @@ def apply_knob_01(
                             reason="llm_unchanged_sentinel",
                         )
                         continue
-                    # R10-D: post-filter rejected the LLM output as
+                    # Post-filter rejected the LLM output as
                     # near-identity (zero substantive token change).
                     # Same handling as contamination -- skip + log.
                     if transform_fn == "llm_paraphrase_near_identity":
@@ -1168,7 +1167,7 @@ def apply_knob_01(
                 if not isinstance(new_value, str):
                     continue
 
-                # Closeness contract (Pending #5): for fusion-protected
+                # Closeness contract: for fusion-protected
                 # cells, ≥1 record across the entity's sources must
                 # remain within tolerance of the fusion target value
                 # post-mutation. K1's operators are deterministic per
@@ -1248,7 +1247,7 @@ def write_outputs(
 
     The realised summary lands at
     ``<output_dir>/output/baselines/knob_01_realised.csv`` when
-    *realised_df* is supplied (plan_revision.md R-1 / G9 step 4f —
+    *realised_df* is supplied (it
     powers the K1 monotonicity audit rows).
     """
     prov_dir = output_dir / "output" / "provenance"
@@ -1363,7 +1362,7 @@ def main() -> None:
     # LLM call (never fail-on-miss), so the CLI must be given an
     # ``llm_client`` by the caller when running with strict_cache=False
     # at hard level. The previous auto-forcing at hard was the root cause
-    # of K2 dial-dormancy (plan_revision.md §C1 / Step 2 findings).
+    # of K2 dial-dormancy.
     strict_cache = args.strict_cache
 
     paraphrased, provenance_df, skipped_df, realised_df = apply_knob_01(

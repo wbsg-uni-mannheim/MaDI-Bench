@@ -1,10 +1,9 @@
 # Knob 06 — Value Noise Injection Rate — Papers
 #
-# Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
-# to be validated/tuned before a real papers run. noise_rates_per_level,
-# operator_mix relative weights, the max_* caps, and the
-# compression/stretch factors are inherited from music and have NOT been
-# recalibrated for the papers sources.
+# Seeded from music; rate tables are UNTUNED for papers.
+# noise_rates_per_level, operator_mix relative weights, the max_* caps, and
+# the compression/stretch factors are inherited from music and have NOT
+# been recalibrated for the papers sources.
 #
 # Papers data is already target-shaped after load: all three sources (dblp,
 # crossref, open_alex) expose the SAME 13 canonical value columns, so per-source
@@ -178,7 +177,7 @@ soft_global_primary_cap_hard: 0.35
 compression_factor: 0.5
 stretch_factor: 1.5
 
-# Pending #6: +/-2 % relative jitter cap. publication_year is a 4-digit
+# +/-2 % relative jitter cap. publication_year is a 4-digit
 # integer year (2018-2020); first_page / last_page are page locators and
 # referenced_works_count / cited_by_count are integer counts -- all jitter
 # as continuous floats within the cap.

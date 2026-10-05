@@ -1,7 +1,6 @@
 """Tests for the C12 normalization committee runner.
 
-Covers the 3-member coherent-roster shape introduced under
-plan_revision.md §C12 (decided 2026-05-22). The legacy
+Covers the 3-member coherent-roster shape (C12). The legacy
 per-(member, applies_to) tests live in
 ``tests/test_committee_norm.py`` and stay green via the
 :class:`NormCommitteeRunner.__new__` dispatcher.
@@ -543,3 +542,82 @@ class TestRulePerAttributeOptimalSweep:
         rule_member = result.per_member["rule_per_attribute_optimal"]
         smap = rule_member.notes.get("selection_map", {})
         assert smap == seeded["rule_per_attribute_optimal"]
+
+
+# ---------------------------------------------------------------------------
+# llm_only in-context examples: fusion VALIDATION targets only
+# ---------------------------------------------------------------------------
+
+
+def _example_lines(user_prompt: str) -> set[str]:
+    """The ``- <example>`` lines of a rendered LLMCanonicalizer user prompt."""
+    block = user_prompt.split("Canonical examples:\n", 1)[1].split("\n\nValue:", 1)[0]
+    return {line[2:] for line in block.splitlines() if line.startswith("- ")}
+
+
+class TestLLMOnlyExamplesFromValidation:
+    """llm_only's in-context examples must come from the fusion VALIDATION
+    targets. The TEST targets are the entities the member is scored on
+    (the products normalization test entities are fusion test entities),
+    so a test-target value in the prompt would leak gold."""
+
+    def test_examples_never_contain_test_only_values(
+        self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+    ) -> None:
+        from usecases_synthetic.lib.llm_normalizer import LLMCanonicalizer
+
+        roster = _minimal_roster_dict()
+        roster["llm_normalizer"]["params"] = {
+            "model_name": "gpt-5.4-mini",
+            "num_examples": 5,
+            "cache_dir": str(tmp_path / "llm_cache"),
+        }
+        roster["members"] = [{"name": "llm_only", "params": {}}]
+        yaml_path = _write_yaml(tmp_path, roster)
+        bundle = _synthetic_bundle()
+
+        val_values = {"name": {"Valcorp SE"}, "country": {"Valland"}}
+        fake_val = {"val1": {a: sorted(v) for a, v in val_values.items()}}
+        # The scored entities; their gold values are also raw source values,
+        # so only the example block of the prompt is checked below.
+        fake_test = {
+            "ent1": {"name": ["Apple Inc."], "country": ["United States"]},
+            "ent2": {"name": ["BMW AG"], "country": ["Germany"]},
+        }
+        test_only = {v for e in fake_test.values() for vs in e.values() for v in vs}
+
+        prompts: list[str] = []
+
+        def _fake_llm(system_prompt: str, user_prompt: str) -> str:
+            prompts.append(user_prompt)
+            return (
+                '{"value": null, "operation": "abstain", '
+                '"confidence": 0.0, "reasoning": ""}'
+            )
+
+        monkeypatch.setattr(
+            LLMCanonicalizer, "_ensure_llm_callable", lambda self: _fake_llm
+        )
+        with (
+            patch(
+                "usecases_synthetic.lib.committee_norm_c12._load_val_and_test_targets",
+                return_value=(fake_val, fake_test),
+            ),
+            patch(
+                "usecases_synthetic.lib.committee_norm_c12._op_log_dir",
+                return_value=tmp_path / "oplog",
+            ),
+        ):
+            runner = NormCommitteeRunner(yaml_path, with_llm=True)
+            assert isinstance(runner, C12NormCommitteeRunner)
+            runner.run(bundle)
+
+        assert prompts, "llm_only was never called on the scored cells"
+        seen: dict[str, set[str]] = {}
+        for p in prompts:
+            attribute = p.split("\n", 1)[0].removeprefix("Attribute: ")
+            examples = _example_lines(p)
+            assert not (examples & test_only), (attribute, examples)
+            assert examples <= val_values[attribute], (attribute, examples)
+            seen.setdefault(attribute, set()).update(examples)
+        assert seen == val_values

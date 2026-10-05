@@ -4,9 +4,8 @@
 # the dispatcher derives operator counts from the data — see
 # companies.yaml header for the full description.
 #
-# Seeded from music 2026-06-01; rate tables (pair_miner_thresholds,
-# numeric_overlap tolerances, interp/placement factors) are UNTUNED
-# starting points, to be validated/tuned before a real papers run.
+# Seeded from music; rate tables (pair_miner_thresholds, numeric_overlap
+# tolerances, interp/placement factors) are UNTUNED for papers.
 
 domain: papers
 
@@ -105,8 +104,7 @@ c_min: 2
 boost_label_collision: 5.0
 inner_token_threshold: 0.8
 
-# Seeded from music (UNTUNED). Validate against papers metric
-# distributions before a real run.
+# Seeded from music (UNTUNED).
 pair_miner_thresholds:
   t_match:
     ext_jaccard: 0.5
@@ -160,10 +158,7 @@ stopword_list:
   - for
   - "on"   # quoted: bare YAML `on` parses as the boolean True
 
-# target_corner_case_ratio levels carried over verbatim from music
-# (UNTUNED for papers). Easy stays at the drop-path baseline; medium/hard
-# are modest monotone bumps. Calibrate at S.5a if the dispatcher
-# under-/over-shoots on papers.
+# target_corner_case_ratio levels: the companies/games/products ladder.
 levels:
   # 2026-06-03: corrected from the music-seeded 0.20/0.30/0.35 to the
   # companies/games/products standard ladder 0.20/0.50/0.80. Papers'
@@ -179,9 +174,8 @@ levels:
     target_corner_case_ratio: 0.80
 
 max_interp_fraction: 0.60
-# 2026-05-27 (step 4h): equal train/test split for newly-mined corner pairs.
-# Was 0.6 (60% test / 40% train); user signed off equal distribution so the
-# regen splits have the same corner-case shape on both sides.
+# Half of the interpolated entities are placed across all sources
+# (matched near-twins), half into a single source (distractors).
 placement_split: 0.5
 # Calibrated 2026-05-14 from music-small smoke (carried over as an UNTUNED
 # seed for papers). The 0.5 default assumed ~15 corner-pair adds per
@@ -195,22 +189,17 @@ interp_pair_factor: 0.05
 em_test_regeneration:
   candidate_pool_cap: 2000
 
-# Default model gpt-5.4-mini for cost. Ask user before each K2 run
-# whether to bump to gpt-5.4 (invalidates cache).
-# 2026-05-27 (step 4h): prompt v1 -> v2 — interpolate_v2.txt broadens
-# the lead-sentence domain enumeration to include products (GPUs / SSDs /
-# HDDs / etc.) and carries a domain-extension maintenance note.
-# Invalidates the existing K2 LLM cache by construction.
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the cache.
+# The prompt version is part of the K2 LLM cache key.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0
 
-# Step 4i (2026-05-27): drop-corner-touching operator + non-corner
-# refill. New K2 dispatch branch at baseline_ratio > target_ratio
-# replaces the legacy noop_baseline_above_target path — K2 now actually
-# moves the ratio downward when configured. Each drop pairs with a
-# 1-for-1 LLM-synthesized non-corner entity refill so canonical set
-# size stays stable.
+# Drop-corner-touching operator + non-corner refill: when the baseline
+# ratio is above the target, K2 drops corner-touching entities to move
+# the ratio downward. Each drop pairs with a 1-for-1 LLM-synthesized
+# non-corner entity refill so canonical set size stays stable.
 non_corner_refill:
   enabled: true
   reference_count: 5            # K reference entities for the dissimilarity anchor
@@ -218,20 +207,18 @@ non_corner_refill:
     label_collision_block: true # synthesised primary label must not exist in current canonical set
 non_corner_prompt_version: v1
 
-# Pool quality / pair-miner structure carried over from music, but the
-# papers pool has NOT been built yet (no pools/papers/). Until a pool is
-# minted (e.g. via a build_pool_papers.py analogous to the
-# products/companies/games builders) K2 degrades gracefully and this
-# setting is structural only.
+# Pool quality / pair-miner structure carried over from music. The papers
+# pool (pools/papers/) is not a two-system build_pool.py pool (it comes from
+# scripts/build_pool_papers.py); this setting is structural only.
 pool_quality: two_system
 
-# Hard-negative score-margin gate (S3). No trained Ditto/SC-block
-# checkpoint exists for papers yet — the path below is a papers-namespaced
-# PLACEHOLDER and MUST be (re)trained for papers (do NOT reuse music's
-# checkpoint). The runtime loudly disables the gate if the checkpoint is
-# missing. plm_fields mirror text_concat_order — the strongest matching
-# signals (`id` is never a gate field). theta/threshold seeds carried
-# over from music (UNTUNED).
+# Hard-negative score-margin gate. The path below is where
+# cluster/slurm/run_em_train_committee.sbatch writes the papers Ditto
+# checkpoint (do NOT reuse music's checkpoint). The runtime loudly
+# disables the gate if the
+# checkpoint is missing. plm_fields mirror text_concat_order — the
+# strongest matching signals (`id` is never a gate field). theta/threshold
+# seeds carried over from music (UNTUNED).
 hard_negative_gate:
   enabled: true
   # must be (re)trained for papers; runtime loudly disables a missing checkpoint
@@ -247,11 +234,9 @@ hard_negative_gate:
   plm_max_field_len: 350
   plm_batch_size: 32
   plm_margin_delta: 0.08
-  # 2026-05-27 (step 4h option a): full LLM adjudication on every
-  # gate decision via new gate_mode field. Mirrors bucket-C policy:
-  # PLM score becomes audit telemetry, not a decision shortcut.
-  # Insurance against transitional-state Ditto calibration on
-  # music / companies / products (pre-R7 padding fix).
+  # full_llm: the LLM adjudicates every gate decision; the PLM score is
+  # recorded as audit telemetry only, so decisions do not depend on the
+  # Ditto checkpoint's calibration (the pool builder's bucket-C policy).
   gate_mode: full_llm
   per_level:
     easy:

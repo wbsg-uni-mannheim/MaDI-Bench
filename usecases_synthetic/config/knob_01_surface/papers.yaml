@@ -3,14 +3,14 @@
 # Authored per knobs/knob_01_surface_augmentation.md, mirroring the
 # music K1 template.
 #
-# Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
-# to be validated/tuned before a real papers run.
+# Seeded from music; rate tables are UNTUNED for papers.
 #
 # Papers data is already TARGET-SHAPED after load: all three sources (dblp,
 # crossref, open_alex) carry the SAME 13 canonical value columns, so
 # every attribute_mapping is IDENTITY and per-source attribute_classes
 # are IDENTICAL across the three sources. dblp is the anchor source.
-# Column-name remap: none (sources already ship canonical names).
+# Column-name remap: none here (the loader renames the raw source columns
+# to the canonical names).
 #
 # K1 targets text/string attributes only:
 #   title (primary), journal + type (key), authors + keywords +
@@ -126,7 +126,7 @@ operator_mix:
 # Easy-only normalize-down. No cross-source long/short divergence is
 # known for papers venue strings yet, so no rules are registered.
 # (Music harmonised country long/short forms here; papers has no
-# equivalent confirmed pair - revisit once the pool is built.)
+# equivalent confirmed pair.)
 baseline_above_target_rules: []
 
 # Papers abbreviation table (bidirectional). Coverage: scholarly venue
@@ -197,16 +197,16 @@ key_token_skiplist:
 
 key_token_skiplist_global: []
 
-# Hard-path LLM config. Default gpt-5.4-mini per the 2026-05-06
-# LLM-model-default policy; ask user before each K1 hard run whether
-# to bump to gpt-5.4. `llm_temperature=0` is non-negotiable - paper
+# Hard-path LLM config. Default model is gpt-5.4-mini.
+# `llm_temperature=0` is non-negotiable - paper
 # titles are highly web-memorable, so the tightest contamination check
-# of any domain applies here too.
-# R10-D 2026-05-29: prompt_version bumped to v2 -- minimum-divergence
+# of any domain applies here too. Prompt version v2: minimum-divergence
 # rule, <UNCHANGED> sentinel escape, per-attribute-class prompt
 # split (primary/key -> short_v2, secondary -> secondary_v2,
-# categorical -> categorical_v2). Cache key under
-# cache/knob_01_paraphrases/<domain>/<level>/ rotates on this bump.
+# categorical -> categorical_v2). The prompt version and the model id
+# are part of the cache key under
+# cache/knob_01_paraphrases/<domain>/<level>/, so changing either
+# invalidates the cache.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

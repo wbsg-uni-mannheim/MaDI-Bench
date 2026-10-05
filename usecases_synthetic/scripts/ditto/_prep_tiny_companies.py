@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""D5 helper: build tiny disjoint train/val/test Ditto json.gz files for companies.
+"""Smoke-test helper: build tiny disjoint train/val/test Ditto json.gz files for companies.
 
 Samples balanced slices from ``forbes_2_dbpedia_all.csv`` (32+32 / 8+8 / 8+8
 positive/negative pairs) and writes them through
-``build_ditto_pair_records_from_gold`` so the D5 smoke test has real
+``build_ditto_pair_records_from_gold`` so the Ditto smoke test has real
 pair-text inputs without polluting the checked-in EM gold directory.
 
 Run from the repo root:
@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from usecases_synthetic.lib.domain_config import USECASES_DIR, SYNTHETIC_DIR
+from usecases_synthetic.lib.domain_config import USECASES_DIR, SYNTHETIC_DIR, task_dir
 from usecases_synthetic.lib.loaders import read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
     build_ditto_pair_records_from_gold,
@@ -32,7 +32,7 @@ from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
 DOMAIN = "companies"
 PAIR = "forbes_2_dbpedia"
 SRC1, SRC2 = "forbes", "dbpedia"
-GOLD_PATH = USECASES_DIR / DOMAIN / "input" / "entitymatching" / f"{PAIR}_all.csv"
+GOLD_PATH = task_dir(DOMAIN, root=USECASES_DIR) / "input" / "entitymatching" / f"{PAIR}_all.csv"
 OUTPUT_DIR = SYNTHETIC_DIR / "output" / "ditto" / "trial_companies"
 
 SPLIT_SIZES = {

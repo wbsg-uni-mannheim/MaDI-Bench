@@ -8,7 +8,7 @@ to normalise columns onto the canonical schema, and emits a Ditto-compatible
 WDC ``json.gz`` file with ``{field}_left`` / ``{field}_right`` columns.
 
 This is the one-way bridge between PyDI's source-record EM format and Ditto's
-pair-text format. Used by the D5 smoke test and the D8 production retrain.
+pair-text format. Used by the smoke test and the production retrain.
 """
 
 from __future__ import annotations
@@ -36,6 +36,7 @@ from usecases_synthetic.lib.domain_config import (
     SYNTHETIC_DIR,
     USECASES_DIR,
     data_root_for_domain,
+    task_dir,
 )
 from usecases_synthetic.lib.domain_value_norm import get_value_normalizer
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
@@ -179,7 +180,7 @@ def build_ditto_pair_records_from_gold(
 ) -> list[dict[str, Any]]:
     """Build Ditto pair records from an in-memory EM gold DataFrame.
 
-    Useful for callers (e.g. the D5 tiny-prep script) that need to pass a
+    Useful for callers (e.g. ``_prep_tiny_companies.py``) that need to pass a
     sampled subset of a gold CSV rather than a full ``<pair>_<split>`` file.
     ``gold`` must have columns ``id1``, ``id2``, ``label``.
 
@@ -197,7 +198,7 @@ def build_ditto_pair_records_from_gold(
         Source DataFrames to join the gold against, keyed by source name,
         carrying the *baseline* (pre-K8) column names that the knob-02
         ``attribute_mapping`` expects. Defaults to
-        :func:`load_domain_sources` (the baseline sources). R10-G passes
+        :func:`load_domain_sources` (the baseline sources). The variant retrain passes
         the K8-reversed *variant* sources here so the variant Ditto
         checkpoint trains on the perturbed values under the same
         canonical schema.
@@ -272,7 +273,7 @@ def build_ditto_pair_records_from_gold(
 
 
 # ---------------------------------------------------------------------------
-# Committee-scope (wide) WDC record builder — R10-I.
+# Committee-scope (wide) WDC record builder.
 #
 # The committee EM runner serializes the *wide* per-domain schema
 # (``ditto_plm.fields`` == ``sc_block.text_cols`` == ``DOMAIN_TEXT_COLS``,
@@ -344,7 +345,7 @@ def write_committee_fields_sidecar(output_dir: Path, domain: str) -> Path:
     """Write the canonical wide field scope to ``<output_dir>/fields.txt``.
 
     Records the exact comma-joined ``--fields`` the ``json.gz`` files in
-    ``output_dir`` were built for (R10-I train-fields wiring). A downstream
+    ``output_dir`` were built for (train-fields wiring). A downstream
     Ditto train run should pass ``train.py --domain <domain>`` (which reads
     the same ``DOMAIN_TEXT_COLS`` source of truth) so it can never train on
     a narrower field set than wide inference serializes; this sidecar is the
@@ -530,7 +531,7 @@ def build_ditto_pair_records(
     """
     src1, src2 = _parse_pair(pair)
     root = data_root_for_domain(domain) or USECASES_DIR
-    gold_path = root / domain / "input" / "entitymatching" / f"{pair}_{split}.csv"
+    gold_path = task_dir(domain, root=root) / "input" / "entitymatching" / f"{pair}_{split}.csv"
     if not gold_path.exists():
         raise FileNotFoundError(f"EM gold CSV not found: {gold_path}")
     gold = read_em_gold_csv(gold_path)

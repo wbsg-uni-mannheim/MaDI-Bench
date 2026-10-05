@@ -1,12 +1,27 @@
 # Knob 08 — Schema Naming Divergence: Music
 #
-# Refreshed against the 2026-05-04 CSV sources. All three sources
-# (musicbrainz, discogs, lastfm) ship with the same canonical column
-# set: `id, name, artist, release-date, release-country, duration,
-# label, genre, tracks` — uniformly descriptive at baseline (matches
-# spec call "music @ easy"). lastfm key/secondary attributes are
-# 0%-populated post-refresh per K1/K6/K10 sign-offs; K8 only renames
-# headers, so empty columns cost nothing to author.
+# Keyed on the LOADED column names of the base sources at
+# use cases/music/base/input/data/{musicbrainz,discogs,lastfm}.csv.
+# The 2026-06-03 header rewrite put raw WDC headers on disk, so the
+# sources no longer share the canonical column set:
+#   musicbrainz: Attribute_1 (id), Attribute_2..6, Attribute_9
+#                (anonymized; no label / genre columns)
+#   discogs:     rec_uid (id), title_str, performer, pub_dt, origin_loc,
+#                duration, imprint, category, tracks_track-name
+#   lastfm:      item_code (id), album_title, band, album_length,
+#                tracks_track-name (no release-date / release-country /
+#                label / genre columns)
+# The loader renames each source's id column to `id`
+# (config/domains/music.yaml id_column). The native -> canonical mapping
+# below matches the published base gold
+# (schemamatching/sm_mapping_gold.json) and the EM/fusion committee
+# column_mapping blocks. The descriptive rung lifts each column to its
+# canonical target attribute name.
+#
+# headers `name, artist, release-date, ...` for all three sources,
+# including the all-empty musicbrainz label/genre and lastfm
+# release-date/release-country/label/genre columns that the header
+# rewrite dropped.)
 
 level_assignments:
   easy:
@@ -23,101 +38,85 @@ level_assignments:
     lastfm: anonymized
 
 # Ground-truth schema mapping: source_col -> target_col.
-# Canonical target names match the fusion val/test XML element tags
-# and the K10 sign-off attribute_mapping. `id` columns are intentionally
-# OMITTED from rename_table.
+# Canonical target names match the target_schema.json properties, the
+# fusion val/test XML element tags and the K10 attribute_mapping. `id`
+# columns are intentionally OMITTED from rename_table.
 sm_mapping:
   musicbrainz:
     id: id
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
-    duration: duration
-    label: label
-    genre: genre
-    tracks: tracks
+    Attribute_2: name
+    Attribute_3: artist
+    Attribute_4: release-date
+    Attribute_5: release-country
+    Attribute_6: duration
+    Attribute_9: tracks
   discogs:
     id: id
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
+    title_str: name
+    performer: artist
+    pub_dt: release-date
+    origin_loc: release-country
     duration: duration
-    label: label
-    genre: genre
-    tracks: tracks
+    imprint: label
+    category: genre
+    tracks_track-name: tracks
   lastfm:
     id: id
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
-    duration: duration
-    label: label
-    genre: genre
-    tracks: tracks
+    album_title: name
+    band: artist
+    album_length: duration
+    tracks_track-name: tracks
 
 rename_table:
   musicbrainz:
-    name:
+    Attribute_2:
       descriptive: name
       abbreviated: rel_nm
       cryptic: t
       anonymized: Attribute_2
-    artist:
+    Attribute_3:
       descriptive: artist
       abbreviated: art
       cryptic: ar
       anonymized: Attribute_3
-    release-date:
+    Attribute_4:
       descriptive: release-date
       abbreviated: rel_dt
       cryptic: rd
       anonymized: Attribute_4
-    release-country:
+    Attribute_5:
       descriptive: release-country
       abbreviated: rel_ctry
       cryptic: rc
       anonymized: Attribute_5
-    duration:
+    Attribute_6:
       descriptive: duration
       abbreviated: dur
       cryptic: du
       anonymized: Attribute_6
-    label:
-      descriptive: label
-      abbreviated: lbl
-      cryptic: lb
-      anonymized: Attribute_7
-    genre:
-      descriptive: genre
-      abbreviated: gnr
-      cryptic: g
-      anonymized: Attribute_8
-    tracks:
+    Attribute_9:
       descriptive: tracks
       abbreviated: trks
       cryptic: tk
       anonymized: Attribute_9
 
   discogs:
-    name:
+    title_str:
       descriptive: name
       abbreviated: rel_nm
       cryptic: nm
       anonymized: Attribute_2
-    artist:
+    performer:
       descriptive: artist
       abbreviated: art_nm
       cryptic: art_id
       anonymized: Attribute_3
-    release-date:
+    pub_dt:
       descriptive: release-date
       abbreviated: rel_dt
       cryptic: rd
       anonymized: Attribute_4
-    release-country:
+    origin_loc:
       descriptive: release-country
       abbreviated: rel_ctry
       cryptic: cc
@@ -127,59 +126,39 @@ rename_table:
       abbreviated: dur
       cryptic: dr
       anonymized: Attribute_6
-    label:
+    imprint:
       descriptive: label
       abbreviated: lbl
       cryptic: lab
       anonymized: Attribute_7
-    genre:
+    category:
       descriptive: genre
       abbreviated: gnr
       cryptic: g_cat
       anonymized: Attribute_8
-    tracks:
+    tracks_track-name:
       descriptive: tracks
       abbreviated: trks
       cryptic: trk
       anonymized: Attribute_9
 
   lastfm:
-    name:
+    album_title:
       descriptive: name
       abbreviated: rel_nm
       cryptic: t_nm
       anonymized: Attribute_2
-    artist:
+    band:
       descriptive: artist
       abbreviated: art
       cryptic: ar_nm
       anonymized: Attribute_3
-    release-date:
-      descriptive: release-date
-      abbreviated: rel_dt
-      cryptic: rd
-      anonymized: Attribute_4
-    release-country:
-      descriptive: release-country
-      abbreviated: rel_ctry
-      cryptic: cc
-      anonymized: Attribute_5
-    duration:
+    album_length:
       descriptive: duration
       abbreviated: dur
       cryptic: dur_s
       anonymized: Attribute_6
-    label:
-      descriptive: label
-      abbreviated: lbl
-      cryptic: lb_nm
-      anonymized: Attribute_7
-    genre:
-      descriptive: genre
-      abbreviated: gnr
-      cryptic: gn
-      anonymized: Attribute_8
-    tracks:
+    tracks_track-name:
       descriptive: tracks
       abbreviated: trks
       cryptic: tnms

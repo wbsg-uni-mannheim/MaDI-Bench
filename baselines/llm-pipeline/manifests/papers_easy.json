@@ -1,0 +1,33 @@
+{
+  "base_case": "papers",
+  "case": "papers-augmented-easy",
+  "data_dir": "../../use cases/papers/easy/input/data",
+  "entitymatching_dir": "../../use cases/papers/easy/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "excluded_columns": [
+    "doi"
+  ],
+  "fusion_alignment_columns": [
+    "doi"
+  ],
+  "fusion_dir": "../../use cases/papers/easy/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/papers/easy",
+  "pairs": [
+    {
+      "left": "dblp",
+      "right": "crossref",
+      "test_set": "../../use cases/papers/easy/input/entitymatching/dblp_2_crossref_test_corner_filled.csv"
+    },
+    {
+      "left": "dblp",
+      "right": "open_alex",
+      "test_set": "../../use cases/papers/easy/input/entitymatching/dblp_2_open_alex_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/papers/easy/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/papers/easy/input/schemamatching/sm_mapping.csv",
+  "variant": "easy"
+}

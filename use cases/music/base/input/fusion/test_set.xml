@@ -9,7 +9,7 @@
     <duration provenance="discogs_30446">2798</duration>
     <label provenance="discogs_30446">Hiero Imperium</label>
     <genre provenance="" />
-    <tracks provenance="lastFM_14591+mbrainz_6891+discogs_30446">["Chance", "Sabotage", "Sabotage", "Warrior Poets", "Relief", "The Gaspers", "Falling", "Fallen", "Field Of Dreams", "Substance", "The Birds And The Bees", "Birds and the Bees", "The Get Down", "Crooked Angles"]</tracks>
+    <tracks provenance="lastFM_14591+mbrainz_6891+discogs_30446" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_5095</id>
@@ -218,7 +218,7 @@
     <duration provenance="discogs_96815">2403</duration>
     <label provenance="discogs_96815">EMI Electrola GmbH</label>
     <genre provenance="" />
-    <tracks provenance="mbrainz_9858+lastFM_21012+discogs_96815">["Ich bin schlecht", "Ich such Dich", "Schöne Leute", "Der Kanal", "Unter der Haut", "Gerade Noch Gefehlt", "Du hast mir gerade noch gefehlt", "Ganz normale Leute", "Wann und Wie", "Wann &amp; Wie", "Nachbarn", "Immer nur leben"]</tracks>
+    <tracks provenance="mbrainz_9858+lastFM_21012+discogs_96815" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_6947</id>
@@ -251,13 +251,13 @@
     <duration provenance="discogs_98622">3100</duration>
     <label provenance="discogs_98622">Pro Noize</label>
     <genre provenance="" />
-    <tracks provenance="mbrainz_18462+discogs_98622+lastFM_44842">["Scary Looking Thing", "Du Musst Tanzen! (Oh SüÃŸes Lied)", "WTF? (What the Funk)", "Aftermath", "Tinnitus 2k13", "Warning", "Klick Klick", "Whatever It Is...", "Joking", "The Machine", "Humourless Men", "Stomp'n'Roll", "Endgegner"]</tracks>
+    <tracks provenance="mbrainz_18462+discogs_98622+lastFM_44842" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_8082</id>
     <name provenance="mbrainz_8082+discogs_50394">California Man</name>
     <artist provenance="mbrainz_8082">The Move</artist>
-    <release-date provenance="mbrainz_8082+discogs_50394">1972-01-01</release-date>
+    <release-date provenance="mbrainz_8082+discogs_50394" v2_removed="v2b-unwinnable" />
     <release-country provenance="mbrainz_8082">United Kingdom of Great Britain and Northern Ireland</release-country>
     <duration provenance="">2702</duration>
     <label provenance="discogs_50394">Harvest</label>
@@ -284,7 +284,7 @@
     <duration provenance="lastFM_44432">4564</duration>
     <label provenance="">Anagram Records</label>
     <genre provenance="">Rock</genre>
-    <tracks provenance="mbrainz_18332+lastFM_44432">["Stab The Judge", "Riot Torn City", "Me And You", "Give Us A Future", "Just Another Hero", "Jerusalem", "Jackie Was A Junkie", "Cum On Feel The Noize", "Breakin' In", "This Is The Age", "Into The Fires", "Children Of The Night", "Down", "Shine Again", "Out Of Mind", "Jerusalem (Live)", "Stab The Judge (Live)", "No Return (Live)", "Jackie Was A Junkie (Live)", "Believe Yourself", "Search Your Soul", "Leave Me Alone", "Give Us A Future (Live)", "Corrupted World (Live)", "Pressure On", "Enemy", "Shut Up"]</tracks>
+    <tracks provenance="mbrainz_18332+lastFM_44432" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_7957</id>
@@ -303,7 +303,7 @@
     <artist provenance="mbrainz_15003">Vibrators, The</artist>
     <release-date provenance="mbrainz_15003+discogs_78685">1996-05-28</release-date>
     <release-country provenance="mbrainz_15003">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">4546</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_78685">Anagram Records</label>
     <genre provenance="discogs_78685">Rock</genre>
     <tracks provenance="mbrainz_15003+discogs_78685">["Gimme Some Lovin'", "Power Cry (live)", "Disco in Moscow", "Take a Chance", "Baby Baby", "Dragnet", "Guilty", "Hang Ten", "Mx America", "Shadow Love", "Flying Home", "Flash Flash Flash", "Punish Me With Kisses", "Baby Blue Eyes", "Amphetamine Blue", "Blown Away by Love", "The Demolishers", "Still Not Over You", "String Him Along", "Disco in Moscow (live)", "Every Day I Die a Little", "Halfway to Paradise", "Drive"]</tracks>
@@ -336,7 +336,7 @@
     <artist provenance="mbrainz_3570">Camera Obscura</artist>
     <release-date provenance="mbrainz_3570+discogs_15361">2006-06-06</release-date>
     <release-country provenance="mbrainz_3570">United States of America</release-country>
-    <duration provenance="">2323</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_15361">Merge Records</label>
     <genre provenance="discogs_15361">Pop</genre>
     <tracks provenance="mbrainz_3570+discogs_15361">["Lloyd, I'm Ready To Be Heartbroken", "Tears For Affairs", "Come Back Margaret", "Dory Previn", "The False Contender", "Let's Get Out Of This Country", "Country Mile", "If Looks Could Kill", "I Need All The Friends I Can Get", "Razzle Dazzle Rose"]</tracks>
@@ -358,7 +358,7 @@
     <artist provenance="mbrainz_11821">Neon Indian</artist>
     <release-date provenance="mbrainz_11821+discogs_69253">2010-10-28</release-date>
     <release-country provenance="mbrainz_11821">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">3633</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_69253">Static Tongues</label>
     <genre provenance="discogs_69253">Electronic / Dance</genre>
     <tracks provenance="mbrainz_11821+discogs_69253">["Psychic Chasms", "(AM)", "Deadbeat Summer", "Laughing Gas", "Terminally Chill", "(If I Knew, I'd Tell You)", "6669 (I Don't Know If You Know)", "Should Have Taken Acid With You", "Mind, Drips", "Psychic Chasms", "Local Joke", "Ephemeral Artery", "7000 (Reprise)", "Mind Ctrl: Psychic Chasms Possessed", "Sleep Paralysist", "Deadbeat Summer (Toro Y Moi Remix)", "Should Have Taken Acid With You (Body Language Remix)", "(If I Knew, I'd Tell You) (Javelin Remix)", "Mind, Drips (Bibio Remix)", "Terminally Chill (Yacht Remix)", "Ephemeral Artery (The Antlers Remix)", "Local Joke (Dntel Mix)"]</tracks>
@@ -380,7 +380,7 @@
     <artist provenance="mbrainz_7969">The Chemical Brothers</artist>
     <release-date provenance="mbrainz_7969+discogs_35700">2009-03-01</release-date>
     <release-country provenance="mbrainz_7969">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1432</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_35700">Not On Label (The Chemical Brothers)</label>
     <genre provenance="discogs_35700">Electronic / Dance</genre>
     <tracks provenance="mbrainz_7969+discogs_35700">["It Doesn't Matter", "Don't Stop the Rock", "Under the Influence", "Freak of the Week"]</tracks>
@@ -391,8 +391,8 @@
     <artist provenance="mbrainz_28928">Taio Cruz</artist>
     <release-date provenance="mbrainz_28928+discogs_124072">2011-01-01</release-date>
     <release-country provenance="mbrainz_28928">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1044</duration>
-    <label provenance="discogs_124072">Universal Island Records</label>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
+    <label provenance="discogs_124072" v2_removed="v2b-unwinnable" />
     <genre provenance="discogs_124072">Electronic / Dance</genre>
     <tracks provenance="mbrainz_28928+discogs_124072">["Troublemaker", "Troublemaker (DJ Wonder remix)", "Troublemaker (Vato Gonzalez remix)", "Troublemaker (JWLS remix)"]</tracks>
   </release>
@@ -445,7 +445,7 @@
     <name provenance="mbrainz_13703+discogs_63470">Glee: The Music Presents The Warblers</name>
     <artist provenance="mbrainz_13703">Glee Cast</artist>
     <release-date provenance="mbrainz_13703+discogs_63470">2011-04-19</release-date>
-    <release-country provenance="mbrainz_13703">United States of America</release-country>
+    <release-country provenance="mbrainz_13703" v2_removed="v2b-unwinnable" />
     <duration provenance="">2530</duration>
     <label provenance="discogs_63470">Columbia</label>
     <genre provenance="discogs_63470">Pop</genre>
@@ -457,7 +457,7 @@
     <artist provenance="mbrainz_6880">Brotherhood of Man</artist>
     <release-date provenance="mbrainz_6880+discogs_37434">1970-01-01</release-date>
     <release-country provenance="mbrainz_6880">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1977</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_37434">Deram</label>
     <genre provenance="discogs_37434">Pop</genre>
     <tracks provenance="mbrainz_6880+discogs_37434">["Love Is a Good Foundation", "Say a Prayer", "A Little Bit of Heaven", "For the Rest of Our Lives", "Sing in the Sunshine", "Where Are You Going to My Love", "For Old Times Sake", "Living in the Land of Love", "Too Many Heartaches", "Love One Another", "United We Stand"]</tracks>
@@ -468,7 +468,7 @@
     <artist provenance="mbrainz_6419">Lydia Lunch</artist>
     <release-date provenance="mbrainz_6419+discogs_82564">1989-01-01</release-date>
     <release-country provenance="mbrainz_6419">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">2520</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_82564">Widowspeak Productions</label>
     <genre provenance="discogs_82564">Rock</genre>
     <tracks provenance="mbrainz_6419+discogs_82564">["Come Fall", "So Your Heart", "Dead River", "Three Kings", "Done Dun", "Still Burning", "Fields of Fire", "Dead in the Head", "Some Velvet Morning"]</tracks>
@@ -480,7 +480,7 @@
     <release-date provenance="mbrainz_13875+discogs_64358">1962-01-01</release-date>
     <release-country provenance="mbrainz_13875">United Kingdom of Great Britain and Northern Ireland</release-country>
     <duration provenance="">2399</duration>
-    <label provenance="discogs_64358">Columbia Records</label>
+    <label provenance="discogs_64358" v2_removed="v2b-unwinnable" />
     <genre provenance="discogs_64358">Jazz</genre>
     <tracks provenance="mbrainz_13875+discogs_64358">["Let's Face the Music and Dance", "I Should Care", "Let's Fall in Love", "The Second Time Around", "Imagination", "All the Things You Are", "I Get a Kick Out of You", "Everything I Have Is Yours", "Spring Is Here", "All of Me", "I Can't Get You Out of My Mind", "What Now My Love"]</tracks>
   </release>
@@ -545,16 +545,16 @@
     <artist provenance="mbrainz_3151">Yeah Yeah Yeahs</artist>
     <release-date provenance="mbrainz_3151+discogs_14247">2006-03-01</release-date>
     <release-country provenance="mbrainz_3151">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">2333</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_14247">Fiction Records|Polydor</label>
     <genre provenance="discogs_14247">Rock</genre>
-    <tracks provenance="mbrainz_3151+discogs_14247">["Gold Lion", "Way Out", "Fancy", "Phenomena", "Honeybear", "Cheated Hearts", "Dudley", "Mysteries", "The Sweets", "Warrior", "Turn Into", "DéjÃƒ  Vu"]</tracks>
+    <tracks provenance="mbrainz_3151+discogs_14247" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_469</id>
     <name provenance="mbrainz_469+discogs_1799">Bengali Bantam Youth Experience!</name>
     <artist provenance="mbrainz_469">Black Star Liner</artist>
-    <release-date provenance="mbrainz_469+discogs_1799">1998-08-01</release-date>
+    <release-date provenance="mbrainz_469+discogs_1799" v2_removed="v2b-unwinnable" />
     <release-country provenance="mbrainz_469">United Kingdom of Great Britain and Northern Ireland</release-country>
     <duration provenance="">2496</duration>
     <label provenance="discogs_1799">Warner Music UK Ltd</label>
@@ -567,7 +567,7 @@
     <artist provenance="mbrainz_14382">Al Di Meola</artist>
     <release-date provenance="mbrainz_14382+discogs_67328">2010-10-25</release-date>
     <release-country provenance="mbrainz_14382">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="mbrainz_14382">12844</duration>
+    <duration provenance="mbrainz_14382" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_67328">Legacy|Columbia|Sony Music</label>
     <genre provenance="discogs_67328">Jazz</genre>
     <tracks provenance="mbrainz_14382+discogs_67328">["Land Of The Midnight Sun", "The Wizard", "Land Of The Midnight Sun", "Sarabande From Violin Sonata In B Minor", "Love Theme From 'Pictures Of The Sea'", "Suite - Golden Dawn", "Short Tales Of The Black Forest", "Elegant Gypsy", "Flight Over Rio", "Midnight Tango", "Mediterranean Sundance", "Race With Devil On Spanish Highway", "Lady Of Rome, Sister Of Brazil", "Elegant Gypsy Suite", "Casino", "Egyptian Danza", "Chasin' The Voodoo", "Dark Eye Tango", "Señor Mouse", "Fantasia Suite For Two Guitars", "Casino", "Splendido Hotel", "Alien Chase On Arabian Desert", "Silent Story In Her Eyes", "Roller Jubilee", "Two To Tango", "Al Di's Dream Theme", "Dinner Music Of The Gods", "Splendido Sundance", "I Can Tell", "Spanish Eyes", "Isfahan", "Bianca's Midnight Lullaby", "Electric Rendezvous", "God Bird Change", "Electric Rendezvous", "Passion, Grace &amp; Fire", "Cruisin'", "Black Cat Shuffle", "Ritmo De La Noche", "Somalia", "Jewel Inside A Dream"]</tracks>
@@ -600,7 +600,7 @@
     <artist provenance="mbrainz_1314">I Monster</artist>
     <release-date provenance="mbrainz_1314+discogs_6285">2001-03-02</release-date>
     <release-country provenance="mbrainz_1314">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">406</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_6285">Cercle Records</label>
     <genre provenance="discogs_6285">Electronic / Dance</genre>
     <tracks provenance="mbrainz_1314+discogs_6285">["Daydream", "Full Speed to Metric"]</tracks>
@@ -636,7 +636,7 @@
     <duration provenance="">2805</duration>
     <label provenance="discogs_55909">Rocket Recordings</label>
     <genre provenance="discogs_55909">Electronic / Dance</genre>
-    <tracks provenance="mbrainz_12193+discogs_55909">["Transfinite", "The Ambassador", "Cemetery Magus", "Youââ‚¬â„¢re Mercury", "Midas Rex", "A.C.R.O.N.Y.M.", "Mothlike", "Red Soil", "Horses With Hands", "Hovis Coil"]</tracks>
+    <tracks provenance="mbrainz_12193+discogs_55909" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_2170</id>
@@ -655,7 +655,7 @@
     <artist provenance="mbrainz_5549">Norah Jones</artist>
     <release-date provenance="mbrainz_5549+discogs_50918">2004-01-01</release-date>
     <release-country provenance="mbrainz_5549">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">362</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_50918">Blue Note</label>
     <genre provenance="discogs_50918">Jazz</genre>
     <tracks provenance="mbrainz_5549+discogs_50918">["Sunrise"]</tracks>
@@ -667,9 +667,9 @@
     <release-date provenance="mbrainz_32422">2007-05-14</release-date>
     <release-country provenance="mbrainz_32422">United Kingdom of Great Britain and Northern Ireland</release-country>
     <duration provenance="lastFM_80555">2394</duration>
-    <label provenance="">Hubris Records</label>
-    <genre provenance="">Pop</genre>
-    <tracks provenance="mbrainz_32422+lastFM_80555">["Folie à Deux", "The Reinkarnation of Take the Time", "Maybe", "Yadada's Brother", "Drone in the Fox's Ear", "River Clyde", "Choir's on Fire (Wickburn)", "We Want You", "I Need You", "I Know What You're Like", "Exorcism of..."]</tracks>
+    <label provenance="" v2_removed="v2a-absent" />
+    <genre provenance="" v2_removed="v2a-absent" />
+    <tracks provenance="mbrainz_32422+lastFM_80555" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_13786</id>
@@ -699,10 +699,10 @@
     <artist provenance="mbrainz_25400">Mud</artist>
     <release-date provenance="mbrainz_25400+discogs_148750">1997-11-24</release-date>
     <release-country provenance="mbrainz_25400">Germany</release-country>
-    <duration provenance="mbrainz_25400">9225</duration>
+    <duration provenance="mbrainz_25400" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_148750">Repertoire Records</label>
     <genre provenance="discogs_148750">Pop</genre>
-    <tracks provenance="mbrainz_25400+discogs_148750">["Tiger Feet", "The Cat Crept In", "Dyna-Mite", "Rocket", "L'L'Lucy", "Nite On The Tiles", "Moonshine Sally", "Hypnosis", "Crazy", "The Secrets That You Keep", "Oh Boy", "One Night (With You)", "Hula Love", "Living Doll", "Let's Have A Party", "In The Mood", "Show Me You're A Woman", "Shake It Down", "Lean On Me", "Beating Around The Bush", "Slow Talking Boy", "Lonely This Christmas", "Just Try A Little Tenderness", "Cut Across Shorty", "Drift Away", "Medley: Dynamite / The Cat Crept In / Tiger Feet", "Do You Love Me", "Do It All Over Again", "Watching The Clock", "Bye Bye Johnny", "Shake Rattle And Roll / See You Later Alligator", "Blue Moon", "The Ladies", "I Can't Stand It", "Still Watching The Clock", "Last Tango In London", "Mr. Bagatelle", "Morning", "I Love How You Love Me", "Flower Power", "You're My Mother", "Up The Airy Mountain", "The Latter Days", "Shangri-La", "House On The Hill", "Jumping Jehosaphat", "Won't Let It Go"]</tracks>
+    <tracks provenance="mbrainz_25400+discogs_148750" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_14410</id>
@@ -721,7 +721,7 @@
     <artist provenance="mbrainz_12500">Rudy Grant</artist>
     <release-date provenance="mbrainz_12500+discogs_57381">1984-01-01</release-date>
     <release-country provenance="mbrainz_12500">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">590</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_57381">RAK</label>
     <genre provenance="discogs_57381">R&amp;B / Soul</genre>
     <tracks provenance="mbrainz_12500+discogs_57381">["Get Ready Get Right (extended version)", "Ready and Right"]</tracks>
@@ -743,7 +743,7 @@
     <artist provenance="mbrainz_123">Access 58</artist>
     <release-date provenance="mbrainz_123+discogs_259">1999-02-22</release-date>
     <release-country provenance="mbrainz_123">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1635</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_259">Access 58</label>
     <genre provenance="discogs_259">Electronic / Dance</genre>
     <tracks provenance="mbrainz_123+discogs_259">["Kiribati 2000", "Propulse", "Sweet Back", "Abstract Funk"]</tracks>
@@ -763,10 +763,10 @@
     <id>mbrainz_13271</id>
     <name provenance="mbrainz_13271+discogs_75502">Identity Crisis</name>
     <artist provenance="mbrainz_13271">Sweet</artist>
-    <release-date provenance="mbrainz_13271+discogs_75502">1982-01-01</release-date>
-    <release-country provenance="mbrainz_13271">Germany</release-country>
-    <duration provenance="">1981</duration>
-    <label provenance="discogs_75502">Polydor</label>
+    <release-date provenance="mbrainz_13271+discogs_75502" v2_removed="v2b-unwinnable" />
+    <release-country provenance="mbrainz_13271" v2_removed="v2b-unwinnable" />
+    <duration provenance="" v2_removed="v2b-unwinnable" />
+    <label provenance="discogs_75502" v2_removed="v2b-unwinnable" />
     <genre provenance="discogs_75502">Rock</genre>
     <tracks provenance="mbrainz_13271+discogs_75502">["Identity Crisis", "New Shoes", "Two Into One", "Love Is The Cure", "It Makes Me Wonder", "Hey Mama", "Falling In Love", "I Wish You Would", "Strange Girl"]</tracks>
   </release>
@@ -864,7 +864,7 @@
     <artist provenance="mbrainz_375">Juan Atkins</artist>
     <release-date provenance="mbrainz_375+discogs_1257">1991-01-01</release-date>
     <release-country provenance="mbrainz_375">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1334</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_1257">Underground Level Recordings</label>
     <genre provenance="discogs_1257">Electronic / Dance</genre>
     <tracks provenance="mbrainz_375+discogs_1257">["Urban Tropics", "Serene", "Sundog", "Interpret"]</tracks>
@@ -886,7 +886,7 @@
     <artist provenance="mbrainz_2083">Alchemic Storm</artist>
     <release-date provenance="mbrainz_2083+discogs_9334">2005-01-29</release-date>
     <release-country provenance="mbrainz_2083">Germany</release-country>
-    <duration provenance="">1698</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_9334">Fusion Recordings</label>
     <genre provenance="discogs_9334">Electronic / Dance</genre>
     <tracks provenance="mbrainz_2083+discogs_9334">["The Drums (One Night in Versailles mix)", "The Drums (Make Another Wish mix)", "The Drums (Magan &amp; Magan remix)", "The Drums (Kut 'n' Paste remix)"]</tracks>
@@ -900,7 +900,7 @@
     <duration provenance="">2031</duration>
     <label provenance="discogs_59074">Static Caravan</label>
     <genre provenance="discogs_59074">Electronic / Dance</genre>
-    <tracks provenance="mbrainz_12847+discogs_59074">["Malibu Melts", "Minds Of Men... Hearts Of Space", "Spaceships Over Topanga", "Zodiac FM", "Waterfall Sunset", "Sphere", "Never Sea Land", "Phase Horizon", "Ether Dream", "Mother Father Sister Brother", "Goodnight Earth"]</tracks>
+    <tracks provenance="mbrainz_12847+discogs_59074" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_4615</id>
@@ -941,7 +941,7 @@
     <artist provenance="mbrainz_15132">Jonas Reinhardt</artist>
     <release-date provenance="mbrainz_15132+discogs_71475">2011-10-01</release-date>
     <release-country provenance="mbrainz_15132">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">494</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_71475">The Great Pop Supplement</label>
     <genre provenance="discogs_71475">Electronic / Dance</genre>
     <tracks provenance="mbrainz_15132+discogs_71475">["The Prime Revealer", "Only Pharoah"]</tracks>
@@ -974,7 +974,7 @@
     <artist provenance="mbrainz_1269">T.Raumschmiere</artist>
     <release-date provenance="mbrainz_1269+discogs_6025">2004-05-10</release-date>
     <release-country provenance="mbrainz_1269">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">1313</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_6025">NovaMute</label>
     <genre provenance="discogs_6025">Electronic / Dance</genre>
     <tracks provenance="mbrainz_1269+discogs_6025">["A Million Brothers (Sub Species remix)", "A Million Brothers (Pole remix)", "Querstromzerspaner (LFO remix)", "A Million Brothers (Sub Species dub)"]</tracks>
@@ -996,7 +996,7 @@
     <artist provenance="mbrainz_436">Bulletproof</artist>
     <release-date provenance="mbrainz_436+discogs_1636">2002-01-01</release-date>
     <release-country provenance="mbrainz_436">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="">830</duration>
+    <duration provenance="" v2_removed="v2b-unwinnable" />
     <label provenance="discogs_1636">Critical Recordings</label>
     <genre provenance="discogs_1636">Electronic / Dance</genre>
     <tracks provenance="mbrainz_436+discogs_1636">["The Bends", "Sanctuary"]</tracks>
@@ -1029,9 +1029,9 @@
     <artist provenance="mbrainz_23557">Roger Taylor</artist>
     <release-date provenance="mbrainz_23557">1994-09-05</release-date>
     <release-country provenance="mbrainz_23557">United Kingdom of Great Britain and Northern Ireland</release-country>
-    <duration provenance="lastFM_59772">3068</duration>
-    <label provenance="">Parlophone</label>
-    <genre provenance="">Rock</genre>
+    <duration provenance="lastFM_59772" v2_removed="v2b-unwinnable" />
+    <label provenance="" v2_removed="v2a-absent" />
+    <genre provenance="" v2_removed="v2a-absent" />
     <tracks provenance="mbrainz_23557+lastFM_59772">["Nazis 1994", "Happiness", "Revelations", "Touch the Sky", "Foreign Sand", "Freedom Train", "'You Had to Be There'", "The Key", "Everybody Hurts Sometime", "Loneliness...", "Dear Mr Murdoch", "Old Friends"]</tracks>
   </release>
   <release>
@@ -1087,13 +1087,13 @@
     <duration provenance="mbrainz_21036">5710</duration>
     <label provenance="discogs_118956">Warp Records</label>
     <genre provenance="discogs_118956">Rock</genre>
-    <tracks provenance="mbrainz_21036+discogs_118956">["Sleeping Ute", "Speak in Rounds", "Adelma", "Yet Again", "The Hunt", "A Simple Answer", "What’s Wrong?", "Gun-Shy", "Half Gate", "Sun in Your Eyes", "Smothering Green", "Taken Down (Marfa demo)", "Listen and Wait", "Everyone I Know (Marfa demo)", "Will Calls (Marfa demo)", "Sleeping Ute (Nicolas Jaar remix)", "A Simple Answer (Liars remix)", "Gun-Shy (Lindstrøm remix)"]</tracks>
+    <tracks provenance="mbrainz_21036+discogs_118956" v2_removed="v2b-unwinnable" />
   </release>
   <release>
     <id>mbrainz_2110</id>
     <name provenance="mbrainz_2110+discogs_9404">The Madness Of Our Love</name>
     <artist provenance="mbrainz_2110">Denise Jannah</artist>
-    <release-date provenance="mbrainz_2110+discogs_9404">1991-01-01</release-date>
+    <release-date provenance="mbrainz_2110+discogs_9404" v2_removed="v2b-unwinnable" />
     <release-country provenance="mbrainz_2110">Netherlands</release-country>
     <duration provenance="">3141</duration>
     <label provenance="discogs_9404">Blue Note</label>

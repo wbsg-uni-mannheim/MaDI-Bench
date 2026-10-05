@@ -2,7 +2,7 @@
   "metric": "consistency",
   "metadata": {
     "case": "games-augmented-easy",
-    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/games-augmented/easy/input/schemamatching/target_schema.json",
+    "schema_path": "PyDI/usecases/games-augmented/easy/input/schemamatching/target_schema.json",
     "fused_output": "DI-Bench/runs/augmented/games/easy/fusion/fused_clean.csv"
   },
   "result": {

@@ -8,7 +8,7 @@ evaluation surfaces; the rest are data.
 Sheets, in order:
 
 1. ``evaluation_legend`` — glossary explaining (a) why EM matching has
-   four separate evaluation surfaces under the R7b dual-model dual-test
+   four separate evaluation surfaces under the dual-model dual-test
    infrastructure and (b) which committee_summary row corresponds to
    which surface. Read first if any metric name in the file is unclear.
 2. ``sizes`` — source row counts across baseline + every level
@@ -30,7 +30,7 @@ Sheets, in order:
    sheets below.
 7. ``per_member`` — every committee member's primary headline metric
    for every stage × level cell.
-8. ``selection_map`` — per-attribute member selection for C12
+8. ``selection_map`` — per-attribute member selection for the
    optimised members (``pydi_per_attribute_optimal``,
    ``rule_per_attribute_optimal``).
 9. ``EM match (train=BL test=BL)`` — EM matching, baseline-trained
@@ -43,10 +43,9 @@ Sheets, in order:
     model evaluated on the variant's regenerated test gold (paper
     headline; matches the committee_summary row).
 13. ``EM block (train=BL test=BL)`` through ``EM block (train=Var
-    test=Var)`` — same 4-surface layout for EM blocking. Runner-side
-    dual-test wiring for blockers is an R7c follow-up; until it lands
-    these cells are populated as 0.0 placeholders. The legend sheet
-    documents the runner state.
+    test=Var)`` — same 4-surface layout for EM blocking (pair recall).
+    Only ``sc_block`` is retrained per variant; for the other blockers
+    the train=BL and train=Var values are identical.
 
 Run::
 
@@ -55,7 +54,7 @@ Run::
     python usecases_synthetic/scripts/build_statistics.py --domain music --domain games
 
 Outputs land at ``usecases_synthetic/statistics/<domain>.xlsx``. The
-script is idempotent — re-run after each new S.7 / sanity-ladder
+script is idempotent — re-run after each new validation
 iteration to refresh the spreadsheets.
 
 Where the underlying data lives:
@@ -69,8 +68,7 @@ Where the underlying data lives:
   ``usecases/<domain>-augmented/<level>/input/`` (likewise honoring the
   data_root override).
 
-Outputs reference [scripts/build_statistics.py](.) — see also the
-``Central reporting`` note in [plans/plan_s1_final.md](../../plans/plan_s1_final.md).
+Outputs reference [scripts/build_statistics.py](.).
 """
 
 from __future__ import annotations
@@ -95,6 +93,12 @@ from openpyxl.utils import get_column_letter  # noqa: E402
 from usecases_synthetic.lib.domain_config import (  # noqa: E402
     USECASES_DIR,
     load_domain_config,
+    task_dir,
+    variant_dir,
+)
+from usecases_synthetic.lib.fusion_gold_keys import (  # noqa: E402
+    read_json_records,
+    sniff_fusion_format,
 )
 
 logger = logging.getLogger(__name__)
@@ -104,19 +108,17 @@ DEFAULT_DOMAINS: tuple[str, ...] = ("music", "games", "products", "companies")
 
 # Per-stage headline metric (committee aggregated).
 #
-# R7b dual-model dual-test (2026-05-27): EM matching + blocking
+# Dual-model dual-test: EM matching + blocking
 # headlines switch from the baseline-model-on-regen alias keys to the
 # explicit variant-model-on-regen keys. Output of ``aggregated`` from
 # the committee runners has the new keys; legacy outputs predating
-# R7b carry only the alias — readers should fall back via
+# the dual-model keys carry only the alias — readers should fall back via
 # ``dict.get(new, dict.get(legacy, 0.0))``.
 _STAGE_AGG_KEY: dict[str, str] = {
     "sm": "macro_f1",
     "norm": "macro_f1",
-    # EM blocking is unsupervised for every member except sc_block, so
-    # the R7b dual-test split (variant_model vs baseline_model) is a
-    # no-op for blocking — the runner still emits the keys but writes
-    # 0.0 to all four. Use the populated single-test metric instead.
+    # EM blocking is unsupervised for every member except sc_block; the
+    # committee_summary row uses the single-test macro_pair_recall.
     "em_blocking": "macro_pair_recall",
     "em_matching": "macro_f1_variant_model_on_regen_test",
     "fusion": "overall_accuracy",
@@ -126,7 +128,7 @@ _STAGE_AGG_KEY: dict[str, str] = {
 # headline member metric is ``f1`` / ``pair_recall`` — these are the
 # legacy keys that the per-pair dict still emits via the committee's
 # fallback chain (which picks variant_model_on_regen_test when the
-# variant model is distinct from baseline; see plan_revision.md R7b).
+# variant model is distinct from baseline).
 _STAGE_MEMBER_KEY: dict[str, str] = {
     "sm": "f1",
     "norm": "macro_f1",
@@ -135,7 +137,7 @@ _STAGE_MEMBER_KEY: dict[str, str] = {
     "fusion": "macro_accuracy",
 }
 
-# R7b dual-model dual-test cross-product (2026-05-27). Per-stage, each
+# Dual-model dual-test cross-product. Per-stage, each
 # member is evaluated on {baseline-trained, variant-trained} model x
 # {baseline-test, variant-regenerated-test} = 4 surfaces. The runner
 # writes all four into ``aggregated`` + ``per_member`` of the stage
@@ -144,12 +146,10 @@ _STAGE_MEMBER_KEY: dict[str, str] = {
 # committee_summary row shows.
 #
 # Stages with dual-test surfaces:
-#   - em_matching: all four populated by the runner (R7b live).
-#   - em_blocking: dual-test keys emitted but populated as 0.0; the
-#     runner-side wiring for blocking dual-test is an R7c follow-up
-#     (see plan_revision.md R7c). The sheets are still emitted so they
-#     are forward-compatible — values fill in automatically once the
-#     runner produces them.
+#   - em_matching: all four populated by the runner.
+#   - em_blocking: all four populated by the runner; only sc_block is
+#     retrained per variant, so for the other blockers the variant-model
+#     and baseline-model values are identical.
 #
 # Other stages (SM, Norm, Fusion) have a single evaluation surface
 # per level and do not appear here.
@@ -212,7 +212,7 @@ def _build_surface_spec(
         Per-member metric prefix (``f1`` / ``pair_recall``).
     runner_note : str, optional
         Extra paragraph appended to each surface description (used to
-        flag em_blocking's current 0.0-placeholder state).
+        add the em_blocking runner note).
     """
     surfaces: list[dict[str, str]] = []
     for train_label, test_label, key_suffix in _DUAL_TEST_SUFFIXES:
@@ -248,13 +248,10 @@ _EM_MATCHING_SURFACES: tuple[dict[str, str], ...] = _build_surface_spec(
 
 
 _EM_BLOCKING_RUNNER_NOTE = (
-    "Runner state (2026-05-28): the em_blocking dual-test wiring "
-    "is not yet implemented (R7c follow-up). The runner emits the "
-    "four dual-test keys as 0.0 placeholders. The committee row in "
-    "the committee_summary sheet uses the single-test "
-    "macro_pair_recall — that is the only meaningful blocking "
-    "metric today. These sheets become populated automatically "
-    "once R7c lands."
+    "Only sc_block is retrained per variant; for the other "
+    "blockers the train=BL and train=Var values are identical. "
+    "The committee row in the committee_summary sheet uses "
+    "macro_pair_recall."
 )
 
 
@@ -395,9 +392,16 @@ def _em_split_counts(path: Path) -> tuple[int, int, int] | None:
 
 
 def _xml_entity_count(path: Path) -> int | None:
-    """Count top-level entity elements in a fusion XML file."""
+    """Count the entities of a fusion gold file: top-level XML elements, or
+    records of JSON gold (papers: ``fusion_*.jsonl`` at base, JSON lines
+    under the ``*_set.xml`` names in the variants)."""
     if not path.exists():
         return None
+    if sniff_fusion_format(path) in ("jsonl", "json"):
+        try:
+            return len(read_json_records(path))
+        except ValueError:
+            return None
     try:
         tree = ET.parse(path)
     except ET.ParseError:
@@ -413,12 +417,12 @@ def _resolve_variant_root(domain: str, level: str) -> Path:
     Mirrors ``variant_loader._variant_root``: the per-domain ``data_root``
     override applies **only to baseline** (e.g. products' baseline lives
     under ``usecases_synthetic/usecases/products/``). Variants always
-    live under the canonical top-level ``usecases/<domain>-augmented/<level>/``
+    live under the canonical top-level ``use cases/<domain>/<level>/``
     for cross-domain consistency.
     """
     if level == "baseline":
-        return _data_root_for_domain(domain) / domain
-    return USECASES_DIR / f"{domain}-augmented" / level
+        return task_dir(domain, root=_data_root_for_domain(domain))
+    return variant_dir(domain, level, root=USECASES_DIR)
 
 
 def _collect_sizes(domain: str) -> dict[str, dict[str, int | None]]:
@@ -1076,8 +1080,8 @@ def _collect_record_transformations(domain: str) -> list[dict[str, Any]]:
 def _stage_agg_value(stage_block: Mapping[str, Any], stage: str) -> float | None:
     """Return the stage's committee aggregated headline metric.
 
-    R7b: for EM stages, prefer the new variant-model-on-regen-test key
-    but fall back to the pre-R7b alias when reading legacy outputs.
+    For EM stages, prefer the new variant-model-on-regen-test key
+    but fall back to the single-model alias when reading legacy outputs.
     """
     key = _STAGE_AGG_KEY.get(stage)
     if key is None:
@@ -1535,13 +1539,13 @@ def _write_selection_map_sheet(
     wb: Workbook,
     per_level_metrics: Mapping[str, Mapping[str, Any]],
 ) -> None:
-    """Emit a per-level selection map for C12 optimized members.
+    """Emit a per-level selection map for the optimized members.
 
     Reads ``notes.selection_map`` on each per-member block — populated by
     ``C12FusionCommitteeRunner`` (for ``pydi_per_attribute_optimal``) and
     ``C12NormCommitteeRunner`` (for ``rule_per_attribute_optimal``) — and
     writes one row per (stage, member, attribute) showing the picked
-    method per level. Empty when no C12 optimized members are present.
+    method per level. Empty when no optimized members are present.
     """
     ws = wb.create_sheet("selection_map")
     headers = ["stage", "member", "attribute"] + list(LEVELS)
@@ -1677,7 +1681,7 @@ def _write_evaluation_legend_sheet(wb: Workbook) -> None:
     """Emit the front-matter legend explaining stage evaluation surfaces.
 
     Written first (sheet index 0) so a reader sees it before any metric
-    sheet. Documents the R7b dual-model dual-test infrastructure and
+    sheet. Documents the dual-model dual-test infrastructure and
     points each surface at its dedicated sheet.
     """
     ws = wb.create_sheet("evaluation_legend", 0)
@@ -1688,8 +1692,8 @@ def _write_evaluation_legend_sheet(wb: Workbook) -> None:
         (
             "Why multiple surfaces exist",
             (
-                "Under the R7b dual-model dual-test infrastructure "
-                "(plan_revision.md R7b, 2026-05-27) every EM stage "
+                "Under the dual-model dual-test infrastructure "
+                "every EM stage "
                 "is evaluated on the cross-product of "
                 "{baseline-trained model, variant-trained model} x "
                 "{baseline test gold, variant-regenerated test gold} = "
@@ -1733,9 +1737,8 @@ def _write_evaluation_legend_sheet(wb: Workbook) -> None:
                 "committee_summary - EM blocking row",
                 (
                     "The em_blocking row in committee_summary uses the "
-                    "single-test macro_pair_recall (the only meaningful "
-                    "blocking metric today; see runner note in the "
-                    "EM block sheets)."
+                    "single-test macro_pair_recall (see the runner note "
+                    "in the EM block sheets)."
                 ),
             ),
             ("", ""),
@@ -1749,14 +1752,14 @@ def _write_evaluation_legend_sheet(wb: Workbook) -> None:
             ),
             ("", ""),
             (
-                "Per-member runner state (R7c)",
+                "Per-member runner state",
                 (
                     "Not every EM matching member actually retrains "
                     "under each variant. When the runner reuses the "
                     "same predictions for both models, the "
                     "'train=BL' and 'train=Var' sheets will show "
                     "identical values for that member. Divergence "
-                    "between sheets surfaces only when R7c retrain "
+                    "between sheets surfaces only when variant retrain "
                     "wiring is active for the member."
                 ),
             ),
@@ -1764,12 +1767,9 @@ def _write_evaluation_legend_sheet(wb: Workbook) -> None:
             (
                 "EM blocking dual-test runner state",
                 (
-                    "Runner-side dual-test for blockers is not yet "
-                    "wired (R7c follow-up). The four em_blocking "
-                    "surface sheets are emitted forward-compatibly but "
-                    "currently show 0.0 for every cell. They will "
-                    "populate automatically once the runner produces "
-                    "the dual-test values."
+                    "Only sc_block is retrained per variant; for the "
+                    "other blockers the four em_blocking surface sheets "
+                    "show identical train=BL and train=Var values."
                 ),
             ),
         ]

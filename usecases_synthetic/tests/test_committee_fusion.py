@@ -534,7 +534,7 @@ class TestFusionCommitteeRunner:
             assert "attribute_class" in member_result.notes
 
     def test_robust_aggregators_wired_via_yaml(self, tmp_path: Path) -> None:
-        """C3.4.1 integration: trimmed_mean / huber_m_estimator /
+        """Integration: trimmed_mean / huber_m_estimator /
         median_of_means dispatched from a roster YAML referencing
         ``usecases_synthetic.lib.robust_aggregators`` run end-to-end and
         outperform the non-robust baseline on a deliberately-outlier

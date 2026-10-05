@@ -1,13 +1,13 @@
 {
   "case": "games",
-  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/games.json",
+  "manifest": "DI-Bench/manifests/games.json",
   "pipeline_output_dir": "DI-Bench/runs/games",
-  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/games",
+  "timing_dir": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/games",
   "command": [
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "python3",
     "scripts/run_pipeline.py",
     "--manifest",
-    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/games.json",
+    "DI-Bench/manifests/games.json",
     "--training-set-construction",
     "active",
     "--fusion-case",

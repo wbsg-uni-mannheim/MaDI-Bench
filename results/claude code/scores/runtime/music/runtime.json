@@ -1,0 +1,69 @@
+{
+  "original_task": "<p4-run:music_base>",
+  "stages": [
+    {
+      "command": [
+        "bash",
+        "work/rebuild.sh"
+      ],
+      "seconds": 290.2268318189308,
+      "returncode": 0
+    }
+  ],
+  "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+  "original_sha256": {
+    "<p4-run:music_base>/workspace/task/input/schemamatching/Music_Genres_Taxonomy.csv": "be785bdc1941ab83bae13ecef63637bca3079ad573d9bc52711f758a9a624a26",
+    "<p4-run:music_base>/workspace/task/input/schemamatching/target_schema.json": "ac167d52a0623b2c8b78282f5cf97f7e6c5b6f3f17119c3d7c18a5cf7cbb12ec",
+    "<p4-run:music_base>/workspace/task/input/data/musicbrainz.csv": "746c14c4ef6d0f7a4882272501591ad91c3ac2ff4552dff57656fdb2dc53445a",
+    "<p4-run:music_base>/workspace/task/input/data/discogs_metadata.json": "8bf68d92f86f90fb9c23cfbe0174377dacfe2362063457c7cf5fe411b91a0221",
+    "<p4-run:music_base>/workspace/task/input/data/discogs.csv": "0fab4d11a01d8ef2db38a2b7ae98279f351583bba2459e21e0c62c778f3e3a9e",
+    "<p4-run:music_base>/workspace/task/input/data/lastfm_metadata.json": "6e055ed1a5e680547022bd51f3d35527e449a26de1a90898a40bab6b9becde98",
+    "<p4-run:music_base>/workspace/task/input/data/musicbrainz_metadata.json": "c95d00e8e38c7d216b9725f11d8e4459366ad31e7431444d0f5eada150034b03",
+    "<p4-run:music_base>/workspace/task/input/data/lastfm.csv": "5c12950dc9ecda3c097f98de64302f32f2f9ae0c25f72ac483ee2446a007984c",
+    "<p4-run:music_base>/workspace/work/s3_blocking.py": "29e868ecfe8c3421e8333dcace8f1c2778dcd032e507c00f01b57a3a74e2aac8",
+    "<p4-run:music_base>/workspace/work/s1_schema.py": "14c842483e07965cc8b0f837fecd6d04f90dddcd6eca69b4b803117196bc1ede",
+    "<p4-run:music_base>/workspace/work/s2_normalize.py": "804acbae4ef3b92c026d6c092a9bdc4bdb9366939263ce19d3b947dc0378ff85",
+    "<p4-run:music_base>/workspace/work/s7_fusion.py": "54bcc9de8b1a18d94d3bd45cb373b117a9e65d808ee0c9b634f1cbef7257f9aa",
+    "<p4-run:music_base>/workspace/work/s6_cluster.py": "e45db92856b1a48feef091c4b1fc822b48f05fae1628d2bc93b765f0e66d6542",
+    "<p4-run:music_base>/workspace/work/rebuild.sh": "72abe218ab1ad7d3d5334a13b401a53cb4832a3a550a1bf7495fa836d39118bf",
+    "<p4-run:music_base>/workspace/work/s8_diagnostics.py": "3377e9a4526a9edf11ea3a89e2e21fc0e0abe7a29a48b1b0added97b35d64414",
+    "<p4-run:music_base>/workspace/work/s5_match.py": "d58bfccb59f988b2be5133c8009dc8e485ee0da8489e162d2a3a069a3262eb19",
+    "<p4-run:music_base>/workspace/work/s4_features.py": "7faf73bc23da5930496b9b20869b3d598e80a5d20bebad00493b053bcc24d893",
+    "<p4-run:music_base>/submission/sm_mapping.csv": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+    "<p4-run:music_base>/submission/blocking/candidates.csv": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+    "<p4-run:music_base>/submission/correspondences.csv": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+    "<p4-run:music_base>/submission/membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+    "<p4-run:music_base>/submission/fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e"
+  },
+  "fresh_state_verified": true,
+  "wall_seconds": 290.2268538228236,
+  "artifact_checks": {
+    "sm_mapping.csv": {
+      "original_sha256": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+      "replay_sha256": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+      "bytes_identical": true
+    },
+    "blocking/candidates.csv": {
+      "original_sha256": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+      "replay_sha256": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+      "bytes_identical": true
+    },
+    "correspondences.csv": {
+      "original_sha256": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+      "replay_sha256": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+      "bytes_identical": true
+    },
+    "membership.csv": {
+      "original_sha256": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+      "replay_sha256": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+      "bytes_identical": true
+    },
+    "fused.csv": {
+      "original_sha256": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+      "replay_sha256": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+      "bytes_identical": true
+    }
+  },
+  "originals_unchanged": true,
+  "status": "executed"
+}

@@ -1,0 +1,240 @@
+{
+  "domain": "games",
+  "task_root": "PyDI/usecases/games/base",
+  "inputs": {
+    "PyDI/usecases/games/base/input/schemamatching/target_schema.json": "db3357047845d8920e7f4195d903fc8811a2fc01ae8b118633a6ebac3569ec70",
+    "PyDI/usecases/games/base/input/fusion/GOLD_VERSION": "81db67b6a5702b9b68f0016f061c409bf3fb16d062fc854d1b424bb4e9c28c56",
+    "PyDI/usecases/games/base/input/fusion/README.md": "39844b07093623505b1ffaed72adca8b8cc7f5084c2512533030f7f613f1d714",
+    "PyDI/usecases/games/base/input/fusion/README_v2.md": "afab91a8297fabc8644556a1182da5c4ecbf3acda015b7d1c9adafa2bd356c9f",
+    "PyDI/usecases/games/base/input/fusion/removal_manifest_test.csv": "ea00dcd9e8ff40d07a749b0e435d253af9a2fe8b9539c4ba8df376c43081a4da",
+    "PyDI/usecases/games/base/input/fusion/removal_manifest_validation.csv": "5bdc7575ffc5445168b02fa01aa83c39cde4c060f77fb9daedbe3fb983d4a345",
+    "PyDI/usecases/games/base/input/fusion/test_set.xml": "99206041ed6c97c923b165cc109e03ca94a7c5254489038a0166c3ca281296bb",
+    "PyDI/usecases/games/base/input/fusion/test_set_better_readability.csv": "183e35facf9b675be05a7112ed5a4e08ba4f20630cf5eba52648581d721bfd2e",
+    "PyDI/usecases/games/base/input/fusion/validation_set.xml": "00ea7561ada8c4ba281cf4b22afd20c33da4ff90e6e5d5acfd5c2524c04fd8f2",
+    "PyDI/usecases/games/base/input/fusion/validation_set_better_readability.csv": "b5f133d9fc07e57ea6122e7bfb54c0955f9dc2e8bf6e93b08fa27e4a88798408",
+    "PyDI/usecases/games/base/input/data/dbpedia.csv": "e7c7e4677e8dc95b245c83ab320428b5ec3fca65217143a7c90e7871221ea4c0",
+    "PyDI/usecases/games/base/input/data/dbpedia_metadata.json": "8b2c41fb1ac65d0c4c30148a0b7064040c9e59ea192ab604bb2205f124d2de91",
+    "PyDI/usecases/games/base/input/data/metacritic.csv": "08e1dfa5d8c00a9196a0c4de285eac44977acb37f95fdbdd4c56ebd8064a572e",
+    "PyDI/usecases/games/base/input/data/metacritic_metadata.json": "e118e92ca3d09293a12c92a1904d4fc2035c202bbdce151940d0ce3a95bd735f",
+    "PyDI/usecases/games/base/input/data/sales.csv": "184d4c4fc93c0775b5f283c6cda7118f4fe5bf22fa4ca579ada06701dc3cc5fd",
+    "PyDI/usecases/games/base/input/data/sales_metadata.json": "dd166af088f64da45d7b138c4640ce494d388e21492fe85b375d7181401a4b40",
+    "MaDI-Bench/results/best of breeds/games/baseline/fused.csv": "2426e7482d2c82a83bd61f0cf93c0e011b2fb03431be6f485b754a1ba79c170a",
+    "MaDI-Bench/results/best of breeds/games/baseline/correspondences.csv": "cbcd3cbf13237ada5a83fbc944114146a0707f9387a07eb7fe76a9ea0bab4f83",
+    "<p4-run:games_base>/submission/fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+    "<p4-run:games_base>/submission/membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+    "<p4-run:games_base>/submission/correspondences.csv": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+    "<p1-run>/games/base/output/data_fusion/fused.csv": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847"
+  },
+  "errors": {},
+  "log": [
+    "[    7.8s] games inputs loaded",
+    "[   76.8s] games P2 RF/GT done",
+    "[   92.6s] games P2 fusion done 0.6569987389659521",
+    "[  146.5s] games P4 RF/GT done",
+    "[  156.8s] games P4 fusion done 0.7780580075662042",
+    "[  158.1s] games P1 silver built",
+    "[  250.1s] games P2 silver done {'entity_recovery': 0.4991394148020654, 'value_drift': 0.20133594348997028, 'value_density_delta': -0.2325744926713586, 'schema_validity_delta': 0.0005858030603077546, 'bcubed_precision': 0.9976653818432517, 'bcubed_recall': 0.6312102114053405, 'bcubed_f1': 0.7732162961925612, 'fusion_accuracy_micro': 0.7861044352195762, 'fusion_accuracy_macro': 0.7976401273023566, 'fully_correct_rate': 0.28585771658060816}",
+    "[  327.8s] games P4 silver done {'entity_recovery': 0.779833620195066, 'value_drift': 0.2188772693337504, 'value_density_delta': -0.22230983727714765, 'schema_validity_delta': 0.0006139330489853823, 'bcubed_precision': 0.9999373256870671, 'bcubed_recall': 0.8121538255305415, 'bcubed_f1': 0.8963157552001174, 'fusion_accuracy_micro': 0.9026837083970578, 'fusion_accuracy_macro': 0.8964011987467535, 'fully_correct_rate': 0.46471600688468157}"
+  ],
+  "gold_version_marker": "v2",
+  "p4_timeline": {
+    "e2e_panel": {
+      "ts": 1790236040.6083357,
+      "reference_free": {
+        "entity_gain": 0.0888,
+        "density_gain": -0.2435,
+        "output_density": 0.6655,
+        "fusion_ratio": 0.3112,
+        "schema_validity": 1.0
+      },
+      "ground_truth": {
+        "entity_recovery": 1.0,
+        "value_drift": 0.4054,
+        "value_density_delta": -0.1826,
+        "schema_validity_delta": 0.1261,
+        "bcubed_precision": 1.0,
+        "bcubed_recall": null,
+        "bcubed_f1": null,
+        "fusion_accuracy": 0.6059,
+        "fully_correct_rate": 0.02,
+        "mean_jaccard": null,
+        "same_source_collision_rate": 0.1207
+      },
+      "artifact_sha256": {
+        "fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+        "membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b"
+      }
+    },
+    "fusion": {
+      "ts": 1790235964.3437364,
+      "basis": "strict",
+      "gold_variant": "v2",
+      "rules_variant": "strict",
+      "overall_accuracy_all_gold": 0.7780580075662042,
+      "gold_coverage": 1.0,
+      "artifact_sha256": {
+        "fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+        "membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b"
+      }
+    }
+  },
+  "p4_submission_matches_timeline": {
+    "fused.csv": true,
+    "membership.csv": true
+  },
+  "p4_run_inputs_vs_current_sources": {
+    "dbpedia.csv": {
+      "rows_run": 46580,
+      "rows_now": 46580,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    },
+    "metacritic.csv": {
+      "rows_run": 20494,
+      "rows_now": 20494,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    },
+    "sales.csv": {
+      "rows_run": 7877,
+      "rows_now": 7877,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    }
+  },
+  "P2_rf": {
+    "entity_gain": 0.3978,
+    "density_gain": -0.2537,
+    "output_density": 0.6552,
+    "fusion_ratio": 0.1054,
+    "schema_validity": 1.0
+  },
+  "P2_gt": {
+    "entity_recovery": 1.0,
+    "value_drift": 0.4045,
+    "value_density_delta": -0.1947,
+    "schema_validity_delta": 0.1261,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": null,
+    "bcubed_f1": null,
+    "fusion_accuracy": 0.5592,
+    "fully_correct_rate": 0.02,
+    "mean_jaccard": null,
+    "same_source_collision_rate": 0.0
+  },
+  "P2_rf_gt_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against gold (gold.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "ground_truth bcubed_recall, bcubed_f1, mean_jaccard set to None: all 100 gold clusters hold a single record, so BCubed recall is 1.0 by construction and F1 and mean Jaccard restate precision; bcubed_precision counts merged gold entities, entity_recovery merged and missing ones"
+  ],
+  "P2_fusion_agenticdi": {
+    "basis": "strict",
+    "gold_variant": "v2",
+    "overall_accuracy_all_gold": 0.6569987389659521,
+    "overall_accuracy_evaluated": 0.6569987389659521,
+    "gold_coverage": 1.0,
+    "total_correct": null,
+    "gold_cells_total": 793
+  },
+  "P2_fusion_public": {
+    "overall_accuracy_all_gold": 0.6569987389659521,
+    "gold_coverage": 1.0,
+    "total_correct": 521,
+    "gold_cells_total": 793,
+    "rules": "strict",
+    "gold_version": "v2"
+  },
+  "P4_rf": {
+    "entity_gain": 0.0888,
+    "density_gain": -0.2435,
+    "output_density": 0.6655,
+    "fusion_ratio": 0.3112,
+    "schema_validity": 1.0
+  },
+  "P4_gt": {
+    "entity_recovery": 1.0,
+    "value_drift": 0.4054,
+    "value_density_delta": -0.1826,
+    "schema_validity_delta": 0.1261,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": null,
+    "bcubed_f1": null,
+    "fusion_accuracy": 0.6059,
+    "fully_correct_rate": 0.02,
+    "mean_jaccard": null,
+    "same_source_collision_rate": 0.1207
+  },
+  "P4_rf_gt_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against gold (gold.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "ground_truth bcubed_recall, bcubed_f1, mean_jaccard set to None: all 100 gold clusters hold a single record, so BCubed recall is 1.0 by construction and F1 and mean Jaccard restate precision; bcubed_precision counts merged gold entities, entity_recovery merged and missing ones"
+  ],
+  "P4_fusion_agenticdi": {
+    "basis": "strict",
+    "gold_variant": "v2",
+    "overall_accuracy_all_gold": 0.7780580075662042,
+    "overall_accuracy_evaluated": 0.7780580075662042,
+    "gold_coverage": 1.0,
+    "total_correct": null,
+    "gold_cells_total": 793
+  },
+  "P4_fusion_public": {
+    "overall_accuracy_all_gold": 0.7780580075662042,
+    "gold_coverage": 1.0,
+    "total_correct": 617,
+    "gold_cells_total": 793,
+    "rules": "strict",
+    "gold_version": "v2"
+  },
+  "alignment": {
+    "original_sha256": "c41b4d8636b50dcb327aae4f39872dcc25238aa00bacb286ba660ed3e660d68d",
+    "optimized_sha256": "25e558eef6f1fb955b2bc441cd3b37184c547903cc5d35a4c53cb6bd1f5ea864",
+    "matches_p4_completion_proof": true,
+    "p4_completion_proof_passed": true
+  },
+  "p1_reference": {
+    "path": "<p1-run>/games/base/output/data_fusion/fused.csv",
+    "sha256": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847",
+    "installed_copy": "PyDI/usecases/games/base/output/data_fusion/fused.csv",
+    "installed_copy_identical": true,
+    "clusters": 6972,
+    "membership": {
+      "rows": 21274,
+      "source_repairs": 0,
+      "unknown_record_ids": 0
+    }
+  },
+  "P2_silver": {
+    "entity_recovery": 0.4991394148020654,
+    "value_drift": 0.20133594348997028,
+    "value_density_delta": -0.2325744926713586,
+    "schema_validity_delta": 0.0005858030603077546,
+    "bcubed_precision": 0.9976653818432517,
+    "bcubed_recall": 0.6312102114053405,
+    "bcubed_f1": 0.7732162961925612,
+    "fusion_accuracy_micro": 0.7861044352195762,
+    "fusion_accuracy_macro": 0.7976401273023566,
+    "fully_correct_rate": 0.28585771658060816
+  },
+  "P2_silver_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "Source coverage dropped by more than 15pp for 3 source(s); worst: metacritic delta=-0.649. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source."
+  ],
+  "P4_silver": {
+    "entity_recovery": 0.779833620195066,
+    "value_drift": 0.2188772693337504,
+    "value_density_delta": -0.22230983727714765,
+    "schema_validity_delta": 0.0006139330489853823,
+    "bcubed_precision": 0.9999373256870671,
+    "bcubed_recall": 0.8121538255305415,
+    "bcubed_f1": 0.8963157552001174,
+    "fusion_accuracy_micro": 0.9026837083970578,
+    "fusion_accuracy_macro": 0.8964011987467535,
+    "fully_correct_rate": 0.46471600688468157
+  },
+  "P4_silver_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "correctness.cluster.SR.bcubed.f1 = 0.896 looks healthy but coverage.source_based.SR.same_source_collision_rate.pipe is 0.121. The pipeline is lumping multiple records from the same source into one cluster \u2014 likely EM false positives that BCubed averages over. Read coverage.source_based.SR.same_source_collision_rate.by_source for the offending sources.",
+    "Source coverage dropped by more than 15pp for 3 source(s); worst: metacritic delta=-0.560. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source."
+  ],
+  "inputs_changed_during_run": [],
+  "seconds": 328.1
+}

@@ -1,5 +1,5 @@
 stage,winner,metric_key,val_score,test_score,runtime_s
-sm,coma_hybrid,f1,1.0,1.0,65.21356508997269
+sm,coma_hybrid,f1,1.0,1.0,201.40535763371736
 norm,rule_per_attribute_optimal,macro_f1,0.8952411182474922,0.8952411182474922,1.0035059319925494
 em_blocking,bm25_blocker,pair_completeness (>=0.97 floor; reduction_ratio tiebreak),0.9993438320209973,0.9993438320209973,1871.3478772160015
 em_matching,ditto_plm,f1,0.9486346163446657,0.9486346163446657,1871.34870504

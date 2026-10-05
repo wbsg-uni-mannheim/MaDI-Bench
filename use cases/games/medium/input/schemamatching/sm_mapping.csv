@@ -25,4 +25,3 @@ sales,genre,games,genres,1.0
 sales,press_score,games,criticScore,1.0
 sales,comm_rating,games,userScore,1.0
 sales,age_class,games,ESRB,1.0
-sales,units_sold_mm,games,globalSales,1.0

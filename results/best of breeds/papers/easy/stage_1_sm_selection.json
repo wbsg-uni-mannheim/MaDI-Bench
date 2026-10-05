@@ -2,30 +2,31 @@
   "stage": "sm",
   "winner": "coma_hybrid",
   "metric_key": "f1",
-  "val_score": 0.9285714285714286,
-  "test_score": 0.9285714285714286,
+  "val_score": 1.0,
+  "test_score": 1.0,
   "per_member_val": {
-    "duplicate_majority": 0.8607594936708861,
-    "label_jw": 0.8125,
-    "instance_tf_cosine": 0.39370078740157477,
-    "embedding_sbert": 0.6078431372549019,
-    "llm_openai": 0.9285714285714286,
-    "magneto_slm_llm": 0.7800000000000001,
-    "coma_hybrid": 0.9285714285714286
+    "duplicate_majority": 0.9253731343283582,
+    "label_jw": 0.923076923076923,
+    "instance_tf_cosine": 0.4310344827586207,
+    "embedding_sbert": 0.674698795180723,
+    "llm_openai": 1.0,
+    "magneto_slm_llm": 0.8181818181818181,
+    "coma_hybrid": 1.0
   },
   "per_member_test": {
-    "duplicate_majority": 0.8607594936708861,
-    "label_jw": 0.8125,
-    "instance_tf_cosine": 0.39370078740157477,
-    "embedding_sbert": 0.6078431372549019,
-    "llm_openai": 0.9285714285714286,
-    "magneto_slm_llm": 0.7800000000000001,
-    "coma_hybrid": 0.9285714285714286
+    "duplicate_majority": 0.9253731343283582,
+    "label_jw": 0.923076923076923,
+    "instance_tf_cosine": 0.4310344827586207,
+    "embedding_sbert": 0.674698795180723,
+    "llm_openai": 1.0,
+    "magneto_slm_llm": 0.8181818181818181,
+    "coma_hybrid": 1.0
   },
-  "runtime_s": 97.81339063995983,
+  "runtime_s": 375.97402763180435,
   "notes": {
     "test_eq_val": true,
-    "test_eq_val_reason": "no held-out SM test split for baseline"
+    "test_eq_val_reason": "no held-out SM test split for baseline",
+    "sm_input": "shipped_raw_20260926"
   },
-  "peak_memory_mb": 2300.80859375
+  "peak_memory_mb": 2093.4609375
 }

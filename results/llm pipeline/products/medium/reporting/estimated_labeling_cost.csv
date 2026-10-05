@@ -1,5 +1,5 @@
 dataset_pair,num_candidates,sampled_pairs,input_tokens,output_tokens,estimated_cost_usd,estimate_mode
-Products_1-Products_2,16200,10000,6225594,243000,14.2968,sampled
-Products_1-Products_3,15600,10000,5800726,234000,13.4273,sampled
-Products_1-Products_4,14060,10000,5160009,210900,11.9826,sampled
-TOTAL,45860,30000,17186329,687900,39.7067,sampled
+Products_1-Products_2,16220,10000,5311434,243300,12.7012,sampled
+Products_1-Products_3,15600,10000,5004244,234000,12.0334,sampled
+Products_1-Products_4,13960,10000,4472122,209400,10.7578,sampled
+TOTAL,45780,30000,14787800,686700,35.4924,sampled

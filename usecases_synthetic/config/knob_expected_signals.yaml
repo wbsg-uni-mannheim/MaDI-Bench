@@ -3,7 +3,7 @@
 #
 # Authored by hand from the "Committee expectations" section of each
 # knob card under `knobs/`. Consumed by
-# `usecases_synthetic/lib/monotonicity.py` (M8) to check whether the
+# `usecases_synthetic/lib/monotonicity.py` to check whether the
 # easy -> medium -> hard levels move in the direction the knob cards
 # predict.
 #
@@ -45,9 +45,9 @@
 # entries separately in the report.
 #
 # EM aggregated metric: `aggregated.macro_f1_variant_model_on_regen_test`
-# (R7b, 2026-05-27 — extends C10 with explicit dual-model evaluation).
+# (extends the closed-set test surfaces below with explicit dual-model evaluation).
 #
-# C10 (2026-05-22) established two closed-set test surfaces per pair:
+# Two closed-set test surfaces per pair:
 #   - `f1_baseline_test` (Set 1) — `em_test_baseline_pruned.csv`,
 #     i.e. the original baseline test pruned of dropped ids. Corner-
 #     biased subsample at higher levels; NOT a stable cross-level
@@ -57,9 +57,9 @@
 #     the original cardinality + positive ratio (commensurable across
 #     levels).
 #
-# R7b (2026-05-27) adds the model axis: each committee member is
-# evaluated TWICE per pair — once as the baseline-trained checkpoint
-# (today's static model), once as the variant-trained checkpoint
+# The model axis: each committee member is
+# evaluated TWICE per pair — once as the baseline-trained checkpoint,
+# once as the variant-trained checkpoint
 # (retrained per variant on the K2-regenerated train splits). All 4
 # cells are reported per (pair, member, level):
 #   - f1_baseline_model_on_baseline_test  (baseline model × Set 1)
@@ -74,19 +74,16 @@
 # purpose-trained model degrades from easy → hard," not "a clean-
 # trained model fails to transfer to noisy variants" — the latter
 # would conflate distribution shift with intrinsic difficulty. Both
-# claims are valid; the dual-cell report exposes both. R7b picks the
-# variant-trained surface as the slope verdict because it answers the
-# stronger, more defensible claim form. Pre-R7b the headline surface
-# was `f1_regen_test` (= `f1_baseline_model_on_regen_test` under the
-# new naming); switching to the variant-model surface is the R7b
-# change captured here.
+# claims are valid; the dual-cell report exposes both. The
+# variant-trained surface is the slope verdict because it answers the
+# stronger, more defensible claim form.
 #
 # Baseline has no K2 regen → the value is NaN at baseline, which is
-# fine under C2 (baseline is reference-only, not part of the slope
-# verdict). The open-set `f1_vs_test_gold` surface is retired (C10):
-# on large domains every prediction outside the small human-gold
-# positive list counted as FP, so the number was uninterpretable as
-# matching quality. The other 3 R7b cells are written to
+# fine because the baseline is reference-only, not part of the slope
+# verdict. There is no open-set `f1_vs_test_gold` surface: on large
+# domains every prediction outside the small human-gold positive list
+# would count as FP, so the number would be uninterpretable as
+# matching quality. The other 3 cells are written to
 # `monotonicity_report.csv` as reference columns but do not drive
 # PASS/FAIL verdicts.
 

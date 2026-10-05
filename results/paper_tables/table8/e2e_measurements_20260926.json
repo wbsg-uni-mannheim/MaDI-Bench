@@ -1,0 +1,421 @@
+{
+ "description": "End-to-end panel values per base task, measured 2026-09-26 (P2 = results/best of breeds/<d>/baseline; P4 = the Claude Code runs). *_rf = reference-free, *_gt = ground truth (v2 fusion test gold), *_silver = silver reference = the P1 output of 2026-09-24 (sha256 below); the Products silver values are in products_silver_20260930.json (silver reference: the P1 products output of 2026-09-30).",
+ "tasks": {
+  "games": {
+   "P2_rf": {
+    "entity_gain": 0.3978,
+    "density_gain": -0.2537,
+    "output_density": 0.6552,
+    "fusion_ratio": 0.1054,
+    "schema_validity": 1.0
+   },
+   "P2_gt": {
+    "entity_recovery": 1.0,
+    "value_drift": 0.4045,
+    "value_density_delta": -0.1947,
+    "schema_validity_delta": 0.1261,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": null,
+    "bcubed_f1": null,
+    "fusion_accuracy": 0.5592,
+    "fully_correct_rate": 0.02,
+    "mean_jaccard": null,
+    "same_source_collision_rate": 0.0
+   },
+   "P2_silver": {
+    "entity_recovery": 0.4991394148020654,
+    "value_drift": 0.20133594348997028,
+    "value_density_delta": -0.2325744926713586,
+    "schema_validity_delta": 0.0005858030603077546,
+    "bcubed_precision": 0.9976653818432517,
+    "bcubed_recall": 0.6312102114053405,
+    "bcubed_f1": 0.7732162961925612,
+    "fusion_accuracy_micro": 0.7861044352195762,
+    "fusion_accuracy_macro": 0.7976401273023566,
+    "fully_correct_rate": 0.28585771658060816
+   },
+   "P4_rf": {
+    "entity_gain": 0.0888,
+    "density_gain": -0.2435,
+    "output_density": 0.6655,
+    "fusion_ratio": 0.3112,
+    "schema_validity": 1.0
+   },
+   "P4_gt": {
+    "entity_recovery": 1.0,
+    "value_drift": 0.4054,
+    "value_density_delta": -0.1826,
+    "schema_validity_delta": 0.1261,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": null,
+    "bcubed_f1": null,
+    "fusion_accuracy": 0.6059,
+    "fully_correct_rate": 0.02,
+    "mean_jaccard": null,
+    "same_source_collision_rate": 0.1207
+   },
+   "P4_silver": {
+    "entity_recovery": 0.779833620195066,
+    "value_drift": 0.2188772693337504,
+    "value_density_delta": -0.22230983727714765,
+    "schema_validity_delta": 0.0006139330489853823,
+    "bcubed_precision": 0.9999373256870671,
+    "bcubed_recall": 0.8121538255305415,
+    "bcubed_f1": 0.8963157552001174,
+    "fusion_accuracy_micro": 0.9026837083970578,
+    "fusion_accuracy_macro": 0.8964011987467535,
+    "fully_correct_rate": 0.46471600688468157
+   },
+   "P2_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.6569987389659521,
+    "gold_coverage": 1.0,
+    "total_correct": 521,
+    "gold_cells_total": 793,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "P4_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.7780580075662042,
+    "gold_coverage": 1.0,
+    "total_correct": 617,
+    "gold_cells_total": 793,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "silver_reference": {
+    "p1_fused_sha256": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847",
+    "clusters": 6972,
+    "membership_rows": 21274
+   },
+   "gold_version": "v2",
+   "measured_seconds": 328.1
+  },
+  "companies": {
+   "P2_rf": {
+    "entity_gain": 0.1918,
+    "density_gain": -0.0542,
+    "output_density": 0.5676,
+    "fusion_ratio": 0.1252,
+    "schema_validity": 0.9429
+   },
+   "P2_gt": {
+    "entity_recovery": 0.91,
+    "value_drift": 0.6268,
+    "value_density_delta": -0.1836,
+    "schema_validity_delta": -0.0271,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9473,
+    "bcubed_f1": 0.9729,
+    "fusion_accuracy": 0.4968,
+    "fully_correct_rate": 0.0,
+    "mean_jaccard": 0.96,
+    "same_source_collision_rate": 0.0
+   },
+   "P2_silver": {
+    "entity_recovery": 0.36823935558112775,
+    "value_drift": 0.34507180080712446,
+    "value_density_delta": -0.29695964823053944,
+    "schema_validity_delta": 0.0753779035480745,
+    "bcubed_precision": 0.9454145036967123,
+    "bcubed_recall": 0.6556551832625452,
+    "bcubed_f1": 0.7743147281210252,
+    "fusion_accuracy_micro": 0.5508674414687552,
+    "fusion_accuracy_macro": 0.5548507004459329,
+    "fully_correct_rate": 0.11392405063291139
+   },
+   "P4_rf": {
+    "entity_gain": 0.2367,
+    "density_gain": -0.016,
+    "output_density": 0.6058,
+    "fusion_ratio": 0.1089,
+    "schema_validity": 1.0
+   },
+   "P4_gt": {
+    "entity_recovery": 0.81,
+    "value_drift": 0.4491,
+    "value_density_delta": -0.1454,
+    "schema_validity_delta": 0.03,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.8961,
+    "bcubed_f1": 0.9452,
+    "fusion_accuracy": 0.6208,
+    "fully_correct_rate": 0.08,
+    "mean_jaccard": 0.915,
+    "same_source_collision_rate": 0.0018
+   },
+   "P4_silver": {
+    "entity_recovery": 0.31242807825086305,
+    "value_drift": 0.41109904133769704,
+    "value_density_delta": -0.2587442937773247,
+    "schema_validity_delta": 0.1324349055818983,
+    "bcubed_precision": 0.9877693880761366,
+    "bcubed_recall": 0.6185307535000786,
+    "bcubed_f1": 0.760711809801027,
+    "fusion_accuracy_micro": 0.48349334680815226,
+    "fusion_accuracy_macro": 0.4873390581003653,
+    "fully_correct_rate": 0.03049482163406214
+   },
+   "P2_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.6639344262295082,
+    "gold_coverage": 1.0,
+    "total_correct": 405,
+    "gold_cells_total": 610,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "P4_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.819672131147541,
+    "gold_coverage": 1.0,
+    "total_correct": 500,
+    "gold_cells_total": 610,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "silver_reference": {
+    "p1_fused_sha256": "91b98f56384c608af714f34b73d04af9ab1c2f6309c644f66d2790e65a64b5b4",
+    "clusters": 1738,
+    "membership_rows": 4238
+   },
+   "gold_version": "v2",
+   "measured_seconds": 88.0
+  },
+  "music": {
+   "P2_rf": {
+    "entity_gain": 0.3796,
+    "density_gain": -0.1772,
+    "output_density": 0.8071,
+    "fusion_ratio": 0.1441,
+    "schema_validity": 0.836
+   },
+   "P2_gt": {
+    "entity_recovery": 0.87,
+    "value_drift": 0.6118,
+    "value_density_delta": -0.1004,
+    "schema_validity_delta": -0.164,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9337,
+    "bcubed_f1": 0.9657,
+    "fusion_accuracy": 0.7499,
+    "fully_correct_rate": 0.15,
+    "mean_jaccard": 0.9383,
+    "same_source_collision_rate": 0.0
+   },
+   "P2_silver": {
+    "entity_recovery": 0.7555187637969095,
+    "value_drift": 0.38897959469126314,
+    "value_density_delta": -0.10606262796294343,
+    "schema_validity_delta": -0.10305702133338746,
+    "bcubed_precision": 0.999077038447117,
+    "bcubed_recall": 0.6943441739853944,
+    "bcubed_f1": 0.8192921122227692,
+    "fusion_accuracy_micro": 0.7064461073913614,
+    "fusion_accuracy_macro": 0.7203103520085966,
+    "fully_correct_rate": 0.1272075055187638
+   },
+   "P4_rf": {
+    "entity_gain": 0.3072,
+    "density_gain": -0.1748,
+    "output_density": 0.8096,
+    "fusion_ratio": 0.2025,
+    "schema_validity": 1.0
+   },
+   "P4_gt": {
+    "entity_recovery": 0.96,
+    "value_drift": 0.5106,
+    "value_density_delta": -0.0979,
+    "schema_validity_delta": 0.0,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9806,
+    "bcubed_f1": 0.9902,
+    "fusion_accuracy": 0.8229,
+    "fully_correct_rate": 0.3,
+    "mean_jaccard": 0.98,
+    "same_source_collision_rate": 0.0
+   },
+   "P4_silver": {
+    "entity_recovery": 0.7836644591611479,
+    "value_drift": 0.4662174135310527,
+    "value_density_delta": -0.10360741791039428,
+    "schema_validity_delta": 0.06098208864602306,
+    "bcubed_precision": 0.9997115745147243,
+    "bcubed_recall": 0.7088180817125109,
+    "bcubed_f1": 0.829501130320532,
+    "fusion_accuracy_micro": 0.6220296704739399,
+    "fusion_accuracy_macro": 0.6218514028750235,
+    "fully_correct_rate": 0.05022075055187638
+   },
+   "P2_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.8140495867768595,
+    "gold_coverage": 1.0,
+    "total_correct": 591,
+    "gold_cells_total": 726,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "P4_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.8663911845730028,
+    "gold_coverage": 1.0,
+    "total_correct": 629,
+    "gold_cells_total": 726,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "silver_reference": {
+    "p1_fused_sha256": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475",
+    "clusters": 3624,
+    "membership_rows": 11557
+   },
+   "gold_version": "v2",
+   "measured_seconds": 257.2
+  },
+  "products": {
+   "P2_rf": {
+    "entity_gain": 0.17,
+    "density_gain": 0.0612,
+    "output_density": 0.5723,
+    "fusion_ratio": 0.8442,
+    "schema_validity": 0.9983
+   },
+   "P2_gt": {
+    "entity_recovery": 0.59,
+    "value_drift": 0.275,
+    "value_density_delta": 0.0438,
+    "schema_validity_delta": -0.0017,
+    "bcubed_precision": 0.9777,
+    "bcubed_recall": 0.8097,
+    "bcubed_f1": 0.8858,
+    "fusion_accuracy": 0.6475,
+    "fully_correct_rate": 0.08,
+    "mean_jaccard": 0.8368,
+    "same_source_collision_rate": 0.0
+   },
+   "P4_rf": {
+    "entity_gain": 0.085,
+    "density_gain": 0.0586,
+    "output_density": 0.5698,
+    "fusion_ratio": 0.9432,
+    "schema_validity": 0.9996
+   },
+   "P4_gt": {
+    "entity_recovery": 0.76,
+    "value_drift": 0.2451,
+    "value_density_delta": 0.0492,
+    "schema_validity_delta": -0.0004,
+    "bcubed_precision": 0.9927,
+    "bcubed_recall": 0.8969,
+    "bcubed_f1": 0.9424,
+    "fusion_accuracy": 0.7088,
+    "fully_correct_rate": 0.18,
+    "mean_jaccard": 0.9183,
+    "same_source_collision_rate": 0.0
+   },
+   "P2_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.7930622009569378,
+    "gold_coverage": 1.0,
+    "total_correct": 663,
+    "gold_cells_total": 836,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "P4_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.8277511961722488,
+    "gold_coverage": 1.0,
+    "total_correct": 692,
+    "gold_cells_total": 836,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "gold_version": "v2",
+   "measured_seconds": 156.9
+  },
+  "papers": {
+   "P2_rf": {
+    "entity_gain": 0.2398,
+    "density_gain": -0.0263,
+    "output_density": 0.8759,
+    "fusion_ratio": 0.7439,
+    "schema_validity": 0.979
+   },
+   "P2_gt": {
+    "entity_recovery": 1.0,
+    "value_drift": 0.3813,
+    "value_density_delta": -0.0311,
+    "schema_validity_delta": -0.021,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 1.0,
+    "bcubed_f1": 1.0,
+    "fusion_accuracy": 0.9072,
+    "fully_correct_rate": 0.45,
+    "mean_jaccard": 1.0,
+    "same_source_collision_rate": 0.0
+   },
+   "P2_silver": {
+    "entity_recovery": 0.9308162797666262,
+    "value_drift": 0.00538447460097607,
+    "value_density_delta": -0.014582713781935031,
+    "schema_validity_delta": -0.002043571066634442,
+    "bcubed_precision": 0.992182947455194,
+    "bcubed_recall": 0.9699784574214283,
+    "bcubed_f1": 0.9809550656338072,
+    "fusion_accuracy_micro": 0.9109755825621585,
+    "fusion_accuracy_macro": 0.9136302164646152,
+    "fully_correct_rate": 0.5458903988860099
+   },
+   "P4_rf": {
+    "entity_gain": 0.2532,
+    "density_gain": -0.0307,
+    "output_density": 0.8804,
+    "fusion_ratio": 0.7301,
+    "schema_validity": 0.9812
+   },
+   "P4_gt": {
+    "entity_recovery": 0.99,
+    "value_drift": 0.3682,
+    "value_density_delta": 0.0422,
+    "schema_validity_delta": -0.0188,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9956,
+    "bcubed_f1": 0.9978,
+    "fusion_accuracy": 0.7869,
+    "fully_correct_rate": 0.14,
+    "mean_jaccard": 0.9967,
+    "same_source_collision_rate": 0.0
+   },
+   "P4_silver": {
+    "entity_recovery": 0.9240301059348175,
+    "value_drift": 0.005820645559869015,
+    "value_density_delta": -0.019995646934017453,
+    "schema_validity_delta": 0.00016290375756233821,
+    "bcubed_precision": 0.9940285840170716,
+    "bcubed_recall": 0.966882092452382,
+    "bcubed_f1": 0.9802674326832108,
+    "fusion_accuracy_micro": 0.8457529251776089,
+    "fusion_accuracy_macro": 0.8548148325700978,
+    "fully_correct_rate": 0.13027691114518886
+   },
+   "P2_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.9023861171366594,
+    "gold_coverage": 1.0,
+    "total_correct": 832,
+    "gold_cells_total": 922,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "P4_gt_fusion_accuracy_strict_v2": {
+    "overall_accuracy_all_gold": 0.8557483731019523,
+    "gold_coverage": 1.0,
+    "total_correct": 789,
+    "gold_cells_total": 922,
+    "rules": "strict",
+    "gold_version": "v2"
+   },
+   "silver_reference": {
+    "p1_fused_sha256": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9",
+    "clusters": 56733,
+    "membership_rows": 164171
+   },
+   "gold_version": "v2",
+   "measured_seconds": 920.4
+  }
+ }
+}

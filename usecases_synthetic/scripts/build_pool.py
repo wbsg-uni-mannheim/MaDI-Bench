@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the per-domain likely-positive pool for plan_s1_scale.md R3.
+"""Build the per-domain likely-positive pool.
 
 The pool is a "probably-positive, do not perturb" protection set used
 during knob-driven augmentation. It combines two evidence streams:
@@ -7,7 +7,7 @@ during knob-driven augmentation. It combines two evidence streams:
 1. **Human EM gold** (``usecases/<d>/input/entitymatching/*.csv``) and
    the human-baseline pipeline correspondences
    (``usecases/<d>/output/debug_results_entity_matching/matching_detailed_results.csv``).
-2. **Ditto PLM predictions** at ``theta=0.5`` from the R2 checkpoint at
+2. **Ditto PLM predictions** at ``theta=0.5`` from the Ditto checkpoint at
    ``cache/ditto_checkpoints/<d>/best``, computed over a candidate set
    produced by the per-source-pair blocker sweep
    (``recall_floor=0.97``, tie-breaker = reduction ratio, mirroring
@@ -22,7 +22,7 @@ Bucket policy:
   drops; in the margin band an LLM (``gpt-5.4``, temperature=0)
   adjudicates.
 
-``delta`` is estimated per-domain from the R2 evaluation predictions
+``delta`` is estimated per-domain from the checkpoint's evaluation predictions
 (``predictions.csv`` next to ``metrics.json`` in the chosen run): the
 90th percentile of ``|prob - theta|`` on Ditto misclassifications,
 clipped to ``[0.05, 0.20]``.
@@ -77,6 +77,7 @@ except ImportError:
     pass
 
 from usecases_synthetic.lib.ditto_matcher import DittoMatcher  # noqa: E402
+from usecases_synthetic.lib.domain_config import task_dir  # noqa: E402
 from usecases_synthetic.lib.llm_cache import LLMCache  # noqa: E402
 from usecases_synthetic.lib.loaders import load_domain_sources  # noqa: E402
 from usecases_synthetic.lib.pool_builder import (  # noqa: E402
@@ -161,7 +162,7 @@ MUSIC_PREFIXES = [
 
 
 def _r2_run_dir(domain: str) -> Path:
-    """Resolve the R2 checkpoint's run directory.
+    """Resolve the Ditto checkpoint's run directory.
 
     ``best/`` is a symlink to ``run_<ts>/checkpoints/best/``; the
     sibling ``metrics.json`` and ``predictions.csv`` live two levels up
@@ -228,8 +229,8 @@ COMPANIES_SPEC = DomainSpec(
     ],
     ditto_fields=["name", "country", "city", "industry", "sector", "founded"],
     ditto_checkpoint=REPO_ROOT / "cache" / "ditto_checkpoints" / "companies" / "best",
-    em_gold_dir=REPO_ROOT / "usecases" / "companies" / "input" / "entitymatching",
-    correspondence_dir=REPO_ROOT / "usecases" / "companies" / "output",
+    em_gold_dir=task_dir("companies") / "input" / "entitymatching",
+    correspondence_dir=task_dir("companies") / "output",
 )
 
 
@@ -279,10 +280,10 @@ GAMES_SPEC = DomainSpec(
     # Games gold files come in mixed orientation (e.g.
     # metacritic_2_dbpedia_train.csv plus dbpedia_2_metacritic_test.csv);
     # all are deduplicated post-canonical_pair. Only the files that
-    # actually ship are listed (corrected 2026-06-02): the
+    # actually ship are listed: the
     # metacritic<->dbpedia pair has train/val (metacritic-first) + test
     # (dbpedia-first) — metacritic_2_dbpedia_test.csv was never shipped.
-    # The metacritic<->sales pair was dropped (plan_s1_final §F11; no gold
+    # The metacritic<->sales pair was dropped (no gold
     # on disk) — its positives come transitively via dbpedia, matching
     # source_pairs in config/domains/games.yaml.
     pairs=[
@@ -317,8 +318,8 @@ GAMES_SPEC = DomainSpec(
         "ESRB",
     ],
     ditto_checkpoint=REPO_ROOT / "cache" / "ditto_checkpoints" / "games" / "best",
-    em_gold_dir=REPO_ROOT / "usecases" / "games" / "input" / "entitymatching",
-    correspondence_dir=REPO_ROOT / "usecases" / "games" / "output",
+    em_gold_dir=task_dir("games") / "input" / "entitymatching",
+    correspondence_dir=task_dir("games") / "output",
 )
 
 
@@ -351,8 +352,7 @@ MUSIC_SPEC = DomainSpec(
         ),
     ],
     # ``label`` stays out of Ditto fields (collides with binary
-    # classification target — see plans/plan_s1_scale.md per-domain
-    # music caveats).
+    # classification target).
     ditto_fields=[
         "name",
         "artist",
@@ -360,7 +360,7 @@ MUSIC_SPEC = DomainSpec(
         "release-country",
         "duration",
         "genre",
-        # 2026-05-31: added to match the committee Ditto's effective scope
+        # Added to match the committee Ditto's effective scope
         # (committee_ditto_fields("music") == these 7; the 8th committee
         # field `label` is a reserved Ditto WDC key, dropped at
         # serialization, and is discogs-only/asymmetric anyway). `tracks`
@@ -369,8 +369,8 @@ MUSIC_SPEC = DomainSpec(
         "tracks",
     ],
     ditto_checkpoint=REPO_ROOT / "cache" / "ditto_checkpoints" / "music" / "best",
-    em_gold_dir=REPO_ROOT / "usecases" / "music" / "input" / "entitymatching",
-    correspondence_dir=REPO_ROOT / "usecases" / "music" / "output",
+    em_gold_dir=task_dir("music") / "input" / "entitymatching",
+    correspondence_dir=task_dir("music") / "output",
 )
 
 
@@ -782,7 +782,7 @@ def build_domain(
     predictions_csv = run_dir / "predictions.csv"
     if not predictions_csv.exists():
         raise FileNotFoundError(
-            f"R2 predictions.csv not found next to checkpoint: {predictions_csv}"
+            f"Ditto predictions.csv not found next to checkpoint: {predictions_csv}"
         )
     delta, delta_telemetry = estimate_delta_from_predictions(predictions_csv)
     logger.info(

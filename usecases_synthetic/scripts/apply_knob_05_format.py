@@ -57,6 +57,7 @@ from usecases_synthetic.lib.domain_config import (
 )
 from usecases_synthetic.lib.format_operators import (
     _parse_date_flexible,
+    _parse_input_number,
     _parse_number,
     format_duration,
     parse_duration,
@@ -85,6 +86,12 @@ VALID_TRANSFORM_FNS = frozenset(
 )
 
 # Skipped-cell reason codes.
+# SKIP_ROUNDTRIP: the operator ran but its output failed the round trip
+# (or, for dates / durations, the input could not be parsed).
+# SKIP_UNPARSEABLE: a number / money / file_size / rate input failed the
+# value-preservation guard ``format_operators._parse_input_number`` (no
+# reading, or a heuristic reading that is none of its strict readings);
+# the cell is left unchanged.
 SKIP_ROUNDTRIP = "roundtrip_parse_fail"
 SKIP_COLLISION_PRIOR = "cell_collision_with_prior_knob"
 SKIP_COLLISION_K4_FAB = "cell_collision_with_k4_fabricated"
@@ -334,8 +341,7 @@ def apply_knob_05(
 
             # Draw unit/currency assignments for unit-bearing classes. The
             # ``money`` branch covers currency rotation + magnitude scale
-            # (existing). ``file_size`` (added 2026-05-22, plan_revision
-            # §K5 follow-up) covers byte-quantity unit rotation
+            # (existing). ``file_size`` covers byte-quantity unit rotation
             # (GB↔MB↔TB↔GiB) for attributes like ``vram_gb`` /
             # ``storage_gb``. Each unit-bearing class has its own pool
             # keyed by family in ``unit_pool_per_level`` — no shared pool,
@@ -361,8 +367,7 @@ def apply_knob_05(
                     rng, units_pool, consistency, len(df)
                 )
             elif family == "rate":
-                # Rate (bandwidth) class — added 2026-05-27 (step 4h cross-knob
-                # expansion for products read_speed_mb_s / write_speed_mb_s).
+                # Rate (bandwidth) class (products read_speed_mb_s / write_speed_mb_s).
                 # Conversion uses the ``rate`` group in unit_factors.yaml
                 # (bytes_per_second / KB/s / MB/s / GB/s / TB/s).
                 rt_cfg = unit_pools.get("rate", {})
@@ -621,7 +626,7 @@ def _resolve_column_context(
     * **List form (legacy)**: ``columns: [price]`` — every column in the
       list inherits the source-level ``implicit_currency`` /
       ``implicit_magnitude`` / ``implicit_unit`` keys.
-    * **Map form (added 2026-05-22, plan_revision §K5 follow-up)**:
+    * **Map form**:
       ``columns: {price: {implicit_currency: GBP, implicit_magnitude: raw},
       vram_gb: {implicit_unit: GB}}`` — per-column overrides take
       precedence over source-level defaults. Mixing classes on the same
@@ -673,6 +678,22 @@ def _transform_number(
     """Apply number/money reformatting to a single cell."""
     # Determine target locale (format pool for money = locale IDs).
     locale_id = target_fmt
+
+    # Input guard (value preservation): a cell the heuristic cannot read, or
+    # reads as a value that is none of its strict locale readings (decimal
+    # comma "€385,00" read as 38500), is left unchanged and logged once as
+    # unparseable -- before the magnitude / currency / locale steps, so no
+    # provenance row is written for it.
+    if _parse_input_number(cell_str) is None:
+        skipped.append(
+            entity_id=entity_id,
+            source=source_name,
+            attribute=col,
+            original_value=cell_str,
+            attempted_format=f"locale:{locale_id}",
+            reason=SKIP_UNPARSEABLE,
+        )
+        return None
 
     # Determine magnitude conversion if applicable.
     is_managed, col_ctx = _resolve_column_context(source_mag_ctx, col)
@@ -844,7 +865,7 @@ def _transform_file_size(
     MB / GB / TB + binary KiB / MiB / GiB) or the ``rate`` group
     (bytes_per_second / KB/s / MB/s / GB/s / TB/s) in
     ``unit_factors.yaml`` per the ``unit_family`` argument. The ``rate``
-    group was added 2026-05-27 (step 4h cross-knob expansion) for
+    group covers
     products ``read_speed_mb_s`` / ``write_speed_mb_s``. When the
     implicit and target units match, only the suffix attach is applied.
     """
@@ -860,6 +881,26 @@ def _transform_file_size(
             to_unit = unit_assignment[idx]
         else:
             to_unit = unit_assignment
+
+    # Input guard (value preservation), as in _transform_number: only when a
+    # numeric step will read the cell (``bare`` without a unit change leaves
+    # it untouched).
+    if (to_unit != from_unit or target_fmt != "bare") and _parse_input_number(
+        cell_str
+    ) is None:
+        skipped.append(
+            entity_id=entity_id,
+            source=source_name,
+            attribute=col,
+            original_value=cell_str,
+            attempted_format=(
+                f"{unit_family}:{from_unit}->{to_unit}"
+                if to_unit != from_unit
+                else f"locale:{target_fmt}"
+            ),
+            reason=SKIP_UNPARSEABLE,
+        )
+        return None
 
     # Step 1: unit conversion if needed.
     working_value = cell_str

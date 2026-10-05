@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""M9 — per-knob ablation generator + validator.
+"""Per-knob ablation generator + validator.
 
 For each requested active knob, generate a single-knob ablation
 variant (target knob at ``hard``, all other knobs at ``easy``) and run
@@ -19,8 +19,8 @@ Usage
     python usecases_synthetic/scripts/run_ablation_validation.py \\
         --domain companies --knobs 8 --skip-existing
 
-The default set covers the eight active S1 knobs (K1, K2, K3, K4, K5,
-K6, K8, K10). K7 is deferred; K9 is S2-only.
+The default set covers the eight S1 knobs the generator implements
+(K1, K2, K3, K4, K5, K6, K8, K10).
 
 Outputs per knob
 ----------------
@@ -51,7 +51,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from usecases_synthetic.lib.committee import Stage
-from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR
+from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR, variant_dir
 from usecases_synthetic.scripts.generate_variant import (
     ACTIVE_KNOB_IDS,
     ablation_label,
@@ -68,7 +68,7 @@ ABLATION_VALIDATION_ROOT: Path = SYNTHETIC_DIR / "validation"
 
 def ablation_variant_dir(domain: str, knob_id: str) -> Path:
     """Return the packaged-variant directory for an ablation knob."""
-    return USECASES_DIR / f"{domain}-augmented" / ablation_label(knob_id)
+    return variant_dir(domain, ablation_label(knob_id), root=USECASES_DIR)
 
 
 def ablation_metrics_dir(domain: str, knob_id: str) -> Path:
@@ -292,7 +292,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         description=(
             "Generate per-knob ablation variants and run committee "
-            "validation against each. See plans/validation/module_09_ablation.md."
+            "validation against each."
         ),
     )
     parser.add_argument("--domain", required=True, help="Domain name.")

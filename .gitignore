@@ -221,6 +221,33 @@ __marimo__/
 .DS_Store
 **/.DS_Store
 
-# Generated benchmark outputs
-use cases/**/output/
+# Re-allow project source dirs named "lib" that the Python-template "lib/" rule
+# (line 17) would otherwise swallow.
+!pipelines/lib/
+!pipelines/lib/**
+!usecases_synthetic/lib/
+!usecases_synthetic/lib/**
+# ...but the broad lib/** re-allow above also un-ignores Python bytecode caches
+# under lib/; keep those ignored.
+usecases_synthetic/lib/**/__pycache__/
+pipelines/lib/**/__pycache__/
+
+# Generated benchmark outputs. The rule ignores the *contents* of output/ (not the
+# directory itself) so that the packaged variant provenance and baseline tables
+# can be re-allowed below (git cannot re-include a path under an ignored directory).
+use cases/**/output/*
+!use cases/*/*/output/provenance/
+!use cases/*/*/output/baselines/
 use cases/**/fusion_evaluation_debug*.jsonl
+
+# Local run artifacts: SLURM logs, debug files a
+# run writes into the working directory, the generator's caches and intermediate
+# outputs (model checkpoints, embeddings, LLM caches: several GB), and the
+# best-of-breed pipeline's checkpoints and run folders (the published copies of the
+# runs live under results/).
+/logs/
+/output/
+usecases_synthetic/cache/
+usecases_synthetic/output/
+pipelines/*/checkpoints/
+pipelines/*/run_*/

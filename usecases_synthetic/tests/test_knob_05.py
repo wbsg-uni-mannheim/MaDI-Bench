@@ -25,6 +25,7 @@ import pytest
 from usecases_synthetic.lib.format_operators import (
     _parse_date_flexible,
     _parse_number,
+    _parse_number_in_locale,
     format_duration,
     parse_duration,
     reconvert_currency,
@@ -147,22 +148,33 @@ def small_sources() -> dict[str, pd.DataFrame]:
     return {"dbpedia": dbpedia, "forbes": forbes, "fullcontact": fullcontact}
 
 
+# Loaded (post-id-rename) duration column per music source; the music K5
+# config is keyed on these native names (raw WDC headers since the
+# header rewrite).
+MUSIC_DURATION_COLUMN: dict[str, str] = {
+    "musicbrainz": "Attribute_6",
+    "discogs": "duration",
+    "lastfm": "album_length",
+}
+
+
 @pytest.fixture
 def music_sources() -> dict[str, pd.DataFrame]:
-    """Small DataFrames matching the refreshed music schema (duration in int seconds)."""
+    """Small DataFrames matching the loaded music base schema (raw WDC
+    headers, id column renamed to ``id``; duration in int seconds)."""
     musicbrainz = pd.DataFrame(
         {
             "id": ["mb_1", "mb_2", "mb_3", "mb_4", "mb_5"],
-            "name": ["Track A", "Track B", "Track C", "Track D", "Track E"],
-            "artist": ["X", "Y", "Z", "X", "Y"],
-            "release-date": [
+            "Attribute_2": ["Track A", "Track B", "Track C", "Track D", "Track E"],
+            "Attribute_3": ["X", "Y", "Z", "X", "Y"],
+            "Attribute_4": [
                 "1996-01-01",
                 "1998-12-14",
                 "2000-09-05",
                 "1999-04-27",
                 "2000-07-24",
             ],
-            "duration": [1055, 724, 2384, 1626, 4145],
+            "Attribute_6": [1055, 724, 2384, 1626, 4145],
         }
     )
     musicbrainz.attrs["dataset_name"] = "musicbrainz"
@@ -170,9 +182,9 @@ def music_sources() -> dict[str, pd.DataFrame]:
     discogs = pd.DataFrame(
         {
             "id": ["dc_1", "dc_2", "dc_3", "dc_4", "dc_5"],
-            "name": ["Track A", "Track B", "Track C", "Track D", "Track E"],
-            "artist": ["X", "Y", "Z", "X", "Y"],
-            "release-date": [
+            "title_str": ["Track A", "Track B", "Track C", "Track D", "Track E"],
+            "performer": ["X", "Y", "Z", "X", "Y"],
+            "pub_dt": [
                 "1996-01-01",
                 "1998-01-01",
                 "2000-09-05",
@@ -187,10 +199,9 @@ def music_sources() -> dict[str, pd.DataFrame]:
     lastfm = pd.DataFrame(
         {
             "id": ["lf_1", "lf_2", "lf_3", "lf_4", "lf_5"],
-            "name": ["Track A", "Track B", "Track C", "Track D", "Track E"],
-            "artist": ["X", "Y", "Z", "X", "Y"],
-            "release-date": [None, None, None, None, None],
-            "duration": [903.0, 734.0, 1626.0, 1265.0, 1378.0],
+            "album_title": ["Track A", "Track B", "Track C", "Track D", "Track E"],
+            "band": ["X", "Y", "Z", "X", "Y"],
+            "album_length": [903.0, 734.0, 1626.0, 1265.0, 1378.0],
         }
     )
     lastfm.attrs["dataset_name"] = "lastfm"
@@ -637,15 +648,21 @@ class TestRoundtripVerification:
         small_sources: dict[str, pd.DataFrame],
         companies_config: dict[str, Any],
     ) -> None:
-        """All reformatted numbers parse back to the same value (within tolerance)."""
+        """All reformatted numbers parse back to the same value (within tolerance).
+
+        The new value is parsed in the locale it was written in (the
+        provenance's ``to_locale``): the locale-agnostic ``_parse_number``
+        misreads de_DE / fr_FR strings such as "60.054,15" or "500,0".
+        """
         for level in ("easy", "medium", "hard"):
             reformatted, prov_df, _ = apply_knob_05(
                 "companies", level, small_sources, companies_config
             )
             num_prov = prov_df[prov_df["transform_fn"] == "reformat_number"]
             for _, row in num_prov.iterrows():
+                to_locale = json.loads(row["transform_params"])["to_locale"]
                 orig = _parse_number(row["original_value"])
-                new = _parse_number(row["new_value"])
+                new = _parse_number_in_locale(row["new_value"], to_locale)
                 assert (
                     orig is not None
                 ), f"Cannot parse original: {row['original_value']}"
@@ -866,6 +883,19 @@ class TestMusicDurationIntegration:
     def music_config(self) -> dict[str, Any]:
         return load_knob_05_config("music")
 
+    def test_config_duration_columns_are_loaded_names(
+        self, music_config: dict[str, Any]
+    ) -> None:
+        """The music K5 config routes the duration family through each
+        source's loaded (native) duration column."""
+        duration_cols = {
+            src: col
+            for src, cols in music_config["attribute_classes"].items()
+            for col, family in cols.items()
+            if family == "duration"
+        }
+        assert duration_cols == MUSIC_DURATION_COLUMN
+
     def test_easy_emits_duration_provenance(
         self,
         music_sources: dict[str, pd.DataFrame],
@@ -913,7 +943,7 @@ class TestMusicDurationIntegration:
         seen_diverse_source = False
         for src_name, df in reformatted.items():
             forms: set[str] = set()
-            for v in df["duration"].dropna().tolist():
+            for v in df[MUSIC_DURATION_COLUMN[src_name]].dropna().tolist():
                 s = str(v)
                 if ":" in s and s.count(":") == 2:
                     forms.add("hh_mm_ss")
@@ -929,7 +959,7 @@ class TestMusicDurationIntegration:
         assert seen_diverse_source, "No source had >= 2 duration forms at hard"
 
 
-# ---- file_size class tests (plan_revision §K5, 2026-05-22) ---------------
+# ---- file_size class tests -----------------------------------------------
 
 
 class TestResolveColumnContext:
@@ -1023,7 +1053,59 @@ class TestFileSizeIntegration:
 
     @pytest.fixture
     def products_config(self) -> dict[str, Any]:
-        return load_knob_05_config("products")
+        """A money + file_size layout on one source. The products domain
+        config used this shape earlier (the
+        as-extracted sources mix units within a column and carry a per-row
+        currency, so the domain is ``number``-only now); the file_size family
+        is exercised on this inline config."""
+        return {
+            "domain": "products",
+            "attribute_classes": {
+                "products_1": {"price": "money", "vram_gb": "file_size", "storage_gb": "file_size"},
+            },
+            "id_columns": {"products_1": "id"},
+            "format_pools_per_level": {
+                "easy": {"money": ["en_US", "plain"], "file_size": ["en_US", "plain"]},
+                "medium": {
+                    "money": ["en_US", "de_DE", "plain"],
+                    "file_size": ["en_US", "de_DE", "plain"],
+                },
+                "hard": {
+                    "money": ["en_US", "de_DE", "fr_FR", "plain"],
+                    "file_size": ["en_US", "de_DE", "plain", "bare"],
+                },
+            },
+            "locale_pool_per_level": {
+                "easy": ["en_US"],
+                "medium": ["en_US", "de_DE"],
+                "hard": ["en_US", "de_DE", "fr_FR"],
+            },
+            "within_source_consistency": {"easy": "source", "medium": "source", "hard": "row"},
+            "unit_pool_per_level": {
+                "easy": {
+                    "money": {"currencies": ["GBP"], "magnitude": ["raw"]},
+                    "file_size": {"units": ["GB"]},
+                },
+                "medium": {
+                    "money": {"currencies": ["GBP", "USD", "EUR"], "magnitude": ["raw"]},
+                    "file_size": {"units": ["GB", "GiB"]},
+                },
+                "hard": {
+                    "money": {"currencies": ["GBP", "USD", "EUR"], "magnitude": ["raw", "thousands"]},
+                    "file_size": {"units": ["GB", "GiB", "MB"]},
+                },
+            },
+            "normalize_down_threshold": 0.85,
+            "source_magnitude_context": {
+                "products_1": {
+                    "columns": {
+                        "price": {"implicit_magnitude": "raw", "implicit_currency": "GBP"},
+                        "vram_gb": {"implicit_unit": "GB"},
+                        "storage_gb": {"implicit_unit": "GB"},
+                    }
+                }
+            },
+        }
 
     @pytest.fixture
     def products_sources(self) -> dict[str, pd.DataFrame]:

@@ -8,192 +8,184 @@
   },
   "provided": {
     "best_case_key": "llm_no_val",
-    "validation_accuracy": 0.5384615384615384,
-    "test_accuracy": 0.4587929915639195,
+    "validation_accuracy": 0.41147741147741146,
+    "test_accuracy": 0.5239234449760766,
     "per_attribute_accuracy": {
-      "title_description": {
-        "accuracy": 0.3434343434343434,
-        "total": 99
-      },
-      "price": {
-        "accuracy": 0.21,
-        "total": 100
-      },
-      "brand": {
-        "accuracy": 0.91,
-        "total": 100
-      },
-      "form_factor": {
-        "accuracy": 0.47560975609756095,
-        "total": 82
+      "model_number": {
+        "accuracy": 0.5783132530120482,
+        "total": 83
       },
       "interface_type": {
-        "accuracy": 0.16,
-        "total": 100
+        "accuracy": 0.041666666666666664,
+        "total": 24
       },
-      "priceCurrency": {
-        "accuracy": 0.42,
-        "total": 100
-      },
-      "description": {
-        "accuracy": 0.32,
-        "total": 100
-      },
-      "chipset_name": {
-        "accuracy": 0.44,
-        "total": 25
-      },
-      "memory_type": {
-        "accuracy": 0.6875,
-        "total": 32
-      },
-      "read_speed_mb_s": {
-        "accuracy": 0.14285714285714285,
-        "total": 70
-      },
-      "write_speed_mb_s": {
-        "accuracy": 0.3333333333333333,
-        "total": 63
+      "weight_g": {
+        "accuracy": 0.4166666666666667,
+        "total": 12
       },
       "storage_connection_type": {
-        "accuracy": 0.4861111111111111,
-        "total": 72
+        "accuracy": 0.6,
+        "total": 40
+      },
+      "storage_gb": {
+        "accuracy": 0.08,
+        "total": 75
       },
       "product_type": {
         "accuracy": 0.97,
         "total": 100
       },
-      "storage_gb": {
-        "accuracy": 0.48,
-        "total": 75
-      },
-      "title": {
-        "accuracy": 0.44,
-        "total": 100
+      "write_speed_mb_s": {
+        "accuracy": 0.71875,
+        "total": 32
       },
       "model": {
-        "accuracy": 0.37373737373737376,
-        "total": 99
+        "accuracy": 0.527027027027027,
+        "total": 74
       },
-      "bus_type": {
-        "accuracy": 0.49,
-        "total": 100
+      "height_mm": {
+        "accuracy": 0.0,
+        "total": 21
+      },
+      "brand": {
+        "accuracy": 0.865979381443299,
+        "total": 97
+      },
+      "read_speed_mb_s": {
+        "accuracy": 0.5116279069767442,
+        "total": 43
+      },
+      "form_factor": {
+        "accuracy": 0.175,
+        "total": 40
+      },
+      "length_mm": {
+        "accuracy": 0.4090909090909091,
+        "total": 22
+      },
+      "color": {
+        "accuracy": 0.4230769230769231,
+        "total": 26
       },
       "vram_gb": {
-        "accuracy": 0.88,
+        "accuracy": 0.28,
         "total": 25
       },
-      "model_number": {
-        "accuracy": 0.48484848484848486,
-        "total": 99
+      "bus_type": {
+        "accuracy": 0.40384615384615385,
+        "total": 52
+      },
+      "chipset_name": {
+        "accuracy": 0.36,
+        "total": 25
+      },
+      "width_mm": {
+        "accuracy": 0.35,
+        "total": 20
+      },
+      "memory_type": {
+        "accuracy": 0.72,
+        "total": 25
       }
     },
     "rules": {
       "brand": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "bus_type": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "chipset_name": {
-        "kwargs": {},
-        "resolver": "most_complete"
-      },
-      "cluster_id": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "most_complete",
+        "kwargs": {}
       },
       "color": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "description": {
-        "kwargs": {},
-        "resolver": "longest_string"
+        "resolver": "most_complete",
+        "kwargs": {}
       },
       "form_factor": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "height_mm": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "interface_type": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "length_mm": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "memory_type": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "model": {
-        "kwargs": {},
-        "resolver": "most_complete"
+        "resolver": "most_complete",
+        "kwargs": {}
       },
       "model_number": {
-        "kwargs": {},
-        "resolver": "most_complete"
+        "resolver": "most_complete",
+        "kwargs": {}
       },
       "price": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "priceCurrency": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "product_type": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "read_speed_mb_s": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "storage_connection_type": {
-        "kwargs": {},
-        "resolver": "voting"
+        "resolver": "voting",
+        "kwargs": {}
       },
       "storage_gb": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "title": {
-        "kwargs": {},
-        "resolver": "longest_string"
-      },
-      "title_description": {
-        "kwargs": {},
-        "resolver": "longest_string"
+        "resolver": "longest_string",
+        "kwargs": {}
       },
       "url": {
+        "resolver": "union",
         "kwargs": {
           "separator": "|"
-        },
-        "resolver": "union"
+        }
       },
       "vram_gb": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "weight_g": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "width_mm": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       },
       "write_speed_mb_s": {
-        "kwargs": {},
-        "resolver": "median"
+        "resolver": "median",
+        "kwargs": {}
       }
     }
   }

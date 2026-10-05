@@ -1,0 +1,49 @@
+# End-to-end panel configuration for the papers tasks (score_e2e.py).
+# The keys below are the ones the panel reads, copied unchanged from the
+# configuration the paper's panels were computed with (the best-of-breed
+# pipeline's papers config of 2026-07, with PyDI's names for the column types).
+
+domain: papers
+
+column_types:
+  id: identifier
+  cluster_id: identifier
+  doi: identifier
+  type: categorical
+  title: text
+  authors: list  # array of author names; handled at cluster level (skip distributional)
+  publication_year: datetime  # PyDI's panel type name ("temporal" in pipelines/configs/papers.yaml)
+  journal: text
+  publisher: categorical
+  keywords: text
+  volume: categorical
+  issue: categorical
+  first_page: numerical
+  last_page: numerical
+  referenced_works_count: numerical
+  cited_by_count: numerical
+
+# Papers notebook uses prefer_higher_trust(trust_map) on
+# referenced_works_count, last_page and cited_by_count, voting on most others.
+# numeric_tolerance_match defaults to 0.10 relative tolerance for the
+# two counts.
+panel_tolerance:
+  default: 0.05
+  overrides:
+    referenced_works_count: 0.10
+    cited_by_count: 0.10
+
+composite_weights:
+  entity_coverage: 0.10
+  fact_coverage: 0.10
+  source_based_fact_coverage: 0.10
+  consistency: 0.10
+  cluster_correctness: 0.30
+  fact_correctness: 0.30
+
+# Source ids are the on-disk "<source>-NNNNN" record ids — note the dash
+# separator.
+source_prefix_map:
+  dblp-: dblp
+  crossref-: crossref
+  open_alex-: open_alex

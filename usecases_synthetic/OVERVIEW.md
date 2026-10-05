@@ -1,13 +1,11 @@
 # Synthetic Use Case Pipeline — Overview
 
-A collaborator-facing tour of how `usecases_synthetic/` turns an original
-PyDI use case (companies, games, music, products) into three difficulty-graded
+A tour of how `usecases_synthetic/` turns an original
+use case (companies, games, music, papers, products) into three difficulty-graded
 synthetic variants — `easy`, `medium`, `hard` — and validates each level
 against a frozen committee of matchers / normalizers / fusion strategies.
 
-For implementation status, history of decisions, and outstanding plans see
-[plan_revision.md](../plans/plan_revision.md), [plan_s1_final.md](../plans/archive/plan_s1_final.md),
-and [PIPELINE.md](PIPELINE.md) (runbook). This file is meant to give a new
+For the commands of each phase see [PIPELINE.md](PIPELINE.md) (runbook). This file is meant to give a new
 reader a self-contained mental model of the pipeline.
 
 ---
@@ -18,7 +16,7 @@ reader a self-contained mental model of the pipeline.
  ┌──────────────────┐    ┌─────────────────────┐    ┌──────────────────────────┐
  │ Original use     │    │ Phase 0             │    │ Phase 1                  │
  │ case data        │───▶│ Pool construction   │───▶│ Baseline measurement     │
- │ (4 domains)      │    │ (assemble a set of  │    │ (5 committees on         │
+ │ (5 domains)      │    │ (assemble a set of  │    │ (5 committees on         │
  │                  │    │  known-match pairs) │    │  unperturbed data)       │
  └──────────────────┘    └─────────────────────┘    └────────────┬─────────────┘
                                                                  │
@@ -37,7 +35,7 @@ reader a self-contained mental model of the pipeline.
                           │                               + per-knob realised intensity audits       │
                           └────────────────────────────────────┬─────────────────────────────────────┘
                                                                ▼
-                                                  validation/<domain>/final_report.md
+                                                  validation/<domain>/monotonicity_report.md
 ```
 
 ---
@@ -46,9 +44,9 @@ reader a self-contained mental model of the pipeline.
 
 ### Why we need a pool
 
-Every PyDI use case ships with a hand-authored **entity-matching gold
-standard** — a curated CSV of true cross-source match pairs used to measure
-matcher performance. Those golds are typically *incomplete*: a real-world
+Every use case ships with an **entity-matching gold standard** — labeled
+cross-source record pairs used to measure matcher performance. Those golds
+are typically *incomplete*: a real-world
 EM gold covers only a small fraction of the true match set (often single-
 to low-double-digit recall against the actual match population), because
 exhaustive cross-source labelling at scale is infeasible.
@@ -65,69 +63,54 @@ would partially be noise from accidentally destroyed matches rather than
 the dial setting you set.
 
 The pool fills that gap. It augments the gold's protection coverage with
-**cross-validated evidence from matcher pipelines that have previously run
-against these same domains**, treating "two independent matchers both
-agreed this is a pair" as strong evidence that the pair is real, even when
-the hand-authored gold doesn't mention it.
+**likely matches found over the full source data**, even when the labeled
+gold doesn't mention them.
 
 ### How the pool is built
 
-[scripts/build_pool.py](scripts/build_pool.py) merges the outputs of two
-existing matcher pipelines that we've previously run on each domain:
+For companies, games and music, [scripts/build_pool.py](scripts/build_pool.py)
+combines three evidence streams per source pair:
 
-- a **PLM matcher pipeline** — pre-trained-language-model-based; the
-  strong, learned matcher. Treated as **trusted base**.
-- a **rule-based matcher pipeline** — hand-weighted string-comparator
-  combinations; materially weaker than the PLM matcher. Treated as
-  **corroboration only**.
+- the positives of the **EM gold** splits (train / val / test);
+- the correspondences of the **P1 matcher** — the rule-based matcher of
+  the domain's P1 notebook (the human-designed pipeline);
+- the predictions of a per-domain **Ditto** matcher (score ≥ 0.5) over the
+  candidate pairs of a blocker chosen per source pair from a sweep of five
+  blockers (by pair recall on the gold positives, target 0.97 as in the EM
+  blocking committee, and reduction ratio) and over the P1 and gold pairs.
 
-Combination rules:
+The P1 and Ditto streams are each closed transitively across the source
+pairs; the pairs that the closure adds are scored with Ditto. Combination
+rules:
 
-- A pair the PLM pipeline produced lands in the pool with
-  `pool_agreement = 1`.
-- A pair produced by both pipelines is upgraded to `pool_agreement = 2`.
-- A pair produced **only** by the rule-based pipeline is **dropped** —
-  the rule-based matcher's solo claims aren't trusted given its known
-  weakness.
+- A gold positive lands in the pool (`decision_path = gold`).
+- A pair that both P1 and Ditto declare lands in the pool
+  (`decision_path = agreement`).
+- A pair that only one of the two declares goes to an LLM (`gpt-5.4`,
+  temperature 0); the pairs it confirms land in the pool
+  (`decision_path = plm_check_llm_yes`).
 
-The rule-based pipeline ships a pre-computed clustering, but we ignore
-that and rebuild components from raw edges on both sides: extract the
-pairwise edges from each pipeline, union them, then run
-`networkx.connected_components` on the merged edge set. That gives uniform
-cluster semantics across both sources and lets a single cluster-size
-filter operate on the regenerated components.
-
-An **egregious-cluster filter** then drops the worst transitive-chain
-artefacts (the most common pool pathology — A↔B, B↔C, C↔D edges that are
-each individually plausible but together form a 100-entity blob that
-clearly isn't one entity). Any cluster strictly larger than a per-domain
-cap is removed; the cap is data-driven and equals `max(P99, floor)`,
-where:
-
-- **P99** is the 99th percentile of observed cluster sizes in that
-  domain's pool: sort all clusters by size and P99 is the size where 99%
-  of clusters are at or below it, only the top 1% are bigger. This
-  adapts to each domain's natural cluster distribution — companies has
-  tightly-clustered pairs (P99=7), games has a longer tail (P99=12).
-- **Floor** is the structural lower bound `3 × n_sources` (3 sources for
-  companies/games/music, 4 for products). It exists so that domains
-  with tightly-clustered natural distributions don't get aggressive cuts
-  applied to plausibly-real clusters. The reasoning: with N sources, a
-  legitimate cross-source duplicate cluster could plausibly contain up
-  to ~3 rows per source (one matched row plus slack for in-source
-  duplicates), so any cap below `3N` would risk dropping real entities.
-
-The cap in practice: companies P99=7 < floor=9 → cap=9 (floor wins);
-games P99=12 > floor=9 → cap=12 (P99 wins); music P99=9 = floor=9 →
-cap=9 (tied). On companies this filter dropped a 117-entity "Chinese
-companies" cluster that had grown via transitive-link noise.
+`build_pool.py` applies no cluster-size filter; `pool_stats.json` records
+the connected-component sizes as telemetry.
 
 Products uses a separate pool builder,
 [build_pool_products.py](scripts/build_pool_products.py), that derives
-clusters directly from each record's `cluster_id` field rather than from
-the PLM / rule-based pipelines — products ships its own cluster
-identifiers per row, so the agreement-from-two-matchers construction
-isn't needed.
+clusters directly from each record's WDC `cluster_id` in the generator's
+copy of the sources (`usecases/products/input/data/products_*.json`), so no
+matcher is needed. The task data (`use cases/products/`) omit `cluster_id`,
+since it is the gold grouping. Papers uses
+[build_pool_papers.py](scripts/build_pool_papers.py), which matches
+records across sources on their DOI and adds the EM gold positives.
+
+Both builders apply an **egregious-cluster filter** against
+transitive-chain artefacts (A↔B, B↔C, C↔D edges that are each
+individually plausible but together form a blob that clearly isn't one
+entity): any cluster strictly larger than `max(ceil(P99), 3 × n_sources)`
+is removed, where P99 is the 99th percentile of the domain's cluster sizes
+and `3 × n_sources` is a structural floor (a legitimate cross-source
+cluster could plausibly contain up to ~3 rows per source: one matched row
+plus slack for in-source duplicates). In the products and papers pools
+the filter removed no cluster.
 
 ### What the pool is used for
 
@@ -145,17 +128,18 @@ set, not noise from accidentally destroying known matches**.
 
 Per domain under [pools/](pools/):
 - `pooled_positives.csv` — one row per pair, columns
-  `id1, id2, source_1, source_2, pool_agreement`.
-- `pool_stats.json` — source counts, overlap breakdown, egregious-cluster
-  filter telemetry.
+  `id1, id2, source_1, source_2, score, in_gold, in_human, in_ditto,
+  decision_path` (products: `id1, id2, source_1, source_2, pool_agreement`,
+  where `pool_agreement` counts the sources of the cluster).
+- `pool_stats.json` — build statistics: per-source-pair counts (for
+  companies, games and music also the blocker sweep and the bucket
+  breakdown) and the cluster-size distribution.
 
-Current pool sizes (v2, 2026-04-18):
-
-| Domain    | Pool size | Both-source agreement | Egregious cap applied | Largest dropped component |
-|-----------|----------:|----------------------:|----------------------:|--------------------------:|
-| companies | 2225      | 490 (22%)             | 9 (P99=7, floor=9)    | 13                        |
-| games     | 13795     | 4659 (34%)            | 12 (P99=12, floor=9)  | 31                        |
-| music     | 7355      | 3569 (49%)            | 9 (P99=9, floor=9)    | 55                        |
+| Domain    | Pool size | Gold  | P1 and Ditto agree | Confirmed by the LLM |
+|-----------|----------:|------:|-------------------:|---------------------:|
+| companies | 1910      | 1212  | 531                | 167                  |
+| games     | 19938     | 610   | 9453               | 9875                 |
+| music     | 8717      | 5513  | 2161               | 1043                 |
 
 ---
 
@@ -177,34 +161,31 @@ The committees (rosters from
   `instance_tf_cosine` (instance tf-cosine), `embedding_sbert` (SBERT
   embedding), `llm_openai`, `magneto_slm_llm`, `coma_hybrid` (COMA-style
   hybrid).
-- **Norm** — normalization, per-domain roster of 6 members (see
-  `normalization_committee_<domain>.yaml`): `text_clean`, `date_iso`,
-  `number_locale`, `country_iso`, `taxonomy_lookup`, `llm_canonicalize`.
+- **Norm** — normalization, per-domain roster of 3 members (see
+  `normalization_committee_<domain>.yaml`): `rule_per_attribute_optimal`
+  (one rule per attribute among `text_clean`, `date_iso`, `number_locale`,
+  `country_iso` and `taxonomy_lookup`), `llm_only` and `passthrough`.
 - **EM-block** — entity-matching blocking, 6 members:
   `token_blocker`, `standard_blocker`, `embedding_blocker`,
-  `sorted_neighbourhood_blocker`, `bm25_blocker`, `sc_block` (the
-  Sudowoodo-style contrastive encoder, requires a per-domain trained
-  checkpoint).
+  `sorted_neighbourhood_blocker`, `bm25_blocker`, `sc_block` (SC-Block,
+  a supervised-contrastive encoder with nearest-neighbour retrieval;
+  requires a per-domain trained checkpoint).
 - **EM-match** — entity-matching matching, 4 members + a pool diagnostic:
   `ditto_plm` (DITTO PLM), `magellan` (Magellan-style comparator stack),
-  `llm_matcher` (zero-shot LLM), `comem` (CompactER / contrastive
-  embedding matcher).
-- **Fusion** — per-attribute strategy sets rather than a flat roster.
-  Each attribute is classified by type and routed to an appropriate
-  family of resolvers:
-  - String / primary-label attributes: `voting`, `longest_string`,
-    `most_complete`, `prefer_higher_trust`, plus three truth-discovery
-    methods (`accusim`, `fusionquery`, `casefusion`) and an LLM
-    adjudicator (`llm_judge`).
-  - Numeric attributes (`assets`, `revenue`, `vram_gb`, `storage_gb`):
-    `median`, `maximum`, robust aggregators (`trimmed_mean`,
-    `huber_m_estimator`), `prefer_higher_trust`, plus `fusionquery`.
-  - Date / categorical attributes use the appropriate subset of the
-    above (e.g. `year_only_match` for `founded`).
+  `llm_matcher` (zero-shot LLM), `comem` (ComEM, a two-stage LLM matcher
+  that selects candidates and then confirms each pair).
+- **Fusion** — 9 members, each an end-to-end fusion approach that
+  produces a complete fused table: `pydi_per_attribute_optimal` (per
+  attribute, the validation-best PyDI resolver from a per-type candidate
+  list such as `voting`, `longest_string`, `most_complete`, `median`,
+  `trimmed_mean`, `union`), `llm_only` (an LLM judge, `gpt-5.4-mini`, on
+  every attribute), five truth-discovery members (`fusionquery_only`,
+  `truthfinder_only`, `ltm_only`, `casefusion_only`, `accusim_only`;
+  where a method does not cover an attribute type, the validation-best
+  PyDI resolver fills in), and two single-resolver baselines
+  (`voting_only`, `prefer_higher_trust_only`).
 
-See [config/committees/](config/committees/) and
-[plans/validation/module_01_committee_spec.md](../plans/validation/module_01_committee_spec.md)
-for member parameters and tuning history.
+See [config/committees/](config/committees/) for member parameters.
 
 ---
 
@@ -213,11 +194,9 @@ for member parameters and tuning history.
 [scripts/generate_variant.py](scripts/generate_variant.py) is the master
 orchestrator. For a given `(domain, level)` it imports each `apply_knob_*`
 pure entry point and applies them in canonical S1 order. Two knobs share an
-LLM cache (K1, K2) and the dispatcher operates in `strict_cache` mode at
-`hard` by default for reproducibility from committed caches — automatically
-relaxed when the domain declares a `knob_config_alias` (e.g. `companies-small`
-reuses `companies` configs, so the shared cache may need to populate on first
-use).
+LLM cache (K1, K2); on a cache miss the generator calls the LLM when
+`OPENAI_API_KEY` is set and otherwise falls back to deterministic operators
+(see PIPELINE.md).
 
 ### Knob stack
 
@@ -252,11 +231,11 @@ sources (post-Phase-0 protection set in scope)
       └─────────────────────────────────────────────────────────────────────────────┘
    │
    ▼
-usecases/<domain>-augmented/<level>/
+use cases/<domain>/<level>/
    ├── input/{data, schemamatching, entitymatching, fusion}
-   ├── baselines/knob_NN_realised.csv     (per-knob intensity audit)
-   ├── provenance_all.csv                  (every modified cell, every level)
-   └── config/difficulty.yaml              (resolved per-knob params)
+   ├── output/baselines/knob_NN_realised.csv     (per-knob intensity audit)
+   ├── output/provenance/provenance_all.csv      (every modified cell)
+   └── config/difficulty.yaml                    (resolved per-knob params)
 ```
 
 ### What each knob actually does
@@ -270,9 +249,11 @@ pairs — which acts as a measurable proxy for niche density: dense
 neighborhoods produce more near-twin EM pairs, sparse neighborhoods
 produce fewer. Two shared sub-systems on one multi-metric substrate
 (lexical + embedding + attribute-overlap + label-collision): a
-**consensus-biased RRF scorer** drives removal at easy/medium, a
-**recall-biased per-metric union** mines corner-case pairs for EM test
-regeneration and the hard-negative budget.
+**consensus-biased RRF scorer** ranks entities by niche density (it picks
+the seeds of interpolated near-twins and the low-density entities removed
+to keep source sizes stable), a **recall-biased per-metric union** mines
+the corner-case pairs that decide between dropping and interpolating and
+that feed EM split regeneration and the hard-negative budget.
 
 ##### How "density" is computed
 
@@ -288,7 +269,7 @@ Fusion (RRF) plus a label-collision boost. The metrics live in
      K6-injected typos don't erase near-twins.
    - `tfidf` — sklearn `TfidfVectorizer` document-term matrix → cosine
      similarity.
-   - `embedding` — sentence-transformers `all-MiniLM-L6-v2` embeddings
+   - `embedding` — sentence-transformers `BAAI/bge-base-en-v1.5` embeddings
      (cached on disk per domain) → cosine similarity.
    - `attribute_overlap` — weighted Jaccard over the categorical-
      attribute bag, with per-domain column weights.
@@ -318,8 +299,14 @@ biased miner — `t_match` / `t_nonmatch` thresholds per metric, union
 across metrics), then compares to the level's target with a ±0.02
 tolerance band:
 
-- **`baseline > target + 0.02`** → drop entities ranked by descending
-  density (removing the crowded ones thins their cluster).
+- **`baseline > target + 0.02`** → drop the entities that touch the most
+  corner-case pairs (protected entities are skipped) and refill each drop
+  with an LLM-synthesised non-corner entity (`non_corner_refill` in the K2
+  configs) to keep the canonical set size stable; a refill whose label
+  collides with a real entity is rejected. Removing dense entities
+  instead would drift the ratio *further* from target (it shrinks the
+  denominator faster than the numerator). With the refill disabled, K2
+  no-ops and reports the baseline as the realised ratio.
 - **`baseline < target - 0.02`** → **paired LLM interpolation**: for
   each step, generate a near-twin entity seeded from a dense cluster,
   then remove one low-density entity to keep the per-source row count
@@ -327,26 +314,17 @@ tolerance band:
   `max_interp_fraction × n_entities` (`0.60` for music).
 - **`|baseline − target| ≤ 0.02`** → no-op.
 
-*Current caveat:* at easy when baseline already exceeds the easy target
-— common, since music's natural corner-case ratio is ~0.24, above
-easy's 0.20 target — the density-drop operator drifts the ratio
-*further* from target rather than toward it (removing dense entities
-shrinks the denominator faster than the numerator). K2 therefore
-currently no-ops in that regime and reports the baseline as the
-realised ratio. See [plan_revision.md §R-1](../plans/plan_revision.md)
-G1 + C1 for the planned fix (a genuine "drop corner-touching entities"
-operator).
-
 ##### Per-level targets
 
-- **Easy** (`corner_case_ratio ≈ 0.20`): niche-aware removal — drop
-  non-protected entities from crowded clusters until they thin out.
-- **Medium** (`≈ 0.50`): add or remove toward target with no LLM calls.
-- **Hard** (`≈ 0.60–0.80`): cached LLM interpolation (default
-  `gpt-5.4-mini`) generates near-twin entities seeded from dense
-  clusters, with `placement_split` 60/40 between multi-source placement
-  (becomes hard positives) and single-source placement (pure hard
-  negatives).
+The K2 configs set `target_corner_case_ratio` to 0.20 (easy), 0.50
+(medium) and 0.80 (hard); music uses 0.20 / 0.30 / 0.35. The rule above
+picks the operator from each variant's measured baseline ratio, and
+`knob_02_realised.csv` records it. At easy the baseline ratio lies above
+0.20 in games, music (~0.25), papers and products, so K2 drops and
+refills; in companies (~0.20) K2 is a no-op. The LLM calls (interpolation
+and refill, `gpt-5.4-mini`) are cached. Interpolation places half of the
+near-twins across sources (hard positives) and half in a single source
+(pure hard negatives): `placement_split` 0.5.
 
 **Side-effect:** regenerates the EM test split per variant so the corner-case
 ratio is tracked end-to-end. **Audit:** `knob_02_realised.csv` (baseline /
@@ -357,9 +335,10 @@ target / final ratio + per-guardrail rejection counters).
 Shifts the per-entity source coverage histogram (group size distribution: how
 many sources cover each entity). Operates on whole rows, not cells.
 
-- **Easy** (uniform): LLM-fabricates a source-specific representation (style /
-  schema / formatting of the missing source) for entities not present in that
-  source. Fabricated rows must be consistent with the fusion gold.
+- **Easy** (uniform): for entities missing from a source, copies the
+  entity's row from a source that has it and paraphrases the copy with
+  K1's medium operators (abbreviation table, EDA `random_swap` /
+  `random_delete`; no LLM).
 - **Medium**: identity — baseline preserved.
 - **Hard** (long-tail): removes entity rows to create singletons, gated by a
   fusion-gold floor and a conflict-preserving removal rule.
@@ -392,21 +371,21 @@ variant" vs "error." Tier-C hybrid generator:
 - **Medium**: deterministic table-driven abbreviation + EDA `random_swap` /
   `random_delete`.
 - **Hard**: medium operators ∪ cached LLM paraphrase (`gpt-5.4-mini`) with
-  contamination guardrails + committee validation.
+  contamination guardrails.
 
 Per-attribute-class rates control what fraction of cells in each class
-gets touched. A rate of 0.08 on `primary` means ~8% of primary-attribute
+gets touched. A rate of 0.12 on `primary` means ~12% of primary-attribute
 cells (e.g. song titles, album names) are paraphrased.
 
 | Music dial — fraction of cells touched | easy | medium | hard |
 |---|---:|---:|---:|
-| `paraphrase_rate_primary` (e.g. `name`)              |  0% |  2% |  8% |
-| `paraphrase_rate_key` (e.g. `artist`, `release-country`) |  0% |  4% | 12% |
-| `paraphrase_rate_secondary` (e.g. `label`, `duration`)   |  0% |  8% | 20% |
-| `paraphrase_rate_categorical` (e.g. `genre`)         |  0% |  4% | 12% |
+| `paraphrase_rate_primary` (e.g. `name`)              |  0% |  4% | 12% |
+| `paraphrase_rate_key` (e.g. `artist`, `release-country`) |  0% |  8% | 18% |
+| `paraphrase_rate_secondary` (e.g. `label`, `release-date`) |  0% | 16% | 30% |
+| `paraphrase_rate_categorical` (e.g. `genre`)         |  0% |  8% | 18% |
 
-The `paraphrase_long` rate from the K1 spec is reserved for future
-domains with long-text attributes (movie plots, product marketing copy).
+The `paraphrase_long` rate from the K1 spec is not used: no domain
+config routes an attribute to it.
 
 #### K5 — Format / unit diversity   [knob_05_format_unit.md](../knobs/knob_05_format_unit.md) · [apply_knob_05_format.py](scripts/apply_knob_05_format.py)
 
@@ -448,7 +427,7 @@ introduces noise into the primary label, which is zero at easy/medium.
 
 The operator mix also widens with level: easy uses only whitespace +
 case corruption, medium adds typos / OCR confusions / taxonomy walks,
-hard adds truncation + character transposition.
+hard adds truncation and allows up to three edits per cell.
 
 #### K3 — Per-source attribute drop   [knob_03_attribute_drop.md](../knobs/knob_03_attribute_drop.md) · [apply_knob_03_drop.py](scripts/apply_knob_03_drop.py)
 
@@ -487,10 +466,10 @@ verifies the fusion gold file is byte-identical before / after).
   entity) axis: if source X mis-handled entity Y on attribute A, elevated
   probability of mis-handling on B too. Models "this source confused Y with a
   near-twin and got everything wrong."
-- The per-attribute winner is **named** in the YAML and re-derived from the
-  freshly-measured baseline `B[s, a]`; loader fails loud if the named winner
-  no longer matches the measured winner (no silent gold-carrier drift across
-  runs).
+- The per-attribute winner is re-derived on every run from the
+  freshly-measured baseline `B[s, a]`; the YAML gives each source's share
+  by name, and the loader logs a warning when the measured winner's share
+  rises from one level to the next (easy → medium → hard).
 
 | Music dial — share of `name` cells carrying gold variant (winner: musicbrainz) | easy | medium | hard |
 |---|---:|---:|---:|
@@ -539,12 +518,11 @@ distances from the target schema at once.
 **Audit:** `knob_08_naming_intensity` (rung-weighted: descriptive=0 /
 abbreviated=1 / cryptic=2 / anonymized=3).
 
-### Knobs not active in v1
+### Knobs not used in the released variants
 
 - **K7 — Value ambiguity / collision rate** ([knob_07_value_ambiguity.md](../knobs/knob_07_value_ambiguity.md)).
-  Design locked, but **not built in v1**. K7 was specced with three
-  sub-parameters, and they fail the v1 cost / value test for different
-  reasons:
+  Specified, but not used in the released variants. K7 was specced with
+  three sub-parameters:
   - `referential_ambiguity_rate` — the active sub-parameter (e.g.
     `"Republic of Korea"` → `"Korea"`, `"John A. Smith Jr."` → `"John
     Smith"`). **Evaluator-compatible**: by design the K7 doc bounds its
@@ -555,54 +533,48 @@ abbreviated=1 / cryptic=2 / anonymized=3).
     shortenings) but `founders` only covers ~10% of rows → effective cell
     budget ≈ 190; games' developer/publisher names are usually full studio
     names; music's natural ambiguity is in cross-entity homonyms (e.g.
-    `John Williams`), which were moved to K2. Building K7's three new
+    `John Williams`), which belong to K2. Building K7's three new
     mechanisms — a per-attribute ambiguity map curated from gold values, a
     pre-injection lenient-evaluator probe, and per-cell rollback on
-    committee collapse (no other knob needs that) — against ≤200 cells in
-    the strongest domain didn't pencil out.
-  - `multi_sense_conflict_rate` + `polysemy_rate_categorical` — **parked**.
+    committee collapse (no other knob needs that) — does not pay off
+    against ≤200 cells in the strongest domain.
+  - `multi_sense_conflict_rate` + `polysemy_rate_categorical` — **dropped**.
     These two would need fusion gold extended to *accepted sets* (e.g.
     `genre = {Rock, Alternative}` where any member counts), which the
     close-enough evaluator can't model (`Rock` and `Alternative` aren't
-    lexically close — the song genuinely is both). Re-opening these is
-    blocked on the accepted-sets discussion.
-  - The cross-entity label-collision slice of K7's original scope was
-    rehomed into K2 as a fourth niche-metric signal — that part is live,
-    just not under the K7 label.
+    lexically close — the song genuinely is both).
+  - The cross-entity label-collision slice of K7's scope is part of K2 as
+    a fourth niche-metric signal.
 
-  Re-open trigger is single: when the accepted-sets discussion lands
-  favorably, K7 grows from one thin sub-parameter to three and the same
-  ambiguity-map / probing / rollback machinery amortizes across substrate
-  orders of magnitude larger. The dimensions K7 was meant to cover (Value
-  Ambiguity in Norm; Conflict Rate and Conflict Subtlety in Fusion) are
-  accepted as **under-stressed in v1**.
+  The dimensions K7 targets (Value Ambiguity in Norm; Conflict Rate and
+  Conflict Subtlety in Fusion) are under-stressed in the released variants.
 - **K9 — Schema completeness / distractors** ([knob_09_schema_completeness.md](../knobs/knob_09_schema_completeness.md)).
-  Locked but **S2 only** — S1 inherits the original use case's column set
-  as-is, so K9 has nothing to inject against. Activates with Scenario 2
-  (fully synthetic seed) which is queued behind the S1 prototype.
+  Specified for **Scenario 2** (fully synthetic tasks) only — S1 inherits
+  the original use case's column set as-is, so K9 has nothing to inject
+  against.
 
 ---
 
 ## Training, validation, and test sets in the variants
 
-Each domain's original use case ships hand-authored ground-truth files for
-the three downstream tasks: a schema-matching gold mapping, train / val /
-test splits for entity matching per source pair, and fusion validation /
-test XMLs. The variant pipeline either copies these through verbatim,
-augments them with regenerated companions, or rewrites them to track
-header changes.
+Each base task ships labeled files for four steps: a schema-matching gold
+mapping, normalization validation / test sets, train / val / test splits
+for entity matching per source pair, and fusion validation / test gold.
+The variants copy some of these through, add regenerated companions, or
+rewrite them to track the changes of the knobs.
 
-| Stage | In `usecases/<domain>/input/` (originals) | In `usecases/<domain>-augmented/<level>/input/` (variants) | What changed and why |
+| Stage | In `use cases/<domain>/base/input/` (base task) | In `use cases/<domain>/<level>/input/` (variants) | What changed and why |
 |---|---|---|---|
-| **Schema matching** | `sm_mapping_gold.csv`, `target_schema.json`, per-domain auxiliaries | `sm_mapping.csv`, `target_schema.json` | K8 (naming) renames source column headers, so the gold mapping is rewritten to reference the new headers (otherwise the SM matcher would predict against columns that don't appear in the gold). `target_schema.json` is copied unchanged. The filename loses the `_gold` suffix per project naming convention. |
-| **Entity matching** | Per source pair: `<a>_2_<b>.csv`, `_all.csv`, `_train.csv`, `_val.csv`, `_test.csv`, `_train_small.csv` | All originals copied verbatim **plus** `<a>_2_<b>_{train,val,test}_regenerated.csv` | K2 removes entities at easy / medium and interpolates near-twin entities at hard, so the original splits would (a) reference IDs that no longer exist and (b) miss the new K2-injected corner cases. Regenerated splits are the closed-set version — every pair references only entities still present in the variant. The originals are kept for legacy / open-set comparability. |
-| **Fusion** | `validation_set.xml`, `test_set.xml` (plus legacy `*_final.xml` variants) | `validation_set.xml`, `test_set.xml` — **byte-identical** to the originals | Fusion gold is **never mutated** by any knob. K10 verifies this with a SHA sentinel before and after the reshuffle; K3 and K4 carry an explicit fusion floor that protects cells / rows referenced by the fusion gold from being dropped. Variants therefore measure fusion against the same gold as the baseline, isolating the difficulty signal to source data quality. |
-| **Normalization** | Per-domain rule + lookup files referenced by `normalization_committee_<domain>.yaml` (e.g. `Music_Genres_Taxonomy.csv`) | No new files — the committee reads rules and lookups from the original locations. | Normalization has no train / val / test split: each member is rule-driven or parameterless, and the implicit ground truth is the canonical form for each value. The committee just runs against the perturbed source data. |
+| **Schema matching** | `sm_mapping_gold.json`, `target_schema.json`, taxonomy CSVs | `sm_mapping.csv`, `target_schema.json`, taxonomy CSVs | K8 (naming) renames source column headers, so the gold mapping is rewritten to reference the new headers (otherwise the SM matcher would predict against columns that don't appear in the gold). The target schema and the taxonomies are those of the base task; the target schema of the Music variants carries fewer value constraints (for example, no range for `duration`). |
+| **Entity matching** | Per source pair: train / val / test splits, plus further labeled files in some domains (see [use cases/README.md](../use%20cases/README.md#entity-matching-files)) | Copies of the base splits **plus** `<a>_2_<b>_{train,val,test}_baseline_pruned.csv` and `<a>_2_<b>_{train,val,test}_corner_filled.csv` (Games: no `val`) | K2 removes entities and adds new ones (refills or interpolated near-twins), so the base splits would (a) reference records that the variant dropped and (b) miss the new K2-injected corner cases. The `corner_filled` splits are the closed-set version — every pair references only records present in the variant. |
+| **Fusion** | `validation_set.xml`, `test_set.xml` (Products: `fusion_validation_set.csv`, `fusion_test_set.csv`; Papers: `fusion_val.jsonl`, `fusion_test.jsonl`) | `validation_set.xml`, `test_set.xml` (Papers: JSON Lines despite the extension) | No knob mutates the fusion gold: K10 verifies this with a SHA sentinel before and after the reshuffle, and K3 and K4 keep a surviving source carrier for every fusion-gold cell and entity. The variants keep the base task's 100 validation and 100 test entities and their graded values; where a variant removed the record that keys a gold entity, the gold record is keyed on a surviving member. Variants therefore measure fusion against the same entities and values as the base task, isolating the difficulty signal to source data quality. |
+| **Normalization** | `validation.csv`, `test.csv` | `validation.csv`, `test.csv`, built on the variant's source values | The knobs change the source values, so each variant has its own normalization sets. The normalization committee runs against the variant's source data and is scored on its test set. |
 
 ### EM split regeneration mechanics
 
-[lib/corner_case_miner.py:regenerate_em_splits](lib/corner_case_miner.py#L624)
-runs per `(source_pair, split)`:
+[lib/corner_case_miner.py:regenerate_em_splits](lib/corner_case_miner.py#L698)
+runs per `(source_pair, split)` and writes two versions of each split,
+`baseline_pruned` (step 1 only) and `corner_filled` (steps 1 and 2):
 
 1. **Carry over surviving originals.** Every original `(id1, id2, label)`
    whose IDs both still exist in the post-K2 / post-K4 source frames is
@@ -612,16 +584,10 @@ runs per `(source_pair, split)`:
    surviving IDs.
 2. **Backfill to the original `(size, positive_ratio)`.** Each split
    inherits the size and positive ratio of the corresponding original
-   split. A corner-case budget — `round(size × target_corner_case_ratio)`
-   from K2's config — is split half-and-half between corner positives and
-   corner negatives:
+   split. The free slots are filled from the corner-mined pools only:
    - **Corner positives** = K2-interpolated cross-source near-twin pairs.
-   - **Easy positives** = `cluster_positives ∪ pool_positives` minus
-     interpolated (the Phase-0 pool finally acting as a source of truth
-     here, not just as a protection set).
    - **Corner negatives** = hard-negative-gated cross-cluster pairs
      (close enough to confuse a blocker but in different gold clusters).
-   - **Easy negatives** = the remaining cross-cluster pairs.
 3. **Enforce disjointness across train / val / test.** A consumed-pairs
    tracker prevents the same record pair from appearing in two splits.
    If a backfill pool runs dry — common at hard, where K2 has stripped a
@@ -630,30 +596,29 @@ runs per `(source_pair, split)`:
    target.
 4. **Re-run post-K4.** K4 may demote additional rows at hard, so the
    regen runs a second time with a refreshed `ids_present` filter
-   against the post-K4 sources. Same pools, fresh survivors filter —
-   this closes a "K2 emitted regen IDs, then K4 deleted some" orphan-pair
-   hole.
+   against the post-K4 sources. Same pools, fresh survivors filter — no
+   regenerated pair references a record that K4 removed.
 
-### Why two sets of EM files
+### EM file families in the variants
 
-Both files are kept so the same variant can be scored two ways:
-
-- **Closed-set (regenerated)** — every pair references entities still
+- **Closed-set (`*_corner_filled.csv`)** — every pair references records
   present in the variant. This is the **primary** difficulty surface:
   matchers are measured on a test consistent with the post-variant
-  population, and the corner-case ratio tracks K2's dial.
-- **Open-set (original)** — every pair references the originals' entity
-  IDs, some of which no longer exist. Comparable across baseline and
-  variants for legacy purposes, but unfairly penalises matchers for
-  missing entities that simply don't exist anymore. Not used as the
-  primary metric.
+  population, and the corner-case ratio tracks K2's dial. The test split
+  is the variant's evaluation set for blocking and entity matching.
+- **Survivors (`*_baseline_pruned.csv`)** — the base task's pairs whose
+  records survive in the variant, the starting point of `corner_filled`.
+- **Open-set (copies of the base splits)** — every pair references the
+  base task's records, some of which the variant dropped, so these files
+  penalise matchers for records that are not in the variant. They are not
+  evaluation sets.
 
 ---
 
 ## Phase 3 — Validation per level
 
 ```
-usecases/<domain>-augmented/<level>/input/
+use cases/<domain>/<level>/input/
                     │
                     ▼
    ┌────────┬────────────┬─────────────┬──────────────┬─────────┐
@@ -666,13 +631,13 @@ usecases/<domain>-augmented/<level>/input/
                     ▼
   analyze_monotonicity.py   →   monotonicity_report.csv
                                 ├── committee macro_f1     (baseline → easy → medium → hard)
-                                ├── best-member ceiling    (P8)
+                                ├── best-member ceiling
                                 ├── ceiling_responsiveness (per-knob Pearson on best-member F1)
                                 └── per-knob intensity verdict (K5 distinct families, K8 naming rank,
                                                                 K10 realised swap rate)
                     │
                     ▼
-   validation/<domain>/final_report.md
+   validation/<domain>/monotonicity_report.md
 ```
 
 [scripts/validate_variant.py](scripts/validate_variant.py) runs each
@@ -684,48 +649,25 @@ start if the committee YAML SHAs diverge from those recorded in
 
 [scripts/analyze_monotonicity.py](scripts/analyze_monotonicity.py) consumes
 the per-level metrics across `baseline → easy → medium → hard` and decides
-whether each stage's committee macro_f1 and best-member F1 (the "P8 ceiling"
-— the strongest individual matcher's F1, which is what a downstream user
+whether each stage's committee macro_f1 and best-member F1 (the
+strongest individual matcher's F1, which is what a downstream user
 would actually deploy) drop monotonically with difficulty. It also writes
-per-knob audit verdicts driven by the realised CSVs above. The final
-`final_report.md` per domain rolls those up into a human-readable verdict.
+per-knob audit verdicts driven by the realised CSVs above. Its
+`monotonicity_report.md` per domain rolls those up into a human-readable verdict.
 
 A second analyzer, [analyze_ablation.py](scripts/analyze_ablation.py),
-consumes per-knob single-knob-hard ablation metrics
-([run_ablation_validation.py](scripts/run_ablation_validation.py)) to attribute
-the cross-level drop to each individual knob — that's how we tell whether a
-knob is actually pulling its weight or being absorbed by another.
+compares per-knob ablation variants (one knob at hard, all others at easy;
+generated and validated by
+[run_ablation_validation.py](scripts/run_ablation_validation.py)) with the
+baseline and the full hard variant, to attribute the cross-level drop to
+individual knobs.
 
 ---
 
-## Domain status snapshot
-
-(authoritative source: [plans/plan_revision.md](../plans/plan_revision.md))
-
-| Domain          | Phase 0 pool | Phase 1 baseline | Phase 2 variants            | Phase 3 validation             |
-|-----------------|:---:|:---:|---|---|
-| music-FULL      | ✓ | ✓ | ✓ | ✓  (R7.3 PASS, R-1 fixes pending) |
-| games-FULL      | ✓ | ✓ | ✓ | ✓  (R7.3 PASS, R-1 fixes pending) |
-| products-FULL   | ✓ | ✓ | ✓ (legacy 4-col schema)  | stale — R1 schema redesign queued |
-| companies-FULL  | ✓ | ✓ | — | blocked on larger fusion gold (R0) |
-| `*-small` siblings | ✓ | ✓ | ✓ | ✓ |
-
-"R-1 fixes pending" refers to the diagnosed-but-not-yet-landed quality
-improvements in [plan_revision.md §R-1](../plans/plan_revision.md): K2 ratio
-not moving, easy occasionally easier than baseline, K5/K8 raw-count proxies
-non-monotone on some domains, K10 audit replaced with a rate-based metric.
-All current FULL variants still satisfy the headline cross-level
-monotonicity criterion but the contract is being tightened before companies-FULL
-and the products redesign cascade through.
-
----
-
-## Reading order for collaborators
+## Reading order
 
 1. This file — pipeline mental model.
 2. [PIPELINE.md](PIPELINE.md) — runbook with commands per phase.
 3. [knobs/README.md](../knobs/README.md) — canonical knob order rationale +
    cross-cutting rules.
 4. Individual [knobs/knob_NN_*.md](../knobs/) — full per-knob spec.
-5. [plans/plan_revision.md](../plans/plan_revision.md) — current state +
-   queued improvements.

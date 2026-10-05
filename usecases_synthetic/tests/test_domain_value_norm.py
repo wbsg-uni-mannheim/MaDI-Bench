@@ -1,7 +1,7 @@
 """Tests for ``usecases_synthetic.lib.domain_value_norm``.
 
 Covers the per-domain value normaliser module that feeds the Ditto A/B
-retrain experiment (plan_revision_step4g_findings.md §2). Mirrors the
+retrain experiment. Mirrors the
 notebook's preprocessing exactly so the Ditto training data sees the
 same value distribution the human-baseline matcher sees.
 """

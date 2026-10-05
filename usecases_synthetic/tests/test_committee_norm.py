@@ -3,8 +3,7 @@
 Exercises the runner against a synthetic ``VariantBundle`` so we can
 verify per-attribute F1 semantics deterministically without a real
 domain dataset. Real-data smoke runs are covered by
-``measure_baseline.py --domain <d> --stages norm`` per the R6.1 row of
-``plan_s1_scale.md``.
+``measure_baseline.py --domain <d> --stages norm``.
 """
 
 from __future__ import annotations
@@ -275,11 +274,10 @@ class TestRuleBasedMembers:
     ) -> None:
         """Aliased domains inherit the source domain's taxonomy bindings.
 
-        Regression for plan_s1_final.md F8: pre-fix, calling
-        ``normalize(..., domain="music-small", ...)`` returned None for
-        every cell because ``self._taxonomies`` was keyed by the source
-        domain ``music``. Result: ``taxonomy_lookup`` scored 0.0 across
-        all 418 genre cells in S.6a baseline audit.
+        ``self._taxonomies`` is keyed by the source domain (e.g. ``music``),
+        so ``normalize(..., domain="music-small", ...)`` must resolve the
+        alias first; otherwise every cell returns None and
+        ``taxonomy_lookup`` scores 0.0.
         """
         from usecases_synthetic.lib import domain_config
 
@@ -477,7 +475,7 @@ class TestNormCommitteeRunnerSyntheticBundle:
 
 
 class TestPerDomainConfigsLoad:
-    # Under C12 (plan_revision.md §C12, landed 2026-05-26) every per-
+    # Under C12 every per-
     # domain norm YAML declares the same 3-member roster
     # (rule_per_attribute_optimal / llm_only / passthrough). With
     # ``with_llm=False`` the llm_only member is skipped, leaving the

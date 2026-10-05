@@ -1,0 +1,2576 @@
+{
+  "domain": "music",
+  "meta": {
+    "written_at": "2026-09-26T19:43:13.544102+00:00",
+    "with_llm": true,
+    "committee_versions": {
+      "fusion": "fusion_committee_music.yaml@f269c37ab587",
+      "sm": "sm_committee.yaml@cb4a6847ac9e",
+      "em_blocking": "em_blocking_committee_music.yaml@07cec0b9969f",
+      "em_matching": "em_matching_committee_music.yaml@2c90f2517590"
+    },
+    "total_runtime_s": 102.42,
+    "fusion_input_member": "",
+    "stage_sources": {
+      "stages": {
+        "em_blocking": {
+          "source": "baseline_metrics.json of the June 2026 committee run of the music baseline",
+          "source_sha256": "afb9621424254b175748cebad45e86ba01790afb3f9b0d2223703423d8791935",
+          "measured_by_run": "June 2026 committee run of the music baseline",
+          "written_at": "2026-06-06T02:17:25.034914+00:00",
+          "committee_version": "em_blocking_committee_music.yaml@07cec0b9969f",
+          "with_llm": true,
+          "block_sha256": "6ba2087e48e3732e86a371d607c20f1b1d006a5f22c7000f8543e0b21c613561",
+          "roster": [
+            "token_blocker",
+            "standard_blocker",
+            "embedding_blocker",
+            "sorted_neighbourhood_blocker",
+            "bm25_blocker",
+            "sc_block"
+          ]
+        },
+        "em_matching": {
+          "source": "baseline_metrics.json of the June 2026 committee run of the music baseline",
+          "source_sha256": "afb9621424254b175748cebad45e86ba01790afb3f9b0d2223703423d8791935",
+          "measured_by_run": "June 2026 committee run of the music baseline",
+          "written_at": "2026-06-06T02:17:25.034914+00:00",
+          "committee_version": "em_matching_committee_music.yaml@2c90f2517590",
+          "with_llm": true,
+          "block_sha256": "867ecd88210e7de1a383aa8ab96d235f76519cffc6cf2cab7eb32748686e86b5",
+          "roster": [
+            "ditto_plm",
+            "magellan",
+            "llm_matcher",
+            "comem"
+          ]
+        },
+        "norm": {
+          "scoring_surface": "normalization_test_set",
+          "sources": {
+            "committee_norm.json": {
+              "path": "committee_norm.json (output of measure.py)",
+              "sha256": "e5aaaab09c5e3ff62910f07ab64df50a524b74040e4782793b3ba0a9de6dd86d",
+              "created_utc": "2026-09-28T13:06:47.133503+00:00"
+            },
+            "llm_member.json": {
+              "path": "llm_member.json (output of llm_member.py)",
+              "sha256": "49525d38d6cafcc33b20c00f0f1373220892b44f4e0d15f79e0b652f5f1b9db9",
+              "created_utc": "2026-09-28T14:44:12.570337+00:00"
+            }
+          },
+          "block_sha256": "5e96cb98b09163b8759d00d704f5bf0a28d4151e8b915617ccf6e1a5d4f47fcb",
+          "normalization_committee_yaml": "normalization_committee_music.yaml@50d9aba427f3",
+          "scoring_note": "the normalization score is the accuracy on the normalization test set, not schema conformance",
+          "committee_versions_note": "no committee_versions.norm entry: the block is not a committee-runner output; validate_variant runs a variant's norm stage only once measure_baseline has recorded committee_versions.norm for the base task, so that the variant and base norm blocks share a scoring surface"
+        }
+      },
+      "note": "em_blocking / em_matching: blocks of the June 2026 committee run listed under stages; norm: accuracies on the normalization test set (see per_stage.norm.source)",
+      "em_validity_check": "the test pairs and labels that the June 2026 committee run scored equal those of the shipped EM test files; the numbers of gold positives that the em_blocking / em_matching blocks scored against equal those of the shipped test files"
+    }
+  },
+  "per_stage": {
+    "sm": {
+      "stage": "sm",
+      "domain": "music",
+      "level": "baseline",
+      "runtime_s": 82.39178946334869,
+      "roster": [
+        "duplicate_majority",
+        "label_jw",
+        "instance_tf_cosine",
+        "embedding_sbert",
+        "llm_openai",
+        "magneto_slm_llm",
+        "coma_hybrid"
+      ],
+      "aggregated": {
+        "macro_f1": 0.6695584981299267,
+        "min_f1": 0.0909090909090909,
+        "max_f1": 1.0,
+        "macro_precision": 0.9421768707482993,
+        "macro_recall": 0.619047619047619,
+        "best_member_name": "llm_openai",
+        "best_member_f1": 1.0
+      },
+      "per_attribute": {
+        "musicbrainz.Attribute_1": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_2": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_3": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_4": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_5": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_6": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 0.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "musicbrainz.Attribute_9": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "lastfm.item_code": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 0.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "lastfm.album_title": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "lastfm.band": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "lastfm.album_length": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "lastfm.tracks_track-name": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "discogs.rec_uid": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.title_str": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.performer": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.pub_dt": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.origin_loc": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.duration": {
+          "duplicate_majority": 1.0,
+          "label_jw": 1.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "discogs.imprint": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.category": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "discogs.tracks_track-name": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        }
+      },
+      "per_partition": {
+        "musicbrainz": {
+          "macro_f1": 0.6268315018315018,
+          "n_columns": 7.0
+        },
+        "lastfm": {
+          "macro_f1": 0.6253968253968255,
+          "n_columns": 5.0
+        },
+        "discogs": {
+          "macro_f1": 0.7158135981665393,
+          "n_columns": 9.0
+        }
+      },
+      "per_member": {
+        "duplicate_majority": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.7619047619047619,
+            "f1": 0.8648648648648648,
+            "tp": 16.0,
+            "fp": 0.0,
+            "fn": 5.0
+          },
+          "runtime_s": 5.2521289717406034,
+          "notes": {
+            "signal_type": "duplicate",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "label_jw": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.047619047619047616,
+            "f1": 0.0909090909090909,
+            "tp": 1.0,
+            "fp": 0.0,
+            "fn": 20.0
+          },
+          "runtime_s": 0.00877239741384983,
+          "notes": {
+            "signal_type": "label",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "instance_tf_cosine": {
+          "metrics": {
+            "precision": 0.7619047619047619,
+            "recall": 0.7619047619047619,
+            "f1": 0.7619047619047619,
+            "tp": 16.0,
+            "fp": 5.0,
+            "fn": 5.0
+          },
+          "runtime_s": 0.9220641320571303,
+          "notes": {
+            "signal_type": "instance",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "embedding_sbert": {
+          "metrics": {
+            "precision": 0.8333333333333334,
+            "recall": 0.7142857142857143,
+            "f1": 0.7692307692307692,
+            "tp": 15.0,
+            "fp": 3.0,
+            "fn": 6.0
+          },
+          "runtime_s": 4.627939144149423,
+          "notes": {
+            "signal_type": "embedding",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "llm_openai": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 21.0,
+            "fp": 0.0,
+            "fn": 0.0
+          },
+          "runtime_s": 4.4927232610061765,
+          "notes": {
+            "signal_type": "llm",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "magneto_slm_llm": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.9047619047619048,
+            "f1": 0.9500000000000001,
+            "tp": 19.0,
+            "fp": 0.0,
+            "fn": 2.0
+          },
+          "runtime_s": 50.50006327684969,
+          "notes": {
+            "signal_type": "llm",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "coma_hybrid": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.14285714285714285,
+            "f1": 0.25,
+            "tp": 3.0,
+            "fp": 0.0,
+            "fn": 18.0
+          },
+          "runtime_s": 16.56806858163327,
+          "notes": {
+            "signal_type": "hybrid",
+            "sm_input": "shipped_raw_20260926"
+          }
+        }
+      },
+      "per_blocker": {}
+    },
+    "norm": {
+      "stage": "norm",
+      "domain": "music",
+      "level": "baseline",
+      "scoring_surface": "normalization_test_set",
+      "metric": "accuracy",
+      "runtime_s": null,
+      "roster": [
+        "rule_per_attribute_optimal",
+        "llm_only",
+        "passthrough"
+      ],
+      "aggregated": {
+        "mean_accuracy": 0.4875,
+        "max_accuracy": 0.6125,
+        "min_accuracy": 0.3,
+        "mean_accuracy_transformations": 0.375,
+        "max_accuracy_transformations": 0.5714285714285714,
+        "best_member_accuracy": 0.6125,
+        "best_member_name": "llm_only",
+        "n_members": 3,
+        "n_cells": 80,
+        "macro_f1": 0.4875,
+        "max_f1": 0.6125,
+        "min_f1": 0.3,
+        "best_member_f1": 0.6125
+      },
+      "per_attribute": {
+        "genre": {
+          "rule_per_attribute_optimal": 0.0,
+          "llm_only": 0.0,
+          "passthrough": 0.0,
+          "n_cells": 5,
+          "best_member_accuracy": 0.0
+        },
+        "label": {
+          "rule_per_attribute_optimal": 0.0,
+          "llm_only": 0.0,
+          "passthrough": 0.0,
+          "n_cells": 1,
+          "best_member_accuracy": 0.0
+        },
+        "name": {
+          "rule_per_attribute_optimal": 0.0,
+          "llm_only": 0.5384615384615384,
+          "passthrough": 0.38461538461538464,
+          "n_cells": 13,
+          "best_member_accuracy": 0.5384615384615384
+        },
+        "release-country": {
+          "rule_per_attribute_optimal": 0.0,
+          "llm_only": 0.0,
+          "passthrough": 0.5,
+          "n_cells": 12,
+          "best_member_accuracy": 0.5
+        },
+        "release-date": {
+          "rule_per_attribute_optimal": 1.0,
+          "llm_only": 0.9545454545454546,
+          "passthrough": 0.29545454545454547,
+          "n_cells": 44,
+          "best_member_accuracy": 1.0
+        },
+        "tracks": {
+          "rule_per_attribute_optimal": 0.0,
+          "llm_only": 0.0,
+          "passthrough": 0.0,
+          "n_cells": 5,
+          "best_member_accuracy": 0.0
+        }
+      },
+      "per_partition": {},
+      "per_member": {
+        "rule_per_attribute_optimal": {
+          "metrics": {
+            "accuracy": 0.55,
+            "accuracy_transformations": 0.5535714285714286,
+            "n_cells": 80,
+            "n_correct": 44,
+            "n_transformation_cells": 56,
+            "n_transformations_correct": 31,
+            "record_coverage": 1.0,
+            "macro_f1": 0.55,
+            "f1": 0.55,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 24,
+                "correct": 13,
+                "accuracy": 0.5417
+              },
+              "knowledge": {
+                "n": 6,
+                "correct": 0,
+                "accuracy": 0.0
+              },
+              "normalization": {
+                "n": 50,
+                "correct": 31,
+                "accuracy": 0.62
+              },
+              "transformations": {
+                "n": 56,
+                "correct": 31,
+                "accuracy": 0.5536
+              }
+            },
+            "selection_map": {
+              "artist": "text_clean",
+              "duration": "number_locale",
+              "id": "_passthrough",
+              "label": "_passthrough",
+              "name": "text_clean",
+              "release-country": "text_clean",
+              "release-date": "date_iso"
+            },
+            "eligible_attributes": [
+              "artist",
+              "duration",
+              "id",
+              "label",
+              "name",
+              "release-country",
+              "release-date"
+            ],
+            "rule_scope_of_test_attributes": {
+              "genre": "not eligible -> passthrough",
+              "label": "_passthrough",
+              "name": "text_clean",
+              "release-country": "text_clean",
+              "release-date": "date_iso",
+              "tracks": "not eligible -> passthrough"
+            },
+            "lock_written_this_level": true,
+            "source": "committee_norm.json results.music_base.checkout.members.rule_per_attribute_optimal"
+          }
+        },
+        "llm_only": {
+          "metrics": {
+            "accuracy": 0.6125,
+            "accuracy_transformations": 0.5714285714285714,
+            "n_cells": 80,
+            "n_correct": 49,
+            "n_transformation_cells": 56,
+            "n_transformations_correct": 32,
+            "record_coverage": 1.0,
+            "macro_f1": 0.6125,
+            "f1": 0.6125,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 24,
+                "correct": 17,
+                "accuracy": 0.7083
+              },
+              "knowledge": {
+                "n": 6,
+                "correct": 0,
+                "accuracy": 0.0
+              },
+              "normalization": {
+                "n": 50,
+                "correct": 32,
+                "accuracy": 0.64
+              },
+              "transformations": {
+                "n": 56,
+                "correct": 32,
+                "accuracy": 0.5714
+              }
+            },
+            "model_name": "gpt-5.4-mini",
+            "llm_scope": {
+              "n": 70,
+              "correct": 49,
+              "accuracy": 0.7
+            },
+            "api_errors_open": 0,
+            "source": "llm_member.json scores[task=music_base]",
+            "best_member": true
+          }
+        },
+        "passthrough": {
+          "metrics": {
+            "accuracy": 0.3,
+            "accuracy_transformations": 0.0,
+            "n_cells": 80,
+            "n_correct": 24,
+            "n_transformation_cells": 56,
+            "n_transformations_correct": 0,
+            "record_coverage": 1.0,
+            "macro_f1": 0.3,
+            "f1": 0.3,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 24,
+                "correct": 24,
+                "accuracy": 1.0
+              },
+              "knowledge": {
+                "n": 6,
+                "correct": 0,
+                "accuracy": 0.0
+              },
+              "normalization": {
+                "n": 50,
+                "correct": 0,
+                "accuracy": 0.0
+              },
+              "transformations": {
+                "n": 56,
+                "correct": 0,
+                "accuracy": 0.0
+              }
+            },
+            "source": "committee_norm.json results.music_base.checkout.members.passthrough"
+          }
+        }
+      },
+      "metric_aliases": {
+        "per_member.<m>.metrics.macro_f1 / f1": "= accuracy",
+        "aggregated.macro_f1": "= mean_accuracy",
+        "aggregated.max_f1 / best_member_f1": "= max_accuracy",
+        "aggregated.min_f1": "= min_accuracy",
+        "why": "the generator's readers (build_statistics, analyze_monotonicity / lib.monotonicity, the report writers) key the norm stage on macro_f1; on this surface the values are cell accuracies on the normalization test set, not F1"
+      },
+      "source": {
+        "measurement": "normalization test set of the task (split=test, list_form), one accuracy per member = correct cells / all test cells (identity + transformations); the values behind the paper's Table 12 Norm. mean and ceiling",
+        "test_set": "use cases/music/base/input/normalization/ (test split; test_csv_sha256 3a17cdfd958806a0c5c3e80ca58907b143019d0e84c604808977fa00796e8b36)",
+        "normalization_committee_yaml": "normalization_committee_music.yaml@50d9aba427f3",
+        "files": {
+          "committee_norm.json": {
+            "path": "committee_norm.json (output of measure.py)",
+            "sha256": "e5aaaab09c5e3ff62910f07ab64df50a524b74040e4782793b3ba0a9de6dd86d",
+            "created_utc": "2026-09-28T13:06:47.133503+00:00",
+            "script": "measure.py (same measurement as reproduction/tables/table12/normalization/measure.py)",
+            "scorer": "madi_bench.evaluation.normalization_score.score_normalization (split=test, list_form)",
+            "members": [
+              "rule_per_attribute_optimal",
+              "passthrough"
+            ],
+            "mode": "shipped lock, else chosen by the committee at the first level (Table 12 setting)"
+          },
+          "llm_member.json": {
+            "path": "llm_member.json (output of llm_member.py)",
+            "sha256": "49525d38d6cafcc33b20c00f0f1373220892b44f4e0d15f79e0b652f5f1b9db9",
+            "created_utc": "2026-09-28T14:44:12.570337+00:00",
+            "script": "llm_member.py (same measurement as reproduction/tables/table12/normalization/llm_member.py)",
+            "member": "llm_only (LLMCanonicalizer, normalization committee)",
+            "api": {
+              "responses": 481,
+              "usd_actual": 0.2137,
+              "errors_open": 0
+            },
+            "members": [
+              "llm_only"
+            ]
+          }
+        },
+        "task_key": "music_base"
+      }
+    },
+    "em_blocking": {
+      "stage": "em_blocking",
+      "domain": "music",
+      "level": "baseline",
+      "runtime_s": 299.74340047698934,
+      "roster": [
+        "token_blocker",
+        "standard_blocker",
+        "embedding_blocker",
+        "sorted_neighbourhood_blocker",
+        "bm25_blocker",
+        "sc_block"
+      ],
+      "aggregated": {
+        "macro_pair_recall": 0.9504504504504504,
+        "min_pair_recall": 0.8498498498498499,
+        "max_pair_recall": 1.0,
+        "macro_reduction_ratio": 0.9789211997338328,
+        "macro_pair_recall_baseline_model_on_baseline_test": 0.9504504504504504,
+        "macro_pair_recall_baseline_model_on_regen_test": 0.9504504504504504,
+        "macro_pair_recall_variant_model_on_baseline_test": 0.9504504504504504,
+        "macro_pair_recall_variant_model_on_regen_test": 0.9504504504504504,
+        "best_member_name": "embedding_blocker",
+        "best_member_pair_recall": 0.996996996996997,
+        "best_member_reduction_ratio": 0.9963609134326803,
+        "recall_floor": 0.97
+      },
+      "per_attribute": {},
+      "per_partition": {
+        "musicbrainz_discogs": {
+          "winner_blocker_pair_recall": 1.0,
+          "winner_blocker_reduction_ratio": 0.9977902505855836,
+          "recall_floor_cleared": 1.0
+        },
+        "musicbrainz_lastfm": {
+          "winner_blocker_pair_recall": 0.996996996996997,
+          "winner_blocker_reduction_ratio": 0.994931576279777,
+          "recall_floor_cleared": 1.0
+        }
+      },
+      "per_member": {
+        "token_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9993446920052425,
+            "reduction_ratio": 0.9063083432753349,
+            "candidate_count": 7352299.0,
+            "gold_positives": 333.0,
+            "covered": 333.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 7.041374861029908,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9986893840104849,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9029369123918841,
+                "candidate_count": 10460722.0,
+                "full_space": 107772401.0,
+                "runtime_s": 5.140420938027091,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9029369123918841,
+                "reduction_ratio_variant_model": 0.9029369123918841,
+                "candidate_count_baseline_model": 10460722.0,
+                "candidate_count_variant_model": 10460722.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9096797741587859,
+                "candidate_count": 4243876.0,
+                "full_space": 46986995.0,
+                "runtime_s": 1.9009539230028167,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9096797741587859,
+                "reduction_ratio_variant_model": 0.9096797741587859,
+                "candidate_count_baseline_model": 4243876.0,
+                "candidate_count_variant_model": 4243876.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "standard_blocker": {
+          "metrics": {
+            "pair_recall": 0.8588588588588588,
+            "pair_recall_val": 0.8646341463414634,
+            "reduction_ratio": 0.9858356459987286,
+            "candidate_count": 1141898.0,
+            "gold_positives": 333.0,
+            "covered": 286.0,
+            "missed": 47.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.8588588588588588,
+            "pair_recall_baseline_model_on_regen_test": 0.8588588588588588,
+            "pair_recall_variant_model_on_baseline_test": 0.8588588588588588,
+            "pair_recall_variant_model_on_regen_test": 0.8588588588588588,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.5990418390138075,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9843265809768866,
+                "candidate_count": 1689162.0,
+                "full_space": 107772401.0,
+                "runtime_s": 0.42684549902332947,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9843265809768866,
+                "reduction_ratio_variant_model": 0.9843265809768866,
+                "candidate_count_baseline_model": 1689162.0,
+                "candidate_count_variant_model": 1689162.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.7177177177177178,
+                "pair_recall_val": 0.7292682926829268,
+                "gold_positives": 333.0,
+                "covered": 239.0,
+                "missed": 94.0,
+                "reduction_ratio": 0.9873447110205706,
+                "candidate_count": 594634.0,
+                "full_space": 46986995.0,
+                "runtime_s": 0.172196339990478,
+                "pair_recall_baseline_model_on_baseline_test": 0.7177177177177178,
+                "pair_recall_baseline_model_on_regen_test": 0.7177177177177178,
+                "pair_recall_variant_model_on_baseline_test": 0.7177177177177178,
+                "pair_recall_variant_model_on_regen_test": 0.7177177177177178,
+                "reduction_ratio_baseline_model": 0.9873447110205706,
+                "reduction_ratio_variant_model": 0.9873447110205706,
+                "candidate_count_baseline_model": 594634.0,
+                "candidate_count_variant_model": 594634.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "embedding_blocker": {
+          "metrics": {
+            "pair_recall": 0.996996996996997,
+            "pair_recall_val": 0.9944210913275581,
+            "reduction_ratio": 0.9963609134326803,
+            "candidate_count": 238150.0,
+            "gold_positives": 333.0,
+            "covered": 332.0,
+            "missed": 1.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+            "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+            "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+            "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 33.163295365986414,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "embedding",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9973787680209698,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9977902505855836,
+                "candidate_count": 238150.0,
+                "full_space": 107772401.0,
+                "runtime_s": 18.562731846992392,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9977902505855836,
+                "reduction_ratio_variant_model": 0.9977902505855836,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.993993993993994,
+                "pair_recall_val": 0.9914634146341463,
+                "gold_positives": 333.0,
+                "covered": 331.0,
+                "missed": 2.0,
+                "reduction_ratio": 0.994931576279777,
+                "candidate_count": 238150.0,
+                "full_space": 46986995.0,
+                "runtime_s": 14.600563518994022,
+                "pair_recall_baseline_model_on_baseline_test": 0.993993993993994,
+                "pair_recall_baseline_model_on_regen_test": 0.993993993993994,
+                "pair_recall_variant_model_on_baseline_test": 0.993993993993994,
+                "pair_recall_variant_model_on_regen_test": 0.993993993993994,
+                "reduction_ratio_baseline_model": 0.994931576279777,
+                "reduction_ratio_variant_model": 0.994931576279777,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sorted_neighbourhood_blocker": {
+          "metrics": {
+            "pair_recall": 0.8498498498498499,
+            "pair_recall_val": 0.8584454815714605,
+            "reduction_ratio": 0.9959395553982124,
+            "candidate_count": 278194.0,
+            "gold_positives": 333.0,
+            "covered": 283.0,
+            "missed": 50.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.8498498498498499,
+            "pair_recall_baseline_model_on_regen_test": 0.8498498498498499,
+            "pair_recall_variant_model_on_baseline_test": 0.8498498498498499,
+            "pair_recall_variant_model_on_regen_test": 0.8498498498498499,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.26091725198784843,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 0.9973787680209698,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9971241152918177,
+                "candidate_count": 309941.0,
+                "full_space": 107772401.0,
+                "runtime_s": 0.1554601999814622,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.9971241152918177,
+                "reduction_ratio_variant_model": 0.9971241152918177,
+                "candidate_count_baseline_model": 309941.0,
+                "candidate_count_variant_model": 309941.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.7027027027027027,
+                "pair_recall_val": 0.7195121951219512,
+                "gold_positives": 333.0,
+                "covered": 234.0,
+                "missed": 99.0,
+                "reduction_ratio": 0.9947549955046072,
+                "candidate_count": 246447.0,
+                "full_space": 46986995.0,
+                "runtime_s": 0.10545705200638622,
+                "pair_recall_baseline_model_on_baseline_test": 0.7027027027027027,
+                "pair_recall_baseline_model_on_regen_test": 0.7027027027027027,
+                "pair_recall_variant_model_on_baseline_test": 0.7027027027027027,
+                "pair_recall_variant_model_on_regen_test": 0.7027027027027027,
+                "reduction_ratio_baseline_model": 0.9947549955046072,
+                "reduction_ratio_variant_model": 0.9947549955046072,
+                "candidate_count_baseline_model": 246447.0,
+                "candidate_count_variant_model": 246447.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "bm25_blocker": {
+          "metrics": {
+            "pair_recall": 0.9984984984984985,
+            "pair_recall_val": 0.9975609756097561,
+            "reduction_ratio": 0.9963609134326803,
+            "candidate_count": 238150.0,
+            "gold_positives": 333.0,
+            "covered": 332.5,
+            "missed": 0.5,
+            "pair_recall_baseline_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_baseline_model_on_regen_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_regen_test": 0.9984984984984985,
+            "selection_rate": 1.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 6.4272316379938275,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "sparse",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9977902505855836,
+                "candidate_count": 238150.0,
+                "full_space": 107772401.0,
+                "runtime_s": 4.715416838997044,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9977902505855836,
+                "reduction_ratio_variant_model": 0.9977902505855836,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 0.9951219512195122,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.994931576279777,
+                "candidate_count": 238150.0,
+                "full_space": 46986995.0,
+                "runtime_s": 1.7118147989967838,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.994931576279777,
+                "reduction_ratio_variant_model": 0.994931576279777,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sc_block": {
+          "metrics": {
+            "pair_recall": 0.9984984984984985,
+            "pair_recall_val": 1.0,
+            "reduction_ratio": 0.9927218268653606,
+            "candidate_count": 476300.0,
+            "gold_positives": 333.0,
+            "covered": 332.5,
+            "missed": 0.5,
+            "pair_recall_baseline_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_baseline_model_on_regen_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_regen_test": 0.9984984984984985,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 141.28154872800224,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "hybrid",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9955805011711671,
+                "candidate_count": 476300.0,
+                "full_space": 107772401.0,
+                "runtime_s": 94.47089350403985,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9955805011711671,
+                "reduction_ratio_variant_model": 0.9955805011711671,
+                "candidate_count_baseline_model": 476300.0,
+                "candidate_count_variant_model": 476300.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9898631525595539,
+                "candidate_count": 476300.0,
+                "full_space": 46986995.0,
+                "runtime_s": 46.810655223962385,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.9898631525595539,
+                "reduction_ratio_variant_model": 0.9898631525595539,
+                "candidate_count_baseline_model": 476300.0,
+                "candidate_count_variant_model": 476300.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        }
+      },
+      "per_blocker": {
+        "token_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9993446920052425,
+            "reduction_ratio": 0.9063083432753349,
+            "candidate_count": 7352299.0,
+            "gold_positives": 333.0,
+            "covered": 333.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 7.041374861029908,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9986893840104849,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9029369123918841,
+                "candidate_count": 10460722.0,
+                "full_space": 107772401.0,
+                "runtime_s": 5.140420938027091,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9029369123918841,
+                "reduction_ratio_variant_model": 0.9029369123918841,
+                "candidate_count_baseline_model": 10460722.0,
+                "candidate_count_variant_model": 10460722.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9096797741587859,
+                "candidate_count": 4243876.0,
+                "full_space": 46986995.0,
+                "runtime_s": 1.9009539230028167,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9096797741587859,
+                "reduction_ratio_variant_model": 0.9096797741587859,
+                "candidate_count_baseline_model": 4243876.0,
+                "candidate_count_variant_model": 4243876.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "standard_blocker": {
+          "metrics": {
+            "pair_recall": 0.8588588588588588,
+            "pair_recall_val": 0.8646341463414634,
+            "reduction_ratio": 0.9858356459987286,
+            "candidate_count": 1141898.0,
+            "gold_positives": 333.0,
+            "covered": 286.0,
+            "missed": 47.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.8588588588588588,
+            "pair_recall_baseline_model_on_regen_test": 0.8588588588588588,
+            "pair_recall_variant_model_on_baseline_test": 0.8588588588588588,
+            "pair_recall_variant_model_on_regen_test": 0.8588588588588588,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.5990418390138075,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9843265809768866,
+                "candidate_count": 1689162.0,
+                "full_space": 107772401.0,
+                "runtime_s": 0.42684549902332947,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9843265809768866,
+                "reduction_ratio_variant_model": 0.9843265809768866,
+                "candidate_count_baseline_model": 1689162.0,
+                "candidate_count_variant_model": 1689162.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.7177177177177178,
+                "pair_recall_val": 0.7292682926829268,
+                "gold_positives": 333.0,
+                "covered": 239.0,
+                "missed": 94.0,
+                "reduction_ratio": 0.9873447110205706,
+                "candidate_count": 594634.0,
+                "full_space": 46986995.0,
+                "runtime_s": 0.172196339990478,
+                "pair_recall_baseline_model_on_baseline_test": 0.7177177177177178,
+                "pair_recall_baseline_model_on_regen_test": 0.7177177177177178,
+                "pair_recall_variant_model_on_baseline_test": 0.7177177177177178,
+                "pair_recall_variant_model_on_regen_test": 0.7177177177177178,
+                "reduction_ratio_baseline_model": 0.9873447110205706,
+                "reduction_ratio_variant_model": 0.9873447110205706,
+                "candidate_count_baseline_model": 594634.0,
+                "candidate_count_variant_model": 594634.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "embedding_blocker": {
+          "metrics": {
+            "pair_recall": 0.996996996996997,
+            "pair_recall_val": 0.9944210913275581,
+            "reduction_ratio": 0.9963609134326803,
+            "candidate_count": 238150.0,
+            "gold_positives": 333.0,
+            "covered": 332.0,
+            "missed": 1.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+            "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+            "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+            "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 33.163295365986414,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "embedding",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9973787680209698,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9977902505855836,
+                "candidate_count": 238150.0,
+                "full_space": 107772401.0,
+                "runtime_s": 18.562731846992392,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9977902505855836,
+                "reduction_ratio_variant_model": 0.9977902505855836,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.993993993993994,
+                "pair_recall_val": 0.9914634146341463,
+                "gold_positives": 333.0,
+                "covered": 331.0,
+                "missed": 2.0,
+                "reduction_ratio": 0.994931576279777,
+                "candidate_count": 238150.0,
+                "full_space": 46986995.0,
+                "runtime_s": 14.600563518994022,
+                "pair_recall_baseline_model_on_baseline_test": 0.993993993993994,
+                "pair_recall_baseline_model_on_regen_test": 0.993993993993994,
+                "pair_recall_variant_model_on_baseline_test": 0.993993993993994,
+                "pair_recall_variant_model_on_regen_test": 0.993993993993994,
+                "reduction_ratio_baseline_model": 0.994931576279777,
+                "reduction_ratio_variant_model": 0.994931576279777,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sorted_neighbourhood_blocker": {
+          "metrics": {
+            "pair_recall": 0.8498498498498499,
+            "pair_recall_val": 0.8584454815714605,
+            "reduction_ratio": 0.9959395553982124,
+            "candidate_count": 278194.0,
+            "gold_positives": 333.0,
+            "covered": 283.0,
+            "missed": 50.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.8498498498498499,
+            "pair_recall_baseline_model_on_regen_test": 0.8498498498498499,
+            "pair_recall_variant_model_on_baseline_test": 0.8498498498498499,
+            "pair_recall_variant_model_on_regen_test": 0.8498498498498499,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.26091725198784843,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 0.9973787680209698,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9971241152918177,
+                "candidate_count": 309941.0,
+                "full_space": 107772401.0,
+                "runtime_s": 0.1554601999814622,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.9971241152918177,
+                "reduction_ratio_variant_model": 0.9971241152918177,
+                "candidate_count_baseline_model": 309941.0,
+                "candidate_count_variant_model": 309941.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.7027027027027027,
+                "pair_recall_val": 0.7195121951219512,
+                "gold_positives": 333.0,
+                "covered": 234.0,
+                "missed": 99.0,
+                "reduction_ratio": 0.9947549955046072,
+                "candidate_count": 246447.0,
+                "full_space": 46986995.0,
+                "runtime_s": 0.10545705200638622,
+                "pair_recall_baseline_model_on_baseline_test": 0.7027027027027027,
+                "pair_recall_baseline_model_on_regen_test": 0.7027027027027027,
+                "pair_recall_variant_model_on_baseline_test": 0.7027027027027027,
+                "pair_recall_variant_model_on_regen_test": 0.7027027027027027,
+                "reduction_ratio_baseline_model": 0.9947549955046072,
+                "reduction_ratio_variant_model": 0.9947549955046072,
+                "candidate_count_baseline_model": 246447.0,
+                "candidate_count_variant_model": 246447.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "bm25_blocker": {
+          "metrics": {
+            "pair_recall": 0.9984984984984985,
+            "pair_recall_val": 0.9975609756097561,
+            "reduction_ratio": 0.9963609134326803,
+            "candidate_count": 238150.0,
+            "gold_positives": 333.0,
+            "covered": 332.5,
+            "missed": 0.5,
+            "pair_recall_baseline_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_baseline_model_on_regen_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_regen_test": 0.9984984984984985,
+            "selection_rate": 1.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 6.4272316379938275,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "sparse",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9977902505855836,
+                "candidate_count": 238150.0,
+                "full_space": 107772401.0,
+                "runtime_s": 4.715416838997044,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9977902505855836,
+                "reduction_ratio_variant_model": 0.9977902505855836,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 0.9951219512195122,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.994931576279777,
+                "candidate_count": 238150.0,
+                "full_space": 46986995.0,
+                "runtime_s": 1.7118147989967838,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.994931576279777,
+                "reduction_ratio_variant_model": 0.994931576279777,
+                "candidate_count_baseline_model": 238150.0,
+                "candidate_count_variant_model": 238150.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sc_block": {
+          "metrics": {
+            "pair_recall": 0.9984984984984985,
+            "pair_recall_val": 1.0,
+            "reduction_ratio": 0.9927218268653606,
+            "candidate_count": 476300.0,
+            "gold_positives": 333.0,
+            "covered": 332.5,
+            "missed": 0.5,
+            "pair_recall_baseline_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_baseline_model_on_regen_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_baseline_test": 0.9984984984984985,
+            "pair_recall_variant_model_on_regen_test": 0.9984984984984985,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 141.28154872800224,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "hybrid",
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 333.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9955805011711671,
+                "candidate_count": 476300.0,
+                "full_space": 107772401.0,
+                "runtime_s": 94.47089350403985,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9955805011711671,
+                "reduction_ratio_variant_model": 0.9955805011711671,
+                "candidate_count_baseline_model": 476300.0,
+                "candidate_count_variant_model": 476300.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "musicbrainz_lastfm": {
+                "pair_recall": 0.996996996996997,
+                "pair_recall_val": 1.0,
+                "gold_positives": 333.0,
+                "covered": 332.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9898631525595539,
+                "candidate_count": 476300.0,
+                "full_space": 46986995.0,
+                "runtime_s": 46.810655223962385,
+                "pair_recall_baseline_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_baseline_model_on_regen_test": 0.996996996996997,
+                "pair_recall_variant_model_on_baseline_test": 0.996996996996997,
+                "pair_recall_variant_model_on_regen_test": 0.996996996996997,
+                "reduction_ratio_baseline_model": 0.9898631525595539,
+                "reduction_ratio_variant_model": 0.9898631525595539,
+                "candidate_count_baseline_model": 476300.0,
+                "candidate_count_variant_model": 476300.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "em_matching": {
+      "stage": "em_matching",
+      "domain": "music",
+      "level": "baseline",
+      "runtime_s": 325.9609065449913,
+      "roster": [
+        "ditto_plm",
+        "magellan",
+        "llm_matcher",
+        "comem"
+      ],
+      "aggregated": {
+        "macro_f1": 0.8242095432232841,
+        "min_f1": 0.6914447226648457,
+        "max_f1": 0.9530669008929878,
+        "macro_precision": 0.9952358375569793,
+        "macro_recall": 0.7353603603603603,
+        "macro_f1_baseline_model_on_baseline_test": 0.8242095432232841,
+        "macro_f1_baseline_model_on_regen_test": 0.8242095432232841,
+        "macro_f1_variant_model_on_baseline_test": 0.8242095432232841,
+        "macro_f1_variant_model_on_regen_test": 0.8242095432232841,
+        "macro_f1_baseline_test": 0.8242095432232841,
+        "macro_f1_regen_test": 0.8242095432232841,
+        "best_member_name": "magellan",
+        "best_member_f1": 0.9530669008929878
+      },
+      "per_attribute": {},
+      "per_partition": {
+        "musicbrainz_discogs": {
+          "macro_f1": 0.8806654632581624,
+          "min_f1": 0.830715532286213,
+          "max_f1": 0.9243156199677939,
+          "n_members": 4.0
+        },
+        "musicbrainz_lastfm": {
+          "macro_f1": 0.7677536231884058,
+          "min_f1": 0.5521739130434783,
+          "max_f1": 0.9848484848484849,
+          "n_members": 4.0
+        }
+      },
+      "per_member": {
+        "ditto_plm": {
+          "metrics": {
+            "f1": 0.9521016617790812,
+            "precision": 0.9934575754669734,
+            "recall": 0.9159159159159159,
+            "f1_val": 0.9461786491896267,
+            "precision_val": 0.9377597802099648,
+            "recall_val": 0.9548572707221175,
+            "f1_baseline_model_on_baseline_test": 0.9521016617790812,
+            "precision_baseline_model_on_baseline_test": 0.9934575754669734,
+            "recall_baseline_model_on_baseline_test": 0.9159159159159159,
+            "pred_scoped_baseline_model_on_baseline_test": 307.0,
+            "f1_baseline_model_on_regen_test": 0.9521016617790812,
+            "precision_baseline_model_on_regen_test": 0.9934575754669734,
+            "recall_baseline_model_on_regen_test": 0.9159159159159159,
+            "pred_scoped_baseline_model_on_regen_test": 307.0,
+            "f1_variant_model_on_baseline_test": 0.9521016617790812,
+            "precision_variant_model_on_baseline_test": 0.9934575754669734,
+            "recall_variant_model_on_baseline_test": 0.9159159159159159,
+            "pred_scoped_variant_model_on_baseline_test": 307.0,
+            "f1_variant_model_on_regen_test": 0.9521016617790812,
+            "precision_variant_model_on_regen_test": 0.9934575754669734,
+            "recall_variant_model_on_regen_test": 0.9159159159159159,
+            "pred_scoped_variant_model_on_regen_test": 307.0,
+            "f1_baseline_test": 0.9521016617790812,
+            "precision_baseline_test": 0.9934575754669734,
+            "recall_baseline_test": 0.9159159159159159,
+            "pred_scoped_baseline_test": 307.0,
+            "f1_regen_test": 0.9521016617790812,
+            "precision_regen_test": 0.9934575754669734,
+            "recall_regen_test": 0.9159159159159159,
+            "pred_scoped_regen_test": 307.0
+          },
+          "runtime_s": 4.364455143047962,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "learned",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "f1": 0.9193548387096774,
+                "precision": 0.9930313588850174,
+                "recall": 0.8558558558558559,
+                "f1_val": 0.9136597938144331,
+                "precision_val": 0.8986058301647655,
+                "recall_val": 0.9292267365661862,
+                "tp": 285.0,
+                "fp": 2.0,
+                "fn": 48.0,
+                "f1_baseline_model_on_baseline_test": 0.9193548387096774,
+                "precision_baseline_model_on_baseline_test": 0.9930313588850174,
+                "recall_baseline_model_on_baseline_test": 0.8558558558558559,
+                "pred_scoped_baseline_model_on_baseline_test": 287.0,
+                "f1_baseline_model_on_regen_test": 0.9193548387096774,
+                "precision_baseline_model_on_regen_test": 0.9930313588850174,
+                "recall_baseline_model_on_regen_test": 0.8558558558558559,
+                "pred_scoped_baseline_model_on_regen_test": 287.0,
+                "f1_variant_model_on_baseline_test": 0.9193548387096774,
+                "precision_variant_model_on_baseline_test": 0.9930313588850174,
+                "recall_variant_model_on_baseline_test": 0.8558558558558559,
+                "pred_scoped_variant_model_on_baseline_test": 287.0,
+                "f1_variant_model_on_regen_test": 0.9193548387096774,
+                "precision_variant_model_on_regen_test": 0.9930313588850174,
+                "recall_variant_model_on_regen_test": 0.8558558558558559,
+                "pred_scoped_variant_model_on_regen_test": 287.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9193548387096774,
+                "precision_baseline_test": 0.9930313588850174,
+                "recall_baseline_test": 0.8558558558558559,
+                "pred_scoped_baseline_test": 287.0,
+                "f1_regen_test": 0.9193548387096774,
+                "precision_regen_test": 0.9930313588850174,
+                "recall_regen_test": 0.8558558558558559,
+                "pred_scoped_regen_test": 287.0
+              },
+              "musicbrainz_lastfm": {
+                "f1": 0.9848484848484849,
+                "precision": 0.9938837920489296,
+                "recall": 0.975975975975976,
+                "f1_val": 0.9786975045648204,
+                "precision_val": 0.976913730255164,
+                "recall_val": 0.9804878048780488,
+                "tp": 325.0,
+                "fp": 2.0,
+                "fn": 8.0,
+                "f1_baseline_model_on_baseline_test": 0.9848484848484849,
+                "precision_baseline_model_on_baseline_test": 0.9938837920489296,
+                "recall_baseline_model_on_baseline_test": 0.975975975975976,
+                "pred_scoped_baseline_model_on_baseline_test": 327.0,
+                "f1_baseline_model_on_regen_test": 0.9848484848484849,
+                "precision_baseline_model_on_regen_test": 0.9938837920489296,
+                "recall_baseline_model_on_regen_test": 0.975975975975976,
+                "pred_scoped_baseline_model_on_regen_test": 327.0,
+                "f1_variant_model_on_baseline_test": 0.9848484848484849,
+                "precision_variant_model_on_baseline_test": 0.9938837920489296,
+                "recall_variant_model_on_baseline_test": 0.975975975975976,
+                "pred_scoped_variant_model_on_baseline_test": 327.0,
+                "f1_variant_model_on_regen_test": 0.9848484848484849,
+                "precision_variant_model_on_regen_test": 0.9938837920489296,
+                "recall_variant_model_on_regen_test": 0.975975975975976,
+                "pred_scoped_variant_model_on_regen_test": 327.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9848484848484849,
+                "precision_baseline_test": 0.9938837920489296,
+                "recall_baseline_test": 0.975975975975976,
+                "pred_scoped_baseline_test": 327.0,
+                "f1_regen_test": 0.9848484848484849,
+                "precision_regen_test": 0.9938837920489296,
+                "recall_regen_test": 0.975975975975976,
+                "pred_scoped_regen_test": 327.0
+              }
+            }
+          }
+        },
+        "magellan": {
+          "metrics": {
+            "f1": 0.9530669008929878,
+            "precision": 0.9936767329255862,
+            "recall": 0.9174174174174174,
+            "f1_val": 0.9477496105876415,
+            "precision_val": 0.9377736214065344,
+            "recall_val": 0.9582704663874948,
+            "f1_baseline_model_on_baseline_test": 0.9530669008929878,
+            "precision_baseline_model_on_baseline_test": 0.9936767329255862,
+            "recall_baseline_model_on_baseline_test": 0.9174174174174174,
+            "pred_scoped_baseline_model_on_baseline_test": 307.5,
+            "f1_baseline_model_on_regen_test": 0.9530669008929878,
+            "precision_baseline_model_on_regen_test": 0.9936767329255862,
+            "recall_baseline_model_on_regen_test": 0.9174174174174174,
+            "pred_scoped_baseline_model_on_regen_test": 307.5,
+            "f1_variant_model_on_baseline_test": 0.9530669008929878,
+            "precision_variant_model_on_baseline_test": 0.9936767329255862,
+            "recall_variant_model_on_baseline_test": 0.9174174174174174,
+            "pred_scoped_variant_model_on_baseline_test": 307.5,
+            "f1_variant_model_on_regen_test": 0.9530669008929878,
+            "precision_variant_model_on_regen_test": 0.9936767329255862,
+            "recall_variant_model_on_regen_test": 0.9174174174174174,
+            "pred_scoped_variant_model_on_regen_test": 307.5,
+            "f1_baseline_test": 0.9530669008929878,
+            "precision_baseline_test": 0.9936767329255862,
+            "recall_baseline_test": 0.9174174174174174,
+            "pred_scoped_baseline_test": 307.5,
+            "f1_regen_test": 0.9530669008929878,
+            "precision_regen_test": 0.9936767329255862,
+            "recall_regen_test": 0.9174174174174174,
+            "pred_scoped_regen_test": 307.5
+          },
+          "runtime_s": 228.22080838598777,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "learned",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "f1": 0.9243156199677939,
+                "precision": 0.9965277777777778,
+                "recall": 0.8618618618618619,
+                "f1_val": 0.9168797953964194,
+                "precision_val": 0.8951310861423221,
+                "recall_val": 0.9397116644823067,
+                "tp": 287.0,
+                "fp": 1.0,
+                "fn": 46.0,
+                "f1_baseline_model_on_baseline_test": 0.9243156199677939,
+                "precision_baseline_model_on_baseline_test": 0.9965277777777778,
+                "recall_baseline_model_on_baseline_test": 0.8618618618618619,
+                "pred_scoped_baseline_model_on_baseline_test": 288.0,
+                "f1_baseline_model_on_regen_test": 0.9243156199677939,
+                "precision_baseline_model_on_regen_test": 0.9965277777777778,
+                "recall_baseline_model_on_regen_test": 0.8618618618618619,
+                "pred_scoped_baseline_model_on_regen_test": 288.0,
+                "f1_variant_model_on_baseline_test": 0.9243156199677939,
+                "precision_variant_model_on_baseline_test": 0.9965277777777778,
+                "recall_variant_model_on_baseline_test": 0.8618618618618619,
+                "pred_scoped_variant_model_on_baseline_test": 288.0,
+                "f1_variant_model_on_regen_test": 0.9243156199677939,
+                "precision_variant_model_on_regen_test": 0.9965277777777778,
+                "recall_variant_model_on_regen_test": 0.8618618618618619,
+                "pred_scoped_variant_model_on_regen_test": 288.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9243156199677939,
+                "precision_baseline_test": 0.9965277777777778,
+                "recall_baseline_test": 0.8618618618618619,
+                "pred_scoped_baseline_test": 288.0,
+                "f1_regen_test": 0.9243156199677939,
+                "precision_regen_test": 0.9965277777777778,
+                "recall_regen_test": 0.8618618618618619,
+                "pred_scoped_regen_test": 288.0
+              },
+              "musicbrainz_lastfm": {
+                "f1": 0.9818181818181818,
+                "precision": 0.9908256880733946,
+                "recall": 0.972972972972973,
+                "f1_val": 0.9786194257788637,
+                "precision_val": 0.9804161566707467,
+                "recall_val": 0.9768292682926829,
+                "tp": 324.0,
+                "fp": 3.0,
+                "fn": 9.0,
+                "f1_baseline_model_on_baseline_test": 0.9818181818181818,
+                "precision_baseline_model_on_baseline_test": 0.9908256880733946,
+                "recall_baseline_model_on_baseline_test": 0.972972972972973,
+                "pred_scoped_baseline_model_on_baseline_test": 327.0,
+                "f1_baseline_model_on_regen_test": 0.9818181818181818,
+                "precision_baseline_model_on_regen_test": 0.9908256880733946,
+                "recall_baseline_model_on_regen_test": 0.972972972972973,
+                "pred_scoped_baseline_model_on_regen_test": 327.0,
+                "f1_variant_model_on_baseline_test": 0.9818181818181818,
+                "precision_variant_model_on_baseline_test": 0.9908256880733946,
+                "recall_variant_model_on_baseline_test": 0.972972972972973,
+                "pred_scoped_variant_model_on_baseline_test": 327.0,
+                "f1_variant_model_on_regen_test": 0.9818181818181818,
+                "precision_variant_model_on_regen_test": 0.9908256880733946,
+                "recall_variant_model_on_regen_test": 0.972972972972973,
+                "pred_scoped_variant_model_on_regen_test": 327.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9818181818181818,
+                "precision_baseline_test": 0.9908256880733946,
+                "recall_baseline_test": 0.972972972972973,
+                "pred_scoped_baseline_test": 327.0,
+                "f1_regen_test": 0.9818181818181818,
+                "precision_regen_test": 0.9908256880733946,
+                "recall_regen_test": 0.972972972972973,
+                "pred_scoped_regen_test": 327.0
+              }
+            }
+          }
+        },
+        "llm_matcher": {
+          "metrics": {
+            "f1": 0.7002248875562219,
+            "precision": 0.9979757085020242,
+            "recall": 0.56006006006006,
+            "f1_val": 0.7002248875562219,
+            "precision_val": 0.9979757085020242,
+            "recall_val": 0.56006006006006,
+            "f1_baseline_model_on_baseline_test": 0.7002248875562219,
+            "precision_baseline_model_on_baseline_test": 0.9979757085020242,
+            "recall_baseline_model_on_baseline_test": 0.56006006006006,
+            "pred_scoped_baseline_model_on_baseline_test": 187.0,
+            "f1_baseline_model_on_regen_test": 0.7002248875562219,
+            "precision_baseline_model_on_regen_test": 0.9979757085020242,
+            "recall_baseline_model_on_regen_test": 0.56006006006006,
+            "pred_scoped_baseline_model_on_regen_test": 187.0,
+            "f1_variant_model_on_baseline_test": 0.7002248875562219,
+            "precision_variant_model_on_baseline_test": 0.9979757085020242,
+            "recall_variant_model_on_baseline_test": 0.56006006006006,
+            "pred_scoped_variant_model_on_baseline_test": 187.0,
+            "f1_variant_model_on_regen_test": 0.7002248875562219,
+            "precision_variant_model_on_regen_test": 0.9979757085020242,
+            "recall_variant_model_on_regen_test": 0.56006006006006,
+            "pred_scoped_variant_model_on_regen_test": 187.0,
+            "f1_baseline_test": 0.7002248875562219,
+            "precision_baseline_test": 0.9979757085020242,
+            "recall_baseline_test": 0.56006006006006,
+            "pred_scoped_baseline_test": 187.0,
+            "f1_regen_test": 0.7002248875562219,
+            "precision_regen_test": 0.9979757085020242,
+            "recall_regen_test": 0.56006006006006,
+            "pred_scoped_regen_test": 187.0
+          },
+          "runtime_s": 50.65079377393704,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "llm",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "f1": 0.8482758620689655,
+                "precision": 0.9959514170040485,
+                "recall": 0.7387387387387387,
+                "f1_val": 0.8482758620689655,
+                "precision_val": 0.9959514170040485,
+                "recall_val": 0.7387387387387387,
+                "tp": 246.0,
+                "fp": 1.0,
+                "fn": 87.0,
+                "f1_baseline_model_on_baseline_test": 0.8482758620689655,
+                "precision_baseline_model_on_baseline_test": 0.9959514170040485,
+                "recall_baseline_model_on_baseline_test": 0.7387387387387387,
+                "pred_scoped_baseline_model_on_baseline_test": 247.0,
+                "f1_baseline_model_on_regen_test": 0.8482758620689655,
+                "precision_baseline_model_on_regen_test": 0.9959514170040485,
+                "recall_baseline_model_on_regen_test": 0.7387387387387387,
+                "pred_scoped_baseline_model_on_regen_test": 247.0,
+                "f1_variant_model_on_baseline_test": 0.8482758620689655,
+                "precision_variant_model_on_baseline_test": 0.9959514170040485,
+                "recall_variant_model_on_baseline_test": 0.7387387387387387,
+                "pred_scoped_variant_model_on_baseline_test": 247.0,
+                "f1_variant_model_on_regen_test": 0.8482758620689655,
+                "precision_variant_model_on_regen_test": 0.9959514170040485,
+                "recall_variant_model_on_regen_test": 0.7387387387387387,
+                "pred_scoped_variant_model_on_regen_test": 247.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.8482758620689655,
+                "precision_baseline_test": 0.9959514170040485,
+                "recall_baseline_test": 0.7387387387387387,
+                "pred_scoped_baseline_test": 247.0,
+                "f1_regen_test": 0.8482758620689655,
+                "precision_regen_test": 0.9959514170040485,
+                "recall_regen_test": 0.7387387387387387,
+                "pred_scoped_regen_test": 247.0
+              },
+              "musicbrainz_lastfm": {
+                "f1": 0.5521739130434783,
+                "precision": 1.0,
+                "recall": 0.3813813813813814,
+                "f1_val": 0.5521739130434783,
+                "precision_val": 1.0,
+                "recall_val": 0.3813813813813814,
+                "tp": 127.0,
+                "fp": 0.0,
+                "fn": 206.0,
+                "f1_baseline_model_on_baseline_test": 0.5521739130434783,
+                "precision_baseline_model_on_baseline_test": 1.0,
+                "recall_baseline_model_on_baseline_test": 0.3813813813813814,
+                "pred_scoped_baseline_model_on_baseline_test": 127.0,
+                "f1_baseline_model_on_regen_test": 0.5521739130434783,
+                "precision_baseline_model_on_regen_test": 1.0,
+                "recall_baseline_model_on_regen_test": 0.3813813813813814,
+                "pred_scoped_baseline_model_on_regen_test": 127.0,
+                "f1_variant_model_on_baseline_test": 0.5521739130434783,
+                "precision_variant_model_on_baseline_test": 1.0,
+                "recall_variant_model_on_baseline_test": 0.3813813813813814,
+                "pred_scoped_variant_model_on_baseline_test": 127.0,
+                "f1_variant_model_on_regen_test": 0.5521739130434783,
+                "precision_variant_model_on_regen_test": 1.0,
+                "recall_variant_model_on_regen_test": 0.3813813813813814,
+                "pred_scoped_variant_model_on_regen_test": 127.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.5521739130434783,
+                "precision_baseline_test": 1.0,
+                "recall_baseline_test": 0.3813813813813814,
+                "pred_scoped_baseline_test": 127.0,
+                "f1_regen_test": 0.5521739130434783,
+                "precision_regen_test": 1.0,
+                "recall_regen_test": 0.3813813813813814,
+                "pred_scoped_regen_test": 127.0
+              }
+            }
+          }
+        },
+        "comem": {
+          "metrics": {
+            "f1": 0.6914447226648457,
+            "precision": 0.9958333333333333,
+            "recall": 0.5480480480480481,
+            "f1_val": 0.6914447226648457,
+            "precision_val": 0.9958333333333333,
+            "recall_val": 0.5480480480480481,
+            "f1_baseline_model_on_baseline_test": 0.6914447226648457,
+            "precision_baseline_model_on_baseline_test": 0.9958333333333333,
+            "recall_baseline_model_on_baseline_test": 0.5480480480480481,
+            "pred_scoped_baseline_model_on_baseline_test": 183.5,
+            "f1_baseline_model_on_regen_test": 0.6914447226648457,
+            "precision_baseline_model_on_regen_test": 0.9958333333333333,
+            "recall_baseline_model_on_regen_test": 0.5480480480480481,
+            "pred_scoped_baseline_model_on_regen_test": 183.5,
+            "f1_variant_model_on_baseline_test": 0.6914447226648457,
+            "precision_variant_model_on_baseline_test": 0.9958333333333333,
+            "recall_variant_model_on_baseline_test": 0.5480480480480481,
+            "pred_scoped_variant_model_on_baseline_test": 183.5,
+            "f1_variant_model_on_regen_test": 0.6914447226648457,
+            "precision_variant_model_on_regen_test": 0.9958333333333333,
+            "recall_variant_model_on_regen_test": 0.5480480480480481,
+            "pred_scoped_variant_model_on_regen_test": 183.5,
+            "f1_baseline_test": 0.6914447226648457,
+            "precision_baseline_test": 0.9958333333333333,
+            "recall_baseline_test": 0.5480480480480481,
+            "pred_scoped_baseline_test": 183.5,
+            "f1_regen_test": 0.6914447226648457,
+            "precision_regen_test": 0.9958333333333333,
+            "recall_regen_test": 0.5480480480480481,
+            "pred_scoped_regen_test": 183.5
+          },
+          "runtime_s": 42.70403979701223,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "llm",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "musicbrainz_discogs": {
+                "f1": 0.830715532286213,
+                "precision": 0.9916666666666667,
+                "recall": 0.7147147147147147,
+                "f1_val": 0.830715532286213,
+                "precision_val": 0.9916666666666667,
+                "recall_val": 0.7147147147147147,
+                "tp": 238.0,
+                "fp": 2.0,
+                "fn": 95.0,
+                "f1_baseline_model_on_baseline_test": 0.830715532286213,
+                "precision_baseline_model_on_baseline_test": 0.9916666666666667,
+                "recall_baseline_model_on_baseline_test": 0.7147147147147147,
+                "pred_scoped_baseline_model_on_baseline_test": 240.0,
+                "f1_baseline_model_on_regen_test": 0.830715532286213,
+                "precision_baseline_model_on_regen_test": 0.9916666666666667,
+                "recall_baseline_model_on_regen_test": 0.7147147147147147,
+                "pred_scoped_baseline_model_on_regen_test": 240.0,
+                "f1_variant_model_on_baseline_test": 0.830715532286213,
+                "precision_variant_model_on_baseline_test": 0.9916666666666667,
+                "recall_variant_model_on_baseline_test": 0.7147147147147147,
+                "pred_scoped_variant_model_on_baseline_test": 240.0,
+                "f1_variant_model_on_regen_test": 0.830715532286213,
+                "precision_variant_model_on_regen_test": 0.9916666666666667,
+                "recall_variant_model_on_regen_test": 0.7147147147147147,
+                "pred_scoped_variant_model_on_regen_test": 240.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.830715532286213,
+                "precision_baseline_test": 0.9916666666666667,
+                "recall_baseline_test": 0.7147147147147147,
+                "pred_scoped_baseline_test": 240.0,
+                "f1_regen_test": 0.830715532286213,
+                "precision_regen_test": 0.9916666666666667,
+                "recall_regen_test": 0.7147147147147147,
+                "pred_scoped_regen_test": 240.0
+              },
+              "musicbrainz_lastfm": {
+                "f1": 0.5521739130434783,
+                "precision": 1.0,
+                "recall": 0.3813813813813814,
+                "f1_val": 0.5521739130434783,
+                "precision_val": 1.0,
+                "recall_val": 0.3813813813813814,
+                "tp": 127.0,
+                "fp": 0.0,
+                "fn": 206.0,
+                "f1_baseline_model_on_baseline_test": 0.5521739130434783,
+                "precision_baseline_model_on_baseline_test": 1.0,
+                "recall_baseline_model_on_baseline_test": 0.3813813813813814,
+                "pred_scoped_baseline_model_on_baseline_test": 127.0,
+                "f1_baseline_model_on_regen_test": 0.5521739130434783,
+                "precision_baseline_model_on_regen_test": 1.0,
+                "recall_baseline_model_on_regen_test": 0.3813813813813814,
+                "pred_scoped_baseline_model_on_regen_test": 127.0,
+                "f1_variant_model_on_baseline_test": 0.5521739130434783,
+                "precision_variant_model_on_baseline_test": 1.0,
+                "recall_variant_model_on_baseline_test": 0.3813813813813814,
+                "pred_scoped_variant_model_on_baseline_test": 127.0,
+                "f1_variant_model_on_regen_test": 0.5521739130434783,
+                "precision_variant_model_on_regen_test": 1.0,
+                "recall_variant_model_on_regen_test": 0.3813813813813814,
+                "pred_scoped_variant_model_on_regen_test": 127.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.5521739130434783,
+                "precision_baseline_test": 1.0,
+                "recall_baseline_test": 0.3813813813813814,
+                "pred_scoped_baseline_test": 127.0,
+                "f1_regen_test": 0.5521739130434783,
+                "precision_regen_test": 1.0,
+                "recall_regen_test": 0.3813813813813814,
+                "pred_scoped_regen_test": 127.0
+              }
+            }
+          }
+        }
+      },
+      "per_blocker": {}
+    },
+    "fusion": {
+      "stage": "fusion",
+      "domain": "music",
+      "level": "baseline",
+      "runtime_s": 616.2988494085148,
+      "roster": [
+        "pydi_per_attribute_optimal",
+        "llm_only",
+        "fusionquery_only",
+        "truthfinder_only",
+        "ltm_only",
+        "casefusion_only",
+        "accusim_only",
+        "voting_only",
+        "prefer_higher_trust_only"
+      ],
+      "aggregated": {
+        "macro_accuracy": 0.7263701839337575,
+        "min_accuracy": 0.6883953707346,
+        "max_accuracy": 0.7510953425530166,
+        "best_member_macro_accuracy": 0.7510953425530166,
+        "overall_accuracy": 0.7510953425530166
+      },
+      "per_attribute": {
+        "name": {
+          "pydi_per_attribute_optimal": 0.93,
+          "llm_only": 0.93,
+          "fusionquery_only": 0.8,
+          "truthfinder_only": 0.93,
+          "ltm_only": 0.92,
+          "casefusion_only": 0.92,
+          "accusim_only": 0.92,
+          "voting_only": 0.93,
+          "prefer_higher_trust_only": 0.92,
+          "best_member_accuracy": 0.93,
+          "mean_member_accuracy": 0.9111111111111112
+        },
+        "artist": {
+          "pydi_per_attribute_optimal": 0.91,
+          "llm_only": 0.96,
+          "fusionquery_only": 0.74,
+          "truthfinder_only": 0.91,
+          "ltm_only": 0.86,
+          "casefusion_only": 0.92,
+          "accusim_only": 0.94,
+          "voting_only": 0.91,
+          "prefer_higher_trust_only": 0.92,
+          "best_member_accuracy": 0.96,
+          "mean_member_accuracy": 0.8966666666666667
+        },
+        "release-date": {
+          "pydi_per_attribute_optimal": 0.9895833333333334,
+          "llm_only": 0.9895833333333334,
+          "fusionquery_only": 0.9895833333333334,
+          "truthfinder_only": 0.9895833333333334,
+          "ltm_only": 0.9479166666666666,
+          "casefusion_only": 0.9791666666666666,
+          "accusim_only": 0.9895833333333334,
+          "voting_only": 0.9895833333333334,
+          "prefer_higher_trust_only": 0.9791666666666666,
+          "best_member_accuracy": 0.9895833333333334,
+          "mean_member_accuracy": 0.9826388888888888
+        },
+        "release-country": {
+          "pydi_per_attribute_optimal": 0.9285714285714286,
+          "llm_only": 0.2755102040816326,
+          "fusionquery_only": 0.8877551020408163,
+          "truthfinder_only": 0.9591836734693877,
+          "ltm_only": 0.8979591836734694,
+          "casefusion_only": 0.6530612244897959,
+          "accusim_only": 0.9285714285714286,
+          "voting_only": 0.9285714285714286,
+          "prefer_higher_trust_only": 0.9795918367346939,
+          "best_member_accuracy": 0.9795918367346939,
+          "mean_member_accuracy": 0.8265306122448979
+        },
+        "genre": {
+          "pydi_per_attribute_optimal": 0.4266666666666667,
+          "llm_only": 0.4266666666666667,
+          "fusionquery_only": 0.4266666666666667,
+          "truthfinder_only": 0.4266666666666667,
+          "ltm_only": 0.4266666666666667,
+          "casefusion_only": 0.4266666666666667,
+          "accusim_only": 0.4266666666666667,
+          "voting_only": 0.4266666666666667,
+          "prefer_higher_trust_only": 0.4266666666666667,
+          "best_member_accuracy": 0.4266666666666667,
+          "mean_member_accuracy": 0.4266666666666667
+        },
+        "label": {
+          "pydi_per_attribute_optimal": 0.9659090909090909,
+          "llm_only": 0.9659090909090909,
+          "fusionquery_only": 0.9431818181818182,
+          "truthfinder_only": 0.9431818181818182,
+          "ltm_only": 0.9431818181818182,
+          "casefusion_only": 0.9431818181818182,
+          "accusim_only": 0.9431818181818182,
+          "voting_only": 0.9659090909090909,
+          "prefer_higher_trust_only": 0.9659090909090909,
+          "best_member_accuracy": 0.9659090909090909,
+          "mean_member_accuracy": 0.9532828282828283
+        },
+        "duration": {
+          "pydi_per_attribute_optimal": 0.7848101265822784,
+          "llm_only": 0.759493670886076,
+          "fusionquery_only": 0.7848101265822784,
+          "truthfinder_only": 0.7848101265822784,
+          "ltm_only": 0.7848101265822784,
+          "casefusion_only": 0.7848101265822784,
+          "accusim_only": 0.8607594936708861,
+          "voting_only": 0.7974683544303798,
+          "prefer_higher_trust_only": 0.7848101265822784,
+          "best_member_accuracy": 0.8607594936708861,
+          "mean_member_accuracy": 0.7918424753867792
+        },
+        "tracks": {
+          "pydi_per_attribute_optimal": 0.0,
+          "llm_only": 0.2,
+          "fusionquery_only": 0.0,
+          "truthfinder_only": 0.0,
+          "ltm_only": 0.0,
+          "casefusion_only": 0.0,
+          "accusim_only": 0.0,
+          "voting_only": 0.0,
+          "prefer_higher_trust_only": 0.0,
+          "best_member_accuracy": 0.2,
+          "mean_member_accuracy": 0.022222222222222223
+        }
+      },
+      "per_partition": {},
+      "per_member": {
+        "pydi_per_attribute_optimal": {
+          "metrics": {
+            "overall_accuracy": 0.756198347107438,
+            "macro_accuracy": 0.7419425807578497,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 549,
+            "name_accuracy": 0.93,
+            "name_count": 100,
+            "artist_accuracy": 0.91,
+            "artist_count": 100,
+            "release-country_accuracy": 0.9285714285714286,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9659090909090909,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7419425807578497,
+            "f1_test": 0.7419425807578497,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 3.4569829907268286,
+          "notes": {
+            "selection_map": {
+              "name": "voting",
+              "artist": "voting",
+              "release-date": "voting",
+              "release-country": "voting",
+              "genre": "voting",
+              "label": "voting",
+              "duration": "prefer_higher_trust",
+              "tracks": "union"
+            },
+            "native_types": []
+          }
+        },
+        "llm_only": {
+          "metrics": {
+            "overall_accuracy": 0.696969696969697,
+            "macro_accuracy": 0.6883953707346,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 506,
+            "name_accuracy": 0.93,
+            "name_count": 100,
+            "artist_accuracy": 0.96,
+            "artist_count": 100,
+            "release-country_accuracy": 0.2755102040816326,
+            "release-country_count": 98,
+            "duration_accuracy": 0.759493670886076,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9659090909090909,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.2,
+            "tracks_count": 90,
+            "f1": 0.6883953707346,
+            "f1_test": 0.6883953707346,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 518.2680055424571,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "fusionquery_only": {
+          "metrics": {
+            "overall_accuracy": 0.7066115702479339,
+            "macro_accuracy": 0.6964996308506142,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 513,
+            "name_accuracy": 0.8,
+            "name_count": 100,
+            "artist_accuracy": 0.74,
+            "artist_count": 100,
+            "release-country_accuracy": 0.8877551020408163,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9431818181818182,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.6964996308506142,
+            "f1_test": 0.6964996308506142,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 14.316423523239791,
+          "notes": {
+            "selection_map": {
+              "duration": "prefer_higher_trust",
+              "tracks": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "truthfinder_only": {
+          "metrics": {
+            "overall_accuracy": 0.7575757575757576,
+            "macro_accuracy": 0.7429282022791855,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 550,
+            "name_accuracy": 0.93,
+            "name_count": 100,
+            "artist_accuracy": 0.91,
+            "artist_count": 100,
+            "release-country_accuracy": 0.9591836734693877,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9431818181818182,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7429282022791855,
+            "f1_test": 0.7429282022791855,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 14.512090421281755,
+          "notes": {
+            "selection_map": {
+              "duration": "prefer_higher_trust",
+              "tracks": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "ltm_only": {
+          "metrics": {
+            "overall_accuracy": 0.7355371900826446,
+            "macro_accuracy": 0.7225668077213625,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 534,
+            "name_accuracy": 0.92,
+            "name_count": 100,
+            "artist_accuracy": 0.86,
+            "artist_count": 100,
+            "release-country_accuracy": 0.8979591836734694,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9479166666666666,
+            "release-date_count": 96,
+            "label_accuracy": 0.9431818181818182,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7225668077213625,
+            "f1_test": 0.7225668077213625,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 17.10779352672398,
+          "notes": {
+            "selection_map": {
+              "duration": "prefer_higher_trust"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "string"
+            ]
+          }
+        },
+        "casefusion_only": {
+          "metrics": {
+            "overall_accuracy": 0.7148760330578512,
+            "macro_accuracy": 0.7033608128234032,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 519,
+            "name_accuracy": 0.92,
+            "name_count": 100,
+            "artist_accuracy": 0.92,
+            "artist_count": 100,
+            "release-country_accuracy": 0.6530612244897959,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9791666666666666,
+            "release-date_count": 96,
+            "label_accuracy": 0.9431818181818182,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7033608128234032,
+            "f1_test": 0.7033608128234032,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 14.204373624175787,
+          "notes": {
+            "selection_map": {
+              "duration": "prefer_higher_trust",
+              "tracks": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "accusim_only": {
+          "metrics": {
+            "overall_accuracy": 0.7644628099173554,
+            "macro_accuracy": 0.7510953425530166,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 555,
+            "name_accuracy": 0.92,
+            "name_count": 100,
+            "artist_accuracy": 0.94,
+            "artist_count": 100,
+            "release-country_accuracy": 0.9285714285714286,
+            "release-country_count": 98,
+            "duration_accuracy": 0.8607594936708861,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9431818181818182,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7510953425530166,
+            "f1_test": 0.7510953425530166,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 18.411619062535465,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "voting_only": {
+          "metrics": {
+            "overall_accuracy": 0.7575757575757576,
+            "macro_accuracy": 0.7435248592388624,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 550,
+            "name_accuracy": 0.93,
+            "name_count": 100,
+            "artist_accuracy": 0.91,
+            "artist_count": 100,
+            "release-country_accuracy": 0.9285714285714286,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7974683544303798,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9895833333333334,
+            "release-date_count": 96,
+            "label_accuracy": 0.9659090909090909,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7435248592388624,
+            "f1_test": 0.7435248592388624,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 3.1172281140461564,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "prefer_higher_trust_only": {
+          "metrics": {
+            "overall_accuracy": 0.7617079889807162,
+            "macro_accuracy": 0.7470180484449245,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 726,
+            "total_correct": 553,
+            "name_accuracy": 0.92,
+            "name_count": 100,
+            "artist_accuracy": 0.92,
+            "artist_count": 100,
+            "release-country_accuracy": 0.9795918367346939,
+            "release-country_count": 98,
+            "duration_accuracy": 0.7848101265822784,
+            "duration_count": 79,
+            "release-date_accuracy": 0.9791666666666666,
+            "release-date_count": 96,
+            "label_accuracy": 0.9659090909090909,
+            "label_count": 88,
+            "genre_accuracy": 0.4266666666666667,
+            "genre_count": 75,
+            "tracks_accuracy": 0.0,
+            "tracks_count": 90,
+            "f1": 0.7470180484449245,
+            "f1_test": 0.7470180484449245,
+            "macro_accuracy_val": 0.7030435796939156,
+            "f1_val": 0.7030435796939156
+          },
+          "runtime_s": 3.4522180818021297,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        }
+      },
+      "per_blocker": {}
+    }
+  }
+}

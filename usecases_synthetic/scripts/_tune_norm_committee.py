@@ -1,22 +1,22 @@
 """Tune Normalization committee hyperparameters per member.
 
-One-off sweep harness for the R5 Normalization-stage hyperparameter
-optimisation (2026-05-10). Loads each domain's baseline bundle,
+One-off sweep harness for the Normalization-stage hyperparameter
+optimisation. Loads each domain's baseline bundle,
 instantiates each member under a parameter grid, scores per-attribute
-F1 against the fusion val/test reference values via the Pending #5
+F1 against the fusion val/test reference values via the
 closeness contract, and reports the best param combo per member by
 mean F1 across companies + games + music.
 
 Mirrors :mod:`_tune_sm_committee` in shape; per-member SPECS define
 ``init_param_grid`` (cartesian over constructor kwargs).
 
-C12 note: the SPECS "members" (text_clean / date_iso / number_locale /
-country_iso / taxonomy_lookup / llm_canonicalize) are NOT the C12 norm
+Note: the SPECS "members" (text_clean / date_iso / number_locale /
+country_iso / taxonomy_lookup / llm_canonicalize) are NOT the norm
 committee's three wrapper members (rule_per_attribute_optimal / llm_only
 / passthrough). They are the per-rule candidates declared under
 ``rule_normalizers`` in the committee YAML, which ``rule_per_attribute_
 optimal`` selects among per attribute (and ``llm_canonicalize`` ==
-``llm_only``'s LLMCanonicalizer). So this tuner IS C12-compatible: it
+``llm_only``'s LLMCanonicalizer). So this tuner IS compatible with the coherent-member roster: it
 tunes the candidate-rule params; apply winners to the matching
 ``rule_normalizers[*].params`` / ``llm_normalizer.params`` blocks. (The
 llm_canonicalize grid pins max_tokens=2048 + prompt v2 to match the

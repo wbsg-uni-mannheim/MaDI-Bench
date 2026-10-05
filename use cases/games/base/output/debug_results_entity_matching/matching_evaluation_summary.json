@@ -1,14 +1,14 @@
 {
   "precision": 1.0,
-  "recall": 0.5775862068965517,
-  "f1": 0.73224043715847,
-  "accuracy": 0.8781094527363185,
-  "true_positives": 67,
+  "recall": 0.646551724137931,
+  "f1": 0.7853403141361257,
+  "accuracy": 0.8980099502487562,
+  "true_positives": 75,
   "false_positives": 0,
-  "false_negatives": 49,
+  "false_negatives": 41,
   "true_negatives": 286,
   "threshold_used": 0.0,
   "total_correspondences": 2987,
   "filtered_correspondences": 2987,
-  "evaluation_timestamp": "2026-06-09T18:16:25.004459"
+  "evaluation_timestamp": "2026-09-24T17:21:33.187424"
 }

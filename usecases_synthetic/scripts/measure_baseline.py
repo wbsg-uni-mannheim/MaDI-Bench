@@ -6,7 +6,7 @@ committees on the original ``usecases/<domain>/`` data and persist the
 per-stage, per-member, per-attribute metrics as the reference point for
 all subsequent variant validation.
 
-The output is committed to the repo so validation runs (M7/M8) are
+The output is committed to the repo so validation runs (``validate_variant.py`` / ``analyze_monotonicity.py``) are
 reproducible without re-measuring.
 
 Usage
@@ -111,14 +111,14 @@ def _file_sha256(path: Path) -> str:
 
 
 # Files that actually drive each committee's runtime.  EM is a pair after
-# the C2.4b split (see plans/plan_committee_finalization.md): both YAMLs
+# the blocking/matching split: both YAMLs
 # must be hashed so drift detection catches edits to either file.  The
 # combined ``file@sha+file@sha`` format keeps a single ``em`` stage entry
 # while pinning both files; ``_check_committee_versions`` in
 # ``validate_variant.py`` computes the same string so exact-match checks
 # continue to work. Filenames here are *base names* (no ``.yaml`` suffix);
 # ``resolve_committee_path`` from ``committee_paths`` picks the canonical
-# (companies) or per-domain fork (per S10).
+# (companies) or per-domain fork.
 _STAGE_YAML_BASE_NAMES: dict[Stage, tuple[str, ...]] = {
     "sm": ("sm_committee",),
     "norm": ("normalization_committee",),
@@ -148,7 +148,7 @@ def _committee_versions(stages: list[Stage], domain: str) -> dict[str, str]:
     -------
     dict[str, str]
         Version strings keyed by stage name.  Multi-file stages (``em``
-        after the C2.4b split) emit ``file1@sha1+file2@sha2`` so both
+        after the blocking/matching split) emit ``file1@sha1+file2@sha2`` so both
         source files are pinned under a single stage key. Hashed file is
         the resolved per-domain fork (or canonical companies file when
         no fork exists for that domain).
@@ -285,7 +285,7 @@ def measure_baseline(
         )
 
     # --- EM ---
-    # EM stage split (2026-05-13, perfect-prior-step design):
+    # EM stage split (perfect-prior-step design):
     # - ``em_blocking`` measures blockers on full sources (recall +
     #   reduction_ratio) — no matching runs.
     # - ``em_matching`` measures matchers on labelled (id1, id2) pairs
@@ -335,7 +335,7 @@ def measure_baseline(
         )
 
     # --- Fusion ---
-    # Per R5 Fusion design (plans/plan_s1_scale.md, 2026-05-12): each
+    # Per the fusion committee design, each
     # committee is evaluated against the **perfect** output of the prior
     # pipeline step, isolating its own signal. For fusion that means
     # assuming the EM step produced the ground-truth clusters declared in

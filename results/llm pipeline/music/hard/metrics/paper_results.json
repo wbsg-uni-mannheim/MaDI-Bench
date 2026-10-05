@@ -7,7 +7,7 @@
     "metric": "f1",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": null,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 0.9090909090909091
   },
@@ -19,7 +19,7 @@
     "metric": "precision",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": 20,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 1.0
   },
@@ -31,7 +31,7 @@
     "metric": "recall",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": 20,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/music-augmented/hard/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 0.8333333333333334
   },

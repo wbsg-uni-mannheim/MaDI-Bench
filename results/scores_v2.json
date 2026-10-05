@@ -1,0 +1,5713 @@
+{
+ "manifest": {
+  "generated_utc": "20261002T185415Z",
+  "script": "reproduction/scoring/rescore.py",
+  "repository_commit": null,
+  "package_version": "0.2.0",
+  "package_path": "madi_bench",
+  "fusion_rules_sha256": "fe7395633591c1e7413d2b386fb3e01adb5c3dbcc2da176c34cc1414dd577d59",
+  "gold_loader_sha256": "3392d362afa4a078e7e383dab0004cac00d684a8aa3dcfa1c155fac3a7c20b1b",
+  "fusion_score_sha256": "21ac2432c1d5421c0ada29abfb3154b675a44952a332942da1cc86d69b30b9e1",
+  "tasks_root": "use cases",
+  "p1_root": "use cases",
+  "p2_norm_root": "<p2-norm-root>",
+  "record_id_maps_root": "<record-id-maps>",
+  "submissions": {},
+  "pipelines_run": [
+   "p2_best_of_breeds",
+   "p3_llm_pipeline",
+   "p1_human"
+  ],
+  "domains": [
+   "companies",
+   "games",
+   "music",
+   "papers",
+   "products"
+  ],
+  "tiers": [
+   "base",
+   "easy",
+   "medium",
+   "hard"
+  ],
+  "fusion_rules": "strict",
+  "gold": "v2",
+  "headline": "overall_accuracy_all_gold = evaluated accuracy x gold coverage x attribute cell coverage",
+  "record_id_translation": {
+   "applied": true,
+   "tasks": {
+    "companies_easy": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "4f5076789fb19710715284fb6d9f735551f648376bcdd0e418716ed2998ed914",
+     "synthetic_ids": 6,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 6,
+       "id": 6,
+       "_fusion_sources": 6
+      },
+      "p3_llm_pipeline": {
+       "_id": 6,
+       "id": 6,
+       "_fusion_sources": 6
+      }
+     }
+    },
+    "companies_medium": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "1ceb11bb0430016734bdf8d98463fb2fe01eccb2de84019f17228fb80e30cf42",
+     "synthetic_ids": 626,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 284,
+       "id": 299,
+       "_fusion_sources": 626
+      },
+      "p3_llm_pipeline": {
+       "_id": 315,
+       "id": 315,
+       "_fusion_sources": 626
+      }
+     }
+    },
+    "companies_hard": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "e7b3eefc831a0bfb97bbb83f3258c45655aaf9fd731b5d439870b4b6a6d3788e",
+     "synthetic_ids": 1453,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 732,
+       "id": 757,
+       "_fusion_sources": 1453
+      },
+      "p3_llm_pipeline": {
+       "_id": 858,
+       "id": 858,
+       "_fusion_sources": 1453
+      }
+     }
+    },
+    "games_easy": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "6842047122dac69f7d142cf6ff7e8994263026d8527d18536353a83141ff9c26",
+     "synthetic_ids": 4560,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 3594,
+       "id": 3594,
+       "_fusion_sources": 4560
+      },
+      "p3_llm_pipeline": {
+       "_id": 3163,
+       "id": 3163,
+       "_fusion_sources": 4560
+      }
+     }
+    },
+    "games_medium": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "25a51ae36435d795351aaef7d296e4370e8a9830a2fdefdf87c6dd6a6c9c7c4f",
+     "synthetic_ids": 792,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 292,
+       "id": 292,
+       "_fusion_sources": 792
+      },
+      "p3_llm_pipeline": {
+       "_id": 274,
+       "id": 274,
+       "_fusion_sources": 792
+      }
+     }
+    },
+    "games_hard": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "c166518b5bffcd68313f4fccbcaf77d7aa2d657eb90af1e5edbd7ac1657d293e",
+     "synthetic_ids": 1362,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 1242,
+       "id": 1253,
+       "_fusion_sources": 1362
+      },
+      "p3_llm_pipeline": {
+       "_id": 1181,
+       "id": 1181,
+       "_fusion_sources": 1362
+      }
+     }
+    },
+    "music_easy": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "88165a451a1a0f6a43dfb50136a93dcda8fa5b6dd10ab04ecfbfbae1cbf9f063",
+     "synthetic_ids": 2496,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 1774,
+       "id": 640,
+       "_fusion_sources": 2496
+      },
+      "p3_llm_pipeline": {
+       "_id": 1361,
+       "id": 1361,
+       "_fusion_sources": 2496
+      }
+     }
+    },
+    "music_medium": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "e3309c81c747ebd73f3ca60fa1f9dd4a8f16c0779d9d8e2703df4eca173aa937",
+     "synthetic_ids": 161,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 82,
+       "id": 82,
+       "_fusion_sources": 161
+      },
+      "p3_llm_pipeline": {
+       "_id": 82,
+       "id": 82,
+       "_fusion_sources": 161
+      }
+     }
+    },
+    "music_hard": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "09095f3a1220df62e87282e8748b1dea490a7fda7e07f66c5716893b9a7d7443",
+     "synthetic_ids": 993,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 797,
+       "id": 785,
+       "_fusion_sources": 993
+      },
+      "p3_llm_pipeline": {
+       "_id": 806,
+       "id": 806,
+       "_fusion_sources": 993
+      }
+     }
+    },
+    "papers_easy": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "25626699cde219e863e5acf1c6bbf43efd10cc1cd3ccb372e908a8afbcadc460",
+     "synthetic_ids": 2298,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 767,
+       "id": 767,
+       "_fusion_sources": 2298
+      },
+      "p3_llm_pipeline": {
+       "_id": 784,
+       "id": 784,
+       "_fusion_sources": 2298
+      }
+     }
+    },
+    "papers_medium": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "47343b67176728b20842285825d631849e4e1399aa282993a167754f37a4ad46",
+     "synthetic_ids": 78,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 26,
+       "id": 26,
+       "_fusion_sources": 78
+      },
+      "p3_llm_pipeline": {
+       "_id": 28,
+       "id": 28,
+       "_fusion_sources": 78
+      }
+     }
+    },
+    "papers_hard": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "b947b5d281d48489f68dd120853718faffbee4fdf2c4ddbd60c887aba0f37627",
+     "synthetic_ids": 2513,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 1612,
+       "id": 1931,
+       "_fusion_sources": 2513
+      },
+      "p3_llm_pipeline": {
+       "_id": 944,
+       "id": 944,
+       "_fusion_sources": 1462
+      }
+     }
+    },
+    "products_easy": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "5314d2aa079837fd6d99c76d72bbc0587b09ac3aed5a76e52f03a31c82685fd6",
+     "synthetic_ids": 1459,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      },
+      "p3_llm_pipeline": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      }
+     }
+    },
+    "products_medium": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "88865b2b51f9bbe72cd9319f76bfb70b783d3b40909a987008013ff1aba9a148",
+     "synthetic_ids": 1480,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      },
+      "p3_llm_pipeline": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      }
+     }
+    },
+    "products_hard": {
+     "map": "output/provenance/record_id_map.csv",
+     "map_sha256": "47bbbe03994d4edad9ac7507f29911772c16166f93f655b44310e5754d194b0f",
+     "synthetic_ids": 49,
+     "ids_replaced": {
+      "p2_best_of_breeds": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      },
+      "p3_llm_pipeline": {
+       "_id": 0,
+       "id": 0,
+       "_fusion_sources": 0
+      }
+     }
+    }
+   }
+  },
+  "task_files": {
+   "companies_base": {
+    "fusion_gold_test": {
+     "path": "use cases/companies/base/input/fusion/test_set.xml",
+     "sha256": "90edbefed23406e610790747ca178e2dcfa61df545ff3e882ed1b6ece96e7aa3"
+    },
+    "normalization_test": {
+     "path": "use cases/companies/base/input/normalization/test.csv",
+     "sha256": "1d35401aa901faf09fe9b7707fbccaed7959c1ed739ce63d9aa82bc06aa9b24c"
+    }
+   },
+   "companies_easy": {
+    "fusion_gold_test": {
+     "path": "use cases/companies/easy/input/fusion/test_set.xml",
+     "sha256": "90edbefed23406e610790747ca178e2dcfa61df545ff3e882ed1b6ece96e7aa3"
+    },
+    "normalization_test": {
+     "path": "use cases/companies/easy/input/normalization/test.csv",
+     "sha256": "093131b11cdac8bd443621a96cd45e59be00ffc8a6c6d1be23f72ba595a608ae"
+    }
+   },
+   "companies_medium": {
+    "fusion_gold_test": {
+     "path": "use cases/companies/medium/input/fusion/test_set.xml",
+     "sha256": "90edbefed23406e610790747ca178e2dcfa61df545ff3e882ed1b6ece96e7aa3"
+    },
+    "normalization_test": {
+     "path": "use cases/companies/medium/input/normalization/test.csv",
+     "sha256": "c62957f3ffe9411b910da77321143f40bb224ef83551437d140e6b54b07caa2a"
+    }
+   },
+   "companies_hard": {
+    "fusion_gold_test": {
+     "path": "use cases/companies/hard/input/fusion/test_set.xml",
+     "sha256": "6a6c9735c44d9c773c08c58f9fc6c755e91be62e967d14b18388e313f4fb7ec3"
+    },
+    "normalization_test": {
+     "path": "use cases/companies/hard/input/normalization/test.csv",
+     "sha256": "7292c52760a45d11c5a6fcac119207586eae666b7a3296158a46ba02855c7da8"
+    }
+   },
+   "games_base": {
+    "fusion_gold_test": {
+     "path": "use cases/games/base/input/fusion/test_set.xml",
+     "sha256": "99206041ed6c97c923b165cc109e03ca94a7c5254489038a0166c3ca281296bb"
+    },
+    "normalization_test": {
+     "path": "use cases/games/base/input/normalization/test.csv",
+     "sha256": "af923edc874345fe8f7c620394d1cc8944991ef4c709e67938bf53f031d8b097"
+    }
+   },
+   "games_easy": {
+    "fusion_gold_test": {
+     "path": "use cases/games/easy/input/fusion/test_set.xml",
+     "sha256": "99206041ed6c97c923b165cc109e03ca94a7c5254489038a0166c3ca281296bb"
+    },
+    "normalization_test": {
+     "path": "use cases/games/easy/input/normalization/test.csv",
+     "sha256": "097bd400d380890eb1c1c280b76d733da4c68344b995cdb3469784fd890b071e"
+    }
+   },
+   "games_medium": {
+    "fusion_gold_test": {
+     "path": "use cases/games/medium/input/fusion/test_set.xml",
+     "sha256": "99206041ed6c97c923b165cc109e03ca94a7c5254489038a0166c3ca281296bb"
+    },
+    "normalization_test": {
+     "path": "use cases/games/medium/input/normalization/test.csv",
+     "sha256": "2fac7deffe80c803ef9ad94e996dd46ae83cf5ebdc148694eebf1cf3b44012c3"
+    }
+   },
+   "games_hard": {
+    "fusion_gold_test": {
+     "path": "use cases/games/hard/input/fusion/test_set.xml",
+     "sha256": "b82bb8da0ab65d5fdfd67e5349cbf4ef2d467506552e00c3488cab70f2bee296"
+    },
+    "normalization_test": {
+     "path": "use cases/games/hard/input/normalization/test.csv",
+     "sha256": "dff949e7906579615dd7dd8a8c7d8617474d47b84edcc55b18fcd2f468c88d0c"
+    }
+   },
+   "music_base": {
+    "fusion_gold_test": {
+     "path": "use cases/music/base/input/fusion/test_set.xml",
+     "sha256": "04fdc0d6317853e3e7312023d34177e536413e0b48a0cd296850977e9d797e6a"
+    },
+    "normalization_test": {
+     "path": "use cases/music/base/input/normalization/test.csv",
+     "sha256": "3a17cdfd958806a0c5c3e80ca58907b143019d0e84c604808977fa00796e8b36"
+    }
+   },
+   "music_easy": {
+    "fusion_gold_test": {
+     "path": "use cases/music/easy/input/fusion/test_set.xml",
+     "sha256": "04fdc0d6317853e3e7312023d34177e536413e0b48a0cd296850977e9d797e6a"
+    },
+    "normalization_test": {
+     "path": "use cases/music/easy/input/normalization/test.csv",
+     "sha256": "53e6ad3d56d4527d51ceccdcd70e0467881c4703ea152b2989e4abc9ae94460f"
+    }
+   },
+   "music_medium": {
+    "fusion_gold_test": {
+     "path": "use cases/music/medium/input/fusion/test_set.xml",
+     "sha256": "04fdc0d6317853e3e7312023d34177e536413e0b48a0cd296850977e9d797e6a"
+    },
+    "normalization_test": {
+     "path": "use cases/music/medium/input/normalization/test.csv",
+     "sha256": "cd446dddddbb8230c8934c93ae752ee2853aea28b268c314591309aa79ff9caf"
+    }
+   },
+   "music_hard": {
+    "fusion_gold_test": {
+     "path": "use cases/music/hard/input/fusion/test_set.xml",
+     "sha256": "68a4155064cc65f9e68c9fd6908576982236f6c90ada2881b762e944dc788101"
+    },
+    "normalization_test": {
+     "path": "use cases/music/hard/input/normalization/test.csv",
+     "sha256": "0001c57ee6608d3dd357bb050f9c6e9d4bc7155e7b5c73265943fc9406130a3a"
+    }
+   },
+   "papers_base": {
+    "fusion_gold_test": {
+     "path": "use cases/papers/base/input/fusion/fusion_test.jsonl",
+     "sha256": "b7cd0e52740531ee951e123da8905a3bb82c2d712cbadd82816c665d25cf8765"
+    },
+    "normalization_test": {
+     "path": "use cases/papers/base/input/normalization/test.csv",
+     "sha256": "d7c0a1788223b730cc777ead9c1ff49723c06ea245e25c1a4e0e836e0d0b6eb8"
+    }
+   },
+   "papers_easy": {
+    "fusion_gold_test": {
+     "path": "use cases/papers/easy/input/fusion/test_set.xml",
+     "sha256": "b7cd0e52740531ee951e123da8905a3bb82c2d712cbadd82816c665d25cf8765"
+    },
+    "normalization_test": {
+     "path": "use cases/papers/easy/input/normalization/test.csv",
+     "sha256": "f22b78696ab3c36d7cc16ec6eb0ddd7f64c753404b14e93c19a7c5147d0d1aca"
+    }
+   },
+   "papers_medium": {
+    "fusion_gold_test": {
+     "path": "use cases/papers/medium/input/fusion/test_set.xml",
+     "sha256": "b7cd0e52740531ee951e123da8905a3bb82c2d712cbadd82816c665d25cf8765"
+    },
+    "normalization_test": {
+     "path": "use cases/papers/medium/input/normalization/test.csv",
+     "sha256": "a57032756cd2662837e32db3f17c433735771423d7cb2b3dcca125f00d436d6b"
+    }
+   },
+   "papers_hard": {
+    "fusion_gold_test": {
+     "path": "use cases/papers/hard/input/fusion/test_set.xml",
+     "sha256": "a17b1afe6e4e272e9a32a5925dd978c5b6d2d611a970acf61b2f64d08ff81182"
+    },
+    "normalization_test": {
+     "path": "use cases/papers/hard/input/normalization/test.csv",
+     "sha256": "bc12a43276f39e1eed9c3786538faf9bb1ec500bddb2fe09f426a9f1bfbbaba0"
+    }
+   },
+   "products_base": {
+    "fusion_gold_test": {
+     "path": "use cases/products/base/input/fusion/fusion_test_set.csv",
+     "sha256": "fdd1c3eee9d3c7c2e6ed331a7ab9ac1e46c7028814f68d0f6526867ffdcc04e0"
+    },
+    "normalization_test": {
+     "path": "use cases/products/base/input/normalization/test.csv",
+     "sha256": "81073f8726bb242fb9e42dbf19ed87ef8a4f1bf01fada4e1d8dd6e92a4c5ba7f"
+    }
+   },
+   "products_easy": {
+    "fusion_gold_test": {
+     "path": "use cases/products/easy/input/fusion/test_set.xml",
+     "sha256": "43a46845b37922461c711d355afadd6eabfc97b7dc50181a1f0c55e152ca8d7d"
+    },
+    "normalization_test": {
+     "path": "use cases/products/easy/input/normalization/test.csv",
+     "sha256": "4817dcbb00f8c3f4fe8c46cfe1697b518f09e3ccf8985639745448c3ae250a97"
+    }
+   },
+   "products_medium": {
+    "fusion_gold_test": {
+     "path": "use cases/products/medium/input/fusion/test_set.xml",
+     "sha256": "43a46845b37922461c711d355afadd6eabfc97b7dc50181a1f0c55e152ca8d7d"
+    },
+    "normalization_test": {
+     "path": "use cases/products/medium/input/normalization/test.csv",
+     "sha256": "3aa639d7528d53e1daa41ea194f388c448319e114568945381a672c5e6737147"
+    }
+   },
+   "products_hard": {
+    "fusion_gold_test": {
+     "path": "use cases/products/hard/input/fusion/test_set.xml",
+     "sha256": "daef94ac2418de3657061e90f41eb8ebda9e547bf15a8f8e78b0ebf98b65deaa"
+    },
+    "normalization_test": {
+     "path": "use cases/products/hard/input/normalization/test.csv",
+     "sha256": "baa6c8165f43d6d17f9a045a4ca5067ba397f56a59b0fae36eccafa3f921f4b5"
+    }
+   }
+  },
+  "inputs": [
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "fused",
+    "path": "results/best of breeds/companies/baseline/fused.csv",
+    "sha256": "74e7a1f85d01d5f522888c23552d6c839f6d604d1b2a6e8cee57a16ecfb15d60",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/companies_baseline/stage_2_norm_selection_replay.json",
+    "sha256": "dc7a16d5a55acebaadb0931ec1aaeaf9ad95804648d5ef699e235d8375b99f1b"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_baseline/tables/dbpedia.csv",
+    "sha256": "3b1cda756f22970286e75d1cdd2ea38e876afa5ca27baee3fd78779f066c629b"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_baseline/tables/forbes.csv",
+    "sha256": "b80a3c4780097e0e7fd01b2d089b9e05f2058333bd98bd511b68bd2dcc2fe3ea"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_baseline/tables/fullcontact.csv",
+    "sha256": "37d5bbb1cfc055d53289dfc077d9554b48f957358f664b0b357fc427690d384d"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_base",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/companies/baseline/per_stage_summary.csv",
+    "sha256": "3b82b611ed5063e476b063cd38254f269405d303d1bc09838a7eff89e27e4ea7"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_base",
+    "kind": "fused",
+    "path": "results/llm pipeline/companies/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "6d2f4cf9a008833a824d67dab2376d65ffccdab61e2250889767fec87c167d60",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/companies/baseline/schema_matching/dbpedia.csv",
+    "sha256": "630805e7f928428bda287094da5a2c1d55afb3d7a30a77c7a569e1210ecca2cb"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/companies/baseline/schema_matching/forbes.csv",
+    "sha256": "68c956325639e38d24e3fd4c470be08f595da3e9239ea937816b6e8e810693f6"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/companies/baseline/schema_matching/fullcontact.csv",
+    "sha256": "bc3178416dcefc937d9cb5c08fd3c4f911f59ffc5b22654cb8690aec2a94dcaf"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_base",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/companies/baseline/metrics/paper_results.csv",
+    "sha256": "97f5540f9ccc72bf5fcaee495be521a21e0fc4f577e8e29289b98e7573fb3bdc"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "companies_base",
+    "kind": "fused",
+    "path": "use cases/companies/base/output/data_fusion/fused.csv",
+    "sha256": "91b98f56384c608af714f34b73d04af9ab1c2f6309c644f66d2790e65a64b5b4"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "use cases/companies/base/output/normalization/dbpedia.csv",
+    "sha256": "269068ae6eaa47d4edd8d3f8016d80d8be447461f3aa262162cdb22c09d6c337"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "use cases/companies/base/output/normalization/forbes.csv",
+    "sha256": "a92f903bcd8f64090f5e9e8efeb6a1da470e68390a526aae820e73df2f7bedf2"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "companies_base",
+    "kind": "normalized_table",
+    "path": "use cases/companies/base/output/normalization/fullcontact.csv",
+    "sha256": "aa1483f39a98db4a591f61ecc84ced9f70526041c0633d7aea4ace1616e21e61"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "fused",
+    "path": "results/best of breeds/companies/easy/fused.csv",
+    "sha256": "5aa1231c507c762aeb3caf61f98a699bb19689ee34834a46c2d43c81e2946f89",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/companies_easy/stage_2_norm_selection_replay.json",
+    "sha256": "0a2642fbb11b7bdeb8f8e16101b847f98e0340c151e3d60eeecc91a12f2cf821"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_easy/tables/dbpedia.csv",
+    "sha256": "e974e858cf249703be28a9673f6b00e0460d51dc1b9df703a5308a176ded9d08"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_easy/tables/forbes.csv",
+    "sha256": "8cd0e717eb79a48f36870a6e6c86d8b8cccf99836bb1ad402c229c7f572f48a5"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_easy/tables/fullcontact.csv",
+    "sha256": "b92c7ebd737c86f4e7804e31103fc309146b17f17ab635aed5d0447ded3c5b12"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_easy",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/companies/easy/per_stage_summary.csv",
+    "sha256": "51e98fc19e223efa07100ccda4bde334421f3dbdb2d04bc662eaded6b27ab3c0"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_easy",
+    "kind": "fused",
+    "path": "results/llm pipeline/companies/easy/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "485f53225e62a39a61e073d543e3675de146b0a309600e0ae348f95eae28525e",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_easy",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/companies/easy/metrics/paper_results.csv",
+    "sha256": "e4de1c6615aa9db6e87a9d63a279186d024b8684d41dedcfc778f064a8717697"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "fused",
+    "path": "results/best of breeds/companies/medium/fused.csv",
+    "sha256": "eaa57a07aa3a9ef650523f4e730be4b5812d14d2a9100e937a5ff1e0f7e7242a",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/companies_medium/stage_2_norm_selection_replay.json",
+    "sha256": "d83aa0edf802208295d00322d152fceb0f1f38628348252ee0c3fac10b9d49f9"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_medium/tables/dbpedia.csv",
+    "sha256": "4972c4618a00bf750e6b9e4d50a8c4c2d813251b1acdd50eed978a7594e0cdb0"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_medium/tables/forbes.csv",
+    "sha256": "884ec7c3e8d4d2306ff3aa7d81f5734299207c9bf714b6973f2ef33ae9c0d48f"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_medium/tables/fullcontact.csv",
+    "sha256": "8c3782be089d5d6b145f8a3c4102d4c996db2f683b27524d69b926174899c796"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_medium",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/companies/medium/per_stage_summary.csv",
+    "sha256": "a5cf3cf199179b6aac85e58bd42ae9e4d885b957fa3010a5d41038a5a2df752a"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_medium",
+    "kind": "fused",
+    "path": "results/llm pipeline/companies/medium/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "9a34f24548cc5fdb4db7b2e467a15d760b165bd55effdeedad7c8675a0e11eaa",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_medium",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/companies/medium/metrics/paper_results.csv",
+    "sha256": "42244da7c1a53c5fc29f02743c170a9e945e076c89770cac75425a04674aca6c"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "fused",
+    "path": "results/best of breeds/companies/hard/fused.csv",
+    "sha256": "76223b27168256a66ff871f896f10e62cbc212e86c9ec3657c5b06c256ef292d",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/companies_hard/stage_2_norm_selection_replay.json",
+    "sha256": "962758ca3270b93703bee4fb4d3c2cf4474f02a0e4c0627d6e877943acba6df1"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_hard/tables/dbpedia.csv",
+    "sha256": "ff955e1f90e0ba03d843af5f7922a4c94b68e81f1b5512beef1a8dd7bb6f7c97"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_hard/tables/forbes.csv",
+    "sha256": "afb84e87c629c64f51c4e775395a6fb0579d9a0b9ed5113d60cfb38d761f318a"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/companies_hard/tables/fullcontact.csv",
+    "sha256": "ad85d537c350652f6a0e13a90e9da6f3cb5fcbfe42704b6eae940b3df15f7583"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "companies_hard",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/companies/hard/per_stage_summary.csv",
+    "sha256": "bf12f36bdfb6f31932f5850d60a01e3148c2e499fb619df1bce41b18722f7670"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_hard",
+    "kind": "fused",
+    "path": "results/llm pipeline/companies/hard/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "b0b61e8346296f06087577a6994faa8913f21225bf8006d9ad65e06510ae9e32",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "companies_hard",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/companies/hard/metrics/paper_results.csv",
+    "sha256": "2093d38e323a24008b085b35cbfd71ed757bb26bdd4d7622f399d93662cf2b8c"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "fused",
+    "path": "results/best of breeds/games/baseline/fused.csv",
+    "sha256": "2426e7482d2c82a83bd61f0cf93c0e011b2fb03431be6f485b754a1ba79c170a",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/games_baseline/stage_2_norm_selection_replay.json",
+    "sha256": "27833ff052a0276c259d0fa805a11e87e0d4d4390787af7ed19bbe67488852a6"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_baseline/tables/dbpedia.csv",
+    "sha256": "bcce2610714b3fe6e1772f1611784f786a5ae61656a7135ad088fb9846169ae4"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_baseline/tables/metacritic.csv",
+    "sha256": "01c535479313e7f247968f268e6e950e44b89205af2f81467dc3fda282c90edc"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_baseline/tables/sales.csv",
+    "sha256": "010cebda75d5288a5d0a4f8cf5d781c36d37c7f2882c69ef3221ed7b41a9ea6f"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_base",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/games/baseline/per_stage_summary.csv",
+    "sha256": "9fec851cd387763fa2d8205b5b8120e6363bff322681c958bdd851ec71f7868b"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_base",
+    "kind": "fused",
+    "path": "results/llm pipeline/games/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv",
+    "sha256": "56e8b0d9fd76958c97256b46da5f28ce511d53871b32baa12398b9ee58458534",
+    "case": "case_heuristic"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/games/baseline/schema_matching/dbpedia.csv",
+    "sha256": "09ce53d28a0a379893e620d57c117a376941838f7f06a6047e51db014f028dbf"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/games/baseline/schema_matching/metacritic.csv",
+    "sha256": "7319aca2120e4d502f3c6654730a1ea76ee9a2005806ae4e6ad9819281faf747"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/games/baseline/schema_matching/sales.csv",
+    "sha256": "cf0aeda2e2cc82ef3849dc64b9e90d87315b72dd2562dee7ec61ab345ee5726b"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_base",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/games/baseline/metrics/paper_results.csv",
+    "sha256": "6dba787f0536e19110435432963f4afaa28a870fc972fedb03ffe73f76458943"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "games_base",
+    "kind": "fused",
+    "path": "use cases/games/base/output/data_fusion/fused.csv",
+    "sha256": "fe40495b22323b8d9f49fb0df3fbeaeeb05eaf47143cb03fd65fb14cf0b70847"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "use cases/games/base/output/normalization/dbpedia.csv",
+    "sha256": "200d1dbdcf86be6a4046c4fe9ddd565f977660d33d4873addf677a1dedc75f8e"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "use cases/games/base/output/normalization/metacritic.csv",
+    "sha256": "3bd717a116623913ae64ed05a839817b7db97ceb878712fe82773d9a4b922970"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "games_base",
+    "kind": "normalized_table",
+    "path": "use cases/games/base/output/normalization/sales.csv",
+    "sha256": "43d4306e8af2a83fce05e285513fc2e19715eda90dc2f134ec195b4d9780c91a"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "fused",
+    "path": "results/best of breeds/games/easy/fused.csv",
+    "sha256": "4eb83966ca82afbc95b3a0b7264549ca7c4f7f7d2bdd84b7213be63ee7d1a0f6",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/games_easy/stage_2_norm_selection_replay.json",
+    "sha256": "725840408a0ce1001a13fa6be59a48225b386712a25070e9ff7a5241441264d6"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_easy/tables/dbpedia.csv",
+    "sha256": "589192c597035267752d43ece6083c87f488289fd55ef1355c5d55375892e1d8"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_easy/tables/metacritic.csv",
+    "sha256": "34a273010313976b2e9d24e9467280f1d79fe47f21986441593e7b668e7ee947"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_easy/tables/sales.csv",
+    "sha256": "37c4a568fd4a27565c037c6189b325c6c71548f32f944da9a0a94911f3862743"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_easy",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/games/easy/per_stage_summary.csv",
+    "sha256": "8226c3b26c8f31653718595abca641e0ef9c4bf4a5d983346c52d9fb90d7d9a6"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_easy",
+    "kind": "fused",
+    "path": "results/llm pipeline/games/easy/fusion/optimization_provided_val/case_heuristic/fused.csv",
+    "sha256": "fb4d9e1ef1c7ea2e86fa749e3778b21702d60881dc230aa3c1adff13d721603d",
+    "case": "case_heuristic"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_easy",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/games/easy/metrics/paper_results.csv",
+    "sha256": "678aa9a1b4d415772070e02318166cf427b6ca76fed063cde484a676e66f8e4a"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "fused",
+    "path": "results/best of breeds/games/medium/fused.csv",
+    "sha256": "9acc57b941971d28db45b38e89b26771022ba0503cc66f90afad484074d39d38",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/games_medium/stage_2_norm_selection_replay.json",
+    "sha256": "f6cd99f4ef11c1358494c362b34796f8c0781437fea699aaa840131f3dd2db3d"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_medium/tables/dbpedia.csv",
+    "sha256": "defff08441319fb91a4127e1d3fe8b7074a31068f772044add9a17305ebd31a8"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_medium/tables/metacritic.csv",
+    "sha256": "d4746d4c1551683cafffe936ac9237cae753b0e618c331c171abc0c9d81f49ab"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_medium/tables/sales.csv",
+    "sha256": "3f4ad0ba7f1488dec63c3cef7a1b59331bf4f7bceded024d576042e00921a7a0"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_medium",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/games/medium/per_stage_summary.csv",
+    "sha256": "01432cec3cf9ac08353e8f408fafd29c23018f8e340aaca7c5fa20372b07a8df"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_medium",
+    "kind": "fused",
+    "path": "results/llm pipeline/games/medium/fusion/optimization_provided_val/case_heuristic/fused.csv",
+    "sha256": "c68d057195c2c9fdde350992dc8024b11aa6fadf850f4d7b9598ccc2f225346e",
+    "case": "case_heuristic"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_medium",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/games/medium/metrics/paper_results.csv",
+    "sha256": "cedbc902aaf53bbfc64cf92cd7a63884efe7ee5a1cc6714e561e3bee9383e730"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "fused",
+    "path": "results/best of breeds/games/hard/fused.csv",
+    "sha256": "ca84dc42d980ab525db98c46aade64b8a5708e92e07be62634aec9624c5fadf3",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/games_hard/stage_2_norm_selection_replay.json",
+    "sha256": "3dc6ad4fe3adcaf9eee406f1af00a91b82b022705f3c9778bd0985eca3807975"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_hard/tables/dbpedia.csv",
+    "sha256": "eec1d3770adeb61ceb5633bd0e254d8cd0e39d6cb8d79aab5e56f59bb821e6cf"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_hard/tables/metacritic.csv",
+    "sha256": "d64e63ef7edeea5da937f9f347690a845e42ff0f0ca0d39aaddb06bd8f15c7c4"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/games_hard/tables/sales.csv",
+    "sha256": "8f1c7df407809517b427696e5a1fac9fcc9089fad456bff0c91adc431455f4d3"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "games_hard",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/games/hard/per_stage_summary.csv",
+    "sha256": "5b8854e6494dadc90896be0bbbfcc655a843da2d393c10c0a39f6c3e10039476"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_hard",
+    "kind": "fused",
+    "path": "results/llm pipeline/games/hard/fusion/optimization_provided_val/case_heuristic/fused.csv",
+    "sha256": "47c9c576904c2795e6ed9f94e9c83cdb53421a1414e978bc7ac80d3d2d90338b",
+    "case": "case_heuristic"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "games_hard",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/games/hard/metrics/paper_results.csv",
+    "sha256": "ff068189afd81beb42f15e402655efbd2ce771c895affbe59d7b10e0762e2c54"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "fused",
+    "path": "results/best of breeds/music/baseline/fused.csv",
+    "sha256": "f9d54230799c300def199220c6335f13e705b39b08d8b9eb8aac45eb9b27d395",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/music_baseline/stage_2_norm_selection_replay.json",
+    "sha256": "e23351dad1aba9d863bc1fdc46bea90404bbc75a006ec11b77e3667c8e1cf794"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_baseline/tables/discogs.csv",
+    "sha256": "dbb4368e39011127f917441232a4fa3a80ad9f2be2a83b0bc291fc78bd6bdffb"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_baseline/tables/lastfm.csv",
+    "sha256": "54cba501557281ef5dc4794ba8f22006c457a31f47663bad93486629b0943951"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_baseline/tables/musicbrainz.csv",
+    "sha256": "5ee78be010ebbbe4262cc76730d3438ff3f637bf7e4cf890df1cdfeda537bc08"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_base",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/music/baseline/per_stage_summary.csv",
+    "sha256": "859c4d89b47ea8a259ceb50b88038cfa7f323dc2677ea346af1ee7281154358e"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_base",
+    "kind": "fused",
+    "path": "results/llm pipeline/music/baseline/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "a4b482954e2065fcc45e18db49fc9bee6f5c051782c9d4ffd05067ce011e40f8",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/music/baseline/schema_matching/discogs.csv",
+    "sha256": "1db441868fdb4d3a320371c1e8aa902c5d9d35a4cbb4c14330bca0722b396704"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/music/baseline/schema_matching/lastfm.csv",
+    "sha256": "7abeb1614e5ebe4f4557b974d78f3bf705c95d5e2f419654f255ac417e88a9a0"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/music/baseline/schema_matching/musicbrainz.csv",
+    "sha256": "c6574f623d8fcfc87e6d2576b5e2fb7df700ff785c77b45b93f85d29a0c793e4"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_base",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/music/baseline/metrics/paper_results.csv",
+    "sha256": "7c02898f29afbd996c544055bf81f6ef672bf01e7d7eb4f7b76c2f37eda65851"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "music_base",
+    "kind": "fused",
+    "path": "use cases/music/base/output/data_fusion/fused.csv",
+    "sha256": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "use cases/music/base/output/normalization/discogs.csv",
+    "sha256": "4e4b2a093d18e5f8e305cbcd454f944391b956e37bb6421ccbc54c6f07c18100"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "use cases/music/base/output/normalization/lastfm.csv",
+    "sha256": "07dff86fc395ba584fdc9b9378379d80d6e41114ba11ab8ff6b6d6d61cf716a6"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "music_base",
+    "kind": "normalized_table",
+    "path": "use cases/music/base/output/normalization/musicbrainz.csv",
+    "sha256": "f80e32b970dfb8ee0df26e7c427b2ea910823bc17bbf04bf9546117dca753008"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "fused",
+    "path": "results/best of breeds/music/easy/fused.csv",
+    "sha256": "e442d48655d106c24759c4c3882729a9e2ac734918215bec7ecfd50558241275",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/music_easy/stage_2_norm_selection_replay.json",
+    "sha256": "493705727b5d7924046fd021b8d2cf4f8ed0ba153db8810622c111044a70c339"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_easy/tables/discogs.csv",
+    "sha256": "74238c0909b4ba32090074177410440fc9bf4c2202adc93221b3a6c85b5281a5"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_easy/tables/lastfm.csv",
+    "sha256": "3d22c03308c66c9b730d560d1294d51e12c2bf6641ed7fec48d9aa0cadaf72fe"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_easy/tables/musicbrainz.csv",
+    "sha256": "3c09c6f80e31465b89807b4a02bbcf072e5ebc54580822b7b7e8423959be562a"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_easy",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/music/easy/per_stage_summary.csv",
+    "sha256": "a9cbbf8b234698adb29fba00739e376f4ecf91900b3b3976fbc45513e92152d4"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_easy",
+    "kind": "fused",
+    "path": "results/llm pipeline/music/easy/fusion/optimization_provided_val/case_llm_no_val/fused.csv",
+    "sha256": "925ebf83e3bb6ef1c7176482c3172839c76ed13680e4df4b895a9f2e3af3c30e",
+    "case": "case_llm_no_val"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_easy",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/music/easy/metrics/paper_results.csv",
+    "sha256": "e0f34f74d52a31b5b170e4c4a543b8dfbf4ebd679ff06976b6d9c4dd9a0fa3ee"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "fused",
+    "path": "results/best of breeds/music/medium/fused.csv",
+    "sha256": "28da1735cc040fd2ed7eeacb34d69a66528c9a6df5d9008f96de463e46a58268",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/music_medium/stage_2_norm_selection_replay.json",
+    "sha256": "017cd1e994b7cf7cac40f4be7fbc8703d1050b3540bf2f33a328a0a3dfa6b1d8"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_medium/tables/discogs.csv",
+    "sha256": "2815c14cb917c788b7eae5d2809459abac09f8b77efcebbe012cc657c5c534e7"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_medium/tables/lastfm.csv",
+    "sha256": "bfa9b72c598ad86f07903fb0907ceb2fb0ecaf4b07a5ade363fc742b443ea3ed"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_medium/tables/musicbrainz.csv",
+    "sha256": "0de6c247e10923d68c97e10cb41e83d591c69b441bcbbeda536932880f77bd65"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_medium",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/music/medium/per_stage_summary.csv",
+    "sha256": "1f0eac393e8180997e3ec87724f108a0bed1eb7bb567b45c4542fbcada9af4e0"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_medium",
+    "kind": "fused",
+    "path": "results/llm pipeline/music/medium/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "5147781163bef1aa29022498390509b8995f968d6e9a7f17d512950b1a84efd9",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_medium",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/music/medium/metrics/paper_results.csv",
+    "sha256": "6e3d1f795bc559e2c16b5f4dd464bbab554ac16f645cde57abdfdbd92720b96e"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "fused",
+    "path": "results/best of breeds/music/hard/fused.csv",
+    "sha256": "8adf6fc7f176a8d5437d55a2a1266a1920b1785e1739eebb41a041f0683afba2",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/music_hard/stage_2_norm_selection_replay.json",
+    "sha256": "17dfecd446f97047cbd29b1c1f9e2663153209c2cafd6d97a44c3631bc6cfff7"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_hard/tables/discogs.csv",
+    "sha256": "eb339ccab40547ca959251066f16a7bc8f03bf6b3706cfab5be61837cb5065de"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_hard/tables/lastfm.csv",
+    "sha256": "0bf224e24fe312cb0cac8e401ef4f19f55e00281075ca71fc86a46dc6579dba9"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/music_hard/tables/musicbrainz.csv",
+    "sha256": "a73c9a19377f48df77f229aabf5661e739bbccd8edc8dd36a56ce86a2104414e"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "music_hard",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/music/hard/per_stage_summary.csv",
+    "sha256": "dc7382b34a19f05886d6b431bef9346943fe2ba45c101fdf6c42db37c3802990"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_hard",
+    "kind": "fused",
+    "path": "results/llm pipeline/music/hard/fusion/optimization_provided_val/case_llm_val__opt_provided/fused.csv",
+    "sha256": "1c7c4314eed6a58d6b3ddb08ce9dbd29cc90517678c2f11173b8901c5354e48f",
+    "case": "case_llm_val__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "music_hard",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/music/hard/metrics/paper_results.csv",
+    "sha256": "ea8e9e0105602529f32dde14debe8d26150b1a7a0c15be876e2989cc0567c9bd"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "fused",
+    "path": "results/best of breeds/papers/baseline/fused.csv",
+    "sha256": "bc9b67a6a2fdf64bb543596c4d44111e64103287fd96fbadb945632e30badcd7",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/papers_baseline/stage_2_norm_selection_replay.json",
+    "sha256": "0509d022a587c1ea5ece3542d7d3594d14c90c925535d664b4d05da5cd595e85"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_baseline/tables/crossref.csv",
+    "sha256": "3fb3edf0696ffd7d9dd0ca79022536e88f6359a3c13a2e6855dbe3da3bacca4c"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_baseline/tables/dblp.csv",
+    "sha256": "4d1b5c2ef6bc97d8ed605a2a9b4b826510020c0da04188ddcfed09f95705888b"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_baseline/tables/open_alex.csv",
+    "sha256": "546907a7c3c9f92c432d8ff0be0c48c29c9ff2bff00f1e7cbbbafe25a0a00aab"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_base",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/papers/baseline/per_stage_summary.csv",
+    "sha256": "8d82551775c516a0e2b16aa255eefe991e9cce4b87d10f9c51a20ac5fb1b4d27"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_base",
+    "kind": "fused",
+    "path": "results/llm pipeline/papers/baseline/fusion/fused_clean.csv",
+    "sha256": "d8b2e5f701da454580da746d3ef7644ead0a750afdf38a0ea6af8dccf5f8e7ad",
+    "case": "fused_clean"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/papers/baseline/schema_matching/crossref.csv",
+    "sha256": "d8ea82d44bc0ddfd500b8218df803e5c8d349ccf9a6d45e8294484e3bab330cc"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/papers/baseline/schema_matching/dblp.csv",
+    "sha256": "cfde726b8f92359f4366c8ffe82adf2084c21b6350f6e1b8cbf55d712f411edd"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/papers/baseline/schema_matching/open_alex.csv",
+    "sha256": "d2694ec33a66ace7ebd864c2e315cd011aaf6fa5ce34b0c1d86e90f71c5bce29"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_base",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/papers/baseline/metrics/paper_results.csv",
+    "sha256": "fb933f87162de13adc348e5913ac848c196bdf2260f8dadabd6ee9a45932a03d"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "papers_base",
+    "kind": "fused",
+    "path": "use cases/papers/base/output/data_fusion/fused.csv",
+    "sha256": "0d0454b76a482274b116e03cfd4efafde9a1c2a6d7a1de5dc25fade2b273adf9"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "use cases/papers/base/output/normalization/crossref.csv",
+    "sha256": "1f4ff23504dd4fa73414d78bc01c166ed06f428729868947d94e1d24b354cfe9"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "use cases/papers/base/output/normalization/dblp.csv",
+    "sha256": "803e3eefbe2081986355fa3cea0ef39053a97b6279e02e1257c4e1d006fb8134"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "papers_base",
+    "kind": "normalized_table",
+    "path": "use cases/papers/base/output/normalization/open_alex.csv",
+    "sha256": "fd740c0e6010b988d5fb40ac0ecd62464a8faf70679a79e6e8891bc51ecaddbe"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "fused",
+    "path": "results/best of breeds/papers/easy/fused.csv",
+    "sha256": "e2c78024de15e30d39c2283c6d19306bc27aef2e703528dea9ae814baef545fc",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/papers_easy/stage_2_norm_selection_replay.json",
+    "sha256": "ccca0ebfa9feff57d369a7cc37b1504f5dc265602fd76ae71f164a17ad5d139b"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_easy/tables/crossref.csv",
+    "sha256": "a8bc5169c43c2c7523b3a712a40d170ab0e4a56905e170af8fe5dca748729bc3"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_easy/tables/dblp.csv",
+    "sha256": "414f00c21d1886f0eea3b8e9b8ffdbf590f5267ac9726f9b49c43e188244eab5"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_easy/tables/open_alex.csv",
+    "sha256": "bfc71b3f4d89a05933e59bb869199c9b053e68ac35442483cb0b6a93d1d34406"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_easy",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/papers/easy/per_stage_summary.csv",
+    "sha256": "43bcdee1da7cc2db8e4076b4c006844d4684730ff2c37c51a74134cd7e17ec39"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_easy",
+    "kind": "fused",
+    "path": "results/llm pipeline/papers/easy/fusion/fused_clean.csv",
+    "sha256": "a5aeb4c3d3bbd33c23a9cb2f12a07cfd096eff9854b6e2af5b46b18bb493b125",
+    "case": "fused_clean"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_easy",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/papers/easy/metrics/paper_results.csv",
+    "sha256": "6f263c7db97e73fcbcf231c06686aeaf4fba063edc42ddcac960752f6b04cf41"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "fused",
+    "path": "results/best of breeds/papers/medium/fused.csv",
+    "sha256": "564f13b406bda3d2682f64a3b24606b9f5dcdf6452b191d6c67c34ea5f8f185b",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/papers_medium/stage_2_norm_selection_replay.json",
+    "sha256": "995c1b8efffc9f5a79cf559a47075594a2924ad7aee3bce77dd22f26ce517301"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_medium/tables/crossref.csv",
+    "sha256": "37730834d86b645386271d778a38e562e6ef20cb2320507fb0bceb2fac89b215"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_medium/tables/dblp.csv",
+    "sha256": "73400651128fd9340656d3fe252300d22057a225a0d85277edb9200afa2af877"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_medium/tables/open_alex.csv",
+    "sha256": "561754b6bb3e20ddd659bddfb8d695380bd8a752a0fd2e8fd8154207864a73d0"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_medium",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/papers/medium/per_stage_summary.csv",
+    "sha256": "44ade0ba66010dd65cc86c787ceaf5bf3acc6183dc915cde26915f2b6a71749b"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_medium",
+    "kind": "fused",
+    "path": "results/llm pipeline/papers/medium/fusion/fused_clean.csv",
+    "sha256": "1908d3efa1fd8e6b61ad07f9af23e266baa8f02c4576bc29c0f0543e70c4085d",
+    "case": "fused_clean"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_medium",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/papers/medium/metrics/paper_results.csv",
+    "sha256": "3a475f44ff1c9ce5dede673d1c0ac66db6eb11a34364a2d08009ac22cbd85d15"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "fused",
+    "path": "results/best of breeds/papers/hard/fused.csv",
+    "sha256": "c9288be19450a3482a1dd2db9a9ea2c5121ac14e11836f65d24645c5430e280a",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/papers_hard/stage_2_norm_selection_replay.json",
+    "sha256": "6a28dd4f1e704cad4ec8b3a809beaa2f4948688749fd2e68bb1d9c2dfeb6c048"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_hard/tables/crossref.csv",
+    "sha256": "f2809f59abf84b142986a5970e4b480629bc3e69ebe4e3831bdb01a33d13124c"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_hard/tables/dblp.csv",
+    "sha256": "d2b50b5fc82ed17fa9721abb94106d95426508fcbdc8a491c9d1241b80aa8f26"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/papers_hard/tables/open_alex.csv",
+    "sha256": "899a7e899d153575070888b63efb846b00676075f6e6167210fc2fcc5d79a4b5"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "papers_hard",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/papers/hard/per_stage_summary.csv",
+    "sha256": "f68e1d6beaf8a5f31c37a7d544c5b254200ad4373bff93c4b225d58c1ce18efc"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_hard",
+    "kind": "fused",
+    "path": "results/llm pipeline/papers/hard/fusion/fused_clean.csv",
+    "sha256": "c655f4e9766f5c3682d1b9eb59fb6c59f17b7f1b47a70c996cc6f20b94ef3919",
+    "case": "fused_clean"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "papers_hard",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/papers/hard/metrics/paper_results.csv",
+    "sha256": "c2378a12c1b08aaa591cc86ba15fa10ea6b486eb0bd10b4f9dee8619f3fff671"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "fused",
+    "path": "results/best of breeds/products/baseline/fused.csv",
+    "sha256": "64df04496f34f543095d57ae62239ffdd759a61fd80c0fb003734413d387f09c",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/products_baseline/stage_2_norm_selection_replay.json",
+    "sha256": "9b040aa2cd0f50017b7d8d5a58580fc12ef37744bfd74616c0329ee4960eff5e"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_baseline/tables/products_1.csv",
+    "sha256": "ad30ab90df3367d56ca142d1a3d9b23e20959063b051149abe2cf5bb0d48f57d"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_baseline/tables/products_2.csv",
+    "sha256": "293441d51953071077f10b3af526019e6c6e510eeea29faaec8ecd86cb8b5ca9"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_baseline/tables/products_3.csv",
+    "sha256": "92836cf17ec14d85a1c7bd3fbcfa2dc3735570cb7f4eba4a95e0797802e6a1a7"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_baseline/tables/products_4.csv",
+    "sha256": "53a71e841d40459053f968d6749ad47e5e15b359099b564297e0e4e1b8811559"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_base",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/products/baseline/per_stage_summary.csv",
+    "sha256": "3259630bc582ac0279ca2e35b75d62bd1a9fd14df0f9d980c2ec8fcee6a0263f"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "fused",
+    "path": "results/llm pipeline/products/baseline/fusion/optimization_provided_val/case_heuristic_stats__opt_provided/fused.csv",
+    "sha256": "d85be3784c30c97d2f650edf709e5b492a56e6452fd3cecbfc604cd4fcea518d",
+    "case": "case_heuristic_stats__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/products/baseline/schema_matching/products_1.csv",
+    "sha256": "4fd3f4efa9a87146c7110f3888a2159ce2e683459891e2b7909444799168ae50"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/products/baseline/schema_matching/products_2.csv",
+    "sha256": "679589cda06a43dd0a615a9dd038c60abb7616b127bd2c858c838e27d7c95c41"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/products/baseline/schema_matching/products_3.csv",
+    "sha256": "b58b9801ed863681a9bd8af5880f622b6f37d4235861ccc63f35e13bd78d9383"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "results/llm pipeline/products/baseline/schema_matching/products_4.csv",
+    "sha256": "a0a67e6eb9616a79dba75c6d1063f9e6fd4b348759069b81e7cbcb65a8e8b7d6"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_base",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/products/baseline/scoring/scores.json",
+    "sha256": "fc3ac74c64c9e3a064fe9b392f68461c10bfd4527a195fa1f52e374434063189"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "products_base",
+    "kind": "fused",
+    "path": "use cases/products/base/output/data_fusion/fused.csv",
+    "sha256": "84167a6569764d8ffd8d2c810a0801b5b1d9656f24b564e3639c5b9bcf8ef514"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "use cases/products/base/output/normalization/products_1.csv",
+    "sha256": "61a2a5d6767c08bb57eae665ed9933ff20320a503d304cf54a1f42754180fc18"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "use cases/products/base/output/normalization/products_2.csv",
+    "sha256": "03ad6a4fa64b6a971d0750d718ae69d345bb1905f3ed867cc6eef53a3f390411"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "use cases/products/base/output/normalization/products_3.csv",
+    "sha256": "6c1cf1e096bad2ec3e157011cb389de19fc4db47c38097daa7602a9a8c1d0823"
+   },
+   {
+    "pipeline": "p1_human",
+    "task": "products_base",
+    "kind": "normalized_table",
+    "path": "use cases/products/base/output/normalization/products_4.csv",
+    "sha256": "717231bc0a3c615a1034ba2d937fead9aeb52c87714873316a1991f09af83e42"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "fused",
+    "path": "results/best of breeds/products/easy/fused.csv",
+    "sha256": "96d0cfa4b40d2195a52c298b9211814f640080d21e768d8a1da3dbc09478be00",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/products_easy/stage_2_norm_selection_replay.json",
+    "sha256": "069ee8975f821b7de993d0482161b925e7f5fb8910b08408020af6d6d95e6adb"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_easy/tables/products_1.csv",
+    "sha256": "9439cfbb480512e6e8125d1a9779cdce85a54720d311951c9f3038b3fc8a3564"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_easy/tables/products_2.csv",
+    "sha256": "37fcd03f2a122cf96cb146a0e41664d69ca5e36a683eaded343b4c539fda8187"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_easy/tables/products_3.csv",
+    "sha256": "51e082353be3d5e4d6306c504e18341ca0b5398c59cb49d3052e8854e7123276"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_easy/tables/products_4.csv",
+    "sha256": "f900c4bc0d2536e8f19969c6412172de6d021da45bebc13da4bda9c0d8a81902"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_easy",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/products/easy/per_stage_summary.csv",
+    "sha256": "bca1c8343e4c5e9e7a85140560888cd698e20eb0d8314e169409dc5b31f3d2f1"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_easy",
+    "kind": "fused",
+    "path": "results/llm pipeline/products/easy/fusion/optimization_provided_val/case_llm_val_stats__opt_provided/fused.csv",
+    "sha256": "ed0af948181f5e82032bcfded284ae94d6f4ad6de9057c3eaf5b5d95adc3d2fd",
+    "case": "case_llm_val_stats__opt_provided"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_easy",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/products/easy/scoring/scores.json",
+    "sha256": "c154d61e19531fa1affb5b08b0be102c23296a333534bdcbaee17a7815bc68b7"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "fused",
+    "path": "results/best of breeds/products/medium/fused.csv",
+    "sha256": "b7985b70ae99f5b646a21049f5b589e907b6bf078b76a70dea6cfbd06c023fe0",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/products_medium/stage_2_norm_selection_replay.json",
+    "sha256": "b8b536dbe60de668ce228802b5120371861a083bd3fb3ae71a381d2e8138efbb"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_medium/tables/products_1.csv",
+    "sha256": "85a41e8ea25402ae463bb8a24e972e83858d37623a63a6b4bdeb5681b25def40"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_medium/tables/products_2.csv",
+    "sha256": "42727030a186c514daf787ffc63b8efb143155c177877d9256e2a6e40a2e58f6"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_medium/tables/products_3.csv",
+    "sha256": "4f071119d0675a3cda875e9efcc94fdf809b2cbbcb48781905964ebd2045add3"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_medium/tables/products_4.csv",
+    "sha256": "9e7dfe9046b407cd3f3c7e09ae8a841843a99db9be4f31531d62d235c45d51b1"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_medium",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/products/medium/per_stage_summary.csv",
+    "sha256": "a2439352ed601425087ff97b8db5ac7939b8904edb527191faf093e8c3c52f9a"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_medium",
+    "kind": "fused",
+    "path": "results/llm pipeline/products/medium/fusion/optimization_provided_val/case_llm_no_val/fused.csv",
+    "sha256": "30373085e7848aa2d32886d1ceca8f1bb6767ebf48b940c08558e4aa16368671",
+    "case": "case_llm_no_val"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_medium",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/products/medium/scoring/scores.json",
+    "sha256": "442bf283f8c13954d13fb88e4375119cb67adab910ecfe595e6d9766833e694d"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "fused",
+    "path": "results/best of breeds/products/hard/fused.csv",
+    "sha256": "5876f75d2a6090364de65bb8379745177d439f95a66e9d03f483847b043690ce",
+    "case": "fused.csv"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "stage2_selection_replay",
+    "path": "<p2-norm-root>/products_hard/stage_2_norm_selection_replay.json",
+    "sha256": "b1bb673c13babbd3cb403ab6175e6ffc335dd3bb65ed013c87395a60711d6fc3"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_hard/tables/products_1.csv",
+    "sha256": "4b1b67449033565139951dbaa1fa7250081d9d7e14ed06c88fe5351401a86548"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_hard/tables/products_2.csv",
+    "sha256": "4d23815d4639981c1ac82ba4ea70916b284ad3fd7ee6766feb16b9db8c795535"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_hard/tables/products_3.csv",
+    "sha256": "88e62aa8ed1b931f6d24d1a9eae8cefa6830bb73e79447b588e7ad6bd80b7a33"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "normalized_table",
+    "path": "<p2-norm-root>/products_hard/tables/products_4.csv",
+    "sha256": "b216d61146ced1e492c64a5f687d0d84632177b2be73b127443df416a3f8af74"
+   },
+   {
+    "pipeline": "p2_best_of_breeds",
+    "task": "products_hard",
+    "kind": "stage_metrics",
+    "path": "results/best of breeds/products/hard/per_stage_summary.csv",
+    "sha256": "efc763af948b6807f242f24f6c2f23a6c2c45124b9d96dc65502955b8d445099"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_hard",
+    "kind": "fused",
+    "path": "results/llm pipeline/products/hard/fusion/optimization_provided_val/case_llm_no_val/fused.csv",
+    "sha256": "632afb1d72bab1dcd95200acf2475084634fd88bb5455d5f2e5a8d3d8c758273",
+    "case": "case_llm_no_val"
+   },
+   {
+    "pipeline": "p3_llm_pipeline",
+    "task": "products_hard",
+    "kind": "stage_metrics",
+    "path": "results/llm pipeline/products/hard/scoring/scores.json",
+    "sha256": "e79841b7d4e5bab07dd2719660d80aa90e8be16c312862dd29d32bce841f9388"
+   }
+  ],
+  "missing_inputs": [],
+  "notes": [
+   "Fusion: madi_bench.evaluation.score_fusion (strict rules, v2 gold, all-gold accuracy, cell-weighted).",
+   "Normalization: madi_bench.evaluation.score_normalization, where a pipeline's normalized tables exist: P1 and P3 on the base tasks; P2 with --p2-norm-root (the stage-2 tables replayed by reproduction/scoring/p2_norm_replay.py).",
+   "Stages (sm_f1, em_f1): the test scores stored with the runs (P2 per_stage_summary.csv; P3 metrics/paper_results.csv, else scoring/scores.json).",
+   "Record ids: the stored P2/P3 outputs of 15 variant task(s) (companies_easy, companies_hard, companies_medium, games_easy, games_hard, games_medium, music_easy, music_hard, music_medium, papers_easy, papers_hard, papers_medium, products_easy, products_hard, products_medium) carry the generator's record ids; they were mapped to the task's record ids through the record-id maps (<task>/output/provenance/record_id_map.csv; columns _id, id, _fusion_sources).",
+   "End-to-end panels: reproduction/scoring/e2e_panels.py."
+  ]
+ },
+ "results": {
+  "p2_best_of_breeds": {
+   "companies_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6639344262295082,
+     "overall_accuracy_evaluated": 0.6639344262295082,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 405,
+     "n_submitted_aligned": 12019,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.95,
+      "founded": 0.8059701492537313,
+      "country": 0.57,
+      "city": 0.6,
+      "industry": 0.14,
+      "assets": 0.8636363636363636,
+      "revenue": 0.7638888888888888,
+      "keypeople": 0.8333333333333334
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2935,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 92,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 27,
+       "correct": 27,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 65,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 65,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "country": 0.4545,
+      "industry": 0.193,
+      "name": 0.5
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.8389415663427516,
+       "passthrough": 0.9388254223241687
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 0.9767441860465117,
+     "em_f1": 0.8928571428571428,
+     "em_metric": "f1"
+    }
+   },
+   "companies_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 6,
+      "id": 6,
+      "_fusion_sources": 6
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.4918032786885246,
+     "overall_accuracy_evaluated": 0.4918032786885246,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 300,
+     "n_submitted_aligned": 12470,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.94,
+      "founded": 0.9104477611940298,
+      "country": 0.81,
+      "city": 0.6307692307692307,
+      "industry": 0.14,
+      "assets": 0.0,
+      "revenue": 0.013888888888888888,
+      "keypeople": 0.4444444444444444
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2222,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 243,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 54,
+       "correct": 54,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 189,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 189,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "assets": 0.0,
+      "city": 1.0,
+      "country": 0.4857,
+      "founded": 0.2099,
+      "industry": 0.2034,
+      "name": 0.8571,
+      "revenue": 0.0
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.5841193014420595,
+       "passthrough": 0.6618554534356373
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9357181645397774,
+     "em_metric": "f1"
+    }
+   },
+   "companies_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 284,
+      "id": 299,
+      "_fusion_sources": 626
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5852459016393443,
+     "overall_accuracy_evaluated": 0.5852459016393443,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 357,
+     "n_submitted_aligned": 12031,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.87,
+      "founded": 0.835820895522388,
+      "country": 0.67,
+      "city": 0.6,
+      "industry": 0.13,
+      "assets": 0.8636363636363636,
+      "revenue": 0.08333333333333333,
+      "keypeople": 0.7222222222222222
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2994,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 157,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 47,
+       "correct": 47,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 110,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 110,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "assets": 0.0,
+      "country": 0.4848,
+      "founded": 0.4545,
+      "industry": 0.1724,
+      "name": 0.5,
+      "revenue": 0.0
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.7050251669647085,
+       "passthrough": 0.7152251416660114
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.8886529225340609,
+     "em_metric": "f1"
+    }
+   },
+   "companies_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 732,
+      "id": 757,
+      "_fusion_sources": 1453
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.4064590163934426,
+     "overall_accuracy_evaluated": 0.41475409836065574,
+     "gold_coverage": 0.98,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 98,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 253,
+     "n_submitted_aligned": 11879,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.6859999999999999,
+      "founded": 0.5997014925373134,
+      "country": 0.5586,
+      "city": 0.4523076923076923,
+      "industry": 0.10779999999999999,
+      "assets": 0.1781818181818182,
+      "revenue": 0.2586111111111111,
+      "keypeople": 0.49
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2436,
+     "accuracy_transformations": 0.0526,
+     "record_coverage": 1.0,
+     "rows": 156,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 42,
+       "correct": 32,
+       "accuracy": 0.7619
+      },
+      "normalization": {
+       "n": 114,
+       "correct": 6,
+       "accuracy": 0.0526
+      },
+      "transformations": {
+       "n": 114,
+       "correct": 6,
+       "accuracy": 0.0526
+      }
+     },
+     "per_attribute": {
+      "assets": 0.2,
+      "city": 1.0,
+      "country": 0.5,
+      "founded": 0.0,
+      "industry": 0.1481,
+      "name": 0.8571,
+      "revenue": 0.7143
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.7345231340808519,
+       "passthrough": 0.693968670059805
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 0.9130434782608696,
+     "em_f1": 0.9452272413316756,
+     "em_metric": "f1"
+    }
+   },
+   "games_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6569987389659521,
+     "overall_accuracy_evaluated": 0.6569987389659521,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 521,
+     "n_submitted_aligned": 65108,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.92,
+      "releaseYear": 0.91,
+      "developer": 0.9263157894736842,
+      "genres": 0.11,
+      "publisher": 0.6323529411764706,
+      "platform": 0.28,
+      "criticScore": 0.64,
+      "userScore": 0.4,
+      "ESRB": 0.98
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.0604,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 182,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 11,
+       "correct": 11,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 171,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 171,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "ESRB": 0.8333,
+      "genres": 0.0,
+      "name": 0.5,
+      "platform": 0.0339
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.8558802308802309,
+       "passthrough": 0.9808802308802309
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.6729661133214433,
+     "em_metric": "f1"
+    }
+   },
+   "games_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 3594,
+      "id": 3594,
+      "_fusion_sources": 4560
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.626733921815889,
+     "overall_accuracy_evaluated": 0.626733921815889,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 497,
+     "n_submitted_aligned": 61835,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.9,
+      "releaseYear": 0.84,
+      "developer": 0.8842105263157894,
+      "genres": 0.13,
+      "publisher": 0.5,
+      "platform": 0.28,
+      "criticScore": 0.5866666666666667,
+      "userScore": 0.4,
+      "ESRB": 0.98
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.0977,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 215,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 21,
+       "correct": 21,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 194,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 194,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "ESRB": 0.8333,
+      "genres": 0.0,
+      "platform": 0.0345,
+      "releaseYear": 0.3182
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.8476250249512347,
+       "passthrough": 0.960837551341101
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.6685820023373588,
+     "em_metric": "f1"
+    }
+   },
+   "games_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 292,
+      "id": 292,
+      "_fusion_sources": 792
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6242118537200504,
+     "overall_accuracy_evaluated": 0.6242118537200504,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 495,
+     "n_submitted_aligned": 66783,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.92,
+      "releaseYear": 0.88,
+      "developer": 0.7789473684210526,
+      "genres": 0.39,
+      "publisher": 0.36764705882352944,
+      "platform": 0.27,
+      "criticScore": 0.5733333333333334,
+      "userScore": 0.4,
+      "ESRB": 0.85
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2444,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 270,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 66,
+       "correct": 66,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 204,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 204,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "ESRB": 0.5714,
+      "genres": 0.0,
+      "name": 0.5,
+      "platform": 0.2368,
+      "releaseYear": 0.5455
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.8349353989459866,
+       "passthrough": 0.9441928259775172
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.6968818451230512,
+     "em_metric": "f1"
+    }
+   },
+   "games_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 1242,
+      "id": 1253,
+      "_fusion_sources": 1362
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.4902143757881463,
+     "overall_accuracy_evaluated": 0.5271122320302648,
+     "gold_coverage": 0.93,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 93,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 418,
+     "n_submitted_aligned": 63048,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.8091,
+      "releaseYear": 0.6882,
+      "developer": 0.6265263157894737,
+      "genres": 0.2325,
+      "publisher": 0.2051470588235294,
+      "platform": 0.2697,
+      "criticScore": 0.45880000000000004,
+      "userScore": 0.28745454545454546,
+      "ESRB": 0.651
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2237,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 228,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 51,
+       "correct": 51,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 177,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 177,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "ESRB": 0.6061,
+      "genres": 0.0,
+      "name": 0.4,
+      "platform": 0.2875,
+      "releaseYear": 0.2308
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.8424926538124249,
+       "passthrough": 0.8624619949199774
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.7923439667128988,
+     "em_metric": "f1"
+    }
+   },
+   "music_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.8140495867768595,
+     "overall_accuracy_evaluated": 0.8140495867768595,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 591,
+     "n_submitted_aligned": 31217,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.91,
+      "artist": 0.96,
+      "release-date": 0.8020833333333334,
+      "release-country": 0.9795918367346939,
+      "label": 0.8977272727272727,
+      "genre": 0.4,
+      "tracks": 0.7555555555555555,
+      "duration": 0.6835443037974683
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.55,
+     "accuracy_transformations": 0.5536,
+     "record_coverage": 1.0,
+     "rows": 80,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 24,
+       "correct": 13,
+       "accuracy": 0.5417
+      },
+      "knowledge": {
+       "n": 6,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 50,
+       "correct": 31,
+       "accuracy": 0.62
+      },
+      "transformations": {
+       "n": 56,
+       "correct": 31,
+       "accuracy": 0.5536
+      }
+     },
+     "per_attribute": {
+      "genre": 0.0,
+      "label": 0.0,
+      "name": 0.0,
+      "release-country": 0.0,
+      "release-date": 1.0,
+      "tracks": 0.0
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.9883586732901801,
+       "passthrough": 0.9662807512122581
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9483985986030724,
+     "em_metric": "f1"
+    }
+   },
+   "music_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 1774,
+      "id": 640,
+      "_fusion_sources": 2496
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7520661157024794,
+     "overall_accuracy_evaluated": 0.7520661157024794,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 546,
+     "n_submitted_aligned": 31238,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.97,
+      "artist": 0.9,
+      "release-date": 0.75,
+      "release-country": 0.9693877551020408,
+      "label": 0.8636363636363636,
+      "genre": 0.4,
+      "tracks": 0.5444444444444444,
+      "duration": 0.46835443037974683
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.1739,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 92,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 27,
+       "correct": 16,
+       "accuracy": 0.5926
+      },
+      "knowledge": {
+       "n": 6,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 59,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 65,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "artist": 0.0,
+      "duration": 0.2241,
+      "genre": 0.0,
+      "label": 0.6667,
+      "name": 0.0,
+      "release-country": 0.0,
+      "tracks": 0.1667
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.9925484958782851,
+       "passthrough": 0.9264425953341958
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9486346163446657,
+     "em_metric": "f1"
+    }
+   },
+   "music_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 82,
+      "id": 82,
+      "_fusion_sources": 161
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6101928374655647,
+     "overall_accuracy_evaluated": 0.6101928374655647,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 443,
+     "n_submitted_aligned": 31242,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.92,
+      "artist": 0.83,
+      "release-date": 0.1875,
+      "release-country": 0.7346938775510204,
+      "label": 0.7613636363636364,
+      "genre": 0.4,
+      "tracks": 0.7555555555555555,
+      "duration": 0.16455696202531644
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.5648,
+     "accuracy_transformations": 0.6012,
+     "record_coverage": 1.0,
+     "rows": 216,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 48,
+       "correct": 21,
+       "accuracy": 0.4375
+      },
+      "knowledge": {
+       "n": 11,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 157,
+       "correct": 101,
+       "accuracy": 0.6433
+      },
+      "transformations": {
+       "n": 168,
+       "correct": 101,
+       "accuracy": 0.6012
+      }
+     },
+     "per_attribute": {
+      "artist": 0.0,
+      "duration": 0.24,
+      "genre": 0.25,
+      "label": 1.0,
+      "name": 0.0,
+      "release-country": 0.0,
+      "release-date": 1.0,
+      "tracks": 0.1667
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.9676625726611449,
+       "passthrough": 0.7814775774837732
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9324076163900117,
+     "em_metric": "f1"
+    }
+   },
+   "music_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 797,
+      "id": 785,
+      "_fusion_sources": 993
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5385674931129476,
+     "overall_accuracy_evaluated": 0.5385674931129476,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 391,
+     "n_submitted_aligned": 31094,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.86,
+      "artist": 0.82,
+      "release-date": 0.23958333333333334,
+      "release-country": 0.4897959183673469,
+      "label": 0.5795454545454546,
+      "genre": 0.26666666666666666,
+      "tracks": 0.7777777777777778,
+      "duration": 0.13924050632911392
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.4198,
+     "accuracy_transformations": 0.4118,
+     "record_coverage": 1.0,
+     "rows": 162,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 43,
+       "correct": 19,
+       "accuracy": 0.4419
+      },
+      "knowledge": {
+       "n": 10,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 109,
+       "correct": 49,
+       "accuracy": 0.4495
+      },
+      "transformations": {
+       "n": 119,
+       "correct": 49,
+       "accuracy": 0.4118
+      }
+     },
+     "per_attribute": {
+      "duration": 0.0851,
+      "genre": 0.0,
+      "label": 0.5,
+      "name": 0.0,
+      "release-country": 0.0,
+      "release-date": 1.0,
+      "tracks": 0.2
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.9622096884483428,
+       "passthrough": 0.7870200096807933
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9432636684445446,
+     "em_metric": "f1"
+    }
+   },
+   "papers_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.9023861171366594,
+     "overall_accuracy_evaluated": 0.9173098125689085,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 0.9837310195227765,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 907,
+     "total_correct": 832,
+     "n_submitted_aligned": 75314,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [
+      "cited_by_count"
+     ],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.99,
+      "title": 0.6666666666666666,
+      "authors": 0.8041237113402062,
+      "publication_year": 0.96,
+      "journal": 1.0,
+      "volume": 1.0,
+      "issue": 1.0,
+      "first_page": 0.9666666666666667,
+      "last_page": 0.9772727272727273,
+      "referenced_works_count": 0.8266666666666667
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2984,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 248,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 74,
+       "correct": 74,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 81,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 93,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 174,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "authors": 0.4464,
+      "journal": 0.2232,
+      "title": 0.3
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.0,
+       "passthrough": 0.0
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.996989401649921,
+     "em_metric": "f1"
+    }
+   },
+   "papers_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 767,
+      "id": 767,
+      "_fusion_sources": 2298
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.8796095444685466,
+     "overall_accuracy_evaluated": 0.8941565600882029,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 0.9837310195227765,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 907,
+     "total_correct": 811,
+     "n_submitted_aligned": 75103,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [
+      "cited_by_count"
+     ],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.99,
+      "title": 0.6565656565656566,
+      "authors": 0.9278350515463918,
+      "publication_year": 0.94,
+      "journal": 0.7865168539325843,
+      "volume": 0.989010989010989,
+      "issue": 0.8846153846153846,
+      "first_page": 0.9888888888888889,
+      "last_page": 0.9886363636363636,
+      "referenced_works_count": 0.7733333333333333
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.4015,
+     "accuracy_transformations": 0.1459,
+     "record_coverage": 1.0,
+     "rows": 264,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 79,
+       "correct": 79,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 66,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 119,
+       "correct": 27,
+       "accuracy": 0.2269
+      },
+      "transformations": {
+       "n": 185,
+       "correct": 27,
+       "accuracy": 0.1459
+      }
+     },
+     "per_attribute": {
+      "authors": 0.0,
+      "first_page": 1.0,
+      "journal": 0.3604,
+      "last_page": 1.0,
+      "title": 0.4105
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.0,
+       "passthrough": 0.0
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9945172093603243,
+     "em_metric": "f1"
+    }
+   },
+   "papers_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 26,
+      "id": 26,
+      "_fusion_sources": 78
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.8524945770065075,
+     "overall_accuracy_evaluated": 0.8665931642778391,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 0.9837310195227765,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 907,
+     "total_correct": 786,
+     "n_submitted_aligned": 74513,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [
+      "cited_by_count"
+     ],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.96,
+      "title": 0.6666666666666666,
+      "authors": 0.8144329896907216,
+      "publication_year": 0.94,
+      "journal": 0.7415730337078652,
+      "volume": 0.989010989010989,
+      "issue": 0.8846153846153846,
+      "first_page": 0.9444444444444444,
+      "last_page": 0.9545454545454546,
+      "referenced_works_count": 0.76
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.3897,
+     "accuracy_transformations": 0.1309,
+     "record_coverage": 1.0,
+     "rows": 272,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 81,
+       "correct": 81,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 57,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 134,
+       "correct": 25,
+       "accuracy": 0.1866
+      },
+      "transformations": {
+       "n": 191,
+       "correct": 25,
+       "accuracy": 0.1309
+      }
+     },
+     "per_attribute": {
+      "authors": 0.0,
+      "first_page": 0.6774,
+      "journal": 0.3333,
+      "last_page": 0.6571,
+      "title": 0.369
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.0,
+       "passthrough": 0.0
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 0.9859154929577464,
+     "em_f1": 0.9922877103505553,
+     "em_metric": "f1"
+    }
+   },
+   "papers_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 1612,
+      "id": 1931,
+      "_fusion_sources": 2513
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.601822125813449,
+     "overall_accuracy_evaluated": 0.6372657111356119,
+     "gold_coverage": 0.96,
+     "attribute_cell_coverage": 0.9837310195227765,
+     "n_gold": 100,
+     "n_gold_evaluated": 96,
+     "gold_cells_total": 922,
+     "total_evaluations": 907,
+     "total_correct": 578,
+     "n_submitted_aligned": 74135,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [
+      "cited_by_count"
+     ],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.864,
+      "title": 0.2618181818181818,
+      "authors": 0.46515463917525773,
+      "publication_year": 0.8256,
+      "journal": 0.5824719101123595,
+      "volume": 0.6435164835164835,
+      "issue": 0.5415384615384615,
+      "first_page": 0.6719999999999999,
+      "last_page": 0.6872727272727273,
+      "referenced_works_count": 0.5504
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.3906,
+     "accuracy_transformations": 0.1333,
+     "record_coverage": 1.0,
+     "rows": 192,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 57,
+       "correct": 57,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 42,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 93,
+       "correct": 18,
+       "accuracy": 0.1935
+      },
+      "transformations": {
+       "n": 135,
+       "correct": 18,
+       "accuracy": 0.1333
+      }
+     },
+     "per_attribute": {
+      "authors": 0.0,
+      "first_page": 0.5,
+      "journal": 0.4659,
+      "last_page": 0.5714,
+      "title": 0.2292,
+      "volume": 1.0
+     },
+     "stage2": {
+      "winner": "passthrough",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.0,
+       "passthrough": 0.0
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9671335464491415,
+     "em_metric": "f1"
+    }
+   },
+   "products_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7930622009569378,
+     "overall_accuracy_evaluated": 0.7930622009569378,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 663,
+     "n_submitted_aligned": 950,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.9072164948453608,
+      "model": 0.7702702702702703,
+      "model_number": 0.8072289156626506,
+      "product_type": 1.0,
+      "chipset_name": 0.96,
+      "vram_gb": 1.0,
+      "storage_gb": 0.92,
+      "read_speed_mb_s": 0.813953488372093,
+      "write_speed_mb_s": 0.875,
+      "bus_type": 0.40384615384615385,
+      "interface_type": 0.75,
+      "width_mm": 0.65,
+      "length_mm": 0.6818181818181818,
+      "height_mm": 0.6666666666666666,
+      "weight_g": 0.6666666666666666,
+      "storage_connection_type": 0.775,
+      "memory_type": 0.96,
+      "color": 0.6538461538461539,
+      "form_factor": 0.225
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.22,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 250,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 75,
+       "correct": 55,
+       "accuracy": 0.7333
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 174,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 175,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "brand": 0.45,
+      "bus_type": 0.1324,
+      "color": 0.4091,
+      "form_factor": 0.1698,
+      "interface_type": 0.2222,
+      "memory_type": 0.8182,
+      "storage_connection_type": 0.2759,
+      "storage_gb": 0.0,
+      "vram_gb": 0.0,
+      "weight_g": 0.0
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.5854782517142467,
+       "passthrough": 0.5846939379887565
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.8548248048248048,
+     "em_metric": "f1"
+    }
+   },
+   "products_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.8157894736842105,
+     "overall_accuracy_evaluated": 0.8157894736842105,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 682,
+     "n_submitted_aligned": 469,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.9175257731958762,
+      "model": 0.7702702702702703,
+      "model_number": 0.9518072289156626,
+      "product_type": 1.0,
+      "chipset_name": 0.96,
+      "vram_gb": 1.0,
+      "storage_gb": 0.8266666666666667,
+      "read_speed_mb_s": 0.7209302325581395,
+      "write_speed_mb_s": 0.84375,
+      "bus_type": 0.5192307692307693,
+      "interface_type": 0.75,
+      "width_mm": 0.65,
+      "length_mm": 0.8636363636363636,
+      "height_mm": 0.7142857142857143,
+      "weight_g": 0.6666666666666666,
+      "storage_connection_type": 0.825,
+      "memory_type": 1.0,
+      "color": 0.7692307692307693,
+      "form_factor": 0.25
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.1875,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 352,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 105,
+       "correct": 66,
+       "accuracy": 0.6286
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 246,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 247,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "brand": 0.5238,
+      "bus_type": 0.1618,
+      "color": 0.3793,
+      "form_factor": 0.1698,
+      "interface_type": 0.4,
+      "memory_type": 0.8333,
+      "read_speed_mb_s": 0.0,
+      "storage_connection_type": 0.303,
+      "storage_gb": 0.0,
+      "vram_gb": 0.0,
+      "weight_g": 0.0,
+      "write_speed_mb_s": 0.0
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.6439488639784285,
+       "passthrough": 0.6249130420550884
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9693109961402643,
+     "em_metric": "f1"
+    }
+   },
+   "products_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7392344497607656,
+     "overall_accuracy_evaluated": 0.7392344497607656,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 618,
+     "n_submitted_aligned": 497,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.8556701030927835,
+      "model": 0.7297297297297297,
+      "model_number": 0.8072289156626506,
+      "product_type": 1.0,
+      "chipset_name": 0.92,
+      "vram_gb": 0.56,
+      "storage_gb": 0.72,
+      "read_speed_mb_s": 0.7441860465116279,
+      "write_speed_mb_s": 0.78125,
+      "bus_type": 0.5961538461538461,
+      "interface_type": 0.75,
+      "width_mm": 0.4,
+      "length_mm": 0.6818181818181818,
+      "height_mm": 0.23809523809523808,
+      "weight_g": 0.75,
+      "storage_connection_type": 0.8,
+      "memory_type": 0.96,
+      "color": 0.6538461538461539,
+      "form_factor": 0.175
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.2036,
+     "accuracy_transformations": 0.0323,
+     "record_coverage": 1.0,
+     "rows": 442,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 132,
+       "correct": 80,
+       "accuracy": 0.6061
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 309,
+       "correct": 10,
+       "accuracy": 0.0324
+      },
+      "transformations": {
+       "n": 310,
+       "correct": 10,
+       "accuracy": 0.0323
+      }
+     },
+     "per_attribute": {
+      "brand": 0.5517,
+      "bus_type": 0.2222,
+      "color": 0.5294,
+      "form_factor": 0.1667,
+      "height_mm": 0.8,
+      "interface_type": 0.25,
+      "length_mm": 0.75,
+      "memory_type": 0.7692,
+      "read_speed_mb_s": 0.0,
+      "storage_connection_type": 0.4286,
+      "storage_gb": 0.0,
+      "vram_gb": 0.0,
+      "weight_g": 0.0,
+      "width_mm": 0.3,
+      "write_speed_mb_s": 0.0
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.5335523619425637,
+       "passthrough": 0.4834766076234693
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.8601530421799178,
+     "em_metric": "f1"
+    }
+   },
+   "products_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5441746411483253,
+     "overall_accuracy_evaluated": 0.5610047846889952,
+     "gold_coverage": 0.97,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 97,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 469,
+     "n_submitted_aligned": 1029,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.73,
+      "model": 0.4456756756756757,
+      "model_number": 0.5960240963855421,
+      "product_type": 0.873,
+      "chipset_name": 0.7372,
+      "vram_gb": 0.6208,
+      "storage_gb": 0.46559999999999996,
+      "read_speed_mb_s": 0.27069767441860465,
+      "write_speed_mb_s": 0.36375,
+      "bus_type": 0.3730769230769231,
+      "interface_type": 0.5658333333333333,
+      "width_mm": 0.1455,
+      "length_mm": 0.39681818181818185,
+      "height_mm": 0.3695238095238095,
+      "weight_g": 0.4041666666666667,
+      "storage_connection_type": 0.55775,
+      "memory_type": 0.8148,
+      "color": 0.485,
+      "form_factor": 0.2425
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.1854,
+     "accuracy_transformations": 0.0294,
+     "record_coverage": 1.0,
+     "rows": 437,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 131,
+       "correct": 72,
+       "accuracy": 0.5496
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 305,
+       "correct": 9,
+       "accuracy": 0.0295
+      },
+      "transformations": {
+       "n": 306,
+       "correct": 9,
+       "accuracy": 0.0294
+      }
+     },
+     "per_attribute": {
+      "brand": 0.4839,
+      "bus_type": 0.2295,
+      "color": 0.4167,
+      "form_factor": 0.1591,
+      "height_mm": 0.875,
+      "interface_type": 0.2857,
+      "length_mm": 0.3,
+      "memory_type": 0.8333,
+      "read_speed_mb_s": 0.0,
+      "storage_connection_type": 0.4516,
+      "storage_gb": 0.0,
+      "vram_gb": 0.0,
+      "weight_g": 0.125,
+      "width_mm": 0.2727,
+      "write_speed_mb_s": 0.0
+     },
+     "stage2": {
+      "winner": "rule_per_attribute_optimal",
+      "per_member_val": {
+       "rule_per_attribute_optimal": 0.5185704413879502,
+       "passthrough": 0.46500168889302623
+      },
+      "spread": null,
+      "vacuous": null
+     },
+     "source": "stage-2 winner replayed; not applied downstream in the stored run"
+    },
+    "stages": {
+     "sm_f1": 0.98,
+     "em_f1": 0.7921725411803902,
+     "em_metric": "f1"
+    }
+   }
+  },
+  "p3_llm_pipeline": {
+   "companies_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7573770491803279,
+     "overall_accuracy_evaluated": 0.7573770491803279,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 462,
+     "n_submitted_aligned": 12879,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.78,
+      "founded": 0.7611940298507462,
+      "country": 0.88,
+      "city": 0.6153846153846154,
+      "industry": 0.75,
+      "assets": 0.8068181818181818,
+      "revenue": 0.7083333333333334,
+      "keypeople": 0.4444444444444444
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "normalization": {
+     "accuracy": 0.8478,
+     "accuracy_transformations": 0.8769,
+     "record_coverage": 1.0,
+     "rows": 92,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 27,
+       "correct": 21,
+       "accuracy": 0.7778
+      },
+      "normalization": {
+       "n": 65,
+       "correct": 57,
+       "accuracy": 0.8769
+      },
+      "transformations": {
+       "n": 65,
+       "correct": 57,
+       "accuracy": 0.8769
+      }
+     },
+     "per_attribute": {
+      "country": 0.6061,
+      "industry": 1.0,
+      "name": 0.5
+     }
+    },
+    "stages": {
+     "sm_f1": 0.975609756097561,
+     "em_f1": 0.9068253255500673,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.6324167872648335
+    }
+   },
+   "companies_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 6,
+      "id": 6,
+      "_fusion_sources": 6
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5262295081967213,
+     "overall_accuracy_evaluated": 0.5262295081967213,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 321,
+     "n_submitted_aligned": 12908,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.86,
+      "founded": 0.7164179104477612,
+      "country": 0.82,
+      "city": 0.4461538461538462,
+      "industry": 0.68,
+      "assets": 0.0,
+      "revenue": 0.013888888888888888,
+      "keypeople": 0.3888888888888889
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.8818181818181818,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.42333333333333334
+    }
+   },
+   "companies_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 315,
+      "id": 315,
+      "_fusion_sources": 626
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6278688524590164,
+     "overall_accuracy_evaluated": 0.6278688524590164,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 383,
+     "n_submitted_aligned": 12912,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.75,
+      "founded": 0.6567164179104478,
+      "country": 0.79,
+      "city": 0.4307692307692308,
+      "industry": 0.69,
+      "assets": 0.8522727272727273,
+      "revenue": 0.08333333333333333,
+      "keypeople": 0.3888888888888889
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.7704903364352182,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.5683333333333334
+    }
+   },
+   "companies_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 858,
+      "id": 858,
+      "_fusion_sources": 1453
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5114754098360655,
+     "overall_accuracy_evaluated": 0.5114754098360655,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 610,
+     "total_evaluations": 610,
+     "total_correct": 312,
+     "n_submitted_aligned": 12097,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.66,
+      "founded": 0.5671641791044776,
+      "country": 0.76,
+      "city": 0.4307692307692308,
+      "industry": 0.66,
+      "assets": 0.18181818181818182,
+      "revenue": 0.2222222222222222,
+      "keypeople": 0.3333333333333333
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "founded": 67,
+      "country": 100,
+      "city": 65,
+      "industry": 100,
+      "assets": 88,
+      "revenue": 72,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.8742164502164502,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.4437984496124031
+    }
+   },
+   "games_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.733921815889029,
+     "overall_accuracy_evaluated": 0.733921815889029,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 582,
+     "n_submitted_aligned": 61286,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.89,
+      "releaseYear": 0.87,
+      "developer": 0.8105263157894737,
+      "genres": 0.45,
+      "publisher": 0.5441176470588235,
+      "platform": 0.87,
+      "criticScore": 0.5866666666666667,
+      "userScore": 0.32727272727272727,
+      "ESRB": 0.98
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_heuristic"
+    },
+    "normalization": {
+     "accuracy": 0.3791,
+     "accuracy_transformations": 0.3392,
+     "record_coverage": 1.0,
+     "rows": 182,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 11,
+       "correct": 11,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 171,
+       "correct": 58,
+       "accuracy": 0.3392
+      },
+      "transformations": {
+       "n": 171,
+       "correct": 58,
+       "accuracy": 0.3392
+      }
+     },
+     "per_attribute": {
+      "ESRB": 1.0,
+      "genres": 0.0,
+      "name": 0.5,
+      "platform": 1.0
+     }
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.6315126050420168,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.8487394957983193
+    }
+   },
+   "games_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 3163,
+      "id": 3163,
+      "_fusion_sources": 4560
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7276166456494325,
+     "overall_accuracy_evaluated": 0.7276166456494325,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 577,
+     "n_submitted_aligned": 59945,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.94,
+      "releaseYear": 0.88,
+      "developer": 0.7578947368421053,
+      "genres": 0.45,
+      "publisher": 0.47058823529411764,
+      "platform": 0.88,
+      "criticScore": 0.5466666666666666,
+      "userScore": 0.34545454545454546,
+      "ESRB": 0.98
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_heuristic"
+    },
+    "stages": {
+     "sm_f1": 0.9787234042553191,
+     "em_f1": 0.7601476014760148,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.8135168961201502
+    }
+   },
+   "games_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 274,
+      "id": 274,
+      "_fusion_sources": 792
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.699873896595208,
+     "overall_accuracy_evaluated": 0.699873896595208,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 555,
+     "n_submitted_aligned": 60074,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.86,
+      "releaseYear": 0.88,
+      "developer": 0.6842105263157895,
+      "genres": 0.44,
+      "publisher": 0.4411764705882353,
+      "platform": 0.89,
+      "criticScore": 0.52,
+      "userScore": 0.3090909090909091,
+      "ESRB": 0.97
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_heuristic"
+    },
+    "stages": {
+     "sm_f1": 0.9787234042553191,
+     "em_f1": 0.7266666666666667,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.7847309136420526
+    }
+   },
+   "games_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 1181,
+      "id": 1181,
+      "_fusion_sources": 1362
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.583203026481715,
+     "overall_accuracy_evaluated": 0.6204287515762925,
+     "gold_coverage": 0.94,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 94,
+     "gold_cells_total": 793,
+     "total_evaluations": 793,
+     "total_correct": 492,
+     "n_submitted_aligned": 59881,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.8083999999999999,
+      "releaseYear": 0.7238,
+      "developer": 0.603578947368421,
+      "genres": 0.35719999999999996,
+      "publisher": 0.15205882352941177,
+      "platform": 0.7707999999999999,
+      "criticScore": 0.4888,
+      "userScore": 0.27345454545454545,
+      "ESRB": 0.7707999999999999
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "releaseYear": 100,
+      "developer": 95,
+      "genres": 100,
+      "publisher": 68,
+      "platform": 100,
+      "criticScore": 75,
+      "userScore": 55,
+      "ESRB": 100
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_heuristic"
+    },
+    "stages": {
+     "sm_f1": 0.9787234042553191,
+     "em_f1": 0.8203125000000001,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.7261904761904762
+    }
+   },
+   "music_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7011019283746557,
+     "overall_accuracy_evaluated": 0.7011019283746557,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 509,
+     "n_submitted_aligned": 31090,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.88,
+      "artist": 0.87,
+      "release-date": 0.8125,
+      "release-country": 0.6224489795918368,
+      "label": 0.9659090909090909,
+      "genre": 0.96,
+      "tracks": 0.0,
+      "duration": 0.4810126582278481
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "normalization": {
+     "accuracy": 0.75,
+     "accuracy_transformations": 0.6429,
+     "record_coverage": 1.0,
+     "rows": 80,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 24,
+       "correct": 24,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 6,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 50,
+       "correct": 36,
+       "accuracy": 0.72
+      },
+      "transformations": {
+       "n": 56,
+       "correct": 36,
+       "accuracy": 0.6429
+      }
+     },
+     "per_attribute": {
+      "genre": 1.0,
+      "label": 0.0,
+      "name": 0.3846,
+      "release-country": 0.5,
+      "release-date": 1.0,
+      "tracks": 0.0
+     }
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9810318974918211,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.8311688311688312
+    }
+   },
+   "music_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 1361,
+      "id": 1361,
+      "_fusion_sources": 2496
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6914600550964187,
+     "overall_accuracy_evaluated": 0.6914600550964187,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 502,
+     "n_submitted_aligned": 30951,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.88,
+      "artist": 0.87,
+      "release-date": 0.7083333333333334,
+      "release-country": 0.9591836734693877,
+      "label": 0.9318181818181818,
+      "genre": 0.9066666666666666,
+      "tracks": 0.0,
+      "duration": 0.189873417721519
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_no_val"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9769020651119751,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.7740259740259741
+    }
+   },
+   "music_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 82,
+      "id": 82,
+      "_fusion_sources": 161
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6487603305785123,
+     "overall_accuracy_evaluated": 0.6487603305785123,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 471,
+     "n_submitted_aligned": 31705,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.84,
+      "artist": 0.85,
+      "release-date": 0.8229166666666666,
+      "release-country": 0.8367346938775511,
+      "label": 0.7045454545454546,
+      "genre": 0.76,
+      "tracks": 0.05555555555555555,
+      "duration": 0.21518987341772153
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.908620915485904,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.7103896103896103
+    }
+   },
+   "music_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 806,
+      "id": 806,
+      "_fusion_sources": 993
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5318181818181817,
+     "overall_accuracy_evaluated": 0.5371900826446281,
+     "gold_coverage": 0.99,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 99,
+     "gold_cells_total": 726,
+     "total_evaluations": 726,
+     "total_correct": 390,
+     "n_submitted_aligned": 31651,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.8217,
+      "artist": 0.7623,
+      "release-date": 0.6290625,
+      "release-country": 0.4141836734693878,
+      "label": 0.43875,
+      "genre": 0.5016,
+      "tracks": 0.418,
+      "duration": 0.16291139240506328
+     },
+     "per_attribute_count": {
+      "name": 100,
+      "artist": 100,
+      "release-date": 96,
+      "release-country": 98,
+      "label": 88,
+      "genre": 75,
+      "tracks": 90,
+      "duration": 79
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 0.9090909090909091,
+     "em_f1": 0.8802121831383973,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.5855855855855856
+    }
+   },
+   "papers_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7841648590021691,
+     "overall_accuracy_evaluated": 0.7841648590021691,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 922,
+     "total_correct": 723,
+     "n_submitted_aligned": 83197,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.99,
+      "title": 0.21212121212121213,
+      "authors": 0.6804123711340206,
+      "publication_year": 0.85,
+      "journal": 0.6067415730337079,
+      "volume": 1.0,
+      "issue": 0.9743589743589743,
+      "first_page": 0.9888888888888889,
+      "last_page": 1.0,
+      "referenced_works_count": 0.5733333333333334,
+      "cited_by_count": 0.7333333333333333
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75,
+      "cited_by_count": 15
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused_clean"
+    },
+    "normalization": {
+     "accuracy": 0.2984,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 248,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 74,
+       "correct": 74,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 81,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 93,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 174,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "authors": 0.4464,
+      "journal": 0.2232,
+      "title": 0.3
+     }
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.9664558218066867,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.7838616714697406
+    }
+   },
+   "papers_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 784,
+      "id": 784,
+      "_fusion_sources": 2298
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7212581344902386,
+     "overall_accuracy_evaluated": 0.7212581344902386,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 922,
+     "total_correct": 665,
+     "n_submitted_aligned": 94349,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.97,
+      "title": 0.1919191919191919,
+      "authors": 0.30927835051546393,
+      "publication_year": 0.93,
+      "journal": 0.797752808988764,
+      "volume": 0.978021978021978,
+      "issue": 0.8333333333333334,
+      "first_page": 0.9111111111111111,
+      "last_page": 0.9090909090909091,
+      "referenced_works_count": 0.4,
+      "cited_by_count": 0.6
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75,
+      "cited_by_count": 15
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused_clean"
+    },
+    "stages": {
+     "sm_f1": 0.9166666666666666,
+     "em_f1": 0.9092061726848613,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.6464135021097046
+    }
+   },
+   "papers_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 28,
+      "id": 28,
+      "_fusion_sources": 78
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6984815618221258,
+     "overall_accuracy_evaluated": 0.6984815618221258,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 922,
+     "total_correct": 644,
+     "n_submitted_aligned": 99763,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.94,
+      "title": 0.20202020202020202,
+      "authors": 0.3917525773195876,
+      "publication_year": 0.91,
+      "journal": 0.6853932584269663,
+      "volume": 0.9340659340659341,
+      "issue": 0.8076923076923077,
+      "first_page": 0.7888888888888889,
+      "last_page": 0.7954545454545454,
+      "referenced_works_count": 0.5733333333333334,
+      "cited_by_count": 0.5333333333333333
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75,
+      "cited_by_count": 15
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused_clean"
+    },
+    "stages": {
+     "sm_f1": 0.9166666666666666,
+     "em_f1": 0.8756341370942768,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.6227848101265823
+    }
+   },
+   "papers_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 944,
+      "id": 944,
+      "_fusion_sources": 1462
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.4873644251626898,
+     "overall_accuracy_evaluated": 0.5130151843817787,
+     "gold_coverage": 0.95,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 95,
+     "gold_cells_total": 922,
+     "total_evaluations": 922,
+     "total_correct": 473,
+     "n_submitted_aligned": 100920,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.8265,
+      "title": 0.21111111111111108,
+      "authors": 0.33298969072164947,
+      "publication_year": 0.7695,
+      "journal": 0.40561797752808987,
+      "volume": 0.5846153846153846,
+      "issue": 0.5237179487179487,
+      "first_page": 0.43277777777777776,
+      "last_page": 0.42102272727272727,
+      "referenced_works_count": 0.34199999999999997,
+      "cited_by_count": 0.31666666666666665
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75,
+      "cited_by_count": 15
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "fused_clean"
+    },
+    "stages": {
+     "sm_f1": 0.9166666666666666,
+     "em_f1": 0.7812636595906558,
+     "em_metric": "macro_f1 (paper_results.csv)",
+     "fusion_accuracy_as_published": 0.5110470701248799
+    }
+   },
+   "products_base": {
+    "id_alias": "raw products ids prefixed products_<N>_ by dataset membership",
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6148325358851675,
+     "overall_accuracy_evaluated": 0.6148325358851675,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 514,
+     "n_submitted_aligned": 1131,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.8556701030927835,
+      "model": 0.43243243243243246,
+      "model_number": 0.42168674698795183,
+      "product_type": 1.0,
+      "chipset_name": 0.76,
+      "vram_gb": 0.88,
+      "storage_gb": 0.5333333333333333,
+      "read_speed_mb_s": 0.5348837209302325,
+      "write_speed_mb_s": 0.65625,
+      "bus_type": 0.38461538461538464,
+      "interface_type": 0.625,
+      "width_mm": 0.45,
+      "length_mm": 0.5454545454545454,
+      "height_mm": 0.42857142857142855,
+      "weight_g": 0.25,
+      "storage_connection_type": 0.55,
+      "memory_type": 0.92,
+      "color": 0.7307692307692307,
+      "form_factor": 0.175
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_heuristic_stats__opt_provided"
+    },
+    "normalization": {
+     "accuracy": 0.3,
+     "accuracy_transformations": 0.0,
+     "record_coverage": 1.0,
+     "rows": 250,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 75,
+       "correct": 75,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 174,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "transformations": {
+       "n": 175,
+       "correct": 0,
+       "accuracy": 0.0
+      }
+     },
+     "per_attribute": {
+      "brand": 0.45,
+      "bus_type": 0.1324,
+      "color": 0.4091,
+      "form_factor": 0.1698,
+      "interface_type": 0.2222,
+      "memory_type": 0.8182,
+      "storage_connection_type": 0.2759,
+      "storage_gb": 0.3333,
+      "vram_gb": 0.8889,
+      "weight_g": 0.8
+     }
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.659992,
+     "em_metric": "per-pair mean F1 (scoring/scores.json)",
+     "fusion_accuracy_as_published": 0.6148325358851675
+    }
+   },
+   "products_easy": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6913875598086124,
+     "overall_accuracy_evaluated": 0.6913875598086124,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 578,
+     "n_submitted_aligned": 941,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.9484536082474226,
+      "model": 0.40540540540540543,
+      "model_number": 0.6867469879518072,
+      "product_type": 1.0,
+      "chipset_name": 0.84,
+      "vram_gb": 1.0,
+      "storage_gb": 0.5733333333333334,
+      "read_speed_mb_s": 0.5813953488372093,
+      "write_speed_mb_s": 0.59375,
+      "bus_type": 0.4807692307692308,
+      "interface_type": 0.7083333333333334,
+      "width_mm": 0.65,
+      "length_mm": 0.8636363636363636,
+      "height_mm": 0.7142857142857143,
+      "weight_g": 0.5833333333333334,
+      "storage_connection_type": 0.5,
+      "memory_type": 0.96,
+      "color": 0.7692307692307693,
+      "form_factor": 0.15
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_val_stats__opt_provided"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.512258,
+     "em_metric": "per-pair mean F1 (scoring/scores.json)",
+     "fusion_accuracy_as_published": 0.6913875598086124
+    }
+   },
+   "products_medium": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5490430622009569,
+     "overall_accuracy_evaluated": 0.5490430622009569,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 459,
+     "n_submitted_aligned": 1332,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.845360824742268,
+      "model": 0.4864864864864865,
+      "model_number": 0.5783132530120482,
+      "product_type": 0.97,
+      "chipset_name": 0.88,
+      "vram_gb": 0.28,
+      "storage_gb": 0.08,
+      "read_speed_mb_s": 0.4418604651162791,
+      "write_speed_mb_s": 0.65625,
+      "bus_type": 0.5,
+      "interface_type": 0.6666666666666666,
+      "width_mm": 0.35,
+      "length_mm": 0.4090909090909091,
+      "height_mm": 0.0,
+      "weight_g": 0.4166666666666667,
+      "storage_connection_type": 0.6,
+      "memory_type": 0.76,
+      "color": 0.4230769230769231,
+      "form_factor": 0.1
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_no_val"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.209177,
+     "em_metric": "per-pair mean F1 (scoring/scores.json)",
+     "fusion_accuracy_as_published": 0.5490430622009569
+    }
+   },
+   "products_hard": {
+    "id_translation": {
+     "map": "output/provenance/record_id_map.csv",
+     "ids_replaced": {
+      "_id": 0,
+      "id": 0,
+      "_fusion_sources": 0
+     }
+    },
+    "fusion": {
+     "overall_accuracy_all_gold": 0.37032296650717705,
+     "overall_accuracy_evaluated": 0.4461722488038278,
+     "gold_coverage": 0.83,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 83,
+     "gold_cells_total": 836,
+     "total_evaluations": 836,
+     "total_correct": 373,
+     "n_submitted_aligned": 850,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.6160824742268041,
+      "model": 0.15702702702702703,
+      "model_number": 0.22,
+      "product_type": 0.7636,
+      "chipset_name": 0.3984,
+      "vram_gb": 0.29879999999999995,
+      "storage_gb": 0.2766666666666666,
+      "read_speed_mb_s": 0.15441860465116278,
+      "write_speed_mb_s": 0.2334375,
+      "bus_type": 0.36711538461538457,
+      "interface_type": 0.3804166666666666,
+      "width_mm": 0.12449999999999999,
+      "length_mm": 0.3018181818181818,
+      "height_mm": 0.1976190476190476,
+      "weight_g": 0.2075,
+      "storage_connection_type": 0.4565,
+      "memory_type": 0.5312,
+      "color": 0.35115384615384615,
+      "form_factor": 0.166
+     },
+     "per_attribute_count": {
+      "brand": 97,
+      "model": 74,
+      "model_number": 83,
+      "product_type": 100,
+      "chipset_name": 25,
+      "vram_gb": 25,
+      "storage_gb": 75,
+      "read_speed_mb_s": 43,
+      "write_speed_mb_s": 32,
+      "bus_type": 52,
+      "interface_type": 24,
+      "width_mm": 20,
+      "length_mm": 22,
+      "height_mm": 21,
+      "weight_g": 12,
+      "storage_connection_type": 40,
+      "memory_type": 25,
+      "color": 26,
+      "form_factor": 40
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "case_llm_no_val"
+    },
+    "stages": {
+     "sm_f1": 1.0,
+     "em_f1": 0.501236,
+     "em_metric": "per-pair mean F1 (scoring/scores.json)",
+     "fusion_accuracy_as_published": 0.37032296650717705
+    }
+   }
+  },
+  "p1_human": {
+   "companies_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.6046643109540636,
+     "overall_accuracy_evaluated": 0.657243816254417,
+     "gold_coverage": 0.92,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 92,
+     "gold_cells_total": 610,
+     "total_evaluations": 566,
+     "total_correct": 372,
+     "n_submitted_aligned": 1738,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.85,
+      "founded": 0.7885714285714286,
+      "country": 0.8300000000000001,
+      "city": 0.6032786885245901,
+      "industry": 0.05,
+      "assets": 0.6360493827160494,
+      "revenue": 0.5080597014925373,
+      "keypeople": 0.6133333333333333
+     },
+     "per_attribute_count": {
+      "name": 92,
+      "founded": 63,
+      "country": 92,
+      "city": 61,
+      "industry": 92,
+      "assets": 81,
+      "revenue": 67,
+      "keypeople": 18
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "use cases/companies/base/output/data_fusion/fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.3478,
+     "accuracy_transformations": 0.1692,
+     "record_coverage": 1.0,
+     "rows": 92,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 27,
+       "correct": 21,
+       "accuracy": 0.7778
+      },
+      "normalization": {
+       "n": 65,
+       "correct": 11,
+       "accuracy": 0.1692
+      },
+      "transformations": {
+       "n": 65,
+       "correct": 11,
+       "accuracy": 0.1692
+      }
+     },
+     "per_attribute": {
+      "country": 0.6061,
+      "industry": 0.193,
+      "name": 0.5
+     }
+    }
+   },
+   "games_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.5329268292682927,
+     "overall_accuracy_evaluated": 0.7105691056910569,
+     "gold_coverage": 0.75,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 75,
+     "gold_cells_total": 793,
+     "total_evaluations": 615,
+     "total_correct": 437,
+     "n_submitted_aligned": 6972,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.7207792207792207,
+      "releaseYear": 0.7012987012987013,
+      "developer": 0.6699999999999999,
+      "genres": 0.36038961038961037,
+      "publisher": 0.6428571428571428,
+      "platform": 0.20454545454545453,
+      "criticScore": 0.43965517241379304,
+      "userScore": 0.234375,
+      "ESRB": 0.7305194805194806
+     },
+     "per_attribute_count": {
+      "name": 77,
+      "releaseYear": 77,
+      "developer": 75,
+      "genres": 77,
+      "publisher": 49,
+      "platform": 77,
+      "criticScore": 58,
+      "userScore": 48,
+      "ESRB": 77
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "use cases/games/base/output/data_fusion/fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.0659,
+     "accuracy_transformations": 0.0058,
+     "record_coverage": 1.0,
+     "rows": 182,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 11,
+       "correct": 11,
+       "accuracy": 1.0
+      },
+      "normalization": {
+       "n": 171,
+       "correct": 1,
+       "accuracy": 0.0058
+      },
+      "transformations": {
+       "n": 171,
+       "correct": 1,
+       "accuracy": 0.0058
+      }
+     },
+     "per_attribute": {
+      "ESRB": 0.8333,
+      "genres": 0.0,
+      "name": 0.5,
+      "platform": 0.0508
+     }
+    }
+   },
+   "music_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.4501706970128023,
+     "overall_accuracy_evaluated": 0.5846372688477952,
+     "gold_coverage": 0.77,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 77,
+     "gold_cells_total": 726,
+     "total_evaluations": 703,
+     "total_correct": 411,
+     "n_submitted_aligned": 3624,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "name": 0.5636082474226803,
+      "artist": 0.5477319587628866,
+      "release-date": 0.5381720430107527,
+      "release-country": 0.09726315789473684,
+      "label": 0.5819767441860465,
+      "genre": 0.29944444444444446,
+      "tracks": 0.4867816091954023,
+      "duration": 0.4660526315789474
+     },
+     "per_attribute_count": {
+      "name": 97,
+      "artist": 97,
+      "release-date": 93,
+      "release-country": 95,
+      "label": 86,
+      "genre": 72,
+      "tracks": 87,
+      "duration": 76
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "use cases/music/base/output/data_fusion/fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.6375,
+     "accuracy_transformations": 0.5714,
+     "record_coverage": 1.0,
+     "rows": 80,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 24,
+       "correct": 19,
+       "accuracy": 0.7917
+      },
+      "knowledge": {
+       "n": 6,
+       "correct": 1,
+       "accuracy": 0.1667
+      },
+      "normalization": {
+       "n": 50,
+       "correct": 31,
+       "accuracy": 0.62
+      },
+      "transformations": {
+       "n": 56,
+       "correct": 32,
+       "accuracy": 0.5714
+      }
+     },
+     "per_attribute": {
+      "genre": 0.0,
+      "label": 0.0,
+      "name": 0.3846,
+      "release-country": 0.1667,
+      "release-date": 1.0,
+      "tracks": 0.0
+     }
+    }
+   },
+   "papers_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.911062906724512,
+     "overall_accuracy_evaluated": 0.911062906724512,
+     "gold_coverage": 1.0,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 100,
+     "gold_cells_total": 922,
+     "total_evaluations": 922,
+     "total_correct": 840,
+     "n_submitted_aligned": 56733,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "type": 0.99,
+      "title": 0.7676767676767676,
+      "authors": 0.9484536082474226,
+      "publication_year": 0.93,
+      "journal": 0.8539325842696629,
+      "volume": 1.0,
+      "issue": 1.0,
+      "first_page": 0.9111111111111111,
+      "last_page": 0.9204545454545454,
+      "referenced_works_count": 0.8266666666666667,
+      "cited_by_count": 0.6666666666666666
+     },
+     "per_attribute_count": {
+      "type": 100,
+      "title": 99,
+      "authors": 97,
+      "publication_year": 100,
+      "journal": 89,
+      "volume": 91,
+      "issue": 78,
+      "first_page": 90,
+      "last_page": 88,
+      "referenced_works_count": 75,
+      "cited_by_count": 15
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "use cases/papers/base/output/data_fusion/fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.5202,
+     "accuracy_transformations": 0.3161,
+     "record_coverage": 1.0,
+     "rows": 248,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 74,
+       "correct": 74,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 81,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 93,
+       "correct": 55,
+       "accuracy": 0.5914
+      },
+      "transformations": {
+       "n": 174,
+       "correct": 55,
+       "accuracy": 0.3161
+      }
+     },
+     "per_attribute": {
+      "authors": 0.4464,
+      "journal": 0.2679,
+      "title": 0.925
+     }
+    }
+   },
+   "products_base": {
+    "fusion": {
+     "overall_accuracy_all_gold": 0.7111764705882353,
+     "overall_accuracy_evaluated": 0.7647058823529411,
+     "gold_coverage": 0.93,
+     "attribute_cell_coverage": 1.0,
+     "n_gold": 100,
+     "n_gold_evaluated": 93,
+     "gold_cells_total": 836,
+     "total_evaluations": 782,
+     "total_correct": 598,
+     "n_submitted_aligned": 758,
+     "n_duplicate_anchor_rows": 0,
+     "missing_schema_attributes": [],
+     "per_attribute_accuracy_all_gold": {
+      "brand": 0.8576666666666668,
+      "model": 0.45826086956521744,
+      "model_number": 0.6607894736842106,
+      "product_type": 0.93,
+      "chipset_name": 0.8895652173913045,
+      "vram_gb": 0.7682608695652174,
+      "storage_gb": 0.8901428571428572,
+      "read_speed_mb_s": 0.5757142857142857,
+      "write_speed_mb_s": 0.75,
+      "bus_type": 0.4092,
+      "interface_type": 0.760909090909091,
+      "width_mm": 0.4405263157894737,
+      "length_mm": 0.4871428571428572,
+      "height_mm": 0.465,
+      "weight_g": 0.465,
+      "storage_connection_type": 0.6852631578947368,
+      "memory_type": 0.8895652173913045,
+      "color": 0.6763636363636364,
+      "form_factor": 0.8076315789473685
+     },
+     "per_attribute_count": {
+      "brand": 90,
+      "model": 69,
+      "model_number": 76,
+      "product_type": 93,
+      "chipset_name": 23,
+      "vram_gb": 23,
+      "storage_gb": 70,
+      "read_speed_mb_s": 42,
+      "write_speed_mb_s": 31,
+      "bus_type": 50,
+      "interface_type": 22,
+      "width_mm": 19,
+      "length_mm": 21,
+      "height_mm": 20,
+      "weight_g": 12,
+      "storage_connection_type": 38,
+      "memory_type": 23,
+      "color": 22,
+      "form_factor": 38
+     },
+     "gold_version": "v2",
+     "rules": "strict",
+     "source": "use cases/products/base/output/data_fusion/fused.csv"
+    },
+    "normalization": {
+     "accuracy": 0.64,
+     "accuracy_transformations": 0.4857,
+     "record_coverage": 1.0,
+     "rows": 250,
+     "comparator": "list_form",
+     "per_category": {
+      "identity": {
+       "n": 75,
+       "correct": 75,
+       "accuracy": 1.0
+      },
+      "knowledge": {
+       "n": 1,
+       "correct": 0,
+       "accuracy": 0.0
+      },
+      "normalization": {
+       "n": 174,
+       "correct": 85,
+       "accuracy": 0.4885
+      },
+      "transformations": {
+       "n": 175,
+       "correct": 85,
+       "accuracy": 0.4857
+      }
+     },
+     "per_attribute": {
+      "brand": 1.0,
+      "bus_type": 0.1324,
+      "color": 0.4091,
+      "form_factor": 0.9434,
+      "interface_type": 0.2222,
+      "memory_type": 0.8182,
+      "storage_connection_type": 0.7931,
+      "storage_gb": 1.0,
+      "vram_gb": 1.0,
+      "weight_g": 1.0
+     }
+    }
+   }
+  }
+ }
+}

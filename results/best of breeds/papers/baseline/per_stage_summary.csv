@@ -1,5 +1,5 @@
 stage,winner,metric_key,val_score,test_score,runtime_s
-sm,llm_openai,f1,0.9714285714285714,0.9714285714285714,143.60946019296534
+sm,llm_openai,f1,1.0,1.0,365.6172758769244
 norm,passthrough,macro_f1,0.8257177784385635,0.8257177784385635,9.044788699015044
 em_blocking,sc_block,pair_completeness (>=0.97 floor; reduction_ratio tiebreak),1.0,1.0,4935.898931071977
 em_matching,ditto_plm,f1,0.0,0.996989401649921,4935.899332387024

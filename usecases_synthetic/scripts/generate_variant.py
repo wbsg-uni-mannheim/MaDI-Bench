@@ -3,7 +3,7 @@
 
 Runs all knob scripts in the canonical S1 order against a domain's
 original data and packages the result into the variant directory layout
-defined in ``plan.md``.
+defined in ``scripts/package_variant.py``.
 
 Canonical S1 knob order (see ``knobs/README.md`` § "Canonical knob
 application order")::
@@ -21,7 +21,7 @@ Per-knob CSV artifacts (provenance, baselines, regenerated EM, SM
 mapping) are flushed to a work directory; once all knobs have run,
 :func:`usecases_synthetic.scripts.package_variant.package_variant`
 assembles the final variant directory under
-``usecases/<domain>-augmented/<level>/``.
+``use cases/<domain>/<level>/``.
 
 Usage
 -----
@@ -39,8 +39,8 @@ Outputs
 -------
 - ``usecases_synthetic/output/<domain>/<level>/`` — per-knob work
   artifacts (provenance, baselines, canonical frame, etc.).
-- ``usecases/<domain>-augmented/<level>/`` — final packaged variant
-  directory per ``plan.md``.
+- ``use cases/<domain>/<level>/`` — final packaged variant
+  directory (layout in ``scripts/package_variant.py``).
 - ``usecases_synthetic/output/<domain>/monotonicity_report.csv`` —
   cross-level monotonicity audit (``--level all`` only).
 """
@@ -138,8 +138,8 @@ from usecases_synthetic.lib.reliability import sha256_file
 logger = logging.getLogger(__name__)
 
 
-# Active knob ids in canonical S1 order. K7 is deferred (not built in
-# v1) and K9 is S2-only. Exposed here so ablation mode can enumerate the
+# Active knob ids in canonical S1 order (the S1 knobs the generator
+# implements). Exposed here so ablation mode can enumerate the
 # togglable set without re-deriving it from imports.
 ACTIVE_KNOB_IDS: tuple[str, ...] = (
     "knob_01",
@@ -286,7 +286,7 @@ def _build_hard_negative_policy(
                 ckpt_path,
             )
 
-    # gate_mode: full_llm (step 4h option a, 2026-05-27) routes every pair
+    # gate_mode: full_llm routes every pair
     # through the LLM adjudicator regardless of PLM score. Falls back to
     # margin_only (legacy 3-band) when the field is absent. Also honour
     # the legacy use_llm_adjudicator boolean for backwards-compat with
@@ -353,7 +353,7 @@ def _run_knob_02(
     # prompt template). Using the interpolation client for non-corner
     # refill silently fails — it hits KeyError and returns {}, causing
     # every refill to be rejected as ``empty_primary_label``
-    # (2026-05-28 bug). C1 follow-up from plan_revision.md: on cache
+    # (an earlier bug). On cache
     # miss, K2 should call the real LLM rather than the deterministic
     # blender. The blender remains the fallback when no API key is set.
     api_client: Any = None
@@ -538,7 +538,7 @@ def _rerun_regen_post_k4(
     # Remove any K2-emitted per-version files AND any legacy
     # ``*_regenerated.csv`` files so a smaller post-K4 universe does
     # not leave stale per-pair-per-split files behind from the K2-time
-    # write. Both pre-C11 and post-C11 patterns are scrubbed because a
+    # write. Both the legacy and the current patterns are scrubbed because a
     # variant in flight may have been started under either naming.
     for stale in em_dir.glob("*_regenerated.csv"):
         stale.unlink()
@@ -698,8 +698,7 @@ def _run_knob_10(
     logger.info("[K10] level=%s — reliability reshuffle", level)
     config = load_knob_config(10, domain)
     domain_config = load_domain_config(domain)
-    # Both fusion val and test entities are protected per §"Terminology
-    # convention" in plan_s1_scale.md (2026-05-07). The actual filenames
+    # Both fusion val and test entities are protected. The actual filenames
     # are resolved via the domain config's ``fusion_files`` block so the
     # 200-entity ``*_set_final.xml`` files used by games + music are
     # picked up automatically.
@@ -802,7 +801,7 @@ def generate_variant(
         ``usecases_synthetic/output/<domain>/<level>``.
     variant_dir : Path or None
         Final variant directory. Defaults to
-        ``usecases/<domain>-augmented/<level>``.
+        ``use cases/<domain>/<level>``.
     sources_override : dict[str, DataFrame] or None
         Inject source DataFrames instead of calling
         :func:`load_domain_sources`. Useful for tests.
@@ -881,7 +880,7 @@ def generate_variant(
     # deterministic blender (K2: `default_api_client_from_attributes`)
     # or (b) the wired LLM client when the caller supplies one. The
     # previous "auto-strict-at-hard" forcing was the root cause of
-    # K2 dial-dormancy (plan_revision.md §C1 / Step 2 findings:
+    # K2 dial-dormancy (observed:
     # strict_cache_miss=1080 on music K2 hard, 0 LLM calls). Callers
     # who want a true reproducibility replay can pass
     # ``strict_cache_k1=True`` / ``strict_cache_k2=True`` explicitly.
@@ -929,13 +928,13 @@ def generate_variant(
             prompt_version=k1_cfg.get("llm_prompt_version", "v1"),
             model_id=k1_model_id,
         )
-    # 2026-05-31: build the K2 interpolation cache at EVERY level, not just
+    # Build the K2 interpolation cache at EVERY level, not just
     # hard. The `interpolate_paired_drop` operator fires whenever a level's
     # baseline corner ratio is BELOW its target (low-baseline domains like
     # music at medium), and `_run_interpolation` no-ops with a None cache
     # ("Interpolation skipped: llm_cache=None") -- so the prior hard-only
     # gate silently produced interp=0 at medium. This is the K2 twin of the
-    # K1 Fix-B cache-gate bug. (High-baseline domains like products use the
+    # K1 cache-gate bug. (High-baseline domains like products use the
     # drop path + non_corner cache and were unaffected.)
     if llm_cache_k2 is None:
         k2_cfg = load_knob_config(2, domain)
@@ -954,8 +953,8 @@ def generate_variant(
 
     # Wire a live K1 paraphrase client so cache misses call the LLM rather
     # than degrading to a deterministic operator (non-strict) or a
-    # ``strict_cache_miss`` skip (strict). This is the C1 fix that was
-    # applied to K2 but never to K1, leaving the R10-D v2 paraphrase prompt
+    # ``strict_cache_miss`` skip (strict). This is the fix that was
+    # applied to K2 but never to K1, leaving the v2 paraphrase prompt
     # uninvoked at every level. Skipped under strict cache and when no API
     # key is set; the cache then serves pre-baked replays only.
     k1_api_client: Callable[[str, str], str] | None = None
@@ -974,7 +973,7 @@ def generate_variant(
                 exc,
             )
 
-    # Step 4i (2026-05-27): separate LLM cache namespace for non-corner
+    # Separate LLM cache namespace for non-corner
     # refill so the new prompt's payloads do not collide with the
     # interpolation cache keys. Built whenever the domain YAML opts in
     # via ``non_corner_refill.enabled`` — drop-corner-refill can fire at
@@ -1217,28 +1216,25 @@ ADVISORY_CHECKS: dict[str, str] = {
 # inversion accepted as a known dial limitation rather than a regression. A
 # FAIL here is downgraded to WARN with the justification appended. Any NEW
 # or unlisted load-bearing non-monotonicity still FAILs the gate. Keep each
-# justification specific and dated so the allowlist stays auditable.
+# justification specific so the allowlist stays auditable.
 KNOWN_WEAK_EXCEPTIONS: dict[tuple[str, str], str] = {
     ("music", "knob_02_realised_monotonicity"): (
         "K2 is intrinsically low-range for music (~0.33 ceiling at "
         "max_interp_fraction=0.60); realised medium=0.258 > hard=0.248 is a "
         "+0.01 capped-sample dilution wobble. Targets already lowered to "
-        "0.20/0.30/0.35 (2026-05-31, config/knob_02_niche/music.yaml)."
+        "0.20/0.30/0.35 (config/knob_02_niche/music.yaml)."
     ),
     ("products", "knob_10_realised_rate_monotonicity"): (
         "swap_rate denominator reshufflable_count shrinks 691/613/496 across "
         "levels, inverting the realised rate (0.593/0.602/0.587, medium>hard "
-        "by 0.015). Documented denominator-shrink limitation pending a "
-        "stable-base K10 rate redesign."
+        "by 0.015). Documented denominator-shrink limitation."
     ),
     ("products", "knob_02_realised_vs_configured"): (
         "K2 easy target 0.20 is below the achievable floor for products: the "
         "drop_corner_touching operator cannot pull the baseline corner ratio "
         "(~0.48) down to 0.20 (realised easy=0.477, abs_gap +0.277). medium "
         "(0.519 vs 0.50) and hard (0.820 vs 0.80) track configured within "
-        "threshold. Documented K2 downward-dial limitation. REVISIT in a "
-        "future variant iteration (raise products K2 easy target or "
-        "strengthen the drop operator) -- see TODO in plan_revision.md."
+        "threshold. Documented K2 downward-dial limitation."
     ),
 }
 
@@ -1382,7 +1378,7 @@ _K8_RUNG_RANK: dict[str, int] = {
 def _k8_naming_intensity(prov_df: pd.DataFrame) -> int:
     """Rung-weighted row count: ``Σ rows × rung_rank``.
 
-    Plan R-1 / C3 K8 replacement for the edit-distance proxy. Naming
+    Replacement for the K8 edit-distance proxy. Naming
     modes form an ordinal scale (descriptive=0, abbreviated=1,
     cryptic=2, anonymized=3) where each step is *qualitatively* harder
     for string matchers, regardless of how many characters changed.
@@ -1402,9 +1398,9 @@ def _k8_naming_intensity(prov_df: pd.DataFrame) -> int:
 def _k5_distinct_format_families(prov_df: pd.DataFrame) -> int:
     """Count distinct ``(transform_fn, target_token)`` pairs touched.
 
-    Plan R-1 / C3 K5 replacement for the raw row-count proxy. K5 uses
+    Replacement for the K5 raw row-count proxy. K5 uses
     per-source format draws at easy/medium so the row-count is
-    stochastic + source-size-sensitive — F7's K2-easy-noop leaves
+    stochastic + source-size-sensitive — a K2 no-op at easy leaves
     extra rows for K5 at easy and the raw count flips non-monotone.
     Distinct format families touched (an ISO vs RFC date, imperial vs
     metric units, etc.) is invariant to how many rows a family covers
@@ -1454,7 +1450,7 @@ def _k1_realised_metrics(variant_dir: Path) -> dict[str, float | int] | None:
     """Read ``knob_01_realised.csv`` and return the per-level audit row.
 
     Returns ``None`` when the artifact is missing (older variant dirs
-    pre-dating plan_revision.md R-1 / G9 / step 4f) or the file is
+    pre-dating the K1 realised summary) or the file is
     empty.
 
     The dict carries:
@@ -1496,8 +1492,8 @@ def _k10_realised_swap_rate(variant_dir: Path) -> float | None:
     """Read ``knob_10_realised.csv`` and return the level's swap_rate.
 
     Returns ``None`` when the artifact is missing (older variant dirs
-    pre-dating plan_revision.md R-1 / C3 K10) or the file is empty.
-    The rate is the load-bearing K10 audit signal under R-1: it
+    pre-dating the K10 realised summary) or the file is empty.
+    The rate is the load-bearing K10 audit signal: it
     normalises swap count by ``reshufflable_count`` so K3's drop of the
     surviving entity pool does not depress the realised count at hard.
     """
@@ -1571,8 +1567,7 @@ def check_monotonicity(
     """Run cross-level monotonicity checks for a fully-generated domain.
 
     Runs a pragmatic set of checks that serve as proxies for the seven
-    monotonicity invariants documented in
-    ``plans/module_10_orchestrator.md``:
+    monotonicity invariants:
 
     1. **K3 drop nesting** — verify ``D_easy ⊆ D_medium ⊆ D_hard`` on
        the (entity, source, attribute) drop cell sets.
@@ -1598,8 +1593,7 @@ def check_monotonicity(
     8. **K1 surface paraphrase rate + intensity** — committed paraphrase
        count and mean edit-distance / token-Jaccard-drop both
        non-decreasing easy → medium → hard. Read from
-       ``baselines/knob_01_realised.csv`` (plan_revision.md R-1 / G9 /
-       step 4f). Rate FAIL surfaces cache-miss dormancy; intensity
+       ``baselines/knob_01_realised.csv``. Rate FAIL surfaces cache-miss dormancy; intensity
        FAIL surfaces shallow paraphrases (rate fires but output is
        near-identity).
 
@@ -1698,7 +1692,7 @@ def check_monotonicity(
     )
 
     # ---- K1 surface paraphrase: realised rate + intensity audit -----------
-    # plan_revision.md R-1 / G9 / step 4f. K1 has no per-cell mask the
+    # K1 has no per-cell mask the
     # validator can enforce (the dial sets a paraphrase rate, not a target
     # set), so dormancy + shallow-paraphrase are detected at audit time
     # from output/baselines/knob_01_realised.csv. Two checks:
@@ -1846,7 +1840,7 @@ def check_monotonicity(
                 "status": "FAIL",
                 "detail": (
                     "knob_01_realised.csv missing for "
-                    f"levels={missing_levels} (regenerate with the post-G9 "
+                    f"levels={missing_levels} (regenerate with the "
                     "K1 audit instrumentation)"
                 ),
             }
@@ -1934,7 +1928,7 @@ def check_monotonicity(
             }
         )
 
-    # K2 corner-case ratio audit split into 3 honest checks (2026-05-14):
+    # K2 corner-case ratio audit split into 3 honest checks:
     #
     #  A. Configured monotonicity   — does the YAML author levels with
     #     monotone ``target_corner_case_ratio``? Tautological under the
@@ -1949,7 +1943,7 @@ def check_monotonicity(
     #     above its medium counterpart).
     #
     # Two of the three FAIL legitimately on music-small (dial-limited at
-    # small scale, not a bug). Surfacing all three lets R7.3 narrate
+    # small scale, not a bug). Surfacing all three lets the analysis explain
     # exactly *why* a knob doesn't move EM/Fusion at hard.
     def _k2_realised_ratio(variant_dir: Path) -> float | None:
         p = variant_dir / "output" / "baselines" / "knob_02_realised.csv"
@@ -2131,16 +2125,16 @@ def check_monotonicity(
     # so each (source, attribute) has ~50% chance the draw stays at the
     # baseline format (0 prov rows) vs lands on a variant (prov for ALL
     # rows in that source × attribute). Realised count is therefore
-    # stochastic and also source-size sensitive: F7's K2-easy-noop
+    # stochastic and also source-size sensitive: a K2 no-op at easy
     # leaves more rows for K5 to operate on at easy, which can flip the
     # raw-count check FAIL even though K5's dial (pool size 2/3/4)
-    # didn't change. See plan_s1_final.md F9 / plan_revision.md R-1 C3
+    # didn't change
     # — the distinct-families check below is the intended replacement;
     # we keep the raw-count row alongside for backward visibility.
     _count_check("knob_05_format_prov_rows", "k05", "non_decreasing")
-    # K5 intensity (C3): distinct (transform_fn, target_fmt) families
+    # K5 intensity: distinct (transform_fn, target_fmt) families
     # touched per level. Insensitive to per-source row counts so the
-    # F7/K2-easy-noop side-effect can no longer flip the verdict.
+    # K2-easy-noop side-effect can no longer flip the verdict.
     k5_fam_e = _k5_distinct_format_families(provs["easy"]["k05"])
     k5_fam_m = _k5_distinct_format_families(provs["medium"]["k05"])
     k5_fam_h = _k5_distinct_format_families(provs["hard"]["k05"])
@@ -2200,7 +2194,7 @@ def check_monotonicity(
             "detail": "direction=non_decreasing (sum levenshtein)",
         }
     )
-    # K8 intensity (plan_revision.md R-1 / C3): rung-weighted row count.
+    # K8 intensity: rung-weighted row count.
     # Edit distance ranks ``descriptive→abbreviated`` (many small edits)
     # above ``descriptive→cryptic`` (few but conceptually larger), which
     # is the wrong order for string-matcher difficulty. Rung_rank
@@ -2241,7 +2235,7 @@ def check_monotonicity(
     #
     # The compromised-mask depression at hard is a documented K10 design
     # mechanism, not a dispatcher bug. We surface it as a FAIL on B + C
-    # but it does NOT block the audit overall (R7.3 reads + narrates).
+    # but it does NOT block the audit overall.
     def _k10_reassigns_distinct_cells(prov_df: pd.DataFrame) -> int:
         if prov_df.empty or "transform_fn" not in prov_df.columns:
             return 0
@@ -2328,7 +2322,7 @@ def check_monotonicity(
             }
         )
 
-    # Check B: realised-vs-configured. plan_revision.md R-1 / C3 K10 added
+    # Check B: realised-vs-configured. K10 writes
     # ``output/baselines/knob_10_realised.csv`` so the audit can compare a
     # rate (swap_cells / reshufflable_count), not a count. Rate is
     # invariant to the K3 drop and surfaces dispersion-dial monotonicity
@@ -2374,7 +2368,7 @@ def check_monotonicity(
 
     # Check C: rate-based realised monotonicity (preferred over count).
     # Count-based check kept below as a secondary signal for backward
-    # comparison; the rate check is the load-bearing verdict per C3 K10.
+    # comparison; the rate check is the load-bearing K10 verdict.
     rate_vals = [k10_realised_rates[lvl] for lvl in VALID_LEVELS]
     if all(v is not None for v in rate_vals):
         r_e, r_m, r_h = rate_vals  # type: ignore[misc]
@@ -2395,8 +2389,8 @@ def check_monotonicity(
             }
         )
 
-    # Legacy count-based Check C: kept for backward visibility. Plan
-    # R-1 / G4 documented this as non-monotone at hard via mask
+    # Legacy count-based Check C: kept for backward visibility. It is
+    # known to be non-monotone at hard via mask
     # depopulation — under the rate-based check above this is no longer
     # the load-bearing verdict.
     k10_ok_c = k10_swaps["easy"] <= k10_swaps["medium"] <= k10_swaps["hard"]
@@ -2413,7 +2407,7 @@ def check_monotonicity(
                 "is the compromised-mask mechanism depopulating the swap "
                 "pool against a smaller post-K3 surface — see the new "
                 "knob_10_realised_rate_monotonicity check (rate) for the "
-                "load-bearing verdict (plan_revision.md R-1 / C3 K10)."
+                "load-bearing verdict."
             ),
         }
     )
@@ -2558,7 +2552,7 @@ def main() -> None:
             "is set to --ablation-level (default hard), all others to "
             "--identity-level (default easy). Accepts 'knob_08', '08', "
             "or '8'. Variant is written to "
-            "usecases/<domain>-augmented/ablation_knob_<id>/."
+            "use cases/<domain>/ablation_knob_<id>/."
         ),
     )
     parser.add_argument(

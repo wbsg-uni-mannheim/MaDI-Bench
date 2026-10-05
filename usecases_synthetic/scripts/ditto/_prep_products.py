@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R2.1 helper: build Ditto json.gz files for products.
+"""Helper: build Ditto json.gz files for products.
 
 Per pair (anchor = products_1):
 
@@ -24,7 +24,7 @@ Data source: the **synthetic-side** EM gold + source data, resolved
 via :func:`data_root_for_domain` -> ``usecases_synthetic/usecases/products/``.
 The upstream ``usecases/products/`` directory is never read.
 
-Field projection (R10-I): the **wide committee scope**
+Field projection: the **wide committee scope**
 (``committee_ditto_fields("products")`` == ``DOMAIN_TEXT_COLS["products"]``
 == ``em_matching_committee_products.yaml`` ``ditto_plm.fields`` — 19
 fields), column-mapped off the base PyDI sources exactly the way the
@@ -65,6 +65,7 @@ from usecases_synthetic.lib.domain_config import (
     SYNTHETIC_DIR,
     USECASES_DIR,
     data_root_for_domain,
+    task_dir,
 )
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
@@ -76,7 +77,9 @@ from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
 
 DOMAIN = "products"
 PYDI_EM_GOLD_DIR = (
-    (data_root_for_domain(DOMAIN) or USECASES_DIR) / DOMAIN / "input" / "entitymatching"
+    task_dir(DOMAIN, root=data_root_for_domain(DOMAIN) or USECASES_DIR)
+    / "input"
+    / "entitymatching"
 )
 OUTPUT_DIR = SYNTHETIC_DIR / "output" / "ditto" / DOMAIN
 
@@ -190,7 +193,7 @@ def main() -> None:
     print(f"EM gold dir: {PYDI_EM_GOLD_DIR}")
     print(f"Output dir : {OUTPUT_DIR}")
 
-    # R10-I: build records on the wide committee field scope, column-mapped
+    # Build records on the wide committee field scope, column-mapped
     # off the *base* PyDI sources exactly the way the committee runner maps
     # them at inference (products uses an identity column_mapping). The
     # baseline committee Ditto trains only on these base records.

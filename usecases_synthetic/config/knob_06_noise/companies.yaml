@@ -3,12 +3,10 @@
 # Per-attribute-class noise rates, operator mix, and constraint scalars.
 # See knobs/knob_06_value_noise.md for full specification.
 #
-# Refreshed 2026-05-07 against the schema.org-style CSV sources at
-# usecases/companies/input/data/. id_columns collapse to ``id`` via the
-# loader rename (see config/domains/companies.yaml). New blocks:
-# ``taxonomies`` (Pending #4 — taxonomy_walk operator wired to GICS),
-# ``numeric_attributes`` (Pending #6 — ±2% relative jitter cap on
-# continuous / year / date attributes).
+# id_columns collapse to ``id`` via the loader rename (see
+# config/domains/companies.yaml). Blocks: ``taxonomies`` (taxonomy_walk
+# operator wired to GICS), ``numeric_attributes`` (±2% relative jitter
+# cap on continuous / year / date attributes).
 
 domain: companies
 
@@ -137,7 +135,7 @@ soft_global_primary_cap_hard: 0.35
 compression_factor: 0.5
 stretch_factor: 1.5
 
-# Pending #4: taxonomy-walk operator bindings. Each entry loads a
+# Taxonomy-walk operator bindings. Each entry loads a
 # hierarchical CSV under usecases/<domain>/input/schemamatching/ and
 # binds it to (source, column) cells. The walk is single-level (up =
 # parent label; down = sibling at the next-deeper level).
@@ -157,7 +155,7 @@ taxonomies:
       # fullcontact.Attribute_4 is city/locality, NOT industry-like
       # (verified 2026-05-07). Not bound.
 
-# Pending #6: ±2 % relative jitter cap on numeric attributes. Types:
+# ±2 % relative jitter cap on numeric attributes. Types:
 # ``continuous`` (relative), ``year`` (parse-equal), ``date`` (calendar
 # day). String corruption that makes the value unparseable is allowed
 # (canonical K6 behaviour); only parseable jitter beyond the cap is

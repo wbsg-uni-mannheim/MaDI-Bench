@@ -1,0 +1,37 @@
+row,column,printed,value,formatted,status,source,note
+Games,P1,789,788.848,789,match,table9/p1_runtime.csv corrected_s_file_stamps,notebook timer 791.78 s minus the added export and scoring cells (about 2.9 s; timed with the run folder's file timestamps)
+Games,P2,2612,2611.62,2612,match,table9/p2_runtime.csv runtime_s,training 54.3 s + pipeline without e2e panel 2557.32 s
+Games,P3,196,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,P3 cost,3.17,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Games,P4,374,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Games,P4 cost,3.06,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Companies,P1,269,268.745,269,match,table9/p1_runtime.csv corrected_s_file_stamps,notebook timer 270.02 s minus the added export and scoring cells (about 1.2 s; timed with the run folder's file timestamps)
+Companies,P2,455,454.98,455,match,table9/p2_runtime.csv runtime_s,training 205.8 s + pipeline without e2e panel 249.18 s
+Companies,P3,203,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,P3 cost,0.87,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Companies,P4,180,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Companies,P4 cost,4.22,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Music,P1,728,727.708,728,match,table9/p1_runtime.csv corrected_s_file_stamps,notebook timer 729.32 s minus the added export and scoring cells (about 1.6 s; timed with the run folder's file timestamps)
+Music,P2,7231,7231.44,7231,match,table9/p2_runtime.csv runtime_s,training 5572.2 s + pipeline without e2e panel 1659.24 s
+Music,P3,211,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,P3 cost,3.25,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Music,P4,290,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Music,P4 cost,3.58,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Products,P1,406,406.498,406,match,table9/p1_runtime.csv corrected_s_file_stamps,notebook timer 407.02 s minus the added export and scoring cells (about 0.4 s; timed with the run folder's file timestamps)
+Products,P2,1029,1028.82,1029,match,table9/p2_runtime.csv runtime_s,training 669.1 s + pipeline without e2e panel 359.72 s
+Products,P3,5606,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,P3 cost,5.79,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Products,P4,22,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Products,P4 cost,5.95,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Papers,P1,1944,1943.535,1944,match,table9/p1_runtime.csv corrected_s_file_stamps,notebook timer 1965.4 s minus the added export and scoring cells (about 21.9 s; timed with the run folder's file timestamps)
+Papers,P2,14699,14698.79,14699,match,table9/p2_runtime.csv runtime_s,training 6149.5 s + pipeline without e2e panel 8549.29 s
+Papers,P3,1374,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,P3 cost,6.70,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Papers,P4,922,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Papers,P4 cost,2.47,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Mean,P1,827,827.0668,827,match,mean of the five unrounded P1 runtimes,
+Mean,P2,5205,5205.13,5205,match,mean of the five unrounded P2 runtimes,
+Mean,P3,1518,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Mean,P3 cost,3.96,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Mean,P4,358,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/
+Mean,P4 cost,3.85,,,as printed,,P4 (Claude Code) runtime and cost: value of the P4 runs; their records are in results/claude code/

@@ -1,0 +1,11 @@
+domain,pipeline,output_rows,multi_source_rows,largest_source_rows,largest_source
+games,P2,65108,6864,46580,dbpedia
+games,P4,50718,15785,46580,dbpedia
+companies,P2,12019,1505,10085,dbpedia
+companies,P4,12472,1358,10085,dbpedia
+music,P2,31217,4497,22627,discogs
+music,P4,29578,5991,22627,discogs
+products,P2,950,802,812,dataset_1
+products,P4,881,831,812,dataset_1
+papers,P2,75314,56026,60749,crossref
+papers,P4,76130,55585,60749,crossref

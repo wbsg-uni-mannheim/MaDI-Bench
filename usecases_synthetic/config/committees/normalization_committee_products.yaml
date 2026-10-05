@@ -26,7 +26,7 @@ rule_normalizers:
     # All 15 string/categorical/free-text attrs (long_string + nominal +
     # free_text in the kind map). Widened from the original 4 for the
     # 24-attr scope (2026-06-02).
-    applies_to: [title, brand, description, priceCurrency, title_description,
+    applies_to: [title, brand, description, priceCurrency,
                  model, model_number, product_type, chipset_name, bus_type,
                  interface_type, memory_type, storage_connection_type,
                  form_factor, color]

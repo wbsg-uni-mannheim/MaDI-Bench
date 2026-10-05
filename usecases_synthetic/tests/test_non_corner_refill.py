@@ -1,7 +1,6 @@
-"""Tests for step 4i: non-corner refill module + drop-corner dispatcher.
+"""Tests for the non-corner refill module + drop-corner dispatcher.
 
-Covers the new K2 drop-corner-touching operator and its 1-for-1 refill
-authored 2026-05-27 per plan_revision.md §4i.
+Covers the K2 drop-corner-touching operator and its 1-for-1 refill.
 """
 
 from __future__ import annotations
@@ -806,7 +805,7 @@ class TestRunDropCornerRefill:
         assert metrics["cap_bound"] is True
 
     def test_counterproductive_drop_skipped(self, tmp_path: Path) -> None:
-        """Bug 6 regression (2026-05-28): once the high-corner candidates
+        """Counterproductive-drop regression: once the high-corner candidates
         are exhausted, the greedy loop must skip drops whose removal
         would push the realised ratio AWAY from the target. Without
         this guard, products medium over-dropped 12 tail entities and
@@ -820,7 +819,7 @@ class TestRunDropCornerRefill:
           - entities 4, 5 touch only a non-corner pair → drops would
             reduce ``current_total`` while leaving ``current_corner``
             unchanged, lifting the ratio
-        Without the Bug 6 guard, entities 4 + 5 would drop and push the
+        Without the guard, entities 4 + 5 would drop and push the
         ratio above the current value. With the guard, they're skipped.
         """
         from usecases_synthetic.scripts.apply_knob_02_niche import (
@@ -893,14 +892,14 @@ class TestRunDropCornerRefill:
         # (or 5) would push ratio from 1/2 = 0.5 to 1/1 = 1.0 — strictly
         # counterproductive. The guard must skip both.
         assert metrics["skip_counterproductive"] >= 2, (
-            "Bug 6 fix should have skipped the 2 low-corner entities "
+            "The counterproductive-drop guard should have skipped the 2 low-corner entities "
             f"(4, 5); got skip_counterproductive={metrics['skip_counterproductive']}, "
             f"planned_drops={planned_drops}"
         )
         # Neither low-corner entity should appear in planned_drops.
         assert (
             4 not in planned_drops and 5 not in planned_drops
-        ), f"Low-corner drop leaked through Bug 6 guard: planned_drops={planned_drops}"
+        ), f"Low-corner drop leaked through the counterproductive-drop guard: planned_drops={planned_drops}"
 
     def test_skip_counterproductive_metric_present_on_normal_run(
         self, tmp_path: Path
@@ -1036,7 +1035,7 @@ class TestCornerCasePairConversionAtCaller:
         assert captured == {}  # stub never called in this focused test
 
 
-# ---- build_openai_non_corner_client (Bug 4 regression, 2026-05-28) -------
+# ---- build_openai_non_corner_client (regression) ----------------------
 
 
 class TestOpenAINonCornerClient:

@@ -1,4 +1,4 @@
-"""R10-E: per-source demotion cap + hash tie-break in K4 row selection.
+"""Per-source demotion cap + hash tie-break in K4 row selection.
 
 Without the cap the conflict ranking + alphabetical tie-break let one
 source (the EM-anchor source) absorb nearly every demotion, silently

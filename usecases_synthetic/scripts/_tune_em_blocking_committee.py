@@ -1,8 +1,8 @@
 """Tune EM blocking committee hyperparameters per member.
 
-One-off sweep harness for the R5 EM-blocking-stage tuning pass
-(2026-05-10). Closes Pending #1 (embedding-model brainstorm) + the
-user-directed expansions (2026-05-10): standard-blocker blocking-key
+One-off sweep harness for the EM-blocking-stage tuning pass.
+It covers an embedding-model panel plus
+a standard-blocker blocking-key
 panel + sorted-neighbourhood-blocker key/window sweep.
 
 Per-domain results land at ``cache/em_blocking_tuning/sweep.json``.
@@ -13,15 +13,13 @@ with the highest reduction_ratio, ties broken alphabetically on init.
 
 Three sub-sweeps:
 
-- ``embedding`` (Pending #1) — 5-model panel for ``embedding_blocker``.
+- ``embedding`` — 5-model panel for ``embedding_blocker``.
 - ``standard`` — multi-key panel for ``standard_blocker`` (prefix,
   token, value, compound). Per-domain key candidates declared inline.
 - ``sn`` — key + window panel for ``sorted_neighbourhood_blocker``.
 
-Token + BM25 sweeps deliberately deferred: their current YAML
-defaults (min_token_len=2, k1=1.5/b=0.75/stopwords=english) are
-sensible non-tuned baselines. If R7.2 monotonicity reveals a recall
-gap, revisit.
+Token + BM25 are not swept: their YAML defaults (min_token_len=2,
+k1=1.5/b=0.75/stopwords=english) are sensible non-tuned baselines.
 
 Usage::
 

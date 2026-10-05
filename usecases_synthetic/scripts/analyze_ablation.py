@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""M9 — per-knob ablation analyzer.
+"""Per-knob ablation analyzer.
 
-Consumes the baseline metrics (M5), the per-level hard metrics (M7),
+Consumes the baseline metrics (``measure_baseline.py``), the per-level hard metrics (``validate_variant.py``),
 and the per-knob ablation metrics produced by
 ``run_ablation_validation.py``, then answers:
 
@@ -16,7 +16,7 @@ Writes
 - ``usecases_synthetic/validation/<domain>/ablation/ablation_report.md``
 - ``usecases_synthetic/validation/<domain>/ablation/ablation_report.csv``
 
-M9 surfaces problems. M10 does the triage. No knob re-configuration
+This script surfaces problems; triage is manual. No knob re-configuration
 happens here.
 
 Usage
@@ -162,7 +162,7 @@ def ablation_metrics_path(domain: str, knob_id: str) -> Path:
 
 
 def hard_metrics_path(domain: str) -> Path:
-    """Canonical full-hard metrics path written by M7."""
+    """Canonical full-hard metrics path written by ``validate_variant.py``."""
     return VALIDATION_DIR / domain / "hard" / "metrics.json"
 
 
@@ -424,7 +424,7 @@ def _fmt(value: float) -> str:
 
 
 def _check_symbol(ok: bool) -> str:
-    """ASCII-only check / cross glyphs (no emoji per CLAUDE.md)."""
+    """ASCII-only check / cross glyphs (no emoji)."""
     return "[ok]" if ok else "[!!]"
 
 
@@ -477,9 +477,7 @@ def render_markdown(
     lines.append("")
     lines.append(
         "Per-knob ablation validation: each knob set to `hard` with all "
-        "others at `easy` (identity). See "
-        "`plans/validation/module_09_ablation.md` and "
-        "`knobs/ablations.md` for the independent-togglability requirement."
+        "others at `easy` (identity)."
     )
     lines.append("")
     if not hard_available:
@@ -563,7 +561,7 @@ def render_markdown(
     lines.append(
         "- `primary_under_signal` — primary-stage delta is materially "
         "smaller than the full-hard displacement. Knob may be dominated "
-        "by another knob at hard level. Usually fine; log for M10."
+        "by another knob at hard level. Usually fine; log for triage."
     )
     lines.append(
         "- `primary_over_signal` — primary-stage delta exceeds the "
@@ -618,7 +616,7 @@ def analyze_domain(
     over_ratio: float = DEFAULT_OVER_SIGNAL_RATIO,
     min_primary_delta: float = DEFAULT_MIN_PRIMARY_DELTA,
 ) -> dict[str, Any]:
-    """Run the full M9 analyzer for one domain.
+    """Run the full ablation analyzer for one domain.
 
     Parameters
     ----------
@@ -776,7 +774,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     """Parse CLI args."""
     parser = argparse.ArgumentParser(
         description=(
-            "Per-knob ablation analyzer (M9). Reads per-knob metrics "
+            "Per-knob ablation analyzer. Reads per-knob metrics "
             "written by run_ablation_validation.py, compares against "
             "baseline and full-hard, and writes ablation_report.md + .csv."
         )

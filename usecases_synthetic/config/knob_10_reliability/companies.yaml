@@ -1,8 +1,8 @@
 # Knob 10 — Source Reliability Differentiation: Companies domain config.
 #
-# Refreshed-CSV column names (2026-05-07 K10 sign-off, plan_s1_scale.md
-# §"K10 sign-off"). Per-attribute winner picks reflect the locked
-# preference for curated commercial sources over auto-generated DBpedia
+# Keyed on the loaded CSV column names. Per-attribute winner picks
+# reflect the preference for curated commercial sources over
+# auto-generated DBpedia
 # (Wikipedia-infobox-scraped — noisier on free-text / numeric fields).
 # DBpedia wins exactly one attribute (industry, GICS-encoded sector).
 #
@@ -19,15 +19,13 @@
 domain: companies
 
 # --- ID columns (for entity linkage lookups) ---
-# All three sources collapse to the canonical "id" column post-loader-rename
-# (per K1/K3/K5/K6 sign-offs in plan_s1_scale.md).
+# All three sources collapse to the canonical "id" column post-loader-rename.
 id_columns:
   dbpedia: id
   forbes: id
   fullcontact: id
 
-# --- Per-source -> canonical-attribute mapping (refreshed CSV columns) ---
-# Mirrors the K6/K3 sign-offs' attribute_mapping for cross-knob alignment.
+# --- Per-source -> canonical-attribute mapping ---
 attribute_mapping:
   dbpedia:
     org_name: name
@@ -71,16 +69,14 @@ attribute_mapping:
 # happen to source a value from dbpedia, dbpedia mechanically wins K10
 # regardless of the underlying noise profile.
 #
-# Memory-override note (2026-05-27): per
-# `feedback_dbpedia_noise_profile`, DBpedia is the noisiest source and
+# Note: DBpedia is the noisiest source and
 # should not default as a per-attribute trust winner unless the
 # attribute is GICS/controlled-vocab. The country/founded winners here
 # are dbpedia despite this prior because the human-authored fusion gold
 # was sourced from dbpedia values for these encyclopedic facts. K10
 # measures alignment with the fusion gold; when the gold sources from
 # dbpedia, dbpedia wins K10 mechanically. This is gold-alignment
-# override of source-quality prior, kept until a future re-authoring
-# of the gold against quality-preferred winners.
+# override of source-quality prior.
 attribute_targets:
   name:
     easy:

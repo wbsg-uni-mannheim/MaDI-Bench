@@ -1,0 +1,81 @@
+{
+  "original_sha256": "c41b4d8636b50dcb327aae4f39872dcc25238aa00bacb286ba660ed3e660d68d",
+  "optimized_sha256": "25e558eef6f1fb955b2bc441cd3b37184c547903cc5d35a4c53cb6bd1f5ea864",
+  "equivalence": "Only zero-overlap pairs are skipped. Every positive-overlap candidate is evaluated in the original pipe-cluster iteration order; all scoring, tie-breaking, coverage and purity code is unchanged.",
+  "passed": true,
+  "synthetic_original_vs_sparse_cases": 120,
+  "completed_original_panel_crosschecks": [
+    {
+      "domain": "games",
+      "pipeline": "P4",
+      "rows": 6972,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "games",
+      "pipeline": "P2",
+      "rows": 6972,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "games",
+      "pipeline": "P3",
+      "rows": 6972,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "companies",
+      "pipeline": "P4",
+      "rows": 1738,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "companies",
+      "pipeline": "P2",
+      "rows": 1738,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "companies",
+      "pipeline": "P3",
+      "rows": 1738,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "music",
+      "pipeline": "P4",
+      "rows": 3624,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "music",
+      "pipeline": "P2",
+      "rows": 3624,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "music",
+      "pipeline": "P3",
+      "rows": 3624,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "products",
+      "pipeline": "P4",
+      "rows": 753,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "products",
+      "pipeline": "P2",
+      "rows": 753,
+      "all_alignment_fields_equal": true
+    },
+    {
+      "domain": "products",
+      "pipeline": "P3",
+      "rows": 753,
+      "all_alignment_fields_equal": true
+    }
+  ]
+}

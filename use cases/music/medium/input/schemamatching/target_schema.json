@@ -48,7 +48,7 @@
       "title": "Release Country",
       "description": "Country where the release was published",
       "examples": [
-        "UK",
+        "United Kingdom of Great Britain and Northern Ireland",
         "United States of America",
         "France"
       ]

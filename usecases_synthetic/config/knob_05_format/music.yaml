@@ -1,7 +1,9 @@
 # Knob 05 — Format/Unit Diversity: Music domain config.
 #
 # Refreshed schema (2026-05-04 source-data refresh):
-#   - All three sources share columns: id, name, artist, release-date,
+#   - (Superseded 2026-06-03: the header rewrite put raw WDC headers on
+#     disk; see attribute_classes below for the loaded column names.)
+#     All three sources shared columns: id, name, artist, release-date,
 #     release-country, duration, label, genre, tracks.
 #   - release-date is uniformly ISO (YYYY-MM-DD with -01-01 padding) on
 #     musicbrainz/discogs; lastfm has zero release-date coverage.
@@ -17,18 +19,20 @@
 
 domain: music
 
-# Hyphenated column names ('release-date') are accessed via df[col]
-# string lookup so the dispatcher handles them transparently.
+# Keyed on the LOADED column names of the base sources (2026-09-25 remap;
+# the 2026-06-03 header rewrite put raw WDC headers on disk):
+# release-date = musicbrainz.Attribute_4 / discogs.pub_dt (lastfm has no
+# release-date column); duration = musicbrainz.Attribute_6 /
+# discogs.duration / lastfm.album_length.
 attribute_classes:
   musicbrainz:
-    release-date: date
-    duration: duration
+    Attribute_4: date
+    Attribute_6: duration
   discogs:
-    release-date: date
+    pub_dt: date
     duration: duration
   lastfm:
-    release-date: date
-    duration: duration
+    album_length: duration
 
 id_columns:
   musicbrainz: id

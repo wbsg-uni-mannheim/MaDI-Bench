@@ -57,6 +57,7 @@ from usecases_synthetic.lib.coverage_ops import (
     RemovalConstraints,
     apply_singleton_cap_rollback,
     build_entity_view,
+    _is_missing_scalar,
     fabricate_row_by_paraphrase,
     histogram_to_dataframe,
     measure_coverage_histogram,
@@ -129,7 +130,7 @@ def build_entity_linkage(
 
     The EM gold in ``usecases/<domain>/input/entitymatching/`` is a
     sampled subset of true matches, not a complete enumeration
-    (see plan.md Step 4). Using it alone dramatically undercounts the
+    of them. Using it alone dramatically undercounts the
     set of matchable entities and inflates the singleton fraction of
     the coverage histogram on domains with many pooled-but-unsampled
     matches (e.g. companies measured ``H_base[1] = 0.919``). This knob
@@ -139,7 +140,7 @@ def build_entity_linkage(
     Loads, in order:
 
     1. ``usecases_synthetic/pools/<domain>/pooled_positives.csv`` (the
-       pooled-positive artifact from plan.md Step 4, if present).
+       pooled-positive artifact from ``scripts/build_pool.py``, if present).
     2. ``usecases/<domain>/input/entitymatching/*_all.csv`` (the hand
        curated EM gold), falling back to per-split files when ``_all``
        is absent.
@@ -231,9 +232,9 @@ def _load_fusion_gold_ids(domain_config: DomainConfig) -> set[str]:
     Mirrors the ``protection._load_fusion_gold_ids`` semantics shared
     with K2.
     """
-    # Delegate to the shared protection loader so XML (pre-2026 domains)
-    # and JSONL-by-DOI fusion gold (papers; mapped to per-DOI anchor source
-    # ids) are handled identically and in one place.
+    # Delegate to the shared protection loader so id-keyed XML gold and
+    # source_ids-keyed gold (papers JSONL, products variant XML; keyed on the
+    # anchor of the members) are handled identically and in one place.
     from usecases_synthetic.lib.protection import _load_fusion_protected_ids
 
     return _load_fusion_protected_ids(domain_config.domain)
@@ -279,11 +280,11 @@ def _load_pool_pairs(
     from usecases_synthetic.lib.domain_config import (
         USECASES_DIR,
         data_root_for_domain,
+        task_dir,
     )
 
     em_dir = (
-        (data_root_for_domain(domain) or USECASES_DIR)
-        / domain
+        task_dir(domain, root=data_root_for_domain(domain) or USECASES_DIR)
         / "input"
         / "entitymatching"
     )
@@ -543,8 +544,7 @@ def apply_knob_04(
     skipped_log = ProvenanceLog(knob=4, level=level)
 
     # --- Step 2: Build protected-record set ---
-    # Pool-pair endpoints are NOT blanket-protected anymore (per the K4
-    # sign-off Pending #5 wire-up, 2026-05-07): the orphan check inside
+    # Pool-pair endpoints are NOT blanket-protected anymore: the orphan check inside
     # `_would_break_pool_edge` enforces the spec semantic that single-
     # endpoint removal is allowed and only both-endpoint removal of the
     # same pool pair is forbidden. Fusion val/test records are likewise
@@ -689,6 +689,7 @@ def apply_knob_04(
             k1_config=k1_config,
             prov_log=prov_log,
             rng=rng,
+            attribute_maps=_attribute_maps(domain),
         )
 
     else:  # medium
@@ -883,6 +884,54 @@ def _apply_within_source_duplicates(
         )
 
 
+def _attribute_maps(domain: str) -> dict[str, dict[str, str]]:
+    """Per source: native column -> target attribute, from the K8 ``sm_mapping``
+    (the SM ground truth on the sources' own column names; K4 runs before K8,
+    so the columns still carry these names). Empty if the domain has none."""
+    try:
+        sm = load_knob_config(8, domain).get("sm_mapping", {}) or {}
+    except FileNotFoundError:
+        return {}
+    return {src: dict(cols or {}) for src, cols in sm.items()}
+
+
+def fabrication_column_map(
+    attribute_maps: dict[str, dict[str, str]],
+    target_source: str,
+    sibling_source: str,
+    target_columns: list[str],
+    sibling_columns: list[str],
+) -> dict[str, str]:
+    """Target column -> sibling column carrying the same target attribute
+    (id excluded; the id column gets the new synthetic id). Columns without a
+    mapped counterpart are left out and fall back to a same-named column."""
+    t_map = attribute_maps.get(target_source, {})
+    s_map = attribute_maps.get(sibling_source, {})
+    by_attr: dict[str, list[str]] = {}
+    for col, attr in s_map.items():
+        if col in sibling_columns and attr and attr != "id":
+            by_attr.setdefault(attr, []).append(col)
+    out: dict[str, str | None] = {}
+    for col in target_columns:
+        attr = t_map.get(col)
+        if not attr or attr == "id":
+            continue                     # unmapped: same-named fallback
+        out[col] = sorted(by_attr[attr])[0] if by_attr.get(attr) else None
+    return out
+
+
+def _coerce_like_column(value: Any, column: pd.Series) -> Any:
+    """A copied sibling value in the target column's own numeric form when that
+    is lossless (a float 2.0 into an int column becomes 2), so fabricated rows
+    do not stand out by number format; everything else unchanged."""
+    kind = column.dtype.kind
+    if kind in "iu" and isinstance(value, float) and value == value and value.is_integer():
+        return int(value)
+    if kind == "f" and isinstance(value, (int, np.integer)) and not isinstance(value, bool):
+        return float(value)
+    return value
+
+
 def _apply_fabrications(
     sources: dict[str, pd.DataFrame],
     view: EntityView,
@@ -892,9 +941,17 @@ def _apply_fabrications(
     k1_config: dict[str, Any] | None,
     prov_log: ProvenanceLog,
     rng: np.random.Generator,
+    attribute_maps: dict[str, dict[str, str]] | None = None,
 ) -> None:
     """Fabricate and insert new rows via the paraphrase fallback path."""
     managed_columns_by_source = _managed_columns_from_k1(k1_config)
+    attribute_maps = attribute_maps or {}
+    for src, cols in attribute_maps.items():
+        if src in sources:
+            stale = sorted(set(cols) - set(sources[src].columns))
+            if stale:
+                logger.warning("K4: K8 sm_mapping of %s names columns the source does not have (%s); "
+                               "fabricated rows will miss those values", src, ", ".join(stale))
     for entity_id, target_source in fabrications:
         members = view.members.get(entity_id, {})
         if not members:
@@ -917,6 +974,8 @@ def _apply_fabrications(
         paraphrase_fn = paraphrase_factory(target_source)
         new_record_id = _new_synthetic_record_id(entity_id, target_source, kind="fab")
         target_id_col = id_columns.get(target_source)
+        column_map = fabrication_column_map(
+            attribute_maps, target_source, sibling_source, target_columns, list(sibling_row.index))
         new_row, params = fabricate_row_by_paraphrase(
             sibling_row=sibling_row,
             target_source_columns=target_columns,
@@ -925,7 +984,13 @@ def _apply_fabrications(
             rng=sub_rng,
             new_record_id=new_record_id,
             target_id_column=target_id_col,
+            column_map=column_map,
         )
+        for c in target_columns:
+            if c != target_id_col and not _is_missing_scalar(new_row.get(c)):
+                new_row[c] = _coerce_like_column(new_row[c], target_df[c])
+        copied = sorted(c for c in target_columns
+                        if c != target_id_col and not _is_missing_scalar(new_row.get(c)))
         new_idx = _append_row(sources, target_source, new_row)
         # Update view so subsequent selections see the new coverage.
         view.members[entity_id][target_source] = (new_idx, new_record_id)
@@ -942,6 +1007,8 @@ def _apply_fabrications(
                 "sibling_row_id": sibling_rid,
                 "knob_01_paraphrase_params": params,
                 "k4_fabricated": True,
+                "column_map": column_map,
+                "filled_columns": copied,
             },
         )
 

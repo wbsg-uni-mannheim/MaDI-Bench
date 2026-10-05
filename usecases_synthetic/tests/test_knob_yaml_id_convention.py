@@ -1,8 +1,7 @@
 """Regression guard: every per-knob YAML's ``id_columns`` and column
 references must match the post-loader-rename column convention.
 
-Background (2026-05-07): K3, K4, K5 sign-offs shipped with broken
-``id_columns`` referencing pre-rename column names (e.g. ``entity_uri``,
+``id_columns`` must not reference pre-rename column names (e.g. ``entity_uri``,
 ``forbes_url``, ``Attribute_1``, ``wiki_ref``, ``mc_id``, ``rec_id``,
 ``identifier``, ``rel_id``). The loader at
 :func:`usecases_synthetic.lib.loaders.load_source` renames every source's
@@ -42,10 +41,12 @@ KNOBS_WITH_ID_COLUMNS = (
     "knob_10_reliability",
 )
 
-# Active S1 domains (movies + products are descoped per plan_s1_scale.md).
-# papers (2026) folds in here so its per-knob YAMLs are validated against
-# the actual loaded source columns (jsonl sources, dash-minted ids).
+# Domains whose per-knob ``id_columns`` are checked against the loader
+# rename. papers is validated against the actual loaded source columns
+# (jsonl sources, dash-minted ids).
 ACTIVE_DOMAINS = ("companies", "games", "music", "papers")
+# products' knob configs are checked against the loaded columns too.
+COLUMN_CHECK_DOMAINS = ACTIVE_DOMAINS + ("products",)
 
 
 def _load_yaml(path: Path) -> dict:
@@ -88,13 +89,11 @@ def test_id_columns_match_loader_rename(domain: str) -> None:
             assert id_col == expected_id_col, (
                 f"{cfg_path}: id_columns[{source_name!r}] = {id_col!r}; "
                 f"must be {expected_id_col!r} (loader renames every source's "
-                f"primary id column to 'id'). See "
-                f"feedback_synth_id_columns_convention.md and "
-                f"plan_s1_scale.md K3 sign-off bug + fix table."
+                f"primary id column to 'id')."
             )
 
 
-@pytest.mark.parametrize("domain", ACTIVE_DOMAINS)
+@pytest.mark.parametrize("domain", COLUMN_CHECK_DOMAINS)
 def test_attribute_classes_and_mappings_reference_real_columns(
     domain: str,
 ) -> None:
@@ -152,3 +151,18 @@ def test_attribute_classes_and_mappings_reference_real_columns(
                     f"{col!r} which does not exist in the loaded DataFrame. "
                     f"Available columns: {sorted(cols_per_source[source_name])}"
                 )
+
+
+@pytest.mark.parametrize("domain", COLUMN_CHECK_DOMAINS)
+def test_naming_sm_mapping_keys_are_loaded_columns(domain: str) -> None:
+    """K4 fabrication translates a sibling's columns through the K8 sm_mapping
+    (native column -> target attribute); if the keys stop matching the loaded
+    columns, fabricated rows silently lose their values again."""
+    sources = load_domain_sources(domain)
+    cfg = _load_yaml(CONFIG_DIR / "knob_08_naming" / f"{domain}.yaml")
+    for source_name, col_map in (cfg.get("sm_mapping") or {}).items():
+        if source_name not in sources:
+            continue
+        missing = sorted(set(col_map) - set(sources[source_name].columns))
+        assert not missing, f"knob_08_naming/{domain}.yaml sm_mapping[{source_name!r}] names {missing}, not loaded columns"
+

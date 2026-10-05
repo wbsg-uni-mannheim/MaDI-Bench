@@ -1,0 +1,240 @@
+{
+  "domain": "music",
+  "task_root": "PyDI/usecases/music/base",
+  "inputs": {
+    "PyDI/usecases/music/base/input/schemamatching/target_schema.json": "ac167d52a0623b2c8b78282f5cf97f7e6c5b6f3f17119c3d7c18a5cf7cbb12ec",
+    "PyDI/usecases/music/base/input/fusion/GOLD_VERSION": "81db67b6a5702b9b68f0016f061c409bf3fb16d062fc854d1b424bb4e9c28c56",
+    "PyDI/usecases/music/base/input/fusion/README.md": "4a7c0c2157a4dd5e455df0769cab3ec5ba20a1a0ea8c80589af6688932155ed9",
+    "PyDI/usecases/music/base/input/fusion/README_v2.md": "9a36007c230b173b621c5ef43de9e693ab56ea44d4c9bbe412957991d104bd4b",
+    "PyDI/usecases/music/base/input/fusion/removal_manifest_test.csv": "d67b25d1292491ec58b2c1aba02fe79d7f8d4bc18d26d862fcba94857a23bc0d",
+    "PyDI/usecases/music/base/input/fusion/removal_manifest_validation.csv": "0535543f23dd661fac9cc1fe6cd9e92b37ded508b36c208e0fb2893e28006223",
+    "PyDI/usecases/music/base/input/fusion/test_set.xml": "04fdc0d6317853e3e7312023d34177e536413e0b48a0cd296850977e9d797e6a",
+    "PyDI/usecases/music/base/input/fusion/test_set_better_readability.csv": "274ce9e0be6a663e9a43821775b154772fad468c9c871fe8e3c300a26aad27c3",
+    "PyDI/usecases/music/base/input/fusion/validation_set.xml": "c063301f01734169dec2ccebae58afbf85341e3d775f49e28fd624aa483f8ea8",
+    "PyDI/usecases/music/base/input/fusion/validation_set_better_readability.csv": "7eecd9078b50c3103695e0b2547d09f6edf30f73270dde1bae408788d4eab0d9",
+    "PyDI/usecases/music/base/input/data/discogs.csv": "0fab4d11a01d8ef2db38a2b7ae98279f351583bba2459e21e0c62c778f3e3a9e",
+    "PyDI/usecases/music/base/input/data/discogs_metadata.json": "8bf68d92f86f90fb9c23cfbe0174377dacfe2362063457c7cf5fe411b91a0221",
+    "PyDI/usecases/music/base/input/data/lastfm.csv": "5c12950dc9ecda3c097f98de64302f32f2f9ae0c25f72ac483ee2446a007984c",
+    "PyDI/usecases/music/base/input/data/lastfm_metadata.json": "6e055ed1a5e680547022bd51f3d35527e449a26de1a90898a40bab6b9becde98",
+    "PyDI/usecases/music/base/input/data/musicbrainz.csv": "746c14c4ef6d0f7a4882272501591ad91c3ac2ff4552dff57656fdb2dc53445a",
+    "PyDI/usecases/music/base/input/data/musicbrainz_metadata.json": "c95d00e8e38c7d216b9725f11d8e4459366ad31e7431444d0f5eada150034b03",
+    "MaDI-Bench/results/best of breeds/music/baseline/fused.csv": "f9d54230799c300def199220c6335f13e705b39b08d8b9eb8aac45eb9b27d395",
+    "MaDI-Bench/results/best of breeds/music/baseline/correspondences.csv": "1a6469d9d94cd5f13be74233f7f50205fed71520e76ef1bf4dc705be7ab3736b",
+    "<p4-run:music_base>/submission/fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+    "<p4-run:music_base>/submission/membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+    "<p4-run:music_base>/submission/correspondences.csv": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+    "<p1-run>/music/base/output/data_fusion/fused.csv": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475"
+  },
+  "errors": {},
+  "log": [
+    "[    7.3s] music inputs loaded",
+    "[   58.7s] music P2 RF/GT done",
+    "[   69.2s] music P2 fusion done 0.8140495867768595",
+    "[  113.7s] music P4 RF/GT done",
+    "[  122.0s] music P4 fusion done 0.8663911845730028",
+    "[  123.1s] music P1 silver built",
+    "[  192.6s] music P2 silver done {'entity_recovery': 0.7555187637969095, 'value_drift': 0.38897959469126314, 'value_density_delta': -0.10606262796294343, 'schema_validity_delta': -0.10305702133338746, 'bcubed_precision': 0.999077038447117, 'bcubed_recall': 0.6943441739853944, 'bcubed_f1': 0.8192921122227692, 'fusion_accuracy_micro': 0.7064461073913614, 'fusion_accuracy_macro': 0.7203103520085966, 'fully_correct_rate': 0.1272075055187638}",
+    "[  256.9s] music P4 silver done {'entity_recovery': 0.7836644591611479, 'value_drift': 0.4662174135310527, 'value_density_delta': -0.10360741791039428, 'schema_validity_delta': 0.06098208864602306, 'bcubed_precision': 0.9997115745147243, 'bcubed_recall': 0.7088180817125109, 'bcubed_f1': 0.829501130320532, 'fusion_accuracy_micro': 0.6220296704739399, 'fusion_accuracy_macro': 0.6218514028750235, 'fully_correct_rate': 0.05022075055187638}"
+  ],
+  "gold_version_marker": "v2",
+  "p4_timeline": {
+    "e2e_panel": {
+      "ts": 1790236988.182496,
+      "reference_free": {
+        "entity_gain": 0.3072,
+        "density_gain": -0.1748,
+        "output_density": 0.8096,
+        "fusion_ratio": 0.2025,
+        "schema_validity": 1.0
+      },
+      "ground_truth": {
+        "entity_recovery": 0.96,
+        "value_drift": 0.5106,
+        "value_density_delta": -0.0979,
+        "schema_validity_delta": 0.0,
+        "bcubed_precision": 1.0,
+        "bcubed_recall": 0.9806,
+        "bcubed_f1": 0.9902,
+        "fusion_accuracy": 0.8229,
+        "fully_correct_rate": 0.3,
+        "mean_jaccard": 0.98,
+        "same_source_collision_rate": 0.0
+      },
+      "artifact_sha256": {
+        "fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+        "membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c"
+      }
+    },
+    "fusion": {
+      "ts": 1790236942.962219,
+      "basis": "strict",
+      "gold_variant": "v2",
+      "rules_variant": "strict",
+      "overall_accuracy_all_gold": 0.8663911845730028,
+      "gold_coverage": 1.0,
+      "artifact_sha256": {
+        "fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+        "membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c"
+      }
+    }
+  },
+  "p4_submission_matches_timeline": {
+    "fused.csv": true,
+    "membership.csv": true
+  },
+  "p4_run_inputs_vs_current_sources": {
+    "discogs.csv": {
+      "rows_run": 22627,
+      "rows_now": 22627,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    },
+    "lastfm.csv": {
+      "rows_run": 9865,
+      "rows_now": 9865,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    },
+    "musicbrainz.csv": {
+      "rows_run": 4763,
+      "rows_now": 4763,
+      "equal_ignoring_cluster_id": true,
+      "byte_identical": true
+    }
+  },
+  "P2_rf": {
+    "entity_gain": 0.3796,
+    "density_gain": -0.1772,
+    "output_density": 0.8071,
+    "fusion_ratio": 0.1441,
+    "schema_validity": 0.836
+  },
+  "P2_gt": {
+    "entity_recovery": 0.87,
+    "value_drift": 0.6118,
+    "value_density_delta": -0.1004,
+    "schema_validity_delta": -0.164,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9337,
+    "bcubed_f1": 0.9657,
+    "fusion_accuracy": 0.7499,
+    "fully_correct_rate": 0.15,
+    "mean_jaccard": 0.9383,
+    "same_source_collision_rate": 0.0
+  },
+  "P2_rf_gt_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against gold (cell_provenance_pipe was not passed)."
+  ],
+  "P2_fusion_agenticdi": {
+    "basis": "strict",
+    "gold_variant": "v2",
+    "overall_accuracy_all_gold": 0.8140495867768595,
+    "overall_accuracy_evaluated": 0.8140495867768595,
+    "gold_coverage": 1.0,
+    "total_correct": null,
+    "gold_cells_total": 726
+  },
+  "P2_fusion_public": {
+    "overall_accuracy_all_gold": 0.8140495867768595,
+    "gold_coverage": 1.0,
+    "total_correct": 591,
+    "gold_cells_total": 726,
+    "rules": "strict",
+    "gold_version": "v2"
+  },
+  "P4_rf": {
+    "entity_gain": 0.3072,
+    "density_gain": -0.1748,
+    "output_density": 0.8096,
+    "fusion_ratio": 0.2025,
+    "schema_validity": 1.0
+  },
+  "P4_gt": {
+    "entity_recovery": 0.96,
+    "value_drift": 0.5106,
+    "value_density_delta": -0.0979,
+    "schema_validity_delta": 0.0,
+    "bcubed_precision": 1.0,
+    "bcubed_recall": 0.9806,
+    "bcubed_f1": 0.9902,
+    "fusion_accuracy": 0.8229,
+    "fully_correct_rate": 0.3,
+    "mean_jaccard": 0.98,
+    "same_source_collision_rate": 0.0
+  },
+  "P4_rf_gt_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against gold (cell_provenance_pipe was not passed)."
+  ],
+  "P4_fusion_agenticdi": {
+    "basis": "strict",
+    "gold_variant": "v2",
+    "overall_accuracy_all_gold": 0.8663911845730028,
+    "overall_accuracy_evaluated": 0.8663911845730028,
+    "gold_coverage": 1.0,
+    "total_correct": null,
+    "gold_cells_total": 726
+  },
+  "P4_fusion_public": {
+    "overall_accuracy_all_gold": 0.8663911845730028,
+    "gold_coverage": 1.0,
+    "total_correct": 629,
+    "gold_cells_total": 726,
+    "rules": "strict",
+    "gold_version": "v2"
+  },
+  "alignment": {
+    "original_sha256": "c41b4d8636b50dcb327aae4f39872dcc25238aa00bacb286ba660ed3e660d68d",
+    "optimized_sha256": "25e558eef6f1fb955b2bc441cd3b37184c547903cc5d35a4c53cb6bd1f5ea864",
+    "matches_p4_completion_proof": true,
+    "p4_completion_proof_passed": true
+  },
+  "p1_reference": {
+    "path": "<p1-run>/music/base/output/data_fusion/fused.csv",
+    "sha256": "c592367e2585626996afdf933e712e112da734106c393e984874618f2e9b3475",
+    "installed_copy": "PyDI/usecases/music/base/output/data_fusion/fused.csv",
+    "installed_copy_identical": true,
+    "clusters": 3624,
+    "membership": {
+      "rows": 11557,
+      "source_repairs": 0,
+      "unknown_record_ids": 0
+    }
+  },
+  "P2_silver": {
+    "entity_recovery": 0.7555187637969095,
+    "value_drift": 0.38897959469126314,
+    "value_density_delta": -0.10606262796294343,
+    "schema_validity_delta": -0.10305702133338746,
+    "bcubed_precision": 0.999077038447117,
+    "bcubed_recall": 0.6943441739853944,
+    "bcubed_f1": 0.8192921122227692,
+    "fusion_accuracy_micro": 0.7064461073913614,
+    "fusion_accuracy_macro": 0.7203103520085966,
+    "fully_correct_rate": 0.1272075055187638
+  },
+  "P2_silver_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.847. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+    "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['artist', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+    "Schema consistency dropped by \u2265 5pp vs silver on 2 column(s); worst: 'release-date' delta=-0.603. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+  ],
+  "P4_silver": {
+    "entity_recovery": 0.7836644591611479,
+    "value_drift": 0.4662174135310527,
+    "value_density_delta": -0.10360741791039428,
+    "schema_validity_delta": 0.06098208864602306,
+    "bcubed_precision": 0.9997115745147243,
+    "bcubed_recall": 0.7088180817125109,
+    "bcubed_f1": 0.829501130320532,
+    "fusion_accuracy_micro": 0.6220296704739399,
+    "fusion_accuracy_macro": 0.6218514028750235,
+    "fully_correct_rate": 0.05022075055187638
+  },
+  "P4_silver_warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.839. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+    "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['artist', 'name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+  ],
+  "inputs_changed_during_run": [],
+  "seconds": 257.2
+}

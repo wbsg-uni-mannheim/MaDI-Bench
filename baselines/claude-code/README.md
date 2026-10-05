@@ -16,8 +16,8 @@ without PyDI or labeled training and validation data.
 
 The [skill index](skills/INDEX.md) is the index supplied in the run workspace.
 All seven skills and the index were verified to be byte-identical across the
-five selected base runs. The PyDI-specific skill was not supplied in this
-experimental condition and is not included here.
+five selected base runs. In this experimental condition the agent had no PyDI
+skill.
 
 ## Prompts and task contracts
 
@@ -42,14 +42,14 @@ available; labeling services and supervised matcher training are excluded.
 ## Provenance and scope
 
 The archived skills and prompts are unmodified. [provenance.json](provenance.json)
-records the source run identifiers, relative to the AgenticDI repository, and
-SHA-256 hashes of the archived files. The runs took place on September 23–24,
-2026. Skill and orientation copies were checked against all five run workspaces.
+names the five base runs and records the SHA-256 hashes of the archived files.
+The base runs took place on September 23-24, 2026. Skill and orientation copies
+were checked against all five run workspaces.
 
-Paths inside these snapshots refer to the original agent workspace: `skills/`,
+Paths inside these snapshots refer to the agent workspace: `skills/`,
 `refs/task_brief.md`, `refs/SUBMISSION_SPEC.md`, `task/input/`, and `submission/`.
-The task contracts also reference harness utilities such as
-`scripts/self_check.py`. This release contains the skills and prompts; the
-execution harness, task workspaces, generated pipeline code, and evaluator are
-not included in this directory. In particular, the original task briefs retain
-their recorded input inventories and are not templates for changed datasets.
+The task contracts also name `scripts/self_check.py`, which checks the format
+of the submission files without any gold data. The outputs, generated pipeline code, task briefs,
+run metadata, and scores of all 20 reported runs are in
+[results/claude code](../../results/claude%20code). The task briefs list the
+input files of their task and apply to that task only.

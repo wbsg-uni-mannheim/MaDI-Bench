@@ -1,0 +1,31 @@
+{
+ "description": "Silver-reference panel values for Products, against the P1 products output of 2026-09-30 (the shipped 'use cases/products/base/output/data_fusion/fused.csv').",
+ "silver_reference": {
+  "sha256": "84167a6569764d8ffd8d2c810a0801b5b1d9656f24b564e3639c5b9bcf8ef514",
+  "clusters": 758
+ },
+ "P2_silver": {
+  "entity_recovery": 0.22427440633245382,
+  "value_drift": 0.0719017997955588,
+  "value_density_delta": -0.016366084420642073,
+  "schema_validity_delta": 0.00019622442489952707,
+  "bcubed_precision": 0.682876455125798,
+  "bcubed_recall": 0.6048942295656528,
+  "bcubed_f1": 0.6415241970053303,
+  "fusion_accuracy_micro": 0.5835525674753971,
+  "fusion_accuracy_macro": 0.6123826044495569,
+  "fully_correct_rate": 0.026385224274406333
+ },
+ "P4_silver": {
+  "entity_recovery": 0.262532981530343,
+  "value_drift": 0.08522196789587506,
+  "value_density_delta": -0.018919610811756797,
+  "schema_validity_delta": 0.0015032440322571006,
+  "bcubed_precision": 0.6792464638878457,
+  "bcubed_recall": 0.6372512204280886,
+  "bcubed_f1": 0.6575790344954643,
+  "fusion_accuracy_micro": 0.5734190782422294,
+  "fusion_accuracy_macro": 0.6210757308285495,
+  "fully_correct_rate": 0.0158311345646438
+ }
+}

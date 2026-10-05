@@ -1,0 +1,22 @@
+{
+  "case": "companies",
+  "data_dir": "DI-Bench/usecases/companies/input/data",
+  "schema": "DI-Bench/usecases/companies/input/schemamatching/target_schema.json",
+  "entitymatching_dir": "DI-Bench/usecases/companies/input/entitymatching",
+  "fusion_dir": "DI-Bench/usecases/companies/input/fusion",
+  "pairs": [
+    {
+      "left": "forbes",
+      "right": "dbpedia"
+    },
+    {
+      "left": "forbes",
+      "right": "fullcontact"
+    }
+  ],
+  "notes": [
+    "Pairs are restricted to source combinations with provided ground-truth labels.",
+    "JSON/JSONL source files were converted to CSV where needed for the local automatic pipeline.",
+    "Non-XML fusion validation/test files were converted to XML during import."
+  ]
+}

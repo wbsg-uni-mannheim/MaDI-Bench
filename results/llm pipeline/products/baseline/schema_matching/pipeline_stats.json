@@ -1,28 +1,28 @@
 {
-  "prod1": {
+  "products_1": {
     "rows": 812,
-    "mappings": 26,
+    "mappings": 25,
     "columns_normalized": 0,
     "transformed": 0,
     "failed": 0
   },
-  "prod2": {
-    "rows": 812,
-    "mappings": 26,
-    "columns_normalized": 0,
-    "transformed": 0,
-    "failed": 0
-  },
-  "prod3": {
+  "products_3": {
     "rows": 762,
-    "mappings": 26,
+    "mappings": 25,
     "columns_normalized": 0,
     "transformed": 0,
     "failed": 0
   },
-  "prod4": {
+  "products_2": {
+    "rows": 812,
+    "mappings": 25,
+    "columns_normalized": 0,
+    "transformed": 0,
+    "failed": 0
+  },
+  "products_4": {
     "rows": 626,
-    "mappings": 26,
+    "mappings": 25,
     "columns_normalized": 0,
     "transformed": 0,
     "failed": 0

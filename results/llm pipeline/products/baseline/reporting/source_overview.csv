@@ -1,6 +1,6 @@
-Source,Rows,Columns,Data Density,Density in Target Schema (26 cols)
-Prod1,812,27,58.30%,60.54% (27/26 × 58.30%)
-Prod2,812,27,57.72%,59.94% (27/26 × 57.72%)
-Prod3,762,27,57.12%,59.32% (27/26 × 57.12%)
-Prod4,626,27,57.60%,59.82% (27/26 × 57.60%)
-Total Input,3012,26 (target),57.69% avg,59.92% weighted avg
+Source,Rows,Columns,Data Density,Density in Target Schema (25 cols)
+Products_1,812,25,55.02%,55.02% (25/25 × 55.02%)
+Products_3,762,25,53.82%,53.82% (25/25 × 53.82%)
+Products_2,812,25,54.42%,54.42% (25/25 × 54.42%)
+Products_4,626,25,54.29%,54.29% (25/25 × 54.29%)
+Total Input,3012,25 (target),54.39% avg,54.41% weighted avg

@@ -44,9 +44,9 @@ import pandas as pd
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT))
 
-from usecases_synthetic.lib.domain_config import data_root_for_domain  # noqa: E402
+from usecases_synthetic.lib.domain_config import data_root_for_domain, task_dir  # noqa: E402
 
-UPSTREAM_INPUT_DIR = REPO_ROOT / "usecases" / "products" / "input"
+UPSTREAM_INPUT_DIR = task_dir("products") / "input"
 DOMAIN = "products"
 
 SOURCE_NAMES = ("products_1", "products_2", "products_3", "products_4")
@@ -65,7 +65,7 @@ def _synthetic_input_dir() -> Path:
     from usecases_synthetic.lib.domain_config import USECASES_DIR
 
     root = data_root_for_domain(DOMAIN) or USECASES_DIR
-    return root / DOMAIN / "input"
+    return task_dir(DOMAIN, root=root) / "input"
 
 
 def _prefix(source: str, raw_id: object) -> str:
@@ -221,9 +221,9 @@ def main() -> int:
     logger.info("Phase 1: rewrite source JSON ids")
     upstream_data = UPSTREAM_INPUT_DIR / "data"
     for name in SOURCE_NAMES:
-        # New upstream (2026-06-02) ships per-source-native schemas in
+        # The upstream ships per-source-native schemas in
         # files named ``dataset_<n>.json``; map products_<n> ->
-        # dataset_<n>.json. (Pre-2026-06-02 layout used products_<n>.json.)
+        # dataset_<n>.json. (The earlier layout used products_<n>.json.)
         idx = name.rsplit("_", 1)[1]
         upstream_src = upstream_data / f"dataset_{idx}.json"
         if not upstream_src.exists():
@@ -236,7 +236,7 @@ def main() -> int:
         )
 
     logger.info("Phase 2: rewrite EM gold ids + canonicalise names")
-    upstream_em = UPSTREAM_INPUT_DIR / "entity_matching_gt"
+    upstream_em = UPSTREAM_INPUT_DIR / "entitymatching"
     synthetic_em = synthetic_input / "entitymatching"
     for legacy_stem, (left, right, canon_stem) in EM_PAIR_STEMS.items():
         for split in PER_PAIR_SPLITS:

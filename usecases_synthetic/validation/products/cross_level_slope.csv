@@ -1,0 +1,6 @@
+stage,metric,label,baseline,easy,medium,hard,delta_easy_hard,slope_ok,baseline_ok
+sm,aggregated.macro_f1,committee macro F1,0.7173885589567969,0.7905943273784837,0.7205423551416894,0.656586217777121,-0.13400810960136267,True,True
+norm,aggregated.macro_f1,committee macro F1,0.4573333333333333,0.45075757575757575,0.4698340874811463,0.4660564454614798,0.015298869703904039,False,False
+em_blocking,aggregated.macro_pair_recall,committee macro pair-recall,0.851111111111111,nan,nan,nan,nan,False,True
+em_matching,aggregated.macro_f1_variant_model_on_regen_test,variant-model macro F1 on regen test,0.8968837679551498,0.8987092814154825,0.7907981947629532,0.8122708762041466,-0.08643840521133583,False,True
+fusion,aggregated.overall_accuracy,best-member overall accuracy,0.7411450035061057,0.740487439485205,0.6976031510656235,0.5621186928835692,-0.17836874660163582,True,True

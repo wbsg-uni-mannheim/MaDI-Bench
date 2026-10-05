@@ -1,0 +1,21 @@
+row,column,printed,value,formatted,status,source,note
+Games,P1,6.59,0.06593406593406594,6.59,match,table5/normalization_accuracy.csv (12/182 cells),equals results/scores_v2.json
+Games,P2,6.04,0.06043956043956044,6.04,match,table5/normalization_accuracy.csv (11/182 cells),equals results/scores_v2.json
+Games,P3,37.91,0.3791208791208791,37.91,match,table5/normalization_accuracy.csv (69/182 cells),equals results/scores_v2.json; P3 normalized tables: results/llm pipeline/<domain>/baseline/schema_matching/
+Games,P4,8.79,0.08791208791208792,8.79,match,table5/normalization_accuracy.csv (16/182 cells),
+Companies,P1,34.78,0.34782608695652173,34.78,match,table5/normalization_accuracy.csv (32/92 cells),equals results/scores_v2.json
+Companies,P2,29.35,0.29347826086956524,29.35,match,table5/normalization_accuracy.csv (27/92 cells),equals results/scores_v2.json
+Companies,P3,84.78,0.8478260869565217,84.78,match,table5/normalization_accuracy.csv (78/92 cells),equals results/scores_v2.json; P3 normalized tables: results/llm pipeline/<domain>/baseline/schema_matching/
+Companies,P4,97.83,0.9782608695652174,97.83,match,table5/normalization_accuracy.csv (90/92 cells),
+Music,P1,63.75,0.6375,63.75,match,table5/normalization_accuracy.csv (51/80 cells),equals results/scores_v2.json
+Music,P2,55.00,0.55,55.00,match,table5/normalization_accuracy.csv (44/80 cells),equals results/scores_v2.json
+Music,P3,75.00,0.75,75.00,match,table5/normalization_accuracy.csv (60/80 cells),equals results/scores_v2.json; P3 normalized tables: results/llm pipeline/<domain>/baseline/schema_matching/
+Music,P4,56.25,0.5625,56.25,match,table5/normalization_accuracy.csv (45/80 cells),
+Products,P1,64.00,0.64,64.00,match,table5/normalization_accuracy.csv (160/250 cells),P1 products: the 2026-09-30 run (the shipped P1 products outputs); equals results/scores_v2.json
+Products,P2,22.00,0.22,22.00,match,table5/normalization_accuracy.csv (55/250 cells),equals results/scores_v2.json
+Products,P3,30.00,0.3,30.00,match,table5/normalization_accuracy.csv (75/250 cells),equals results/scores_v2.json; P3 normalized tables: results/llm pipeline/<domain>/baseline/schema_matching/
+Products,P4,73.20,0.732,73.20,match,table5/normalization_accuracy.csv (183/250 cells),
+Papers,P1,52.02,0.5201612903225806,52.02,match,table5/normalization_accuracy.csv (129/248 cells),equals results/scores_v2.json
+Papers,P2,29.84,0.29838709677419356,29.84,match,table5/normalization_accuracy.csv (74/248 cells),equals results/scores_v2.json
+Papers,P3,29.84,0.29838709677419356,29.84,match,table5/normalization_accuracy.csv (74/248 cells),equals results/scores_v2.json; P3 normalized tables: results/llm pipeline/<domain>/baseline/schema_matching/
+Papers,P4,64.52,0.6451612903225806,64.52,match,table5/normalization_accuracy.csv (160/248 cells),

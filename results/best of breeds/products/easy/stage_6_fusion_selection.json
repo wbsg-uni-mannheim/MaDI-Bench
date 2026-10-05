@@ -2,33 +2,33 @@
   "stage": "fusion",
   "winner": "pydi_per_attribute_optimal",
   "metric_key": "macro_accuracy",
-  "val_score": 0.51127596578311,
-  "test_score": 0.5164635929254029,
+  "val_score": 0.7382998773165869,
+  "test_score": 0.7318641669937359,
   "per_member_val": {
-    "pydi_per_attribute_optimal": 0.51127596578311,
-    "fusionquery_only": 0.4103645930951308,
-    "truthfinder_only": 0.40438479469278116,
-    "ltm_only": 0.42071188990859304,
-    "casefusion_only": 0.45759762412631705,
-    "accusim_only": 0.3966016142193699,
-    "voting_only": 0.4580643653534644,
-    "prefer_higher_trust_only": 0.467597624126317
+    "pydi_per_attribute_optimal": 0.7382998773165869,
+    "fusionquery_only": 0.7030355831994753,
+    "truthfinder_only": 0.6982982658936807,
+    "ltm_only": 0.7157395333288147,
+    "casefusion_only": 0.7106053072359365,
+    "accusim_only": 0.6889081684598446,
+    "voting_only": 0.7035905072470673,
+    "prefer_higher_trust_only": 0.713300590401521
   },
   "per_member_test": {
-    "pydi_per_attribute_optimal": 0.5164635929254029,
-    "fusionquery_only": 0.40851569287223977,
-    "truthfinder_only": 0.3967839985218034,
-    "ltm_only": 0.4102050511533823,
-    "casefusion_only": 0.45015188794232436,
-    "accusim_only": 0.39754612881057044,
-    "voting_only": 0.4504242521492201,
-    "prefer_higher_trust_only": 0.45933174816197936
+    "pydi_per_attribute_optimal": 0.7318641669937359,
+    "fusionquery_only": 0.7031142369930624,
+    "truthfinder_only": 0.6952328279638064,
+    "ltm_only": 0.7117531805559121,
+    "casefusion_only": 0.7074204475009216,
+    "accusim_only": 0.6882551997606087,
+    "voting_only": 0.6915433106416679,
+    "prefer_higher_trust_only": 0.6863614128645547
   },
-  "runtime_s": 354.76184774795547,
+  "runtime_s": 104.89340754598379,
   "notes": {
     "val_surface_available": true,
-    "n_fused_rows": 840,
-    "n_correspondences_used": 2255
+    "n_fused_rows": 830,
+    "n_correspondences_used": 2261
   },
-  "peak_memory_mb": 2241.2109375
+  "peak_memory_mb": 2263.33203125
 }

@@ -12,10 +12,6 @@
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "median"
-    },
     "color": {
       "kwargs": {},
       "resolver": "most_complete"
@@ -55,8 +51,10 @@
       "resolver": "most_complete"
     },
     "price": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "priceCurrency": {
       "kwargs": {},
@@ -81,12 +79,6 @@
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
-    },
-    "title_description": {
-      "kwargs": {
-        "separator": ","
-      },
-      "resolver": "union"
     },
     "url": {
       "kwargs": {},

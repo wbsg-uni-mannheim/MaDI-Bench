@@ -31,6 +31,24 @@ attribute_classes:
   description: secondary
   price: secondary
   priceCurrency: secondary
+  product_type: key
+  model: secondary
+  model_number: secondary
+  chipset_name: secondary
+  vram_gb: secondary
+  storage_gb: secondary
+  bus_type: secondary
+  interface_type: secondary
+  memory_type: secondary
+  storage_connection_type: secondary
+  form_factor: secondary
+  read_speed_mb_s: secondary
+  write_speed_mb_s: secondary
+  color: secondary
+  width_mm: secondary
+  length_mm: secondary
+  height_mm: secondary
+  weight_g: secondary
 fusion_files:
   validation: validation_set.xml
   test: test_set.xml

@@ -29,7 +29,7 @@ level_assignments:
     sales: anonymized
 
 # Ground-truth schema mapping: source_col -> target_col.
-# Canonical target names follow the K10 sign-off attribute_mapping.
+# Canonical target names are the target_schema.json attribute names.
 sm_mapping:
   dbpedia:
     id: id
@@ -60,7 +60,13 @@ sm_mapping:
     press_score: criticScore
     comm_rating: userScore
     age_classification: ESRB
-    units_sold_mm: globalSales
+    # sales.units_sold_mm has NO target correspondence: the games
+    # target_schema.json has no globalSales property, and the published
+    # base gold (sm_mapping_gold.json) lists units_sold_mm under
+    # unmapped_source_columns ("The current target schema has no global
+    # sales field."). A units_sold_mm -> globalSales row here would put an
+    # unreachable correspondence into the variant sm_mapping.csv. The column
+    # itself stays in rename_table so it still gets naming divergence.
 
 rename_table:
   dbpedia:

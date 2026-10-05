@@ -1,0 +1,761 @@
+table,row,column,printed
+table4,Games,P1,100.00
+table4,Games,P2,100.00
+table4,Games,P3,100.00
+table4,Games,P4,93.88
+table4,Games,Label-based,30.00
+table4,Games,Instance-based,60.50
+table4,Companies,P1,95.00
+table4,Companies,P2,97.67
+table4,Companies,P3,92.68
+table4,Companies,P4,100.00
+table4,Companies,Label-based,26.10
+table4,Companies,Instance-based,53.80
+table4,Music,P1,100.00
+table4,Music,P2,100.00
+table4,Music,P3,100.00
+table4,Music,P4,100.00
+table4,Music,Label-based,28.60
+table4,Music,Instance-based,64.50
+table4,Products,P1,100.00
+table4,Products,P2,100.00
+table4,Products,P3,100.00
+table4,Products,P4,100.00
+table4,Products,Label-based,61.60
+table4,Products,Instance-based,7.70
+table4,Papers,P1,95.38
+table4,Papers,P2,100.00
+table4,Papers,P3,100.00
+table4,Papers,P4,100.00
+table4,Papers,Label-based,73.80
+table4,Papers,Instance-based,33.30
+table5,Games,P1,6.59
+table5,Games,P2,6.04
+table5,Games,P3,37.91
+table5,Games,P4,8.79
+table5,Companies,P1,34.78
+table5,Companies,P2,29.35
+table5,Companies,P3,84.78
+table5,Companies,P4,97.83
+table5,Music,P1,63.75
+table5,Music,P2,55.00
+table5,Music,P3,75.00
+table5,Music,P4,56.25
+table5,Products,P1,64.00
+table5,Products,P2,22.00
+table5,Products,P3,30.00
+table5,Products,P4,73.20
+table5,Papers,P1,52.02
+table5,Papers,P2,29.84
+table5,Papers,P3,29.84
+table5,Papers,P4,64.52
+table6,Games,PC P1,99.53
+table6,Games,PC P2,98.58
+table6,Games,PC P3,96.85
+table6,Games,PC P4,97.21
+table6,Games,RR P1,99.92
+table6,Games,RR P2,99.88
+table6,Games,RR P3,99.96
+table6,Games,RR P4,99.99
+table6,Games,F1 P1,89.47
+table6,Games,F1 P2,67.30
+table6,Games,F1 P3,64.98
+table6,Games,F1 P4,85.40
+table6,Companies,PC P1,97.88
+table6,Companies,PC P2,100.00
+table6,Companies,PC P3,100.00
+table6,Companies,PC P4,99.12
+table6,Companies,RR P1,99.30
+table6,Companies,RR P2,97.16
+table6,Companies,RR P3,99.40
+table6,Companies,RR P4,99.82
+table6,Companies,F1 P1,86.84
+table6,Companies,F1 P2,89.29
+table6,Companies,F1 P3,92.63
+table6,Companies,F1 P4,91.20
+table6,Music,PC P1,96.55
+table6,Music,PC P2,99.85
+table6,Music,PC P3,99.85
+table6,Music,PC P4,100.00
+table6,Music,RR P1,99.67
+table6,Music,RR P2,99.64
+table6,Music,RR P3,99.85
+table6,Music,RR P4,99.62
+table6,Music,F1 P1,95.37
+table6,Music,F1 P2,94.84
+table6,Music,F1 P3,98.10
+table6,Music,F1 P4,95.48
+table6,Products,PC P1,100.00
+table6,Products,PC P2,100.00
+table6,Products,PC P3,93.33
+table6,Products,PC P4,100.00
+table6,Products,RR P1,71.89
+table6,Products,RR P2,96.50
+table6,Products,RR P3,97.54
+table6,Products,RR P4,97.85
+table6,Products,F1 P1,67.94
+table6,Products,F1 P2,85.48
+table6,Products,F1 P3,66.00
+table6,Products,F1 P4,88.48
+table6,Papers,PC P1,97.90
+table6,Papers,PC P2,99.55
+table6,Papers,PC P3,97.69
+table6,Papers,PC P4,99.88
+table6,Papers,RR P1,99.98
+table6,Papers,RR P2,99.97
+table6,Papers,RR P3,99.97
+table6,Papers,RR P4,99.99
+table6,Papers,F1 P1,98.31
+table6,Papers,F1 P2,99.70
+table6,Papers,F1 P3,96.83
+table6,Papers,F1 P4,99.83
+table8,Reference-free / Record gain,Games P2,+0.40
+table8,Reference-free / Record gain,Games P3,+0.32
+table8,Reference-free / Record gain,Games P4,+0.09
+table8,Reference-free / Record gain,Companies P2,+0.19
+table8,Reference-free / Record gain,Companies P3,+0.28
+table8,Reference-free / Record gain,Companies P4,+0.24
+table8,Reference-free / Record gain,Music P2,+0.38
+table8,Reference-free / Record gain,Music P3,+0.37
+table8,Reference-free / Record gain,Music P4,+0.31
+table8,Reference-free / Record gain,Products P2,+0.17
+table8,Reference-free / Record gain,Products P3,+0.39
+table8,Reference-free / Record gain,Products P4,+0.08
+table8,Reference-free / Record gain,Papers P2,+0.24
+table8,Reference-free / Record gain,Papers P3,+0.37
+table8,Reference-free / Record gain,Papers P4,+0.25
+table8,Reference-free / Record gain,Mean P2,+0.28
+table8,Reference-free / Record gain,Mean P3,+0.35
+table8,Reference-free / Record gain,Mean P4,+0.19
+table8,Reference-free / Density gain,Games P2,-0.25
+table8,Reference-free / Density gain,Games P3,-0.26
+table8,Reference-free / Density gain,Games P4,-0.24
+table8,Reference-free / Density gain,Companies P2,-0.05
+table8,Reference-free / Density gain,Companies P3,-0.02
+table8,Reference-free / Density gain,Companies P4,-0.02
+table8,Reference-free / Density gain,Music P2,-0.18
+table8,Reference-free / Density gain,Music P3,-0.14
+table8,Reference-free / Density gain,Music P4,-0.17
+table8,Reference-free / Density gain,Products P2,+0.06
+table8,Reference-free / Density gain,Products P3,+0.04
+table8,Reference-free / Density gain,Products P4,+0.06
+table8,Reference-free / Density gain,Papers P2,-0.03
+table8,Reference-free / Density gain,Papers P3,-0.05
+table8,Reference-free / Density gain,Papers P4,-0.03
+table8,Reference-free / Density gain,Mean P2,-0.09
+table8,Reference-free / Density gain,Mean P3,-0.09
+table8,Reference-free / Density gain,Mean P4,-0.08
+table8,Reference-free / Output density,Games P2,0.66
+table8,Reference-free / Output density,Games P3,0.65
+table8,Reference-free / Output density,Games P4,0.67
+table8,Reference-free / Output density,Companies P2,0.57
+table8,Reference-free / Output density,Companies P3,0.60
+table8,Reference-free / Output density,Companies P4,0.61
+table8,Reference-free / Output density,Music P2,0.81
+table8,Reference-free / Output density,Music P3,0.84
+table8,Reference-free / Output density,Music P4,0.81
+table8,Reference-free / Output density,Products P2,0.57
+table8,Reference-free / Output density,Products P3,0.55
+table8,Reference-free / Output density,Products P4,0.57
+table8,Reference-free / Output density,Papers P2,0.88
+table8,Reference-free / Output density,Papers P3,0.86
+table8,Reference-free / Output density,Papers P4,0.88
+table8,Reference-free / Output density,Mean P2,0.70
+table8,Reference-free / Output density,Mean P3,0.70
+table8,Reference-free / Output density,Mean P4,0.71
+table8,Reference-free / Fusion ratio,Games P2,0.11
+table8,Reference-free / Fusion ratio,Games P3,0.17
+table8,Reference-free / Fusion ratio,Games P4,0.31
+table8,Reference-free / Fusion ratio,Companies P2,0.13
+table8,Reference-free / Fusion ratio,Companies P3,0.08
+table8,Reference-free / Fusion ratio,Companies P4,0.11
+table8,Reference-free / Fusion ratio,Music P2,0.14
+table8,Reference-free / Fusion ratio,Music P3,0.15
+table8,Reference-free / Fusion ratio,Music P4,0.20
+table8,Reference-free / Fusion ratio,Products P2,0.84
+table8,Reference-free / Fusion ratio,Products P3,0.69
+table8,Reference-free / Fusion ratio,Products P4,0.94
+table8,Reference-free / Fusion ratio,Papers P2,0.74
+table8,Reference-free / Fusion ratio,Papers P3,0.66
+table8,Reference-free / Fusion ratio,Papers P4,0.73
+table8,Reference-free / Fusion ratio,Mean P2,0.39
+table8,Reference-free / Fusion ratio,Mean P3,0.35
+table8,Reference-free / Fusion ratio,Mean P4,0.46
+table8,Reference-free / Schema validity,Games P2,1.00
+table8,Reference-free / Schema validity,Games P3,1.00
+table8,Reference-free / Schema validity,Games P4,1.00
+table8,Reference-free / Schema validity,Companies P2,0.94
+table8,Reference-free / Schema validity,Companies P3,0.99
+table8,Reference-free / Schema validity,Companies P4,1.00
+table8,Reference-free / Schema validity,Music P2,0.84
+table8,Reference-free / Schema validity,Music P3,0.97
+table8,Reference-free / Schema validity,Music P4,1.00
+table8,Reference-free / Schema validity,Products P2,1.00
+table8,Reference-free / Schema validity,Products P3,0.95
+table8,Reference-free / Schema validity,Products P4,1.00
+table8,Reference-free / Schema validity,Papers P2,0.98
+table8,Reference-free / Schema validity,Papers P3,0.98
+table8,Reference-free / Schema validity,Papers P4,0.98
+table8,Reference-free / Schema validity,Mean P2,0.95
+table8,Reference-free / Schema validity,Mean P3,0.98
+table8,Reference-free / Schema validity,Mean P4,1.00
+table8,Silver / Entity recovery,Games P2,0.50
+table8,Silver / Entity recovery,Games P3,0.41
+table8,Silver / Entity recovery,Games P4,0.78
+table8,Silver / Entity recovery,Companies P2,0.37
+table8,Silver / Entity recovery,Companies P3,0.33
+table8,Silver / Entity recovery,Companies P4,0.31
+table8,Silver / Entity recovery,Music P2,0.76
+table8,Silver / Entity recovery,Music P3,0.77
+table8,Silver / Entity recovery,Music P4,0.78
+table8,Silver / Entity recovery,Products P2,0.22
+table8,Silver / Entity recovery,Products P3,0.05
+table8,Silver / Entity recovery,Products P4,0.26
+table8,Silver / Entity recovery,Papers P2,0.93
+table8,Silver / Entity recovery,Papers P3,0.82
+table8,Silver / Entity recovery,Papers P4,0.92
+table8,Silver / Entity recovery,Mean P2,0.56
+table8,Silver / Entity recovery,Mean P3,0.47
+table8,Silver / Entity recovery,Mean P4,0.61
+table8,Silver / Value drift,Games P2,0.20
+table8,Silver / Value drift,Games P3,0.26
+table8,Silver / Value drift,Games P4,0.22
+table8,Silver / Value drift,Companies P2,0.35
+table8,Silver / Value drift,Companies P3,0.41
+table8,Silver / Value drift,Companies P4,0.41
+table8,Silver / Value drift,Music P2,0.39
+table8,Silver / Value drift,Music P3,0.47
+table8,Silver / Value drift,Music P4,0.47
+table8,Silver / Value drift,Products P2,0.07
+table8,Silver / Value drift,Products P3,0.13
+table8,Silver / Value drift,Products P4,0.09
+table8,Silver / Value drift,Papers P2,0.01
+table8,Silver / Value drift,Papers P3,0.00
+table8,Silver / Value drift,Papers P4,0.01
+table8,Silver / Value drift,Mean P2,0.20
+table8,Silver / Value drift,Mean P3,0.25
+table8,Silver / Value drift,Mean P4,0.24
+table8,Silver / Value-density delta,Games P2,-0.23
+table8,Silver / Value-density delta,Games P3,-0.23
+table8,Silver / Value-density delta,Games P4,-0.22
+table8,Silver / Value-density delta,Companies P2,-0.30
+table8,Silver / Value-density delta,Companies P3,-0.27
+table8,Silver / Value-density delta,Companies P4,-0.26
+table8,Silver / Value-density delta,Music P2,-0.11
+table8,Silver / Value-density delta,Music P3,-0.07
+table8,Silver / Value-density delta,Music P4,-0.10
+table8,Silver / Value-density delta,Products P2,-0.02
+table8,Silver / Value-density delta,Products P3,-0.04
+table8,Silver / Value-density delta,Products P4,-0.02
+table8,Silver / Value-density delta,Papers P2,-0.01
+table8,Silver / Value-density delta,Papers P3,-0.04
+table8,Silver / Value-density delta,Papers P4,-0.02
+table8,Silver / Value-density delta,Mean P2,-0.13
+table8,Silver / Value-density delta,Mean P3,-0.13
+table8,Silver / Value-density delta,Mean P4,-0.12
+table8,Silver / Schema validity delta,Games P2,+0.00
+table8,Silver / Schema validity delta,Games P3,+0.00
+table8,Silver / Schema validity delta,Games P4,+0.00
+table8,Silver / Schema validity delta,Companies P2,+0.08
+table8,Silver / Schema validity delta,Companies P3,+0.13
+table8,Silver / Schema validity delta,Companies P4,+0.13
+table8,Silver / Schema validity delta,Music P2,-0.10
+table8,Silver / Schema validity delta,Music P3,+0.03
+table8,Silver / Schema validity delta,Music P4,+0.06
+table8,Silver / Schema validity delta,Products P2,+0.00
+table8,Silver / Schema validity delta,Products P3,-0.05
+table8,Silver / Schema validity delta,Products P4,+0.00
+table8,Silver / Schema validity delta,Papers P2,-0.00
+table8,Silver / Schema validity delta,Papers P3,-0.00
+table8,Silver / Schema validity delta,Papers P4,+0.00
+table8,Silver / Schema validity delta,Mean P2,-0.01
+table8,Silver / Schema validity delta,Mean P3,+0.02
+table8,Silver / Schema validity delta,Mean P4,+0.04
+table8,Silver / BCubed precision,Games P2,1.00
+table8,Silver / BCubed precision,Games P3,0.94
+table8,Silver / BCubed precision,Games P4,1.00
+table8,Silver / BCubed precision,Companies P2,0.95
+table8,Silver / BCubed precision,Companies P3,0.99
+table8,Silver / BCubed precision,Companies P4,0.99
+table8,Silver / BCubed precision,Music P2,1.00
+table8,Silver / BCubed precision,Music P3,1.00
+table8,Silver / BCubed precision,Music P4,1.00
+table8,Silver / BCubed precision,Products P2,0.68
+table8,Silver / BCubed precision,Products P3,0.51
+table8,Silver / BCubed precision,Products P4,0.68
+table8,Silver / BCubed precision,Papers P2,0.99
+table8,Silver / BCubed precision,Papers P3,0.99
+table8,Silver / BCubed precision,Papers P4,0.99
+table8,Silver / BCubed precision,Mean P2,0.92
+table8,Silver / BCubed precision,Mean P3,0.89
+table8,Silver / BCubed precision,Mean P4,0.93
+table8,Silver / BCubed recall,Games P2,0.63
+table8,Silver / BCubed recall,Games P3,0.57
+table8,Silver / BCubed recall,Games P4,0.81
+table8,Silver / BCubed recall,Companies P2,0.66
+table8,Silver / BCubed recall,Companies P3,0.63
+table8,Silver / BCubed recall,Companies P4,0.62
+table8,Silver / BCubed recall,Music P2,0.69
+table8,Silver / BCubed recall,Music P3,0.70
+table8,Silver / BCubed recall,Music P4,0.71
+table8,Silver / BCubed recall,Products P2,0.60
+table8,Silver / BCubed recall,Products P3,0.43
+table8,Silver / BCubed recall,Products P4,0.64
+table8,Silver / BCubed recall,Papers P2,0.97
+table8,Silver / BCubed recall,Papers P3,0.91
+table8,Silver / BCubed recall,Papers P4,0.97
+table8,Silver / BCubed recall,Mean P2,0.71
+table8,Silver / BCubed recall,Mean P3,0.65
+table8,Silver / BCubed recall,Mean P4,0.75
+table8,Silver / BCubed F1,Games P2,0.77
+table8,Silver / BCubed F1,Games P3,0.71
+table8,Silver / BCubed F1,Games P4,0.90
+table8,Silver / BCubed F1,Companies P2,0.77
+table8,Silver / BCubed F1,Companies P3,0.77
+table8,Silver / BCubed F1,Companies P4,0.76
+table8,Silver / BCubed F1,Music P2,0.82
+table8,Silver / BCubed F1,Music P3,0.82
+table8,Silver / BCubed F1,Music P4,0.83
+table8,Silver / BCubed F1,Products P2,0.64
+table8,Silver / BCubed F1,Products P3,0.47
+table8,Silver / BCubed F1,Products P4,0.66
+table8,Silver / BCubed F1,Papers P2,0.98
+table8,Silver / BCubed F1,Papers P3,0.95
+table8,Silver / BCubed F1,Papers P4,0.98
+table8,Silver / BCubed F1,Mean P2,0.80
+table8,Silver / BCubed F1,Mean P3,0.74
+table8,Silver / BCubed F1,Mean P4,0.82
+table8,Silver / Fusion accuracy,Games P2,0.79
+table8,Silver / Fusion accuracy,Games P3,0.68
+table8,Silver / Fusion accuracy,Games P4,0.90
+table8,Silver / Fusion accuracy,Companies P2,0.55
+table8,Silver / Fusion accuracy,Companies P3,0.51
+table8,Silver / Fusion accuracy,Companies P4,0.48
+table8,Silver / Fusion accuracy,Music P2,0.71
+table8,Silver / Fusion accuracy,Music P3,0.71
+table8,Silver / Fusion accuracy,Music P4,0.62
+table8,Silver / Fusion accuracy,Products P2,0.58
+table8,Silver / Fusion accuracy,Products P3,0.45
+table8,Silver / Fusion accuracy,Products P4,0.57
+table8,Silver / Fusion accuracy,Papers P2,0.91
+table8,Silver / Fusion accuracy,Papers P3,0.74
+table8,Silver / Fusion accuracy,Papers P4,0.85
+table8,Silver / Fusion accuracy,Mean P2,0.71
+table8,Silver / Fusion accuracy,Mean P3,0.62
+table8,Silver / Fusion accuracy,Mean P4,0.69
+table8,Silver / Fully-correct rate,Games P2,0.29
+table8,Silver / Fully-correct rate,Games P3,0.08
+table8,Silver / Fully-correct rate,Games P4,0.46
+table8,Silver / Fully-correct rate,Companies P2,0.11
+table8,Silver / Fully-correct rate,Companies P3,0.02
+table8,Silver / Fully-correct rate,Companies P4,0.03
+table8,Silver / Fully-correct rate,Music P2,0.13
+table8,Silver / Fully-correct rate,Music P3,0.13
+table8,Silver / Fully-correct rate,Music P4,0.05
+table8,Silver / Fully-correct rate,Products P2,0.03
+table8,Silver / Fully-correct rate,Products P3,0.00
+table8,Silver / Fully-correct rate,Products P4,0.02
+table8,Silver / Fully-correct rate,Papers P2,0.55
+table8,Silver / Fully-correct rate,Papers P3,0.01
+table8,Silver / Fully-correct rate,Papers P4,0.13
+table8,Silver / Fully-correct rate,Mean P2,0.22
+table8,Silver / Fully-correct rate,Mean P3,0.05
+table8,Silver / Fully-correct rate,Mean P4,0.14
+table8,Ground truth / Entity recovery,Games P2,0.46
+table8,Ground truth / Entity recovery,Games P3,0.31
+table8,Ground truth / Entity recovery,Games P4,0.85
+table8,Ground truth / Entity recovery,Companies P2,0.91
+table8,Ground truth / Entity recovery,Companies P3,0.77
+table8,Ground truth / Entity recovery,Companies P4,0.81
+table8,Ground truth / Entity recovery,Music P2,0.87
+table8,Ground truth / Entity recovery,Music P3,0.91
+table8,Ground truth / Entity recovery,Music P4,0.96
+table8,Ground truth / Entity recovery,Products P2,0.59
+table8,Ground truth / Entity recovery,Products P3,0.08
+table8,Ground truth / Entity recovery,Products P4,0.76
+table8,Ground truth / Entity recovery,Papers P2,1.00
+table8,Ground truth / Entity recovery,Papers P3,0.83
+table8,Ground truth / Entity recovery,Papers P4,0.99
+table8,Ground truth / Entity recovery,Mean P2,0.77
+table8,Ground truth / Entity recovery,Mean P3,0.58
+table8,Ground truth / Entity recovery,Mean P4,0.87
+table8,Ground truth / Value drift,Games P2,0.40
+table8,Ground truth / Value drift,Games P3,0.34
+table8,Ground truth / Value drift,Games P4,0.41
+table8,Ground truth / Value drift,Companies P2,0.63
+table8,Ground truth / Value drift,Companies P3,0.54
+table8,Ground truth / Value drift,Companies P4,0.45
+table8,Ground truth / Value drift,Music P2,0.61
+table8,Ground truth / Value drift,Music P3,0.55
+table8,Ground truth / Value drift,Music P4,0.51
+table8,Ground truth / Value drift,Products P2,0.28
+table8,Ground truth / Value drift,Products P3,0.33
+table8,Ground truth / Value drift,Products P4,0.25
+table8,Ground truth / Value drift,Papers P2,0.38
+table8,Ground truth / Value drift,Papers P3,0.37
+table8,Ground truth / Value drift,Papers P4,0.37
+table8,Ground truth / Value drift,Mean P2,0.46
+table8,Ground truth / Value drift,Mean P3,0.43
+table8,Ground truth / Value drift,Mean P4,0.40
+table8,Ground truth / Value-density delta,Games P2,-0.19
+table8,Ground truth / Value-density delta,Games P3,-0.20
+table8,Ground truth / Value-density delta,Games P4,-0.18
+table8,Ground truth / Value-density delta,Companies P2,-0.18
+table8,Ground truth / Value-density delta,Companies P3,-0.15
+table8,Ground truth / Value-density delta,Companies P4,-0.15
+table8,Ground truth / Value-density delta,Music P2,-0.10
+table8,Ground truth / Value-density delta,Music P3,-0.07
+table8,Ground truth / Value-density delta,Music P4,-0.10
+table8,Ground truth / Value-density delta,Products P2,+0.04
+table8,Ground truth / Value-density delta,Products P3,+0.02
+table8,Ground truth / Value-density delta,Products P4,+0.05
+table8,Ground truth / Value-density delta,Papers P2,-0.03
+table8,Ground truth / Value-density delta,Papers P3,+0.03
+table8,Ground truth / Value-density delta,Papers P4,+0.04
+table8,Ground truth / Value-density delta,Mean P2,-0.09
+table8,Ground truth / Value-density delta,Mean P3,-0.08
+table8,Ground truth / Value-density delta,Mean P4,-0.07
+table8,Ground truth / Schema validity delta,Games P2,+0.13
+table8,Ground truth / Schema validity delta,Games P3,+0.13
+table8,Ground truth / Schema validity delta,Games P4,+0.13
+table8,Ground truth / Schema validity delta,Companies P2,-0.03
+table8,Ground truth / Schema validity delta,Companies P3,+0.02
+table8,Ground truth / Schema validity delta,Companies P4,+0.03
+table8,Ground truth / Schema validity delta,Music P2,-0.16
+table8,Ground truth / Schema validity delta,Music P3,-0.03
+table8,Ground truth / Schema validity delta,Music P4,+0.00
+table8,Ground truth / Schema validity delta,Products P2,-0.00
+table8,Ground truth / Schema validity delta,Products P3,-0.05
+table8,Ground truth / Schema validity delta,Products P4,-0.00
+table8,Ground truth / Schema validity delta,Papers P2,-0.02
+table8,Ground truth / Schema validity delta,Papers P3,-0.02
+table8,Ground truth / Schema validity delta,Papers P4,-0.02
+table8,Ground truth / Schema validity delta,Mean P2,-0.02
+table8,Ground truth / Schema validity delta,Mean P3,+0.01
+table8,Ground truth / Schema validity delta,Mean P4,+0.03
+table8,Ground truth / BCubed precision,Games P2,1.00
+table8,Ground truth / BCubed precision,Games P3,1.00
+table8,Ground truth / BCubed precision,Games P4,1.00
+table8,Ground truth / BCubed precision,Companies P2,1.00
+table8,Ground truth / BCubed precision,Companies P3,1.00
+table8,Ground truth / BCubed precision,Companies P4,1.00
+table8,Ground truth / BCubed precision,Music P2,1.00
+table8,Ground truth / BCubed precision,Music P3,1.00
+table8,Ground truth / BCubed precision,Music P4,1.00
+table8,Ground truth / BCubed precision,Products P2,0.98
+table8,Ground truth / BCubed precision,Products P3,0.90
+table8,Ground truth / BCubed precision,Products P4,0.99
+table8,Ground truth / BCubed precision,Papers P2,1.00
+table8,Ground truth / BCubed precision,Papers P3,1.00
+table8,Ground truth / BCubed precision,Papers P4,1.00
+table8,Ground truth / BCubed precision,Mean P2,1.00
+table8,Ground truth / BCubed precision,Mean P3,0.98
+table8,Ground truth / BCubed precision,Mean P4,1.00
+table8,Ground truth / BCubed recall,Games P2,0.67
+table8,Ground truth / BCubed recall,Games P3,0.56
+table8,Ground truth / BCubed recall,Games P4,0.89
+table8,Ground truth / BCubed recall,Companies P2,0.95
+table8,Ground truth / BCubed recall,Companies P3,0.88
+table8,Ground truth / BCubed recall,Companies P4,0.90
+table8,Ground truth / BCubed recall,Music P2,0.93
+table8,Ground truth / BCubed recall,Music P3,0.96
+table8,Ground truth / BCubed recall,Music P4,0.98
+table8,Ground truth / BCubed recall,Products P2,0.81
+table8,Ground truth / BCubed recall,Products P3,0.44
+table8,Ground truth / BCubed recall,Products P4,0.90
+table8,Ground truth / BCubed recall,Papers P2,1.00
+table8,Ground truth / BCubed recall,Papers P3,0.92
+table8,Ground truth / BCubed recall,Papers P4,1.00
+table8,Ground truth / BCubed recall,Mean P2,0.87
+table8,Ground truth / BCubed recall,Mean P3,0.75
+table8,Ground truth / BCubed recall,Mean P4,0.93
+table8,Ground truth / BCubed F1,Games P2,0.80
+table8,Ground truth / BCubed F1,Games P3,0.71
+table8,Ground truth / BCubed F1,Games P4,0.94
+table8,Ground truth / BCubed F1,Companies P2,0.97
+table8,Ground truth / BCubed F1,Companies P3,0.93
+table8,Ground truth / BCubed F1,Companies P4,0.95
+table8,Ground truth / BCubed F1,Music P2,0.97
+table8,Ground truth / BCubed F1,Music P3,0.98
+table8,Ground truth / BCubed F1,Music P4,0.99
+table8,Ground truth / BCubed F1,Products P2,0.89
+table8,Ground truth / BCubed F1,Products P3,0.59
+table8,Ground truth / BCubed F1,Products P4,0.94
+table8,Ground truth / BCubed F1,Papers P2,1.00
+table8,Ground truth / BCubed F1,Papers P3,0.96
+table8,Ground truth / BCubed F1,Papers P4,1.00
+table8,Ground truth / BCubed F1,Mean P2,0.92
+table8,Ground truth / BCubed F1,Mean P3,0.83
+table8,Ground truth / BCubed F1,Mean P4,0.96
+table8,Ground truth / Fusion accuracy,Games P2,0.66
+table8,Ground truth / Fusion accuracy,Games P3,0.71
+table8,Ground truth / Fusion accuracy,Games P4,0.78
+table8,Ground truth / Fusion accuracy,Companies P2,0.66
+table8,Ground truth / Fusion accuracy,Companies P3,0.76
+table8,Ground truth / Fusion accuracy,Companies P4,0.82
+table8,Ground truth / Fusion accuracy,Music P2,0.81
+table8,Ground truth / Fusion accuracy,Music P3,0.75
+table8,Ground truth / Fusion accuracy,Music P4,0.87
+table8,Ground truth / Fusion accuracy,Products P2,0.79
+table8,Ground truth / Fusion accuracy,Products P3,0.61
+table8,Ground truth / Fusion accuracy,Products P4,0.83
+table8,Ground truth / Fusion accuracy,Papers P2,0.90
+table8,Ground truth / Fusion accuracy,Papers P3,0.78
+table8,Ground truth / Fusion accuracy,Papers P4,0.86
+table8,Ground truth / Fusion accuracy,Mean P2,0.77
+table8,Ground truth / Fusion accuracy,Mean P3,0.72
+table8,Ground truth / Fusion accuracy,Mean P4,0.83
+table8,Ground truth / Fully-correct rate,Games P2,0.00
+table8,Ground truth / Fully-correct rate,Games P3,0.10
+table8,Ground truth / Fully-correct rate,Games P4,0.08
+table8,Ground truth / Fully-correct rate,Companies P2,0.02
+table8,Ground truth / Fully-correct rate,Companies P3,0.21
+table8,Ground truth / Fully-correct rate,Companies P4,0.32
+table8,Ground truth / Fully-correct rate,Music P2,0.21
+table8,Ground truth / Fully-correct rate,Music P3,0.04
+table8,Ground truth / Fully-correct rate,Music P4,0.36
+table8,Ground truth / Fully-correct rate,Products P2,0.26
+table8,Ground truth / Fully-correct rate,Products P3,0.10
+table8,Ground truth / Fully-correct rate,Products P4,0.31
+table8,Ground truth / Fully-correct rate,Papers P2,0.36
+table8,Ground truth / Fully-correct rate,Papers P3,0.07
+table8,Ground truth / Fully-correct rate,Papers P4,0.16
+table8,Ground truth / Fully-correct rate,Mean P2,0.17
+table8,Ground truth / Fully-correct rate,Mean P3,0.10
+table8,Ground truth / Fully-correct rate,Mean P4,0.25
+table9,Games,P1,789
+table9,Games,P2,2612
+table9,Games,P3,196
+table9,Games,P4,374
+table9,Games,P3 cost,3.17
+table9,Games,P4 cost,3.06
+table9,Companies,P1,269
+table9,Companies,P2,455
+table9,Companies,P3,203
+table9,Companies,P4,180
+table9,Companies,P3 cost,0.87
+table9,Companies,P4 cost,4.22
+table9,Music,P1,728
+table9,Music,P2,7231
+table9,Music,P3,211
+table9,Music,P4,290
+table9,Music,P3 cost,3.25
+table9,Music,P4 cost,3.58
+table9,Products,P1,406
+table9,Products,P2,1029
+table9,Products,P3,5606
+table9,Products,P4,22
+table9,Products,P3 cost,5.79
+table9,Products,P4 cost,5.95
+table9,Papers,P1,1944
+table9,Papers,P2,14699
+table9,Papers,P3,1374
+table9,Papers,P4,922
+table9,Papers,P3 cost,6.70
+table9,Papers,P4 cost,2.47
+table9,Mean,P1,827
+table9,Mean,P2,5205
+table9,Mean,P3,1518
+table9,Mean,P4,358
+table9,Mean,P3 cost,3.96
+table9,Mean,P4 cost,3.85
+table12,Companies / Base,Rows (k),14.0
+table12,Companies / Base,Density,66
+table12,Companies / Base,SM mean,68.6
+table12,Companies / Base,Norm. mean,35.9
+table12,Companies / Base,EM mean,88.4
+table12,Companies / Base,Fus. mean,56.9
+table12,Companies / Base,SM ceiling,100.0
+table12,Companies / Base,Norm. ceiling,43.5
+table12,Companies / Base,EM ceiling,89.5
+table12,Companies / Base,Fus. ceiling,62.4
+table12,Companies / Easy,Rows (k),14.0
+table12,Companies / Easy,Density,63
+table12,Companies / Easy,SM mean,88.5
+table12,Companies / Easy,Norm. mean,20.3
+table12,Companies / Easy,EM mean,89.9
+table12,Companies / Easy,Fus. mean,41.1
+table12,Companies / Easy,SM ceiling,100.0
+table12,Companies / Easy,Norm. ceiling,22.2
+table12,Companies / Easy,EM ceiling,93.4
+table12,Companies / Easy,Fus. ceiling,44.6
+table12,Companies / Med.,Rows (k),14.3
+table12,Companies / Med.,Density,59
+table12,Companies / Med.,SM mean,79.5
+table12,Companies / Med.,Norm. mean,27.2
+table12,Companies / Med.,EM mean,87.2
+table12,Companies / Med.,Fus. mean,49.3
+table12,Companies / Med.,SM ceiling,100.0
+table12,Companies / Med.,Norm. ceiling,31.2
+table12,Companies / Med.,EM ceiling,88.2
+table12,Companies / Med.,Fus. ceiling,53.3
+table12,Companies / Hard,Rows (k),14.2
+table12,Companies / Hard,Density,58
+table12,Companies / Hard,SM mean,66.4
+table12,Companies / Hard,Norm. mean,29.9
+table12,Companies / Hard,EM mean,86.8
+table12,Companies / Hard,Fus. mean,37.5
+table12,Companies / Hard,SM ceiling,100.0
+table12,Companies / Hard,Norm. ceiling,34.6
+table12,Companies / Hard,EM ceiling,88.1
+table12,Companies / Hard,Fus. ceiling,38.6
+table12,Games / Base,Rows (k),75.0
+table12,Games / Base,Density,94
+table12,Games / Base,SM mean,69.6
+table12,Games / Base,Norm. mean,8.1
+table12,Games / Base,EM mean,60.9
+table12,Games / Base,Fus. mean,68.1
+table12,Games / Base,SM ceiling,100.0
+table12,Games / Base,Norm. ceiling,12.1
+table12,Games / Base,EM ceiling,71.6
+table12,Games / Base,Fus. ceiling,70.7
+table12,Games / Easy,Rows (k),78.5
+table12,Games / Easy,Density,84
+table12,Games / Easy,SM mean,88.1
+table12,Games / Easy,Norm. mean,7.0
+table12,Games / Easy,EM mean,63.3
+table12,Games / Easy,Fus. mean,66.8
+table12,Games / Easy,SM ceiling,100.0
+table12,Games / Easy,Norm. ceiling,9.8
+table12,Games / Easy,EM ceiling,71.8
+table12,Games / Easy,Fus. ceiling,68.9
+table12,Games / Med.,Rows (k),75.3
+table12,Games / Med.,Density,83
+table12,Games / Med.,SM mean,78.5
+table12,Games / Med.,Norm. mean,19.9
+table12,Games / Med.,EM mean,64.8
+table12,Games / Med.,Fus. mean,63.4
+table12,Games / Med.,SM ceiling,100.0
+table12,Games / Med.,Norm. ceiling,24.4
+table12,Games / Med.,EM ceiling,75.5
+table12,Games / Med.,Fus. ceiling,66.2
+table12,Games / Hard,Rows (k),71.1
+table12,Games / Hard,Density,83
+table12,Games / Hard,SM mean,69.3
+table12,Games / Hard,Norm. mean,22.4
+table12,Games / Hard,EM mean,55.3
+table12,Games / Hard,Fus. mean,57.2
+table12,Games / Hard,SM ceiling,100.0
+table12,Games / Hard,Norm. ceiling,25.0
+table12,Games / Hard,EM ceiling,71.5
+table12,Games / Hard,Fus. ceiling,60.1
+table12,Music / Base,Rows (k),37.3
+table12,Music / Base,Density,90
+table12,Music / Base,SM mean,67.0
+table12,Music / Base,Norm. mean,48.8
+table12,Music / Base,EM mean,82.4
+table12,Music / Base,Fus. mean,74.5
+table12,Music / Base,SM ceiling,100.0
+table12,Music / Base,Norm. ceiling,61.3
+table12,Music / Base,EM ceiling,95.3
+table12,Music / Base,Fus. ceiling,82.0
+table12,Music / Easy,Rows (k),39.7
+table12,Music / Easy,Density,86
+table12,Music / Easy,SM mean,91.8
+table12,Music / Easy,Norm. mean,23.2
+table12,Music / Easy,EM mean,88.3
+table12,Music / Easy,Fus. mean,75.5
+table12,Music / Easy,SM ceiling,100.0
+table12,Music / Easy,Norm. ceiling,29.3
+table12,Music / Easy,EM ceiling,95.1
+table12,Music / Easy,Fus. ceiling,80.4
+table12,Music / Med.,Rows (k),37.3
+table12,Music / Med.,Density,82
+table12,Music / Med.,SM mean,85.4
+table12,Music / Med.,Norm. mean,46.8
+table12,Music / Med.,EM mean,82.7
+table12,Music / Med.,Fus. mean,55.8
+table12,Music / Med.,SM ceiling,100.0
+table12,Music / Med.,Norm. ceiling,61.6
+table12,Music / Med.,EM ceiling,94.8
+table12,Music / Med.,Fus. ceiling,62.0
+table12,Music / Hard,Rows (k),35.2
+table12,Music / Hard,Density,80
+table12,Music / Hard,SM mean,77.3
+table12,Music / Hard,Norm. mean,40.5
+table12,Music / Hard,EM mean,79.2
+table12,Music / Hard,Fus. mean,50.5
+table12,Music / Hard,SM ceiling,100.0
+table12,Music / Hard,Norm. ceiling,53.1
+table12,Music / Hard,EM ceiling,92.9
+table12,Music / Hard,Fus. ceiling,53.9
+table12,Products / Base,Rows (k),3.0
+table12,Products / Base,Density,53
+table12,Products / Base,SM mean,71.7
+table12,Products / Base,Norm. mean,45.7
+table12,Products / Base,EM mean,89.7
+table12,Products / Base,Fus. mean,80.4
+table12,Products / Base,SM ceiling,100.0
+table12,Products / Base,Norm. ceiling,85.2
+table12,Products / Base,EM ceiling,95.5
+table12,Products / Base,Fus. ceiling,82.8
+table12,Products / Easy,Rows (k),3.1
+table12,Products / Easy,Density,47
+table12,Products / Easy,SM mean,79.1
+table12,Products / Easy,Norm. mean,45.1
+table12,Products / Easy,EM mean,92.6
+table12,Products / Easy,Fus. mean,78.6
+table12,Products / Easy,SM ceiling,100.0
+table12,Products / Easy,Norm. ceiling,86.6
+table12,Products / Easy,EM ceiling,96.4
+table12,Products / Easy,Fus. ceiling,81.8
+table12,Products / Med.,Rows (k),3.1
+table12,Products / Med.,Density,42
+table12,Products / Med.,SM mean,72.1
+table12,Products / Med.,Norm. mean,47.0
+table12,Products / Med.,EM mean,88.9
+table12,Products / Med.,Fus. mean,71.2
+table12,Products / Med.,SM ceiling,100.0
+table12,Products / Med.,Norm. ceiling,90.7
+table12,Products / Med.,EM ceiling,96.6
+table12,Products / Med.,Fus. ceiling,76.6
+table12,Products / Hard,Rows (k),2.4
+table12,Products / Hard,Density,45
+table12,Products / Hard,SM mean,65.7
+table12,Products / Hard,Norm. mean,46.6
+table12,Products / Hard,EM mean,85.8
+table12,Products / Hard,Fus. mean,60.9
+table12,Products / Hard,SM ceiling,98.0
+table12,Products / Hard,Norm. ceiling,91.3
+table12,Products / Hard,EM ceiling,97.4
+table12,Products / Hard,Fus. ceiling,65.3
+table12,Papers / Base,Rows (k),182.1
+table12,Papers / Base,Density,82
+table12,Papers / Base,SM mean,75.0
+table12,Papers / Base,Norm. mean,35.6
+table12,Papers / Base,EM mean,96.6
+table12,Papers / Base,Fus. mean,81.9
+table12,Papers / Base,SM ceiling,98.5
+table12,Papers / Base,Norm. ceiling,66.9
+table12,Papers / Base,EM ceiling,100.0
+table12,Papers / Base,Fus. ceiling,92.3
+table12,Papers / Easy,Rows (k),182.2
+table12,Papers / Easy,Density,64
+table12,Papers / Easy,SM mean,82.3
+table12,Papers / Easy,Norm. mean,35.0
+table12,Papers / Easy,EM mean,96.5
+table12,Papers / Easy,Fus. mean,79.4
+table12,Papers / Easy,SM ceiling,100.0
+table12,Papers / Easy,Norm. ceiling,64.8
+table12,Papers / Easy,EM ceiling,99.9
+table12,Papers / Easy,Fus. ceiling,89.5
+table12,Papers / Med.,Rows (k),182.1
+table12,Papers / Med.,Density,60
+table12,Papers / Med.,SM mean,74.9
+table12,Papers / Med.,Norm. mean,35.7
+table12,Papers / Med.,EM mean,95.3
+table12,Papers / Med.,Fus. mean,77.3
+table12,Papers / Med.,SM ceiling,100.0
+table12,Papers / Med.,Norm. ceiling,68.0
+table12,Papers / Med.,EM ceiling,99.9
+table12,Papers / Med.,Fus. ceiling,86.1
+table12,Papers / Hard,Rows (k),136.9
+table12,Papers / Hard,Density,57
+table12,Papers / Hard,SM mean,62.9
+table12,Papers / Hard,Norm. mean,36.8
+table12,Papers / Hard,EM mean,92.2
+table12,Papers / Hard,Fus. mean,66.6
+table12,Papers / Hard,SM ceiling,98.6
+table12,Papers / Hard,Norm. ceiling,70.3
+table12,Papers / Hard,EM ceiling,99.4
+table12,Papers / Hard,Fus. ceiling,70.6

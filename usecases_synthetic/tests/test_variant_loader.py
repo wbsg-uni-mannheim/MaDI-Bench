@@ -110,13 +110,15 @@ def _build_augmented_fixture(root: Path) -> Path:
 class TestVariantRoot:
     def test_baseline_points_at_original(self) -> None:
         root = variant_root("companies", "baseline")
-        assert root.name == "companies"
-        assert root.parent.name == "usecases"
+        assert root.name == "base"
+        assert root.parent.name == "companies"
+        assert root.parent.parent.name == "use cases"
 
     def test_augmented_level(self) -> None:
         root = variant_root("companies", "easy")
         assert root.name == "easy"
-        assert root.parent.name == "companies-augmented"
+        assert root.parent.name == "companies"
+        assert root.parent.parent.name == "use cases"
 
 
 class TestLoadVariantAugmentedFixture:
@@ -225,12 +227,11 @@ class TestLoadBaselineCompanies:
 class TestLoadEMGoldDirectionTolerance:
     """``_load_em_gold`` must accept either on-disk pair orientation.
 
-    Regression test for plan_revision_step4g_findings.md §1 — the games
-    domain declared ``source_pairs: [[metacritic, dbpedia]]`` but the
-    test gold lived at ``dbpedia_2_metacritic_test.csv``, and the old
-    loader silently dropped the pair because it checked only the
-    declared direction. Mirrors ``_load_em_gold_regenerated``'s existing
-    direction tolerance.
+    The games domain declares ``source_pairs: [[metacritic, dbpedia]]``
+    while the test gold lives at ``dbpedia_2_metacritic_test.csv``; a
+    loader that checked only the declared direction would silently drop
+    the pair. Mirrors ``_load_em_gold_regenerated``'s direction
+    tolerance.
     """
 
     def test_loads_when_file_matches_declared_direction(self, tmp_path: Path) -> None:

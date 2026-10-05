@@ -5,27 +5,28 @@
   "val_score": 1.0,
   "test_score": 1.0,
   "per_member_val": {
-    "duplicate_majority": 0.9052631578947368,
-    "label_jw": 0.5697674418604651,
-    "instance_tf_cosine": 0.48192771084337355,
-    "embedding_sbert": 0.4365256124721604,
+    "duplicate_majority": 0.8764044943820225,
+    "label_jw": 0.5949367088607594,
+    "instance_tf_cosine": 0.5277777777777778,
+    "embedding_sbert": 0.4342857142857143,
     "llm_openai": 1.0,
-    "magneto_slm_llm": 0.6338461538461538,
-    "coma_hybrid": 0.8775510204081632
+    "magneto_slm_llm": 0.71875,
+    "coma_hybrid": 0.8695652173913043
   },
   "per_member_test": {
-    "duplicate_majority": 0.9052631578947368,
-    "label_jw": 0.5697674418604651,
-    "instance_tf_cosine": 0.48192771084337355,
-    "embedding_sbert": 0.4365256124721604,
+    "duplicate_majority": 0.8764044943820225,
+    "label_jw": 0.5949367088607594,
+    "instance_tf_cosine": 0.5277777777777778,
+    "embedding_sbert": 0.4342857142857143,
     "llm_openai": 1.0,
-    "magneto_slm_llm": 0.6338461538461538,
-    "coma_hybrid": 0.8775510204081632
+    "magneto_slm_llm": 0.71875,
+    "coma_hybrid": 0.8695652173913043
   },
-  "runtime_s": 130.91076083795633,
+  "runtime_s": 469.2852375516668,
   "notes": {
     "test_eq_val": true,
-    "test_eq_val_reason": "no held-out SM test split for baseline"
+    "test_eq_val_reason": "no held-out SM test split for baseline",
+    "sm_input": "shipped_raw_20260926"
   },
-  "peak_memory_mb": 1918.421875
+  "peak_memory_mb": 2782.87109375
 }

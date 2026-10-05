@@ -1,4 +1,4 @@
-left,right,best_matcher,f1,precision,recall,threshold
-prod1,prod2,RuleBasedMatcher,0.6,0.5142857142857142,0.72,0.5
-prod1,prod3,RuleBasedMatcher,0.6204081632653062,0.5241379310344828,0.76,0.5
-prod1,prod4,RuleBasedMatcher,0.5649717514124294,0.3937007874015748,1.0,0.3
+left,right,best_matcher,f1,precision,recall,threshold,test_f1,test_precision,test_recall
+products_1,products_2,MLBasedMatcher,0.6457399103139014,0.5853658536585366,0.72,0.4,0.64,0.64,0.64
+products_1,products_3,RuleBasedMatcher,0.6590909090909092,0.5304878048780488,0.87,0.4,0.6271186440677965,0.5441176470588235,0.74
+products_1,products_4,RuleBasedMatcher,0.6545454545454545,0.5142857142857142,0.9,0.4,0.6972477064220184,0.6440677966101694,0.76

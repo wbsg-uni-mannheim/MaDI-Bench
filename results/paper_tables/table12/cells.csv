@@ -1,0 +1,201 @@
+row,column,printed,value,formatted,status,source,note
+Companies / Base,Rows (k),14.0,14.016,14.0,match,table12/source_rows_density.csv rows,
+Companies / Base,Density,66,66.478,66,match,table12/source_rows_density.csv density_pct,68030/102335 non-identifier cells filled
+Companies / Base,SM mean,68.6,0.6855364097600123,68.6,match,usecases_synthetic/baselines/companies/baseline_metrics.json sm.aggregated.macro_f1,
+Companies / Base,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/baselines/companies/baseline_metrics.json sm.aggregated.max_f1,
+Companies / Base,Norm. mean,35.9,0.358695652173913,35.9,match,usecases_synthetic/baselines/companies/baseline_metrics.json norm.aggregated.mean_accuracy,
+Companies / Base,Norm. ceiling,43.5,0.43478260869565216,43.5,match,usecases_synthetic/baselines/companies/baseline_metrics.json norm.aggregated.max_accuracy,
+Companies / Base,EM mean,88.4,0.8842491692933829,88.4,match,usecases_synthetic/baselines/companies/baseline_metrics.json em_matching.aggregated.macro_f1,
+Companies / Base,EM ceiling,89.5,0.895049254862339,89.5,match,usecases_synthetic/baselines/companies/baseline_metrics.json em_matching.aggregated.max_f1,
+Companies / Base,Fus. mean,56.9,0.5685860655737706,56.9,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Companies / Base,Fus. ceiling,62.4,0.6240983606557378,62.4,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Companies / Easy,Rows (k),14.0,14.022,14.0,match,table12/source_rows_density.csv rows,
+Companies / Easy,Density,63,63.169,63,match,table12/source_rows_density.csv density_pct,64671/102377 non-identifier cells filled
+Companies / Easy,SM mean,88.5,0.8853801169590643,88.5,match,usecases_synthetic/validation/companies/easy/metrics.json sm.aggregated.macro_f1,
+Companies / Easy,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/companies/easy/metrics.json sm.aggregated.max_f1,
+Companies / Easy,Norm. mean,20.3,0.2030178326474623,20.3,match,usecases_synthetic/validation/companies/easy/metrics.json norm.aggregated.mean_accuracy,
+Companies / Easy,Norm. ceiling,22.2,0.2222222222222222,22.2,match,usecases_synthetic/validation/companies/easy/metrics.json norm.aggregated.max_accuracy,
+Companies / Easy,EM mean,89.9,0.8993639342444852,89.9,match,usecases_synthetic/validation/companies/easy/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Companies / Easy,EM ceiling,93.4,0.9344185756972111,93.4,match,usecases_synthetic/validation/companies/easy/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Companies / Easy,Fus. mean,41.1,0.4107172131147541,41.1,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Companies / Easy,Fus. ceiling,44.6,0.4455737704918033,44.6,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Companies / Med.,Rows (k),14.3,14.332,14.3,match,table12/source_rows_density.csv rows,
+Companies / Med.,Density,59,58.741,59,match,table12/source_rows_density.csv density_pct,61143/104090 non-identifier cells filled
+Companies / Med.,SM mean,79.5,0.7949252645278929,79.5,match,usecases_synthetic/validation/companies/medium/metrics.json sm.aggregated.macro_f1,
+Companies / Med.,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/companies/medium/metrics.json sm.aggregated.max_f1,
+Companies / Med.,Norm. mean,27.2,0.27176220806794055,27.2,match,usecases_synthetic/validation/companies/medium/metrics.json norm.aggregated.mean_accuracy,
+Companies / Med.,Norm. ceiling,31.2,0.31210191082802546,31.2,match,usecases_synthetic/validation/companies/medium/metrics.json norm.aggregated.max_accuracy,
+Companies / Med.,EM mean,87.2,0.8722493386019465,87.2,match,usecases_synthetic/validation/companies/medium/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Companies / Med.,EM ceiling,88.2,0.8822882941753052,88.2,match,usecases_synthetic/validation/companies/medium/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Companies / Med.,Fus. mean,49.3,0.49315573770491805,49.3,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Companies / Med.,Fus. ceiling,53.3,0.5326229508196721,53.3,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Companies / Hard,Rows (k),14.2,14.18,14.2,match,table12/source_rows_density.csv rows,
+Companies / Hard,Density,58,57.538,58,match,table12/source_rows_density.csv density_pct,59387/103214 non-identifier cells filled
+Companies / Hard,SM mean,66.4,0.6640214675764547,66.4,match,usecases_synthetic/validation/companies/hard/metrics.json sm.aggregated.macro_f1,
+Companies / Hard,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/companies/hard/metrics.json sm.aggregated.max_f1,
+Companies / Hard,Norm. mean,29.9,0.29914529914529914,29.9,match,usecases_synthetic/validation/companies/hard/metrics.json norm.aggregated.mean_accuracy,
+Companies / Hard,Norm. ceiling,34.6,0.34615384615384615,34.6,match,usecases_synthetic/validation/companies/hard/metrics.json norm.aggregated.max_accuracy,
+Companies / Hard,EM mean,86.8,0.8679280048092063,86.8,match,usecases_synthetic/validation/companies/hard/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Companies / Hard,EM ceiling,88.1,0.8814484126984128,88.1,match,usecases_synthetic/validation/companies/hard/metrics.json em_matching.per_member.comem.metrics.f1_baseline_model_on_baseline_test (best member),
+Companies / Hard,Fus. mean,37.5,0.3746290983606558,37.5,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Companies / Hard,Fus. ceiling,38.6,0.3863770491803279,38.6,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Games / Base,Rows (k),75.0,74.951,75.0,match,table12/source_rows_density.csv rows,
+Games / Base,Density,94,94.213,94,match,table12/source_rows_density.csv density_pct,491982/522202 non-identifier cells filled
+Games / Base,SM mean,69.6,0.6960028710495878,69.6,match,usecases_synthetic/baselines/games/baseline_metrics.json sm.aggregated.macro_f1,
+Games / Base,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/baselines/games/baseline_metrics.json sm.aggregated.max_f1,
+Games / Base,Norm. mean,8.1,0.08058608058608059,8.1,match,usecases_synthetic/baselines/games/baseline_metrics.json norm.aggregated.mean_accuracy,
+Games / Base,Norm. ceiling,12.1,0.12087912087912088,12.1,match,usecases_synthetic/baselines/games/baseline_metrics.json norm.aggregated.max_accuracy,
+Games / Base,EM mean,60.9,0.6093054409137237,60.9,match,usecases_synthetic/baselines/games/baseline_metrics.json em_matching.aggregated.macro_f1,
+Games / Base,EM ceiling,71.6,0.715505802311274,71.6,match,usecases_synthetic/baselines/games/baseline_metrics.json em_matching.aggregated.max_f1,
+Games / Base,Fus. mean,68.1,0.681015132408575,68.1,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Games / Base,Fus. ceiling,70.7,0.7066078184110971,70.7,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: fusionquery_only
+Games / Easy,Rows (k),78.5,78.461,78.5,match,table12/source_rows_density.csv rows,
+Games / Easy,Density,84,84.324,84,match,table12/source_rows_density.csv density_pct,470749/558262 non-identifier cells filled
+Games / Easy,SM mean,88.1,0.8812921772105445,88.1,match,usecases_synthetic/validation/games/easy/metrics.json sm.aggregated.macro_f1,
+Games / Easy,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/games/easy/metrics.json sm.aggregated.max_f1,
+Games / Easy,Norm. mean,7.0,0.06976744186046512,7.0,match,usecases_synthetic/validation/games/easy/metrics.json norm.aggregated.mean_accuracy,
+Games / Easy,Norm. ceiling,9.8,0.09767441860465116,9.8,match,usecases_synthetic/validation/games/easy/metrics.json norm.aggregated.max_accuracy,
+Games / Easy,EM mean,63.3,0.6326858720634533,63.3,match,usecases_synthetic/validation/games/easy/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Games / Easy,EM ceiling,71.8,0.7184384067528357,71.8,match,usecases_synthetic/validation/games/easy/metrics.json em_matching.per_member.ditto_plm.metrics.f1_baseline_model_on_baseline_test (best member),
+Games / Easy,Fus. mean,66.8,0.667906683480454,66.8,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Games / Easy,Fus. ceiling,68.9,0.6891298865069356,68.9,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Games / Med.,Rows (k),75.3,75.261,75.3,match,table12/source_rows_density.csv rows,
+Games / Med.,Density,83,83.286,83,match,table12/source_rows_density.csv density_pct,437734/525578 non-identifier cells filled
+Games / Med.,SM mean,78.5,0.7849588201071063,78.5,match,usecases_synthetic/validation/games/medium/metrics.json sm.aggregated.macro_f1,
+Games / Med.,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/games/medium/metrics.json sm.aggregated.max_f1,
+Games / Med.,Norm. mean,19.9,0.19876543209876543,19.9,match,usecases_synthetic/validation/games/medium/metrics.json norm.aggregated.mean_accuracy,
+Games / Med.,Norm. ceiling,24.4,0.24444444444444444,24.4,match,usecases_synthetic/validation/games/medium/metrics.json norm.aggregated.max_accuracy,
+Games / Med.,EM mean,64.8,0.6480037438885387,64.8,match,usecases_synthetic/validation/games/medium/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Games / Med.,EM ceiling,75.5,0.7554382470119522,75.5,match,usecases_synthetic/validation/games/medium/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Games / Med.,Fus. mean,63.4,0.6340431904161412,63.4,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Games / Med.,Fus. ceiling,66.2,0.6616645649432534,66.2,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: truthfinder_only
+Games / Hard,Rows (k),71.1,71.078,71.1,match,table12/source_rows_density.csv rows,
+Games / Hard,Density,83,82.617,83,match,table12/source_rows_density.csv density_pct,406377/491878 non-identifier cells filled
+Games / Hard,SM mean,69.3,0.6926164673907388,69.3,match,usecases_synthetic/validation/games/hard/metrics.json sm.aggregated.macro_f1,
+Games / Hard,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/games/hard/metrics.json sm.aggregated.max_f1,
+Games / Hard,Norm. mean,22.4,0.2236842105263158,22.4,match,usecases_synthetic/validation/games/hard/metrics.json norm.aggregated.mean_accuracy,
+Games / Hard,Norm. ceiling,25.0,0.25,25.0,match,usecases_synthetic/validation/games/hard/metrics.json norm.aggregated.max_accuracy,
+Games / Hard,EM mean,55.3,0.5527100754073897,55.3,match,usecases_synthetic/validation/games/hard/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Games / Hard,EM ceiling,71.5,0.7148604269293926,71.5,match,usecases_synthetic/validation/games/hard/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Games / Hard,Fus. mean,57.2,0.5718726355611601,57.2,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Games / Hard,Fus. ceiling,60.1,0.6006052963430012,60.1,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: fusionquery_only
+Music / Base,Rows (k),37.3,37.255,37.3,match,table12/source_rows_density.csv rows,
+Music / Base,Density,90,90.086,90,match,table12/source_rows_density.csv density_pct,224362/249054 non-identifier cells filled
+Music / Base,SM mean,67.0,0.6695584981299267,67.0,match,usecases_synthetic/baselines/music/baseline_metrics.json sm.aggregated.macro_f1,
+Music / Base,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/baselines/music/baseline_metrics.json sm.aggregated.max_f1,
+Music / Base,Norm. mean,48.8,0.4875,48.8,match,usecases_synthetic/baselines/music/baseline_metrics.json norm.aggregated.mean_accuracy,
+Music / Base,Norm. ceiling,61.3,0.6125,61.3,match,usecases_synthetic/baselines/music/baseline_metrics.json norm.aggregated.max_accuracy,
+Music / Base,EM mean,82.4,0.8242095432232841,82.4,match,usecases_synthetic/baselines/music/baseline_metrics.json em_matching.aggregated.macro_f1,
+Music / Base,EM ceiling,95.3,0.9530669008929878,95.3,match,usecases_synthetic/baselines/music/baseline_metrics.json em_matching.aggregated.max_f1,
+Music / Base,Fus. mean,74.5,0.7453512396694215,74.5,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Music / Base,Fus. ceiling,82.0,0.8195592286501377,82.0,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Music / Easy,Rows (k),39.7,39.698,39.7,match,table12/source_rows_density.csv rows,
+Music / Easy,Density,86,85.994,86,match,table12/source_rows_density.csv density_pct,226953/263918 non-identifier cells filled
+Music / Easy,SM mean,91.8,0.9181099466813752,91.8,match,usecases_synthetic/validation/music/easy/metrics.json sm.aggregated.macro_f1,
+Music / Easy,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/music/easy/metrics.json sm.aggregated.max_f1,
+Music / Easy,Norm. mean,23.2,0.2318840579710145,23.2,match,usecases_synthetic/validation/music/easy/metrics.json norm.aggregated.mean_accuracy,
+Music / Easy,Norm. ceiling,29.3,0.29347826086956524,29.3,match,usecases_synthetic/validation/music/easy/metrics.json norm.aggregated.max_accuracy,
+Music / Easy,EM mean,88.3,0.8830928351145,88.3,match,usecases_synthetic/validation/music/easy/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Music / Easy,EM ceiling,95.1,0.9512741818683402,95.1,match,usecases_synthetic/validation/music/easy/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Music / Easy,Fus. mean,75.5,0.7546487603305785,75.5,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Music / Easy,Fus. ceiling,80.4,0.8044077134986226,80.4,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Music / Med.,Rows (k),37.3,37.335,37.3,match,table12/source_rows_density.csv rows,
+Music / Med.,Density,82,81.51,82,match,table12/source_rows_density.csv density_pct,203462/249616 non-identifier cells filled
+Music / Med.,SM mean,85.4,0.8537159407591302,85.4,match,usecases_synthetic/validation/music/medium/metrics.json sm.aggregated.macro_f1,
+Music / Med.,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/music/medium/metrics.json sm.aggregated.max_f1,
+Music / Med.,Norm. mean,46.8,0.4675925925925926,46.8,match,usecases_synthetic/validation/music/medium/metrics.json norm.aggregated.mean_accuracy,
+Music / Med.,Norm. ceiling,61.6,0.6157407407407407,61.6,match,usecases_synthetic/validation/music/medium/metrics.json norm.aggregated.max_accuracy,
+Music / Med.,EM mean,82.7,0.8268793723262309,82.7,match,usecases_synthetic/validation/music/medium/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Music / Med.,EM ceiling,94.8,0.9480326907824408,94.8,match,usecases_synthetic/validation/music/medium/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Music / Med.,Fus. mean,55.8,0.5576790633608816,55.8,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Music / Med.,Fus. ceiling,62.0,0.6198347107438017,62.0,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Music / Hard,Rows (k),35.2,35.169,35.2,match,table12/source_rows_density.csv rows,
+Music / Hard,Density,80,79.742,80,match,table12/source_rows_density.csv density_pct,188866/236846 non-identifier cells filled
+Music / Hard,SM mean,77.3,0.7725907876252601,77.3,match,usecases_synthetic/validation/music/hard/metrics.json sm.aggregated.macro_f1,
+Music / Hard,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/music/hard/metrics.json sm.aggregated.max_f1,
+Music / Hard,Norm. mean,40.5,0.4053497942386831,40.5,match,usecases_synthetic/validation/music/hard/metrics.json norm.aggregated.mean_accuracy,
+Music / Hard,Norm. ceiling,53.1,0.5308641975308642,53.1,match,usecases_synthetic/validation/music/hard/metrics.json norm.aggregated.max_accuracy,
+Music / Hard,EM mean,79.2,0.7917341225461593,79.2,match,usecases_synthetic/validation/music/hard/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Music / Hard,EM ceiling,92.9,0.9292661811885726,92.9,match,usecases_synthetic/validation/music/hard/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Music / Hard,Fus. mean,50.5,0.5049931129476584,50.5,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Music / Hard,Fus. ceiling,53.9,0.5385674931129476,53.9,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: voting_only
+Products / Base,Rows (k),3.0,3.012,3.0,match,table12/source_rows_density.csv rows,
+Products / Base,Density,53,52.505,53,match,table12/source_rows_density.csv density_pct,37955/72288 non-identifier cells filled
+Products / Base,SM mean,71.7,0.7173885589567969,71.7,match,usecases_synthetic/baselines/products/baseline_metrics.json sm.aggregated.macro_f1,
+Products / Base,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/baselines/products/baseline_metrics.json sm.aggregated.max_f1,
+Products / Base,Norm. mean,45.7,0.4573333333333333,45.7,match,usecases_synthetic/baselines/products/baseline_metrics.json norm.aggregated.mean_accuracy,
+Products / Base,Norm. ceiling,85.2,0.852,85.2,match,usecases_synthetic/baselines/products/baseline_metrics.json norm.aggregated.max_accuracy,
+Products / Base,EM mean,89.7,0.8968837679551498,89.7,match,usecases_synthetic/baselines/products/baseline_metrics.json em_matching.aggregated.macro_f1,
+Products / Base,EM ceiling,95.5,0.9551838858520755,95.5,match,usecases_synthetic/baselines/products/baseline_metrics.json em_matching.aggregated.max_f1,
+Products / Base,Fus. mean,80.4,0.8039772727272727,80.4,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Products / Base,Fus. ceiling,82.8,0.8277511961722488,82.8,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Products / Easy,Rows (k),3.1,3.091,3.1,match,table12/source_rows_density.csv rows,
+Products / Easy,Density,47,46.78,47,match,table12/source_rows_density.csv density_pct,34703/74184 non-identifier cells filled
+Products / Easy,SM mean,79.1,0.7905943273784837,79.1,match,usecases_synthetic/validation/products/easy/metrics.json sm.aggregated.macro_f1,
+Products / Easy,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/products/easy/metrics.json sm.aggregated.max_f1,
+Products / Easy,Norm. mean,45.1,0.45075757575757575,45.1,match,usecases_synthetic/validation/products/easy/metrics.json norm.aggregated.mean_accuracy,
+Products / Easy,Norm. ceiling,86.6,0.8664772727272727,86.6,match,usecases_synthetic/validation/products/easy/metrics.json norm.aggregated.max_accuracy,
+Products / Easy,EM mean,92.6,0.9256821407996266,92.6,match,usecases_synthetic/validation/products/easy/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Products / Easy,EM ceiling,96.4,0.9635933806146572,96.4,match,usecases_synthetic/validation/products/easy/metrics.json em_matching.per_member.ditto_plm.metrics.f1_baseline_model_on_baseline_test (best member),
+Products / Easy,Fus. mean,78.6,0.7861842105263158,78.6,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Products / Easy,Fus. ceiling,81.8,0.8181818181818182,81.8,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Products / Med.,Rows (k),3.1,3.1,3.1,match,table12/source_rows_density.csv rows,
+Products / Med.,Density,42,41.647,42,match,table12/source_rows_density.csv density_pct,30985/74400 non-identifier cells filled
+Products / Med.,SM mean,72.1,0.7205423551416894,72.1,match,usecases_synthetic/validation/products/medium/metrics.json sm.aggregated.macro_f1,
+Products / Med.,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/products/medium/metrics.json sm.aggregated.max_f1,
+Products / Med.,Norm. mean,47.0,0.4698340874811463,47.0,match,usecases_synthetic/validation/products/medium/metrics.json norm.aggregated.mean_accuracy,
+Products / Med.,Norm. ceiling,90.7,0.9072398190045249,90.7,match,usecases_synthetic/validation/products/medium/metrics.json norm.aggregated.max_accuracy,
+Products / Med.,EM mean,88.9,0.8886776976402431,88.9,match,usecases_synthetic/validation/products/medium/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Products / Med.,EM ceiling,96.6,0.9659727300797947,96.6,match,usecases_synthetic/validation/products/medium/metrics.json em_matching.per_member.ditto_plm.metrics.f1_baseline_model_on_baseline_test (best member),
+Products / Med.,Fus. mean,71.2,0.7117224880382775,71.2,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Products / Med.,Fus. ceiling,76.6,0.7655502392344498,76.6,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: pydi_per_attribute_optimal
+Products / Hard,Rows (k),2.4,2.367,2.4,match,table12/source_rows_density.csv rows,
+Products / Hard,Density,45,45.078,45,match,table12/source_rows_density.csv density_pct,25608/56808 non-identifier cells filled
+Products / Hard,SM mean,65.7,0.656586217777121,65.7,match,usecases_synthetic/validation/products/hard/metrics.json sm.aggregated.macro_f1,
+Products / Hard,SM ceiling,98.0,0.98,98.0,match,usecases_synthetic/validation/products/hard/metrics.json sm.aggregated.max_f1,
+Products / Hard,Norm. mean,46.6,0.4660564454614798,46.6,match,usecases_synthetic/validation/products/hard/metrics.json norm.aggregated.mean_accuracy,
+Products / Hard,Norm. ceiling,91.3,0.9130434782608695,91.3,match,usecases_synthetic/validation/products/hard/metrics.json norm.aggregated.max_accuracy,
+Products / Hard,EM mean,85.8,0.8584090374933068,85.8,match,usecases_synthetic/validation/products/hard/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Products / Hard,EM ceiling,97.4,0.9743219386936287,97.4,match,usecases_synthetic/validation/products/hard/metrics.json em_matching.per_member.ditto_plm.metrics.f1_baseline_model_on_baseline_test (best member),
+Products / Hard,Fus. mean,60.9,0.6085526315789473,60.9,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Products / Hard,Fus. ceiling,65.3,0.65311004784689,65.3,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: ltm_only
+Papers / Base,Rows (k),182.1,182.059,182.1,match,table12/source_rows_density.csv rows,
+Papers / Base,Density,82,82.161,82,match,table12/source_rows_density.csv density_pct,1695551/2063684 non-identifier cells filled
+Papers / Base,SM mean,75.0,0.7503297779207789,75.0,match,usecases_synthetic/baselines/papers/baseline_metrics.json sm.aggregated.macro_f1,
+Papers / Base,SM ceiling,98.5,0.9850746268656716,98.5,match,usecases_synthetic/baselines/papers/baseline_metrics.json sm.aggregated.max_f1,
+Papers / Base,Norm. mean,35.6,0.35618279569892475,35.6,match,usecases_synthetic/baselines/papers/baseline_metrics.json norm.aggregated.mean_accuracy,
+Papers / Base,Norm. ceiling,66.9,0.6693548387096774,66.9,match,usecases_synthetic/baselines/papers/baseline_metrics.json norm.aggregated.max_accuracy,
+Papers / Base,EM mean,96.6,0.9663863988835377,96.6,match,usecases_synthetic/baselines/papers/baseline_metrics.json em_matching.aggregated.macro_f1,
+Papers / Base,EM ceiling,100.0,0.9995495946261482,100.0,match,usecases_synthetic/baselines/papers/baseline_metrics.json em_matching.aggregated.max_f1,
+Papers / Base,Fus. mean,81.9,0.8191431670281996,81.9,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Papers / Base,Fus. ceiling,92.3,0.9229934924078091,92.3,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Papers / Easy,Rows (k),182.2,182.213,182.2,match,table12/source_rows_density.csv rows,
+Papers / Easy,Density,64,63.918,64,match,table12/source_rows_density.csv density_pct,1552876/2429474 non-identifier cells filled
+Papers / Easy,SM mean,82.3,0.8226115209263128,82.3,match,usecases_synthetic/validation/papers/easy/metrics.json sm.aggregated.macro_f1,
+Papers / Easy,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/papers/easy/metrics.json sm.aggregated.max_f1,
+Papers / Easy,Norm. mean,35.0,0.34974747474747475,35.0,match,usecases_synthetic/validation/papers/easy/metrics.json norm.aggregated.mean_accuracy,
+Papers / Easy,Norm. ceiling,64.8,0.6477272727272727,64.8,match,usecases_synthetic/validation/papers/easy/metrics.json norm.aggregated.max_accuracy,
+Papers / Easy,EM mean,96.5,0.9651807151233189,96.5,match,usecases_synthetic/validation/papers/easy/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Papers / Easy,EM ceiling,99.9,0.9993939391713276,99.9,match,usecases_synthetic/validation/papers/easy/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Papers / Easy,Fus. mean,79.4,0.7936550976138829,79.4,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Papers / Easy,Fus. ceiling,89.5,0.8947939262472885,89.5,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Papers / Med.,Rows (k),182.1,182.067,182.1,match,table12/source_rows_density.csv rows,
+Papers / Med.,Density,60,60.064,60,match,table12/source_rows_density.csv density_pct,1458114/2427620 non-identifier cells filled
+Papers / Med.,SM mean,74.9,0.7494390957582937,74.9,match,usecases_synthetic/validation/papers/medium/metrics.json sm.aggregated.macro_f1,
+Papers / Med.,SM ceiling,100.0,1.0,100.0,match,usecases_synthetic/validation/papers/medium/metrics.json sm.aggregated.max_f1,
+Papers / Med.,Norm. mean,35.7,0.35661764705882354,35.7,match,usecases_synthetic/validation/papers/medium/metrics.json norm.aggregated.mean_accuracy,
+Papers / Med.,Norm. ceiling,68.0,0.6801470588235294,68.0,match,usecases_synthetic/validation/papers/medium/metrics.json norm.aggregated.max_accuracy,
+Papers / Med.,EM mean,95.3,0.9534549617090565,95.3,match,usecases_synthetic/validation/papers/medium/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Papers / Med.,EM ceiling,99.9,0.9992493844790452,99.9,match,usecases_synthetic/validation/papers/medium/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Papers / Med.,Fus. mean,77.3,0.7725054229934925,77.3,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Papers / Med.,Fus. ceiling,86.1,0.8611713665943601,86.1,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only
+Papers / Hard,Rows (k),136.9,136.876,136.9,match,table12/source_rows_density.csv rows,
+Papers / Hard,Density,57,56.7,57,match,table12/source_rows_density.csv density_pct,1032113/1820304 non-identifier cells filled
+Papers / Hard,SM mean,62.9,0.6290835750963308,62.9,match,usecases_synthetic/validation/papers/hard/metrics.json sm.aggregated.macro_f1,
+Papers / Hard,SM ceiling,98.6,0.9859154929577464,98.6,match,usecases_synthetic/validation/papers/hard/metrics.json sm.aggregated.max_f1,
+Papers / Hard,Norm. mean,36.8,0.3680555555555556,36.8,match,usecases_synthetic/validation/papers/hard/metrics.json norm.aggregated.mean_accuracy,
+Papers / Hard,Norm. ceiling,70.3,0.703125,70.3,match,usecases_synthetic/validation/papers/hard/metrics.json norm.aggregated.max_accuracy,
+Papers / Hard,EM mean,92.2,0.9224642058899437,92.2,match,usecases_synthetic/validation/papers/hard/metrics.json em_matching.aggregated.macro_f1_baseline_model_on_baseline_test,
+Papers / Hard,EM ceiling,99.4,0.9940379276718827,99.4,match,usecases_synthetic/validation/papers/hard/metrics.json em_matching.per_member.magellan.metrics.f1_baseline_model_on_baseline_test (best member),
+Papers / Hard,Fus. mean,66.6,0.6660791757049892,66.6,match,table12/fusion_committee_summary.csv mean_8_members,"8 non-LLM members, strict rules, v2 gold, all-gold cell-weighted accuracy"
+Papers / Hard,Fus. ceiling,70.6,0.7060737527114967,70.6,match,table12/fusion_committee_summary.csv ceiling_8_members,best member: prefer_higher_trust_only

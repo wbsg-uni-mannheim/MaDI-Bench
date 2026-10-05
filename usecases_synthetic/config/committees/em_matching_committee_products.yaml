@@ -32,7 +32,7 @@ members:
       module: usecases_synthetic.lib.ditto_matcher
       params:
         checkpoint_path: usecases_synthetic/cache/ditto_checkpoints/products/best
-        fields: [title, brand, description, price, priceCurrency, title_description, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
+        fields: [title, brand, description, price, priceCurrency, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
     comparators: []
     weights: []
     threshold: 0.5
@@ -50,7 +50,7 @@ members:
       class: MatchGPTMatcher
       module: usecases_synthetic.lib.matchgpt_em_matcher
       params:
-        fields: [title, brand, description, price, priceCurrency, title_description, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
+        fields: [title, brand, description, price, priceCurrency, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
         chat_model_name: openai/gpt-5.4-mini
         temperature: 0.0
         max_tokens: 2048
@@ -77,7 +77,7 @@ members:
       class: MagellanMatcher
       module: usecases_synthetic.lib.magellan_em_matcher
       params:
-        attributes: [title, brand, description, price, priceCurrency, title_description, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
+        attributes: [title, brand, description, price, priceCurrency, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
         numeric_attributes: [price, vram_gb, storage_gb, read_speed_mb_s, write_speed_mb_s]
         date_attributes: []
         classifier_class: sklearn.ensemble.RandomForestClassifier
@@ -112,7 +112,7 @@ members:
       class: ComEMMatcher
       module: usecases_synthetic.lib.comem_em_matcher
       params:
-        fields: [title, brand, description, price, priceCurrency, title_description, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
+        fields: [title, brand, description, price, priceCurrency, product_type, model, model_number, chipset_name, vram_gb, storage_gb, bus_type, interface_type, memory_type, storage_connection_type, form_factor, read_speed_mb_s, write_speed_mb_s]
         stage1_model: openai/gpt-5.4-mini
         stage2_model: null
         stage1_set_size: 10
@@ -146,7 +146,6 @@ column_mapping:
     currency_code: priceCurrency
     cluster_id: cluster_id
     product_url: url
-    name_and_description: title_description
     model_name: model
     manufacturer_part_number: model_number
     category: product_type
@@ -173,7 +172,6 @@ column_mapping:
     currency: priceCurrency
     cluster_id: cluster_id
     productUrl: url
-    titleAndDescription: title_description
     modelName: model
     mpn: model_number
     productCategory: product_type
@@ -200,7 +198,6 @@ column_mapping:
     Currency: priceCurrency
     cluster_id: cluster_id
     Link: url
-    TitleDetails: title_description
     Model: model
     PartNo: model_number
     Type: product_type
@@ -227,7 +224,6 @@ column_mapping:
     cur: priceCurrency
     cluster_id: cluster_id
     link: url
-    name_desc: title_description
     mdl: model
     pn: model_number
     cat: product_type

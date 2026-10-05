@@ -1,0 +1,356 @@
+{
+ "task_id": "products_medium",
+ "system": "claudecode",
+ "claude_code_version": "2.1.280 (Claude Code)",
+ "session_id": "047b7adb-e960-4465-8555-63019b50de9b",
+ "model": "claude-opus-5-5",
+ "effort": null,
+ "provider": "anthropic",
+ "auth_mode": "subscription",
+ "isolation": "bwrap",
+ "gpu": false,
+ "kit": "full",
+ "labeling_enabled": false,
+ "ditto_training_enabled": false,
+ "denied_tools": [
+  "WebSearch",
+  "WebFetch"
+ ],
+ "pydi_available": false,
+ "pydi_docs": false,
+ "exit_reason": "completed",
+ "returncode": 0,
+ "run_dir": "<p4-run:products_medium>",
+ "workspace_build": {
+  "sanitizer": {
+   "task_id": "products_medium",
+   "dest": "<p4-run:products_medium>/workspace/task",
+   "manifest_tree_sha256": "c94f7265cd8fff70944697c31640af028264416eba32e90d03a9f9e4605c1661",
+   "n_copied": 8,
+   "n_hidden_withheld": 161,
+   "copied": [
+    {
+     "path": "input/data/products_1.csv",
+     "sha256": "e808762460fef4c8622b1de6d8e16afaefbf9f6e26ea8dcaa58fce5e6981cee9",
+     "size": 455633,
+     "transform": "scrub-cluster-id-csv"
+    },
+    {
+     "path": "input/data/products_2.csv",
+     "sha256": "3d81daec17fee78a193e528dca8ec2cea6e3b7cd97c2ef05be83cd0fe88eaf9d",
+     "size": 393649,
+     "transform": "scrub-cluster-id-csv"
+    },
+    {
+     "path": "input/data/products_3.csv",
+     "sha256": "f5c9f78914ef7dd7be0caae56052cd789f12f97233efb7b8d6fdbe60754b5a84",
+     "size": 343682,
+     "transform": "scrub-cluster-id-csv"
+    },
+    {
+     "path": "input/data/products_4.csv",
+     "sha256": "972b3375e32bb58cf234434851a49f1792a4903b2b83229b6b71951e6f9953c5",
+     "size": 297231,
+     "transform": "scrub-cluster-id-csv"
+    },
+    {
+     "path": "input/schemamatching/GPU_Memory_Taxonomy.csv",
+     "sha256": "258bf6a1a86aa0f0ef732734d3853d3184ebccd8b2ebef51047479a3bad84b8f",
+     "size": 364
+    },
+    {
+     "path": "input/schemamatching/Product_Type_Taxonomy.csv",
+     "sha256": "d7d7b2b6c55408850a543b4b497e88ea8e5345fd90cca03223356a08b1af2d14",
+     "size": 624
+    },
+    {
+     "path": "input/schemamatching/Storage_Interface_Taxonomy.csv",
+     "sha256": "9ec7830f1382a608cca3abe93600dd0d85421e551a4a59c045110e0b12dd73ef",
+     "size": 677
+    },
+    {
+     "path": "input/schemamatching/target_schema.json",
+     "sha256": "88e30ec050fd7871ffc6214c74b1b2cd43d4d8c2c72e7ab88b3b344683cb6d5b",
+     "size": 6316
+    }
+   ]
+  },
+  "brief_chars": 2081,
+  "entity_definition_version": 1,
+  "entity_definition_sha256": "193b8e848586ef1b6d4ce86a21f566a2363871206206aa2958d055d658daac28",
+  "n_skills": 7,
+  "kit": "minimal",
+  "n_scripts": 1,
+  "pydi_docs": null,
+  "advice": false,
+  "provided_validation": "self_made",
+  "provided_validation_files": {},
+  "provided_validation_health": null,
+  "official_fusion_validation": null,
+  "profile": "claudecode_label_free",
+  "labeling_enabled": false,
+  "ditto_training_enabled": false,
+  "skills_variant": "label_free",
+  "pydi_available": false
+ },
+ "resume_archive": null,
+ "openai_key_exposed": false,
+ "archive_errors": [],
+ "agent_openai": {
+  "access": "embeddings",
+  "route": "proxy"
+ },
+ "embeddings_proxy": {
+  "forwarded": 0,
+  "pinned": 0,
+  "errors": 0,
+  "cache_hits": 0,
+  "client_gone": 0,
+  "refused": 0,
+  "prompt_tokens": 0,
+  "total_tokens": 0,
+  "spend_usd": 0.0,
+  "unpriced_calls": 0,
+  "unpriced_models": [],
+  "allow": [
+   "embeddings"
+  ],
+  "refused_paths": [],
+  "by_kind": {},
+  "route": "proxy"
+ },
+ "stream": {
+  "n_events": 1135,
+  "n_tool_calls": 109,
+  "tools": {
+   "Bash": 98,
+   "Read": 5,
+   "Write": 6
+  },
+  "result": {
+   "subtype": "success",
+   "is_error": false,
+   "num_turns": 110,
+   "duration_ms": 2163864,
+   "total_cost_usd": 13.713315399999995,
+   "session_id": "047b7adb-e960-4465-8555-63019b50de9b",
+   "usage": {
+    "input_tokens": 216,
+    "cache_creation_input_tokens": 528774,
+    "cache_read_input_tokens": 32484697,
+    "output_tokens": 149266,
+    "output_tokens_details": {
+     "thinking_tokens": 63630
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 528774,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 11,
+      "cache_read_input_tokens": 542343,
+      "cache_creation_input_tokens": 923,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 923
+      },
+      "type": "message",
+      "model": null
+     }
+    ],
+    "speed": "standard"
+   },
+   "modelUsage": {
+    "claude-opus-5-5": {
+     "inputTokens": 216,
+     "outputTokens": 149266,
+     "cacheReadInputTokens": 32484697,
+     "cacheCreationInputTokens": 528774,
+     "webSearchRequests": 0,
+     "costUSD": 13.713315399999995,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 63630,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   }
+  }
+ },
+ "is_error": false,
+ "gold_timeline": {
+  "stage_revisions": {
+   "schema_matching": 1,
+   "entity_matching": 1,
+   "blocking": 1,
+   "fusion": 1,
+   "e2e_panel": 1
+  },
+  "last_headline_per_stage": {
+   "schema_matching": "F1=1.000",
+   "entity_matching": "F1(pair-mean)=0.850 (pooled=0.848)",
+   "blocking": "PC=0.955",
+   "fusion": "acc[strict]=0.752 (all gold) | 0.792 on 95/100 evaluated",
+   "e2e_panel": "GR=0.693"
+  },
+  "n_revisions_mirrored": 0,
+  "n_revision_names": 0,
+  "n_revisions_unmirrored_budget": 0,
+  "n_blobs": 0,
+  "blob_bytes": 0,
+  "mirror_bytes": 0,
+  "mirror_byte_budget": 1500000000,
+  "mirror_errors": []
+ },
+ "submission": {
+  "n_files": 6,
+  "files": [
+   "candidates.csv",
+   "correspondences.csv",
+   "fused.csv",
+   "membership.csv",
+   "report.md",
+   "sm_mapping.csv"
+  ]
+ },
+ "self_check": {
+  "ok": true,
+  "problems": [],
+  "warnings": []
+ },
+ "leak_scan": {
+  "task_mirror_ok": true,
+  "outputs_ok": true,
+  "violations": []
+ },
+ "n_turns": 110,
+ "cost_usd_cli": 13.713315399999995,
+ "pricing": null,
+ "cli_budget_usd": 100.0,
+ "budget_scale": 1.0,
+ "cost_usd_real": null,
+ "cost_usd": 13.713315399999995,
+ "broker_summaries": {},
+ "cost_accounting": {
+  "auth_mode": "subscription",
+  "billing_basis": "subscription",
+  "billed_solver_usd": null,
+  "billing_note": "Not an invoice. Subscription allowance is not a dollar balance. Zero extra solver charges requires included usage and usage credits disabled. No API-key fallback is configured; auxiliary APIs are billed separately.",
+  "cli_api_equivalent_usd": 13.713315399999995,
+  "standard_api_equivalent_usd_range": [
+   13.713315,
+   13.713315
+  ],
+  "estimate_note": "Range reflects unknown cache-write TTL; no fast/residency surcharges included.",
+  "usage": {
+   "input_tokens": 216,
+   "cache_creation_input_tokens": 528774,
+   "cache_read_input_tokens": 32484697,
+   "output_tokens": 149266,
+   "output_tokens_details": {
+    "thinking_tokens": 63630
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 528774,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 11,
+     "cache_read_input_tokens": 542343,
+     "cache_creation_input_tokens": 923,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 923
+     },
+     "type": "message",
+     "model": null
+    }
+   ],
+   "speed": "standard"
+  },
+  "models": {
+   "claude-opus-5-5": {
+    "usage": {
+     "inputTokens": 216,
+     "outputTokens": 149266,
+     "cacheReadInputTokens": 32484697,
+     "cacheCreationInputTokens": 528774,
+     "webSearchRequests": 0,
+     "costUSD": 13.713315399999995,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 63630,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    },
+    "cli_estimate_usd": 13.713315399999995,
+    "standard_api_equivalent_usd_range": [
+     13.713315,
+     13.713315
+    ]
+   }
+  },
+  "pricing_snapshot": {
+   "date": "2026-09-23",
+   "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "basis": "standard global API list prices, USD per million tokens",
+   "models": {
+    "claude-opus-5-5": [
+     4.0,
+     20.0,
+     0.2,
+     5.0,
+     8.0
+    ],
+    "claude-sonnet-5": [
+     2.0,
+     10.0,
+     0.2,
+     2.5,
+     4.0
+    ],
+    "claude-haiku-4-5-20251001": [
+     1.0,
+     5.0,
+     0.1,
+     1.25,
+     2.0
+    ]
+   },
+   "columns": [
+    "input",
+    "output",
+    "cache_read",
+    "cache_write_5m",
+    "cache_write_1h"
+   ]
+  },
+  "auxiliary_api_estimate_usd": 0.0,
+  "auxiliary_breakdown": {
+   "brokers": {},
+   "embeddings_proxy": 0.0
+  },
+  "complete": true
+ },
+ "segment_wall_seconds": 2176.7,
+ "wall_seconds": 2176.7,
+ "submission_ready": true
+}

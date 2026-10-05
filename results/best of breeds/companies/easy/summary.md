@@ -18,4 +18,4 @@ Total runtime: 871.1 s
 
 ## Caveats
 
-- Greedy per-stage selection is locally optimal; no joint search across stages. See `plans/plan_best_of_breed_pipeline.md` §8.2.
+- Greedy per-stage selection is locally optimal; no joint search across stages.

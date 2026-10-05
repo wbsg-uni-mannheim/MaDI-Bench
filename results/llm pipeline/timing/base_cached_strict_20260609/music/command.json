@@ -1,13 +1,13 @@
 {
   "case": "music",
-  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/music.json",
+  "manifest": "DI-Bench/manifests/music.json",
   "pipeline_output_dir": "DI-Bench/runs/music",
-  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/music",
+  "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/music",
   "command": [
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "python3",
     "scripts/run_pipeline.py",
     "--manifest",
-    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/music.json",
+    "DI-Bench/manifests/music.json",
     "--training-set-construction",
     "active",
     "--fusion-case",

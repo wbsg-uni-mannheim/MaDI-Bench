@@ -1,6 +1,6 @@
 # Knob 5 — Format / unit diversity
 
-**Status:** LOCKED. **Scenario:** S1 + S2 (fully controllable).
+**Scenario:** S1 + S2 (fully controllable).
 
 ## Definition
 
@@ -28,7 +28,7 @@ Number of distinct *structured/parseable* formats and units per attribute. Cover
 
 **Easy is not a no-op.** The normalization stage always has work to do.
 
-## Unit conversion at hard — Option (a) with real rates
+## Unit conversion at hard — real rates
 
 Conversions are baked in using **real published exchange rates / unit factors as of 2026-03-15**. The generator stores the rate table as a per-domain artifact alongside the difficulty config. Conversions are deterministic; provenance records `from_unit`, `to_unit`, `rate`, `rate_date`. Sources do not carry explicit unit tags — the normalizer must infer the unit from column name / context, as in real-world data.
 
@@ -58,7 +58,7 @@ Trivial — canonical-form comparison absorbs format/unit differences. Lenient f
 
 ## Provenance
 
-`transform_fn ∈ {reformat_date, reformat_number, reconvert_unit, relocale}`, `transform_params={from_format, to_format, rate?, rate_date?}`. (`reformat_number` was missing from this top-level enum and is the authoritative addition — see §Algorithm selection for the per-`transform_fn` parameter schema.)
+`transform_fn ∈ {reformat_date, reformat_number, reconvert_unit, relocale}`, `transform_params={from_format, to_format, rate?, rate_date?}`.
 
 ## Algorithm selection
 
@@ -88,9 +88,9 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
 **Fusion-safety handling.** Per [cross_cutting.md](cross_cutting.md#per-knob-fix-strategy-defaults), Knob 5 is *trivial* — canonicalizing comparison absorbs format/unit differences, so no fix-on-collapse loop is needed. The fusion gold file is **never mutated**; the dispatcher reads it only to verify that every emitted reformatted value round-trips to the same canonical value as the gold entry under canonical-form comparison. Failures log to the skipped-cell audit and fall back to identity.
 
 **Literature citations.**
-- **DAPO** ([../literature-search-generation/dapo_large_scale_data_pollution/paper.md](../literature-search-generation/dapo_large_scale_data_pollution/paper.md)) — *Format Variation* inside *Schema Inhomogeneity Injection* (paper.md:174, 286, 315) and *Per-Source Corruption Profiles* (paper.md:77–78, 324). Cited as the direct precedent for per-source format pools (date formats, number formats, decimal separators, currency symbols) coexisting across sources in a controlled benchmark. Our per-source (easy/medium) and per-row (hard) draw patterns are a strict extension of DAPO's per-source profile.
-- **Valentine — Fabricated Benchmark Generation via Table Transformations** ([../literature-search-generation/valentine_schema_matching/paper.md](../literature-search-generation/valentine_schema_matching/paper.md)) — *Value corruption* sub-operation, specifically the "format changes (date format, number format)" branch (paper.md:121, 171). Cited as the benchmark-construction precedent: format changes are a named, citeable transformation class with known ground truth.
-- **XBenchMatch — Schema Heterogeneity Taxonomy** ([../literature-search-generation/xbenchmatch_schema_matching/paper.md](../literature-search-generation/xbenchmatch_schema_matching/paper.md)) — *Granularity operations* (precision_change, split, merge — paper.md:185) and the *Different precision* / *Different measurement units* heterogeneity classes (paper.md:105, 108). Cited as the taxonomy source for our format-family classification (precision downgrades, unit diversity as first-class heterogeneity classes).
+- **DAPO** — *Format Variation* inside *Schema Inhomogeneity Injection* and *Per-Source Corruption Profiles*. Cited as the direct precedent for per-source format pools (date formats, number formats, decimal separators, currency symbols) coexisting across sources in a controlled benchmark. Our per-source (easy/medium) and per-row (hard) draw patterns are a strict extension of DAPO's per-source profile.
+- **Valentine — Fabricated Benchmark Generation via Table Transformations** — *Value corruption* sub-operation, specifically the "format changes (date format, number format)" branch. Cited as the benchmark-construction precedent: format changes are a named, citeable transformation class with known ground truth.
+- **XBenchMatch — Schema Heterogeneity Taxonomy** — *Granularity operations* (precision_change, split, merge) and the *Different precision* / *Different measurement units* heterogeneity classes. Cited as the taxonomy source for our format-family classification (precision downgrades, unit diversity as first-class heterogeneity classes).
 - No LLM paper cited. Format and unit rewriting is mechanical and fully deterministic; LLM use would sacrifice determinism with no expected quality gain. See Rejected Alternatives.
 
 **Determinism & provenance.**
@@ -99,7 +99,7 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
   - `attribute_classes`: `{source_name: {column: format_family}}` with `format_family ∈ {date, number, money, duration, dimensional}`. Authored once, checked in. **Shared with Knob 10**: Knob 10's dispatcher reads this block as its single source of truth for canonical-form comparator routing and owns the per-source-nesting collapse + family→comparator routing. See [knob_10_source_reliability.md §Reconciliation with Knob 5's `attribute_classes` taxonomy](knob_10_source_reliability.md). Authoring rule: if multiple sources declare the same attribute with different `format_family`, Knob 10 will warn and use the majority — keep families consistent across sources for any given attribute.
   - `format_pools_per_level`: `{easy|medium|hard: {format_family: [format_id, ...]}}`. Authored from the Easy/Medium/Hard table above. **Pinned pool sizes (frozen scalars per family per level, enforced by the YAML loader):** easy = exactly 2, medium = exactly 3, hard = exactly 4 (where `4 = 3 + at least one hard-only operator: 2-digit year, precision downgrade, K/M/B suffix, scientific notation, or symbol-vs-ISO currency). The `1–2 / 2–3 / 3+` ranges in the level table are *display* ranges; the per-domain YAML must commit to the frozen scalar.
 
-  - **Baseline format profile schema** (consumed via the `baseline_format_profile` input). The Step 5 baseline pass writes a JSON document at `usecases_synthetic/baselines/<domain>/format_profile.json` with shape:
+  - **Baseline format profile schema** (consumed via the `baseline_format_profile` input). The baseline measurement pass writes a JSON document at `usecases_synthetic/baselines/<domain>/format_profile.json` with shape:
     ```json
     {
       "<source_name>": {
@@ -112,10 +112,10 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
       }
     }
     ```
-    `normalize_down_threshold` is a per-domain scalar (default 0.85) — if no single format covers ≥85% of cells, easy must take the normalize-down branch. Forward reference: written by `usecases_synthetic/scripts/measure_baseline_profile.py` (Step 5 baseline measurement pass — same script Knob 6 forward-references for its baseline noise rates).
+    `normalize_down_threshold` is a per-domain scalar (default 0.85) — if no single format covers ≥85% of cells, easy must take the normalize-down branch.
   - `locale_pool_per_level` and `within_source_consistency`: `{easy: "source", medium: "source", hard: "row"}`.
   - `unit_pool_per_level`: `{easy|medium|hard: {attribute: [unit, ...]}}`.
-  - `baseline_format_profile`: **measured** (not authored) — per (source, attribute) the dominant format(s) observed in the raw data, written by the Step 5 baseline measurement pass (see the `measure_baseline_profile.py` cross-cutting follow-up in [plan_algorithmselection.md](../plan_algorithmselection.md)). Consumed by the dispatcher to decide when *easy* must normalize-down rather than pass through (Music dates, Companies financials).
+  - `baseline_format_profile`: **measured** (not authored) — per (source, attribute) the dominant format(s) observed in the raw data, written by the baseline measurement pass. Consumed by the dispatcher to decide when *easy* must normalize-down rather than pass through (Music dates, Companies financials).
 - Static operator tables shared across domains at `usecases_synthetic/config/knob_05_format_unit/_tables/`:
   - `date_formats.yaml` — format-id → `strftime` pattern + parser hint + `{hard_only: bool, locale_ambiguous_deny: bool}` flags. The locale-ambiguous deny-list (`%d/%m/%y`-style patterns with days ≤ 12) is enforced here, not inlined in code.
   - `number_locales.yaml` — locale-id → `(decimal_sep, thousands_sep, grouping)` triple.
@@ -132,7 +132,7 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
   - `reformat_number`: `{from_locale, to_locale, precision}`
   - `reconvert_unit`: `{from_unit, to_unit, rate, rate_date, magnitude_scale}`
   - `relocale`: `{from_locale, to_locale}`
-- Skipped-cell audit at `output/provenance/knob_05_skipped.csv` for the round-trip-parse fallback path (includes the attempted draw and the parser error). **Reason codes:** `roundtrip_parse_fail`, `cell_collision_with_1`, `cell_collision_with_4` (K4-fabricated cell — see [knob_04_coverage_skew.md §Joint cell-collision index integration](knob_04_coverage_skew.md#joint-cell-collision-index-integration-resolves-c2-from-the-step-5-cross-knob-review)), `cell_collision_with_7`, `denylist_locale_ambiguous`.
+- Skipped-cell audit at `output/provenance/knob_05_skipped.csv` for the round-trip-parse fallback path (includes the attempted draw and the parser error). **Reason codes:** `roundtrip_parse_fail`, `cell_collision_with_1`, `cell_collision_with_4` (K4-fabricated cell — see [knob_04_coverage_skew.md §Joint cell-collision index integration](knob_04_coverage_skew.md#joint-cell-collision-index-integration)), `cell_collision_with_7`, `denylist_locale_ambiguous`.
 - Caching: the full output is a file artifact on disk (reformatted source datasets + provenance CSV + skipped CSV). No in-memory cache — seeded RNG + static tables give reproducible regeneration.
 - Committee surface: the Norm / Blocking / EM / Fusion committees (per the Committee-expectations section above and the cross_cutting.md committee mechanism) see the reformatted source files exactly as written. The *spread* between normalizing and non-normalizing committee members is the primary difficulty signal for this knob.
 
@@ -140,18 +140,18 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
 - **Music** — natural showcase domain and **at hard already** for dates (Discogs: 4 coexisting date format families within one column; MusicBrainz: 3 precision levels) and durations (MusicBrainz integer ms vs Discogs `mm:ss`). Easy and medium on Music dates/durations are **normalize-down** operations: the dispatcher rewrites all source values to a single canonical format, logged with `direction=normalize_down`. **Hard is literal passthrough on Music dates/durations** (baseline already meets or exceeds the target state) — the dispatcher emits `transform_fn=reformat_date` rows with `direction=identity` for audit, but the values are unchanged. Operator extension (K/M/B suffixes on sales, symbol-vs-ISO on currency) applies on the *other* attribute classes. The "easy is not a no-op" invariant is *not* a claim about hard — it applies only to easy and medium, where Music dates/durations are visibly normalized down.
 - **Companies** — **at hard already on financials** (DBpedia `total_assets_val` mixes magnitudes `8.0`, `240560000000.0`, … inside one column). Easy on financials requires active normalize-down to a single magnitude (typically USD billions), logged with `direction=normalize_down`. Dates are uniform (ISO) across sources, so date pools are additive at all levels. FX rate table is the binding artifact here — rate drift between authoring and run time is prevented by the immutable `rate_date: 2026-03-15` pin.
 - **Games** — **below easy** at baseline (entirely uniform). Cleanest demonstration of "easy is not a no-op" — every level requires active heterogeneity injection. The dispatcher never takes the normalize-down branch for games; easy draws from a minimal 2-format pool, medium and hard extend upward.
-- **Movies, products**: deferred alongside the Step 6 prototype. The dispatcher no-ops on domains without a `config/knob_05_format_unit/<domain>.yaml` (warns in the log). No code change required when those domains come online — only a new YAML (and for products, a unit-factor extension for package dimensions).
+- **Other domains**: the dispatcher no-ops on domains without a `config/knob_05_format_unit/<domain>.yaml` (warns in the log).
 
 **Rejected alternatives.**
-- **LLM-based format rewriting** (e.g., prompting an LLM to "rewrite this date in a different format"). Rejected: the task is mechanical, fully deterministic, and has strong `strftime` / `babel` / `Decimal` baselines. LLM use would sacrifice determinism, introduce contamination risk, inflate validation cost (mandatory committee + human spot-check per plan_algorithmselection.md decision framework), and deliver zero expected quality gain. **LLM not used because the deterministic alternative is sufficient.**
-- **Heavyweight ML format-transfer methods** (BART / GReaT / CTGAN / TabDDPM). Rejected under the plan_algorithmselection.md framework rule against heavyweight ML methods (violates determinism, validation cost, dependency weight simultaneously). Format rewriting is orthogonal to what these models optimise.
+- **LLM-based format rewriting** (e.g., prompting an LLM to "rewrite this date in a different format"). Rejected: the task is mechanical, fully deterministic, and has strong `strftime` / `babel` / `Decimal` baselines. LLM use would sacrifice determinism, introduce contamination risk, inflate validation cost (mandatory committee + human spot-check), and deliver zero expected quality gain. **LLM not used because the deterministic alternative is sufficient.**
+- **Heavyweight ML format-transfer methods** (BART / GReaT / CTGAN / TabDDPM). Rejected as heavyweight ML methods (violates determinism, validation cost, dependency weight simultaneously). Format rewriting is orthogonal to what these models optimise.
 - **Precision-downgrade as a separate knob.** Considered — XBenchMatch treats precision change as a first-class granularity operation. Rejected here because precision downgrade is semantically still a format change (a date truncated to year is still a parseable date in a coarser format family) and splitting it off would fragment provenance. Kept as a hard-only operator inside `reformat_date`.
 - **Split/merge column operations** (XBenchMatch granularity class). Rejected from Knob 5 because they change the schema shape, which is Knob 8's territory. Cross-referenced only.
 - **Valentine fabricated-benchmark "value corruption" branch** used as-is. Rejected as a whole because Valentine bundles format changes with typos and missing values, which would cross the Knob 5 / Knob 6 / Knob 3 boundary we have carefully drawn. We cite the format-change sub-operation only.
 
-**Implementation handoff.** Everything Step 6 needs to implement this knob without re-reading surrounding cards:
+**Implementation notes.** What an implementation of this knob needs:
 
-- **Target script:** `usecases_synthetic/scripts/apply_knob_05_format_unit.py` (new, convention matches `apply_knob_06_noise.py` and `apply_knob_08_naming.py`). Standalone runnable from repo root.
+- **Target script:** `usecases_synthetic/scripts/apply_knob_05_format.py`. Standalone runnable from repo root.
 - **Function shape (illustrative):**
   ```python
   def apply_knob_05(
@@ -180,6 +180,6 @@ Independent togglability: Knob 5 reads only the cell values passed to it plus th
   - Provenance log at `output/provenance/knob_05_format_unit.csv`.
   - Skipped-cell audit at `output/provenance/knob_05_skipped.csv` (round-trip failures).
 - **Pipeline integration:** Knob 5 sits inside the `Knobs 1/5/6/7` joint phase of the canonical S1 order from [README.md](README.md#canonical-knob-application-order). It runs **before** Knob 6 so that noise operators compose over reformatted cells. Downstream Knob 3 (cell drops) runs after the joint phase and may drop reformatted cells; accepted and recorded as a reformat→drop chain via provenance linkage on `(entity_id, source, attribute)`.
-- **Dependencies:** stdlib (`datetime`, `decimal`) + `pandas` + `numpy` + `pyyaml` + `python-dateutil`. Also requires `babel` for locale-aware number formatting — **not currently in [pyproject.toml](../pyproject.toml)**; Step 6 must add it as a runtime dependency of the synthetic-generation tooling (not of PyDI itself). No PyDI extension points.
-- **Authoring task before first run:** populate `usecases_synthetic/config/knob_05_format_unit/{companies,games,music}.yaml` with `attribute_classes`, `format_pools_per_level`, `locale_pool_per_level`, and `unit_pool_per_level` using the Easy/Medium/Hard table above as the source of truth; pin the FX rate table in `_tables/fx_rates.yaml` from a single published source on `2026-03-15`. The baseline format profile is **measured**, not authored.
+- **Dependencies:** stdlib (`datetime`, `decimal`) + `pandas` + `numpy` + `pyyaml` + `python-dateutil`. No PyDI extension points.
+- **Authoring:** populate `usecases_synthetic/config/knob_05_format_unit/{companies,games,music}.yaml` with `attribute_classes`, `format_pools_per_level`, `locale_pool_per_level`, and `unit_pool_per_level` using the Easy/Medium/Hard table above as the source of truth; pin the FX rate table in `_tables/fx_rates.yaml` from a single published source on `2026-03-15`. The baseline format profile is **measured**, not authored.
 - **Smoke test:** for each domain with a config, run the script at all three levels and assert (a) every emitted cell round-trips to the same canonical value as the original under canonical-form comparison (date: same `datetime.date` or `datetime` truncated to the emitted precision; number: same `Decimal` within tolerance; money: same `Decimal` after applying the logged rate; duration: same `timedelta`), (b) the fusion gold file on disk is byte-identical before and after the run, (c) at hard, within-source format diversity > 1 for at least one format-bearing column per source, (d) at easy/medium, within-source format diversity == 1 for every format-bearing column per source, (e) the provenance row count equals the number of cell-value mutations, (f) no emitted date value matches a pattern on the locale-ambiguous deny-list.

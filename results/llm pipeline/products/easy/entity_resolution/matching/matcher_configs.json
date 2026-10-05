@@ -1,23 +1,23 @@
 {
   "products_1__products_2": {
-    "f1": 0.9100529100529101,
+    "f1": 0.964102564102564,
     "matcher": "MLBasedMatcher",
-    "precision": 0.9662921348314607,
-    "recall": 0.86,
+    "precision": 0.9894736842105263,
+    "recall": 0.94,
     "threshold": 0.3
   },
   "products_1__products_3": {
-    "f1": 0.9693877551020408,
-    "matcher": "RuleBasedMatcher",
-    "precision": 0.9895833333333334,
-    "recall": 0.95,
-    "threshold": 0.9
+    "f1": 0.9850746268656716,
+    "matcher": "MLBasedMatcher",
+    "precision": 0.9801980198019802,
+    "recall": 0.99,
+    "threshold": 0.6
   },
   "products_1__products_4": {
-    "f1": 0.7938144329896908,
+    "f1": 0.9644670050761421,
     "matcher": "MLBasedMatcher",
-    "precision": 0.8191489361702128,
-    "recall": 0.77,
-    "threshold": 0.3
+    "precision": 0.979381443298969,
+    "recall": 0.95,
+    "threshold": 0.4
   }
 }

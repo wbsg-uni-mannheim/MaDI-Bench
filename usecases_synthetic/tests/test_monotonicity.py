@@ -1,4 +1,4 @@
-"""Tests for ``usecases_synthetic.lib.monotonicity`` and the M8 CLI.
+"""Tests for ``usecases_synthetic.lib.monotonicity`` and analyze_monotonicity.
 
 Covers:
 
@@ -455,7 +455,7 @@ class TestDetectCollapses:
 class TestExpectationsYaml:
     def test_committed_yaml_parses(self) -> None:
         knob_expectations = load_knob_expected_signals(EXPECTATIONS_YAML)
-        # every active v1 knob must have at least one primary-stage entry
+        # every active knob must have at least one primary-stage entry
         required = {
             "knob_01",
             "knob_02",
@@ -473,9 +473,8 @@ class TestExpectationsYaml:
             assert expectations, f"{knob_id} has no expectation entries"
             for exp in expectations:
                 # Stage keys must match the committee per_stage roster
-                # emitted by measure_baseline / validate_variant (post-C12).
-                # The pre-C10 lumped "em" stage was split into
-                # em_blocking + em_matching (2026-05-31 realignment).
+                # emitted by measure_baseline / validate_variant (EM is two
+                # stages: em_blocking + em_matching).
                 assert exp.stage in {
                     "sm",
                     "norm",
@@ -486,7 +485,7 @@ class TestExpectationsYaml:
                 assert exp.direction in {"down", "up", "flat"}
 
     def test_p8_best_member_monotone_down(self) -> None:
-        """P8: best-member ceiling declines monotonically across levels."""
+        """Best-member ceiling declines monotonically across levels."""
         from usecases_synthetic.lib.monotonicity import (
             match_best_member_monotonicity,
         )
@@ -549,7 +548,7 @@ class TestExpectationsYaml:
         }
         checks = match_best_member_monotonicity(metrics, stages=("em_matching",))
         c = checks[0]
-        # Ceiling is 0.95 at every level -> flat -> P8 FAILS.
+        # Ceiling is 0.95 at every level -> flat -> the ceiling check FAILS.
         assert c.values["hard"] == pytest.approx(0.95)
         assert c.is_non_increasing is True  # flat passes default tol
         # But with tighter tol it would still be flat — the key signal:
@@ -880,7 +879,7 @@ def test_analyze_domain_writes_artifacts(tmp_path: Path) -> None:
         for row in collapse_rows
     )
 
-    # C6: every signal row carries a ceiling_responsiveness value (or NaN
+    # Every signal row carries a ceiling_responsiveness value (or NaN
     # if the stage best-member series is missing). Field is present even
     # when the value can't be computed.
     for row in rows:
@@ -888,7 +887,7 @@ def test_analyze_domain_writes_artifacts(tmp_path: Path) -> None:
 
 
 # ---------------------------------------------------------------------------
-# C6: ceiling_responsiveness
+# ceiling_responsiveness
 # ---------------------------------------------------------------------------
 
 
@@ -1014,7 +1013,7 @@ def _slope_level_metrics(sm, norm, blk, emm, fus):
 
 
 class TestBuildCrossLevelSlope:
-    """The cumulative cross-level slope is the load-bearing C2-contract
+    """The cumulative cross-level slope is the load-bearing monotonicity
     verdict: it reads each stage's committee headline metric off the
     cumulative variant levels with no per-knob isolation assumption."""
 

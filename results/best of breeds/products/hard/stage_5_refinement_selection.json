@@ -2,26 +2,26 @@
   "stage": "refinement",
   "winner": "baseline",
   "metric_key": "f1",
-  "val_score": 0.604960876369327,
-  "test_score": 0.639475091529886,
+  "val_score": 0.6541482262030208,
+  "test_score": 0.5704529746493198,
   "per_member_val": {
-    "baseline": 0.604960876369327,
-    "greedy": 0.604960876369327,
-    "mbm": 0.604960876369327
+    "baseline": 0.6541482262030208,
+    "greedy": 0.6541482262030208,
+    "mbm": 0.6541482262030208
   },
   "per_member_test": {
-    "baseline": 0.639475091529886,
-    "greedy": 0.639475091529886,
-    "mbm": 0.639475091529886
+    "baseline": 0.5704529746493198,
+    "greedy": 0.5704529746493198,
+    "mbm": 0.5704529746493198
   },
-  "runtime_s": 0.13391547702485695,
+  "runtime_s": 0.1305602826178074,
   "notes": {
     "methods_competed": [
       "baseline",
       "greedy",
       "mbm"
     ],
-    "n_correspondences": 1319
+    "n_correspondences": 1324
   },
-  "peak_memory_mb": 2313.57421875
+  "peak_memory_mb": 1891.27734375
 }

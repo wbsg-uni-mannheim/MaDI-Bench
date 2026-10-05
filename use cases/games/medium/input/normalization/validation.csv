@@ -1,0 +1,236 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+metacritic_10085,metacritic,metacritic_10085,ESRB,ESRB,E,E,identity,,,45
+metacritic_10085,sales,sales_2406,age_class,ESRB,E,E,identity,,,45
+metacritic_10085,dbpedia,dbpedia_21268,system,platform,PlayStation Portable,PlayStation Portable (PSP),normalization,platform_alias,,7
+metacritic_10085,dbpedia,dbpedia_5470,system,platform,PlayStation Portable,PlayStation Portable (PSP),normalization,platform_alias,,7
+metacritic_10085,metacritic,metacritic_10085,platform,platform,Playstation Portable,PlayStation Portable (PSP),normalization,platform_alias,,13
+metacritic_10085,sales,sales_2406,hw,platform,Playstation Portable,PlayStation Portable (PSP),normalization,platform_alias,,13
+metacritic_1031,metacritic,metacritic_1031,ESRB,ESRB,T,T,identity,,,55
+metacritic_1031,sales,sales_7358,age_class,ESRB,T,T,identity,,,55
+metacritic_1031,dbpedia,dbpedia_20208,gnr,genres,Real-time strategy,"[""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1031,metacritic,metacritic_1031,genres,genres,"Strategy,Real-Time,Sci-Fi,Sci-Fi,General","[""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1031,dbpedia,dbpedia_20208,system,platform,Microsoft Windows,Windows PC,normalization,platform_alias,,3
+metacritic_1031,metacritic,metacritic_1031,platform,platform,PC,Windows PC,normalization,platform_alias,,14
+metacritic_1031,sales,sales_7358,hw,platform,PC,Windows PC,normalization,platform_alias,,14
+metacritic_11331,metacritic,metacritic_11331,ESRB,ESRB,M,M,identity,,,24
+metacritic_11331,dbpedia,dbpedia_57805,gm_nm,name,State of Emergency (video game),State of Emergency,normalization,disambiguation_suffix,,1
+metacritic_11331,metacritic,metacritic_11331,name,name,State of Emergency,State of Emergency,identity,,"{""provenance"": [[""10"", ""identity""]]}",2
+metacritic_11331,sales,sales_660,prod_title,name,State of Emergency,State of Emergency,identity,,,2
+metacritic_11331,metacritic,metacritic_11331,platform,platform,PS2,PlayStation 2,normalization,platform_alias,"{""provenance"": [[""6"", ""typo_substitute""], [""10"", ""reassign_gold_carrier""]]}",20
+metacritic_11331,sales,sales_660,hw,platform,PS2,PlayStation 2,normalization,platform_alias,,20
+metacritic_11373,metacritic,metacritic_11373,ESRB,ESRB,E,E,identity,,,45
+metacritic_11373,sales,sales_3732,age_class,ESRB,e,E,normalization,esrb_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",2
+metacritic_11373,metacritic,metacritic_11373,platform,platform,DS,Nintendo DS,normalization,platform_alias,,27
+metacritic_11373,sales,sales_3732,hw,platform,DS,Nintendo DS,normalization,platform_alias,,27
+metacritic_1147,metacritic,metacritic_1147,ESRB,ESRB,M,M,identity,,,24
+metacritic_1147,dbpedia,dbpedia_20575,gnr,genres,First-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,6
+metacritic_1147,dbpedia,dbpedia_8493,gnr,genres,First-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,6
+metacritic_1147,metacritic,metacritic_1147,genres,genres,"Action,Shooter,Shooter,First-Person,Sci-Fi,Arcade","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1147,dbpedia,dbpedia_20575,system,platform,Windows,Windows PC,normalization,platform_alias,,3
+metacritic_1147,dbpedia,dbpedia_8493,system,platform,Windows,Windows PC,normalization,platform_alias,,3
+metacritic_1147,metacritic,metacritic_1147,platform,platform,PC,Windows PC,normalization,platform_alias,"{""provenance"": [[""10"", ""identity""]]}",14
+metacritic_11573,metacritic,metacritic_11573,ESRB,ESRB,T,T,identity,,,55
+metacritic_11573,dbpedia,dbpedia_16686,gnr,genres,First-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,6
+metacritic_11573,dbpedia,dbpedia_16686,system,platform,Xbox 360,Xbox 360,identity,,,34
+metacritic_11573,metacritic,metacritic_11573,platform,platform,Xbox 360,Xbox 360,identity,,,34
+metacritic_11680,metacritic,metacritic_11680,ESRB,ESRB,M,M,identity,,,24
+metacritic_11680,sales,sales_1181,age_class,ESRB,M,M,identity,,,24
+metacritic_11680,sales,sales_1181,genre,genres,Shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_11680,dbpedia,dbpedia_18717,system,platform,Xbox 360,Xbox 360,identity,,,34
+metacritic_11680,metacritic,metacritic_11680,platform,platform,Xbox 360,Xbox 360,identity,,,34
+metacritic_11680,sales,sales_1181,hw,platform,Xbox 360,Xbox 360,identity,,,34
+metacritic_11723,metacritic,metacritic_11723,ESRB,ESRB,E,E,identity,,,45
+metacritic_11723,dbpedia,dbpedia_22679,system,platform,X360,Xbox 360,normalization,platform_alias,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+metacritic_11984,metacritic,metacritic_11984,ESRB,ESRB,E10+,E10+,identity,,,24
+metacritic_11984,sales,sales_3090,age_class,ESRB,E10+,E10+,identity,,,24
+metacritic_11984,dbpedia,dbpedia_42715,gnr,genres,Racing video game,"[""Racing""]",normalization,genre_taxonomy_rollup,,8
+metacritic_11984,dbpedia,dbpedia_7815,gnr,genres,Racing video game,"[""Racing""]",normalization,genre_taxonomy_rollup,,8
+metacritic_11984,dbpedia,dbpedia_42715,system,platform,DS,Nintendo DS,normalization,platform_alias,,27
+metacritic_11984,dbpedia,dbpedia_7815,system,platform,DS,Nintendo DS,normalization,platform_alias,,27
+metacritic_11984,metacritic,metacritic_11984,platform,platform,DS,Nintendo DS,normalization,platform_alias,,27
+metacritic_12353,sales,sales_6129,age_class,ESRB,E,E,identity,,,45
+metacritic_12357,metacritic,metacritic_12357,ESRB,ESRB,E10+,E10+,identity,,,24
+metacritic_12357,sales,sales_2360,age_class,ESRB,E10+,E10+,identity,,,24
+metacritic_12357,dbpedia,dbpedia_12871,gnr,genres,Action role-playing game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_12357,metacritic,metacritic_12357,genres,genres,"Role-Playing,Action RPG","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,1
+metacritic_12357,sales,sales_2360,genre,genres,Role-Playing,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,6
+metacritic_12357,dbpedia,dbpedia_12871,system,platform,Nintendo 3DS,Nintendo 3DS,identity,,,1
+metacritic_12357,metacritic,metacritic_12357,platform,platform,3DS,Nintendo 3DS,normalization,platform_alias,"{""provenance"": [[""1"", ""llm_paraphrase_short""], [""10"", ""reassign_gold_carrier""]]}",10
+metacritic_12357,sales,sales_2360,hw,platform,3DS,Nintendo 3DS,normalization,platform_alias,,10
+metacritic_12629,sales,sales_3679,age_class,ESRB,M,M,identity,,,24
+metacritic_1268,dbpedia,dbpedia_14968,system,platform,Switch,Nintendo Switch,normalization,platform_alias,,5
+metacritic_1268,dbpedia,dbpedia_8986,system,platform,Switch,Nintendo Switch,normalization,platform_alias,,5
+metacritic_1268,metacritic,metacritic_1268,platform,platform,Switch,Nintendo Switch,normalization,platform_alias,,5
+metacritic_1307,metacritic,metacritic_1307,ESRB,ESRB,E10+,E10+,identity,,,24
+metacritic_1307,dbpedia,dbpedia_20386,gnr,genres,Platform game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_1313,sales,sales_179,age_class,ESRB,Mature 17+,M,normalization,esrb_alias,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+metacritic_1313,dbpedia,dbpedia_35107,gnr,genres,First-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,6
+metacritic_1313,metacritic,metacritic_1313,genres,genres,"Action,Shooter,Shooter,First-Person,Sci-Fi,Modern,Sci-Fi,Arcade","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1313,sales,sales_179,genre,genres,Shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_1313,dbpedia,dbpedia_35107,system,platform,PS3,PlayStation 3,normalization,platform_alias,,26
+metacritic_1313,metacritic,metacritic_1313,platform,platform,PS3,PlayStation 3,normalization,platform_alias,,26
+metacritic_1313,sales,sales_179,hw,platform,PS3,PlayStation 3,normalization,platform_alias,,26
+metacritic_13257,metacritic,metacritic_13257,ESRB,ESRB,T,T,identity,,,55
+metacritic_13257,sales,sales_7553,age_class,ESRB,T,T,identity,,,55
+metacritic_13257,dbpedia,dbpedia_59314,system,platform,GameCube,Nintendo GameCube,normalization,platform_alias,,20
+metacritic_13257,metacritic,metacritic_13257,platform,platform,GameCube,Nintendo GameCube,normalization,platform_alias,,20
+metacritic_13257,sales,sales_7553,hw,platform,GameCube,Nintendo GameCube,normalization,platform_alias,,20
+metacritic_13721,dbpedia,dbpedia_677,gnr,genres,Real-time tactics,"[""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_13721,metacritic,metacritic_13721,genres,genres,"Strategy,Real-Time,Historic","[""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_13721,dbpedia,dbpedia_677,system,platform,Xbox,Xbox,identity,,,23
+metacritic_13721,metacritic,metacritic_13721,platform,platform,Xbox,Xbox,identity,,,23
+metacritic_13721,sales,sales_6375,hw,platform,Xbox,Xbox,identity,,,23
+metacritic_13962,sales,sales_5411,age_class,ESRB,e,E,normalization,esrb_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",2
+metacritic_13962,dbpedia,dbpedia_52888,gnr,genres,Role-playing video game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_13962,metacritic,metacritic_13962,genres,genres,"Role-Playing,Console-style RPG","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,2
+metacritic_13962,sales,sales_5411,genre,genres,Role-Playing,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,6
+metacritic_13962,dbpedia,dbpedia_52888,system,platform,GameCube,Nintendo GameCube,normalization,platform_alias,,20
+metacritic_13962,metacritic,metacritic_13962,platform,platform,GameCube,Nintendo GameCube,normalization,platform_alias,,20
+metacritic_14137,metacritic,metacritic_14137,genres,genres,"Role-Playing,Console-style RPG,Action RPG,Console-style RPG,Japanese-Style","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,1
+metacritic_14137,sales,sales_2835,genre,genres,Role-Playing,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,6
+metacritic_14137,dbpedia,dbpedia_8544,system,platform,PlayStation Portable,PlayStation Portable (PSP),normalization,platform_alias,,7
+metacritic_14137,metacritic,metacritic_14137,platform,platform,Playstation Portable,PlayStation Portable (PSP),normalization,platform_alias,,13
+metacritic_14137,sales,sales_2835,hw,platform,Playstation Portable,PlayStation Portable (PSP),normalization,platform_alias,,13
+metacritic_14495,dbpedia,dbpedia_22295,gnr,genres,Adventure game,"[""Adventure""]",normalization,genre_taxonomy_rollup,,2
+metacritic_14495,metacritic,metacritic_14495,genres,genres,"Adventure,General,3D,Third-Person","[""Adventure""]",normalization,genre_taxonomy_rollup,,1
+metacritic_14495,metacritic,metacritic_14495,platform,platform,Xbox One,Xbox One,identity,,"{""provenance"": [[""10"", ""identity""]]}",11
+metacritic_14509,metacritic,metacritic_14509,genres,genres,"Action,Platformer,Platformer,3D,2D,3D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_14509,sales,sales_511,genre,genres,Platform,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_14606,metacritic,metacritic_14606,genres,genres,"Role-Playing,First-Person,First-Person,Western-Style","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,2
+metacritic_1478,dbpedia,dbpedia_54069,gnr,genres,Racing video game,"[""Racing""]",normalization,genre_taxonomy_rollup,,8
+metacritic_1478,metacritic,metacritic_1478,genres,genres,"Driving,Racing,Arcade","[""Racing""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1478,dbpedia,dbpedia_54069,system,platform,PS2,PlayStation 2,normalization,platform_alias,,20
+metacritic_1478,metacritic,metacritic_1478,platform,platform,PS2,PlayStation 2,normalization,platform_alias,,20
+metacritic_14859,dbpedia,dbpedia_14364,system,platform,PS4,PlayStation 4,normalization,platform_alias,,13
+metacritic_14859,metacritic,metacritic_14859,platform,platform,PS4,PlayStation 4,normalization,platform_alias,,13
+metacritic_14981,metacritic,metacritic_14981,genres,genres,"Action,Platformer,General,Platformer,2D,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_15141,dbpedia,dbpedia_5067,system,platform,Xbox One,Xbox One,identity,,,11
+metacritic_15141,metacritic,metacritic_15141,platform,platform,Xbox One,Xbox One,identity,,,11
+metacritic_15380,dbpedia,dbpedia_4812,system,platform,Switch,Nintendo Switch,normalization,platform_alias,,5
+metacritic_15380,metacritic,metacritic_15380,platform,platform,Switch,Nintendo Switch,normalization,platform_alias,,5
+metacritic_1593,dbpedia,dbpedia_13986,system,platform,Wii U,Wii U,identity,,,6
+metacritic_1593,dbpedia,dbpedia_47464,system,platform,Wii U,Wii U,identity,,,6
+metacritic_1593,dbpedia,dbpedia_48949,system,platform,Wii U,Wii U,identity,,,6
+metacritic_1593,dbpedia,dbpedia_57206,system,platform,Wii U,Wii U,identity,,,6
+metacritic_1593,metacritic,metacritic_1593,platform,platform,Wii U,Wii U,identity,,,6
+metacritic_1593,sales,sales_1296,hw,platform,WiiU,Wii U,normalization,platform_alias,,1
+metacritic_16460,dbpedia,dbpedia_10156,gnr,genres,Role-playing video game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_16460,metacritic,metacritic_16460,genres,genres,"Role-Playing,First-Person,First-Person,Western-Style","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,2
+metacritic_16460,sales,sales_6585,genre,genres,Role-Playing,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,6
+metacritic_16460,dbpedia,dbpedia_10156,system,platform,PlayStation Portable,PlayStation Portable (PSP),normalization,platform_alias,,7
+metacritic_16460,metacritic,metacritic_16460,platform,platform,Playstation Portable,PlayStation Portable (PSP),normalization,platform_alias,,13
+metacritic_16466,metacritic,metacritic_16466,genres,genres,"Sports,Traditional,Ice Hockey,Sim,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_16614,dbpedia,dbpedia_21524,gnr,genres,First-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,6
+metacritic_16614,dbpedia,dbpedia_62228,gnr,genres,FPS,"[""Action""]",normalization,genre_taxonomy_rollup,"{""provenance"": [[""1"", ""llm_paraphrase_categorical""]]}",1
+metacritic_16614,metacritic,metacritic_16614,genres,genres,"Action,Shooter,First-Person,Tactical,Modern","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_16614,sales,sales_3296,genre,genres,Shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_16614,dbpedia,dbpedia_21524,system,platform,Xbox,Xbox,identity,,,23
+metacritic_16614,dbpedia,dbpedia_33108,system,platform,XboX,Xbox,normalization,platform_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",1
+metacritic_16614,metacritic,metacritic_16614,platform,platform,Xbox,Xbox,identity,,,23
+metacritic_1695,metacritic,metacritic_1695,genres,genres,"Role-Playing,Console-style RPG","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,2
+metacritic_1695,sales,sales_127,genre,genres,Role-Playing,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,6
+metacritic_1704,dbpedia,dbpedia_32969,gnr,genres,Fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_1704,dbpedia,dbpedia_7668,gnr,genres,Fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_1704,metacritic,metacritic_1704,genres,genres,"Action,Fighting,Fighting,2D,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_1704,sales,sales_3453,genre,genres,Fighting,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_17264,dbpedia,dbpedia_13321,system,platform,PS4,PlayStation 4,normalization,platform_alias,,13
+metacritic_17264,metacritic,metacritic_17264,platform,platform,PS4,PlayStation 4,normalization,platform_alias,,13
+metacritic_17264,sales,sales_3426,hw,platform,PS4,PlayStation 4,normalization,platform_alias,,13
+metacritic_17482,dbpedia,dbpedia_42876,gnr,genres,Life simulation game,"[""Simulation""]",normalization,genre_taxonomy_rollup,,1
+metacritic_17482,metacritic,metacritic_17482,genres,genres,"Simulation,Miscellaneous,Virtual Life,Virtual,Virtual Life","[""Simulation""]",normalization,genre_taxonomy_rollup,,1
+metacritic_17509,metacritic,metacritic_17509,genres,genres,"Action,Beat-'Em-Up,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_17509,metacritic,metacritic_17509,platform,platform,3DS,Nintendo 3DS,normalization,platform_alias,,10
+metacritic_17545,metacritic,metacritic_17545,genres,genres,"Simulation,General","[""Simulation""]",normalization,genre_taxonomy_rollup,,1
+metacritic_18458,dbpedia,dbpedia_2693,gnr,genres,Third-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_18458,dbpedia,dbpedia_31934,gnr,genres,Third-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_18458,metacritic,metacritic_18458,genres,genres,"Action,Shooter,Shooter,Third-Person,Modern,Modern,Arcade","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_18845,dbpedia,dbpedia_14753,system,platform,PS2,PlayStation 2,normalization,platform_alias,,20
+metacritic_19089,dbpedia,dbpedia_4965,gnr,genres,Shoot 'em up,"[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_19659,dbpedia,dbpedia_4126,gm_nm,name,The Ant Bully (video game),The Ant Bully,normalization,disambiguation_suffix,,1
+metacritic_19659,metacritic,metacritic_19659,name,name,The Ant Bully,The Ant Bully,identity,,,2
+metacritic_19659,sales,sales_6092,prod_title,name,The Ant Bully,The Ant Bully,identity,,,2
+metacritic_20093,dbpedia,dbpedia_12704,gnr,genres,Racing video game,"[""Racing""]",normalization,genre_taxonomy_rollup,,8
+metacritic_20093,dbpedia,dbpedia_24767,gnr,genres,Racing video game,"[""Racing""]",normalization,genre_taxonomy_rollup,,8
+metacritic_20093,metacritic,metacritic_20093,genres,genres,"Driving,Racing,Arcade,Other,Other","[""Racing""]",normalization,genre_taxonomy_rollup,,1
+metacritic_20093,dbpedia,dbpedia_12704,gm_nm,name,Pimp My Ride,Pimp My Ride,identity,,,2
+metacritic_20093,dbpedia,dbpedia_24767,gm_nm,name,Pimp My Ride (video game),Pimp My Ride,normalization,disambiguation_suffix,,3
+metacritic_20093,dbpedia,dbpedia_54001,gm_nm,name,Pimp My Ride (video game),Pimp My Ride,normalization,disambiguation_suffix,,3
+metacritic_20093,metacritic,metacritic_20093,name,name,Pimp My Ride (video game),Pimp My Ride,normalization,disambiguation_suffix,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",3
+metacritic_20093,sales,sales_5706,prod_title,name,Pimp My Ride,Pimp My Ride,identity,,,2
+metacritic_20420,dbpedia,dbpedia_22095,gnr,genres,Sports game,"[""Sports""]",normalization,genre_taxonomy_rollup,,7
+metacritic_20420,dbpedia,dbpedia_58855,gnr,genres,Sports game,"[""Sports""]",normalization,genre_taxonomy_rollup,,7
+metacritic_20420,metacritic,metacritic_20420,genres,genres,"Sports,Traditional,Football,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2046,dbpedia,dbpedia_13763,gnr,genres,Fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_2046,dbpedia,dbpedia_31418,gnr,genres,Fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_2046,metacritic,metacritic_2046,genres,genres,"Action,Fighting,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2046,sales,sales_5237,genre,genres,Fighting,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_2046,dbpedia,dbpedia_13763,system,platform,PS3,PlayStation 3,normalization,platform_alias,,26
+metacritic_2046,metacritic,metacritic_2046,platform,platform,PS3,PlayStation 3,normalization,platform_alias,,26
+metacritic_2068,dbpedia,dbpedia_18593,gnr,genres,Role-playing video game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_2068,metacritic,metacritic_2068,genres,genres,"Role-Playing,General","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2068,dbpedia,dbpedia_18593,system,platform,Xbox One,Xbox One,identity,,,11
+metacritic_2081,dbpedia,dbpedia_13921,gnr,genres,Action game,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_2081,dbpedia,dbpedia_22980,gnr,genres,Action game,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_2081,dbpedia,dbpedia_775,system,platform,PlayStation 2,PlayStation 2,identity,,"{""provenance"": [[""1"", ""abbreviate""]]}",1
+metacritic_2186,metacritic,metacritic_2186,genres,genres,"Driving,Racing,Rally / Offroad","[""Racing""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2331,metacritic,metacritic_2331,ESRB,ESRB,t,T,normalization,esrb_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",1
+metacritic_2331,dbpedia,dbpedia_36513,gnr,genres,Action role-playing game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_2331,metacritic,metacritic_2331,genres,genres,"Role-Playing,Action RPG,Action RPG","[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2331,dbpedia,dbpedia_36513,system,platform,PlayStation Portable,PlayStation Portable (PSP),normalization,platform_alias,,7
+metacritic_2669,metacritic,metacritic_2669,genres,genres,"Action,Strategy,General,Shooter,First-Person,Tactical","[""Action"", ""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_2669,dbpedia,dbpedia_34236,system,platform,Xbox One,Xbox One,identity,,,11
+metacritic_2790,metacritic,metacritic_2790,platform,platform,PC,Windows PC,normalization,platform_alias,,14
+metacritic_3279,dbpedia,dbpedia_16702,gnr,genres,Platform game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_3279,dbpedia,dbpedia_63644,gnr,genres,Platform game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_3279,dbpedia,dbpedia_8413,gnr,genres,Platform game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_3279,metacritic,metacritic_3279,genres,genres,"Platformer,2D,Action,Platformer,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_3279,sales,sales_7038,genre,genres,Platform,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_3279,dbpedia,dbpedia_16702,system,platform,3DS,Nintendo 3DS,normalization,platform_alias,,10
+metacritic_3279,dbpedia,dbpedia_63644,system,platform,3DS,Nintendo 3DS,normalization,platform_alias,,10
+metacritic_336,metacritic,metacritic_336,genres,genres,"Sports,Traditional,Team,Basketball,Sim,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_3698,dbpedia,dbpedia_51413,gnr,genres,TPS,"[""Action""]",normalization,genre_taxonomy_rollup,"{""provenance"": [[""1"", ""llm_paraphrase_categorical""]]}",1
+metacritic_3698,metacritic,metacritic_3698,genres,genres,"General,Action,Shooter,Third-Person,Tactical","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_3698,sales,sales_2567,genre,genres,Shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_3698,dbpedia,dbpedia_51413,system,platform,pS4,PlayStation 4,normalization,platform_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",1
+metacritic_3871,dbpedia,dbpedia_9560,system,platform,Microsoft Windows,Windows PC,normalization,platform_alias,,3
+metacritic_3871,sales,sales_4990,hw,platform,PC,Windows PC,normalization,platform_alias,,14
+metacritic_3893,dbpedia,dbpedia_48711,gnr,genres,Action game,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_3893,metacritic,metacritic_3893,genres,genres,"Action,Platformer,2D","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_3893,sales,sales_2879,genre,genres,Platform,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_423,metacritic,metacritic_423,ESRB,ESRB,Teen,T,normalization,esrb_alias,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+metacritic_423,dbpedia,dbpedia_21219,system,platform,Windows,Windows PC,normalization,platform_alias,,3
+metacritic_447,metacritic,metacritic_447,genres,genres,"Strategy,Turn-Based,Historic,Historic,4X","[""Strategy""]",normalization,genre_taxonomy_rollup,,1
+metacritic_4551,dbpedia,dbpedia_17603,gnr,genres,Sports game,"[""Sports""]",normalization,genre_taxonomy_rollup,,7
+metacritic_4551,dbpedia,dbpedia_44881,gnr,genres,Sports game,"[""Sports""]",normalization,genre_taxonomy_rollup,,7
+metacritic_4551,metacritic,metacritic_4551,genres,genres,"Sports,Alternative,Wakeboarding","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_474,metacritic,metacritic_474,genres,genres,"Sports,Traditional,Team,Soccer,Sim,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_5275,dbpedia,dbpedia_2375,gnr,genres,Third-person shooter,"[""Action""]",normalization,genre_taxonomy_rollup,,3
+metacritic_5275,metacritic,metacritic_5275,genres,genres,"General,Action,General,Shooter,Third-Person,Arcade","[""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_5275,dbpedia,dbpedia_2375,system,platform,X360,Xbox 360,normalization,platform_alias,,2
+metacritic_5330,dbpedia,dbpedia_22632,gnr,genres,Action role-playing game,"[""Role-Playing Game (RPG)""]",normalization,genre_taxonomy_rollup,,3
+metacritic_5338,dbpedia,dbpedia_43602,gnr,genres,Adventure game,"[""Adventure""]",normalization,genre_taxonomy_rollup,,2
+metacritic_5368,dbpedia,dbpedia_54083,gnr,genres,Puzzle video game,"[""Puzzle""]",normalization,genre_taxonomy_rollup,,2
+metacritic_5368,metacritic,metacritic_5368,genres,genres,"Miscellaneous,Puzzle,Puzzle,General,Puzzle,General","[""Puzzle""]",normalization,genre_taxonomy_rollup,,1
+metacritic_592,metacritic,metacritic_592,genres,genres,"Sports,Traditional,Soccer,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_5949,metacritic,metacritic_5949,ESRB,ESRB,Mature 17+,M,normalization,esrb_alias,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+metacritic_5949,sales,sales_5223,age_class,ESRB,m,M,normalization,esrb_alias,"{""provenance"": [[""6"", ""case_corrupt""]]}",1
+metacritic_5949,dbpedia,dbpedia_64671,system,platform,Microsoft Windows,Windows PC,normalization,platform_alias,,3
+metacritic_6562,dbpedia,dbpedia_2010,gnr,genres,Sports game,"[""Sports""]",normalization,genre_taxonomy_rollup,,7
+metacritic_6562,metacritic,metacritic_6562,genres,genres,"Sports,Traditional,Football,Arcade","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_658,dbpedia,dbpedia_38072,gnr,genres,Survival horror,"[""Horror"", ""Action""]",normalization,genre_taxonomy_rollup,,1
+metacritic_7244,dbpedia,dbpedia_940,gnr,genres,Puzzle video game,"[""Puzzle""]",normalization,genre_taxonomy_rollup,,2
+metacritic_8251,metacritic,metacritic_8251,ESRB,ESRB,Teen,T,normalization,esrb_alias,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+metacritic_8351,metacritic,metacritic_8351,genres,genres,"Strategy,Miscellaneous,Turn-Based,Card Battle,Card Battle","[""Strategy""]",normalization,genre_taxonomy_rollup,,2
+metacritic_9080,metacritic,metacritic_9080,genres,genres,"Strategy,Miscellaneous,Turn-Based,Card Battle,Card Battle","[""Strategy""]",normalization,genre_taxonomy_rollup,,2
+metacritic_9351,metacritic,metacritic_9351,genres,genres,"Sports,Traditional,Team,Ice Hockey,Sim,Sim","[""Sports""]",normalization,genre_taxonomy_rollup,,1
+metacritic_9351,sales,sales_6019,hw,platform,PlayStation 3,PlayStation 3,identity,,"{""provenance"": [[""1"", ""abbreviate""]]}",1
+metacritic_939,metacritic,metacritic_939,genres,genres,"Driving,Racing,Arcade,Arcade,Automobile","[""Racing""]",normalization,genre_taxonomy_rollup,,1
+metacritic_939,dbpedia,dbpedia_3732,gm_nm,name,Ridge Racer (2004 video game),Ridge Racer,normalization,disambiguation_suffix,,1
+metacritic_939,metacritic,metacritic_939,name,name,Ridge Racer,Ridge Racer,identity,,,2
+metacritic_939,sales,sales_895,prod_title,name,Ridge Racer,Ridge Racer,identity,,,2
+metacritic_9859,dbpedia,dbpedia_16667,gnr,genres,Versus fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_9859,dbpedia,dbpedia_23399,gnr,genres,Versus fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_9859,dbpedia,dbpedia_35934,gnr,genres,Versus fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_9859,dbpedia,dbpedia_46258,gnr,genres,Versus fighting game,"[""Action""]",normalization,genre_taxonomy_rollup,,4
+metacritic_9859,metacritic,metacritic_9859,genres,genres,"Action,FighTing,Fighting,2D,2D","[""Action""]",normalization,genre_taxonomy_rollup,"{""provenance"": [[""6"", ""case_corrupt""]]}",1
+metacritic_9859,sales,sales_4459,genre,genres,Fighting,"[""Action""]",normalization,genre_taxonomy_rollup,,3

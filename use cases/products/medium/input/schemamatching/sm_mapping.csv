@@ -5,9 +5,7 @@ products_1,title,products,title,1.0
 products_1,description,products,description,1.0
 products_1,price,products,price,1.0
 products_1,priceCurrency,products,priceCurrency,1.0
-products_1,cluster_id,products,cluster_id,1.0
 products_1,product_url,products,url,1.0
-products_1,title_description,products,title_description,1.0
 products_1,model,products,model,1.0
 products_1,model_number,products,model_number,1.0
 products_1,product_type,products,product_type,1.0
@@ -32,9 +30,7 @@ products_2,prd_ttl,products,title,1.0
 products_2,desc,products,description,1.0
 products_2,prc,products,price,1.0
 products_2,cur,products,priceCurrency,1.0
-products_2,cluster_id,products,cluster_id,1.0
 products_2,productUrl,products,url,1.0
-products_2,t_desc,products,title_description,1.0
 products_2,mdl,products,model,1.0
 products_2,mdl_no,products,model_number,1.0
 products_2,prd_typ,products,product_type,1.0
@@ -59,9 +55,7 @@ products_3,t,products,title,1.0
 products_3,dsc,products,description,1.0
 products_3,amt,products,price,1.0
 products_3,ccy,products,priceCurrency,1.0
-products_3,cluster_id,products,cluster_id,1.0
 products_3,Link,products,url,1.0
-products_3,tdsc,products,title_description,1.0
 products_3,m,products,model,1.0
 products_3,mno,products,model_number,1.0
 products_3,ptyp,products,product_type,1.0
@@ -86,9 +80,7 @@ products_4,prd_ttl,products,title,1.0
 products_4,desc,products,description,1.0
 products_4,prc,products,price,1.0
 products_4,cur,products,priceCurrency,1.0
-products_4,cluster_id,products,cluster_id,1.0
 products_4,link,products,url,1.0
-products_4,t_desc,products,title_description,1.0
 products_4,mdl,products,model,1.0
 products_4,mdl_no,products,model_number,1.0
 products_4,prd_typ,products,product_type,1.0

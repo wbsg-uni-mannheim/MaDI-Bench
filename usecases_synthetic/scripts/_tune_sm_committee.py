@@ -1,7 +1,7 @@
 """Tune SM committee hyperparameters per member.
 
-One-off sweep harness for the R5 SM-stage hyperparameter optimisation
-(2026-05-08). Loads each domain's baseline bundle, runs each matcher
+One-off sweep harness for the SM-stage hyperparameter optimisation.
+Loads each domain's baseline bundle, runs each matcher
 under a parameter grid against every source, scores the combined
 mapping vs ``sm_mapping_gold.csv``, and reports the best param combo
 per member by average F1 across companies + games + music.
@@ -112,8 +112,7 @@ def _evaluate_duplicate(
 
     Mirrors :meth:`SMCommitteeRunner._run_duplicate_per_pair` semantics
     so the sweep harness scores duplicate-typed members the same way the
-    production runner does (Option A in plan_s1_scale.md §"R5 SM
-    duplicate-matcher fix").
+    production runner does.
     """
     from usecases_synthetic.lib.committee_sm import (
         _translate_cross_source_to_target,

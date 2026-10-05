@@ -1,13 +1,13 @@
 {
   "case": "products",
-  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/products.json",
+  "manifest": "DI-Bench/manifests/products.json",
   "pipeline_output_dir": "DI-Bench/runs/products",
-  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products",
+  "timing_dir": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products",
   "command": [
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "python3",
     "scripts/run_pipeline.py",
     "--manifest",
-    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/products.json",
+    "DI-Bench/manifests/products.json",
     "--training-set-construction",
     "active",
     "--fusion-case",

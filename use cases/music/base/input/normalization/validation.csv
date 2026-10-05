@@ -1,0 +1,85 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+mbrainz_10569,discogs,discogs_47891,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_10569,discogs,discogs_47891,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_10569,musicbrainz,mbrainz_10569,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_1074,discogs,discogs_5112,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_1074,discogs,discogs_5112,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_1074,musicbrainz,mbrainz_1074,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_10780,discogs,discogs_49037,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_10780,discogs,discogs_49037,origin_loc,release-country,Russia,Russian Federation,knowledge,country_full_name,,2
+mbrainz_10780,musicbrainz,mbrainz_10780,Attribute_5,release-country,Russian Federation,Russian Federation,identity,,,2
+mbrainz_10780,discogs,discogs_49037,pub_dt,release-date,2010-04-01,2010-04-01,identity,,,1
+mbrainz_10780,musicbrainz,mbrainz_10780,Attribute_4,release-date,2010-04,2010-04-01,normalization,date_pad_month,,1
+mbrainz_1160,discogs,discogs_14236,category,genre,Hip Hop,Hip Hop / Rap,normalization,genre_taxonomy_map,,2
+mbrainz_117,discogs,discogs_251,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_117,discogs,discogs_251,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_117,musicbrainz,mbrainz_117,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_1179,musicbrainz,mbrainz_1179,Attribute_4,release-date,1986-02,1986-02-01,normalization,date_pad_month,,1
+mbrainz_12085,discogs,discogs_55433,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_12085,musicbrainz,mbrainz_12085,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_12282,musicbrainz,mbrainz_12282,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_12656,discogs,discogs_58199,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_12656,discogs,discogs_58199,pub_dt,release-date,2011-03-01,2011-03-01,identity,,,1
+mbrainz_12656,musicbrainz,mbrainz_12656,Attribute_4,release-date,2011-03,2011-03-01,normalization,date_pad_month,,1
+mbrainz_12941,lastfm,lastFM_27898,album_title,name,Professor G. -  Monster,Monster,normalization,lastfm_artist_prefix,,1
+mbrainz_12941,musicbrainz,mbrainz_12941,Attribute_2,name,Monster,Monster,identity,,,1
+mbrainz_14320,discogs,discogs_66932,pub_dt,release-date,1997,1997-01-01,normalization,date_pad_year,,3
+mbrainz_1535,discogs,discogs_7506,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_1535,discogs,discogs_7506,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,4
+mbrainz_1576,discogs,discogs_7737,category,genre,Hip Hop,Hip Hop / Rap,normalization,genre_taxonomy_map,,2
+mbrainz_1576,discogs,discogs_7737,pub_dt,release-date,2000,2000-01-01,normalization,date_pad_year,,4
+mbrainz_15890,lastfm,lastFM_35629,album_title,name,Enter Shikari -  Mothership,Mothership,normalization,lastfm_artist_prefix,,1
+mbrainz_15890,musicbrainz,mbrainz_15890,Attribute_2,name,Mothership,Mothership,identity,,,1
+mbrainz_16115,discogs,discogs_79337,origin_loc,release-country,Russia,Russian Federation,knowledge,country_full_name,,2
+mbrainz_16115,musicbrainz,mbrainz_16115,Attribute_5,release-country,Russian Federation,Russian Federation,identity,,,2
+mbrainz_17081,discogs,discogs_49624,pub_dt,release-date,2010,2010-01-01,normalization,date_pad_year,,1
+mbrainz_1709,musicbrainz,mbrainz_1709,Attribute_4,release-date,1999-09,1999-09-01,normalization,date_pad_month,,1
+mbrainz_17179,discogs,discogs_87405,pub_dt,release-date,2001,2001-01-01,normalization,date_pad_year,,1
+mbrainz_17179,musicbrainz,mbrainz_17179,Attribute_4,release-date,2001-01-01,2001-01-01,identity,,,1
+mbrainz_17408,discogs,discogs_89005,pub_dt,release-date,2008,2008-01-01,normalization,date_pad_year,,1
+mbrainz_17408,musicbrainz,mbrainz_17408,Attribute_4,release-date,2008-01-01,2008-01-01,identity,,,2
+mbrainz_1899,musicbrainz,mbrainz_1899,Attribute_2,name,Postcards From the Futureâ€¦ Introducing Be Bop Deluxe,Postcards From the Future... Introducing Be Bop Deluxe,normalization,mojibake+typography,,1
+mbrainz_2028,discogs,discogs_53175,title_str,name,Singles Collection,Singles Collection,identity,,,2
+mbrainz_2028,musicbrainz,mbrainz_2028,Attribute_2,name,Singles Collection,Singles Collection,identity,,,2
+mbrainz_2232,musicbrainz,mbrainz_2232,Attribute_4,release-date,1998-02,1998-02-01,normalization,date_pad_month,,1
+mbrainz_2359,discogs,discogs_10363,pub_dt,release-date,1987,1987-01-01,normalization,date_pad_year,,2
+mbrainz_2359,musicbrainz,mbrainz_2359,Attribute_4,release-date,1987-01-01,1987-01-01,identity,,,2
+mbrainz_2419,musicbrainz,mbrainz_2419,Attribute_4,release-date,1996-11,1996-11-01,normalization,date_pad_month,,1
+mbrainz_2421,discogs,discogs_10580,pub_dt,release-date,1996,1996-01-01,normalization,date_pad_year,,1
+mbrainz_2421,musicbrainz,mbrainz_2421,Attribute_4,release-date,1996-01-01,1996-01-01,identity,,,2
+mbrainz_2482,musicbrainz,mbrainz_2482,Attribute_4,release-date,2005-01-01,2005-01-01,identity,,,4
+mbrainz_2702,discogs,discogs_11776,pub_dt,release-date,1995,1995-01-01,normalization,date_pad_year,,1
+mbrainz_299,discogs,discogs_900,pub_dt,release-date,1999-01-01,1999-01-01,identity,,,4
+mbrainz_3736,discogs,discogs_16005,pub_dt,release-date,1999,1999-01-01,normalization,date_pad_year,,2
+mbrainz_3736,musicbrainz,mbrainz_3736,Attribute_4,release-date,1999-01-01,1999-01-01,identity,,,4
+mbrainz_3784,musicbrainz,mbrainz_3784,Attribute_4,release-date,2006-08,2006-08-01,normalization,date_pad_month,,1
+mbrainz_3919,lastfm,lastFM_8134,album_title,name,UnKindness Of Ravens -  Panasonic Songbird,Panasonic Songbird,normalization,lastfm_artist_prefix,,1
+mbrainz_3919,musicbrainz,mbrainz_3919,Attribute_2,name,Panasonic Songbird,Panasonic Songbird,identity,,,1
+mbrainz_435,discogs,discogs_1635,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,4
+mbrainz_4940,discogs,discogs_107536,title_str,name,She's Got Issues,She's Got Issues,identity,,,1
+mbrainz_4940,musicbrainz,mbrainz_4940,Attribute_2,name,Sheâ€™s Got Issues,She's Got Issues,normalization,mojibake+typography,,1
+mbrainz_4965,discogs,discogs_21313,category,genre,Reggae,Reggae / Dub,normalization,genre_taxonomy_map,,1
+mbrainz_4965,discogs,discogs_21313,pub_dt,release-date,1975,1975-01-01,normalization,date_pad_year,,1
+mbrainz_50,discogs,discogs_119,pub_dt,release-date,1999,1999-01-01,normalization,date_pad_year,,2
+mbrainz_5715,musicbrainz,mbrainz_5715,Attribute_4,release-date,2008-01,2008-01-01,normalization,date_pad_month,,1
+mbrainz_5885,discogs,discogs_66288,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,4
+mbrainz_6492,musicbrainz,mbrainz_6492,Attribute_4,release-date,2008-06,2008-06-01,normalization,date_pad_month,,1
+mbrainz_6527,discogs,discogs_28649,pub_dt,release-date,1998,1998-01-01,normalization,date_pad_year,,1
+mbrainz_6527,musicbrainz,mbrainz_6527,Attribute_9,tracks,"['Sixteen Again', 'Nothing Left', 'Promises', 'Lipstick', 'Do It', 'Isolation', 'Palm of Your Hand', 'Ever Fallen in Love (With Someone You Shouldnâ€™tâ€™ve)', 'Energy', 'Libertine Angel', 'Last to Know', 'Playing for Time', 'Totally From the Heart', 'I Donâ€™t Mind', 'Turn of the Screw', 'Thunder of Hearts', 'Fiction Romance', 'Love Battery', 'Harmony in My Head', 'Timeâ€™s Up / What Do I Get?']","[""Sixteen Again"", ""Nothing Left"", ""Promises"", ""Lipstick"", ""Do It"", ""Isolation"", ""Palm of Your Hand"", ""Ever Fallen in Love (With Someone You Shouldn’t’ve)"", ""Energy"", ""Libertine Angel"", ""Last to Know"", ""Playing for Time"", ""Totally From the Heart"", ""I Don’t Mind"", ""Turn of the Screw"", ""Thunder of Hearts"", ""Fiction Romance"", ""Love Battery"", ""Harmony in My Head"", ""Time’s Up / What Do I Get?""]",normalization,mojibake,,1
+mbrainz_6620,musicbrainz,mbrainz_6620,Attribute_4,release-date,2005-01-01,2005-01-01,identity,,,4
+mbrainz_671,discogs,discogs_3066,pub_dt,release-date,2000,2000-01-01,normalization,date_pad_year,,4
+mbrainz_7383,discogs,discogs_62046,pub_dt,release-date,1987,1987-01-01,normalization,date_pad_year,,2
+mbrainz_739,discogs,discogs_3453,pub_dt,release-date,1997,1997-01-01,normalization,date_pad_year,,3
+mbrainz_739,musicbrainz,mbrainz_739,Attribute_9,tracks,"['4Â° C', 'Diamond Head', 'Flicker', 'One Wing', 'Honeybee Whisper Mind Mirror', 'Decalogue', 'Black or Color', 'Crystal Mist', 'Tears of Nymph', 'Girltree', 'Simple Life']","[""4° C"", ""Diamond Head"", ""Flicker"", ""One Wing"", ""Honeybee Whisper Mind Mirror"", ""Decalogue"", ""Black or Color"", ""Crystal Mist"", ""Tears of Nymph"", ""Girltree"", ""Simple Life""]",normalization,mojibake,,1
+mbrainz_745,discogs,discogs_3431,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,4
+mbrainz_757,discogs,discogs_3478,pub_dt,release-date,2000,2000-01-01,normalization,date_pad_year,,4
+mbrainz_7903,discogs,discogs_78472,pub_dt,release-date,1997,1997-01-01,normalization,date_pad_year,,3
+mbrainz_8518,discogs,discogs_38301,pub_dt,release-date,1984,1984-01-01,normalization,date_pad_year,,1
+mbrainz_853,discogs,discogs_3949,pub_dt,release-date,1996-09-01,1996-09-01,identity,,,1
+mbrainz_853,musicbrainz,mbrainz_853,Attribute_4,release-date,1996-09,1996-09-01,normalization,date_pad_month,,1
+mbrainz_868,discogs,discogs_4039,pub_dt,release-date,1994,1994-01-01,normalization,date_pad_year,,1
+mbrainz_8813,discogs,discogs_39611,pub_dt,release-date,2005,2005-01-01,normalization,date_pad_year,,1
+mbrainz_8813,musicbrainz,mbrainz_8813,Attribute_4,release-date,2005-01-01,2005-01-01,identity,,,4
+mbrainz_9183,lastfm,lastFM_19537,album_title,name,- new - Kaputt und glÃƒÂ¼cklich,Kaputt und glücklich,normalization,mojibake+lastfm_prefix,,1
+mbrainz_9183,musicbrainz,mbrainz_9183,Attribute_2,name,Kaputt und glÃ¼cklich,Kaputt und glücklich,normalization,mojibake,,1
+mbrainz_973,discogs,discogs_4591,pub_dt,release-date,2000,2000-01-01,normalization,date_pad_year,,4

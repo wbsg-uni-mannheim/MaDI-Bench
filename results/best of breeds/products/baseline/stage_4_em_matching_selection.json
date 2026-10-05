@@ -3,20 +3,32 @@
   "winner": "ditto_plm",
   "metric_key": "f1",
   "val_score": 0.0,
-  "test_score": 0.8408963716983865,
+  "test_score": 0.8548248048248048,
   "per_member_val": {
     "ditto_plm": 0.0,
     "magellan": 0.0
   },
   "per_member_test": {
-    "ditto_plm": 0.8408963716983865,
+    "ditto_plm": 0.8548248048248048,
     "magellan": 0.0
   },
-  "runtime_s": 52.77299850300187,
+  "runtime_s": 300.0377370258793,
   "notes": {
     "val_split_available": true,
     "test_split_available": true,
-    "clustering_applied_within_em": "greedy"
+    "clustering_applied_within_em": "greedy",
+    "per_pair_test_f1": {
+      "ditto_plm": {
+        "products_1_products_2": 0.8409090909090909,
+        "products_1_products_3": 0.8444444444444444,
+        "products_1_products_4": 0.8791208791208791
+      },
+      "magellan": {
+        "products_1_products_2": 0.0,
+        "products_1_products_3": 0.0,
+        "products_1_products_4": 0.0
+      }
+    }
   },
-  "peak_memory_mb": 3241.77734375
+  "peak_memory_mb": 2858.890625
 }

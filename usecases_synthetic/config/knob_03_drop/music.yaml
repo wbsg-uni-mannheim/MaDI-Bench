@@ -1,10 +1,17 @@
 # Knob 03 — Per-source Attribute Drop Rate — Music
 #
-# Refreshed CSV column names (post 2026-05-04 source migration).
+# Keyed on the LOADED column names of the base sources (2026-09-25 remap;
+# the 2026-06-03 header rewrite put raw WDC headers on disk):
+#   musicbrainz: Attribute_2=name, _3=artist, _4=release-date,
+#                _5=release-country, _6=duration, _9=tracks
+#   discogs:     title_str, performer, pub_dt, origin_loc, duration,
+#                imprint (label), category (genre), tracks_track-name
+#   lastfm:      album_title, band, album_length (duration),
+#                tracks_track-name
 # Schema-level absent attributes (musicbrainz.{genre,label} and lastfm.
-# {release-country,genre,release-date,label} are 100% missing on the new
-# CSVs) are excluded from `attribute_classes` — they are Knob 9 territory,
-# not Knob 3.
+# {release-country,genre,release-date,label} have no column on the base
+# sources) are excluded from `attribute_classes` — they are Knob 9
+# territory, not Knob 3.
 
 domain: music
 
@@ -15,49 +22,48 @@ id_columns:
 
 attribute_classes:
   musicbrainz:
-    name: primary
-    artist: key
-    release-country: key
-    release-date: secondary
-    duration: secondary
-    tracks: secondary
+    Attribute_2: primary
+    Attribute_3: key
+    Attribute_5: key
+    Attribute_4: secondary
+    Attribute_6: secondary
+    Attribute_9: secondary
   discogs:
-    name: primary
-    artist: key
-    release-country: key
-    genre: key
-    release-date: secondary
+    title_str: primary
+    performer: key
+    origin_loc: key
+    category: key
+    pub_dt: secondary
     duration: secondary
-    label: secondary
-    tracks: secondary
+    imprint: secondary
+    tracks_track-name: secondary
   lastfm:
-    name: primary
-    artist: key
-    duration: secondary
-    tracks: secondary
+    album_title: primary
+    band: key
+    album_length: secondary
+    tracks_track-name: secondary
 
 # Canonical attribute names match the fusion gold XML tags (release-country
-# and release-date with hyphens, per K6/K10 sign-offs and the music
-# fusion val/test XML).
+# and release-date with hyphens, as in the music fusion val/test XML).
 attribute_mapping:
   musicbrainz:
-    name: name
-    artist: artist
-    release-country: release-country
-    release-date: release-date
-    duration: duration
+    Attribute_2: name
+    Attribute_3: artist
+    Attribute_5: release-country
+    Attribute_4: release-date
+    Attribute_6: duration
   discogs:
-    name: name
-    artist: artist
-    release-country: release-country
-    genre: genre
-    release-date: release-date
+    title_str: name
+    performer: artist
+    origin_loc: release-country
+    category: genre
+    pub_dt: release-date
     duration: duration
-    label: label
+    imprint: label
   lastfm:
-    name: name
-    artist: artist
-    duration: duration
+    album_title: name
+    band: artist
+    album_length: duration
 
 rates_per_level:
   easy:
@@ -84,12 +90,11 @@ stretch_factor: 1.5
 single_source_survivor_cap_hard: 0.05
 per_cell_ceiling_delta: 0.10
 
-# Discogs duration is at 43% baseline (already noted in K5/K6 follow-ups
-# pre-loader-coalesce; post-coalesce the 0-sentinel rows count as missing
-# directly). Lastfm duration similar at 53%. Tighten ceilings so stretch
-# does not demand negative headroom.
+# Discogs duration is at 43% baseline (the loader coalesces the
+# 0-sentinel rows to missing). Lastfm duration similar at 53%. Tighten
+# ceilings so stretch does not demand negative headroom.
 per_source_attribute_overrides:
   discogs:
     duration: 0.05
   lastfm:
-    duration: 0.05
+    album_length: 0.05

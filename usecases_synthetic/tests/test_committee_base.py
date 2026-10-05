@@ -1,7 +1,7 @@
 """Smoke tests for ``usecases_synthetic.lib.committee``.
 
-The concrete stage runners land in M2/M3/M4; this file only exercises
-the ABC plumbing so the interface is pinned.
+The concrete stage runners have their own test modules; this file only
+exercises the ABC plumbing so the interface is pinned.
 """
 
 from __future__ import annotations

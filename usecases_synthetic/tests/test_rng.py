@@ -91,7 +91,7 @@ class TestSpawnSubRng:
 
 
 class TestCellSelectionUniform:
-    """R10-A: level-independent per-cell selection uniform (K1/K6 nesting)."""
+    """Level-independent per-cell selection uniform (K1/K6 nesting)."""
 
     def test_deterministic(self) -> None:
         """Identical cell identity -> identical uniform."""
@@ -161,7 +161,7 @@ class TestCellSelectionUniform:
     def test_selection_sets_nest_for_monotone_rates(self) -> None:
         """Cells selected at lower rates are a subset of those at higher rates.
 
-        This is the load-bearing R10-A invariant: with a single
+        This is the load-bearing invariant: with a single
         level-independent uniform per cell and monotone per-level rates,
         ``easy_cells subset of medium_cells subset of hard_cells``.
         """

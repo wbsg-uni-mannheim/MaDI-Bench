@@ -1,13 +1,10 @@
 """Functional tests for usecases_synthetic.lib.robust_aggregators.
 
-Covers the three estimators added under C3.4 of
-``plans/plan_committee_finalization.md``: ``trimmed_mean``,
+Covers the three estimators ``trimmed_mean``,
 ``huber_m_estimator``, ``median_of_means``.  Each test is self-contained
 with known-good arithmetic, so determinism assertions pin exact outputs.
 
-Moved on 2026-04-22 from ``PyDI/fusion/conflict_resolution/`` to
-``usecases_synthetic/lib/`` to comply with the read-only-``PyDI/`` rule
-added to ``plan_committee_finalization.md`` §Process-requirement item 4.
+The estimators live in ``usecases_synthetic/lib/``, not in PyDI.
 """
 
 from __future__ import annotations

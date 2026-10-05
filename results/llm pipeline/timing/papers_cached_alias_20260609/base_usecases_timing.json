@@ -9,7 +9,7 @@
     "wall_hms": "22m 54s",
     "pipeline_metric_total_seconds": 1337.17,
     "pipeline_metric_total_hms": "22m 17s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/papers_cached_alias_20260609/papers",
+    "timing_dir": "DI-Bench/runs/timing/papers_cached_alias_20260609/papers",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 51.98,
     "step_4_active_learning_training_construction_seconds": 0.01,

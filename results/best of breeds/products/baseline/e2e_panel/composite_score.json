@@ -1,24 +1,24 @@
 {
   "RF": {
-    "composite_score": 0.7985844175442757,
+    "composite_score": 0.777471036026232,
     "weights": {
       "entity_coverage": 0.3,
       "fact_coverage": 0.4,
       "consistency": 0.3
     },
     "subscores": {
-      "entity_coverage": 0.874384236453202,
-      "fact_coverage": 0.5906728665207878,
-      "consistency": 1.0
+      "entity_coverage": 0.8300492610837439,
+      "fact_coverage": 0.5723112128146453,
+      "consistency": 0.9984392419175028
     },
     "subscore_recipe": {
       "entity_coverage": "1 - min(1, |coverage.entity.RF.row_gain_vs_largest_input|) \u2014 penalises both over-merge (row_gain << 0) and fabrication / under-merge (row_gain >> 0).",
       "fact_coverage": "coverage.fact.RF.density_output \u2014 fraction of non-null cells across evaluable columns. No drift comparison available without a reference.",
-      "consistency": "mean over columns with n_evaluated_pipe > 0 of consistency.RF.validity_per_column[col].validity_rate_pipe. Returns 1.0 when no column was evaluable."
+      "consistency": "consistency.RF.consistency_score \u2014 cell-weighted fraction of filled cells passing the target schema's native + x-pydi constraints. Returns 1.0 when no schema-aware score is available."
     }
   },
   "GR": {
-    "composite_score": 0.6133808846537697,
+    "composite_score": 0.6562298842765555,
     "weights": {
       "entity_coverage": 0.1,
       "fact_coverage": 0.1,
@@ -28,18 +28,18 @@
       "fact_correctness": 0.3
     },
     "subscores": {
-      "entity_coverage": 0.26943836615609046,
-      "fact_coverage": 0.8156568696522706,
-      "source_based_fact_coverage": 0.5796423281920635,
-      "consistency": 1.0,
-      "cluster_correctness": 0.8815102750075551,
-      "fact_correctness": 0.2748468191715358
+      "entity_coverage": 0.2314035087719298,
+      "fact_coverage": 0.7249777081318967,
+      "source_based_fact_coverage": 0.930996703338004,
+      "consistency": 0.9984392419175028,
+      "cluster_correctness": 0.8613342979036056,
+      "fact_correctness": 0.3641595956318015
     },
     "subscore_recipe": {
       "entity_coverage": "mean(1 - |coverage.entity.GR.row_count_rel_diff|, coverage.entity.GR.recovery_rate, 1 - coverage.entity.GR.n_fabricated/coverage.entity.RF.n_rows_output)",
       "fact_coverage": "1 - mean(coverage.fact.GR.per_column_drift_normalized)",
       "source_based_fact_coverage": "mean(1 - coverage.source_based.GR.same_source_collision_rate.pipe, 1 - coverage.source_based.GR.source_mix_distribution_js, 1 - mean(coverage.source_based.GR.source_attribution_js_per_attribute))",
-      "consistency": "1 - mean(max(0, -consistency.GR.validity_per_column.delta))",
+      "consistency": "1 + min(0, consistency.GR.delta) (schema-aware pipe vs gold)",
       "cluster_correctness": "mean(correctness.cluster.GR.bcubed.f1, correctness.cluster.GR.alignment.mean_jaccard)",
       "fact_correctness": "mean(correctness.fact.GR.macro_accuracy, correctness.fact.GR.conflict_only_accuracy, correctness.fact.GR.fully_correct_cluster_rate)"
     }

@@ -1,8 +1,6 @@
 """Functional tests for :class:`SCBlockBlocker` (EM blocking committee).
 
-Goes beyond a shape-only smoke test per the process requirement in
-``plans/plan_committee_finalization.md`` §"Process requirement for every
-implementation row".
+Goes beyond a shape-only smoke test.
 
 Because a real SC-Block checkpoint is not available in CI, the tests use
 the adapter's ``encoder`` injection hook — a user-supplied
@@ -412,7 +410,7 @@ class TestSCBlockBlockerEdgeCases:
     def test_missing_text_col_left_filled_not_raised(
         self, brand_encoder: _TokenBagEncoder, caplog: pytest.LogCaptureFixture
     ) -> None:
-        """R10-I: a text_col absent from a source is filled (warn), not raised,
+        """A text_col absent from a source is filled (warn), not raised,
         so wide-scope blocking works across heterogeneous-schema sources."""
         left = pd.DataFrame({"id": ["a1"], "name": ["ACME"]})
         right = pd.DataFrame({"id": ["b1"], "name": ["ACME"]})

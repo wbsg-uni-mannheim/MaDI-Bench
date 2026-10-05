@@ -5,7 +5,6 @@
 # single characters.
 #
 # Source: Christen & Vatsalan, "OCR Error Simulation" method
-# (paper.md lines 316-318).
 
 # Single-character confusions (bidirectional where noted).
 single:

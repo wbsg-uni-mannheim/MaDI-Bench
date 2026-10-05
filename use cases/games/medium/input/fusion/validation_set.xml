@@ -4,7 +4,7 @@
         <id>metacritic_1593</id>
         <name>The Legend of Zelda: Twilight Princess HD</name>
         <releaseYear>2016-03-04</releaseYear>
-        <developer>Nintendo Entertainment Planning and Development</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
             <genre>Adventure</genre>
@@ -157,7 +157,7 @@
         <publisher>Electronic Arts</publisher>
         <platform>Nintendo DS</platform>
         <criticScore>71</criticScore>
-        <userScore>7</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -187,8 +187,8 @@
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>Xbox</platform>
-        <criticScore>82</criticScore>
-        <userScore>7.9</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -200,7 +200,7 @@
             <genre>Action</genre>
             <genre>Strategy</genre>
         </genres>
-        <publisher>Focus Home Interactive</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox One</platform>
         <criticScore>80</criticScore>
         <userScore>7.7</userScore>
@@ -218,7 +218,7 @@
         <publisher>BAM! Entertainment</publisher>
         <platform>Nintendo GameCube</platform>
         <criticScore>58</criticScore>
-        <userScore>6.3</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -230,7 +230,7 @@
             <genre>Simulation</genre>
 
         </genres>
-        <publisher>Coffee Stain Studios,Double Eleven</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 4</platform>
         <criticScore>61</criticScore>
         <userScore>5.9</userScore>
@@ -248,7 +248,7 @@
         <publisher>Activision</publisher>
         <platform>PlayStation Portable (PSP)</platform>
         <criticScore>82</criticScore>
-        <userScore>7.8</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -259,10 +259,10 @@
         <genres>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Frogwares</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox One</platform>
         <criticScore>71</criticScore>
-        <userScore>7.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -273,24 +273,24 @@
         <genres>
             <genre>Strategy</genre>
         </genres>
-        <publisher>Wizards of the Coast</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 3</platform>
         <criticScore>76</criticScore>
-        <userScore>7.5</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_15092</id>
         <name>Battles of Prince of Persia</name>
         <releaseYear>2005-12-06</releaseYear>
-        <developer>Ubisoft Entertainment</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Strategy</genre>
         </genres>
         <publisher>Ubisoft</publisher>
         <platform>Nintendo DS</platform>
         <criticScore>64</criticScore>
-        <userScore>6.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -304,8 +304,8 @@
         </genres>
         <publisher>NovaLogic</publisher>
         <platform>Xbox</platform>
-        <criticScore>72</criticScore>
-        <userScore>7</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -318,7 +318,7 @@
         </genres>
         <publisher>Eidos Interactive</publisher>
         <platform>Xbox</platform>
-        <criticScore>83</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>8</userScore>
         <ESRB>T</ESRB>
     </videogame>
@@ -331,7 +331,7 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Examu,Aksys Games Localization,Arc System Works</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 3</platform>
         <criticScore>71</criticScore>
         <userScore>6.9</userScore>
@@ -346,7 +346,7 @@
             <genre>Sports</genre>
             <genre>Racing</genre>
         </genres>
-        <publisher>Psyonix</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Nintendo Switch</platform>
         <criticScore>86</criticScore>
         <userScore>7.9</userScore>
@@ -365,7 +365,7 @@
         <publisher>Ubisoft</publisher>
         <platform>Windows PC</platform>
         <criticScore>88</criticScore>
-        <userScore>8.5</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -377,7 +377,7 @@
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>Ubisoft</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox One</platform>
         <criticScore>81</criticScore>
         <userScore>7.9</userScore>
@@ -393,8 +393,8 @@
         </genres>
         <publisher>Atari</publisher>
         <platform>Nintendo DS</platform>
-        <criticScore>60</criticScore>
-        <userScore>6.3</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -407,10 +407,10 @@
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>Bungie</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 4</platform>
-        <criticScore>79</criticScore>
-        <userScore>7.7</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -421,7 +421,7 @@
         <genres>
             <genre>Sports</genre>
         </genres>
-        <publisher>2K Games</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 3</platform>
         <criticScore>71</criticScore>
         <userScore>7</userScore>
@@ -452,8 +452,8 @@
         </genres>
         <publisher>Capcom</publisher>
         <platform>Wii</platform>
-        <criticScore>86</criticScore>
-        <userScore>8.5</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
@@ -468,7 +468,7 @@
         <publisher>Codemasters</publisher>
         <platform>Xbox 360</platform>
         <criticScore>70</criticScore>
-        <userScore>6.9</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
@@ -483,7 +483,7 @@
         <publisher>Majesco Entertainment</publisher>
         <platform>Wii</platform>
         <criticScore>57</criticScore>
-        <userScore>6.1</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -497,7 +497,7 @@
         <publisher>Activision</publisher>
         <platform>Xbox 360</platform>
         <criticScore>38</criticScore>
-        <userScore>5.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -538,7 +538,7 @@
             <genre>Action-Adventure</genre>
 
         </genres>
-        <publisher>Retro Studios</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Wii</platform>
         <criticScore>90</criticScore>
         <userScore>8.9</userScore>
@@ -555,7 +555,7 @@
         <publisher>Sony Computer Entertainment</publisher>
         <platform>PlayStation Portable (PSP)</platform>
         <criticScore>59</criticScore>
-        <userScore>6.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -611,10 +611,10 @@
         <genres>
             <genre>Action</genre>
         </genres>
-        <publisher>Disney Interactive,LucasArts</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 2</platform>
-        <criticScore>77</criticScore>
-        <userScore>7.4</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -626,10 +626,10 @@
             <genre>Action</genre>
             <genre>Racing</genre>
         </genres>
-        <publisher>Modus Games,3goo</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Nintendo Switch</platform>
         <criticScore>72</criticScore>
-        <userScore>7.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -643,8 +643,8 @@
         </genres>
         <publisher>Atari</publisher>
         <platform>Nintendo GameCube</platform>
-        <criticScore>72</criticScore>
-        <userScore>7</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2a-absent" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -659,21 +659,21 @@
         <publisher>Sega</publisher>
         <platform>Wii</platform>
         <criticScore>73</criticScore>
-        <userScore>7.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_17482</id>
         <name>MySims Kingdom</name>
         <releaseYear>2008-10-28</releaseYear>
-        <developer>Electronic Arts</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Simulation</genre>
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>Nintendo DS</platform>
         <criticScore>74</criticScore>
-        <userScore>7.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -685,10 +685,10 @@
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>FuRyu,Xseed Games</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Nintendo 3DS</platform>
         <criticScore>64</criticScore>
-        <userScore>6.5</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -700,7 +700,7 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Activision</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 5</platform>
         <criticScore>85</criticScore>
         <userScore>8.3</userScore>
@@ -715,10 +715,10 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Activision</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
-        <criticScore>50</criticScore>
-        <userScore>6.7</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -732,7 +732,7 @@
         <publisher>Sega</publisher>
         <platform>Wii</platform>
         <criticScore>64</criticScore>
-        <userScore>6.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -745,7 +745,7 @@
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>PlayStation 2</platform>
-        <criticScore>90</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>8.1</userScore>
         <ESRB>E</ESRB>
     </videogame>
@@ -757,9 +757,9 @@
         <genres>
             <genre>Action</genre>
         </genres>
-        <publisher>WayForward,Intergrow</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Nintendo 3DS</platform>
-        <criticScore>87</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>8.5</userScore>
         <ESRB>E10+</ESRB>
     </videogame>
@@ -772,10 +772,10 @@
             <genre>Action</genre>
             <genre>Strategy</genre>
         </genres>
-        <publisher>Modus Games,3goo</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 4</platform>
         <criticScore>72</criticScore>
-        <userScore>7.2</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -787,7 +787,7 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Spike Chunsoft,THQ</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 3</platform>
         <criticScore>84</criticScore>
         <userScore>8.2</userScore>
@@ -805,7 +805,7 @@
         <publisher>Namco Bandai Games</publisher>
         <platform>PlayStation Portable (PSP)</platform>
         <criticScore>77</criticScore>
-        <userScore>7.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -817,9 +817,9 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Rockstar Games</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 2</platform>
-        <criticScore>65</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>6</userScore>
         <ESRB>M</ESRB>
     </videogame>
@@ -832,10 +832,10 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Koei</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation 2</platform>
         <criticScore>49</criticScore>
-        <userScore>5.8</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -847,7 +847,7 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Pocketwatch Games</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Windows PC</platform>
         <criticScore>82</criticScore>
         <userScore>7.8</userScore>
@@ -857,14 +857,14 @@
         <id>metacritic_592</id>
         <name>World Soccer Winning Eleven 9</name>
         <releaseYear>2005-08-04</releaseYear>
-        <developer>Konami Digital Entertainment</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Sports</genre>
         </genres>
         <publisher>Konami Digital Entertainment</publisher>
         <platform>Xbox</platform>
         <criticScore>90</criticScore>
-        <userScore>8.3</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -876,9 +876,9 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Bandai Namco</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox One</platform>
-        <criticScore>78</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>7.8</userScore>
         <ESRB>T</ESRB>
     </videogame>
@@ -891,7 +891,7 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Warner Bros</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
         <criticScore>72</criticScore>
         <userScore>7.2</userScore>
@@ -920,10 +920,10 @@
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>Electronic Arts</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
         <criticScore>77</criticScore>
-        <userScore>7.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -934,7 +934,7 @@
         <genres>
             <genre>Strategy</genre>
         </genres>
-        <publisher>Stardock</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Windows PC</platform>
         <criticScore>85</criticScore>
         <userScore>8.4</userScore>
@@ -963,7 +963,7 @@
         <genres>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Sony Computer Entertainment,Annapurna Games</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 3</platform>
         <criticScore>79</criticScore>
         <userScore>8.1</userScore>
@@ -978,7 +978,7 @@
             <genre>Action</genre>
             <genre>Puzzle</genre>
         </genres>
-        <publisher>United Developers</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
         <criticScore>73</criticScore>
         <userScore>7.3</userScore>
@@ -1007,23 +1007,23 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Acclaim Entertainment</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Nintendo 64</platform>
         <criticScore>83</criticScore>
-        <userScore>7.8</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_9855</id>
         <name>DiRT 2</name>
-        <releaseYear>2007-06-15</releaseYear>
-        <developer>Codemasters</developer>
+        <releaseYear v2_removed="v2b-unwinnable" />
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Racing</genre>
         </genres>
         <publisher>Codemasters</publisher>
         <platform>Nintendo DS</platform>
-        <criticScore>84</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>8.1</userScore>
         <ESRB>E</ESRB>
     </videogame>
@@ -1050,10 +1050,10 @@
         <genres>
             <genre>Simulation</genre>
         </genres>
-        <publisher>Natsume</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Nintendo GameCube</platform>
         <criticScore>79</criticScore>
-        <userScore>7.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -1067,7 +1067,7 @@
         <publisher>Nintendo</publisher>
         <platform>Nintendo DS</platform>
         <criticScore>77</criticScore>
-        <userScore>6.6</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -1079,10 +1079,10 @@
             <genre>Strategy</genre>
             <genre>Simulation</genre>
         </genres>
-        <publisher>Sunflowers, Paradox Interactive</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Windows PC</platform>
         <criticScore>79</criticScore>
-        <userScore>7.7</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -1097,7 +1097,7 @@
         <publisher>Capcom</publisher>
         <platform>Windows PC</platform>
         <criticScore>80</criticScore>
-        <userScore>7.8</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
@@ -1111,8 +1111,8 @@
         </genres>
         <publisher>Midway Games</publisher>
         <platform>Wii</platform>
-        <criticScore>53</criticScore>
-        <userScore>5.8</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -1124,7 +1124,7 @@
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Ubisoft</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>PlayStation 4</platform>
         <criticScore>77</criticScore>
         <userScore>7.5</userScore>
@@ -1155,8 +1155,8 @@
         </genres>
         <publisher>D3Publisher</publisher>
         <platform>Nintendo DS</platform>
-        <criticScore>62</criticScore>
-        <userScore>6.4</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2a-absent" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -1183,10 +1183,10 @@
             <genre>Action-Adventure</genre>
 
         </genres>
-        <publisher>Funcom</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox One</platform>
         <criticScore>70</criticScore>
-        <userScore>6.9</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
@@ -1201,7 +1201,7 @@
         <publisher>Electronic Arts</publisher>
         <platform>Xbox 360</platform>
         <criticScore>51</criticScore>
-        <userScore>5.8</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
@@ -1216,21 +1216,21 @@
         <publisher>Microsoft Game Studios</publisher>
         <platform>Xbox 360</platform>
         <criticScore>69</criticScore>
-        <userScore>6.9</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_11373</id>
         <name>Over the Hedge</name>
         <releaseYear>2006-05-09</releaseYear>
-        <developer>Edge of Reality</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
         <publisher>Activision</publisher>
         <platform>Nintendo DS</platform>
-        <criticScore>59</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>6.2</userScore>
         <ESRB>E</ESRB>
     </videogame>
@@ -1244,8 +1244,8 @@
         </genres>
         <publisher>Oxygen Interactive</publisher>
         <platform>Nintendo DS</platform>
-        <criticScore>43</criticScore>
-        <userScore/>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -1257,10 +1257,10 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Aksys Games Localization</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Xbox 360</platform>
         <criticScore>84</criticScore>
-        <userScore>7.9</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -1271,10 +1271,10 @@
         <genres>
             <genre>Strategy</genre>
         </genres>
-        <publisher>Wizards of the Coast</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
         <criticScore>76</criticScore>
-        <userScore>7.5</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -1286,17 +1286,17 @@
             <genre>Action</genre>
 
         </genres>
-        <publisher>Gathering of Developers</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Windows PC</platform>
-        <criticScore>83</criticScore>
-        <userScore>7.9</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>M</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_20463</id>
         <name>Metal Gear Solid 2: Sons of Liberty</name>
         <releaseYear>2001-11-12</releaseYear>
-        <developer>Konami Digital Entertainment</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
             <genre>Adventure</genre>
@@ -1332,15 +1332,15 @@
         </genres>
         <publisher>THQ</publisher>
         <platform>Game Boy Advance</platform>
-        <criticScore>57</criticScore>
-        <userScore>6</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_20267</id>
         <name>Superman Returns</name>
         <releaseYear>2006-12-20</releaseYear>
-        <developer>Santa Cruz Games</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
             <genre>Adventure</genre>
@@ -1362,22 +1362,22 @@
         </genres>
         <publisher>Square Enix</publisher>
         <platform>Nintendo 3DS</platform>
-        <criticScore>64</criticScore>
-        <userScore>6.6</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
         <id>metacritic_6862</id>
         <name>Tomb Raider: Anniversary</name>
         <releaseYear>2007-10-23</releaseYear>
-        <developer>Crystal Dynamics,Buzz Monkey Software</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
             <genre>Adventure</genre>
         </genres>
-        <publisher>Feral Interactive,Eidos Interactive,Square Enix,Crystal Dynamics</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>Xbox 360</platform>
-        <criticScore>82</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>8</userScore>
         <ESRB>T</ESRB>
     </videogame>
@@ -1390,9 +1390,9 @@
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>Namco Bandai Games</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation Portable (PSP)</platform>
-        <criticScore>79</criticScore>
+        <criticScore v2_removed="v2b-unwinnable" />
         <userScore>7.5</userScore>
         <ESRB>T</ESRB>
     </videogame>
@@ -1400,15 +1400,15 @@
         <id>metacritic_16460</id>
         <name>Unchained Blades</name>
         <releaseYear>2011-07-14</releaseYear>
-        <developer>ART</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Role-Playing Game (RPG)</genre>
 
         </genres>
-        <publisher>FuRyu, Xseed Games</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation Portable (PSP)</platform>
         <criticScore>64</criticScore>
-        <userScore>6.5</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>T</ESRB>
     </videogame>
     <videogame>
@@ -1419,7 +1419,7 @@
         <genres>
             <genre>Racing</genre>
         </genres>
-        <publisher>Namco</publisher>
+        <publisher v2_removed="v2b-unwinnable" />
         <platform>PlayStation Portable (PSP)</platform>
         <criticScore>87</criticScore>
         <userScore>8.4</userScore>
@@ -1429,14 +1429,14 @@
         <id>metacritic_6454</id>
         <name>Disney Alice in Wonderland</name>
         <releaseYear>2010-03-02</releaseYear>
-        <developer>Étranges Libellules S.A.</developer>
+        <developer v2_removed="v2b-unwinnable" />
         <genres>
             <genre>Action</genre>
         </genres>
         <publisher>Disney Interactive Studios</publisher>
         <platform>Nintendo DS</platform>
         <criticScore>78</criticScore>
-        <userScore>7.3</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E10+</ESRB>
     </videogame>
     <videogame>
@@ -1447,10 +1447,10 @@
         <genres>
             <genre>Puzzle</genre>
         </genres>
-        <publisher>Microsoft Game Studios</publisher>
+        <publisher v2_removed="v2a-absent" />
         <platform>Xbox 360</platform>
         <criticScore>81</criticScore>
-        <userScore>7.4</userScore>
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
     <videogame>
@@ -1464,8 +1464,8 @@
         </genres>
         <publisher>Electronic Arts</publisher>
         <platform>Wii</platform>
-        <criticScore>46</criticScore>
-        <userScore>5.3</userScore>
+        <criticScore v2_removed="v2b-unwinnable" />
+        <userScore v2_removed="v2b-unwinnable" />
         <ESRB>E</ESRB>
     </videogame>
 </videogames>

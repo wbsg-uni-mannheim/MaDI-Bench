@@ -1,0 +1,145 @@
+{
+ "reference": "new",
+ "reference_label": "2026-09-30 option-G re-run (SLURM 353136, dws-07)",
+ "inputs": {
+  "PyDI/usecases/products/base/input/schemamatching/target_schema.json": "88e30ec050fd7871ffc6214c74b1b2cd43d4d8c2c72e7ab88b3b344683cb6d5b",
+  "PyDI/usecases/products/base/input/fusion/GOLD_VERSION": "81db67b6a5702b9b68f0016f061c409bf3fb16d062fc854d1b424bb4e9c28c56",
+  "PyDI/usecases/products/base/input/fusion/README.md": "9dfe6036656183d40ffeccd64edc0d70f8cd8581761c086e5ccf548838045268",
+  "PyDI/usecases/products/base/input/fusion/README_v2.md": "53c899cfd2bc2269f20511cca0e9691367d28451e036358ce3030012da4c0b51",
+  "PyDI/usecases/products/base/input/fusion/fusion_test_set.csv": "fdd1c3eee9d3c7c2e6ed331a7ab9ac1e46c7028814f68d0f6526867ffdcc04e0",
+  "PyDI/usecases/products/base/input/fusion/fusion_test_set_better_readability.csv": "1c4e9297f3f23f3aded85f13c2c7a0889858ddf6bfc6c0a85d72c692bb66c892",
+  "PyDI/usecases/products/base/input/fusion/fusion_validation_set.csv": "8c5708f54db941a09e92d69e3455df53d01dbc12f6323b4338ca312515a2ed4f",
+  "PyDI/usecases/products/base/input/fusion/fusion_validation_set_better_readability.csv": "0c626088f5b9690fb0cb89116f0da0c29a94be0d6207f9986e731637a92f933d",
+  "PyDI/usecases/products/base/input/fusion/gold_edits_2026-09-23.csv": "507f99bc4062bc23bec15908e1771879fab8fc84544a9cb965eb639e50b9243e",
+  "PyDI/usecases/products/base/input/fusion/removal_manifest_test.csv": "8ec135d76d05881fd75214b5f5a8eb957de31d221c7037e3c14b760da0238871",
+  "PyDI/usecases/products/base/input/fusion/removal_manifest_validation.csv": "3a04d159a1aa70c09a23469e4b6a2545d3f8d8af6784b8ce6e9406798cab6063",
+  "PyDI/usecases/products/base/input/data/dataset_1.json": "a5e57ecce52541fe7af599911b278aa32a167735001ab813db9056f55f6bff59",
+  "PyDI/usecases/products/base/input/data/dataset_1_metadata.json": "af39541ab27815bbceb812e6e0969afdb17751e2e10ea38fc415bb5958291858",
+  "PyDI/usecases/products/base/input/data/dataset_2.json": "0fed9aa9511ca8d9af07143db97518b83a8a07fae95f8699d599f4ff97434fb0",
+  "PyDI/usecases/products/base/input/data/dataset_2_metadata.json": "b4ec8876b8d64a7ec31ecc04a598991fe85b21ea9ec623521b37f974b7970539",
+  "PyDI/usecases/products/base/input/data/dataset_3.json": "8fd75b0b1de77a33d3c9501ace9e553ad543065ad97c9c363d580460d4e5990a",
+  "PyDI/usecases/products/base/input/data/dataset_3_metadata.json": "32aaf07fad893b2a14f1fe84ddee8c06a47a7860cf593639771c1fbd5d3b952f",
+  "PyDI/usecases/products/base/input/data/dataset_4.json": "bee5d3964e597f974095176c309947c0095f25de26314dd4dd57c9ca3ba3a3f1",
+  "PyDI/usecases/products/base/input/data/dataset_4_metadata.json": "8a6c8ab6d435eb1f0b20f6912732a0b1a8a49bc13457126e6d128bc111139e73",
+  "MaDI-Bench/results/best of breeds/products/baseline/fused.csv": "64df04496f34f543095d57ae62239ffdd759a61fd80c0fb003734413d387f09c",
+  "<p4-run:products_base>/submission/fused.csv": "fd4b3485aa7891d74bb4ff092d453e6770d4f5ff231d2e21e99c08f1507a4d99",
+  "<p4-run:products_base>/submission/membership.csv": "6bcca6c1e363a277522768f7f9023fab30d4b0fec1fcf9c5b9777d4017b20bcd",
+  "runs/_reruns/p3_products_20260927T111322Z/results/base/fusion/optimization_provided_val/case_heuristic_stats__opt_provided/fused.csv": "d85be3784c30c97d2f650edf709e5b492a56e6452fd3cecbfc604cd4fcea518d",
+  "runs/_reruns/p3_products_20260927T111322Z/scores_repaired_20260928/base/membership.csv": "91e08b8256cf557eedfd755324d0839f44fc61f84e4bd33df466203e2ac0a668",
+  "MaDI-Bench/results/llm pipeline/products/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv": "074032406b6857b99cfed94cd10950e3dcff1d8cfca4939cd52b51950df984a1",
+  "<p1-products-run-2026-09-30>/products/base/output/data_fusion/fused.csv": "84167a6569764d8ffd8d2c810a0801b5b1d9656f24b564e3639c5b9bcf8ef514"
+ },
+ "host": "dws-07.informatik.uni-mannheim.de",
+ "P2_membership": {
+  "rows": 3012,
+  "source_repairs": 0,
+  "unknown_record_ids": 0
+ },
+ "P2_fused_path": "MaDI-Bench/results/best of breeds/products/baseline/fused.csv",
+ "P4_membership": {
+  "rows": 3012,
+  "source_repairs": 0,
+  "unknown_record_ids": 0
+ },
+ "P4_fused_path": "<p4-run:products_base>/submission/fused.csv",
+ "P3_rerun_membership": {
+  "rows": 3012,
+  "source_repairs": 0,
+  "unknown_record_ids": 0,
+  "supplied_partition_equals_fusion_sources_partition": true
+ },
+ "P3_rerun_fused_path": "runs/_reruns/p3_products_20260927T111322Z/results/base/fusion/optimization_provided_val/case_heuristic_stats__opt_provided/fused.csv",
+ "P3_stored_membership": {
+  "rows": 3012,
+  "source_repairs": 0,
+  "unknown_record_ids": 0
+ },
+ "P3_stored_fused_path": "MaDI-Bench/results/llm pipeline/products/baseline/fusion/optimization_provided_val/case_heuristic/fused.csv",
+ "alignment": {
+  "original_sha256": "c41b4d8636b50dcb327aae4f39872dcc25238aa00bacb286ba660ed3e660d68d",
+  "optimized_sha256": "25e558eef6f1fb955b2bc441cd3b37184c547903cc5d35a4c53cb6bd1f5ea864",
+  "matches_p4_completion_proof": true,
+  "p4_completion_proof_passed": true
+ },
+ "p1_reference": {
+  "path": "<p1-products-run-2026-09-30>/products/base/output/data_fusion/fused.csv",
+  "sha256": "84167a6569764d8ffd8d2c810a0801b5b1d9656f24b564e3639c5b9bcf8ef514",
+  "clusters": 758,
+  "membership": {
+   "rows": 2663,
+   "source_repairs": 0,
+   "unknown_record_ids": 0
+  },
+  "clusters_with_2plus_records": 758
+ },
+ "P2_silver": {
+  "entity_recovery": 0.22427440633245382,
+  "value_drift": 0.0719017997955588,
+  "value_density_delta": -0.016366084420642073,
+  "schema_validity_delta": 0.00019622442489952707,
+  "bcubed_precision": 0.682876455125798,
+  "bcubed_recall": 0.6048942295656528,
+  "bcubed_f1": 0.6415241970053303,
+  "fusion_accuracy_micro": 0.5835525674753971,
+  "fusion_accuracy_macro": 0.6123826044495569,
+  "fully_correct_rate": 0.026385224274406333
+ },
+ "P2_silver_warnings": [
+  "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+  "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+  "Schema consistency dropped by \u2265 5pp vs silver on 1 column(s); worst: 'weight_g' delta=-0.079. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+ ],
+ "P4_silver": {
+  "entity_recovery": 0.262532981530343,
+  "value_drift": 0.08522196789587506,
+  "value_density_delta": -0.018919610811756797,
+  "schema_validity_delta": 0.0015032440322571006,
+  "bcubed_precision": 0.6792464638878457,
+  "bcubed_recall": 0.6372512204280886,
+  "bcubed_f1": 0.6575790344954643,
+  "fusion_accuracy_micro": 0.5734190782422294,
+  "fusion_accuracy_macro": 0.6210757308285495,
+  "fully_correct_rate": 0.0158311345646438
+ },
+ "P4_silver_warnings": [
+  "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+  "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+ ],
+ "P3_rerun_silver": {
+  "entity_recovery": 0.048812664907651716,
+  "value_drift": 0.12572362521053,
+  "value_density_delta": -0.0371838132080702,
+  "schema_validity_delta": -0.04868557371062998,
+  "bcubed_precision": 0.509450494429841,
+  "bcubed_recall": 0.4331580923770184,
+  "bcubed_f1": 0.4682168344663608,
+  "fusion_accuracy_micro": 0.4474325246029426,
+  "fusion_accuracy_macro": 0.47134634186394786,
+  "fully_correct_rate": 0.0
+ },
+ "P3_rerun_silver_warnings": [
+  "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+  "Source coverage dropped by more than 15pp for 4 source(s); worst: products_1 delta=-0.282. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+  "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+  "Schema consistency dropped by \u2265 5pp vs silver on 2 column(s); worst: 'price' delta=-0.663. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+ ],
+ "P3_stored_silver": {
+  "entity_recovery": 0.04221635883905013,
+  "value_drift": 0.13803448390208442,
+  "value_density_delta": -0.029382776987842984,
+  "schema_validity_delta": 0.0009594146196350017,
+  "bcubed_precision": 0.47790712229315313,
+  "bcubed_recall": 0.43365878082363246,
+  "bcubed_f1": 0.45470902167789334,
+  "fusion_accuracy_micro": 0.4097242521679821,
+  "fusion_accuracy_macro": 0.4351992554075825,
+  "fully_correct_rate": 0.0013192612137203166
+ },
+ "P3_stored_silver_warnings": [
+  "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+  "Source coverage dropped by more than 15pp for 1 source(s); worst: products_1 delta=-0.181. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+  "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['chipset_name', 'description', 'model', 'model_number', 'title']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm."
+ ],
+ "inputs_changed_during_run": [],
+ "seconds": 727.9
+}

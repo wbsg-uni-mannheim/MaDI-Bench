@@ -1,4 +1,4 @@
 left,right,pair,matcher,threshold,test_f1,test_precision,test_recall,test_pairs,test_positives,test_negatives,test_set
-products_1,products_2,products_1__products_2,MLBasedMatcher,0.3,0.3888888888888889,0.6363636363636364,0.28,175,25,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/medium/input/entitymatching/products_1_2_products_2_test_corner_filled.csv
-products_1,products_3,products_1__products_3,MLBasedMatcher,0.3,0.3478260869565217,0.3333333333333333,0.3636363636363636,172,22,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/medium/input/entitymatching/products_1_2_products_3_test_corner_filled.csv
-products_1,products_4,products_1__products_4,MLBasedMatcher,0.4,0.37037037037037035,0.7142857142857143,0.25,170,20,150,/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/products-augmented/medium/input/entitymatching/products_1_2_products_4_test_corner_filled.csv
+products_1,products_2,products_1__products_2,MLBasedMatcher,0.7,0.1538461538461538,0.4,0.0952380952380952,171,21,150,p3_products_rerun_20260927/tasks/medium/runtime/entitymatching/products_1_2_products_2_test.csv
+products_1,products_3,products_1__products_3,MLBasedMatcher,0.3,0.5365853658536586,0.6875,0.44,175,25,150,p3_products_rerun_20260927/tasks/medium/runtime/entitymatching/products_1_2_products_3_test.csv
+products_1,products_4,products_1__products_4,RuleBasedMatcher,0.9,0.0,0.0,0.0,172,22,150,p3_products_rerun_20260927/tasks/medium/runtime/entitymatching/products_1_2_products_4_test.csv

@@ -1,0 +1,28 @@
+{
+  "raw": {
+    "stage": "schema_matching",
+    "task_id": "music_medium",
+    "n_submitted": 21,
+    "n_gold": 21,
+    "target_dataset_mismatch": [
+      "Music Release"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "exported": {
+    "stage": "schema_matching",
+    "task_id": "music_medium",
+    "n_submitted": 21,
+    "n_gold": 21,
+    "target_dataset_mismatch": [
+      "Music Release"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "prediction_only": [],
+  "gold_only": []
+}

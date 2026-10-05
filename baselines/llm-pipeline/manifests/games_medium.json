@@ -1,0 +1,26 @@
+{
+  "base_case": "games",
+  "case": "games-augmented-medium",
+  "data_dir": "../../use cases/games/medium/input/data",
+  "entitymatching_dir": "../../use cases/games/medium/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "fusion_dir": "../../use cases/games/medium/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/games/medium",
+  "pairs": [
+    {
+      "left": "dbpedia",
+      "right": "metacritic"
+    },
+    {
+      "left": "dbpedia",
+      "right": "sales",
+      "test_set": "../../use cases/games/medium/input/entitymatching/dbpedia_2_sales_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/games/medium/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/games/medium/input/schemamatching/sm_mapping.csv",
+  "variant": "medium"
+}

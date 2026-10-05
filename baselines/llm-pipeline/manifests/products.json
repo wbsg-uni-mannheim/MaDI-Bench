@@ -1,0 +1,26 @@
+{
+  "case": "products",
+  "data_dir": "DI-Bench/usecases/products/input/data",
+  "schema": "DI-Bench/usecases/products/input/schemamatching/target_schema.json",
+  "entitymatching_dir": "DI-Bench/usecases/products/input/entitymatching",
+  "fusion_dir": "DI-Bench/usecases/products/input/fusion",
+  "pairs": [
+    {
+      "left": "prod1",
+      "right": "prod2"
+    },
+    {
+      "left": "prod1",
+      "right": "prod3"
+    },
+    {
+      "left": "prod1",
+      "right": "prod4"
+    }
+  ],
+  "notes": [
+    "Pairs are restricted to source combinations with provided ground-truth labels.",
+    "JSON/JSONL source files were converted to CSV where needed for the local automatic pipeline.",
+    "Non-XML fusion validation/test files were converted to XML during import."
+  ]
+}

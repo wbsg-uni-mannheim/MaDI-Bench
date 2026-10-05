@@ -2,7 +2,7 @@
   "metric": "consistency",
   "metadata": {
     "case": "papers-augmented-hard",
-    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/papers-augmented/hard/input/schemamatching/target_schema.json",
+    "schema_path": "PyDI/usecases/papers-augmented/hard/input/schemamatching/target_schema.json",
     "fused_output": "DI-Bench/runs/augmented/papers/hard/fusion/fused_clean.csv"
   },
   "result": {

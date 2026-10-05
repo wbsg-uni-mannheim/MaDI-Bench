@@ -6,7 +6,6 @@ products_1,desc,Hardware Product,description,0.95,llm_based_matching
 products_1,prc,Hardware Product,price,0.95,llm_based_matching
 products_1,cur,Hardware Product,priceCurrency,0.95,llm_based_matching
 products_1,product_url,Hardware Product,url,0.95,llm_based_matching
-products_1,t_desc,Hardware Product,title_description,0.95,llm_based_matching
 products_1,mdl,Hardware Product,model,0.95,llm_based_matching
 products_1,mdl_no,Hardware Product,model_number,0.95,llm_based_matching
 products_1,prd_typ,Hardware Product,product_type,0.95,llm_based_matching

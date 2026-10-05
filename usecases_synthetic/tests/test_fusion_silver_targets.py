@@ -257,14 +257,14 @@ class TestSilverRegressionRejection:
 
 
 # ---------------------------------------------------------------------------
-# C13: intact-cluster rule (silver targets only for clusters where every
+# Intact-cluster rule (silver targets only for clusters where every
 # original member survives K2)
 # ---------------------------------------------------------------------------
 
 
 @_skip_if_no_music_silver
 class TestIntactSilverClusters:
-    """Regression for plan_revision.md §C13 intact-cluster semantics."""
+    """Regression for the intact-cluster semantics."""
 
     def test_all_members_survive_returns_all_clusters(self) -> None:
         """When the survivor set covers every silver-cluster member, all
@@ -370,7 +370,7 @@ class TestIntactOnlyCombinedTargets:
 @_skip_if_no_music_silver
 class TestResolveProtectionSourcesWithSurvivingIds:
     """resolve_protection_sources(domain, 'silver', surviving) dispatches
-    to the intact-only target dict (C13)."""
+    to the intact-only target dict."""
 
     def test_surviving_none_returns_legacy_silver_targets(self) -> None:
         """``surviving_record_ids=None`` keeps backward compat: returns

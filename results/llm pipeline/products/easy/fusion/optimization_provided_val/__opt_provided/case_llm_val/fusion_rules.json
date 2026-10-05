@@ -3,34 +3,42 @@
     "brand": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_3"
         ]
       },
       "resolver": "favour_sources"
     },
     "bus_type": {
       "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "chipset_name": {
-      "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
+    "chipset_name": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "color": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "description": {
       "kwargs": {},
       "resolver": "most_complete"
     },
     "form_factor": {
-      "kwargs": {},
-      "resolver": "voting"
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "height_mm": {
       "kwargs": {},
@@ -38,7 +46,7 @@
     },
     "interface_type": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "longest_string"
     },
     "length_mm": {
       "kwargs": {},
@@ -54,23 +62,23 @@
     },
     "model": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "longest_string"
     },
     "model_number": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
-    },
-    "price": {
-      "kwargs": {},
-      "resolver": "minimum"
-    },
-    "priceCurrency": {
       "kwargs": {},
       "resolver": "voting"
+    },
+    "price": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
+    },
+    "priceCurrency": {
+      "kwargs": {
+        "trust_key": "trust_score"
+      },
+      "resolver": "prefer_higher_trust"
     },
     "product_type": {
       "kwargs": {},
@@ -86,21 +94,13 @@
     },
     "storage_connection_type": {
       "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "storage_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
-    },
-    "title": {
-      "kwargs": {},
       "resolver": "longest_string"
     },
-    "title_description": {
+    "storage_gb": {
+      "kwargs": {},
+      "resolver": "median"
+    },
+    "title": {
       "kwargs": {},
       "resolver": "longest_string"
     },
@@ -111,12 +111,8 @@
       "resolver": "prefer_higher_trust"
     },
     "vram_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "weight_g": {
       "kwargs": {},

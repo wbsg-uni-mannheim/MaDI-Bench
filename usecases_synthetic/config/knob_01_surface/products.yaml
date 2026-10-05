@@ -20,7 +20,6 @@ attribute_classes:
     manufacturer: key
     product_description: secondary
     list_price: secondary
-    name_and_description: secondary
     category: key
     model_name: secondary
     manufacturer_part_number: secondary
@@ -32,7 +31,6 @@ attribute_classes:
     brandName: key
     descriptionText: secondary
     priceAmount: secondary
-    titleAndDescription: secondary
     productCategory: key
     modelName: secondary
     mpn: secondary
@@ -44,7 +42,6 @@ attribute_classes:
     Brand: key
     Details: secondary
     Price: secondary
-    TitleDetails: secondary
     Type: key
     Model: secondary
     PartNo: secondary
@@ -56,7 +53,6 @@ attribute_classes:
     mfr: key
     desc: secondary
     amt: secondary
-    name_desc: secondary
     cat: key
     mdl: secondary
     pn: secondary
@@ -70,7 +66,6 @@ attribute_mapping:
     manufacturer: brand
     product_description: description
     list_price: price
-    name_and_description: title_description
     category: product_type
     model_name: model
     manufacturer_part_number: model_number
@@ -82,7 +77,6 @@ attribute_mapping:
     brandName: brand
     descriptionText: description
     priceAmount: price
-    titleAndDescription: title_description
     productCategory: product_type
     modelName: model
     mpn: model_number
@@ -94,7 +88,6 @@ attribute_mapping:
     Brand: brand
     Details: description
     Price: price
-    TitleDetails: title_description
     Type: product_type
     Model: model
     PartNo: model_number
@@ -106,7 +99,6 @@ attribute_mapping:
     mfr: brand
     desc: description
     amt: price
-    name_desc: title_description
     cat: product_type
     mdl: model
     pn: model_number
@@ -153,7 +145,7 @@ operator_mix:
 baseline_above_target_rules: []
 
 # Products noisy-text characteristics suggest unit-symbol abbreviations
-# in description fields (GB, GHz, etc.). Stub table; expand in S13.
+# in description fields (GB, GHz, etc.).
 abbreviation_table:
   Gigabyte: "GB"
   Megabyte: "MB"
@@ -180,15 +172,14 @@ key_token_skiplist:
 
 key_token_skiplist_global: []
 
-# Hard-path LLM config. Default model gpt-5.4-mini per the 2026-05-06
-# LLM-model-default decision (~5x cheaper than full gpt-5.4). Before
-# each K1 hard run, ask the user whether to bump to gpt-5.4
-# (invalidates the on-disk LLM cache via the model_id cache key).
-# R10-D 2026-05-29: prompt_version bumped to v2 -- minimum-divergence
-# rule, <UNCHANGED> sentinel escape, per-attribute-class prompt
+# Hard-path LLM config. Default model gpt-5.4-mini (~5x cheaper than
+# full gpt-5.4). Prompt version v2: minimum-divergence rule,
+# <UNCHANGED> sentinel escape, per-attribute-class prompt
 # split (primary/key -> short_v2, secondary -> secondary_v2,
-# categorical -> categorical_v2). Cache key under
-# cache/knob_01_paraphrases/<domain>/<level>/ rotates on this bump.
+# categorical -> categorical_v2). The prompt version and the model id
+# are part of the on-disk LLM cache key under
+# cache/knob_01_paraphrases/<domain>/<level>/, so changing either
+# invalidates the cache.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

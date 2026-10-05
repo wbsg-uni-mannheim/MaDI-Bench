@@ -1,0 +1,92 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+http://www.forbes.com/companies/aberdeen-asset-management/,forbes,http://www.forbes.com/companies/aberdeen-asset-management/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,6
+http://www.forbes.com/companies/aberdeen-asset-management/,fullcontact,fullcontact_46,Attribute_3,country,United Kingdom,United Kingdom,identity,,,6
+http://www.forbes.com/companies/accor/,forbes,http://www.forbes.com/companies/accor/,business_segment,industry,Hotels & Motels,Hotels Restaurants & Leisure,normalization,gics_label_map,,1
+http://www.forbes.com/companies/amphenol/,dbpedia,http://dbpedia.org/resource/Amphenol,nation,country,United States,United States,identity,,,27
+http://www.forbes.com/companies/amphenol/,forbes,http://www.forbes.com/companies/amphenol/,region,country,United States of America,United States,normalization,country_alias,,23
+http://www.forbes.com/companies/astrazeneca/,forbes,http://www.forbes.com/companies/astrazeneca/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,6
+http://www.forbes.com/companies/astrazeneca/,fullcontact,fullcontact_114,Attribute_3,country,United Kingdom,United Kingdom,identity,,,6
+http://www.forbes.com/companies/astrazeneca/,forbes,http://www.forbes.com/companies/astrazeneca/,business_segment,industry,Pharmaceuticals,Pharmaceuticals,identity,,,1
+http://www.forbes.com/companies/banca-popolare-di-milano/,forbes,http://www.forbes.com/companies/banca-popolare-di-milano/,business_segment,industry,Regional Banks,Banks,normalization,gics_label_map,,4
+http://www.forbes.com/companies/bank-muscat/,forbes,http://www.forbes.com/companies/bank-muscat/,business_segment,industry,Regional Banks,Banks,normalization,gics_label_map,,4
+http://www.forbes.com/companies/bharat-petroleum/,dbpedia,http://dbpedia.org/resource/Kochi_Refineries,sector,industry,Oil refinery,Oil Gas & Consumable Fuels,normalization,gics_label_map,,1
+http://www.forbes.com/companies/boeing/,dbpedia,http://dbpedia.org/resource/Boeing_Commercial_Airplanes,nation,country,United States,United States,identity,,,27
+http://www.forbes.com/companies/boeing/,forbes,http://www.forbes.com/companies/boeing/,region,country,United States of America,United States,normalization,country_alias,,23
+http://www.forbes.com/companies/boeing/,forbes,http://www.forbes.com/companies/boeing/,business_segment,industry,Aerospace & Defense,Aerospace & Defense,identity,,,2
+http://www.forbes.com/companies/bp/,dbpedia,http://dbpedia.org/resource/BP,nation,country,England,United Kingdom,normalization,country_alias,,1
+http://www.forbes.com/companies/bp/,forbes,http://www.forbes.com/companies/bp/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,6
+http://www.forbes.com/companies/bp/,fullcontact,fullcontact_166,Attribute_3,country,United Kingdom,United Kingdom,identity,,,6
+http://www.forbes.com/companies/byd/,forbes,http://www.forbes.com/companies/byd/,business_segment,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,3
+http://www.forbes.com/companies/chang-hwa-bank/,dbpedia,http://dbpedia.org/resource/Chang_Hwa_Bank,nation,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/chang-hwa-bank/,forbes,http://www.forbes.com/companies/chang-hwa-bank/,region,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/chang-hwa-bank/,dbpedia,http://dbpedia.org/resource/Chang_Hwa_Bank,sector,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/chang-hwa-bank/,forbes,http://www.forbes.com/companies/chang-hwa-bank/,business_segment,industry,Regional Banks,Banks,normalization,gics_label_map,,4
+http://www.forbes.com/companies/cit-group/,forbes,http://www.forbes.com/companies/cit-group/,region,country,United States of America,United States,normalization,country_alias,,23
+http://www.forbes.com/companies/continental-resources/,forbes,http://www.forbes.com/companies/continental-resources/,region,country,United States of America,United States,normalization,country_alias,,23
+http://www.forbes.com/companies/costco-wholesale/,dbpedia,http://dbpedia.org/resource/Costco,nation,country,United States,United States,identity,,,27
+http://www.forbes.com/companies/costco-wholesale/,forbes,http://www.forbes.com/companies/costco-wholesale/,region,country,United States of America,United States,normalization,country_alias,,23
+http://www.forbes.com/companies/costco-wholesale/,forbes,http://www.forbes.com/companies/costco-wholesale/,business_segment,industry,Discount Stores,Consumer Staples Distribution & Retail,normalization,gics_label_map,,1
+http://www.forbes.com/companies/credit-agricole/,forbes,http://www.forbes.com/companies/credit-agricole/,business_segment,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/crown-resorts/,forbes,http://www.forbes.com/companies/crown-resorts/,business_segment,industry,Casinos & Gaming,Hotels Restaurants & Leisure,normalization,gics_label_map,,2
+http://www.forbes.com/companies/davita/,forbes,http://www.forbes.com/companies/davita/,business_segment,industry,Healthcare Services,Health Care Providers & Services,normalization,gics_label_map,,1
+http://www.forbes.com/companies/dicks-sporting-goods/,fullcontact,fullcontact_261,Attribute_3,country,United States,United States,identity,,,27
+http://www.forbes.com/companies/dish-network/,dbpedia,http://dbpedia.org/resource/Dish_Network,sector,industry,Satellite television,Media,normalization,gics_label_map,,1
+http://www.forbes.com/companies/dongbu-insurance/,forbes,http://www.forbes.com/companies/dongbu-insurance/,region,country,Korea (Republic of),South Korea,normalization,country_alias,,2
+http://www.forbes.com/companies/dongbu-insurance/,dbpedia,http://dbpedia.org/resource/Combined_Insurance,sector,industry,Insurance,Insurance,identity,,,2
+http://www.forbes.com/companies/dongbu-insurance/,forbes,http://www.forbes.com/companies/dongbu-insurance/,business_segment,industry,Property & Casualty Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/edp-energias-de-portugal/,dbpedia,http://dbpedia.org/resource/Energias_de_Portugal,sector,industry,Electric utility,Electric Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/edp-energias-de-portugal/,forbes,http://www.forbes.com/companies/edp-energias-de-portugal/,business_segment,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/exelon/,fullcontact,fullcontact_1541,Attribute_3,country,United States,United States,identity,,,27
+http://www.forbes.com/companies/exelon/,forbes,http://www.forbes.com/companies/exelon/,business_segment,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/fresenius/,dbpedia,http://dbpedia.org/resource/Fresenius_(company),org_name,name,Fresenius (company),Fresenius,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/fresenius/,forbes,http://www.forbes.com/companies/fresenius/,company,name,Fresenius,Fresenius,identity,,,1
+http://www.forbes.com/companies/galaxy-entertainment/,forbes,http://www.forbes.com/companies/galaxy-entertainment/,business_segment,industry,Casinos & Gaming,Hotels Restaurants & Leisure,normalization,gics_label_map,,2
+http://www.forbes.com/companies/grupo-carso/,forbes,http://www.forbes.com/companies/grupo-carso/,business_segment,industry,Conglomerates,Industrial Conglomerates,normalization,gics_label_map,,2
+http://www.forbes.com/companies/hermes-international/,forbes,http://www.forbes.com/companies/hermes-international/,business_segment,industry,Apparel/Accessories,Textiles Apparel & Luxury Goods,normalization,gics_label_map,,1
+http://www.forbes.com/companies/hyundai-hysco/,dbpedia,http://dbpedia.org/resource/Hyundai_EP,nation,country,South Korea,South Korea,identity,,,1
+http://www.forbes.com/companies/hyundai-hysco/,forbes,http://www.forbes.com/companies/hyundai-hysco/,region,country,Korea (Republic of),South Korea,normalization,country_alias,,2
+http://www.forbes.com/companies/hyundai-hysco/,forbes,http://www.forbes.com/companies/hyundai-hysco/,business_segment,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,2
+http://www.forbes.com/companies/iberdrola/,forbes,http://www.forbes.com/companies/iberdrola/,business_segment,industry,Electric Utilities,Electric Utilities,identity,,,3
+http://www.forbes.com/companies/iliad/,dbpedia,http://dbpedia.org/resource/Iliad_(company),org_name,name,Iliad (company),Iliad,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/iliad/,forbes,http://www.forbes.com/companies/iliad/,company,name,Iliad,Iliad,identity,,,1
+http://www.forbes.com/companies/industrial-alliance-insurance/,dbpedia,http://dbpedia.org/resource/Industrial_Alliance,sector,industry,Life insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/industrial-alliance-insurance/,forbes,http://www.forbes.com/companies/industrial-alliance-insurance/,business_segment,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/kellogg/,forbes,http://www.forbes.com/companies/kellogg/,business_segment,industry,Food Processing,Food Products,normalization,gics_label_map,,1
+http://www.forbes.com/companies/krung-thai-bank/,dbpedia,http://dbpedia.org/resource/Krung_Thai_Bank,sector,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/krung-thai-bank/,forbes,http://www.forbes.com/companies/krung-thai-bank/,business_segment,industry,Regional Banks,Banks,normalization,gics_label_map,,4
+http://www.forbes.com/companies/lafarge/,forbes,http://www.forbes.com/companies/lafarge/,business_segment,industry,Construction Materials,Construction Materials,identity,,,1
+http://www.forbes.com/companies/liberty-global/,forbes,http://www.forbes.com/companies/liberty-global/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,6
+http://www.forbes.com/companies/lyondellbasell-industries/,dbpedia,http://dbpedia.org/resource/LyondellBasell,sector,industry,Chemical substance,Chemicals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/manpower/,dbpedia,http://dbpedia.org/resource/Manpower_Inc.,sector,industry,Professional services,Professional Services,normalization,gics_label_map,,1
+http://www.forbes.com/companies/mapfre/,dbpedia,http://dbpedia.org/resource/Mapfre,sector,industry,Insurance,Insurance,identity,,,2
+http://www.forbes.com/companies/mapfre/,forbes,http://www.forbes.com/companies/mapfre/,business_segment,industry,Diversified Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/mitsubishi-ufj-financial/,forbes,http://www.forbes.com/companies/mitsubishi-ufj-financial/,business_segment,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/mtr/,forbes,http://www.forbes.com/companies/mtr/,business_segment,industry,Railroads,Ground Transportation,normalization,gics_label_map,,1
+http://www.forbes.com/companies/prudential-financial/,forbes,http://www.forbes.com/companies/prudential-financial/,business_segment,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/prudential/,dbpedia,http://dbpedia.org/resource/Prudential_plc,nation,country,United Kingdom,United Kingdom,identity,,,6
+http://www.forbes.com/companies/prudential/,forbes,http://www.forbes.com/companies/prudential/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,6
+http://www.forbes.com/companies/prudential/,forbes,http://www.forbes.com/companies/prudential/,business_segment,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/qualcomm/,forbes,http://www.forbes.com/companies/qualcomm/,business_segment,industry,Semiconductors,Semiconductors & Semiconductor Equipment,normalization,gics_label_map,,1
+http://www.forbes.com/companies/renault/,forbes,http://www.forbes.com/companies/renault/,business_segment,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,3
+http://www.forbes.com/companies/salzgitter/,forbes,http://www.forbes.com/companies/salzgitter/,business_segment,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,2
+http://www.forbes.com/companies/sandisk/,dbpedia,http://dbpedia.org/resource/SanDisk,sector,industry,Computer data storage,Technology Hardware Storage & Peripherals,normalization,gics_label_map,,2
+http://www.forbes.com/companies/sandisk/,forbes,http://www.forbes.com/companies/sandisk/,business_segment,industry,Computer Storage Devices,Technology Hardware Storage & Peripherals,normalization,gics_label_map,,2
+http://www.forbes.com/companies/smiths-group/,dbpedia,http://dbpedia.org/resource/Smiths_Group,nation,country,United Kingdom,United Kingdom,identity,,,6
+http://www.forbes.com/companies/smiths-group/,forbes,http://www.forbes.com/companies/smiths-group/,business_segment,industry,Conglomerates,Industrial Conglomerates,normalization,gics_label_map,,2
+http://www.forbes.com/companies/steinhoff-international/,forbes,http://www.forbes.com/companies/steinhoff-international/,business_segment,industry,Furniture & Fixtures,Household Durables,normalization,gics_label_map,,1
+http://www.forbes.com/companies/sumitomo-mitsui-trust/,forbes,http://www.forbes.com/companies/sumitomo-mitsui-trust/,business_segment,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/tdc/,fullcontact,fullcontact_719,Attribute_4,city,København C,København C,identity,,,1
+http://www.forbes.com/companies/tenaris/,dbpedia,http://dbpedia.org/resource/Tenaris,sector,industry,List of oilfield service companies,Energy Equipment & Services,normalization,gics_label_map,,1
+http://www.forbes.com/companies/thales/,forbes,http://www.forbes.com/companies/thales/,business_segment,industry,Aerospace & Defense,Aerospace & Defense,identity,,,2
+http://www.forbes.com/companies/ugi/,forbes,http://www.forbes.com/companies/ugi/,business_segment,industry,Natural Gas Utilities,Gas Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/vivendi/,dbpedia,http://dbpedia.org/resource/Vivendi,sector,industry,Mass media,Media,normalization,gics_label_map,,1
+http://www.forbes.com/companies/volkswagen-group/,forbes,http://www.forbes.com/companies/volkswagen-group/,business_segment,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,3
+http://www.forbes.com/companies/wendel/,dbpedia,http://dbpedia.org/resource/Wendel_(group),sector,industry,Investment,Capital Markets,normalization,gics_label_map,,1
+http://www.forbes.com/companies/wendel/,dbpedia,http://dbpedia.org/resource/Wendel_(group),org_name,name,Wendel (group),Wendel,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/wendel/,forbes,http://www.forbes.com/companies/wendel/,company,name,Wendel,Wendel,identity,,,1
+http://www.forbes.com/companies/western-digital/,dbpedia,http://dbpedia.org/resource/Western_Digital,sector,industry,Computer data storage,Technology Hardware Storage & Peripherals,normalization,gics_label_map,,2
+http://www.forbes.com/companies/western-digital/,forbes,http://www.forbes.com/companies/western-digital/,business_segment,industry,Computer Storage Devices,Technology Hardware Storage & Peripherals,normalization,gics_label_map,,2
+http://www.forbes.com/companies/wistron/,dbpedia,http://dbpedia.org/resource/Wistron_Corporation,nation,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/wistron/,forbes,http://www.forbes.com/companies/wistron/,region,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/wistron/,fullcontact,fullcontact_823,Attribute_3,country,Taiwan,Taiwan,identity,,,3
+http://www.forbes.com/companies/zijin-mining-group/,dbpedia,http://dbpedia.org/resource/Zijin_Mining,sector,industry,Gold mining,Metals & Mining,normalization,gics_label_map,,1

@@ -1,6 +1,6 @@
 """Tests for Knob 02 — Entity Niche Density.
 
-Acceptance criteria (from plans/module_09_knob_02.md):
+Acceptance criteria:
 
 1. RRF density is monotone in number of agreeing metrics.
 2. No protected entity removed at any level.
@@ -451,7 +451,7 @@ class TestCornerCaseMiner:
         pool, the regenerator should:
 
         - Carry over every original row into BOTH versions
-          (baseline_pruned and corner_filled — Set 1 ⊂ Set 2 per C11).
+          (baseline_pruned and corner_filled — Set 1 ⊂ Set 2).
         - Add no backfill rows under target_ratio=0.0.
         - Respect cross-split disjointness within a source pair within
           each version.
@@ -540,7 +540,7 @@ class TestCornerCaseMiner:
         """Dropped originals are replaced from the corner-mined pools.
 
         Half the original positives reference an id absent from
-        ``ids_present`` (simulating K2 removal). Under C11 the
+        ``ids_present`` (simulating K2 removal). The
         regenerator should:
 
         - Drop those originals.
@@ -573,8 +573,8 @@ class TestCornerCaseMiner:
         )
 
         # Backfill candidates use only b-ids in ids_present (b0..b199).
-        # cluster_pos / pool_pos retained in signature but no longer
-        # consumed under C11 — easy backfill is removed.
+        # cluster_pos / pool_pos are in the signature but not consumed:
+        # there is no easy backfill.
         cluster_pos = {pair_ab: [(f"a{i}", f"b{i + 150}") for i in range(20, 30)]}
         pool_pos = {pair_ab: [(f"a{i}", f"b{i + 160}") for i in range(30, 40)]}
         interp_pos = {pair_ab: [(f"interp{k}__a", f"interp{k}__b") for k in range(5)]}
@@ -628,14 +628,14 @@ class TestCornerCaseMiner:
         interp_set = {(f"interp{k}__a", f"interp{k}__b") for k in range(5)}
         assert cf_pos_pairs == bp_pos | interp_set, (
             "corner_filled positives must be survivors ∪ interpolated only "
-            "(no easy backfill under C11)"
+            "(no easy backfill)"
         )
 
         # corner_filled negatives consist of survivors + corner_negs only.
         cf_neg_pairs = {(r["id1"], r["id2"]) for _, r in cf_neg.iterrows()}
         assert cf_neg_pairs == bp_neg | corner_negs_set, (
             "corner_filled negatives must be survivors ∪ corner_negs only "
-            "(no easy backfill under C11)"
+            "(no easy backfill)"
         )
 
         # Set 1 ⊂ Set 2 invariant.
@@ -655,14 +655,12 @@ class TestCornerCaseMiner:
     ) -> None:
         """Backfill must not consume canonical pairs owned by gold.
 
-        Regression for plan_s1_final.md F10. Pre-fix: if test's backfill
-        pool happened to contain a pair that train's gold owns, the
-        higher-priority test pass would ``consume`` the canonical pair
-        first; train's survival pass then saw it in ``consumed`` and
-        silently skipped — relocating the survivor from train to test.
-        Fix: backfill pools are filtered to exclude every gold canon up
-        front, so survivors never compete with backfill for their own
-        pair.
+        If test's backfill pool contains a pair that train's gold owns,
+        the higher-priority test pass must not ``consume`` the canonical
+        pair before train's survival pass (that would relocate the
+        survivor from train to test). Backfill pools are therefore
+        filtered to exclude every gold canon up front, so survivors never
+        compete with backfill for their own pair.
         """
         from usecases_synthetic.lib.corner_case_miner import (
             SplitSpec,
@@ -802,11 +800,11 @@ class TestCornerCaseMiner:
         assert True in labels and False in labels
 
 
-# ---- C11 invariants — baseline_pruned + corner_filled dual emission ------
+# ---- Invariants — baseline_pruned + corner_filled dual emission ----------
 
 
 class TestRegenSplitVersionsC11:
-    """plan_revision.md C11 (2026-05-22) — emit two parallel versions per
+    """Emit two parallel versions per
     (pair, split): ``baseline_pruned`` (survivors only) and
     ``corner_filled`` (survivors + 100% corner-mined backfill).
     """
@@ -852,7 +850,7 @@ class TestRegenSplitVersionsC11:
             (f"a{i}", f"b{i + 130}")
             for i in range(n_originals + 5, n_originals + 5 + corner_neg_count)
         }
-        # Generous easy-neg seed (must NOT be consumed under C11).
+        # Generous easy-neg seed (must NOT be consumed).
         easy_neg_seed = [
             (f"a{i}", f"b{j + 170}")
             for i in range(n_dropped, n_originals)
@@ -930,7 +928,7 @@ class TestRegenSplitVersionsC11:
     def test_corner_filled_undersizes_when_corner_pool_dry(self) -> None:
         """When corner pool can't cover the shortfall, accept undersize.
 
-        Per C11 option (i) — no easy spillover. interp_count=2 means
+        No easy spillover. interp_count=2 means
         only 2 of the 5 positive slots can be filled; the realised
         size for corner_filled positives is 5 survivors + 2 corners
         = 7, not 10.
@@ -957,7 +955,7 @@ class TestRegenSplitVersionsC11:
         """corner_filled never consumes easy-positive or easy-negative pools.
 
         cluster_positives / pool_positives / non-corner negatives are
-        present but must NOT appear in either version under C11.
+        present but must NOT appear in either version.
         """
         from usecases_synthetic.lib.corner_case_miner import (
             SplitSpec,
@@ -1057,7 +1055,7 @@ class TestRegenSplitVersionsC11:
 
 
 class TestVariantLoaderRegenVersions:
-    """plan_revision.md C11 — variant_loader reads both versions per (pair, split)."""
+    """variant_loader reads both versions per (pair, split)."""
 
     def test_loads_per_split_per_version(
         self, tmp_path: pytest.TempPathFactory
@@ -1125,7 +1123,7 @@ class TestVariantLoaderRegenVersions:
     def test_legacy_regenerated_file_ignored(
         self, tmp_path: pytest.TempPathFactory
     ) -> None:
-        """Pre-C11 ``*_regenerated.csv`` files are no longer loaded."""
+        """``*_regenerated.csv`` files are not loaded."""
         from usecases_synthetic.lib.variant_loader import _load_em_gold_regenerated
 
         em_dir = tmp_path / "input" / "entitymatching"
@@ -1141,10 +1139,10 @@ class TestVariantLoaderRegenVersions:
         )
         df.to_csv(em_dir / "a_2_b_test_regenerated.csv", index=False)
         out = _load_em_gold_regenerated(em_dir, [("a", "b")])
-        assert out == {}, "legacy *_regenerated.csv files should be ignored under C11"
+        assert out == {}, "*_regenerated.csv files should be ignored"
 
 
-# ---- Source-record pair helpers (S1 fix) ---------------------------------
+# ---- Source-record pair helpers ------------------------------------------
 
 
 class TestSourceRecordPairHelpers:
@@ -1272,14 +1270,13 @@ class TestSourceRecordPairHelpers:
 
 
 class TestLoadPoolPositivesByPair:
-    """Regression: pool CSV id1/id2 are lex-sorted, not source-aligned.
+    """Pool CSV id1/id2 are lex-sorted, not source-aligned.
 
-    Before the rid_to_source orientation fix, ``_load_pool_positives_by_pair``
-    assumed ``id1`` corresponded to ``source_1`` per-row. The pool writer
-    actually canonicalises ``(id1, id2)`` lex-wise via ``canonical_pair``,
-    so when ``id2`` lex-sorts smaller than ``id1`` from src1, the loader
-    placed the wrong id in src1's slot. Downstream this produced regen
-    rows with ``id1`` from src2 — see plan_s1_final.md F6.
+    The pool writer canonicalises ``(id1, id2)`` lex-wise via
+    ``canonical_pair``, so ``_load_pool_positives_by_pair`` must orient
+    each row by source (``rid_to_source``) rather than assume ``id1``
+    belongs to ``source_1``; otherwise, when ``id2`` lex-sorts smaller
+    than ``id1`` from src1, regen rows get ``id1`` from src2.
     """
 
     def _write_pool(
@@ -1743,15 +1740,15 @@ class TestApplyKnob02:
         # Canonical contains the surviving entities (protection preserved).
         assert "k02_ent_000000" in canonical["entity_id"].tolist()
 
-        # Regenerated EM test set has labels "true"/"false" only. Under
-        # C11 (plan_revision.md, 2026-05-22) the regenerator emits two
+        # Regenerated EM test set has labels "true"/"false" only. The
+        # regenerator emits two
         # versions: ``baseline_pruned`` (survivors only — empty here
         # because the fallback spec has no original gold) and
         # ``corner_filled`` (survivors + 100% corner-mined backfill, no
         # easy fills). At K2 easy with no interpolation pool, the only
         # backfill source is the corner-negative pool — so positives
-        # are legitimately absent. Pre-C11 behaviour relied on easy
-        # cluster-positive backfill which has been intentionally removed.
+        # are legitimately absent (there is no easy cluster-positive
+        # backfill).
         assert not regen.empty
         assert set(regen["label"].unique()).issubset({"true", "false"})
         assert "version" in regen.columns
@@ -1771,15 +1768,13 @@ class TestApplyKnob02:
     def test_drop_corner_protection_always_gold_regardless_of_cli_flag(
         self, monkeypatch: pytest.MonkeyPatch, tmp_path: Path
     ) -> None:
-        """Regression for the 2026-05-28 C13-vs-Bug-3 conflict.
-
-        Under plan_revision.md §C13, ``--protection-source`` only
+        """Regression: ``--protection-source`` only
         affects K1/K6 drift protection. K2's existence protection (the
         drop-corner protection set) must STAY gold-only — i.e. fusion
         val/test only — regardless of the CLI flag. Otherwise on
         pool-live domains (products) the K2 dial dies under silver
         mode: the broader protection set covers every pool member, no
-        drops happen, no clusters break, the C13 intact-cluster gate
+        drops happen, no clusters break, the intact-cluster gate
         becomes a noop.
 
         The contract: ``apply_knob_02(protection_source="silver")``
@@ -1856,7 +1851,7 @@ class TestApplyKnob02:
         for call in captured_calls:
             assert call["protection_source"] == "gold", (
                 f"K2 drop-corner protection must always be 'gold' regardless of "
-                f"the CLI flag (C13 design). Got call kwargs: {call!r}"
+                f"the CLI flag. Got call kwargs: {call!r}"
             )
 
     def test_dispatcher_hard_interpolation_creates_valid_entities(
@@ -2208,7 +2203,7 @@ class TestLlmAdjudicator:
 
 
 class TestOpenAIInterpolationClient:
-    """Tests for the K2 OpenAI interpolation client (plan_revision C1)."""
+    """Tests for the K2 OpenAI interpolation client."""
 
     def _build_with_chat(self, monkeypatch: pytest.MonkeyPatch, fake_chat: Any) -> Any:
         from usecases_synthetic.lib import entity_interpolation as ei
@@ -2344,3 +2339,17 @@ class TestOpenAIInterpolationClient:
         out = client("Parents: {undefined}", [{"name": "X"}])
         assert out == {}
         assert called["n"] == 0  # invoke never called
+
+
+def test_ext_jaccard_parallel_path_equals_serial() -> None:
+    """The joblib path (now taken from 256 labels on, was 2000)
+    returns exactly the serial result, order included."""
+    from usecases_synthetic.lib.niche_metrics import lexical_extended_jaccard_neighbours
+
+    words = ["ssd", "nvme", "samsung", "evo", "plus", "pro", "1tb", "2tb", "usb", "flash", "drive",
+             "geforce", "rtx", "4070", "super", "gaming", "oc", "kingston", "fury", "ddr5", "black"]
+    rnd = __import__("random").Random(3)
+    labels = [" ".join(rnd.choice(words) for _ in range(rnd.randint(3, 12))) for _ in range(60)]
+    serial = lexical_extended_jaccard_neighbours(labels, top_k=5, parallel_min_n=10**9)
+    parallel = lexical_extended_jaccard_neighbours(labels, top_k=5, parallel_min_n=0)
+    assert parallel == serial

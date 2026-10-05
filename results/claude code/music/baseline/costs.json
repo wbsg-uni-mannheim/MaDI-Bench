@@ -1,0 +1,110 @@
+{
+  "auth_mode": "subscription",
+  "billing_basis": "subscription",
+  "billed_solver_usd": null,
+  "billing_note": "Not an invoice. Subscription allowance is not a dollar balance. Zero extra solver charges requires included usage and usage credits disabled. No API-key fallback is configured; auxiliary APIs are billed separately.",
+  "cli_api_equivalent_usd": 3.578873399999999,
+  "standard_api_equivalent_usd_range": [
+    3.578873,
+    3.578873
+  ],
+  "estimate_note": "Range reflects unknown cache-write TTL; no fast/residency surcharges included.",
+  "usage": {
+    "input_tokens": 112,
+    "cache_creation_input_tokens": 142915,
+    "cache_read_input_tokens": 5175527,
+    "output_tokens": 70000,
+    "output_tokens_details": {
+      "thinking_tokens": 25782
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 142915,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 11,
+        "cache_read_input_tokens": 157024,
+        "cache_creation_input_tokens": 383,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 383
+        },
+        "type": "message",
+        "model": null
+      }
+    ],
+    "speed": "standard"
+  },
+  "models": {
+    "claude-opus-5-5": {
+      "usage": {
+        "inputTokens": 112,
+        "outputTokens": 70000,
+        "cacheReadInputTokens": 5175527,
+        "cacheCreationInputTokens": 142915,
+        "webSearchRequests": 0,
+        "costUSD": 3.578873399999999,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 25782,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      },
+      "cli_estimate_usd": 3.578873399999999,
+      "standard_api_equivalent_usd_range": [
+        3.578873,
+        3.578873
+      ]
+    }
+  },
+  "pricing_snapshot": {
+    "date": "2026-09-23",
+    "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "basis": "standard global API list prices, USD per million tokens",
+    "models": {
+      "claude-opus-5-5": [
+        4.0,
+        20.0,
+        0.2,
+        5.0,
+        8.0
+      ],
+      "claude-sonnet-5": [
+        2.0,
+        10.0,
+        0.2,
+        2.5,
+        4.0
+      ],
+      "claude-haiku-4-5-20251001": [
+        1.0,
+        5.0,
+        0.1,
+        1.25,
+        2.0
+      ]
+    },
+    "columns": [
+      "input",
+      "output",
+      "cache_read",
+      "cache_write_5m",
+      "cache_write_1h"
+    ]
+  },
+  "auxiliary_api_estimate_usd": 0.0,
+  "auxiliary_breakdown": {
+    "brokers": {},
+    "embeddings_proxy": 0.0
+  },
+  "complete": true
+}

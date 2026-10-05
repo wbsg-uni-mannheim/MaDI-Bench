@@ -1,9 +1,7 @@
 # Knob 04 — Per-entity Source Coverage Skew — Products
 #
-# Per plan_s1_scale.md "Per-domain specifics": products has up to 4
-# sources. Histogram is 4-bucket; companies has 3-bucket. K4 may need
-# lower relative intensities at hard given the larger source count;
-# S13 will recalibrate.
+# Products has 4 sources, so the histogram is 4-bucket (companies:
+# 3-bucket).
 
 domain: products
 source_count: 4
@@ -44,7 +42,7 @@ within_source_duplicate_rate:
 
 singleton_cap_hard: 0.60
 
-# R10-E: maximum fraction of any single source's rows K4 may demote.
+# Maximum fraction of any single source's rows K4 may demote.
 # Without this cap the conflict-ranking concentrates demotions on the
 # EM-anchor source (products_1 lost ~79% of its rows at hard), silently
 # deleting EM-gold edges that are NOT regenerated post-K4. 0.40 = at most
@@ -58,8 +56,8 @@ delta_softening_step: 0.05
 # declared for completeness but unused unless fabrication_mode: llm_primary.
 fabrication_mode: paraphrase_only
 
-# Default model gpt-5.4-mini for cost. Ask user before each K4 run
-# whether to bump to gpt-5.4 (invalidates the on-disk LLM cache).
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the on-disk LLM cache.
 llm_prompt_version: v1
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

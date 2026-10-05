@@ -1,0 +1,28 @@
+{
+  "case": "products_base",
+  "data_dir": "p3_products_replay/tasks/base/runtime/data",
+  "schema": "p3_products_replay/tasks/base/runtime/schemamatching/target_schema.json",
+  "fusion_dir": "p3_products_replay/tasks/base/runtime/fusion",
+  "output_dir": "p3_products_replay/output",
+  "pairs": [
+    {
+      "left": "products_1",
+      "right": "products_2",
+      "test_set": "p3_products_replay/tasks/base/runtime/entitymatching/products_1_2_products_2_test.csv"
+    },
+    {
+      "left": "products_1",
+      "right": "products_3",
+      "test_set": "p3_products_replay/tasks/base/runtime/entitymatching/products_1_2_products_3_test.csv"
+    },
+    {
+      "left": "products_1",
+      "right": "products_4",
+      "test_set": "p3_products_replay/tasks/base/runtime/entitymatching/products_1_2_products_4_test.csv"
+    }
+  ],
+  "entitymatching_tests_strict": true,
+  "excluded_columns": [
+    "cluster_id"
+  ]
+}

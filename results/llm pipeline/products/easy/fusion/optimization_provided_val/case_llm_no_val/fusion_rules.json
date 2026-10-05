@@ -12,17 +12,15 @@
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
+    "color": {
       "kwargs": {},
       "resolver": "voting"
     },
-    "color": {
-      "kwargs": {},
-      "resolver": "most_complete"
-    },
     "description": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "form_factor": {
       "kwargs": {},
@@ -34,7 +32,7 @@
     },
     "interface_type": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "voting"
     },
     "length_mm": {
       "kwargs": {},
@@ -42,7 +40,7 @@
     },
     "memory_type": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "voting"
     },
     "model": {
       "kwargs": {},
@@ -58,11 +56,11 @@
     },
     "priceCurrency": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "voting"
     },
     "product_type": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "voting"
     },
     "read_speed_mb_s": {
       "kwargs": {},
@@ -79,10 +77,6 @@
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
-    },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "most_complete"
     },
     "url": {
       "kwargs": {},

@@ -15,7 +15,7 @@ At **hard** level, the dispatcher additionally runs LLM entity
 interpolation to generate near-twin entities from dense clusters.
 
 See ``knobs/knob_02_niche_density.md`` for the full specification and
-``plans/module_09_knob_02.md`` for module-level acceptance criteria.
+``usecases_synthetic/tests/test_knob_02.py`` for module-level acceptance tests.
 
 Usage
 -----
@@ -52,6 +52,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import hashlib
 import logging
 import os
 import sys
@@ -96,6 +97,7 @@ from usecases_synthetic.lib.domain_config import (
     data_root_for_domain,
     load_domain_config,
     resolve_cache_domain,
+    task_dir,
 )
 from usecases_synthetic.lib.entity_interpolation import (
     InterpolatedEntity,
@@ -211,8 +213,7 @@ def _load_original_split_targets(
         when ``label.lower() == "true"``.
     """
     em_dir = (
-        (data_root_for_domain(domain) or USECASES_DIR)
-        / domain
+        task_dir(domain, root=data_root_for_domain(domain) or USECASES_DIR)
         / "input"
         / "entitymatching"
     )
@@ -275,7 +276,7 @@ def _load_pool_positives_by_pair(
 
     Reads ``usecases_synthetic/pools/<domain>/pooled_positives.csv`` —
     the consolidated pool of discovered positives that goes beyond the
-    hand-curated EM gold (see ``plan.md`` step 4). Each row carries
+    hand-curated EM gold (see ``scripts/build_pool.py``). Each row carries
     ``source_1`` / ``source_2`` columns which label the *pair*, not the
     per-id source: ``id1`` / ``id2`` in the CSV are lex-sorted (per
     :func:`canonical_pair`), so ``id1`` does **not** necessarily belong
@@ -597,6 +598,9 @@ def build_canonical_view(
 # ---------------------------------------------------------------------------
 
 
+_EXT_JACCARD_MEMO: dict[tuple, list] = {}
+
+
 def compute_all_neighbourhoods(
     canonical_frame: pd.DataFrame,
     config: dict[str, Any],
@@ -655,12 +659,25 @@ def compute_all_neighbourhoods(
         # embedding metric so all token-overlap signals share the same
         # input surface; the typo-robust inner Levenshtein matcher is
         # what differentiates ext-Jaccard from TF-IDF after the change.
-        ext = lexical_extended_jaccard_neighbours(
-            text_corpus,
-            top_k=top_k,
-            inner_token_threshold=inner_thr,
-            stopwords=stopwords,
+        # Memoised per process: generate_variant --level all runs K2 once per
+        # level on the same base sources (K2 is the first knob), so the corpus
+        # is identical and the (expensive) neighbourhoods are computed once.
+        memo_key = (
+            hashlib.sha256("\x1f".join(map(str, text_corpus)).encode("utf-8")).hexdigest(),
+            top_k, inner_thr, tuple(sorted(stopwords or ())),
         )
+        ext = _EXT_JACCARD_MEMO.get(memo_key)
+        if ext is None:
+            ext = lexical_extended_jaccard_neighbours(
+                text_corpus,
+                top_k=top_k,
+                inner_token_threshold=inner_thr,
+                stopwords=stopwords,
+            )
+            _EXT_JACCARD_MEMO[memo_key] = [list(nb) for nb in ext]
+        else:
+            logger.info("Extended-Jaccard neighbourhoods reused from an earlier level (same corpus)")
+            ext = [list(nb) for nb in ext]    # a fresh copy per level (tuples inside are immutable)
         metric_lists.append(MetricNeighbourhoods(name="ext_jaccard", top_k=ext))
 
     tfidf_matrix = None
@@ -1154,10 +1171,10 @@ def apply_knob_02(
         is_prot = any(rid in expanded_positives for _src, rid in members)
         protection_flags.append(is_prot)
 
-    # Drop-corner-touching operator (step 4i) consults a narrower
+    # Drop-corner-touching operator consults a narrower
     # protection set by design — pool-cluster members are droppable so
     # the operator can move the corner-pair ratio on pool-live domains
-    # (products). Under the plan_revision.md C13 design, K2's existence
+    # (products). Under the intact-cluster design, K2's existence
     # protection is ALWAYS gold (fusion val/test only), independent of
     # the K1/K6 ``protection_source`` flag. ``--protection-source
     # silver`` only changes K1/K6 drift protection; silver-cluster
@@ -1223,8 +1240,7 @@ def apply_knob_02(
 
     # 4. Baseline-driven dispatch.
     #
-    # Per the K2 design (plans/plan_s1_scale.md §R4 K2 review,
-    # 2026-05-06): operator counts are derived from the data, not
+    # Per the K2 design, operator counts are derived from the data, not
     # pinned per-level. We measure the baseline corner-case ratio
     # first, then close the gap to ``target_ratio`` with whichever
     # operator(s) the baseline implies:
@@ -1291,7 +1307,7 @@ def apply_knob_02(
     operator_decision: str
 
     if baseline_ratio > target_ratio + tol:
-        # Step 4i (2026-05-27): drop-corner-touching + non-corner refill.
+        # Drop-corner-touching + non-corner refill.
         # Greedy: rank entities by their share of corner pairs touched,
         # drop until realised ratio crosses target (skip protected
         # entities + skip last-of-collision-group). Each drop pairs with
@@ -1308,8 +1324,7 @@ def apply_knob_02(
             logger.info(
                 "K2: baseline ratio %.3f > target %.3f; non_corner_refill "
                 "disabled or cache absent — falling back to noop "
-                "(reporting baseline as realised). See plan_revision.md "
-                "step 4i.",
+                "(reporting baseline as realised).",
                 baseline_ratio,
                 target_ratio,
             )
@@ -1350,7 +1365,7 @@ def apply_knob_02(
         # corner cases. Heuristic: each interpolation contributes
         # ~`metric_top_k * interp_pair_factor` corner-pair adds after
         # RRF agreement filtering. ``interp_pair_factor`` is a per-
-        # domain config knob (was a hard-coded ``0.5`` until 2026-05-14
+        # domain config knob (was a hard-coded ``0.5`` originally
         # — calibration over music-small showed the optimistic ``0.5``
         # produced a 7-15x under-shoot on the corner-pair gap because
         # post-RRF agreement filtering drops most candidate pairs).
@@ -1469,7 +1484,7 @@ def apply_knob_02(
                 },
             )
 
-    # Provenance for non-corner refill entities (step 4i, 2026-05-27).
+    # Provenance for non-corner refill entities.
     # Paired 1-for-1 with the drops in ``removed_indices`` above; the
     # refill is dissimilar to a low-density anchor of the surviving
     # canonical set.
@@ -1498,7 +1513,7 @@ def apply_knob_02(
             )
 
     # 6. Project removals + interpolations + non-corner refills back to
-    # per-source frames. The non-corner refills (step 4i, 2026-05-27)
+    # per-source frames. The non-corner refills
     # mirror InterpolatedEntity's source-placement contract so they
     # plug into the same _project_to_sources path — NonCornerEntity
     # carries the same entity_id / attributes / source_placements
@@ -1724,7 +1739,7 @@ def apply_knob_02(
     # Keep deterministic list ordering for downstream steps.
     negative_record_pairs: list[tuple[str, str]] = sorted(negative_record_pairs_set)
 
-    # S3: Hard-negative score-margin gate. Only the corner-case
+    # Hard-negative score-margin gate. Only the corner-case
     # negatives need PLM adjudication — the "easy" negatives outside
     # the corner-case set are not promoted as deceptive distractors, so
     # they stay as-is. The gate filters corner-case negatives in place;
@@ -2006,7 +2021,7 @@ def apply_knob_02(
     for key, count in interp_rejection_log.items():
         k2_metrics[f"rejected_{key}"] = int(count)
 
-    # Step 4i: drop-corner + non-corner refill telemetry. Stable
+    # Drop-corner + non-corner refill telemetry. Stable
     # ``drop_corner_`` / ``non_corner_`` prefixes so the
     # ``knob_02_realised.csv`` row carries the new fields even when
     # the legacy interpolate path fired and these dictionaries are
@@ -2030,7 +2045,7 @@ def apply_knob_02(
     # them on knob_02_realised.csv so a 0-drops outcome is immediately
     # attributable to which filter killed the candidates (protected, last
     # collision-group member, isolated singleton, empty-pool tail, or
-    # counterproductive — the Bug 6 guard that skips drops whose removal
+    # counterproductive — the guard that skips drops whose removal
     # would push the realised ratio AWAY from target).
     for skip_key in (
         "protected",
@@ -2222,7 +2237,7 @@ def _run_interpolation(
 
 
 # ---------------------------------------------------------------------------
-# Drop-corner-touching + non-corner refill (step 4i, 2026-05-27)
+# Drop-corner-touching + non-corner refill
 # ---------------------------------------------------------------------------
 
 
@@ -2375,13 +2390,13 @@ def _run_drop_corner_refill(
             skip_counts["empty_pool"] += 1
             continue
 
-        # Step 4i Bug 6 (2026-05-28): skip counterproductive drops —
+        # Skip counterproductive drops —
         # those whose removal pushes the realised ratio AWAY from the
         # target. The greedy ordering puts high-corner candidates first,
         # so once they're exhausted the tail candidates touch mostly
         # non-corner pairs; removing them shrinks ``total`` faster than
         # ``corner`` and the ratio climbs. Verified on products medium
-        # 2026-05-28: without this guard the loop over-drops 12 tail
+        # level: without this guard the loop over-drops 12 tail
         # entities and pushes realised from 0.72 back up to 0.82.
         if new_corner * current_total > current_corner * new_total:
             skip_counts["counterproductive"] += 1
@@ -2633,7 +2648,7 @@ def write_outputs(
 
     # Per-pair per-split per-version regen files — shape mirrors the
     # original EM gold files so downstream users can treat this as a
-    # drop-in benchmark replacement. C11 (2026-05-22) splits each
+    # drop-in benchmark replacement. The regeneration splits each
     # (pair, split) into two parallel versions:
     #   - <pair>_<split>_baseline_pruned.csv  (survivors only)
     #   - <pair>_<split>_corner_filled.csv    (survivors + corner backfill)
@@ -2643,7 +2658,7 @@ def write_outputs(
         logger.info("Regenerated EM DataFrame is empty; no splits to write")
     else:
         # Remove any legacy ``*_regenerated.csv`` files so a fresh K2
-        # regen never leaves pre-C11 single-output files behind.
+        # regen never leaves legacy single-output files behind.
         for stale in em_dir.glob("*_regenerated.csv"):
             stale.unlink()
         grouped = regenerated_em.groupby(["pair_name", "split", "version"], sort=True)
@@ -2717,7 +2732,7 @@ def main() -> None:
             "Protection set for K2 drop-corner-touching operator. 'gold' "
             "(default): EM gold ∪ fusion val/test gold — pool members "
             "droppable. 'silver': also includes all pool-cluster members "
-            "(matches C9 silver-standard semantics)."
+            "(matches the silver-standard semantics)."
         ),
     )
     args = parser.parse_args()
@@ -2754,7 +2769,7 @@ def main() -> None:
             model_id=config.get("llm_model_id", "claude-opus-4-6"),
         )
 
-    # Step 4i (2026-05-27): non-corner refill cache namespace, mirrors
+    # Non-corner refill cache namespace, mirrors
     # the generate_variant.py wiring. Separate cache_dir keeps the
     # non-corner prompt's payloads out of the interpolation cache.
     llm_cache_non_corner: LLMCache | None = None
@@ -2785,7 +2800,7 @@ def main() -> None:
     # ``{parent_records_json}``; the non-corner refill client
     # substitutes ``{reference_records_json}`` (different prompt). On
     # cache miss this populates the cache with real LLM calls
-    # (plan_revision.md §C1 follow-up); without a key, K2 interpolate
+    # (when a key is set); without a key, K2 interpolate
     # falls back to the deterministic blender, and non-corner refill
     # raises RuntimeError("api_client required on cache miss") to
     # surface that the LLM path was needed but unavailable.

@@ -66,7 +66,7 @@
         "maxLength": 80
       },
       "x-pydi-taxonomy": "input/schemamatching/Video_Game_Genres_Taxonomy.csv",
-      "x-pydi-taxonomy-column": "Subgenre Name",
+      "x-pydi-taxonomy-column": "Genre Name",
       "x-pydi-taxonomy-exhaustive": false,
       "examples": [
         [
@@ -106,7 +106,7 @@
       ]
     },
     "criticScore": {
-      "type": "number",
+      "type": "integer",
       "title": "Critic Score",
       "description": "Critic score for the videogame (typically 0-100).",
       "minimum": 0,
@@ -118,6 +118,7 @@
     },
     "userScore": {
       "type": "number",
+      "format": "float",
       "title": "User Score",
       "description": "User score for the videogame (typically 0-10).",
       "minimum": 0,

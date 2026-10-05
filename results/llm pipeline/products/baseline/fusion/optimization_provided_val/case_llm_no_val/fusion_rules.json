@@ -6,19 +6,15 @@
     },
     "bus_type": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "chipset_name": {
       "kwargs": {},
-      "resolver": "voting"
-    },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
     },
     "color": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "voting"
     },
     "description": {
       "kwargs": {
@@ -28,7 +24,7 @@
     },
     "form_factor": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "height_mm": {
       "kwargs": {},
@@ -36,7 +32,7 @@
     },
     "interface_type": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "length_mm": {
       "kwargs": {},
@@ -44,7 +40,7 @@
     },
     "memory_type": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "model": {
       "kwargs": {},
@@ -52,7 +48,7 @@
     },
     "model_number": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "price": {
       "kwargs": {},
@@ -72,7 +68,7 @@
     },
     "storage_connection_type": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete"
     },
     "storage_gb": {
       "kwargs": {},
@@ -82,16 +78,8 @@
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "title_description": {
-      "kwargs": {
-        "separator": ","
-      },
-      "resolver": "union"
-    },
     "url": {
-      "kwargs": {
-        "separator": "|"
-      },
+      "kwargs": {},
       "resolver": "union"
     },
     "vram_gb": {

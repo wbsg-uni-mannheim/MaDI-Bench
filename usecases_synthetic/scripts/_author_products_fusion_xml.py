@@ -19,8 +19,7 @@ The upstream ``usecases/products/`` directory is never modified.
 
 Provenance policy: every canonical-attribute cell is tagged with the
 union of the left + right source ids (``"<id_left>+<id_right>"``).
-This matches the policy described in plan_s1_products.md §"Hard
-blockers" P0.5; the upstream CSV does not record per-cell attribution.
+The upstream CSV does not record per-cell attribution.
 
 ID rewriting: the upstream CSV uses bare-int ``id_left`` / ``id_right``
 and short source labels ``p1`` / ``p2`` / ``p3`` / ``p4``. The
@@ -54,9 +53,10 @@ from usecases_synthetic.lib.domain_config import (  # noqa: E402
     USECASES_DIR,
     data_root_for_domain,
     load_domain_config,
+    task_dir,
 )
 
-UPSTREAM_FUSION_DIR = REPO_ROOT / "usecases" / "products" / "input" / "fusion"
+UPSTREAM_FUSION_DIR = task_dir("products") / "input" / "fusion"
 DOMAIN = "products"
 
 
@@ -64,8 +64,8 @@ def _canonical_attrs() -> tuple[str, ...]:
     """Full canonical attribute scope for the products fusion XML.
 
     Sourced from the products domain config (``attribute_classes``) so the
-    fusion gold always carries the full wide schema (plan_revision R1 /
-    R10-C) and never drifts from the YAML. Was previously a hardcoded
+    fusion gold always carries the full wide schema
+    and never drifts from the YAML. Was previously a hardcoded
     5-tuple (title/brand/description/price/priceCurrency) which silently
     emitted a narrow 6-tag fusion set even though the upstream CSV is fully
     populated across all 19 canonical attributes — the staleness this fix
@@ -87,7 +87,7 @@ logger = logging.getLogger("author_products_fusion_xml")
 def _synthetic_fusion_dir() -> Path:
     """Resolve the synthetic-side fusion dir from the domain YAML."""
     root = data_root_for_domain(DOMAIN) or USECASES_DIR
-    return root / DOMAIN / "input" / "fusion"
+    return task_dir(DOMAIN, root=root) / "input" / "fusion"
 
 
 def _prefix(short_source: str, raw_id: object) -> str:

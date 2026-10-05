@@ -123,7 +123,7 @@ baseline_above_target_rules:
     strategy: shortest
 
 # Games abbreviation table: platforms, ESRB, common publishers/devs.
-# ~40 entries total per the 2026-05-07 K1 sign-off.
+# ~40 entries total.
 abbreviation_table:
   # PlayStation family
   "PlayStation": "PS"
@@ -203,14 +203,13 @@ key_token_skiplist:
 
 key_token_skiplist_global: []
 
-# Hard-path LLM config. Default gpt-5.4-mini per the 2026-05-06
-# LLM-model-default policy; ask user before each K1 hard run whether
-# to bump to gpt-5.4.
-# R10-D 2026-05-29: prompt_version bumped to v2 -- minimum-divergence
-# rule, <UNCHANGED> sentinel escape, per-attribute-class prompt
-# split (primary/key -> short_v2, secondary -> secondary_v2,
-# categorical -> categorical_v2). Cache key under
-# cache/knob_01_paraphrases/<domain>/<level>/ rotates on this bump.
+# Hard-path LLM config. Default model is gpt-5.4-mini. Prompt version
+# v2: minimum-divergence rule, <UNCHANGED> sentinel escape,
+# per-attribute-class prompt split (primary/key -> short_v2,
+# secondary -> secondary_v2, categorical -> categorical_v2). The prompt
+# version and the model id are part of the cache key under
+# cache/knob_01_paraphrases/<domain>/<level>/, so changing either
+# invalidates the cache.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

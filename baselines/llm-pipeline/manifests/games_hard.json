@@ -1,0 +1,26 @@
+{
+  "base_case": "games",
+  "case": "games-augmented-hard",
+  "data_dir": "../../use cases/games/hard/input/data",
+  "entitymatching_dir": "../../use cases/games/hard/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "fusion_dir": "../../use cases/games/hard/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/games/hard",
+  "pairs": [
+    {
+      "left": "dbpedia",
+      "right": "metacritic"
+    },
+    {
+      "left": "dbpedia",
+      "right": "sales",
+      "test_set": "../../use cases/games/hard/input/entitymatching/dbpedia_2_sales_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/games/hard/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/games/hard/input/schemamatching/sm_mapping.csv",
+  "variant": "hard"
+}

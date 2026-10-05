@@ -22,7 +22,7 @@ source_pairs:
   - sales
 - - metacritic
   - dbpedia
-# [metacritic, sales] dropped 2026-05-16 — see games.yaml F11 note.
+# No [metacritic, sales] pair — see the games.yaml source_pairs note.
 attribute_classes:
   name: primary
   platform: key

@@ -69,14 +69,6 @@
     },
     {
       "source_dataset": "products_1",
-      "source_column": "name_and_description",
-      "target_dataset": "target_schema",
-      "target_column": "title_description",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "products_1",
       "source_column": "model_name",
       "target_dataset": "target_schema",
       "target_column": "model",
@@ -272,14 +264,6 @@
       "source_column": "productUrl",
       "target_dataset": "target_schema",
       "target_column": "url",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "products_2",
-      "source_column": "titleAndDescription",
-      "target_dataset": "target_schema",
-      "target_column": "title_description",
       "score": 1.0,
       "label": true
     },
@@ -485,14 +469,6 @@
     },
     {
       "source_dataset": "products_3",
-      "source_column": "TitleDetails",
-      "target_dataset": "target_schema",
-      "target_column": "title_description",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "products_3",
       "source_column": "Model",
       "target_dataset": "target_schema",
       "target_column": "model",
@@ -693,14 +669,6 @@
     },
     {
       "source_dataset": "products_4",
-      "source_column": "name_desc",
-      "target_dataset": "target_schema",
-      "target_column": "title_description",
-      "score": 1.0,
-      "label": true
-    },
-    {
-      "source_dataset": "products_4",
       "source_column": "mdl",
       "target_dataset": "target_schema",
       "target_column": "model",
@@ -849,6 +817,7 @@
     "The mappings array contains positive gold correspondences suitable for SchemaMappingEvaluator.",
     "Known no-match source columns are recorded separately because LLMBasedSchemaMatcher omits null mappings from its result DataFrame.",
     "These mappings cover the raw source-schema files dataset_1.json through dataset_4.json rather than the already-normalized product workflow inputs.",
-    "cluster_id is a benchmark/entity identifier and is dropped before schema matching, so it is not part of the evaluable source schema."
+    "cluster_id (the WDC product-cluster id) is not part of the released sources and not part of the evaluable source schema.",
+    "The combined title+description source columns (name_and_description, titleAndDescription, TitleDetails, name_desc) are not part of the released sources and the target schema has no title_description attribute, so the mapping has no correspondences for them."
   ]
 }

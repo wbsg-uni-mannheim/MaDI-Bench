@@ -1,4 +1,4 @@
-"""Functional tests for :class:`ComEMMatcher` (C2.4b unit a).
+"""Functional tests for :class:`ComEMMatcher`.
 
 Covers the compound two-stage pipeline with stubbed LLM callables so
 tests run deterministically on CPU without any network.
@@ -746,7 +746,7 @@ class TestTwoStagePipeline:
         stage1_prompts = [p for p in stub.calls if "Query Entity:" in p]
         # 5 candidates / 2 per chunk → 3 Stage-1 prompts
         assert len(stage1_prompts) == 3
-        # R12 lives in chunk 2 (indices 13/14 wait actually R10,R11 in chunk 1;
+        # R12 lives in chunk 2 (R10, R11 in chunk 1;
         # R12,R13 in chunk 2; R14 in chunk 3). Only the chunk-2 prompt should
         # see R12, and the stub's `_NAME_TO_ID_RIGHT` lookup does not know
         # about R* synthetic names, so the stub returns "None" for all chunks

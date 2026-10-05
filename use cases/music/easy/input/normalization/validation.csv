@@ -1,0 +1,72 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+mbrainz_10569,discogs,discogs_47891,genre,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_10569,discogs,discogs_47891,release-country,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_10569,musicbrainz,mbrainz_10569,release-country,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,"{""provenance"": [[""10"", ""identity""]]}",58
+mbrainz_1074,discogs,discogs_5112,genre,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_1074,discogs,discogs_5112,release-country,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_1074,musicbrainz,mbrainz_1074,release-country,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,"{""provenance"": [[""10"", ""identity""]]}",58
+mbrainz_10780,discogs,discogs_49037,duration,duration,4729,4729,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_10780,musicbrainz,mbrainz_10780,duration,duration,78:49,4729,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_10780,discogs,discogs_49037,genre,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_10780,discogs,discogs_49037,release-country,release-country,Russia,Russian Federation,knowledge,country_full_name,,2
+mbrainz_10780,musicbrainz,mbrainz_10780,release-country,release-country,Russian Federation,Russian Federation,identity,,"{""provenance"": [[""10"", ""identity""]]}",2
+mbrainz_1160,discogs,discogs_14236,genre,genre,Hip Hop,Hip Hop / Rap,normalization,genre_taxonomy_map,,2
+mbrainz_117,discogs,discogs_251,genre,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_117,discogs,discogs_251,release-country,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,54
+mbrainz_12656,discogs,discogs_58199,duration,duration,2633,2633,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_12656,musicbrainz,mbrainz_12656,duration,duration,43:53,2633,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_12941,lastfm,lastFM_27898,duration,duration,7:37,457,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_14320,discogs,discogs_66932,duration,duration,36:09,2169,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_14648,discogs,discogs_68724,duration,duration,35:12,2112,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1535,discogs,discogs_7506,duration,duration,2707,2707,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1535,musicbrainz,mbrainz_1535,duration,duration,45:07,2707,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_1535,discogs,discogs_7506,genre,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,29
+mbrainz_1576,discogs,discogs_7737,genre,genre,Hip Hop,Hip Hop / Rap,normalization,genre_taxonomy_map,,2
+mbrainz_16115,discogs,discogs_79337,duration,duration,4141,4141,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_16115,musicbrainz,mbrainz_16115,duration,duration,69:01,4141,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_16115,discogs,discogs_79337,release-country,release-country,Russian Federation,Russian Federation,identity,,,2
+mbrainz_16115,musicbrainz,mbrainz_16115,release-country,release-country,Russia,Russian Federation,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",2
+mbrainz_17820,lastfm,lastFM_42755,duration,duration,43:37,2617.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_18926,discogs,discogs_16131,duration,duration,650,650,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_18926,lastfm,lastFM_46450,duration,duration,10:50,650,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_18926,musicbrainz,mbrainz_18926,duration,duration,10:50,650,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",2
+mbrainz_1899,discogs,discogs_91642,name,name,Postcards From the Futureâ€¦ Introducing Be Bop Deluxe,Postcards From the Future... Introducing Be Bop Deluxe,normalization,mojibake+typography,,1
+mbrainz_2421,discogs,discogs_10580,duration,duration,13:35,815,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2451,discogs,discogs_10717,duration,duration,47:08,2828,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3264,discogs,discogs_14145,duration,duration,43:37,2617,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3264,musicbrainz,mbrainz_3264,duration,duration,2617,2617,identity,,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""identity""]]}",1
+mbrainz_358,discogs,discogs_2785,duration,duration,11:41,701,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3736,discogs,discogs_16005,duration,duration,52:48,3168,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3806,discogs,discogs_16289,duration,duration,129:24,7764,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3841,discogs,discogs_7627,release-country,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_3841,musicbrainz,mbrainz_3841,release-country,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",54
+mbrainz_3860,discogs,discogs_16530,duration,duration,358,358,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3860,musicbrainz,mbrainz_3860,duration,duration,5:58,358,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_3860,discogs,discogs_16530,release-country,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_3860,musicbrainz,mbrainz_3860,release-country,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",54
+mbrainz_435,discogs,discogs_1635,duration,duration,865,865,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_435,musicbrainz,mbrainz_435,duration,duration,14:25,865,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_4940,discogs,discogs_107536,name,name,Sheâ€™s Got Issues,She's Got Issues,normalization,mojibake+typography,,1
+mbrainz_4940,musicbrainz,mbrainz_4940,name,name,She's Got Issues,She's Got Issues,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_4965,discogs,discogs_21313,duration,duration,1742,1742,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_4965,musicbrainz,mbrainz_4965,duration,duration,29:02,1742,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_4965,discogs,discogs_21313,genre,genre,Reggae,Reggae / Dub,normalization,genre_taxonomy_map,,1
+mbrainz_5639,discogs,discogs_24571,duration,duration,675,675,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5639,musicbrainz,mbrainz_5639,duration,duration,11:15,675,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_6492,discogs,discogs_28502,duration,duration,67:01,4021,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_6492,musicbrainz,mbrainz_6492,duration,duration,4021,4021,identity,,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""identity""]]}",1
+mbrainz_6527,musicbrainz,mbrainz_6527,tracks,tracks,"['Sixteen Again', 'Nothing Left', 'Promises', 'Lipstick', 'Do It', 'Isolation', 'Palm of Your Hand', 'Ever Fallen in Love (With Someone You Shouldnâ€™tâ€™ve)', 'Energy', 'Libertine Angel', 'Last to Know', 'Playing for Time', 'Totally From the Heart', 'I Donâ€™t Mind', 'Turn of the Screw', 'Thunder of Hearts', 'Fiction Romance', 'Love Battery', 'Harmony in My Head', 'Timeâ€™s Up / What Do I Get?']","[""Sixteen Again"", ""Nothing Left"", ""Promises"", ""Lipstick"", ""Do It"", ""Isolation"", ""Palm of Your Hand"", ""Ever Fallen in Love (With Someone You Shouldn’t’ve)"", ""Energy"", ""Libertine Angel"", ""Last to Know"", ""Playing for Time"", ""Totally From the Heart"", ""I Don’t Mind"", ""Turn of the Screw"", ""Thunder of Hearts"", ""Fiction Romance"", ""Love Battery"", ""Harmony in My Head"", ""Time’s Up / What Do I Get?""]",normalization,mojibake,,1
+mbrainz_6717,discogs,discogs_29552,duration,duration,44:13,2653.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_7166,musicbrainz,mbrainz_7166,duration,duration,11:05,665.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_739,musicbrainz,mbrainz_739,tracks,tracks,"['4Â° C', 'Diamond Head', 'Flicker', 'One Wing', 'Honeybee Whisper Mind Mirror', 'Decalogue', 'Black or Color', 'Crystal Mist', 'Tears of Nymph', 'Girltree', 'Simple Life']","[""4° C"", ""Diamond Head"", ""Flicker"", ""One Wing"", ""Honeybee Whisper Mind Mirror"", ""Decalogue"", ""Black or Color"", ""Crystal Mist"", ""Tears of Nymph"", ""Girltree"", ""Simple Life""]",normalization,mojibake,,1
+mbrainz_745,discogs,discogs_3431,release-country,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,58
+mbrainz_8518,discogs,discogs_38301,duration,duration,47:10,2830,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_853,discogs,discogs_3949,duration,duration,1241,1241,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_853,musicbrainz,mbrainz_853,duration,duration,20:41,1241,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_8813,discogs,discogs_39611,duration,duration,69:11,4151,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_9183,lastfm,lastFM_19537,duration,duration,25:17,1517,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_9183,lastfm,lastFM_19537,name,name,Kaputt und glÃƒÂ¼cklich,Kaputt und glücklich,normalization,mojibake,"{""provenance"": [[""6"", ""cleanup""]]}",1
+mbrainz_9183,musicbrainz,mbrainz_9183,name,name,Kaputt und glÃ¼cklich,Kaputt und glücklich,normalization,mojibake,,1
+mbrainz_94,discogs,discogs_212,duration,duration,940,940,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_94,musicbrainz,mbrainz_94,duration,duration,15:40,940,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_9508,discogs,discogs_42713,duration,duration,37:08,2228,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1

@@ -1,0 +1,2527 @@
+{
+  "domain": "companies",
+  "meta": {
+    "written_at": "2026-09-26T19:43:00.919266+00:00",
+    "with_llm": true,
+    "committee_versions": {
+      "fusion": "fusion_committee.yaml@6f2bb9461525",
+      "sm": "sm_committee.yaml@cb4a6847ac9e",
+      "em_blocking": "em_blocking_committee.yaml@042119f4d1bf",
+      "em_matching": "em_matching_committee.yaml@f0bb40e2173f"
+    },
+    "total_runtime_s": 90.31,
+    "fusion_input_member": "",
+    "stage_sources": {
+      "stages": {
+        "em_blocking": {
+          "source": "baseline_metrics.json of the June 2026 committee run of the companies baseline",
+          "source_sha256": "3a1096dd34b9759dc73e236e75e22f4beb839a7d7418585b014007e6be0856a9",
+          "measured_by_run": "June 2026 committee run of the companies baseline",
+          "written_at": "2026-06-06T02:07:00.364979+00:00",
+          "committee_version": "em_blocking_committee.yaml@042119f4d1bf",
+          "with_llm": true,
+          "block_sha256": "50acb949deefd5ca825dfe41248a67db2e7e980ddf677b0bee0875fee6adaf8b",
+          "roster": [
+            "token_blocker",
+            "standard_blocker",
+            "embedding_blocker",
+            "sorted_neighbourhood_blocker",
+            "bm25_blocker",
+            "sc_block"
+          ]
+        },
+        "em_matching": {
+          "source": "baseline_metrics.json of the June 2026 committee run of the companies baseline",
+          "source_sha256": "3a1096dd34b9759dc73e236e75e22f4beb839a7d7418585b014007e6be0856a9",
+          "measured_by_run": "June 2026 committee run of the companies baseline",
+          "written_at": "2026-06-06T02:07:00.364979+00:00",
+          "committee_version": "em_matching_committee.yaml@f0bb40e2173f",
+          "with_llm": true,
+          "block_sha256": "8444dbf9c5daaad4e78701c56175ae1f024a990da32c41aeae24faf80606f763",
+          "roster": [
+            "ditto_plm",
+            "magellan",
+            "llm_matcher",
+            "comem"
+          ]
+        },
+        "norm": {
+          "scoring_surface": "normalization_test_set",
+          "sources": {
+            "committee_norm.json": {
+              "path": "committee_norm.json (output of measure.py)",
+              "sha256": "e5aaaab09c5e3ff62910f07ab64df50a524b74040e4782793b3ba0a9de6dd86d",
+              "created_utc": "2026-09-28T13:06:47.133503+00:00"
+            },
+            "llm_member.json": {
+              "path": "llm_member.json (output of llm_member.py)",
+              "sha256": "49525d38d6cafcc33b20c00f0f1373220892b44f4e0d15f79e0b652f5f1b9db9",
+              "created_utc": "2026-09-28T14:44:12.570337+00:00"
+            }
+          },
+          "block_sha256": "e2cc660093422b1f87ded06cd6534cbe10efb7b3af699b726182705deb959fbd",
+          "normalization_committee_yaml": "normalization_committee_companies.yaml@d6f28b520075",
+          "scoring_note": "the normalization score is the accuracy on the normalization test set, not schema conformance",
+          "committee_versions_note": "no committee_versions.norm entry: the block is not a committee-runner output; validate_variant runs a variant's norm stage only once measure_baseline has recorded committee_versions.norm for the base task, so that the variant and base norm blocks share a scoring surface"
+        }
+      },
+      "note": "em_blocking / em_matching: blocks of the June 2026 committee run listed under stages; norm: accuracies on the normalization test set (see per_stage.norm.source)",
+      "em_validity_check": "the test pairs and labels that the June 2026 committee run scored equal those of the shipped EM test files; the numbers of gold positives that the em_blocking / em_matching blocks scored against equal those of the shipped test files"
+    }
+  },
+  "per_stage": {
+    "sm": {
+      "stage": "sm",
+      "domain": "companies",
+      "level": "baseline",
+      "runtime_s": 70.1813940256834,
+      "roster": [
+        "duplicate_majority",
+        "label_jw",
+        "instance_tf_cosine",
+        "embedding_sbert",
+        "llm_openai",
+        "magneto_slm_llm",
+        "coma_hybrid"
+      ],
+      "aggregated": {
+        "macro_f1": 0.6855364097600123,
+        "min_f1": 0.17391304347826084,
+        "max_f1": 1.0,
+        "macro_precision": 0.9235433303756285,
+        "macro_recall": 0.6326530612244898,
+        "best_member_name": "llm_openai",
+        "best_member_f1": 1.0
+      },
+      "per_attribute": {
+        "dbpedia.entity_uri": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.org_name": {
+          "duplicate_majority": 1.0,
+          "label_jw": 1.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.established": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.nation": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.headquarters": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.sector": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.keypeople_name": {
+          "duplicate_majority": 0.0,
+          "label_jw": 1.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.total_assets_val": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "dbpedia.annual_income": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 0.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "forbes.forbes_url": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "forbes.company": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "forbes.region": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "forbes.business_segment": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "forbes.asset_value": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 1.0,
+          "any_correct": 1.0
+        },
+        "forbes.sales_figure": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 0.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_1": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 0.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_2": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_3": {
+          "duplicate_majority": 1.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_4": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_5": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 0.0,
+          "embedding_sbert": 0.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        },
+        "fullcontact.Attribute_6": {
+          "duplicate_majority": 0.0,
+          "label_jw": 0.0,
+          "instance_tf_cosine": 1.0,
+          "embedding_sbert": 1.0,
+          "llm_openai": 1.0,
+          "magneto_slm_llm": 1.0,
+          "coma_hybrid": 0.0,
+          "any_correct": 1.0
+        }
+      },
+      "per_partition": {
+        "dbpedia": {
+          "macro_f1": 0.7415250163370465,
+          "n_columns": 9.0
+        },
+        "forbes": {
+          "macro_f1": 0.6704081632653062,
+          "n_columns": 6.0
+        },
+        "fullcontact": {
+          "macro_f1": 0.5727272727272726,
+          "n_columns": 6.0
+        }
+      },
+      "per_member": {
+        "duplicate_majority": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "tp": 14.0,
+            "fp": 0.0,
+            "fn": 7.0
+          },
+          "runtime_s": 4.728041227906942,
+          "notes": {
+            "signal_type": "duplicate",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "label_jw": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.09523809523809523,
+            "f1": 0.17391304347826084,
+            "tp": 2.0,
+            "fp": 0.0,
+            "fn": 19.0
+          },
+          "runtime_s": 0.009068593382835388,
+          "notes": {
+            "signal_type": "label",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "instance_tf_cosine": {
+          "metrics": {
+            "precision": 0.8333333333333334,
+            "recall": 0.7142857142857143,
+            "f1": 0.7692307692307692,
+            "tp": 15.0,
+            "fp": 3.0,
+            "fn": 6.0
+          },
+          "runtime_s": 0.3157910564914346,
+          "notes": {
+            "signal_type": "instance",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "embedding_sbert": {
+          "metrics": {
+            "precision": 0.7619047619047619,
+            "recall": 0.7619047619047619,
+            "f1": 0.7619047619047619,
+            "tp": 16.0,
+            "fp": 5.0,
+            "fn": 5.0
+          },
+          "runtime_s": 5.757099878042936,
+          "notes": {
+            "signal_type": "embedding",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "llm_openai": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 21.0,
+            "fp": 0.0,
+            "fn": 0.0
+          },
+          "runtime_s": 4.301962971687317,
+          "notes": {
+            "signal_type": "llm",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "magneto_slm_llm": {
+          "metrics": {
+            "precision": 0.8695652173913043,
+            "recall": 0.9523809523809523,
+            "f1": 0.909090909090909,
+            "tp": 20.0,
+            "fp": 3.0,
+            "fn": 1.0
+          },
+          "runtime_s": 45.451265670359135,
+          "notes": {
+            "signal_type": "llm",
+            "sm_input": "shipped_raw_20260926"
+          }
+        },
+        "coma_hybrid": {
+          "metrics": {
+            "precision": 1.0,
+            "recall": 0.23809523809523808,
+            "f1": 0.3846153846153846,
+            "tp": 5.0,
+            "fp": 0.0,
+            "fn": 16.0
+          },
+          "runtime_s": 9.597161747515202,
+          "notes": {
+            "signal_type": "hybrid",
+            "sm_input": "shipped_raw_20260926"
+          }
+        }
+      },
+      "per_blocker": {}
+    },
+    "norm": {
+      "stage": "norm",
+      "domain": "companies",
+      "level": "baseline",
+      "scoring_surface": "normalization_test_set",
+      "metric": "accuracy",
+      "runtime_s": null,
+      "roster": [
+        "rule_per_attribute_optimal",
+        "llm_only",
+        "passthrough"
+      ],
+      "aggregated": {
+        "mean_accuracy": 0.358695652173913,
+        "max_accuracy": 0.43478260869565216,
+        "min_accuracy": 0.29347826086956524,
+        "mean_accuracy_transformations": 0.12307692307692308,
+        "max_accuracy_transformations": 0.2,
+        "best_member_accuracy": 0.43478260869565216,
+        "best_member_name": "llm_only",
+        "n_members": 3,
+        "n_cells": 92,
+        "macro_f1": 0.358695652173913,
+        "max_f1": 0.43478260869565216,
+        "min_f1": 0.29347826086956524,
+        "best_member_f1": 0.43478260869565216
+      },
+      "per_attribute": {
+        "country": {
+          "rule_per_attribute_optimal": 0.6060606060606061,
+          "llm_only": 0.8181818181818182,
+          "passthrough": 0.45454545454545453,
+          "n_cells": 33,
+          "best_member_accuracy": 0.8181818181818182
+        },
+        "industry": {
+          "rule_per_attribute_optimal": 0.19298245614035087,
+          "llm_only": 0.19298245614035087,
+          "passthrough": 0.19298245614035087,
+          "n_cells": 57,
+          "best_member_accuracy": 0.19298245614035087
+        },
+        "name": {
+          "rule_per_attribute_optimal": 0.5,
+          "llm_only": 1.0,
+          "passthrough": 0.5,
+          "n_cells": 2,
+          "best_member_accuracy": 1.0
+        }
+      },
+      "per_partition": {},
+      "per_member": {
+        "rule_per_attribute_optimal": {
+          "metrics": {
+            "accuracy": 0.34782608695652173,
+            "accuracy_transformations": 0.16923076923076924,
+            "n_cells": 92,
+            "n_correct": 32,
+            "n_transformation_cells": 65,
+            "n_transformations_correct": 11,
+            "record_coverage": 1.0,
+            "macro_f1": 0.34782608695652173,
+            "f1": 0.34782608695652173,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 27,
+                "correct": 21,
+                "accuracy": 0.7778
+              },
+              "normalization": {
+                "n": 65,
+                "correct": 11,
+                "accuracy": 0.1692
+              },
+              "transformations": {
+                "n": 65,
+                "correct": 11,
+                "accuracy": 0.1692
+              }
+            },
+            "selection_map": {
+              "assets": "number_locale",
+              "city": "text_clean",
+              "country": "country_iso",
+              "founded": "date_iso",
+              "id": "_passthrough",
+              "name": "text_clean",
+              "revenue": "number_locale"
+            },
+            "eligible_attributes": [
+              "assets",
+              "city",
+              "country",
+              "founded",
+              "id",
+              "name",
+              "revenue"
+            ],
+            "rule_scope_of_test_attributes": {
+              "country": "country_iso",
+              "industry": "not eligible -> passthrough",
+              "name": "text_clean"
+            },
+            "lock_written_this_level": true,
+            "source": "committee_norm.json results.companies_base.checkout.members.rule_per_attribute_optimal"
+          }
+        },
+        "llm_only": {
+          "metrics": {
+            "accuracy": 0.43478260869565216,
+            "accuracy_transformations": 0.2,
+            "n_cells": 92,
+            "n_correct": 40,
+            "n_transformation_cells": 65,
+            "n_transformations_correct": 13,
+            "record_coverage": 1.0,
+            "macro_f1": 0.43478260869565216,
+            "f1": 0.43478260869565216,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 27,
+                "correct": 27,
+                "accuracy": 1.0
+              },
+              "normalization": {
+                "n": 65,
+                "correct": 13,
+                "accuracy": 0.2
+              },
+              "transformations": {
+                "n": 65,
+                "correct": 13,
+                "accuracy": 0.2
+              }
+            },
+            "model_name": "gpt-5.4-mini",
+            "llm_scope": {
+              "n": 35,
+              "correct": 29,
+              "accuracy": 0.8286
+            },
+            "api_errors_open": 0,
+            "source": "llm_member.json scores[task=companies_base]",
+            "best_member": true
+          }
+        },
+        "passthrough": {
+          "metrics": {
+            "accuracy": 0.29347826086956524,
+            "accuracy_transformations": 0.0,
+            "n_cells": 92,
+            "n_correct": 27,
+            "n_transformation_cells": 65,
+            "n_transformations_correct": 0,
+            "record_coverage": 1.0,
+            "macro_f1": 0.29347826086956524,
+            "f1": 0.29347826086956524,
+            "scoring_surface": "normalization_test_set"
+          },
+          "runtime_s": null,
+          "notes": {
+            "per_category": {
+              "identity": {
+                "n": 27,
+                "correct": 27,
+                "accuracy": 1.0
+              },
+              "normalization": {
+                "n": 65,
+                "correct": 0,
+                "accuracy": 0.0
+              },
+              "transformations": {
+                "n": 65,
+                "correct": 0,
+                "accuracy": 0.0
+              }
+            },
+            "source": "committee_norm.json results.companies_base.checkout.members.passthrough"
+          }
+        }
+      },
+      "metric_aliases": {
+        "per_member.<m>.metrics.macro_f1 / f1": "= accuracy",
+        "aggregated.macro_f1": "= mean_accuracy",
+        "aggregated.max_f1 / best_member_f1": "= max_accuracy",
+        "aggregated.min_f1": "= min_accuracy",
+        "why": "the generator's readers (build_statistics, analyze_monotonicity / lib.monotonicity, the report writers) key the norm stage on macro_f1; on this surface the values are cell accuracies on the normalization test set, not F1"
+      },
+      "source": {
+        "measurement": "normalization test set of the task (split=test, list_form), one accuracy per member = correct cells / all test cells (identity + transformations); the values behind the paper's Table 12 Norm. mean and ceiling",
+        "test_set": "use cases/companies/base/input/normalization/ (test split; test_csv_sha256 1d35401aa901faf09fe9b7707fbccaed7959c1ed739ce63d9aa82bc06aa9b24c)",
+        "normalization_committee_yaml": "normalization_committee_companies.yaml@d6f28b520075",
+        "files": {
+          "committee_norm.json": {
+            "path": "committee_norm.json (output of measure.py)",
+            "sha256": "e5aaaab09c5e3ff62910f07ab64df50a524b74040e4782793b3ba0a9de6dd86d",
+            "created_utc": "2026-09-28T13:06:47.133503+00:00",
+            "script": "measure.py (same measurement as reproduction/tables/table12/normalization/measure.py)",
+            "scorer": "madi_bench.evaluation.normalization_score.score_normalization (split=test, list_form)",
+            "members": [
+              "rule_per_attribute_optimal",
+              "passthrough"
+            ],
+            "mode": "shipped lock, else chosen by the committee at the first level (Table 12 setting)"
+          },
+          "llm_member.json": {
+            "path": "llm_member.json (output of llm_member.py)",
+            "sha256": "49525d38d6cafcc33b20c00f0f1373220892b44f4e0d15f79e0b652f5f1b9db9",
+            "created_utc": "2026-09-28T14:44:12.570337+00:00",
+            "script": "llm_member.py (same measurement as reproduction/tables/table12/normalization/llm_member.py)",
+            "member": "llm_only (LLMCanonicalizer, normalization committee)",
+            "api": {
+              "responses": 481,
+              "usd_actual": 0.2137,
+              "errors_open": 0
+            },
+            "members": [
+              "llm_only"
+            ]
+          }
+        },
+        "task_key": "companies_base"
+      }
+    },
+    "em_blocking": {
+      "stage": "em_blocking",
+      "domain": "companies",
+      "level": "baseline",
+      "runtime_s": 44.43501103599556,
+      "roster": [
+        "token_blocker",
+        "standard_blocker",
+        "embedding_blocker",
+        "sorted_neighbourhood_blocker",
+        "bm25_blocker",
+        "sc_block"
+      ],
+      "aggregated": {
+        "macro_pair_recall": 0.9876153017745938,
+        "min_pair_recall": 0.9734513274336283,
+        "max_pair_recall": 1.0,
+        "macro_reduction_ratio": 0.9860786507205583,
+        "macro_pair_recall_baseline_model_on_baseline_test": 0.9876153017745938,
+        "macro_pair_recall_baseline_model_on_regen_test": 0.9876153017745938,
+        "macro_pair_recall_variant_model_on_baseline_test": 0.9876153017745938,
+        "macro_pair_recall_variant_model_on_regen_test": 0.9876153017745938,
+        "best_member_name": "standard_blocker",
+        "best_member_pair_recall": 0.9734513274336283,
+        "best_member_reduction_ratio": 0.998476690389586,
+        "recall_floor": 0.97
+      },
+      "per_attribute": {},
+      "per_partition": {
+        "forbes_dbpedia": {
+          "winner_blocker_pair_recall": 1.0,
+          "winner_blocker_reduction_ratio": 0.9985025780862667,
+          "recall_floor_cleared": 1.0
+        },
+        "forbes_fullcontact": {
+          "winner_blocker_pair_recall": 0.9734513274336283,
+          "winner_blocker_reduction_ratio": 0.9923614707405489,
+          "recall_floor_cleared": 1.0
+        }
+      },
+      "per_member": {
+        "token_blocker": {
+          "metrics": {
+            "pair_recall": 0.9787891557803061,
+            "pair_recall_val": 0.9574383949383949,
+            "reduction_ratio": 0.9929615732483111,
+            "candidate_count": 79680.5,
+            "gold_positives": 88.0,
+            "covered": 86.0,
+            "missed": 2.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9787891557803061,
+            "pair_recall_baseline_model_on_regen_test": 0.9787891557803061,
+            "pair_recall_variant_model_on_baseline_test": 0.9787891557803061,
+            "pair_recall_variant_model_on_regen_test": 0.9787891557803061,
+            "selection_rate": 0.5,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.09421382000437006,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 0.9841269841269841,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 62.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9935616757560733,
+                "candidate_count": 129861.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.0633696629665792,
+                "pair_recall_baseline_model_on_baseline_test": 0.9841269841269841,
+                "pair_recall_baseline_model_on_regen_test": 0.9841269841269841,
+                "pair_recall_variant_model_on_baseline_test": 0.9841269841269841,
+                "pair_recall_variant_model_on_regen_test": 0.9841269841269841,
+                "reduction_ratio_baseline_model": 0.9935616757560733,
+                "reduction_ratio_variant_model": 0.9935616757560733,
+                "candidate_count_baseline_model": 129861.0,
+                "candidate_count_variant_model": 129861.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9734513274336283,
+                "pair_recall_val": 0.9437229437229437,
+                "gold_positives": 113.0,
+                "covered": 110.0,
+                "missed": 3.0,
+                "reduction_ratio": 0.9923614707405489,
+                "candidate_count": 29500.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.030844157037790865,
+                "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+                "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+                "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+                "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+                "reduction_ratio_baseline_model": 0.9923614707405489,
+                "reduction_ratio_variant_model": 0.9923614707405489,
+                "candidate_count_baseline_model": 29500.0,
+                "candidate_count_variant_model": 29500.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "standard_blocker": {
+          "metrics": {
+            "pair_recall": 0.9734513274336283,
+            "pair_recall_val": 0.9396436896436897,
+            "reduction_ratio": 0.998476690389586,
+            "candidate_count": 18093.0,
+            "gold_positives": 88.0,
+            "covered": 85.0,
+            "missed": 3.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+            "selection_rate": 0.5,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.06536091701127589,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9615384615384616,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9985025780862667,
+                "candidate_count": 30203.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.04751744499662891,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9985025780862667,
+                "reduction_ratio_variant_model": 0.9985025780862667,
+                "candidate_count_baseline_model": 30203.0,
+                "candidate_count_variant_model": 30203.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9469026548672567,
+                "pair_recall_val": 0.9177489177489178,
+                "gold_positives": 113.0,
+                "covered": 107.0,
+                "missed": 6.0,
+                "reduction_ratio": 0.9984508026929052,
+                "candidate_count": 5983.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.017843472014646977,
+                "pair_recall_baseline_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_baseline_model_on_regen_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_regen_test": 0.9469026548672567,
+                "reduction_ratio_baseline_model": 0.9984508026929052,
+                "reduction_ratio_variant_model": 0.9984508026929052,
+                "candidate_count_baseline_model": 5983.0,
+                "candidate_count_variant_model": 5983.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "embedding_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9639319014319014,
+            "reduction_ratio": 0.984574411135591,
+            "candidate_count": 100000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 14.602706048986875,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "embedding",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9950421417947447,
+                "candidate_count": 100000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 9.046309950004797,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9950421417947447,
+                "reduction_ratio_variant_model": 0.9950421417947447,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9567099567099567,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9741066804764371,
+                "candidate_count": 100000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 5.556396098982077,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9741066804764371,
+                "reduction_ratio_variant_model": 0.9741066804764371,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sorted_neighbourhood_blocker": {
+          "metrics": {
+            "pair_recall": 0.9734513274336283,
+            "pair_recall_val": 0.9391650016650017,
+            "reduction_ratio": 0.9867359961430893,
+            "candidate_count": 104332.5,
+            "gold_positives": 88.0,
+            "covered": 85.0,
+            "missed": 3.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.10996056097792462,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9519230769230769,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9934870104115022,
+                "candidate_count": 131367.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.0734925179858692,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9934870104115022,
+                "reduction_ratio_variant_model": 0.9934870104115022,
+                "candidate_count_baseline_model": 131367.0,
+                "candidate_count_variant_model": 131367.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9469026548672567,
+                "pair_recall_val": 0.9264069264069265,
+                "gold_positives": 113.0,
+                "covered": 107.0,
+                "missed": 6.0,
+                "reduction_ratio": 0.9799849818746763,
+                "candidate_count": 77298.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.036468042992055416,
+                "pair_recall_baseline_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_baseline_model_on_regen_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_regen_test": 0.9469026548672567,
+                "reduction_ratio_baseline_model": 0.9799849818746763,
+                "reduction_ratio_variant_model": 0.9799849818746763,
+                "candidate_count_baseline_model": 77298.0,
+                "candidate_count_variant_model": 77298.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "bm25_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9596028971028971,
+            "reduction_ratio": 0.984574411135591,
+            "candidate_count": 100000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 1.5377485630451702,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "sparse",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9950421417947447,
+                "candidate_count": 100000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 1.1860338730039075,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9950421417947447,
+                "reduction_ratio_variant_model": 0.9950421417947447,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.948051948051948,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9741066804764371,
+                "candidate_count": 100000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.35171469004126266,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9741066804764371,
+                "reduction_ratio_variant_model": 0.9741066804764371,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sc_block": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9800407925407926,
+            "reduction_ratio": 0.9691488222711817,
+            "candidate_count": 200000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 24.22629662504187,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "hybrid",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9903846153846154,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9900842835894893,
+                "candidate_count": 200000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 18.887661217013374,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9900842835894893,
+                "reduction_ratio_variant_model": 0.9900842835894893,
+                "candidate_count_baseline_model": 200000.0,
+                "candidate_count_variant_model": 200000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9696969696969697,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9482133609528741,
+                "candidate_count": 200000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 5.338635408028495,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9482133609528741,
+                "reduction_ratio_variant_model": 0.9482133609528741,
+                "candidate_count_baseline_model": 200000.0,
+                "candidate_count_variant_model": 200000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        }
+      },
+      "per_blocker": {
+        "token_blocker": {
+          "metrics": {
+            "pair_recall": 0.9787891557803061,
+            "pair_recall_val": 0.9574383949383949,
+            "reduction_ratio": 0.9929615732483111,
+            "candidate_count": 79680.5,
+            "gold_positives": 88.0,
+            "covered": 86.0,
+            "missed": 2.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9787891557803061,
+            "pair_recall_baseline_model_on_regen_test": 0.9787891557803061,
+            "pair_recall_variant_model_on_baseline_test": 0.9787891557803061,
+            "pair_recall_variant_model_on_regen_test": 0.9787891557803061,
+            "selection_rate": 0.5,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.09421382000437006,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 0.9841269841269841,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 62.0,
+                "missed": 1.0,
+                "reduction_ratio": 0.9935616757560733,
+                "candidate_count": 129861.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.0633696629665792,
+                "pair_recall_baseline_model_on_baseline_test": 0.9841269841269841,
+                "pair_recall_baseline_model_on_regen_test": 0.9841269841269841,
+                "pair_recall_variant_model_on_baseline_test": 0.9841269841269841,
+                "pair_recall_variant_model_on_regen_test": 0.9841269841269841,
+                "reduction_ratio_baseline_model": 0.9935616757560733,
+                "reduction_ratio_variant_model": 0.9935616757560733,
+                "candidate_count_baseline_model": 129861.0,
+                "candidate_count_variant_model": 129861.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9734513274336283,
+                "pair_recall_val": 0.9437229437229437,
+                "gold_positives": 113.0,
+                "covered": 110.0,
+                "missed": 3.0,
+                "reduction_ratio": 0.9923614707405489,
+                "candidate_count": 29500.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.030844157037790865,
+                "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+                "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+                "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+                "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+                "reduction_ratio_baseline_model": 0.9923614707405489,
+                "reduction_ratio_variant_model": 0.9923614707405489,
+                "candidate_count_baseline_model": 29500.0,
+                "candidate_count_variant_model": 29500.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "standard_blocker": {
+          "metrics": {
+            "pair_recall": 0.9734513274336283,
+            "pair_recall_val": 0.9396436896436897,
+            "reduction_ratio": 0.998476690389586,
+            "candidate_count": 18093.0,
+            "gold_positives": 88.0,
+            "covered": 85.0,
+            "missed": 3.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+            "selection_rate": 0.5,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.06536091701127589,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9615384615384616,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9985025780862667,
+                "candidate_count": 30203.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.04751744499662891,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9985025780862667,
+                "reduction_ratio_variant_model": 0.9985025780862667,
+                "candidate_count_baseline_model": 30203.0,
+                "candidate_count_variant_model": 30203.0,
+                "variant_model_distinct": 0.0,
+                "selected": 1.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9469026548672567,
+                "pair_recall_val": 0.9177489177489178,
+                "gold_positives": 113.0,
+                "covered": 107.0,
+                "missed": 6.0,
+                "reduction_ratio": 0.9984508026929052,
+                "candidate_count": 5983.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.017843472014646977,
+                "pair_recall_baseline_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_baseline_model_on_regen_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_regen_test": 0.9469026548672567,
+                "reduction_ratio_baseline_model": 0.9984508026929052,
+                "reduction_ratio_variant_model": 0.9984508026929052,
+                "candidate_count_baseline_model": 5983.0,
+                "candidate_count_variant_model": 5983.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "embedding_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9639319014319014,
+            "reduction_ratio": 0.984574411135591,
+            "candidate_count": 100000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 14.602706048986875,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "embedding",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9950421417947447,
+                "candidate_count": 100000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 9.046309950004797,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9950421417947447,
+                "reduction_ratio_variant_model": 0.9950421417947447,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9567099567099567,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9741066804764371,
+                "candidate_count": 100000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 5.556396098982077,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9741066804764371,
+                "reduction_ratio_variant_model": 0.9741066804764371,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sorted_neighbourhood_blocker": {
+          "metrics": {
+            "pair_recall": 0.9734513274336283,
+            "pair_recall_val": 0.9391650016650017,
+            "reduction_ratio": 0.9867359961430893,
+            "candidate_count": 104332.5,
+            "gold_positives": 88.0,
+            "covered": 85.0,
+            "missed": 3.0,
+            "pair_recall_baseline_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_baseline_model_on_regen_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_baseline_test": 0.9734513274336283,
+            "pair_recall_variant_model_on_regen_test": 0.9734513274336283,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 0.10996056097792462,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "lexical",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9519230769230769,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9934870104115022,
+                "candidate_count": 131367.0,
+                "full_space": 20170000.0,
+                "runtime_s": 0.0734925179858692,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9934870104115022,
+                "reduction_ratio_variant_model": 0.9934870104115022,
+                "candidate_count_baseline_model": 131367.0,
+                "candidate_count_variant_model": 131367.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 0.9469026548672567,
+                "pair_recall_val": 0.9264069264069265,
+                "gold_positives": 113.0,
+                "covered": 107.0,
+                "missed": 6.0,
+                "reduction_ratio": 0.9799849818746763,
+                "candidate_count": 77298.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.036468042992055416,
+                "pair_recall_baseline_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_baseline_model_on_regen_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_baseline_test": 0.9469026548672567,
+                "pair_recall_variant_model_on_regen_test": 0.9469026548672567,
+                "reduction_ratio_baseline_model": 0.9799849818746763,
+                "reduction_ratio_variant_model": 0.9799849818746763,
+                "candidate_count_baseline_model": 77298.0,
+                "candidate_count_variant_model": 77298.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "bm25_blocker": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9596028971028971,
+            "reduction_ratio": 0.984574411135591,
+            "candidate_count": 100000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 1.5377485630451702,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "sparse",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9711538461538461,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9950421417947447,
+                "candidate_count": 100000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 1.1860338730039075,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9950421417947447,
+                "reduction_ratio_variant_model": 0.9950421417947447,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.948051948051948,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9741066804764371,
+                "candidate_count": 100000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 0.35171469004126266,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9741066804764371,
+                "reduction_ratio_variant_model": 0.9741066804764371,
+                "candidate_count_baseline_model": 100000.0,
+                "candidate_count_variant_model": 100000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        },
+        "sc_block": {
+          "metrics": {
+            "pair_recall": 1.0,
+            "pair_recall_val": 0.9800407925407926,
+            "reduction_ratio": 0.9691488222711817,
+            "candidate_count": 200000.0,
+            "gold_positives": 88.0,
+            "covered": 88.0,
+            "missed": 0.0,
+            "pair_recall_baseline_model_on_baseline_test": 1.0,
+            "pair_recall_baseline_model_on_regen_test": 1.0,
+            "pair_recall_variant_model_on_baseline_test": 1.0,
+            "pair_recall_variant_model_on_regen_test": 1.0,
+            "selection_rate": 0.0,
+            "recall_floor_clear_rate": 1.0
+          },
+          "runtime_s": 24.22629662504187,
+          "notes": {
+            "role": "blocker",
+            "blocking_type": "hybrid",
+            "per_pair": {
+              "forbes_dbpedia": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9903846153846154,
+                "gold_positives": 63.0,
+                "covered": 63.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9900842835894893,
+                "candidate_count": 200000.0,
+                "full_space": 20170000.0,
+                "runtime_s": 18.887661217013374,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9900842835894893,
+                "reduction_ratio_variant_model": 0.9900842835894893,
+                "candidate_count_baseline_model": 200000.0,
+                "candidate_count_variant_model": 200000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              },
+              "forbes_fullcontact": {
+                "pair_recall": 1.0,
+                "pair_recall_val": 0.9696969696969697,
+                "gold_positives": 113.0,
+                "covered": 113.0,
+                "missed": 0.0,
+                "reduction_ratio": 0.9482133609528741,
+                "candidate_count": 200000.0,
+                "full_space": 3862000.0,
+                "runtime_s": 5.338635408028495,
+                "pair_recall_baseline_model_on_baseline_test": 1.0,
+                "pair_recall_baseline_model_on_regen_test": 1.0,
+                "pair_recall_variant_model_on_baseline_test": 1.0,
+                "pair_recall_variant_model_on_regen_test": 1.0,
+                "reduction_ratio_baseline_model": 0.9482133609528741,
+                "reduction_ratio_variant_model": 0.9482133609528741,
+                "candidate_count_baseline_model": 200000.0,
+                "candidate_count_variant_model": 200000.0,
+                "variant_model_distinct": 0.0,
+                "selected": 0.0,
+                "recall_floor_cleared": 1.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "em_matching": {
+      "stage": "em_matching",
+      "domain": "companies",
+      "level": "baseline",
+      "runtime_s": 30.766084218979813,
+      "roster": [
+        "ditto_plm",
+        "magellan",
+        "llm_matcher",
+        "comem"
+      ],
+      "aggregated": {
+        "macro_f1": 0.8842491692933829,
+        "min_f1": 0.8699324324324325,
+        "max_f1": 0.895049254862339,
+        "macro_precision": 0.8879444468585662,
+        "macro_recall": 0.898669054642506,
+        "macro_f1_baseline_model_on_baseline_test": 0.8842491692933829,
+        "macro_f1_baseline_model_on_regen_test": 0.8842491692933829,
+        "macro_f1_variant_model_on_baseline_test": 0.8842491692933829,
+        "macro_f1_variant_model_on_regen_test": 0.8842491692933829,
+        "macro_f1_baseline_test": 0.8842491692933829,
+        "macro_f1_regen_test": 0.8842491692933829,
+        "best_member_name": "comem",
+        "best_member_f1": 0.895049254862339
+      },
+      "per_attribute": {},
+      "per_partition": {
+        "forbes_dbpedia": {
+          "macro_f1": 0.8793923158067591,
+          "min_f1": 0.8648648648648648,
+          "max_f1": 0.9104477611940299,
+          "n_members": 4.0
+        },
+        "forbes_fullcontact": {
+          "macro_f1": 0.8891060227800067,
+          "min_f1": 0.864,
+          "max_f1": 0.9252336448598131,
+          "n_members": 4.0
+        }
+      },
+      "per_member": {
+        "ditto_plm": {
+          "metrics": {
+            "f1": 0.8699324324324325,
+            "precision": 0.7724505327245053,
+            "recall": 0.995575221238938,
+            "f1_val": 0.9245275621422411,
+            "precision_val": 0.8985121030424161,
+            "recall_val": 0.9526307026307026,
+            "f1_baseline_model_on_baseline_test": 0.8699324324324325,
+            "precision_baseline_model_on_baseline_test": 0.7724505327245053,
+            "recall_baseline_model_on_baseline_test": 0.995575221238938,
+            "pred_scoped_baseline_model_on_baseline_test": 113.5,
+            "f1_baseline_model_on_regen_test": 0.8699324324324325,
+            "precision_baseline_model_on_regen_test": 0.7724505327245053,
+            "recall_baseline_model_on_regen_test": 0.995575221238938,
+            "pred_scoped_baseline_model_on_regen_test": 113.5,
+            "f1_variant_model_on_baseline_test": 0.8699324324324325,
+            "precision_variant_model_on_baseline_test": 0.7724505327245053,
+            "recall_variant_model_on_baseline_test": 0.995575221238938,
+            "pred_scoped_variant_model_on_baseline_test": 113.5,
+            "f1_variant_model_on_regen_test": 0.8699324324324325,
+            "precision_variant_model_on_regen_test": 0.7724505327245053,
+            "recall_variant_model_on_regen_test": 0.995575221238938,
+            "pred_scoped_variant_model_on_regen_test": 113.5,
+            "f1_baseline_test": 0.8699324324324325,
+            "precision_baseline_test": 0.7724505327245053,
+            "recall_baseline_test": 0.995575221238938,
+            "pred_scoped_baseline_test": 113.5,
+            "f1_regen_test": 0.8699324324324325,
+            "precision_regen_test": 0.7724505327245053,
+            "recall_regen_test": 0.995575221238938,
+            "pred_scoped_regen_test": 113.5
+          },
+          "runtime_s": 4.1492661539814435,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "learned",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "forbes_dbpedia": {
+                "f1": 0.8750000000000001,
+                "precision": 0.7777777777777778,
+                "recall": 1.0,
+                "f1_val": 0.9174311926605504,
+                "precision_val": 0.8771929824561403,
+                "recall_val": 0.9615384615384616,
+                "tp": 63.0,
+                "fp": 18.0,
+                "fn": 0.0,
+                "f1_baseline_model_on_baseline_test": 0.8750000000000001,
+                "precision_baseline_model_on_baseline_test": 0.7777777777777778,
+                "recall_baseline_model_on_baseline_test": 1.0,
+                "pred_scoped_baseline_model_on_baseline_test": 81.0,
+                "f1_baseline_model_on_regen_test": 0.8750000000000001,
+                "precision_baseline_model_on_regen_test": 0.7777777777777778,
+                "recall_baseline_model_on_regen_test": 1.0,
+                "pred_scoped_baseline_model_on_regen_test": 81.0,
+                "f1_variant_model_on_baseline_test": 0.8750000000000001,
+                "precision_variant_model_on_baseline_test": 0.7777777777777778,
+                "recall_variant_model_on_baseline_test": 1.0,
+                "pred_scoped_variant_model_on_baseline_test": 81.0,
+                "f1_variant_model_on_regen_test": 0.8750000000000001,
+                "precision_variant_model_on_regen_test": 0.7777777777777778,
+                "recall_variant_model_on_regen_test": 1.0,
+                "pred_scoped_variant_model_on_regen_test": 81.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.8750000000000001,
+                "precision_baseline_test": 0.7777777777777778,
+                "recall_baseline_test": 1.0,
+                "pred_scoped_baseline_test": 81.0,
+                "f1_regen_test": 0.8750000000000001,
+                "precision_regen_test": 0.7777777777777778,
+                "recall_regen_test": 1.0,
+                "pred_scoped_regen_test": 81.0
+              },
+              "forbes_fullcontact": {
+                "f1": 0.8648648648648648,
+                "precision": 0.7671232876712328,
+                "recall": 0.9911504424778761,
+                "f1_val": 0.9316239316239316,
+                "precision_val": 0.919831223628692,
+                "recall_val": 0.9437229437229437,
+                "tp": 112.0,
+                "fp": 34.0,
+                "fn": 1.0,
+                "f1_baseline_model_on_baseline_test": 0.8648648648648648,
+                "precision_baseline_model_on_baseline_test": 0.7671232876712328,
+                "recall_baseline_model_on_baseline_test": 0.9911504424778761,
+                "pred_scoped_baseline_model_on_baseline_test": 146.0,
+                "f1_baseline_model_on_regen_test": 0.8648648648648648,
+                "precision_baseline_model_on_regen_test": 0.7671232876712328,
+                "recall_baseline_model_on_regen_test": 0.9911504424778761,
+                "pred_scoped_baseline_model_on_regen_test": 146.0,
+                "f1_variant_model_on_baseline_test": 0.8648648648648648,
+                "precision_variant_model_on_baseline_test": 0.7671232876712328,
+                "recall_variant_model_on_baseline_test": 0.9911504424778761,
+                "pred_scoped_variant_model_on_baseline_test": 146.0,
+                "f1_variant_model_on_regen_test": 0.8648648648648648,
+                "precision_variant_model_on_regen_test": 0.7671232876712328,
+                "recall_variant_model_on_regen_test": 0.9911504424778761,
+                "pred_scoped_variant_model_on_regen_test": 146.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.8648648648648648,
+                "precision_baseline_test": 0.7671232876712328,
+                "recall_baseline_test": 0.9911504424778761,
+                "pred_scoped_baseline_test": 146.0,
+                "f1_regen_test": 0.8648648648648648,
+                "precision_regen_test": 0.7671232876712328,
+                "recall_regen_test": 0.9911504424778761,
+                "pred_scoped_regen_test": 146.0
+              }
+            }
+          }
+        },
+        "magellan": {
+          "metrics": {
+            "f1": 0.887223880597015,
+            "precision": 0.8237380487303383,
+            "recall": 0.9620030903216744,
+            "f1_val": 0.9191999916968521,
+            "precision_val": 0.9180124223602484,
+            "recall_val": 0.9204129204129204,
+            "f1_baseline_model_on_baseline_test": 0.887223880597015,
+            "precision_baseline_model_on_baseline_test": 0.8237380487303383,
+            "recall_baseline_model_on_baseline_test": 0.9620030903216744,
+            "pred_scoped_baseline_model_on_baseline_test": 104.0,
+            "f1_baseline_model_on_regen_test": 0.887223880597015,
+            "precision_baseline_model_on_regen_test": 0.8237380487303383,
+            "recall_baseline_model_on_regen_test": 0.9620030903216744,
+            "pred_scoped_baseline_model_on_regen_test": 104.0,
+            "f1_variant_model_on_baseline_test": 0.887223880597015,
+            "precision_variant_model_on_baseline_test": 0.8237380487303383,
+            "recall_variant_model_on_baseline_test": 0.9620030903216744,
+            "pred_scoped_variant_model_on_baseline_test": 104.0,
+            "f1_variant_model_on_regen_test": 0.887223880597015,
+            "precision_variant_model_on_regen_test": 0.8237380487303383,
+            "recall_variant_model_on_regen_test": 0.9620030903216744,
+            "pred_scoped_variant_model_on_regen_test": 104.0,
+            "f1_baseline_test": 0.887223880597015,
+            "precision_baseline_test": 0.8237380487303383,
+            "recall_baseline_test": 0.9620030903216744,
+            "pred_scoped_baseline_test": 104.0,
+            "f1_regen_test": 0.887223880597015,
+            "precision_regen_test": 0.8237380487303383,
+            "recall_regen_test": 0.9620030903216744,
+            "pred_scoped_regen_test": 104.0
+          },
+          "runtime_s": 2.025974493008107,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "learned",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "forbes_dbpedia": {
+                "f1": 0.9104477611940299,
+                "precision": 0.8591549295774648,
+                "recall": 0.9682539682539683,
+                "f1_val": 0.9186602870813396,
+                "precision_val": 0.9142857142857143,
+                "recall_val": 0.9230769230769231,
+                "tp": 61.0,
+                "fp": 10.0,
+                "fn": 2.0,
+                "f1_baseline_model_on_baseline_test": 0.9104477611940299,
+                "precision_baseline_model_on_baseline_test": 0.8591549295774648,
+                "recall_baseline_model_on_baseline_test": 0.9682539682539683,
+                "pred_scoped_baseline_model_on_baseline_test": 71.0,
+                "f1_baseline_model_on_regen_test": 0.9104477611940299,
+                "precision_baseline_model_on_regen_test": 0.8591549295774648,
+                "recall_baseline_model_on_regen_test": 0.9682539682539683,
+                "pred_scoped_baseline_model_on_regen_test": 71.0,
+                "f1_variant_model_on_baseline_test": 0.9104477611940299,
+                "precision_variant_model_on_baseline_test": 0.8591549295774648,
+                "recall_variant_model_on_baseline_test": 0.9682539682539683,
+                "pred_scoped_variant_model_on_baseline_test": 71.0,
+                "f1_variant_model_on_regen_test": 0.9104477611940299,
+                "precision_variant_model_on_regen_test": 0.8591549295774648,
+                "recall_variant_model_on_regen_test": 0.9682539682539683,
+                "pred_scoped_variant_model_on_regen_test": 71.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9104477611940299,
+                "precision_baseline_test": 0.8591549295774648,
+                "recall_baseline_test": 0.9682539682539683,
+                "pred_scoped_baseline_test": 71.0,
+                "f1_regen_test": 0.9104477611940299,
+                "precision_regen_test": 0.8591549295774648,
+                "recall_regen_test": 0.9682539682539683,
+                "pred_scoped_regen_test": 71.0
+              },
+              "forbes_fullcontact": {
+                "f1": 0.864,
+                "precision": 0.7883211678832117,
+                "recall": 0.9557522123893806,
+                "f1_val": 0.9197396963123645,
+                "precision_val": 0.9217391304347826,
+                "recall_val": 0.9177489177489178,
+                "tp": 108.0,
+                "fp": 29.0,
+                "fn": 5.0,
+                "f1_baseline_model_on_baseline_test": 0.864,
+                "precision_baseline_model_on_baseline_test": 0.7883211678832117,
+                "recall_baseline_model_on_baseline_test": 0.9557522123893806,
+                "pred_scoped_baseline_model_on_baseline_test": 137.0,
+                "f1_baseline_model_on_regen_test": 0.864,
+                "precision_baseline_model_on_regen_test": 0.7883211678832117,
+                "recall_baseline_model_on_regen_test": 0.9557522123893806,
+                "pred_scoped_baseline_model_on_regen_test": 137.0,
+                "f1_variant_model_on_baseline_test": 0.864,
+                "precision_variant_model_on_baseline_test": 0.7883211678832117,
+                "recall_variant_model_on_baseline_test": 0.9557522123893806,
+                "pred_scoped_variant_model_on_baseline_test": 137.0,
+                "f1_variant_model_on_regen_test": 0.864,
+                "precision_variant_model_on_regen_test": 0.7883211678832117,
+                "recall_variant_model_on_regen_test": 0.9557522123893806,
+                "pred_scoped_variant_model_on_regen_test": 137.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.864,
+                "precision_baseline_test": 0.7883211678832117,
+                "recall_baseline_test": 0.9557522123893806,
+                "pred_scoped_baseline_test": 137.0,
+                "f1_regen_test": 0.864,
+                "precision_regen_test": 0.7883211678832117,
+                "recall_regen_test": 0.9557522123893806,
+                "pred_scoped_regen_test": 137.0
+              }
+            }
+          }
+        },
+        "llm_matcher": {
+          "metrics": {
+            "f1": 0.8847911092817453,
+            "precision": 0.9654901960784313,
+            "recall": 0.8180924287118978,
+            "f1_val": 0.8847911092817453,
+            "precision_val": 0.9654901960784313,
+            "recall_val": 0.8180924287118978,
+            "f1_baseline_model_on_baseline_test": 0.8847911092817453,
+            "precision_baseline_model_on_baseline_test": 0.9654901960784313,
+            "recall_baseline_model_on_baseline_test": 0.8180924287118978,
+            "pred_scoped_baseline_model_on_baseline_test": 76.0,
+            "f1_baseline_model_on_regen_test": 0.8847911092817453,
+            "precision_baseline_model_on_regen_test": 0.9654901960784313,
+            "recall_baseline_model_on_regen_test": 0.8180924287118978,
+            "pred_scoped_baseline_model_on_regen_test": 76.0,
+            "f1_variant_model_on_baseline_test": 0.8847911092817453,
+            "precision_variant_model_on_baseline_test": 0.9654901960784313,
+            "recall_variant_model_on_baseline_test": 0.8180924287118978,
+            "pred_scoped_variant_model_on_baseline_test": 76.0,
+            "f1_variant_model_on_regen_test": 0.8847911092817453,
+            "precision_variant_model_on_regen_test": 0.9654901960784313,
+            "recall_variant_model_on_regen_test": 0.8180924287118978,
+            "pred_scoped_variant_model_on_regen_test": 76.0,
+            "f1_baseline_test": 0.8847911092817453,
+            "precision_baseline_test": 0.9654901960784313,
+            "recall_baseline_test": 0.8180924287118978,
+            "pred_scoped_baseline_test": 76.0,
+            "f1_regen_test": 0.8847911092817453,
+            "precision_regen_test": 0.9654901960784313,
+            "recall_regen_test": 0.8180924287118978,
+            "pred_scoped_regen_test": 76.0
+          },
+          "runtime_s": 13.961339252011385,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "llm",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "forbes_dbpedia": {
+                "f1": 0.8672566371681417,
+                "precision": 0.98,
+                "recall": 0.7777777777777778,
+                "f1_val": 0.8672566371681417,
+                "precision_val": 0.98,
+                "recall_val": 0.7777777777777778,
+                "tp": 49.0,
+                "fp": 1.0,
+                "fn": 14.0,
+                "f1_baseline_model_on_baseline_test": 0.8672566371681417,
+                "precision_baseline_model_on_baseline_test": 0.98,
+                "recall_baseline_model_on_baseline_test": 0.7777777777777778,
+                "pred_scoped_baseline_model_on_baseline_test": 50.0,
+                "f1_baseline_model_on_regen_test": 0.8672566371681417,
+                "precision_baseline_model_on_regen_test": 0.98,
+                "recall_baseline_model_on_regen_test": 0.7777777777777778,
+                "pred_scoped_baseline_model_on_regen_test": 50.0,
+                "f1_variant_model_on_baseline_test": 0.8672566371681417,
+                "precision_variant_model_on_baseline_test": 0.98,
+                "recall_variant_model_on_baseline_test": 0.7777777777777778,
+                "pred_scoped_variant_model_on_baseline_test": 50.0,
+                "f1_variant_model_on_regen_test": 0.8672566371681417,
+                "precision_variant_model_on_regen_test": 0.98,
+                "recall_variant_model_on_regen_test": 0.7777777777777778,
+                "pred_scoped_variant_model_on_regen_test": 50.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.8672566371681417,
+                "precision_baseline_test": 0.98,
+                "recall_baseline_test": 0.7777777777777778,
+                "pred_scoped_baseline_test": 50.0,
+                "f1_regen_test": 0.8672566371681417,
+                "precision_regen_test": 0.98,
+                "recall_regen_test": 0.7777777777777778,
+                "pred_scoped_regen_test": 50.0
+              },
+              "forbes_fullcontact": {
+                "f1": 0.9023255813953488,
+                "precision": 0.9509803921568627,
+                "recall": 0.8584070796460177,
+                "f1_val": 0.9023255813953488,
+                "precision_val": 0.9509803921568627,
+                "recall_val": 0.8584070796460177,
+                "tp": 97.0,
+                "fp": 5.0,
+                "fn": 16.0,
+                "f1_baseline_model_on_baseline_test": 0.9023255813953488,
+                "precision_baseline_model_on_baseline_test": 0.9509803921568627,
+                "recall_baseline_model_on_baseline_test": 0.8584070796460177,
+                "pred_scoped_baseline_model_on_baseline_test": 102.0,
+                "f1_baseline_model_on_regen_test": 0.9023255813953488,
+                "precision_baseline_model_on_regen_test": 0.9509803921568627,
+                "recall_baseline_model_on_regen_test": 0.8584070796460177,
+                "pred_scoped_baseline_model_on_regen_test": 102.0,
+                "f1_variant_model_on_baseline_test": 0.9023255813953488,
+                "precision_variant_model_on_baseline_test": 0.9509803921568627,
+                "recall_variant_model_on_baseline_test": 0.8584070796460177,
+                "pred_scoped_variant_model_on_baseline_test": 102.0,
+                "f1_variant_model_on_regen_test": 0.9023255813953488,
+                "precision_variant_model_on_regen_test": 0.9509803921568627,
+                "recall_variant_model_on_regen_test": 0.8584070796460177,
+                "pred_scoped_variant_model_on_regen_test": 102.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9023255813953488,
+                "precision_baseline_test": 0.9509803921568627,
+                "recall_baseline_test": 0.8584070796460177,
+                "pred_scoped_baseline_test": 102.0,
+                "f1_regen_test": 0.9023255813953488,
+                "precision_regen_test": 0.9509803921568627,
+                "recall_regen_test": 0.8584070796460177,
+                "pred_scoped_regen_test": 102.0
+              }
+            }
+          }
+        },
+        "comem": {
+          "metrics": {
+            "f1": 0.895049254862339,
+            "precision": 0.9900990099009901,
+            "recall": 0.8190054782975137,
+            "f1_val": 0.895049254862339,
+            "precision_val": 0.9900990099009901,
+            "recall_val": 0.8190054782975137,
+            "f1_baseline_model_on_baseline_test": 0.895049254862339,
+            "precision_baseline_model_on_baseline_test": 0.9900990099009901,
+            "recall_baseline_model_on_baseline_test": 0.8190054782975137,
+            "pred_scoped_baseline_model_on_baseline_test": 74.5,
+            "f1_baseline_model_on_regen_test": 0.895049254862339,
+            "precision_baseline_model_on_regen_test": 0.9900990099009901,
+            "recall_baseline_model_on_regen_test": 0.8190054782975137,
+            "pred_scoped_baseline_model_on_regen_test": 74.5,
+            "f1_variant_model_on_baseline_test": 0.895049254862339,
+            "precision_variant_model_on_baseline_test": 0.9900990099009901,
+            "recall_variant_model_on_baseline_test": 0.8190054782975137,
+            "pred_scoped_variant_model_on_baseline_test": 74.5,
+            "f1_variant_model_on_regen_test": 0.895049254862339,
+            "precision_variant_model_on_regen_test": 0.9900990099009901,
+            "recall_variant_model_on_regen_test": 0.8190054782975137,
+            "pred_scoped_variant_model_on_regen_test": 74.5,
+            "f1_baseline_test": 0.895049254862339,
+            "precision_baseline_test": 0.9900990099009901,
+            "recall_baseline_test": 0.8190054782975137,
+            "pred_scoped_baseline_test": 74.5,
+            "f1_regen_test": 0.895049254862339,
+            "precision_regen_test": 0.9900990099009901,
+            "recall_regen_test": 0.8190054782975137,
+            "pred_scoped_regen_test": 74.5
+          },
+          "runtime_s": 10.623922526079696,
+          "notes": {
+            "role": "matcher",
+            "matching_type": "llm",
+            "missing_value_tolerant": true,
+            "per_pair": {
+              "forbes_dbpedia": {
+                "f1": 0.8648648648648648,
+                "precision": 1.0,
+                "recall": 0.7619047619047619,
+                "f1_val": 0.8648648648648648,
+                "precision_val": 1.0,
+                "recall_val": 0.7619047619047619,
+                "tp": 48.0,
+                "fp": 0.0,
+                "fn": 15.0,
+                "f1_baseline_model_on_baseline_test": 0.8648648648648648,
+                "precision_baseline_model_on_baseline_test": 1.0,
+                "recall_baseline_model_on_baseline_test": 0.7619047619047619,
+                "pred_scoped_baseline_model_on_baseline_test": 48.0,
+                "f1_baseline_model_on_regen_test": 0.8648648648648648,
+                "precision_baseline_model_on_regen_test": 1.0,
+                "recall_baseline_model_on_regen_test": 0.7619047619047619,
+                "pred_scoped_baseline_model_on_regen_test": 48.0,
+                "f1_variant_model_on_baseline_test": 0.8648648648648648,
+                "precision_variant_model_on_baseline_test": 1.0,
+                "recall_variant_model_on_baseline_test": 0.7619047619047619,
+                "pred_scoped_variant_model_on_baseline_test": 48.0,
+                "f1_variant_model_on_regen_test": 0.8648648648648648,
+                "precision_variant_model_on_regen_test": 1.0,
+                "recall_variant_model_on_regen_test": 0.7619047619047619,
+                "pred_scoped_variant_model_on_regen_test": 48.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.8648648648648648,
+                "precision_baseline_test": 1.0,
+                "recall_baseline_test": 0.7619047619047619,
+                "pred_scoped_baseline_test": 48.0,
+                "f1_regen_test": 0.8648648648648648,
+                "precision_regen_test": 1.0,
+                "recall_regen_test": 0.7619047619047619,
+                "pred_scoped_regen_test": 48.0
+              },
+              "forbes_fullcontact": {
+                "f1": 0.9252336448598131,
+                "precision": 0.9801980198019802,
+                "recall": 0.8761061946902655,
+                "f1_val": 0.9252336448598131,
+                "precision_val": 0.9801980198019802,
+                "recall_val": 0.8761061946902655,
+                "tp": 99.0,
+                "fp": 2.0,
+                "fn": 14.0,
+                "f1_baseline_model_on_baseline_test": 0.9252336448598131,
+                "precision_baseline_model_on_baseline_test": 0.9801980198019802,
+                "recall_baseline_model_on_baseline_test": 0.8761061946902655,
+                "pred_scoped_baseline_model_on_baseline_test": 101.0,
+                "f1_baseline_model_on_regen_test": 0.9252336448598131,
+                "precision_baseline_model_on_regen_test": 0.9801980198019802,
+                "recall_baseline_model_on_regen_test": 0.8761061946902655,
+                "pred_scoped_baseline_model_on_regen_test": 101.0,
+                "f1_variant_model_on_baseline_test": 0.9252336448598131,
+                "precision_variant_model_on_baseline_test": 0.9801980198019802,
+                "recall_variant_model_on_baseline_test": 0.8761061946902655,
+                "pred_scoped_variant_model_on_baseline_test": 101.0,
+                "f1_variant_model_on_regen_test": 0.9252336448598131,
+                "precision_variant_model_on_regen_test": 0.9801980198019802,
+                "recall_variant_model_on_regen_test": 0.8761061946902655,
+                "pred_scoped_variant_model_on_regen_test": 101.0,
+                "variant_model_distinct": 0.0,
+                "f1_baseline_test": 0.9252336448598131,
+                "precision_baseline_test": 0.9801980198019802,
+                "recall_baseline_test": 0.8761061946902655,
+                "pred_scoped_baseline_test": 101.0,
+                "f1_regen_test": 0.9252336448598131,
+                "precision_regen_test": 0.9801980198019802,
+                "recall_regen_test": 0.8761061946902655,
+                "pred_scoped_regen_test": 101.0
+              }
+            }
+          }
+        }
+      },
+      "per_blocker": {}
+    },
+    "fusion": {
+      "stage": "fusion",
+      "domain": "companies",
+      "level": "baseline",
+      "runtime_s": 418.017437373288,
+      "roster": [
+        "pydi_per_attribute_optimal",
+        "llm_only",
+        "fusionquery_only",
+        "truthfinder_only",
+        "ltm_only",
+        "casefusion_only",
+        "accusim_only",
+        "voting_only",
+        "prefer_higher_trust_only"
+      ],
+      "aggregated": {
+        "macro_accuracy": 0.5342942967756401,
+        "min_accuracy": 0.4988693261547739,
+        "max_accuracy": 0.5765056636978279,
+        "best_member_macro_accuracy": 0.5765056636978279,
+        "overall_accuracy": 0.5765056636978279
+      },
+      "per_attribute": {
+        "name": {
+          "pydi_per_attribute_optimal": 0.86,
+          "llm_only": 0.63,
+          "fusionquery_only": 0.4,
+          "truthfinder_only": 0.45,
+          "ltm_only": 0.68,
+          "casefusion_only": 0.62,
+          "accusim_only": 0.85,
+          "voting_only": 0.69,
+          "prefer_higher_trust_only": 0.86,
+          "best_member_accuracy": 0.86,
+          "mean_member_accuracy": 0.6711111111111111
+        },
+        "assets": {
+          "pydi_per_attribute_optimal": 0.17045454545454544,
+          "llm_only": 0.1590909090909091,
+          "fusionquery_only": 0.17045454545454544,
+          "truthfinder_only": 0.17045454545454544,
+          "ltm_only": 0.17045454545454544,
+          "casefusion_only": 0.17045454545454544,
+          "accusim_only": 0.2159090909090909,
+          "voting_only": 0.2159090909090909,
+          "prefer_higher_trust_only": 0.17045454545454544,
+          "best_member_accuracy": 0.2159090909090909,
+          "mean_member_accuracy": 0.17929292929292928
+        },
+        "revenue": {
+          "pydi_per_attribute_optimal": 0.25,
+          "llm_only": 0.19444444444444445,
+          "fusionquery_only": 0.25,
+          "truthfinder_only": 0.25,
+          "ltm_only": 0.25,
+          "casefusion_only": 0.25,
+          "accusim_only": 0.2361111111111111,
+          "voting_only": 0.2361111111111111,
+          "prefer_higher_trust_only": 0.25,
+          "best_member_accuracy": 0.25,
+          "mean_member_accuracy": 0.24074074074074073
+        },
+        "founded": {
+          "pydi_per_attribute_optimal": 0.8955223880597015,
+          "llm_only": 0.9253731343283582,
+          "fusionquery_only": 0.8059701492537313,
+          "truthfinder_only": 0.8805970149253731,
+          "ltm_only": 0.8208955223880597,
+          "casefusion_only": 0.8805970149253731,
+          "accusim_only": 0.8507462686567164,
+          "voting_only": 0.8805970149253731,
+          "prefer_higher_trust_only": 0.8208955223880597,
+          "best_member_accuracy": 0.9253731343283582,
+          "mean_member_accuracy": 0.8623548922056385
+        },
+        "country": {
+          "pydi_per_attribute_optimal": 0.82,
+          "llm_only": 0.85,
+          "fusionquery_only": 0.81,
+          "truthfinder_only": 0.73,
+          "ltm_only": 0.84,
+          "casefusion_only": 0.78,
+          "accusim_only": 0.81,
+          "voting_only": 0.82,
+          "prefer_higher_trust_only": 0.56,
+          "best_member_accuracy": 0.85,
+          "mean_member_accuracy": 0.7799999999999999
+        },
+        "city": {
+          "pydi_per_attribute_optimal": 0.7538461538461538,
+          "llm_only": 0.6923076923076923,
+          "fusionquery_only": 0.6923076923076923,
+          "truthfinder_only": 0.676923076923077,
+          "ltm_only": 0.6923076923076923,
+          "casefusion_only": 0.6307692307692307,
+          "accusim_only": 0.6307692307692307,
+          "voting_only": 0.6307692307692307,
+          "prefer_higher_trust_only": 0.7076923076923077,
+          "best_member_accuracy": 0.7538461538461538,
+          "mean_member_accuracy": 0.6786324786324786
+        },
+        "keypeople": {
+          "pydi_per_attribute_optimal": 0.7222222222222222,
+          "llm_only": 0.7222222222222222,
+          "fusionquery_only": 0.7222222222222222,
+          "truthfinder_only": 0.7222222222222222,
+          "ltm_only": 0.7222222222222222,
+          "casefusion_only": 0.7222222222222222,
+          "accusim_only": 0.7222222222222222,
+          "voting_only": 0.7222222222222222,
+          "prefer_higher_trust_only": 0.7222222222222222,
+          "best_member_accuracy": 0.7222222222222222,
+          "mean_member_accuracy": 0.7222222222222222
+        }
+      },
+      "per_partition": {},
+      "per_member": {
+        "pydi_per_attribute_optimal": {
+          "metrics": {
+            "overall_accuracy": 0.5524590163934426,
+            "macro_accuracy": 0.5765056636978279,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 337,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.86,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.82,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.7538461538461538,
+            "city_count": 65,
+            "founded_accuracy": 0.8955223880597015,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5765056636978279,
+            "f1_test": 0.5765056636978279,
+            "macro_accuracy_val": 0.327329766059102,
+            "f1_val": 0.327329766059102
+          },
+          "runtime_s": 1.4355382341891527,
+          "notes": {
+            "selection_map": {
+              "name": "prefer_higher_trust",
+              "assets": "prefer_higher_trust",
+              "revenue": "prefer_higher_trust",
+              "founded": "earliest",
+              "country": "voting",
+              "city": "shortest_string",
+              "keypeople": "union"
+            },
+            "native_types": []
+          }
+        },
+        "llm_only": {
+          "metrics": {
+            "overall_accuracy": 0.5081967213114754,
+            "macro_accuracy": 0.5391798002992033,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 310,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.63,
+            "name_count": 100,
+            "assets_accuracy": 0.1590909090909091,
+            "assets_count": 88,
+            "country_accuracy": 0.85,
+            "country_count": 100,
+            "revenue_accuracy": 0.19444444444444445,
+            "revenue_count": 72,
+            "city_accuracy": 0.6923076923076923,
+            "city_count": 65,
+            "founded_accuracy": 0.9253731343283582,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5391798002992033,
+            "f1_test": 0.5391798002992033,
+            "macro_accuracy_val": 0.32109032323798364,
+            "f1_val": 0.32109032323798364
+          },
+          "runtime_s": 383.0193612333387,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "fusionquery_only": {
+          "metrics": {
+            "overall_accuracy": 0.45901639344262296,
+            "macro_accuracy": 0.4988693261547739,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 280,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.4,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.81,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.6923076923076923,
+            "city_count": 65,
+            "founded_accuracy": 0.8059701492537313,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.4988693261547739,
+            "f1_test": 0.4988693261547739,
+            "macro_accuracy_val": 0.32209167082100676,
+            "f1_val": 0.32209167082100676
+          },
+          "runtime_s": 4.506872905418277,
+          "notes": {
+            "selection_map": {
+              "assets": "prefer_higher_trust",
+              "revenue": "prefer_higher_trust",
+              "keypeople": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "truthfinder_only": {
+          "metrics": {
+            "overall_accuracy": 0.460655737704918,
+            "macro_accuracy": 0.5025246074406522,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 281,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.45,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.73,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.676923076923077,
+            "city_count": 65,
+            "founded_accuracy": 0.8805970149253731,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5025246074406522,
+            "f1_test": 0.5025246074406522,
+            "macro_accuracy_val": 0.32352024224957826,
+            "f1_val": 0.32352024224957826
+          },
+          "runtime_s": 5.1325916182249784,
+          "notes": {
+            "selection_map": {
+              "assets": "prefer_higher_trust",
+              "revenue": "prefer_higher_trust",
+              "keypeople": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "ltm_only": {
+          "metrics": {
+            "overall_accuracy": 0.5114754098360655,
+            "macro_accuracy": 0.539484997796565,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 312,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.68,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.84,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.6923076923076923,
+            "city_count": 65,
+            "founded_accuracy": 0.8208955223880597,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.539484997796565,
+            "f1_test": 0.539484997796565,
+            "macro_accuracy_val": 0.3278853216146576,
+            "f1_val": 0.3278853216146576
+          },
+          "runtime_s": 5.670676331967115,
+          "notes": {
+            "selection_map": {
+              "assets": "prefer_higher_trust",
+              "revenue": "prefer_higher_trust"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "string"
+            ]
+          }
+        },
+        "casefusion_only": {
+          "metrics": {
+            "overall_accuracy": 0.4918032786885246,
+            "macro_accuracy": 0.5242553766714215,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 300,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.62,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.78,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.6307692307692307,
+            "city_count": 65,
+            "founded_accuracy": 0.8805970149253731,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5242553766714215,
+            "f1_test": 0.5242553766714215,
+            "macro_accuracy_val": 0.32209167082100676,
+            "f1_val": 0.32209167082100676
+          },
+          "runtime_s": 4.454683960415423,
+          "notes": {
+            "selection_map": {
+              "assets": "prefer_higher_trust",
+              "revenue": "prefer_higher_trust",
+              "keypeople": "union"
+            },
+            "native_types": [
+              "categorical",
+              "date",
+              "string"
+            ]
+          }
+        },
+        "accusim_only": {
+          "metrics": {
+            "overall_accuracy": 0.5360655737704918,
+            "macro_accuracy": 0.5569697404585464,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 327,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.85,
+            "name_count": 100,
+            "assets_accuracy": 0.2159090909090909,
+            "assets_count": 88,
+            "country_accuracy": 0.81,
+            "country_count": 100,
+            "revenue_accuracy": 0.2361111111111111,
+            "revenue_count": 72,
+            "city_accuracy": 0.6307692307692307,
+            "city_count": 65,
+            "founded_accuracy": 0.8507462686567164,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5569697404585464,
+            "f1_test": 0.5569697404585464,
+            "macro_accuracy_val": 0.3201379422856027,
+            "f1_val": 0.3201379422856027
+          },
+          "runtime_s": 6.9543091505765915,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "voting_only": {
+          "metrics": {
+            "overall_accuracy": 0.5147540983606558,
+            "macro_accuracy": 0.5419510837421284,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 314,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.69,
+            "name_count": 100,
+            "assets_accuracy": 0.2159090909090909,
+            "assets_count": 88,
+            "country_accuracy": 0.82,
+            "country_count": 100,
+            "revenue_accuracy": 0.2361111111111111,
+            "revenue_count": 72,
+            "city_accuracy": 0.6307692307692307,
+            "city_count": 65,
+            "founded_accuracy": 0.8805970149253731,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.5419510837421284,
+            "f1_test": 0.5419510837421284,
+            "macro_accuracy_val": 0.31870937085703127,
+            "f1_val": 0.31870937085703127
+          },
+          "runtime_s": 1.4870567237958312,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        },
+        "prefer_higher_trust_only": {
+          "metrics": {
+            "overall_accuracy": 0.4967213114754098,
+            "macro_accuracy": 0.528908074719642,
+            "num_evaluated_records": 100,
+            "num_evaluated_attributes": 8,
+            "total_evaluations": 610,
+            "total_correct": 303,
+            "industry_accuracy": 0.14,
+            "industry_count": 100,
+            "name_accuracy": 0.86,
+            "name_count": 100,
+            "assets_accuracy": 0.17045454545454544,
+            "assets_count": 88,
+            "country_accuracy": 0.56,
+            "country_count": 100,
+            "revenue_accuracy": 0.25,
+            "revenue_count": 72,
+            "city_accuracy": 0.7076923076923077,
+            "city_count": 65,
+            "founded_accuracy": 0.8208955223880597,
+            "founded_count": 67,
+            "keypeople_accuracy": 0.7222222222222222,
+            "keypeople_count": 18,
+            "f1": 0.528908074719642,
+            "f1_test": 0.528908074719642,
+            "macro_accuracy_val": 0.327329766059102,
+            "f1_val": 0.327329766059102
+          },
+          "runtime_s": 1.5114961909130216,
+          "notes": {
+            "selection_map": {},
+            "native_types": [
+              "categorical",
+              "date",
+              "list",
+              "numeric",
+              "string"
+            ]
+          }
+        }
+      },
+      "per_blocker": {}
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "base_case": "music",
+  "case": "music-augmented-medium",
+  "data_dir": "../../use cases/music/medium/input/data",
+  "entitymatching_dir": "../../use cases/music/medium/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "fusion_dir": "../../use cases/music/medium/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/music/medium",
+  "pairs": [
+    {
+      "left": "musicbrainz",
+      "right": "discogs",
+      "test_set": "../../use cases/music/medium/input/entitymatching/musicbrainz_2_discogs_test_corner_filled.csv"
+    },
+    {
+      "left": "musicbrainz",
+      "right": "lastfm",
+      "test_set": "../../use cases/music/medium/input/entitymatching/musicbrainz_2_lastfm_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/music/medium/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/music/medium/input/schemamatching/sm_mapping.csv",
+  "variant": "medium"
+}

@@ -1,10 +1,9 @@
 # Knob 10 — Source Reliability Differentiation: Papers domain config.
 #
-# Seeded from music 2026-05-07 (K10 sign-off, plan_s1_scale.md
-# §"K10 sign-off"); rate tables are UNTUNED starting points, to be
-# validated/tuned before a real papers run. The level structure
-# (easy/medium/hard), compromise_rate_per_level, corr_strength_per_level,
-# and concentration_cap are carried over verbatim from music.
+# Seeded from music; rate tables are UNTUNED for papers. The level
+# structure (easy/medium/hard), compromise_rate_per_level,
+# corr_strength_per_level, and concentration_cap are carried over verbatim
+# from music.
 #
 # Papers is target-shaped after load: all three sources (dblp, crossref,
 # open_alex) expose the same released canonical value columns, so
@@ -17,8 +16,7 @@
 # DOI is absent from released source data and target schema.
 #
 # Per-attribute winner identity is seeded from the Version_5 fuser /
-# trust intent (NOT a measured baseline B[s,a] — papers has no signed-off
-# K10 baseline yet, so these target shapes must be re-validated):
+# trust intent (NOT a measured baseline B[s,a]):
 #   title                  -> dblp      (longest_string fuser; dblp is the
 #                                         anchor with the fullest titles)
 #   authors                -> crossref  (prefer_higher_trust; global trust

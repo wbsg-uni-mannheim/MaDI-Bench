@@ -13,10 +13,6 @@
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "cluster_id": {
-      "resolver": "median",
-      "kwargs": {}
-    },
     "color": {
       "resolver": "most_complete",
       "kwargs": {}
@@ -70,8 +66,10 @@
       "kwargs": {}
     },
     "read_speed_mb_s": {
-      "resolver": "most_complete",
-      "kwargs": {}
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
     },
     "storage_connection_type": {
       "resolver": "most_complete",
@@ -87,19 +85,15 @@
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "title_description": {
-      "resolver": "union",
-      "kwargs": {
-        "separator": ","
-      }
-    },
     "url": {
       "resolver": "most_complete",
       "kwargs": {}
     },
     "vram_gb": {
-      "resolver": "most_complete",
-      "kwargs": {}
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
     },
     "weight_g": {
       "resolver": "median",
@@ -110,8 +104,10 @@
       "kwargs": {}
     },
     "write_speed_mb_s": {
-      "resolver": "most_complete",
-      "kwargs": {}
+      "resolver": "union",
+      "kwargs": {
+        "separator": ","
+      }
     }
   },
   "accuracy_by_mode": {},

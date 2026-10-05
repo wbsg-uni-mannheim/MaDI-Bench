@@ -9,7 +9,7 @@
     "wall_hms": "3m 23s",
     "pipeline_metric_total_seconds": 193.78,
     "pipeline_metric_total_hms": "3m 14s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/companies",
+    "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/companies",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 16.56,
     "step_4_active_learning_training_construction_seconds": 0.02,
@@ -27,7 +27,7 @@
     "wall_hms": "3m 16s",
     "pipeline_metric_total_seconds": 180.21,
     "pipeline_metric_total_hms": "3m 00s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/games",
+    "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/games",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 21.15,
     "step_4_active_learning_training_construction_seconds": 0.01,
@@ -45,7 +45,7 @@
     "wall_hms": "3m 31s",
     "pipeline_metric_total_seconds": 199.03,
     "pipeline_metric_total_hms": "3m 19s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/music",
+    "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/music",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 24.72,
     "step_4_active_learning_training_construction_seconds": 0.01,
@@ -63,7 +63,7 @@
     "wall_hms": "11m 58s",
     "pipeline_metric_total_seconds": 703.17,
     "pipeline_metric_total_hms": "11m 43s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/products",
+    "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/products",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 39.81,
     "step_4_active_learning_training_construction_seconds": 0.01,
@@ -81,6 +81,6 @@
     "wall_hms": "0m 09s",
     "pipeline_metric_total_seconds": "",
     "pipeline_metric_total_hms": "",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/papers"
+    "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/papers"
   }
 ]

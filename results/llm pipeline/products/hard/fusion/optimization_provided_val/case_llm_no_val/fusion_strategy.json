@@ -4,16 +4,15 @@
   "rules": {
     "brand": "voting",
     "bus_type": "voting",
-    "chipset_name": "voting",
-    "cluster_id": "voting",
+    "chipset_name": "longest_string",
     "color": "voting",
-    "description": "most_complete",
+    "description": "longest_string",
     "form_factor": "voting",
     "height_mm": "median",
     "interface_type": "voting",
     "length_mm": "median",
     "memory_type": "voting",
-    "model": "voting",
+    "model": "longest_string",
     "model_number": "voting",
     "price": "median",
     "priceCurrency": "voting",
@@ -21,9 +20,8 @@
     "read_speed_mb_s": "median",
     "storage_connection_type": "voting",
     "storage_gb": "median",
-    "title": "most_complete",
-    "title_description": "most_complete",
-    "url": "union",
+    "title": "longest_string",
+    "url": "most_complete",
     "vram_gb": "median",
     "weight_g": "median",
     "width_mm": "median",
@@ -33,8 +31,8 @@
   "trust_key": "trust_score",
   "trust_scores": {
     "products_1": 3.0,
-    "products_2": 1.6869071627803387,
+    "products_2": 1.8981588528944695,
     "products_3": 1.0,
-    "products_4": 1.0803018633784514
+    "products_4": 1.3041505253861887
   }
 }

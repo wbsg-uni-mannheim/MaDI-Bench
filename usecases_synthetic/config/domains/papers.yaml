@@ -10,10 +10,10 @@ master_seed: 42
 # lacked a physical id column.
 #
 # NOTE on the two id_prefix values below (intentional, not a typo):
-#   * top-level ``id_prefix: "<src>-"`` is the prefix the minted ids
-#     start with (used by K10 reliability prefix->source mapping,
-#     reliability.py:567, matching pipelines/configs/papers.yaml's
-#     source_prefix_map).
+#   * top-level ``id_prefix: "<src>-"`` is the prefix the record ids
+#     start with (used by the K10 prefix->source mapping in
+#     ``reliability.build_entity_linkage``, matching
+#     pipelines/configs/papers.yaml's source_prefix_map).
 #   * ``reader_kwargs.id_prefix: <src>`` is handed to PyDI.io.load_json,
 #     which appends the dash itself (``f"{prefix}-{i:05d}"``), so it must
 #     NOT carry the trailing dash.
@@ -69,9 +69,11 @@ fusion_files:
   test: fusion_test.jsonl
 
 # Canonical attribute classes for knob targeting (flat canonical->class
-# map; the data is already target-shaped so per-source attribute_mapping
-# is identity across all three sources). Drawn from
-# input/schemamatching/target_schema.json.
+# map; the loader renames each source's raw columns to these canonical
+# names and adds absent ones as all-NA columns, so per-source
+# attribute_mapping is identity across all three sources). The names are
+# those of ``loaders._PAPERS_CANONICAL_COLUMNS``: the target_schema.json
+# value attributes plus publisher and keywords.
 #   primary  -> the disambiguating title-like attribute (matching signal)
 #   key      -> low-cardinality partitioners (K2 niche density / K10
 #               reliability routing): publication type, year (2018-2020),

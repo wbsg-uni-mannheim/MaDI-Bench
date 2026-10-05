@@ -1,7 +1,6 @@
 # Knob 04 — Per-entity Source Coverage Skew — Papers
 #
-# Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
-# to be validated/tuned before a real papers run. The target_coverage
+# Seeded from music; rate tables are UNTUNED for papers. The target_coverage
 # histogram, within_source_duplicate_rate, and caps are inherited
 # verbatim from music and have NOT been recalibrated for the papers pool.
 
@@ -40,7 +39,7 @@ within_source_duplicate_rate:
 
 singleton_cap_hard: 0.60
 
-# R10-E: maximum fraction of any single source's rows K4 may demote, so
+# Maximum fraction of any single source's rows K4 may demote, so
 # the conflict-ranking does not decimate one source and silently delete
 # EM-gold edges (not regenerated post-K4). 0.40 = at most 40% of a
 # source's rows.
@@ -53,8 +52,8 @@ delta_softening_step: 0.05
 # declared for completeness but unused unless fabrication_mode: llm_primary.
 fabrication_mode: paraphrase_only
 
-# Default model gpt-5.4-mini for cost. Ask user before each K4 run
-# whether to bump to gpt-5.4 (invalidates cache).
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the cache.
 llm_prompt_version: v1
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

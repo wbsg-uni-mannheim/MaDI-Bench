@@ -1,11 +1,10 @@
 """Tests for variant packaging helpers.
 
-R10-F (2026-05-29): ``copy_regenerated_em`` previously globbed
-``*_regenerated.csv`` — a suffix the C11 regen writer never emits — so
-the per-pair per-split ``baseline_pruned`` / ``corner_filled`` EM gold
-files silently never reached the packaged variant directory, and every
-dual-test surface fell back to the baseline gold. These tests pin the
-correct glob.
+``copy_regenerated_em`` must glob the per-pair per-split
+``baseline_pruned`` / ``corner_filled`` EM gold files the regen writer
+emits; if they do not reach the packaged variant directory, every
+dual-test surface falls back to the baseline gold. These tests pin the
+glob.
 """
 
 from __future__ import annotations

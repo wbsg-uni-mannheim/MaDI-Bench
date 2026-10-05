@@ -33,9 +33,31 @@ gold_id_column: source_ids
 
 # Papers ships ``authors`` as a list of display-name strings. The runner
 # literal_eval's these columns before evaluation (same mechanism music
-# uses for its ``tracks`` element).
+# uses for its ``tracks`` element): the gold here, the sources in
+# ``committee_fusion._parse_source_list_columns`` (the loader stringifies
+# them for SM / EM / Norm).
 gold_list_columns:
   - authors
+
+# Scoring-side value types (2026-09-25 fix; committee_fusion_c12.
+# _apply_scoring_value_types). BOTH the fused output and the gold are
+# brought to one representation right before every score_fusion call; the
+# comparators below stay PyDI's lenient ones (decision D5). Without it the
+# three attributes scored meaninglessly:
+# * publication_year: year_only_match passes the value to pd.to_datetime,
+#   which reads an INT year as epoch nanoseconds (1970) -> int fused vs int
+#   gold matched ANY year (base: 1.0 for every member), string fused vs int
+#   gold never (hard: 0.0). ``year`` -> 4-digit text "2019".
+# * authors: list-literal elements carry stray whitespace (crossref
+#   " Antonio Di Leva") -> ``list`` parses a literal and strips elements.
+# * volume (and issue, same hazard): the JSON gold reader turns an
+#   all-numeric string column into float (19.0 -> token "190" vs "19").
+#   ``string`` -> integral numbers become their integer text "19".
+scoring_value_types:
+  publication_year: year
+  authors: list
+  volume: string
+  issue: string
 
 # Global trust scores (CANONICAL papers spec): dblp=1, crossref=3,
 # open_alex=1. crossref is the most reliable bibliographic source overall.

@@ -6,7 +6,7 @@ the canonical order ``K1 → K5 → K6``, coordinating a shared
 ``CollisionIndex`` so that no cell is double-touched by K1 and K5 and
 so that K6 correctly respects the K4-fabricated exception rule.
 
-See ``plans/module_07_joint_values.md`` for the module specification
+See the K1 / K5 / K6 knob cards under ``knobs/`` for the knob specifications
 and ``knobs/cross_cutting.md`` § "Cell-collision coordination" for the
 collision rules:
 
@@ -21,8 +21,8 @@ K6    K1, K5 K4-fabricated NOT skipped
 The orchestrator assumes K4 (if any) has already been applied and its
 provenance written to ``output/provenance/knob_04_*.csv``. It loads the
 post-K4 source DataFrames by calling :func:`load_domain_sources` (which
-currently reads the unmodified source data — K4 integration will be
-wired through Module 8).
+reads the unmodified source data when run standalone — K4 integration is
+done by ``generate_variant.py``, which passes the post-K4 frames).
 
 Usage
 -----
@@ -267,7 +267,7 @@ def apply_values_joint(
     prov_dir = output_dir / "output" / "provenance"
     prov_dir.mkdir(parents=True, exist_ok=True)
 
-    # C13 intact-cluster rule: derive the set of source-record IDs that
+    # Intact-cluster rule: derive the set of source-record IDs that
     # still exist in the post-K2+K4 sources passed in. K1 + K6 consult
     # this to decide which silver clusters are intact vs broken. K1 + K5
     # mutate cell values but never drop entities, so the same set is
@@ -284,7 +284,7 @@ def apply_values_joint(
             if id_col and id_col in df.columns:
                 surviving_record_ids.update(df[id_col].astype(str))
         logger.info(
-            "C13 intact-cluster gate: %d surviving record ids feed K1/K6 "
+            "Intact-cluster gate: %d surviving record ids feed K1/K6 "
             "silver-target filtering",
             len(surviving_record_ids),
         )

@@ -27,7 +27,7 @@
     "percentile": 90.0,
     "raw_percentile": 0.4973474383354187
   },
-  "ditto_checkpoint": "/Users/ralph/Dev/PyDI/cache/ditto_checkpoints/music/best",
+  "ditto_checkpoint": "cache/ditto_checkpoints/music/best",
   "ditto_threshold": 0.5,
   "domain": "music",
   "llm_model_id": "gpt-5.4",

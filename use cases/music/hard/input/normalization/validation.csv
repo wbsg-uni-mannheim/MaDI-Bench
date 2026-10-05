@@ -1,0 +1,153 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+discogs_10575,discogs,discogs_10575,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,39
+discogs_10580,discogs,discogs_10580,dur,duration,0:13:35,815,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_10580,discogs,discogs_10580,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,39
+discogs_10580,discogs,discogs_10580,rel_dt,release-date,01/01/1996,1996-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+discogs_10850,discogs,discogs_10850,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,39
+discogs_11776,discogs,discogs_11776,rel_dt,release-date,01/01/1995,1995-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_14145,discogs,discogs_14145,dur,duration,43:37,2617,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_14236,discogs,discogs_14236,gnr,genre,Hip Hop,Hip Hop / Rap,normalization,genre_taxonomy_map,,1
+discogs_16289,discogs,discogs_16289,dur,duration,2h 9m 24s,7764,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_16289,discogs,discogs_16289,rel_dt,release-date,11/02/1992,1992-11-02,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+discogs_21313,discogs,discogs_21313,dur,duration,29m 2s,1742,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_21313,discogs,discogs_21313,gnr,genre,Reggae,Reggae / Dub,normalization,genre_taxonomy_map,,1
+discogs_21313,discogs,discogs_21313,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""abbreviate""]]}",4
+discogs_21313,discogs,discogs_21313,rel_dt,release-date,1975,1975-01-01,normalization,date_pad_year,,1
+discogs_22225,discogs,discogs_467,rel_dt,release-date,07/17/2000,2000-07-17,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_24900,discogs,discogs_24900,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,21
+discogs_24900,discogs,discogs_24900,rel_dt,release-date,2008-01-01,2008-01-01,identity,,,1
+discogs_2785,discogs,discogs_2785,dur,duration,11m 41s,701,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_29084,discogs,discogs_29084,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,21
+discogs_29084,discogs,discogs_29084,rel_nm,name,Ohm Square -  Love Classics,Love Classics,normalization,lastfm_artist_prefix,,1
+discogs_31408,discogs,discogs_31408,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,21
+discogs_31408,discogs,discogs_31408,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",4
+discogs_3431,discogs,discogs_3431,rel_dt,release-date,01.01.2002,2002-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_3478,discogs,discogs_3478,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,21
+discogs_3478,discogs,discogs_3478,rel_dt,release-date,01/01/2000,2000-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+discogs_3949,discogs,discogs_3949,dur,duration,20:41,1241,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_3949,discogs,discogs_3949,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,21
+discogs_4039,discogs,discogs_4039,rel_dt,release-date,01.01.1994,1994-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_47891,discogs,discogs_47891,rel_dt,release-date,04/16/2010,2010-04-16,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_49037,discogs,discogs_49037,rel_ctry,release-country,Russia,Russian Federation,knowledge,country_full_name,,2
+discogs_49624,discogs,discogs_49624,rel_dt,release-date,01.01.2010,2010-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_58199,discogs,discogs_58199,rel_dt,release-date,03/01/2011,2011-03-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_66288,discogs,discogs_66288,rel_dt,release-date,01/01/2002,2002-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+discogs_66932,discogs,discogs_66932,dur,duration,36:09,2169,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_66932,discogs,discogs_66932,rel_nm,name,*popular* Voodoo Blues,Voodoo Blues,normalization,lastfm_prefix,,1
+discogs_66932,discogs,discogs_66932,rel_dt,release-date,01.01.1997,1997-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_79337,discogs,discogs_79337,dur,duration,69:01,4141,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_79337,discogs,discogs_79337,rel_ctry,release-country,Russia,Russian Federation,knowledge,country_full_name,,2
+discogs_79337,discogs,discogs_79337,rel_dt,release-date,20.03.2012,2012-03-20,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_87405,discogs,discogs_87405,rel_dt,release-date,01/01/2001,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_1074,discogs,discogs_5112,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",4
+mbrainz_1074,musicbrainz,mbrainz_1074,rc,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,"{""provenance"": [[""10"", ""identity""]]}",34
+mbrainz_117,discogs,discogs_251,rel_nm,name,Blackout / Dogfight,Blackout / Dogfight,identity,,,1
+mbrainz_117,discogs,discogs_251,rel_ctry,release-country,Great Britain,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+mbrainz_117,musicbrainz,mbrainz_117,rc,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,"{""provenance"": [[""10"", ""identity""]]}",34
+mbrainz_117,musicbrainz,mbrainz_117,rd,release-date,16.11.1998,1998-11-16,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""], [""10"", ""identity""]]}",1
+mbrainz_1179,musicbrainz,mbrainz_1179,du,duration,0:37:36,2256.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1179,musicbrainz,mbrainz_1179,rd,release-date,02/01/1986,1986-02-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""], [""10"", ""identity""]]}",1
+mbrainz_12085,discogs,discogs_55433,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,34
+mbrainz_12085,musicbrainz,mbrainz_12085,rc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",39
+mbrainz_12085,discogs,discogs_55433,rel_dt,release-date,07/07/2008,2008-07-07,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_12085,musicbrainz,mbrainz_12085,rd,release-date,07.07.2008,2008-07-07,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_14648,discogs,discogs_68724,rel_nm,name,Album: The Broken Wave,The Broken Wave,normalization,lastfm_prefix,,1
+mbrainz_14648,musicbrainz,mbrainz_14648,t,name,The Broken Wave,The Broken Wave,identity,,,1
+mbrainz_14648,discogs,discogs_68724,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,34
+mbrainz_14648,musicbrainz,mbrainz_14648,rc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",39
+mbrainz_14952,discogs,discogs_70520,rel_ctry,release-country,USA,United States of America,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",1
+mbrainz_14952,musicbrainz,mbrainz_14952,rc,release-country,United States of America,United States of America,identity,,"{""provenance"": [[""10"", ""identity""]]}",6
+mbrainz_1535,musicbrainz,mbrainz_1535,rd,release-date,2002-01-01,2002-01-01,identity,,,1
+mbrainz_15439,musicbrainz,mbrainz_15439,du,duration,44m 42s,2682.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_15439,discogs,discogs_73108,rel_dt,release-date,05/09/2011,2011-05-09,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_1576,musicbrainz,mbrainz_1576,rc,release-country,United States of America,United States of America,identity,,,6
+mbrainz_1576,musicbrainz,mbrainz_1576,rd,release-date,2000,2000-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_15890,lastfm,lastFM_35629,Attribute_2,name,Enter Shikari -  Mothership,Mothership,normalization,lastfm_artist_prefix,,1
+mbrainz_15890,musicbrainz,mbrainz_15890,t,name,Mothership,Mothership,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_1709,musicbrainz,mbrainz_1709,rd,release-date,1999-09,1999-09-01,normalization,date_pad_month,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_1712,discogs,discogs_8192,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,34
+mbrainz_1712,discogs,discogs_8192,rel_dt,release-date,11/02/1992,1992-11-02,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_17408,discogs,discogs_89005,rel_dt,release-date,01.01.2008,2008-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_17408,musicbrainz,mbrainz_17408,rd,release-date,2008,2008-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_17820,lastfm,lastFM_42755,Attribute_6,duration,43m 37s,2617.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_17820,musicbrainz,mbrainz_17820,du,duration,43m 37s,2617.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_17820,discogs,discogs_93307,lbl,label,Columbia|Syco Music,Columbia|Syco Music,identity,,,1
+mbrainz_17820,musicbrainz,mbrainz_17820,rd,release-date,11/19/2012,2012-11-19,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""], [""10"", ""identity""]]}",1
+mbrainz_18926,discogs,discogs_16131,dur,duration,10:50,650,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_18926,musicbrainz,mbrainz_18926,du,duration,10m 50s,650,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1899,musicbrainz,mbrainz_1899,t,name,Postcards From the Futureâ€¦ Introducing Be Bop Deluxe,Postcards From the Future... Introducing Be Bop Deluxe,normalization,mojibake+typography,,1
+mbrainz_1899,musicbrainz,mbrainz_1899,rd,release-date,20.09.2004,2004-09-20,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_19346,musicbrainz,mbrainz_19346,rd,release-date,06/24/2013,2013-06-24,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""], [""10"", ""identity""]]}",1
+mbrainz_2028,discogs,discogs_53175,rel_nm,name,Singles Collection,Singles Collection,identity,,,2
+mbrainz_2028,musicbrainz,mbrainz_2028,t,name,Singles Collection,Singles Collection,identity,,,2
+mbrainz_2160,discogs,discogs_13591,rel_dt,release-date,01.01.1990,1990-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_22383,musicbrainz,mbrainz_22383,du,duration,0:40:54,2454.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2359,discogs,discogs_10363,lbl,label,Burning Rome Records|Epic,Burning Rome Records|Epic,identity,,,1
+mbrainz_2359,discogs,discogs_10363,rel_dt,release-date,01.01.1987,1987-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_2359,musicbrainz,mbrainz_2359,rd,release-date,01/01/1987,1987-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_2451,discogs,discogs_10717,dur,duration,47m 8s,2828,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2451,musicbrainz,mbrainz_2451,t,name,Warnings / Promises (album),Warnings / Promises (album),identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_2451,discogs,discogs_10717,rel_dt,release-date,03/07/2005,2005-03-07,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_2451,musicbrainz,mbrainz_2451,rd,release-date,2005-03-07,2005-03-07,identity,,,1
+mbrainz_2604,musicbrainz,mbrainz_2604,t,name,Joyrider (You’re Playing With Fire),Joyrider (You're Playing With Fire),normalization,typography,"{""provenance"": [[""1"", ""llm_paraphrase_short""], [""10"", ""identity""]]}",1
+mbrainz_2604,discogs,discogs_13638,rel_dt,release-date,28.08.2000,2000-08-28,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_27423,musicbrainz,mbrainz_27423,du,duration,46m 49s,2809,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_27423,musicbrainz,mbrainz_27423,rc,release-country,United States of America,United States of America,identity,,,6
+mbrainz_2868,discogs,discogs_70483,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",4
+mbrainz_299,musicbrainz,mbrainz_299,rd,release-date,01/01/1999,1999-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_30104,musicbrainz,mbrainz_30104,du,duration,9:48,588.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_30104,musicbrainz,mbrainz_30104,rd,release-date,24.04.2006,2006-04-24,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_3736,musicbrainz,mbrainz_3736,rd,release-date,1999-01-01,1999-01-01,identity,,,2
+mbrainz_3784,musicbrainz,mbrainz_3784,du,duration,0:04:40,280.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3784,discogs,discogs_16218,lbl,label,Not On Label (Kanye West)|Not On Label (High Contrast)|DAONE Records,Not On Label (Kanye West)|Not On Label (High Contrast)|DAONE Records,identity,,,1
+mbrainz_3784,discogs,discogs_16218,rel_dt,release-date,2006-08,2006-08-01,normalization,date_pad_month,,1
+mbrainz_3841,musicbrainz,mbrainz_3841,du,duration,1h 4m 36s,3876,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3841,musicbrainz,mbrainz_3841,rc,release-country,Great Britain,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",2
+mbrainz_3860,musicbrainz,mbrainz_3860,du,duration,5:58,358,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3919,lastfm,lastFM_8134,Attribute_2,name,Panasonic Songbird,Panasonic Songbird,identity,,,1
+mbrainz_3919,musicbrainz,mbrainz_3919,t,name,UnKindness Of Ravens -  Panasonic Songbird,Panasonic Songbird,normalization,lastfm_artist_prefix,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_4341,musicbrainz,mbrainz_4341,rc,release-country,United States of America,United States of America,identity,,,6
+mbrainz_435,musicbrainz,mbrainz_435,du,duration,0:14:25,865,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_435,musicbrainz,mbrainz_435,t,name,Not Promised Tomorrow / Flame Surfacing,Not Promised Tomorrow / Flame Surfacing,identity,,,1
+mbrainz_435,musicbrainz,mbrainz_435,rd,release-date,01/01/2002,2002-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_4940,musicbrainz,mbrainz_4940,t,name,Sheâ€™s Got Issues,She's Got Issues,normalization,mojibake+typography,,1
+mbrainz_50,discogs,discogs_119,rel_dt,release-date,01.01.1999,1999-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_50,musicbrainz,mbrainz_50,rd,release-date,1999-01-01,1999-01-01,identity,,,2
+mbrainz_535,musicbrainz,mbrainz_535,rd,release-date,11/11/2002,2002-11-11,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_5639,discogs,discogs_24571,dur,duration,675,675,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5639,musicbrainz,mbrainz_5639,du,duration,11:15,675,normalization,duration_parse,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_5639,discogs,discogs_24571,rel_nm,name,Higher Learning / Awake,Higher Learning / Awake,identity,,,2
+mbrainz_5639,musicbrainz,mbrainz_5639,t,name,Higher Learning / Awake,Higher Learning / Awake,identity,,,2
+mbrainz_6256,discogs,discogs_27404,rel_dt,release-date,1996,1996-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6256,musicbrainz,mbrainz_6256,rd,release-date,01/01/1996,1996-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_6492,discogs,discogs_28502,dur,duration,1:07:01,4021,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_6492,musicbrainz,mbrainz_6492,du,duration,4021,4021,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_6492,discogs,discogs_28502,rel_dt,release-date,06/01/2008,2008-06-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6492,musicbrainz,mbrainz_6492,rd,release-date,2008-06-01,2008-06-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6527,discogs,discogs_28649,lbl,label,EMI|BBC Music,EMI|BBC Music,identity,,,1
+mbrainz_6527,discogs,discogs_28649,rel_dt,release-date,1998,1998-01-01,normalization,date_pad_year,,1
+mbrainz_6527,musicbrainz,mbrainz_6527,rd,release-date,01/01/1998,1998-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_671,discogs,discogs_3066,rel_dt,release-date,01/01/2000,2000-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_671,musicbrainz,mbrainz_671,rd,release-date,2000-01-01,2000-01-01,identity,,,1
+mbrainz_6717,discogs,discogs_29552,dur,duration,44m 13s,2653.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_69,musicbrainz,mbrainz_69,du,duration,29m 29s,1769.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_7166,discogs,discogs_32000,dur,duration,11:05,665.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_7166,musicbrainz,mbrainz_7166,du,duration,11:05,665.0,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_7383,discogs,discogs_62046,rel_dt,release-date,1987,1987-01-01,normalization,date_pad_year,,2
+mbrainz_7383,musicbrainz,mbrainz_7383,rd,release-date,1987,1987-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_739,discogs,discogs_3453,rel_dt,release-date,1997,1997-01-01,normalization,date_pad_year,,2
+mbrainz_739,musicbrainz,mbrainz_739,rd,release-date,1997,1997-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_739,musicbrainz,mbrainz_739,tk,tracks,"['4Â° C', 'Diamond Head', 'Flicker', 'One Wing', 'Honeybee Whisper Mind Mirror', 'Decalogue', 'Black or Color', 'Crystal Mist', 'Tears of Nymph', 'Girltree', 'Simple Life']","[""4° C"", ""Diamond Head"", ""Flicker"", ""One Wing"", ""Honeybee Whisper Mind Mirror"", ""Decalogue"", ""Black or Color"", ""Crystal Mist"", ""Tears of Nymph"", ""Girltree"", ""Simple Life""]",normalization,mojibake,,1
+mbrainz_7874,musicbrainz,mbrainz_7874,rc,release-country,United States of America,United States of America,identity,,,6
+mbrainz_7903,discogs,discogs_78472,rel_dt,release-date,01/01/1997,1997-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_7903,musicbrainz,mbrainz_7903,rd,release-date,1997-01-01,1997-01-01,identity,,,1
+mbrainz_8813,discogs,discogs_39611,rel_dt,release-date,01/01/2005,2005-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_8813,musicbrainz,mbrainz_8813,rd,release-date,2005,2005-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_9183,lastfm,lastFM_19537,Attribute_6,duration,25:17,1517,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_9183,lastfm,lastFM_19537,Attribute_2,name,- new - Kaputt und glÃƒÂ¼cklich,Kaputt und glücklich,normalization,mojibake+lastfm_prefix,,1
+mbrainz_9183,musicbrainz,mbrainz_9183,t,name,Kaputt und glÃ¼cklich,Kaputt und glücklich,normalization,mojibake,,1
+mbrainz_931,musicbrainz,mbrainz_931,rd,release-date,07/01/2003,2003-07-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_94,musicbrainz,mbrainz_94,t,name,Fairlight / Desert Traveller,Fairlight / Desert Traveller,identity,,,1
+mbrainz_9680,musicbrainz,mbrainz_9680,du,duration,45:32,2732,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_973,discogs,discogs_4591,rel_dt,release-date,2000,2000-01-01,normalization,date_pad_year,,2
+mbrainz_974,musicbrainz,mbrainz_974,rd,release-date,11/17/2003,2003-11-17,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1

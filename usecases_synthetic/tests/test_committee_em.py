@@ -293,10 +293,9 @@ class TestScoreEMCorrespondencesClosedSet:
     def test_out_of_scope_predictions_ignored(self) -> None:
         """Predicted pairs outside the gold universe are NOT counted as FP.
 
-        This is the contamination fix that motivated S4c: without
-        scoping, the matcher's predictions on the full dataset dominate
-        the FP count and crush precision even when every in-scope
-        prediction is correct.
+        Without scoping, the matcher's predictions on the full dataset
+        would dominate the FP count and crush precision even when every
+        in-scope prediction is correct.
         """
         gold = pd.DataFrame(
             [("a", "x", "true"), ("b", "y", "false")],
@@ -1170,14 +1169,14 @@ class TestEMCommitteeRunnerValidation:
 
 
 class TestEMScoreFallbackChain:
-    """Tests for the C10 ``regen_test → baseline_test → pool`` fallback
+    """Tests for the ``regen_test → baseline_test → pool`` fallback
     chain in ``EMCommitteeRunner._score_predictions``.
 
-    Each (pair, split) carries two versions per plan_revision.md C11:
+    Each (pair, split) carries two versions:
     ``corner_filled`` (Set 2 — the load-bearing monotonicity surface)
     and ``baseline_pruned`` (Set 1 — the per-level reference). The
     headline ``f1`` falls back ``regen_test → baseline_test → pool``;
-    open-set scoring against the original human gold is retired.
+    there is no open-set scoring against the original human gold.
     """
 
     def test_headline_f1_uses_regen_test_when_present(self, tmp_path: Path) -> None:
@@ -1274,9 +1273,9 @@ class TestEMScoreFallbackChain:
             )
 
     def test_macro_keys_replace_retired_surfaces(self, tmp_path: Path) -> None:
-        """Aggregated macro keys carry the C10 names; retired
-        ``macro_f1_vs_test_gold`` / ``macro_f1_vs_regenerated_*``
-        keys are gone."""
+        """Aggregated macro keys are ``macro_f1_regen_test`` /
+        ``macro_f1_baseline_test``; ``macro_f1_vs_test_gold`` /
+        ``macro_f1_vs_regenerated_*`` keys are absent."""
         blocking_path, matching_path = _write_fixture_roster(tmp_path)
         runner = EMCommitteeRunner(blocking_path, matching_path)
 
@@ -1304,7 +1303,7 @@ class TestEMScoreFallbackChain:
 
 
 class TestResolveVariantCheckpointPath:
-    """``_resolve_variant_checkpoint_path`` — R7b dual-model variant
+    """``_resolve_variant_checkpoint_path`` — dual-model variant
     checkpoint lookup.
 
     Contract: at baseline level, returns the baseline path with
@@ -1359,15 +1358,15 @@ class TestResolveVariantCheckpointPath:
 
 
 class TestResolveVariantTrainPath:
-    """``_resolve_variant_train_path`` — R7b Magellan-style retraining
+    """``_resolve_variant_train_path`` — Magellan-style retraining
     on the regenerated variant train CSV.
 
     Contract: at baseline level, returns the un-versioned
-    ``<pair>_train.csv`` lookup (today's behaviour) with
+    ``<pair>_train.csv`` lookup with
     ``is_variant_distinct=False``. At variant levels, prefers
-    ``<pair>_train_corner_filled.csv`` (C11 regen). Falls back to
-    un-versioned baseline train if regen absent (legacy pre-C11
-    variants, or closure-only pairs).
+    ``<pair>_train_corner_filled.csv`` (K2 regen). Falls back to
+    un-versioned baseline train if regen absent (variants without
+    regenerated splits, or closure-only pairs).
     """
 
     def _make_bundle_with_em_dir(self, tmp_path: Path, level: str) -> VariantBundle:
@@ -1439,7 +1438,7 @@ class TestResolveVariantTrainPath:
 
 
 # ---------------------------------------------------------------------------
-# R10-F: end-to-end dual-test gold wiring smoke test
+# End-to-end dual-test gold wiring smoke test
 # ---------------------------------------------------------------------------
 
 
@@ -1451,8 +1450,8 @@ class TestR10FDualTestGoldWiring:
     *deliberately different* label distribution so the two surfaces cannot
     accidentally agree, then runs the real ``EMMatchingCommitteeRunner`` and
     asserts the two aggregated surfaces are distinct and map to the right
-    gold. Guards against a regression of the R10-F glob bug (which made every
-    surface fall back to the same baseline gold).
+    gold. Guards against a gold-file glob that misses the versioned files
+    (every surface would fall back to the same baseline gold).
     """
 
     @staticmethod
@@ -1505,7 +1504,7 @@ class TestR10FDualTestGoldWiring:
         # Both surfaces must be real (not NaN/degenerate)...
         assert not _is_nan_value(macro_bl)
         assert not _is_nan_value(macro_rg)
-        # ...and DISTINCT — the central R10-F guarantee.
+        # ...and DISTINCT — the central guarantee.
         assert macro_bl != macro_rg
         # baseline_pruned is all-positive (F1=1.0); corner_filled adds FPs
         # (F1<1.0), so the baseline surface must score strictly higher. If the

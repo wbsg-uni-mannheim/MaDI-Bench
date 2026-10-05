@@ -1,0 +1,2 @@
+{'dbpedia-metacritic': 7038, 'dbpedia-sales': 4092, 'metacritic-sales': 7096}
+{'exact+year2': 10558, 'exact+year|critic': 6999, 'exact+noyearhint': 293, 'brand_prefix+year': 119, 'edition_suffix+year': 112, 'brand_prefix+critic+year': 54, 'spacing+year': 42, 'tset90+critic+user+year': 24, 'edition_suffix+critic+year': 11, 'token_order+year': 10, 'typo+year': 4}

@@ -2,7 +2,7 @@
   "@context": "https://schema.org/",
   "@type": "Dataset",
   "name": "WDC Products Hardware Listings Downsampled Source-Schema Variant 1 (snake_case)",
-  "description": "Downsampled subset of the WDC Products benchmark used as benchmark input for the products web-data-integration usecase. Records are hardware product listings (GPUs, SSDs, HDDs and USB sticks) collected from e-commerce sources. Structured attribute values - such as chipset, memory size, storage capacity, read and write speeds, and physical dimensions - were extracted from the raw product titles and descriptions and then normalized. The file keeps a source-shaped schema, and the cluster_id column carries the gold-standard grouping of records that refer to the same real-world product for identity resolution and data fusion.",
+  "description": "Hardware product listings from the WDC Products benchmark, with structured attributes taken from the original LLM extraction before downstream normalization. No downstream brand mapping, unit conversion, numeric parsing, rounding or text cleanup is applied. Some conversions already performed by the extraction model remain. Column names retain the source schema, but unit suffixes are not guarantees of the raw units; use the original title and description for unit context. The redundant combined title-description column has been removed and rows are independently shuffled",
   "url": "https://webdatacommons.org/largescaleproductcorpus/wdc-products/",
   "keywords": [
     "WDC Products",
@@ -21,7 +21,7 @@
   ],
   "license": "https://webdatacommons.org/largescaleproductcorpus/wdc-products/",
   "identifier": "wdc-products-hardware-downsampled-source-schema-variant-1",
-  "version": "1.0",
+  "version": "1.1-extracted-before-normalization",
   "datePublished": "2026-05-29",
   "numberOfItems": 812,
   "isPartOf": {
@@ -74,8 +74,8 @@
     {
       "@type": "PropertyValue",
       "name": "list_price",
-      "description": "Listed price amount",
-      "unitText": "number"
+      "description": "Original listed price text before numeric parsing or rounding.",
+      "unitText": "raw string or null"
     },
     {
       "@type": "PropertyValue",
@@ -85,21 +85,9 @@
     },
     {
       "@type": "PropertyValue",
-      "name": "cluster_id",
-      "description": "Gold-standard cluster identifier grouping records that refer to the same real-world product",
-      "unitText": "identifier"
-    },
-    {
-      "@type": "PropertyValue",
       "name": "product_url",
       "description": "Source URL of the product listing",
       "unitText": "URL"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "name_and_description",
-      "description": "Concatenated product name and description used as combined match text",
-      "unitText": "string"
     },
     {
       "@type": "PropertyValue",
@@ -128,26 +116,26 @@
     {
       "@type": "PropertyValue",
       "name": "video_memory_gb",
-      "description": "Video memory size in gigabytes",
-      "unitText": "GB"
+      "description": "Video memory size in gigabytes Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "capacity_gb",
-      "description": "Storage capacity in gigabytes",
-      "unitText": "GB"
+      "description": "Storage capacity in gigabytes Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "sequential_read_mb_s",
-      "description": "Sequential read speed in megabytes per second",
-      "unitText": "MB/s"
+      "description": "Sequential read speed in megabytes per second Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "sequential_write_mb_s",
-      "description": "Sequential write speed in megabytes per second",
-      "unitText": "MB/s"
+      "description": "Sequential write speed in megabytes per second Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
@@ -164,26 +152,26 @@
     {
       "@type": "PropertyValue",
       "name": "width_millimeters",
-      "description": "Width in millimeters",
-      "unitText": "mm"
+      "description": "Width in millimeters Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "length_millimeters",
-      "description": "Length or depth in millimeters",
-      "unitText": "mm"
+      "description": "Length or depth in millimeters Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "height_millimeters",
-      "description": "Height in millimeters",
-      "unitText": "mm"
+      "description": "Height in millimeters Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",
       "name": "weight_grams",
-      "description": "Weight in grams",
-      "unitText": "g"
+      "description": "Weight in grams Raw extracted value; the original unit may differ from the column-name suffix. Consult title and description.",
+      "unitText": "source unit (not normalized)"
     },
     {
       "@type": "PropertyValue",

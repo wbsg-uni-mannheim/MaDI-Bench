@@ -1,13 +1,13 @@
 {
   "case": "papers",
-  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/papers.json",
+  "manifest": "DI-Bench/manifests/papers.json",
   "pipeline_output_dir": "DI-Bench/runs/papers",
-  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_strict_20260609/papers",
+  "timing_dir": "DI-Bench/runs/timing/base_cached_strict_20260609/papers",
   "command": [
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "python3",
     "scripts/run_pipeline.py",
     "--manifest",
-    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/papers.json",
+    "DI-Bench/manifests/papers.json",
     "--training-set-construction",
     "active",
     "--fusion-case",

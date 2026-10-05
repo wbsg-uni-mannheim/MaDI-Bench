@@ -2,7 +2,7 @@
   "metric": "consistency",
   "metadata": {
     "case": "companies-augmented-hard",
-    "schema_path": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/hard/input/schemamatching/target_schema.json",
+    "schema_path": "PyDI/usecases/companies-augmented/hard/input/schemamatching/target_schema.json",
     "fused_output": "DI-Bench/runs/augmented/companies/hard/fusion/fused_clean.csv"
   },
   "result": {

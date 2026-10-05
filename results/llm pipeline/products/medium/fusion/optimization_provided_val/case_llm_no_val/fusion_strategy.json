@@ -5,9 +5,8 @@
     "brand": "voting",
     "bus_type": "voting",
     "chipset_name": "most_complete",
-    "cluster_id": "voting",
     "color": "voting",
-    "description": "longest_string",
+    "description": "most_complete",
     "form_factor": "voting",
     "height_mm": "median",
     "interface_type": "voting",
@@ -22,7 +21,6 @@
     "storage_connection_type": "voting",
     "storage_gb": "median",
     "title": "longest_string",
-    "title_description": "longest_string",
     "url": "union",
     "vram_gb": "median",
     "weight_g": "median",
@@ -33,8 +31,8 @@
   "trust_key": "trust_score",
   "trust_scores": {
     "products_1": 3.0,
-    "products_2": 1.8618796859241278,
-    "products_3": 1.4672051154712058,
+    "products_2": 1.7291732278939314,
+    "products_3": 1.0713327609850611,
     "products_4": 1.0
   }
 }

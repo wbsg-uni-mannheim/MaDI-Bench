@@ -1,4 +1,4 @@
-"""R10-I: guard the EM PLM-tier field-scope invariant.
+"""Guard the EM PLM-tier field-scope invariant.
 
 The Ditto checkpoint is trained on exactly the fields it serializes at
 inference, and the SC-Block encoder likewise. So per domain the three
@@ -46,8 +46,8 @@ class TestEmFieldScopeConsistency:
             assert ditto == dtc, (domain, "ditto != DOMAIN_TEXT_COLS", ditto, dtc)
 
     def test_llm_and_comem_match_ditto_scope(self) -> None:
-        """llm_matcher + comem (zero-shot) widen to the same full scope as
-        ditto_plm under R10-I (no narrower curated subset remains)."""
+        """llm_matcher + comem (zero-shot) use the same full scope as
+        ditto_plm (no narrower curated subset)."""
         for domain in _DOMAINS:
             ditto = set(_member_param(domain, "matching", "ditto_plm", "fields"))
             for member in ("llm_matcher", "comem"):
@@ -56,7 +56,7 @@ class TestEmFieldScopeConsistency:
 
 
 class TestDittoSerializationScope:
-    """R10-I: Ditto's *serialization* scope = committee fields minus any
+    """Ditto's *serialization* scope = committee fields minus any
     name that collides with a Ditto WDC reserved metadata key, applied
     identically on the training side (``committee_ditto_fields`` /
     ``wdc_to_pair_examples``) and the inference side (``DittoMatcher``)."""

@@ -55,6 +55,7 @@ from usecases_synthetic.lib.domain_config import (
     USECASES_DIR,
     VALID_LEVELS,
     load_domain_config,
+    usecases_path,
 )
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.lib.noise_operators import (
@@ -334,7 +335,7 @@ def _resolve_taxonomies(
         levels = spec.get("levels")
         if not csv_rel or not levels:
             continue
-        csv_path = USECASES_DIR / csv_rel
+        csv_path = usecases_path(csv_rel, root=USECASES_DIR)
         if not csv_path.exists():
             logger.warning(
                 "Taxonomy %r CSV not found at %s -- skipping", name, csv_path
@@ -417,7 +418,7 @@ def _check_clean_primary_floor(
 
 
 class _ClosenessContext:
-    """Per-call resources for the closeness contract (Pending #5).
+    """Per-call resources for the closeness contract.
 
     Bundles the fusion-protected entity-id set, per-(entity, canonical
     attribute) target value lookup, the canonical → (source, source-col)
@@ -491,7 +492,7 @@ def _check_close_survivor_floor(
     sources_in_progress: dict[str, pd.DataFrame],
     ctx: _ClosenessContext,
 ) -> bool:
-    """Closeness contract — Pending #5 (locked 2026-05-06).
+    """Closeness contract.
 
     Returns True iff committing *candidate_value* into
     ``(current_source, current_col)`` would still leave ≥ 1 record
@@ -676,12 +677,12 @@ def apply_knob_06(
     numeric_attrs = _resolve_numeric_attributes(config)
     jitter_cap = float(config.get("numeric_jitter_max_relative", 0.02))
 
-    # Closeness contract (Pending #5): replaces the strict clean-survivor
+    # Closeness contract: replaces the strict clean-survivor
     # floor with an "≥1 surviving record within tolerance" gate.
     # ``protection_source`` selects the target universe: gold-only
-    # (legacy) or silver-augmented (plan_revision.md C9, gold wins for
+    # (legacy) or silver-augmented (gold wins for
     # fusion val/test entities; silver fills the rest of the pool).
-    # ``surviving_record_ids`` enables the C13 intact-cluster rule when
+    # ``surviving_record_ids`` enables the intact-cluster rule when
     # silver is active: silver targets only apply to clusters whose
     # entire original member set survived K2.
     closeness_ctx = _ClosenessContext(
@@ -767,9 +768,9 @@ def apply_knob_06(
                 if not cell_str or cell_str.lower() in ("null", "nan", "none"):
                     continue
 
-                # Draw whether to noise this cell. R10-A: level-independent
+                # Draw whether to noise this cell. Level-independent
                 # per-cell selection so the noised-cell set nests across
-                # levels (easy subset of medium subset of hard). Option B --
+                # levels (easy subset of medium subset of hard). Note:
                 # the operator drawn below stays on the level-keyed
                 # ``col_rng`` so each level keeps its own operator mix.
                 if (
@@ -834,7 +835,7 @@ def apply_knob_06(
 
                 # Draw an operator. Retry up to _MAX_JITTER_RETRIES times
                 # if a numeric attribute's mutation exceeds the per-cell
-                # ±jitter_cap relative cap (Pending #6); each retry draws a
+                # ±jitter_cap relative cap; each retry draws a
                 # fresh operator so we don't loop on a single deterministic
                 # over-shoot.
                 attempt_log: list[str] = []
@@ -873,7 +874,7 @@ def apply_knob_06(
                             attempt_log.append(f"{op_name}=jitter_exceeds_cap")
                             continue
 
-                    # Closeness contract (Pending #5): for fusion-protected
+                    # Closeness contract: for fusion-protected
                     # cells, ≥1 record across the entity's sources must
                     # remain within tolerance of the fusion target value
                     # post-mutation. For non-protected entities the gate

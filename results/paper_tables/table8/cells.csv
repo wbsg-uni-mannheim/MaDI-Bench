@@ -1,0 +1,415 @@
+row,column,printed,value,formatted,status,source,note
+Reference-free / Record gain,Games P2,+0.40,0.39776728209532,+0.40,match,table8/reference_free_counts.csv: 65108 output rows / 46580 rows of the largest source (dbpedia) - 1,panel value (4 decimals): 0.3978
+Reference-free / Record gain,Companies P2,+0.19,0.1917699553792762,+0.19,match,table8/reference_free_counts.csv: 12019 output rows / 10085 rows of the largest source (dbpedia) - 1,panel value (4 decimals): 0.1918
+Reference-free / Record gain,Music P2,+0.38,0.37963494939673836,+0.38,match,table8/reference_free_counts.csv: 31217 output rows / 22627 rows of the largest source (discogs) - 1,panel value (4 decimals): 0.3796
+Reference-free / Record gain,Products P2,+0.17,0.16995073891625623,+0.17,match,table8/reference_free_counts.csv: 950 output rows / 812 rows of the largest source (dataset_1) - 1,panel value (4 decimals): 0.17
+Reference-free / Record gain,Papers P2,+0.24,0.2397570330375809,+0.24,match,table8/reference_free_counts.csv: 75314 output rows / 60749 rows of the largest source (crossref) - 1,panel value (4 decimals): 0.2398
+Reference-free / Record gain,Mean P2,+0.28,0.2757759917650343,+0.28,match,mean of the five unrounded per-task values,
+Reference-free / Record gain,Games P3,+0.32,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Companies P3,+0.28,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Music P3,+0.37,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Products P3,+0.39,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Papers P3,+0.37,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Mean P3,+0.35,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Record gain,Games P4,+0.09,0.08883641047659929,+0.09,match,table8/reference_free_counts.csv: 50718 output rows / 46580 rows of the largest source (dbpedia) - 1,panel value (4 decimals): 0.0888
+Reference-free / Record gain,Companies P4,+0.24,0.23668815071888938,+0.24,match,table8/reference_free_counts.csv: 12472 output rows / 10085 rows of the largest source (dbpedia) - 1,panel value (4 decimals): 0.2367
+Reference-free / Record gain,Music P4,+0.31,0.3071993635921686,+0.31,match,table8/reference_free_counts.csv: 29578 output rows / 22627 rows of the largest source (discogs) - 1,panel value (4 decimals): 0.3072
+Reference-free / Record gain,Products P4,+0.08,0.08497536945812811,+0.08,match,table8/reference_free_counts.csv: 881 output rows / 812 rows of the largest source (dataset_1) - 1,panel value (4 decimals): 0.085
+Reference-free / Record gain,Papers P4,+0.25,0.25318935291115907,+0.25,match,table8/reference_free_counts.csv: 76130 output rows / 60749 rows of the largest source (crossref) - 1,panel value (4 decimals): 0.2532
+Reference-free / Record gain,Mean P4,+0.19,0.1941777294313889,+0.19,match,mean of the five unrounded per-task values,
+Reference-free / Density gain,Games P2,-0.25,-0.2537,-0.25,match,table8/e2e_measurements_20260926.json games.P2_rf.density_gain,
+Reference-free / Density gain,Companies P2,-0.05,-0.0542,-0.05,match,table8/e2e_measurements_20260926.json companies.P2_rf.density_gain,
+Reference-free / Density gain,Music P2,-0.18,-0.1772,-0.18,match,table8/e2e_measurements_20260926.json music.P2_rf.density_gain,
+Reference-free / Density gain,Products P2,+0.06,0.0612,+0.06,match,table8/e2e_measurements_20260926.json products.P2_rf.density_gain,
+Reference-free / Density gain,Papers P2,-0.03,-0.0263,-0.03,match,table8/e2e_measurements_20260926.json papers.P2_rf.density_gain,
+Reference-free / Density gain,Mean P2,-0.09,-0.09004,-0.09,match,mean of the five unrounded per-task values,
+Reference-free / Density gain,Games P3,-0.26,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Companies P3,-0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Music P3,-0.14,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Products P3,+0.04,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Papers P3,-0.05,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Mean P3,-0.09,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Density gain,Games P4,-0.24,-0.2435,-0.24,match,table8/e2e_measurements_20260926.json games.P4_rf.density_gain,
+Reference-free / Density gain,Companies P4,-0.02,-0.016,-0.02,match,table8/e2e_measurements_20260926.json companies.P4_rf.density_gain,
+Reference-free / Density gain,Music P4,-0.17,-0.1748,-0.17,match,table8/e2e_measurements_20260926.json music.P4_rf.density_gain,
+Reference-free / Density gain,Products P4,+0.06,0.0586,+0.06,match,table8/e2e_measurements_20260926.json products.P4_rf.density_gain,
+Reference-free / Density gain,Papers P4,-0.03,-0.0307,-0.03,match,table8/e2e_measurements_20260926.json papers.P4_rf.density_gain,
+Reference-free / Density gain,Mean P4,-0.08,-0.08127999999999999,-0.08,match,mean of the five unrounded per-task values,
+Reference-free / Output density,Games P2,0.66,0.6552,0.66,match,table8/e2e_measurements_20260926.json games.P2_rf.output_density,
+Reference-free / Output density,Companies P2,0.57,0.5676,0.57,match,table8/e2e_measurements_20260926.json companies.P2_rf.output_density,
+Reference-free / Output density,Music P2,0.81,0.8071,0.81,match,table8/e2e_measurements_20260926.json music.P2_rf.output_density,
+Reference-free / Output density,Products P2,0.57,0.5723,0.57,match,table8/e2e_measurements_20260926.json products.P2_rf.output_density,
+Reference-free / Output density,Papers P2,0.88,0.8759,0.88,match,table8/e2e_measurements_20260926.json papers.P2_rf.output_density,
+Reference-free / Output density,Mean P2,0.70,0.69562,0.70,match,mean of the five unrounded per-task values,
+Reference-free / Output density,Games P3,0.65,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Companies P3,0.60,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Music P3,0.84,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Products P3,0.55,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Papers P3,0.86,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Mean P3,0.70,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Output density,Games P4,0.67,0.6655,0.67,match,table8/e2e_measurements_20260926.json games.P4_rf.output_density,
+Reference-free / Output density,Companies P4,0.61,0.6058,0.61,match,table8/e2e_measurements_20260926.json companies.P4_rf.output_density,
+Reference-free / Output density,Music P4,0.81,0.8096,0.81,match,table8/e2e_measurements_20260926.json music.P4_rf.output_density,
+Reference-free / Output density,Products P4,0.57,0.5698,0.57,match,table8/e2e_measurements_20260926.json products.P4_rf.output_density,
+Reference-free / Output density,Papers P4,0.88,0.8804,0.88,match,table8/e2e_measurements_20260926.json papers.P4_rf.output_density,
+Reference-free / Output density,Mean P4,0.71,0.70622,0.71,match,mean of the five unrounded per-task values,
+Reference-free / Fusion ratio,Games P2,0.11,0.10542483258585734,0.11,match,table8/reference_free_counts.csv: 6864 multi-source rows / 65108 output rows,panel value (4 decimals): 0.1054
+Reference-free / Fusion ratio,Companies P2,0.13,0.1252184041933605,0.13,match,table8/reference_free_counts.csv: 1505 multi-source rows / 12019 output rows,panel value (4 decimals): 0.1252
+Reference-free / Fusion ratio,Music P2,0.14,0.14405612326616907,0.14,match,table8/reference_free_counts.csv: 4497 multi-source rows / 31217 output rows,panel value (4 decimals): 0.1441
+Reference-free / Fusion ratio,Products P2,0.84,0.8442105263157895,0.84,match,table8/reference_free_counts.csv: 802 multi-source rows / 950 output rows,panel value (4 decimals): 0.8442
+Reference-free / Fusion ratio,Papers P2,0.74,0.7438988767028707,0.74,match,table8/reference_free_counts.csv: 56026 multi-source rows / 75314 output rows,panel value (4 decimals): 0.7439
+Reference-free / Fusion ratio,Mean P2,0.39,0.39256175261280946,0.39,match,mean of the five unrounded per-task values,
+Reference-free / Fusion ratio,Games P3,0.17,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Companies P3,0.08,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Music P3,0.15,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Products P3,0.69,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Papers P3,0.66,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Mean P3,0.35,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Fusion ratio,Games P4,0.31,0.31123072676367364,0.31,match,table8/reference_free_counts.csv: 15785 multi-source rows / 50718 output rows,panel value (4 decimals): 0.3112
+Reference-free / Fusion ratio,Companies P4,0.11,0.10888389993585632,0.11,match,table8/reference_free_counts.csv: 1358 multi-source rows / 12472 output rows,panel value (4 decimals): 0.1089
+Reference-free / Fusion ratio,Music P4,0.20,0.2025491919670025,0.20,match,table8/reference_free_counts.csv: 5991 multi-source rows / 29578 output rows,panel value (4 decimals): 0.2025
+Reference-free / Fusion ratio,Products P4,0.94,0.9432463110102156,0.94,match,table8/reference_free_counts.csv: 831 multi-source rows / 881 output rows,panel value (4 decimals): 0.9432
+Reference-free / Fusion ratio,Papers P4,0.73,0.7301326678050702,0.73,match,table8/reference_free_counts.csv: 55585 multi-source rows / 76130 output rows,panel value (4 decimals): 0.7301
+Reference-free / Fusion ratio,Mean P4,0.46,0.45920855949636363,0.46,match,mean of the five unrounded per-task values,
+Reference-free / Schema validity,Games P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json games.P2_rf.schema_validity,
+Reference-free / Schema validity,Companies P2,0.94,0.9429,0.94,match,table8/e2e_measurements_20260926.json companies.P2_rf.schema_validity,
+Reference-free / Schema validity,Music P2,0.84,0.836,0.84,match,table8/e2e_measurements_20260926.json music.P2_rf.schema_validity,
+Reference-free / Schema validity,Products P2,1.00,0.9983,1.00,match,table8/e2e_measurements_20260926.json products.P2_rf.schema_validity,
+Reference-free / Schema validity,Papers P2,0.98,0.979,0.98,match,table8/e2e_measurements_20260926.json papers.P2_rf.schema_validity,
+Reference-free / Schema validity,Mean P2,0.95,0.95124,0.95,match,mean of the five unrounded per-task values,
+Reference-free / Schema validity,Games P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Companies P3,0.99,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Music P3,0.97,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Products P3,0.95,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Papers P3,0.98,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Mean P3,0.98,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Reference-free / Schema validity,Games P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json games.P4_rf.schema_validity,
+Reference-free / Schema validity,Companies P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json companies.P4_rf.schema_validity,
+Reference-free / Schema validity,Music P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json music.P4_rf.schema_validity,
+Reference-free / Schema validity,Products P4,1.00,0.9996,1.00,match,table8/e2e_measurements_20260926.json products.P4_rf.schema_validity,
+Reference-free / Schema validity,Papers P4,0.98,0.9812,0.98,match,table8/e2e_measurements_20260926.json papers.P4_rf.schema_validity,
+Reference-free / Schema validity,Mean P4,1.00,0.99616,1.00,match,mean of the five unrounded per-task values,
+Silver / Entity recovery,Games P2,0.50,0.4991394148020654,0.50,match,table8/e2e_measurements_20260926.json games.P2_silver.entity_recovery,
+Silver / Entity recovery,Companies P2,0.37,0.36823935558112775,0.37,match,table8/e2e_measurements_20260926.json companies.P2_silver.entity_recovery,
+Silver / Entity recovery,Music P2,0.76,0.7555187637969095,0.76,match,table8/e2e_measurements_20260926.json music.P2_silver.entity_recovery,
+Silver / Entity recovery,Products P2,0.22,0.22427440633245382,0.22,match,table8/products_silver_20260930.json P2_silver.entity_recovery,
+Silver / Entity recovery,Papers P2,0.93,0.9308162797666262,0.93,match,table8/e2e_measurements_20260926.json papers.P2_silver.entity_recovery,
+Silver / Entity recovery,Mean P2,0.56,0.5555976440558366,0.56,match,mean of the five unrounded per-task values,
+Silver / Entity recovery,Games P3,0.41,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Companies P3,0.33,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Music P3,0.77,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Products P3,0.05,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Papers P3,0.82,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Mean P3,0.47,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Entity recovery,Games P4,0.78,0.779833620195066,0.78,match,table8/e2e_measurements_20260926.json games.P4_silver.entity_recovery,
+Silver / Entity recovery,Companies P4,0.31,0.31242807825086305,0.31,match,table8/e2e_measurements_20260926.json companies.P4_silver.entity_recovery,
+Silver / Entity recovery,Music P4,0.78,0.7836644591611479,0.78,match,table8/e2e_measurements_20260926.json music.P4_silver.entity_recovery,
+Silver / Entity recovery,Products P4,0.26,0.262532981530343,0.26,match,table8/products_silver_20260930.json P4_silver.entity_recovery,
+Silver / Entity recovery,Papers P4,0.92,0.9240301059348175,0.92,match,table8/e2e_measurements_20260926.json papers.P4_silver.entity_recovery,
+Silver / Entity recovery,Mean P4,0.61,0.6124978490144475,0.61,match,mean of the five unrounded per-task values,
+Silver / Value drift,Games P2,0.20,0.20133594348997028,0.20,match,table8/e2e_measurements_20260926.json games.P2_silver.value_drift,
+Silver / Value drift,Companies P2,0.35,0.34507180080712446,0.35,match,table8/e2e_measurements_20260926.json companies.P2_silver.value_drift,
+Silver / Value drift,Music P2,0.39,0.38897959469126314,0.39,match,table8/e2e_measurements_20260926.json music.P2_silver.value_drift,
+Silver / Value drift,Products P2,0.07,0.0719017997955588,0.07,match,table8/products_silver_20260930.json P2_silver.value_drift,
+Silver / Value drift,Papers P2,0.01,0.00538447460097607,0.01,match,table8/e2e_measurements_20260926.json papers.P2_silver.value_drift,
+Silver / Value drift,Mean P2,0.20,0.20253472267697856,0.20,match,mean of the five unrounded per-task values,
+Silver / Value drift,Games P3,0.26,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Companies P3,0.41,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Music P3,0.47,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Products P3,0.13,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Papers P3,0.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Mean P3,0.25,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value drift,Games P4,0.22,0.2188772693337504,0.22,match,table8/e2e_measurements_20260926.json games.P4_silver.value_drift,
+Silver / Value drift,Companies P4,0.41,0.41109904133769704,0.41,match,table8/e2e_measurements_20260926.json companies.P4_silver.value_drift,
+Silver / Value drift,Music P4,0.47,0.4662174135310527,0.47,match,table8/e2e_measurements_20260926.json music.P4_silver.value_drift,
+Silver / Value drift,Products P4,0.09,0.08522196789587506,0.09,match,table8/products_silver_20260930.json P4_silver.value_drift,
+Silver / Value drift,Papers P4,0.01,0.005820645559869015,0.01,match,table8/e2e_measurements_20260926.json papers.P4_silver.value_drift,
+Silver / Value drift,Mean P4,0.24,0.23744726753164885,0.24,match,mean of the five unrounded per-task values,
+Silver / Value-density delta,Games P2,-0.23,-0.2325744926713586,-0.23,match,table8/e2e_measurements_20260926.json games.P2_silver.value_density_delta,
+Silver / Value-density delta,Companies P2,-0.30,-0.29695964823053944,-0.30,match,table8/e2e_measurements_20260926.json companies.P2_silver.value_density_delta,
+Silver / Value-density delta,Music P2,-0.11,-0.10606262796294343,-0.11,match,table8/e2e_measurements_20260926.json music.P2_silver.value_density_delta,
+Silver / Value-density delta,Products P2,-0.02,-0.016366084420642073,-0.02,match,table8/products_silver_20260930.json P2_silver.value_density_delta,
+Silver / Value-density delta,Papers P2,-0.01,-0.014582713781935031,-0.01,match,table8/e2e_measurements_20260926.json papers.P2_silver.value_density_delta,
+Silver / Value-density delta,Mean P2,-0.13,-0.1333091134134837,-0.13,match,mean of the five unrounded per-task values,
+Silver / Value-density delta,Games P3,-0.23,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Companies P3,-0.27,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Music P3,-0.07,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Products P3,-0.04,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Papers P3,-0.04,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Mean P3,-0.13,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Value-density delta,Games P4,-0.22,-0.22230983727714765,-0.22,match,table8/e2e_measurements_20260926.json games.P4_silver.value_density_delta,
+Silver / Value-density delta,Companies P4,-0.26,-0.2587442937773247,-0.26,match,table8/e2e_measurements_20260926.json companies.P4_silver.value_density_delta,
+Silver / Value-density delta,Music P4,-0.10,-0.10360741791039428,-0.10,match,table8/e2e_measurements_20260926.json music.P4_silver.value_density_delta,
+Silver / Value-density delta,Products P4,-0.02,-0.018919610811756797,-0.02,match,table8/products_silver_20260930.json P4_silver.value_density_delta,
+Silver / Value-density delta,Papers P4,-0.02,-0.019995646934017453,-0.02,match,table8/e2e_measurements_20260926.json papers.P4_silver.value_density_delta,
+Silver / Value-density delta,Mean P4,-0.12,-0.12471536134212817,-0.12,match,mean of the five unrounded per-task values,
+Silver / Schema validity delta,Games P2,+0.00,0.0005858030603077546,+0.00,match,table8/e2e_measurements_20260926.json games.P2_silver.schema_validity_delta,
+Silver / Schema validity delta,Companies P2,+0.08,0.0753779035480745,+0.08,match,table8/e2e_measurements_20260926.json companies.P2_silver.schema_validity_delta,
+Silver / Schema validity delta,Music P2,-0.10,-0.10305702133338746,-0.10,match,table8/e2e_measurements_20260926.json music.P2_silver.schema_validity_delta,
+Silver / Schema validity delta,Products P2,+0.00,0.00019622442489952707,+0.00,match,table8/products_silver_20260930.json P2_silver.schema_validity_delta,
+Silver / Schema validity delta,Papers P2,-0.00,-0.002043571066634442,-0.00,match,table8/e2e_measurements_20260926.json papers.P2_silver.schema_validity_delta,
+Silver / Schema validity delta,Mean P2,-0.01,-0.0057881322733480236,-0.01,match,mean of the five unrounded per-task values,
+Silver / Schema validity delta,Games P3,+0.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Companies P3,+0.13,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Music P3,+0.03,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Products P3,-0.05,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Papers P3,-0.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Mean P3,+0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Schema validity delta,Games P4,+0.00,0.0006139330489853823,+0.00,match,table8/e2e_measurements_20260926.json games.P4_silver.schema_validity_delta,
+Silver / Schema validity delta,Companies P4,+0.13,0.1324349055818983,+0.13,match,table8/e2e_measurements_20260926.json companies.P4_silver.schema_validity_delta,
+Silver / Schema validity delta,Music P4,+0.06,0.06098208864602306,+0.06,match,table8/e2e_measurements_20260926.json music.P4_silver.schema_validity_delta,
+Silver / Schema validity delta,Products P4,+0.00,0.0015032440322571006,+0.00,match,table8/products_silver_20260930.json P4_silver.schema_validity_delta,
+Silver / Schema validity delta,Papers P4,+0.00,0.00016290375756233821,+0.00,match,table8/e2e_measurements_20260926.json papers.P4_silver.schema_validity_delta,
+Silver / Schema validity delta,Mean P4,+0.04,0.03913941501334524,+0.04,match,mean of the five unrounded per-task values,
+Silver / BCubed precision,Games P2,1.00,0.9976653818432517,1.00,match,table8/e2e_measurements_20260926.json games.P2_silver.bcubed_precision,
+Silver / BCubed precision,Companies P2,0.95,0.9454145036967123,0.95,match,table8/e2e_measurements_20260926.json companies.P2_silver.bcubed_precision,
+Silver / BCubed precision,Music P2,1.00,0.999077038447117,1.00,match,table8/e2e_measurements_20260926.json music.P2_silver.bcubed_precision,
+Silver / BCubed precision,Products P2,0.68,0.682876455125798,0.68,match,table8/products_silver_20260930.json P2_silver.bcubed_precision,
+Silver / BCubed precision,Papers P2,0.99,0.992182947455194,0.99,match,table8/e2e_measurements_20260926.json papers.P2_silver.bcubed_precision,
+Silver / BCubed precision,Mean P2,0.92,0.9234432653136146,0.92,match,mean of the five unrounded per-task values,
+Silver / BCubed precision,Games P3,0.94,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Companies P3,0.99,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Music P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Products P3,0.51,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Papers P3,0.99,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Mean P3,0.89,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed precision,Games P4,1.00,0.9999373256870671,1.00,match,table8/e2e_measurements_20260926.json games.P4_silver.bcubed_precision,
+Silver / BCubed precision,Companies P4,0.99,0.9877693880761366,0.99,match,table8/e2e_measurements_20260926.json companies.P4_silver.bcubed_precision,
+Silver / BCubed precision,Music P4,1.00,0.9997115745147243,1.00,match,table8/e2e_measurements_20260926.json music.P4_silver.bcubed_precision,
+Silver / BCubed precision,Products P4,0.68,0.6792464638878457,0.68,match,table8/products_silver_20260930.json P4_silver.bcubed_precision,
+Silver / BCubed precision,Papers P4,0.99,0.9940285840170716,0.99,match,table8/e2e_measurements_20260926.json papers.P4_silver.bcubed_precision,
+Silver / BCubed precision,Mean P4,0.93,0.932138667236569,0.93,match,mean of the five unrounded per-task values,
+Silver / BCubed recall,Games P2,0.63,0.6312102114053405,0.63,match,table8/e2e_measurements_20260926.json games.P2_silver.bcubed_recall,
+Silver / BCubed recall,Companies P2,0.66,0.6556551832625452,0.66,match,table8/e2e_measurements_20260926.json companies.P2_silver.bcubed_recall,
+Silver / BCubed recall,Music P2,0.69,0.6943441739853944,0.69,match,table8/e2e_measurements_20260926.json music.P2_silver.bcubed_recall,
+Silver / BCubed recall,Products P2,0.60,0.6048942295656528,0.60,match,table8/products_silver_20260930.json P2_silver.bcubed_recall,
+Silver / BCubed recall,Papers P2,0.97,0.9699784574214283,0.97,match,table8/e2e_measurements_20260926.json papers.P2_silver.bcubed_recall,
+Silver / BCubed recall,Mean P2,0.71,0.7112164511280723,0.71,match,mean of the five unrounded per-task values,
+Silver / BCubed recall,Games P3,0.57,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Companies P3,0.63,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Music P3,0.70,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Products P3,0.43,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Papers P3,0.91,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Mean P3,0.65,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed recall,Games P4,0.81,0.8121538255305415,0.81,match,table8/e2e_measurements_20260926.json games.P4_silver.bcubed_recall,
+Silver / BCubed recall,Companies P4,0.62,0.6185307535000786,0.62,match,table8/e2e_measurements_20260926.json companies.P4_silver.bcubed_recall,
+Silver / BCubed recall,Music P4,0.71,0.7088180817125109,0.71,match,table8/e2e_measurements_20260926.json music.P4_silver.bcubed_recall,
+Silver / BCubed recall,Products P4,0.64,0.6372512204280886,0.64,match,table8/products_silver_20260930.json P4_silver.bcubed_recall,
+Silver / BCubed recall,Papers P4,0.97,0.966882092452382,0.97,match,table8/e2e_measurements_20260926.json papers.P4_silver.bcubed_recall,
+Silver / BCubed recall,Mean P4,0.75,0.7487271947247203,0.75,match,mean of the five unrounded per-task values,
+Silver / BCubed F1,Games P2,0.77,0.7732162961925612,0.77,match,table8/e2e_measurements_20260926.json games.P2_silver.bcubed_f1,
+Silver / BCubed F1,Companies P2,0.77,0.7743147281210252,0.77,match,table8/e2e_measurements_20260926.json companies.P2_silver.bcubed_f1,
+Silver / BCubed F1,Music P2,0.82,0.8192921122227692,0.82,match,table8/e2e_measurements_20260926.json music.P2_silver.bcubed_f1,
+Silver / BCubed F1,Products P2,0.64,0.6415241970053303,0.64,match,table8/products_silver_20260930.json P2_silver.bcubed_f1,
+Silver / BCubed F1,Papers P2,0.98,0.9809550656338072,0.98,match,table8/e2e_measurements_20260926.json papers.P2_silver.bcubed_f1,
+Silver / BCubed F1,Mean P2,0.80,0.7978604798350986,0.80,match,mean of the five unrounded per-task values,
+Silver / BCubed F1,Games P3,0.71,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Companies P3,0.77,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Music P3,0.82,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Products P3,0.47,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Papers P3,0.95,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Mean P3,0.74,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / BCubed F1,Games P4,0.90,0.8963157552001174,0.90,match,table8/e2e_measurements_20260926.json games.P4_silver.bcubed_f1,
+Silver / BCubed F1,Companies P4,0.76,0.760711809801027,0.76,match,table8/e2e_measurements_20260926.json companies.P4_silver.bcubed_f1,
+Silver / BCubed F1,Music P4,0.83,0.829501130320532,0.83,match,table8/e2e_measurements_20260926.json music.P4_silver.bcubed_f1,
+Silver / BCubed F1,Products P4,0.66,0.6575790344954643,0.66,match,table8/products_silver_20260930.json P4_silver.bcubed_f1,
+Silver / BCubed F1,Papers P4,0.98,0.9802674326832108,0.98,match,table8/e2e_measurements_20260926.json papers.P4_silver.bcubed_f1,
+Silver / BCubed F1,Mean P4,0.82,0.8248750325000703,0.82,match,mean of the five unrounded per-task values,
+Silver / Fusion accuracy,Games P2,0.79,0.7861044352195762,0.79,match,table8/e2e_measurements_20260926.json games.P2_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Companies P2,0.55,0.5508674414687552,0.55,match,table8/e2e_measurements_20260926.json companies.P2_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Music P2,0.71,0.7064461073913614,0.71,match,table8/e2e_measurements_20260926.json music.P2_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Products P2,0.58,0.5835525674753971,0.58,match,table8/products_silver_20260930.json P2_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Papers P2,0.91,0.9109755825621585,0.91,match,table8/e2e_measurements_20260926.json papers.P2_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Mean P2,0.71,0.7075892268234496,0.71,match,mean of the five unrounded per-task values,
+Silver / Fusion accuracy,Games P3,0.68,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Companies P3,0.51,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Music P3,0.71,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Products P3,0.45,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Papers P3,0.74,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Mean P3,0.62,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fusion accuracy,Games P4,0.90,0.9026837083970578,0.90,match,table8/e2e_measurements_20260926.json games.P4_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Companies P4,0.48,0.48349334680815226,0.48,match,table8/e2e_measurements_20260926.json companies.P4_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Music P4,0.62,0.6220296704739399,0.62,match,table8/e2e_measurements_20260926.json music.P4_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Products P4,0.57,0.5734190782422294,0.57,match,table8/products_silver_20260930.json P4_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Papers P4,0.85,0.8457529251776089,0.85,match,table8/e2e_measurements_20260926.json papers.P4_silver.fusion_accuracy_micro,cell-weighted (micro) accuracy
+Silver / Fusion accuracy,Mean P4,0.69,0.6854757458197976,0.69,match,mean of the five unrounded per-task values,
+Silver / Fully-correct rate,Games P2,0.29,0.28585771658060816,0.29,match,table8/e2e_measurements_20260926.json games.P2_silver.fully_correct_rate,
+Silver / Fully-correct rate,Companies P2,0.11,0.11392405063291139,0.11,match,table8/e2e_measurements_20260926.json companies.P2_silver.fully_correct_rate,
+Silver / Fully-correct rate,Music P2,0.13,0.1272075055187638,0.13,match,table8/e2e_measurements_20260926.json music.P2_silver.fully_correct_rate,
+Silver / Fully-correct rate,Products P2,0.03,0.026385224274406333,0.03,match,table8/products_silver_20260930.json P2_silver.fully_correct_rate,
+Silver / Fully-correct rate,Papers P2,0.55,0.5458903988860099,0.55,match,table8/e2e_measurements_20260926.json papers.P2_silver.fully_correct_rate,
+Silver / Fully-correct rate,Mean P2,0.22,0.2198529791785399,0.22,match,mean of the five unrounded per-task values,
+Silver / Fully-correct rate,Games P3,0.08,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Companies P3,0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Music P3,0.13,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Products P3,0.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Papers P3,0.01,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Mean P3,0.05,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Silver / Fully-correct rate,Games P4,0.46,0.46471600688468157,0.46,match,table8/e2e_measurements_20260926.json games.P4_silver.fully_correct_rate,
+Silver / Fully-correct rate,Companies P4,0.03,0.03049482163406214,0.03,match,table8/e2e_measurements_20260926.json companies.P4_silver.fully_correct_rate,
+Silver / Fully-correct rate,Music P4,0.05,0.05022075055187638,0.05,match,table8/e2e_measurements_20260926.json music.P4_silver.fully_correct_rate,
+Silver / Fully-correct rate,Products P4,0.02,0.0158311345646438,0.02,match,table8/products_silver_20260930.json P4_silver.fully_correct_rate,
+Silver / Fully-correct rate,Papers P4,0.13,0.13027691114518886,0.13,match,table8/e2e_measurements_20260926.json papers.P4_silver.fully_correct_rate,
+Silver / Fully-correct rate,Mean P4,0.14,0.13830792495609054,0.14,match,mean of the five unrounded per-task values,
+Ground truth / Entity recovery,Games P2,0.46,0.46,0.46,match,table8/games_gt_clusters_extended.json P2.entity_recovery,games gold clusters extended with verified links
+Ground truth / Entity recovery,Companies P2,0.91,0.91,0.91,match,table8/e2e_measurements_20260926.json companies.P2_gt.entity_recovery,
+Ground truth / Entity recovery,Music P2,0.87,0.87,0.87,match,table8/e2e_measurements_20260926.json music.P2_gt.entity_recovery,
+Ground truth / Entity recovery,Products P2,0.59,0.59,0.59,match,table8/e2e_measurements_20260926.json products.P2_gt.entity_recovery,
+Ground truth / Entity recovery,Papers P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json papers.P2_gt.entity_recovery,
+Ground truth / Entity recovery,Mean P2,0.77,0.766,0.77,match,mean of the five unrounded per-task values,
+Ground truth / Entity recovery,Games P3,0.31,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Companies P3,0.77,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Music P3,0.91,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Products P3,0.08,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Papers P3,0.83,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Mean P3,0.58,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Entity recovery,Games P4,0.85,0.85,0.85,match,table8/games_gt_clusters_extended.json P4.entity_recovery,games gold clusters extended with verified links
+Ground truth / Entity recovery,Companies P4,0.81,0.81,0.81,match,table8/e2e_measurements_20260926.json companies.P4_gt.entity_recovery,
+Ground truth / Entity recovery,Music P4,0.96,0.96,0.96,match,table8/e2e_measurements_20260926.json music.P4_gt.entity_recovery,
+Ground truth / Entity recovery,Products P4,0.76,0.76,0.76,match,table8/e2e_measurements_20260926.json products.P4_gt.entity_recovery,
+Ground truth / Entity recovery,Papers P4,0.99,0.99,0.99,match,table8/e2e_measurements_20260926.json papers.P4_gt.entity_recovery,
+Ground truth / Entity recovery,Mean P4,0.87,0.874,0.87,match,mean of the five unrounded per-task values,
+Ground truth / Value drift,Games P2,0.40,0.4045,0.40,match,table8/e2e_measurements_20260926.json games.P2_gt.value_drift,
+Ground truth / Value drift,Companies P2,0.63,0.6268,0.63,match,table8/e2e_measurements_20260926.json companies.P2_gt.value_drift,
+Ground truth / Value drift,Music P2,0.61,0.6118,0.61,match,table8/e2e_measurements_20260926.json music.P2_gt.value_drift,
+Ground truth / Value drift,Products P2,0.28,0.275,0.28,match,table8/e2e_measurements_20260926.json products.P2_gt.value_drift,
+Ground truth / Value drift,Papers P2,0.38,0.3813,0.38,match,table8/e2e_measurements_20260926.json papers.P2_gt.value_drift,
+Ground truth / Value drift,Mean P2,0.46,0.45987999999999996,0.46,match,mean of the five unrounded per-task values,
+Ground truth / Value drift,Games P3,0.34,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Companies P3,0.54,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Music P3,0.55,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Products P3,0.33,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Papers P3,0.37,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Mean P3,0.43,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value drift,Games P4,0.41,0.4054,0.41,match,table8/e2e_measurements_20260926.json games.P4_gt.value_drift,
+Ground truth / Value drift,Companies P4,0.45,0.4491,0.45,match,table8/e2e_measurements_20260926.json companies.P4_gt.value_drift,
+Ground truth / Value drift,Music P4,0.51,0.5106,0.51,match,table8/e2e_measurements_20260926.json music.P4_gt.value_drift,
+Ground truth / Value drift,Products P4,0.25,0.2451,0.25,match,table8/e2e_measurements_20260926.json products.P4_gt.value_drift,
+Ground truth / Value drift,Papers P4,0.37,0.3682,0.37,match,table8/e2e_measurements_20260926.json papers.P4_gt.value_drift,
+Ground truth / Value drift,Mean P4,0.40,0.39568000000000003,0.40,match,mean of the five unrounded per-task values,
+Ground truth / Value-density delta,Games P2,-0.19,-0.1947,-0.19,match,table8/e2e_measurements_20260926.json games.P2_gt.value_density_delta,
+Ground truth / Value-density delta,Companies P2,-0.18,-0.1836,-0.18,match,table8/e2e_measurements_20260926.json companies.P2_gt.value_density_delta,
+Ground truth / Value-density delta,Music P2,-0.10,-0.1004,-0.10,match,table8/e2e_measurements_20260926.json music.P2_gt.value_density_delta,
+Ground truth / Value-density delta,Products P2,+0.04,0.0438,+0.04,match,table8/e2e_measurements_20260926.json products.P2_gt.value_density_delta,
+Ground truth / Value-density delta,Papers P2,-0.03,-0.0311,-0.03,match,table8/e2e_measurements_20260926.json papers.P2_gt.value_density_delta,
+Ground truth / Value-density delta,Mean P2,-0.09,-0.0932,-0.09,match,mean of the five unrounded per-task values,
+Ground truth / Value-density delta,Games P3,-0.20,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Companies P3,-0.15,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Music P3,-0.07,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Products P3,+0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Papers P3,+0.03,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Mean P3,-0.08,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Value-density delta,Games P4,-0.18,-0.1826,-0.18,match,table8/e2e_measurements_20260926.json games.P4_gt.value_density_delta,
+Ground truth / Value-density delta,Companies P4,-0.15,-0.1454,-0.15,match,table8/e2e_measurements_20260926.json companies.P4_gt.value_density_delta,
+Ground truth / Value-density delta,Music P4,-0.10,-0.0979,-0.10,match,table8/e2e_measurements_20260926.json music.P4_gt.value_density_delta,
+Ground truth / Value-density delta,Products P4,+0.05,0.0492,+0.05,match,table8/e2e_measurements_20260926.json products.P4_gt.value_density_delta,
+Ground truth / Value-density delta,Papers P4,+0.04,0.0422,+0.04,match,table8/e2e_measurements_20260926.json papers.P4_gt.value_density_delta,
+Ground truth / Value-density delta,Mean P4,-0.07,-0.0669,-0.07,match,mean of the five unrounded per-task values,
+Ground truth / Schema validity delta,Games P2,+0.13,0.1261,+0.13,match,table8/e2e_measurements_20260926.json games.P2_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Companies P2,-0.03,-0.0271,-0.03,match,table8/e2e_measurements_20260926.json companies.P2_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Music P2,-0.16,-0.164,-0.16,match,table8/e2e_measurements_20260926.json music.P2_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Products P2,-0.00,-0.0017,-0.00,match,table8/e2e_measurements_20260926.json products.P2_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Papers P2,-0.02,-0.021,-0.02,match,table8/e2e_measurements_20260926.json papers.P2_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Mean P2,-0.02,-0.017540000000000004,-0.02,match,mean of the five unrounded per-task values,
+Ground truth / Schema validity delta,Games P3,+0.13,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Companies P3,+0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Music P3,-0.03,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Products P3,-0.05,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Papers P3,-0.02,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Mean P3,+0.01,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Schema validity delta,Games P4,+0.13,0.1261,+0.13,match,table8/e2e_measurements_20260926.json games.P4_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Companies P4,+0.03,0.03,+0.03,match,table8/e2e_measurements_20260926.json companies.P4_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Music P4,+0.00,0.0,+0.00,match,table8/e2e_measurements_20260926.json music.P4_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Products P4,-0.00,-0.0004,-0.00,match,table8/e2e_measurements_20260926.json products.P4_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Papers P4,-0.02,-0.0188,-0.02,match,table8/e2e_measurements_20260926.json papers.P4_gt.schema_validity_delta,
+Ground truth / Schema validity delta,Mean P4,+0.03,0.027379999999999998,+0.03,match,mean of the five unrounded per-task values,
+Ground truth / BCubed precision,Games P2,1.00,1.0,1.00,match,table8/games_gt_clusters_extended.json P2.bcubed_precision,games gold clusters extended with verified links
+Ground truth / BCubed precision,Companies P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json companies.P2_gt.bcubed_precision,
+Ground truth / BCubed precision,Music P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json music.P2_gt.bcubed_precision,
+Ground truth / BCubed precision,Products P2,0.98,0.9777,0.98,match,table8/e2e_measurements_20260926.json products.P2_gt.bcubed_precision,
+Ground truth / BCubed precision,Papers P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json papers.P2_gt.bcubed_precision,
+Ground truth / BCubed precision,Mean P2,1.00,0.9955400000000001,1.00,match,mean of the five unrounded per-task values,
+Ground truth / BCubed precision,Games P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Companies P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Music P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Products P3,0.90,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Papers P3,1.00,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Mean P3,0.98,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed precision,Games P4,1.00,1.0,1.00,match,table8/games_gt_clusters_extended.json P4.bcubed_precision,games gold clusters extended with verified links
+Ground truth / BCubed precision,Companies P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json companies.P4_gt.bcubed_precision,
+Ground truth / BCubed precision,Music P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json music.P4_gt.bcubed_precision,
+Ground truth / BCubed precision,Products P4,0.99,0.9927,0.99,match,table8/e2e_measurements_20260926.json products.P4_gt.bcubed_precision,
+Ground truth / BCubed precision,Papers P4,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json papers.P4_gt.bcubed_precision,
+Ground truth / BCubed precision,Mean P4,1.00,0.99854,1.00,match,mean of the five unrounded per-task values,
+Ground truth / BCubed recall,Games P2,0.67,0.6663426763110307,0.67,match,table8/games_gt_clusters_extended.json P2.bcubed_recall,games gold clusters extended with verified links
+Ground truth / BCubed recall,Companies P2,0.95,0.9473,0.95,match,table8/e2e_measurements_20260926.json companies.P2_gt.bcubed_recall,
+Ground truth / BCubed recall,Music P2,0.93,0.9337,0.93,match,table8/e2e_measurements_20260926.json music.P2_gt.bcubed_recall,
+Ground truth / BCubed recall,Products P2,0.81,0.8097,0.81,match,table8/e2e_measurements_20260926.json products.P2_gt.bcubed_recall,
+Ground truth / BCubed recall,Papers P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json papers.P2_gt.bcubed_recall,
+Ground truth / BCubed recall,Mean P2,0.87,0.8714085352622062,0.87,match,mean of the five unrounded per-task values,
+Ground truth / BCubed recall,Games P3,0.56,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Companies P3,0.88,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Music P3,0.96,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Products P3,0.44,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Papers P3,0.92,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Mean P3,0.75,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed recall,Games P4,0.89,0.8920886075949367,0.89,match,table8/games_gt_clusters_extended.json P4.bcubed_recall,games gold clusters extended with verified links
+Ground truth / BCubed recall,Companies P4,0.90,0.8961,0.90,match,table8/e2e_measurements_20260926.json companies.P4_gt.bcubed_recall,
+Ground truth / BCubed recall,Music P4,0.98,0.9806,0.98,match,table8/e2e_measurements_20260926.json music.P4_gt.bcubed_recall,
+Ground truth / BCubed recall,Products P4,0.90,0.8969,0.90,match,table8/e2e_measurements_20260926.json products.P4_gt.bcubed_recall,
+Ground truth / BCubed recall,Papers P4,1.00,0.9956,1.00,match,table8/e2e_measurements_20260926.json papers.P4_gt.bcubed_recall,
+Ground truth / BCubed recall,Mean P4,0.93,0.9322577215189873,0.93,match,mean of the five unrounded per-task values,
+Ground truth / BCubed F1,Games P2,0.80,0.799766681588193,0.80,match,table8/games_gt_clusters_extended.json P2.bcubed_f1,games gold clusters extended with verified links
+Ground truth / BCubed F1,Companies P2,0.97,0.9729,0.97,match,table8/e2e_measurements_20260926.json companies.P2_gt.bcubed_f1,
+Ground truth / BCubed F1,Music P2,0.97,0.9657,0.97,match,table8/e2e_measurements_20260926.json music.P2_gt.bcubed_f1,
+Ground truth / BCubed F1,Products P2,0.89,0.8858,0.89,match,table8/e2e_measurements_20260926.json products.P2_gt.bcubed_f1,
+Ground truth / BCubed F1,Papers P2,1.00,1.0,1.00,match,table8/e2e_measurements_20260926.json papers.P2_gt.bcubed_f1,
+Ground truth / BCubed F1,Mean P2,0.92,0.9248333363176385,0.92,match,mean of the five unrounded per-task values,
+Ground truth / BCubed F1,Games P3,0.71,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Companies P3,0.93,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Music P3,0.98,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Products P3,0.59,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Papers P3,0.96,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Mean P3,0.83,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / BCubed F1,Games P4,0.94,0.9429670513463789,0.94,match,table8/games_gt_clusters_extended.json P4.bcubed_f1,games gold clusters extended with verified links
+Ground truth / BCubed F1,Companies P4,0.95,0.9452,0.95,match,table8/e2e_measurements_20260926.json companies.P4_gt.bcubed_f1,
+Ground truth / BCubed F1,Music P4,0.99,0.9902,0.99,match,table8/e2e_measurements_20260926.json music.P4_gt.bcubed_f1,
+Ground truth / BCubed F1,Products P4,0.94,0.9424,0.94,match,table8/e2e_measurements_20260926.json products.P4_gt.bcubed_f1,
+Ground truth / BCubed F1,Papers P4,1.00,0.9978,1.00,match,table8/e2e_measurements_20260926.json papers.P4_gt.bcubed_f1,
+Ground truth / BCubed F1,Mean P4,0.96,0.9637134102692759,0.96,match,mean of the five unrounded per-task values,
+Ground truth / Fusion accuracy,Games P2,0.66,0.6569987389659521,0.66,match,results/scores_v2.json p2_best_of_breeds fusion.overall_accuracy_all_gold (= Table 7),
+Ground truth / Fusion accuracy,Companies P2,0.66,0.6639344262295082,0.66,match,results/scores_v2.json p2_best_of_breeds fusion.overall_accuracy_all_gold (= Table 7),
+Ground truth / Fusion accuracy,Music P2,0.81,0.8140495867768595,0.81,match,results/scores_v2.json p2_best_of_breeds fusion.overall_accuracy_all_gold (= Table 7),
+Ground truth / Fusion accuracy,Products P2,0.79,0.7930622009569378,0.79,match,results/scores_v2.json p2_best_of_breeds fusion.overall_accuracy_all_gold (= Table 7),
+Ground truth / Fusion accuracy,Papers P2,0.90,0.9023861171366594,0.90,match,results/scores_v2.json p2_best_of_breeds fusion.overall_accuracy_all_gold (= Table 7),
+Ground truth / Fusion accuracy,Mean P2,0.77,0.7660862140131834,0.77,match,mean of the five unrounded per-task values,
+Ground truth / Fusion accuracy,Games P3,0.71,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Companies P3,0.76,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Music P3,0.75,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Products P3,0.61,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Papers P3,0.78,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Mean P3,0.72,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fusion accuracy,Games P4,0.78,0.7780580075662042,0.78,match,table8/e2e_measurements_20260926.json games.P4_gt_fusion_accuracy_strict_v2,
+Ground truth / Fusion accuracy,Companies P4,0.82,0.819672131147541,0.82,match,table8/e2e_measurements_20260926.json companies.P4_gt_fusion_accuracy_strict_v2,
+Ground truth / Fusion accuracy,Music P4,0.87,0.8663911845730028,0.87,match,table8/e2e_measurements_20260926.json music.P4_gt_fusion_accuracy_strict_v2,
+Ground truth / Fusion accuracy,Products P4,0.83,0.8277511961722488,0.83,match,table8/e2e_measurements_20260926.json products.P4_gt_fusion_accuracy_strict_v2,
+Ground truth / Fusion accuracy,Papers P4,0.86,0.8557483731019523,0.86,match,table8/e2e_measurements_20260926.json papers.P4_gt_fusion_accuracy_strict_v2,
+Ground truth / Fusion accuracy,Mean P4,0.83,0.8295241785121898,0.83,match,mean of the five unrounded per-task values,
+Ground truth / Fully-correct rate,Games P2,0.00,0.0,0.00,match,"table8/gt_fully_correct_strict.csv (0/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Companies P2,0.02,0.02,0.02,match,"table8/gt_fully_correct_strict.csv (2/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Music P2,0.21,0.21,0.21,match,"table8/gt_fully_correct_strict.csv (21/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Products P2,0.26,0.26,0.26,match,"table8/gt_fully_correct_strict.csv (26/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Papers P2,0.36,0.36,0.36,match,"table8/gt_fully_correct_strict.csv (36/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Mean P2,0.17,0.16999999999999998,0.17,match,mean of the five unrounded per-task values,
+Ground truth / Fully-correct rate,Games P3,0.10,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Companies P3,0.21,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Music P3,0.04,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Products P3,0.10,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Papers P3,0.07,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Mean P3,0.10,,,as printed,,P3 (LLM-based pipeline): value of the P3 runs; their outputs and scores are in results/llm pipeline/
+Ground truth / Fully-correct rate,Games P4,0.08,0.08,0.08,match,"table8/gt_fully_correct_strict.csv (8/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Companies P4,0.32,0.32,0.32,match,"table8/gt_fully_correct_strict.csv (32/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Music P4,0.36,0.36,0.36,match,"table8/gt_fully_correct_strict.csv (36/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Products P4,0.31,0.31,0.31,match,"table8/gt_fully_correct_strict.csv (31/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Papers P4,0.16,0.16,0.16,match,"table8/gt_fully_correct_strict.csv (16/100 entities, strict rules)",
+Ground truth / Fully-correct rate,Mean P4,0.25,0.246,0.25,match,mean of the five unrounded per-task values,

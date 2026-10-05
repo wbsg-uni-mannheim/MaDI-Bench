@@ -1,8 +1,6 @@
 """Functional tests for :class:`BM25Blocker` (EM blocking committee).
 
-Goes beyond a shape-only smoke test per the process requirement in
-``plans/plan_committee_finalization.md`` §"Process requirement for every
-implementation row".  Exercises: API contract (columns, types), ranking
+Goes beyond a shape-only smoke test.  Exercises: API contract (columns, types), ranking
 sanity (strong textual match ranks first), determinism (same inputs →
 same outputs), NaN tolerance, edge cases (empty frames, unknown columns,
 invalid params), and configuration knobs (top_k, min_score, stopwords).

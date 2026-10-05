@@ -1,4 +1,4 @@
-"""Functional tests for MatchGPTMatcher (C2.4b unit c).
+"""Functional tests for MatchGPTMatcher.
 
 Uses the `llm_callable` + `embedder` injection hooks to stub out
 network and GPU dependencies so the tests run deterministically on

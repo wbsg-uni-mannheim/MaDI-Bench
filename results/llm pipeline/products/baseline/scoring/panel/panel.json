@@ -1,0 +1,886 @@
+{
+  "usecase": "products",
+  "run_id": "",
+  "silver_source": "",
+  "headline": {
+    "RF": {
+      "composite_score": 0.6875628908002647
+    },
+    "GR": {
+      "bcubed_f1": 0.5861067915647383,
+      "macro_accuracy": 0.49797290831782126,
+      "composite_score": 0.5151541287100424
+    }
+  },
+  "coverage": {
+    "entity": {
+      "RF": {
+        "n_rows_output": 1131,
+        "n_rows_largest_input": 812,
+        "row_gain_vs_largest_input": 0.39285714285714285,
+        "fusion_ratio": 0.6861184792219275
+      },
+      "GR": {
+        "n_reference": 100,
+        "row_count_abs_diff": 1031,
+        "row_count_rel_diff": 10.31,
+        "n_recovered": 8,
+        "n_partial": 92,
+        "n_lost": 0,
+        "n_fabricated": 1032,
+        "recovery_rate": 0.08
+      }
+    },
+    "fact": {
+      "RF": {
+        "density_output": 0.5514934840272171,
+        "density_largest_input": 0.5111372884986077,
+        "density_gain": 0.04035619552860936
+      },
+      "GR": {
+        "per_column_drift_normalized": {
+          "height_mm": 0.06421159935356666,
+          "read_speed_mb_s": 0.15014713461956364,
+          "form_factor": 0.742324088751867,
+          "model": 0.34830035876657,
+          "model_number": 0.5143106368237,
+          "product_type": 0.03371817964075237,
+          "chipset_name": 0.10803545518366417,
+          "weight_g": 0.11036573812740978,
+          "color": 0.4123154431668975,
+          "brand": 0.311297487907301,
+          "vram_gb": 1.0,
+          "interface_type": 0.9176970231895883,
+          "memory_type": 0.11893207817974563,
+          "storage_connection_type": 0.23423336678192258,
+          "length_mm": 0.06804872844197606,
+          "storage_gb": 0.02697768230197475,
+          "bus_type": 0.7392456440415409,
+          "write_speed_mb_s": 0.17376051280435945,
+          "width_mm": 0.21251420454545453
+        },
+        "overall_drift": 0.33086501908567656,
+        "density_delta_per_attribute": {
+          "brand": {
+            "reference_density": 0.97,
+            "pipe_density": 0.9195402298850575,
+            "delta": -0.050459770114942515
+          },
+          "product_type": {
+            "reference_density": 1.0,
+            "pipe_density": 0.9973474801061007,
+            "delta": -0.0026525198938992522
+          },
+          "model": {
+            "reference_density": 0.74,
+            "pipe_density": 0.9062776304155614,
+            "delta": 0.16627763041556143
+          },
+          "model_number": {
+            "reference_density": 0.83,
+            "pipe_density": 0.5543766578249336,
+            "delta": -0.27562334217506634
+          },
+          "chipset_name": {
+            "reference_density": 0.25,
+            "pipe_density": 0.2396109637488948,
+            "delta": -0.01038903625110521
+          },
+          "vram_gb": {
+            "reference_density": 0.25,
+            "pipe_density": 0.23872679045092837,
+            "delta": -0.011273209549071628
+          },
+          "storage_gb": {
+            "reference_density": 0.75,
+            "pipe_density": 0.735632183908046,
+            "delta": -0.014367816091954033
+          },
+          "read_speed_mb_s": {
+            "reference_density": 0.43000000000000005,
+            "pipe_density": 0.2900088417329797,
+            "delta": -0.13999115826702035
+          },
+          "write_speed_mb_s": {
+            "reference_density": 0.31999999999999995,
+            "pipe_density": 0.2343059239610964,
+            "delta": -0.08569407603890355
+          },
+          "bus_type": {
+            "reference_density": 0.52,
+            "pipe_density": 0.9080459770114943,
+            "delta": 0.38804597701149424
+          },
+          "interface_type": {
+            "reference_density": 0.24,
+            "pipe_density": 0.6198054818744474,
+            "delta": 0.3798054818744474
+          },
+          "width_mm": {
+            "reference_density": 0.19999999999999996,
+            "pipe_density": 0.11052166224580018,
+            "delta": -0.08947833775419978
+          },
+          "length_mm": {
+            "reference_density": 0.21999999999999997,
+            "pipe_density": 0.11052166224580018,
+            "delta": -0.1094783377541998
+          },
+          "height_mm": {
+            "reference_density": 0.20999999999999996,
+            "pipe_density": 0.13793103448275867,
+            "delta": -0.07206896551724129
+          },
+          "weight_g": {
+            "reference_density": 0.12,
+            "pipe_density": 0.07515473032714415,
+            "delta": -0.04484526967285585
+          },
+          "storage_connection_type": {
+            "reference_density": 0.4,
+            "pipe_density": 0.5915119363395225,
+            "delta": 0.19151193633952246
+          },
+          "memory_type": {
+            "reference_density": 0.25,
+            "pipe_density": 0.25375773651635725,
+            "delta": 0.0037577365163572463
+          },
+          "color": {
+            "reference_density": 0.26,
+            "pipe_density": 0.19274977895667555,
+            "delta": -0.06725022104332445
+          },
+          "form_factor": {
+            "reference_density": 0.4,
+            "pipe_density": 0.6047745358090186,
+            "delta": 0.2047745358090186
+          }
+        },
+        "value_density_delta_mean": 0.018979012518032492
+      }
+    },
+    "source_based": {
+      "RF": {},
+      "GR": {
+        "same_source_collision_rate": {
+          "reference": 0.0,
+          "pipe": 0.0,
+          "delta": 0.0,
+          "by_source": {
+            "products_1": {
+              "reference": 0.0,
+              "pipe": 0.0,
+              "delta": 0.0
+            },
+            "products_2": {
+              "reference": 0.0,
+              "pipe": 0.0,
+              "delta": 0.0
+            },
+            "products_3": {
+              "reference": 0.0,
+              "pipe": 0.0,
+              "delta": 0.0
+            },
+            "products_4": {
+              "reference": 0.0,
+              "pipe": 0.0,
+              "delta": 0.0
+            }
+          }
+        },
+        "source_mix_distribution_js": 0.2595229176405743,
+        "per_source_coverage_rate": {
+          "products_1": {
+            "reference": 1.0,
+            "pipe": 0.717948717948718,
+            "delta": -0.28205128205128205
+          },
+          "products_2": {
+            "reference": 1.0,
+            "pipe": 0.717948717948718,
+            "delta": -0.28205128205128205
+          },
+          "products_3": {
+            "reference": 0.95,
+            "pipe": 0.6737400530503979,
+            "delta": -0.2762599469496021
+          },
+          "products_4": {
+            "reference": 0.72,
+            "pipe": 0.5534924845269673,
+            "delta": -0.16650751547303266
+          }
+        },
+        "source_mix_distribution_reference": {
+          "products_1|products_2|products_3|products_4": 0.72,
+          "products_1|products_2|products_3": 0.23,
+          "products_1|products_2": 0.05
+        },
+        "source_mix_distribution_pipe": {
+          "products_1|products_2|products_3|products_4": 0.39964633068081346,
+          "products_1": 0.03183023872679045,
+          "products_2": 0.10079575596816977,
+          "products_1|products_3": 0.026525198938992044,
+          "products_1|products_4": 0.008841732979664015,
+          "products_1|products_2|products_3": 0.10963748894783377,
+          "products_1|products_2": 0.07338638373121131,
+          "products_3": 0.10433244916003537,
+          "products_1|products_2|products_4": 0.034482758620689655,
+          "products_4": 0.07692307692307693,
+          "products_1|products_3|products_4": 0.03359858532272325
+        }
+      }
+    }
+  },
+  "consistency": {
+    "RF": {
+      "consistency_score": 0.9494088001550688,
+      "n_evaluated": 15477,
+      "n_consistent": 14694,
+      "n_inconsistent": 783,
+      "per_column": {
+        "id": {
+          "consistency_score": null,
+          "n_evaluated": 0,
+          "n_consistent": 0,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": true,
+          "skipped": true,
+          "skip_reason": "identifier_column"
+        },
+        "brand": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1040,
+          "n_consistent": 1040,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "title": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1131,
+          "n_consistent": 1131,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "description": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1131,
+          "n_consistent": 1131,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "price": {
+          "consistency_score": 0.3216531895777179,
+          "n_evaluated": 1113,
+          "n_consistent": 358,
+          "n_inconsistent": 755,
+          "failure_counts": {
+            "type": 755
+          },
+          "excluded_from_dataset_score": false
+        },
+        "priceCurrency": {
+          "consistency_score": 0.9864620938628159,
+          "n_evaluated": 1108,
+          "n_consistent": 1093,
+          "n_inconsistent": 15,
+          "failure_counts": {
+            "currency_code": 15,
+            "pattern": 4
+          },
+          "excluded_from_dataset_score": false
+        },
+        "url": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1131,
+          "n_consistent": 1131,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "model": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1025,
+          "n_consistent": 1025,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "model_number": {
+          "consistency_score": 0.9952153110047847,
+          "n_evaluated": 627,
+          "n_consistent": 624,
+          "n_inconsistent": 3,
+          "failure_counts": {
+            "pattern": 3
+          },
+          "excluded_from_dataset_score": false
+        },
+        "product_type": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1128,
+          "n_consistent": 1128,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "chipset_name": {
+          "consistency_score": 1.0,
+          "n_evaluated": 271,
+          "n_consistent": 271,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "vram_gb": {
+          "consistency_score": 0.9925925925925926,
+          "n_evaluated": 270,
+          "n_consistent": 268,
+          "n_inconsistent": 2,
+          "failure_counts": {
+            "maximum": 2
+          },
+          "excluded_from_dataset_score": false
+        },
+        "storage_gb": {
+          "consistency_score": 1.0,
+          "n_evaluated": 832,
+          "n_consistent": 832,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "read_speed_mb_s": {
+          "consistency_score": 1.0,
+          "n_evaluated": 328,
+          "n_consistent": 328,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "write_speed_mb_s": {
+          "consistency_score": 1.0,
+          "n_evaluated": 265,
+          "n_consistent": 265,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "bus_type": {
+          "consistency_score": 1.0,
+          "n_evaluated": 1027,
+          "n_consistent": 1027,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false,
+          "diagnostics": {
+            "open_taxonomy": {
+              "exhaustive": false,
+              "membership_enforced": false,
+              "n_values_checked": 1027,
+              "n_expected_family_matches": 871,
+              "n_outside_expected_families": 156,
+              "expected_family_match_rate": 0.8481012658227848
+            }
+          }
+        },
+        "interface_type": {
+          "consistency_score": 1.0,
+          "n_evaluated": 701,
+          "n_consistent": 701,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false,
+          "diagnostics": {
+            "open_taxonomy": {
+              "exhaustive": false,
+              "membership_enforced": false,
+              "n_values_checked": 701,
+              "n_expected_family_matches": 644,
+              "n_outside_expected_families": 57,
+              "expected_family_match_rate": 0.9186875891583453
+            }
+          }
+        },
+        "width_mm": {
+          "consistency_score": 1.0,
+          "n_evaluated": 125,
+          "n_consistent": 125,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "length_mm": {
+          "consistency_score": 1.0,
+          "n_evaluated": 125,
+          "n_consistent": 125,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "height_mm": {
+          "consistency_score": 1.0,
+          "n_evaluated": 156,
+          "n_consistent": 156,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "weight_g": {
+          "consistency_score": 0.9058823529411765,
+          "n_evaluated": 85,
+          "n_consistent": 77,
+          "n_inconsistent": 8,
+          "failure_counts": {
+            "minimum": 8
+          },
+          "excluded_from_dataset_score": false
+        },
+        "storage_connection_type": {
+          "consistency_score": 1.0,
+          "n_evaluated": 669,
+          "n_consistent": 669,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "memory_type": {
+          "consistency_score": 1.0,
+          "n_evaluated": 287,
+          "n_consistent": 287,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false,
+          "diagnostics": {
+            "open_taxonomy": {
+              "exhaustive": false,
+              "membership_enforced": false,
+              "n_values_checked": 287,
+              "n_expected_family_matches": 285,
+              "n_outside_expected_families": 2,
+              "expected_family_match_rate": 0.9930313588850174
+            }
+          }
+        },
+        "color": {
+          "consistency_score": 1.0,
+          "n_evaluated": 218,
+          "n_consistent": 218,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "form_factor": {
+          "consistency_score": 1.0,
+          "n_evaluated": 684,
+          "n_consistent": 684,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false,
+          "diagnostics": {
+            "open_taxonomy": {
+              "exhaustive": false,
+              "membership_enforced": false,
+              "n_values_checked": 684,
+              "n_expected_family_matches": 271,
+              "n_outside_expected_families": 413,
+              "expected_family_match_rate": 0.3961988304093567
+            }
+          }
+        }
+      },
+      "columns_missing_from_dataframe": [],
+      "extra_columns_ignored": [
+        "_id",
+        "_fusion_sources",
+        "_fusion_source_datasets"
+      ],
+      "n_empty_columns_excluded": 0
+    },
+    "_design_extensions_pending": "Broader consistency design (ontology-style disjointness checks, cross-attribute constraints) is still pending. The target-schema consistency_score (native + x-pydi constraints) is the first first-class consistency signal.",
+    "GR": {
+      "consistency_score_pipe": 0.9494088001550688,
+      "consistency_score_reference": 1.0,
+      "delta": -0.05059119984493121,
+      "per_column": {
+        "brand": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "bus_type": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "chipset_name": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "color": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "description": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "form_factor": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "height_mm": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "id": {
+          "consistency_score_pipe": null,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "interface_type": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "length_mm": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "memory_type": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "model": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "model_number": {
+          "consistency_score_pipe": 0.9952153110047847,
+          "consistency_score_reference": 1.0,
+          "delta": -0.004784688995215336
+        },
+        "price": {
+          "consistency_score_pipe": 0.3216531895777179,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "priceCurrency": {
+          "consistency_score_pipe": 0.9864620938628159,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "product_type": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "read_speed_mb_s": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "storage_connection_type": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "storage_gb": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "title": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "url": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "vram_gb": {
+          "consistency_score_pipe": 0.9925925925925926,
+          "consistency_score_reference": 1.0,
+          "delta": -0.007407407407407418
+        },
+        "weight_g": {
+          "consistency_score_pipe": 0.9058823529411765,
+          "consistency_score_reference": 1.0,
+          "delta": -0.09411764705882353
+        },
+        "width_mm": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "write_speed_mb_s": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        }
+      }
+    }
+  },
+  "correctness": {
+    "cluster": {
+      "GR": {
+        "bcubed": {
+          "precision": 0.8978201634877384,
+          "recall": 0.4350590372388738,
+          "f1": 0.5861067915647383
+        },
+        "alignment": {
+          "mean_jaccard": 0.4951666666666666,
+          "matched_cluster_rate_at_threshold": 0.61,
+          "matched_threshold": 0.5,
+          "size_match_rate": 0.15,
+          "mean_size_delta": -1.67,
+          "max_size_overshoot": 0
+        }
+      }
+    },
+    "fact": {
+      "GR": {
+        "per_attribute": {
+          "brand": {
+            "accuracy": 0.6701030927835051,
+            "count": 97,
+            "similarity_mean": 0.7729455975386524,
+            "pct_within_tolerance": 0.0
+          },
+          "product_type": {
+            "accuracy": 1.0,
+            "count": 100,
+            "similarity_mean": 1.0
+          },
+          "model": {
+            "accuracy": 0.4189189189189189,
+            "count": 74,
+            "similarity_mean": 0.6851219836178796,
+            "accuracy_similarity_gap": 0.26620306469896066,
+            "mismatch_fingerprint": "normalization_difference_suspected"
+          },
+          "model_number": {
+            "accuracy": 0.43373493975903615,
+            "count": 83,
+            "similarity_mean": 0.649448619193854,
+            "pct_within_tolerance": 0.0,
+            "accuracy_similarity_gap": 0.21571367943481784,
+            "mismatch_fingerprint": "normalization_difference_suspected"
+          },
+          "chipset_name": {
+            "accuracy": 0.2,
+            "count": 25,
+            "similarity_mean": 0.7779528629404582,
+            "accuracy_similarity_gap": 0.5779528629404582,
+            "mismatch_fingerprint": "normalization_difference_suspected"
+          },
+          "vram_gb": {
+            "accuracy": 0.96,
+            "count": 25,
+            "similarity_mean": 0.96,
+            "mae": 245.52,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.96
+          },
+          "storage_gb": {
+            "accuracy": 0.6266666666666667,
+            "count": 75,
+            "similarity_mean": 0.6266666666666667,
+            "mae": 742.1840000000001,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.6533333333333333
+          },
+          "read_speed_mb_s": {
+            "accuracy": 0.5116279069767442,
+            "count": 43,
+            "similarity_mean": 0.5116279069767442,
+            "mae": 194.84848484848484,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.6744186046511628
+          },
+          "write_speed_mb_s": {
+            "accuracy": 0.5625,
+            "count": 32,
+            "similarity_mean": 0.5625,
+            "mae": 366.48148148148147,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.6875
+          },
+          "bus_type": {
+            "accuracy": 0.3076923076923077,
+            "count": 52,
+            "similarity_mean": 0.5655737009279519
+          },
+          "interface_type": {
+            "accuracy": 0.08333333333333333,
+            "count": 24,
+            "similarity_mean": 0.5142460317460317,
+            "pct_within_tolerance": 0.0
+          },
+          "width_mm": {
+            "accuracy": 0.4,
+            "count": 20,
+            "similarity_mean": 0.4,
+            "mae": 4.593999999999999,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.4
+          },
+          "length_mm": {
+            "accuracy": 0.45454545454545453,
+            "count": 22,
+            "similarity_mean": 0.45454545454545453,
+            "mae": 5.1854545454545455,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.45454545454545453
+          },
+          "height_mm": {
+            "accuracy": 0.38095238095238093,
+            "count": 21,
+            "similarity_mean": 0.38095238095238093,
+            "mae": 1.3258333333333334,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.42857142857142855
+          },
+          "weight_g": {
+            "accuracy": 0.3333333333333333,
+            "count": 12,
+            "similarity_mean": 0.3333333333333333,
+            "mae": 0.8000000000000002,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.3333333333333333
+          },
+          "storage_connection_type": {
+            "accuracy": 0.575,
+            "count": 40,
+            "similarity_mean": 0.7970292860734037
+          },
+          "memory_type": {
+            "accuracy": 0.92,
+            "count": 25,
+            "similarity_mean": 0.9840000000000001
+          },
+          "color": {
+            "accuracy": 0.4230769230769231,
+            "count": 26,
+            "similarity_mean": 0.5774469120622967,
+            "pct_within_tolerance": 0.0
+          },
+          "form_factor": {
+            "accuracy": 0.2,
+            "count": 40,
+            "similarity_mean": 0.6140544871794871,
+            "pct_within_tolerance": 0.0
+          }
+        },
+        "macro_accuracy": 0.49797290831782126,
+        "micro_accuracy": 0.5514354066985646,
+        "conflict_only_accuracy": 0.4370314836868325,
+        "conflict_only_micro_accuracy": 0.3981264637002342,
+        "conflict_only_per_attribute": {
+          "model": {
+            "accuracy": 0.4027777777777778,
+            "count": 72
+          },
+          "model_number": {
+            "accuracy": 0.3055555555555556,
+            "count": 36
+          },
+          "storage_gb": {
+            "accuracy": 0.5,
+            "count": 56
+          },
+          "read_speed_mb_s": {
+            "accuracy": 0.5,
+            "count": 14
+          },
+          "write_speed_mb_s": {
+            "accuracy": 0.38461538461538464,
+            "count": 13
+          },
+          "bus_type": {
+            "accuracy": 0.2608695652173913,
+            "count": 46
+          },
+          "storage_connection_type": {
+            "accuracy": 0.4482758620689655,
+            "count": 29
+          },
+          "form_factor": {
+            "accuracy": 0.22857142857142856,
+            "count": 35
+          },
+          "brand": {
+            "accuracy": 0.5925925925925926,
+            "count": 54
+          },
+          "length_mm": {
+            "accuracy": 1.0,
+            "count": 1
+          },
+          "height_mm": {
+            "accuracy": 0.3333333333333333,
+            "count": 3
+          },
+          "weight_g": {
+            "accuracy": 0.3333333333333333,
+            "count": 3
+          },
+          "color": {
+            "accuracy": 0.2857142857142857,
+            "count": 14
+          },
+          "chipset_name": {
+            "accuracy": 0.09523809523809523,
+            "count": 21
+          },
+          "memory_type": {
+            "accuracy": 0.8181818181818182,
+            "count": 11
+          },
+          "interface_type": {
+            "accuracy": 0.08333333333333333,
+            "count": 12
+          },
+          "vram_gb": {
+            "accuracy": 0.8571428571428571,
+            "count": 7
+          }
+        },
+        "conflict_rate_pipe": 0.6781609195402298,
+        "conflict_rate_reference": 1.0,
+        "conflict_rate_delta": -0.32183908045977017,
+        "fully_correct_cluster_rate": 0.05,
+        "list_attribute_set_metrics": {}
+      }
+    }
+  },
+  "task_step": {
+    "_placeholder": true,
+    "_design_intent": "Integrate per-stage metrics from PyDI.{schemamatching,entitymatching,fusion}.evaluation. Caller passes them in via the optional task_step_metrics kwarg; orchestrator packs them verbatim into this block."
+  },
+  "aggregated": {
+    "_placeholder": true,
+    "_design_intent": "Two-dimensional weighting (Quality \u00d7 Reference). Revisit after collecting first metric results across multiple pipelines. headline.<level>.composite_score carries a per-reference-level single-axis composite in the meantime."
+  },
+  "warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against gold (gold.cell_provenance is None, cell_provenance_pipe was not passed)."
+  ],
+  "gold_source": "fusion gold (harness)"
+}

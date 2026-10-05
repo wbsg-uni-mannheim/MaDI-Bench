@@ -3,7 +3,7 @@
 
 Replays the ``RuleBasedMatcher`` configurations from each domain's
 Jupyter workflow notebook against the **refreshed CSV sources**
-(``usecases/<d>/input/data/<source>.csv`` since 2026-05-04). The
+(``usecases/<d>/input/data/<source>.csv``). The
 notebooks themselves cannot be re-executed end-to-end on the
 refreshed sources because their inline data-normalisation cells
 reference the pre-refresh column names (e.g. ``forbes["Sales"]`` is
@@ -18,8 +18,8 @@ Per source pair, writes::
 
 with columns ``id1, id2, score, notes`` (the standard
 ``RuleBasedMatcher`` output schema). These files are the human-baseline
-input stream consumed by ``scripts/build_pool.py`` for the R3 pool
-build (see ``plans/plan_s1_scale.md`` R3).
+input stream consumed by ``scripts/build_pool.py`` for the pool
+build.
 
 Notebook fidelity
 -----------------

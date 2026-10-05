@@ -4,7 +4,6 @@ entity_id,source,attribute,original_value,new_value,transform_fn,transform_param
 ,products_1,product_description,product_description,desc,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
 ,products_1,list_price,list_price,prc,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
 ,products_1,currency_code,currency_code,cur,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
-,products_1,name_and_description,name_and_description,t_desc,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
 ,products_1,model_name,model_name,mdl,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
 ,products_1,manufacturer_part_number,manufacturer_part_number,mdl_no,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
 ,products_1,category,category,prd_typ,rename_abbreviated,"{""baseline_rung"": ""original"", ""target_rung"": ""abbreviated"", ""oracle"": ""rename_table""}",8,hard
@@ -28,7 +27,6 @@ entity_id,source,attribute,original_value,new_value,transform_fn,transform_param
 ,products_2,descriptionText,descriptionText,dsc,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_2,priceAmount,priceAmount,amt,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_2,currency,currency,ccy,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
-,products_2,titleAndDescription,titleAndDescription,tdsc,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_2,modelName,modelName,m,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_2,mpn,mpn,mno,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_2,productCategory,productCategory,ptyp,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
@@ -52,7 +50,6 @@ entity_id,source,attribute,original_value,new_value,transform_fn,transform_param
 ,products_3,Details,Details,Attribute_4,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
 ,products_3,Price,Price,Attribute_5,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
 ,products_3,Currency,Currency,Attribute_6,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
-,products_3,TitleDetails,TitleDetails,Attribute_7,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
 ,products_3,Model,Model,Attribute_9,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
 ,products_3,PartNo,PartNo,Attribute_10,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
 ,products_3,Type,Type,Attribute_8,rename_anonymize,"{""baseline_rung"": ""original"", ""target_rung"": ""anonymized"", ""oracle"": ""rename_table""}",8,hard
@@ -75,7 +72,6 @@ entity_id,source,attribute,original_value,new_value,transform_fn,transform_param
 ,products_4,name,name,t,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_4,desc,desc,dsc,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_4,cur,cur,ccy,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
-,products_4,name_desc,name_desc,tdsc,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_4,mdl,mdl,m,rename_cryptic,"{""baseline_rung"": ""abbreviated"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_4,pn,pn,mno,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard
 ,products_4,cat,cat,ptyp,rename_cryptic,"{""baseline_rung"": ""original"", ""target_rung"": ""cryptic"", ""oracle"": ""rename_table""}",8,hard

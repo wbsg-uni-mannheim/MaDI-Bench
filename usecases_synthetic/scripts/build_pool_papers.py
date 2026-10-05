@@ -6,17 +6,19 @@ Like ``build_pool.py`` (companies / games / music) the papers pool is a
 cross-source matches over the full source data -- not just the labelled
 EM-gold subset. ``build_pool.py`` discovers those matches with a blocker
 sweep plus a trained Ditto PLM (+ LLM adjudication in the margin band);
-papers instead has a strong deterministic identity key -- the **DOI** --
-so no Ditto is needed. Every record in all three sources carries a
-unique, 100%-populated DOI, so two cross-source records are a match iff
-they share a normalized DOI. DOI is therefore both the blocking key and
-the (exact) matcher.
+papers instead matches on a strong deterministic identity key -- the
+**DOI** -- so no Ditto is needed: two cross-source records are a match iff
+they share a normalized DOI, so DOI is both the blocking key and the
+(exact) matcher. The DOIs come from a ``doi`` column of the sources; the
+released papers sources have none, so a run on them finds no DOI match
+and the pool holds the EM-gold positives only.
 
-Coverage vs the labelled gold: DOI matching finds ~156k cross-source
-pairs (dblp<->crossref ~50k, dblp<->open_alex ~55k, crossref<->open_alex
-~50k) against only ~6.6k labelled gold positives, and crucially surfaces
-the crossref<->open_alex matches that the EM gold never enumerates (it
-only ships dblp-anchored pairs).
+Coverage vs the labelled gold: the shipped pool
+(``usecases_synthetic/pools/papers/``) holds ~156k DOI-matched
+cross-source pairs (dblp<->crossref ~50k, dblp<->open_alex ~55k,
+crossref<->open_alex ~50k) against only ~6.6k labelled gold positives,
+and crucially covers the crossref<->open_alex matches that the EM gold
+never enumerates (it only ships dblp-anchored pairs).
 
 The matched pairs are unioned with the EM-gold positives (kept
 unconditionally, mirroring ``build_pool.py`` bucket A): a gold positive
@@ -32,7 +34,7 @@ special case):
   ``id1, id2, source_1, source_2, score, in_gold, in_human, in_ditto,
   decision_path``. ``decision_path`` is ``doi_exact`` / ``doi+gold`` /
   ``gold_only``; ``score`` is 1.0 (deterministic); ``in_ditto`` /
-  ``in_human`` are False (no PLM / human-baseline pipeline for papers).
+  ``in_human`` are False (no PLM or human-baseline pipeline output is used).
 * ``usecases_synthetic/pools/papers/pool_stats.json`` with per-pair
   match counts, gold overlap, and the cluster-size distribution.
 
@@ -92,9 +94,8 @@ _DOI_PREFIX_RE = re.compile(r"^(https?://)?(dx\.)?doi\.org/", re.IGNORECASE)
 def _normalize_doi(value: object) -> str | None:
     """Return a normalized DOI string (lowercased, prefix-stripped) or None.
 
-    DOIs are case-insensitive; the target schema stores them without the
-    ``https://doi.org/`` prefix, but this strips one defensively so a
-    stray prefix never blocks a match.
+    DOIs are case-insensitive; a ``https://doi.org/`` prefix is stripped
+    so a stray prefix never blocks a match.
     """
     if value is None:
         return None
@@ -119,6 +120,11 @@ def _doi_index(sources: dict[str, pd.DataFrame]) -> dict[str, dict[str, list[str
     out: dict[str, dict[str, list[str]]] = {}
     for name, df in sources.items():
         by_doi: dict[str, list[str]] = defaultdict(list)
+        if "doi" not in df.columns:
+            # the released papers sources carry no DOI (the loader no
+            # longer pads an all-NA doi column); the pool is then gold-only
+            out[name] = by_doi
+            continue
         for rid, doi in zip(df["id"].astype(str), df["doi"], strict=True):
             ndoi = _normalize_doi(doi)
             if ndoi is not None:

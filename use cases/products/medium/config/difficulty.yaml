@@ -2,7 +2,7 @@ domain: products
 level: medium
 label: medium
 master_seed: 42
-generated_at: '2026-06-02T20:33:32.149808+00:00'
+generated_at: '2026-09-25T12:24:24.959776+00:00'
 knob_order:
 - knob_02
 - knob_04
@@ -44,24 +44,24 @@ knobs:
     pool_quality: live
     _realised:
       level: medium
-      baseline_ratio: 0.832
+      baseline_ratio: 0.8325
       target_ratio: 0.5
-      final_ratio: 0.5191570881226054
+      final_ratio: 0.5197628458498024
       operator: drop_corner_touching_refilled
-      removed: 383
+      removed: 371
       interpolated: 0
       interp_attempted: 0
-      drop_corner_planned: 383
-      drop_corner_simulated_final_ratio: 0.5191570881226054
+      drop_corner_planned: 371
+      drop_corner_simulated_final_ratio: 0.5197628458498024
       drop_corner_cap_bound: false
-      non_corner_refill_attempts: 383
-      non_corner_refill_committed: 381
-      non_corner_rejected_contamination_collision_with_real_entity: 2
-      drop_corner_skip_protected: 171
+      non_corner_refill_attempts: 371
+      non_corner_refill_committed: 370
+      non_corner_rejected_contamination_collision_with_real_entity: 1
+      drop_corner_skip_protected: 162
       drop_corner_skip_collision_last: 1
-      drop_corner_skip_isolated: 38
+      drop_corner_skip_isolated: 24
       drop_corner_skip_empty_pool: 0
-      drop_corner_skip_counterproductive: 143
+      drop_corner_skip_counterproductive: 117
   knob_04:
     domain: products
     source_count: 4
@@ -119,4 +119,4 @@ knobs:
       products_4: 0.15
     concentration_cap: 0.99
   knob_08:
-    sm_mapping_rows: 108
+    sm_mapping_rows: 100

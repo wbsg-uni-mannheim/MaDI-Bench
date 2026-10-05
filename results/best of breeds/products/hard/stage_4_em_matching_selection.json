@@ -2,21 +2,33 @@
   "stage": "em_matching",
   "winner": "ditto_plm",
   "metric_key": "f1",
-  "val_score": 0.8527665317139003,
-  "test_score": 0.8527665317139003,
+  "val_score": 0.7921725411803902,
+  "test_score": 0.7921725411803902,
   "per_member_val": {
-    "ditto_plm": 0.8527665317139003,
-    "magellan": 0.5512162498444694
+    "ditto_plm": 0.7921725411803902,
+    "magellan": 0.6391067538126362
   },
   "per_member_test": {
-    "ditto_plm": 0.8527665317139003,
-    "magellan": 0.5512162498444694
+    "ditto_plm": 0.7921725411803902,
+    "magellan": 0.6391067538126362
   },
-  "runtime_s": 1806.0993791469955,
+  "runtime_s": 590.1168209388852,
   "notes": {
     "val_split_available": true,
     "test_split_available": true,
-    "clustering_applied_within_em": "greedy"
+    "clustering_applied_within_em": "greedy",
+    "per_pair_test_f1": {
+      "ditto_plm": {
+        "products_1_products_2": 0.6956521739130435,
+        "products_1_products_3": 0.7843137254901961,
+        "products_1_products_4": 0.896551724137931
+      },
+      "magellan": {
+        "products_1_products_2": 0.5499999999999999,
+        "products_1_products_3": 0.6222222222222223,
+        "products_1_products_4": 0.7450980392156863
+      }
+    }
   },
-  "peak_memory_mb": 2786.70703125
+  "peak_memory_mb": 2817.19140625
 }

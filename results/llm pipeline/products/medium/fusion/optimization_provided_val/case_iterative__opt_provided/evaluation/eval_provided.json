@@ -1,83 +1,83 @@
 {
-  "overall_accuracy": 0.49529042386185246,
-  "total_comparisons": 1274,
-  "correct_comparisons": 631,
+  "overall_accuracy": 0.4053724053724054,
+  "total_comparisons": 819,
+  "correct_comparisons": 332,
   "per_attribute_accuracy": {
-    "title_description": {
-      "accuracy": 0.2,
-      "total": 100
-    },
-    "price": {
-      "accuracy": 0.15463917525773196,
-      "total": 97
-    },
-    "brand": {
-      "accuracy": 0.9052631578947369,
-      "total": 95
-    },
-    "form_factor": {
-      "accuracy": 0.8823529411764706,
-      "total": 51
+    "model_number": {
+      "accuracy": 0.26582278481012656,
+      "total": 79
     },
     "interface_type": {
-      "accuracy": 0.3559322033898305,
-      "total": 59
+      "accuracy": 0.05714285714285714,
+      "total": 35
     },
-    "priceCurrency": {
-      "accuracy": 0.5,
-      "total": 96
+    "weight_g": {
+      "accuracy": 0.4444444444444444,
+      "total": 9
     },
-    "description": {
-      "accuracy": 0.22,
+    "storage_connection_type": {
+      "accuracy": 0.43137254901960786,
+      "total": 51
+    },
+    "storage_gb": {
+      "accuracy": 0.2191780821917808,
+      "total": 73
+    },
+    "product_type": {
+      "accuracy": 0.85,
       "total": 100
     },
-    "memory_type": {
-      "accuracy": 0.8571428571428571,
-      "total": 21
+    "write_speed_mb_s": {
+      "accuracy": 0.41379310344827586,
+      "total": 29
     },
-    "chipset_name": {
+    "model": {
+      "accuracy": 0.359375,
+      "total": 64
+    },
+    "height_mm": {
+      "accuracy": 0.06666666666666667,
+      "total": 15
+    },
+    "brand": {
+      "accuracy": 0.7391304347826086,
+      "total": 92
+    },
+    "read_speed_mb_s": {
+      "accuracy": 0.4,
+      "total": 35
+    },
+    "form_factor": {
+      "accuracy": 0.17307692307692307,
+      "total": 52
+    },
+    "length_mm": {
+      "accuracy": 0.2,
+      "total": 15
+    },
+    "color": {
+      "accuracy": 0.32,
+      "total": 25
+    },
+    "vram_gb": {
       "accuracy": 0.2,
       "total": 25
     },
-    "read_speed_mb_s": {
-      "accuracy": 0.17391304347826086,
-      "total": 23
-    },
-    "write_speed_mb_s": {
-      "accuracy": 0.4782608695652174,
-      "total": 23
-    },
-    "storage_connection_type": {
-      "accuracy": 0.7407407407407407,
-      "total": 54
-    },
-    "product_type": {
-      "accuracy": 0.97,
-      "total": 100
-    },
-    "storage_gb": {
-      "accuracy": 0.3972602739726027,
-      "total": 73
-    },
-    "title": {
-      "accuracy": 0.22,
-      "total": 100
-    },
-    "model": {
-      "accuracy": 0.29213483146067415,
-      "total": 89
-    },
     "bus_type": {
-      "accuracy": 0.6547619047619048,
-      "total": 84
+      "accuracy": 0.27586206896551724,
+      "total": 58
     },
-    "vram_gb": {
-      "accuracy": 0.96,
+    "chipset_name": {
+      "accuracy": 0.24,
       "total": 25
     },
-    "model_number": {
-      "accuracy": 0.7288135593220338,
-      "total": 59
+    "width_mm": {
+      "accuracy": 0.25,
+      "total": 12
+    },
+    "memory_type": {
+      "accuracy": 0.56,
+      "total": 25
     }
   }
 }

@@ -1,4 +1,4 @@
-"""Tests for the fusion silver standard builder (plan_revision.md §4b)."""
+"""Tests for the fusion silver standard builder."""
 
 from __future__ import annotations
 
@@ -248,9 +248,9 @@ class TestSupportedDomains:
         ]
 
     def test_unsupported_raises_friendly(self) -> None:
-        # movies has no fusion stack (no per-domain workflow notebook).
+        # A domain without a fusion stack gets a friendly error.
         with pytest.raises(NotImplementedError, match="not yet wired"):
-            build_silver_standard("movies")
+            build_silver_standard("nonexistent")
 
 
 @_skip_if_no_music_inputs

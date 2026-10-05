@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""R10-G phase 2 driver: retrain variant EM checkpoints per domain.
+"""Driver: retrain variant EM checkpoints per domain.
 
 For each requested domain, loops ``easy / medium / hard`` and retrains
 both variant matchers — Ditto (EM matching) and SC-Block (EM blocking) —
 writing the checkpoints the committee runner reads at
 ``cache/<model>_checkpoints/<domain>/variant_<level>/best``. A per-level
 training log is written to
-``usecases_synthetic/output/<domain>/<level>/r7c_retrain.log`` for the
+``usecases_synthetic/output/<domain>/<level>/variant_retrain.log`` for the
 cascade audit trail.
 
-Phase 1 (R10-G) ships this driver as code; the per-domain runs execute in
-phase 2 of each domain's step-5 cascade (Magellan is covered by the
+(Magellan is covered by the
 committee runner's runtime per-pair fit, so it needs no checkpoint here).
 
 Usage::
@@ -45,7 +44,7 @@ _VARIANT_LEVELS = ("easy", "medium", "hard")
 
 
 def _level_log_path(domain: str, level: str) -> Path:
-    return SYNTHETIC_DIR / "output" / domain / level / "r7c_retrain.log"
+    return SYNTHETIC_DIR / "output" / domain / level / "variant_retrain.log"
 
 
 def _add_file_handler(path: Path) -> logging.Handler:
@@ -64,9 +63,7 @@ def _is_corner_filled_data_gap(exc: Exception) -> bool:
     Both retrain_variant_ditto and retrain_variant_sc_block raise a
     ``RuntimeError`` whose message contains ``corner_filled`` when the
     packaged variant shipped no ``*_train_corner_filled.csv`` at all — i.e.
-    there is genuinely nothing to train on. The current trigger is **papers**,
-    whose variants ship only ``*_test_corner_filled.csv`` (a real
-    variant-generation gap — track upstream). NOTE: a *missing val* split
+    there is genuinely nothing to train on. NOTE: a *missing val* split
     (games ships ``*_train_corner_filled`` but no ``*_val_corner_filled``) is
     NOT a data gap here — retrain_variant_ditto holds out a stratified val
     split from train in that case, so games does not reach this skip. Any
@@ -106,7 +103,7 @@ def retrain_domain_level(
         sc_out = out_root / "em_blocking" / "sc_block" / f"variant_{level}"
     handler = _add_file_handler(_level_log_path(domain, level))
     try:
-        logger.info("=== R10-G variant retrain: %s / %s ===", domain, level)
+        logger.info("=== Variant retrain: %s / %s ===", domain, level)
         ditto_ckpt: Path | None = None
         sc_ckpt: Path | None = None
         try:

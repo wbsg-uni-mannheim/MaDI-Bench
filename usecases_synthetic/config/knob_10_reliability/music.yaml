@@ -1,16 +1,14 @@
 # Knob 10 — Source Reliability Differentiation: Music domain config.
 #
-# Refreshed-CSV column names (2026-05-07 K10 sign-off, plan_s1_scale.md
-# §"K10 sign-off"). MusicBrainz is the per-attribute winner everywhere
-# (community-curated cataloguing source — orthogonal to dbpedia's
-# auto-generated noise profile).
+# Keyed on the loaded CSV column names; the per-attribute winners are
+# listed above attribute_targets.
 #
 # Eligible attributes (>=2 sources after the refreshed-CSV remap):
 #   name (3), artist (3), release-date (2), release-country (2),
 #   duration (2). genre and label are discogs-only post-refresh
 #   (musicbrainz/lastfm 100% missing) so they are not eligible for K10.
-# lastfm is excluded from release-date/release-country/duration because
-# those columns are 0%-populated post-refresh (per K1/K3 sign-offs).
+# lastfm is mapped for name and artist only (it has no release-date or
+# release-country column).
 
 domain: music
 
@@ -19,24 +17,27 @@ id_columns:
   discogs: id
   lastfm: id
 
+# Keyed on the LOADED column names of the base sources (2026-09-25 remap;
+# the 2026-06-03 header rewrite put raw WDC headers on disk). Values are
+# the canonical attribute names attribute_targets below is keyed on.
 attribute_mapping:
   musicbrainz:
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
-    duration: duration
+    Attribute_2: name
+    Attribute_3: artist
+    Attribute_4: release-date
+    Attribute_5: release-country
+    Attribute_6: duration
   discogs:
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
-    genre: genre
-    label: label
+    title_str: name
+    performer: artist
+    pub_dt: release-date
+    origin_loc: release-country
+    category: genre
+    imprint: label
     duration: duration
   lastfm:
-    name: name
-    artist: artist
+    album_title: name
+    band: artist
 
 # Winner identity (curated-source-preferred where the measured baseline
 # B[s, a] agrees; for two attributes the gold was authored from discogs):

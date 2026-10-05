@@ -4,9 +4,29 @@
 #
 #   python -m pip install -r requirements.txt
 #
-# For local development against a sibling PyDI checkout instead of the GitHub
-# dependency declared in pyproject.toml:
+# This installs PyDI from GitHub at the commit pinned in pyproject.toml
+# (cd51e25e5e7f0493c45f678d0d0ef6e123d9133a, branch synthetic-usecases).
 #
+# For local development against a sibling PyDI checkout instead of the GitHub
+# dependency declared in pyproject.toml, the checkout must be at that commit
+# (PyDI's main branch lacks the `synthetic` extra and the PyDI.evaluation
+# package):
+#
+#   git clone https://github.com/wbsg-uni-mannheim/PyDI.git ../PyDI
+#   git -C ../PyDI checkout cd51e25e5e7f0493c45f678d0d0ef6e123d9133a
 #   python -m pip install -e ../PyDI[synthetic]
 #   python -m pip install -e . --no-deps
+#
+# pycountry: the paper's end-to-end panels (Table 8) ran with pycountry 26.2.16.
+# PyDI at the pinned commit requires pycountry>=24.0,<25.0, so pip installs 24.6.1,
+# and pycountry 26.2.16 cannot be listed in this file (pip could not resolve the
+# requirements). With 24.6.1, six Products schema-validity values of Table 8 differ
+# by up to 0.0004. To reproduce them exactly, install pycountry 26.2.16 afterwards:
+#
+#   python -m pip install pycountry==26.2.16
+#
+# pip then reports the conflict with PyDI's declared range; the repository's test
+# suites pass with either version. (uv applies the same pin through [tool.uv] in
+# pyproject.toml: in project mode, uv sync / uv run, and for uv pip install run
+# from the repository root.)
 -e .

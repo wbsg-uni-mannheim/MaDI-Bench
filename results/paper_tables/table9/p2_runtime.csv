@@ -1,0 +1,6 @@
+domain,gpu,training_s_per_model,training_s,pipeline_wall_s,pipeline_wall_without_e2e_panel_s,runtime_s,quality_check
+games,NVIDIA RTX A6000,"{""ditto_plm"": 54.3}",54.3,2592.23,2557.32,2611.62,REPRODUCED
+companies,NVIDIA RTX A6000,"{""sc_block"": 205.8}",205.8,256.46,249.18,454.98,REPRODUCED_UP_TO_TIES
+music,NVIDIA RTX A6000,"{""ditto_plm"": 5572.2}",5572.2,1679.16,1659.24,7231.44,REPRODUCED
+products,NVIDIA RTX A6000,"{""ditto_plm"": 535.5, ""sc_block"": 133.6}",669.1,360.78,359.72,1028.82,REPRODUCED
+papers,NVIDIA RTX A6000,"{""ditto_plm"": 842.3, ""sc_block"": 5307.2}",6149.5,8549.29,8549.29,14698.79,REPRODUCED

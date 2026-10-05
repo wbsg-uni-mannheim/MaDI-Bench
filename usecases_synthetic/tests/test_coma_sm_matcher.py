@@ -1,6 +1,6 @@
 """Functional tests for ``ComaSchemaMatcher``.
 
-Covers the C1.6 ``coma_hybrid`` committee member — the COMA 3.0 CE
+Covers the ``coma_hybrid`` committee member — the COMA 3.0 CE
 adapter backed by Valentine's pure-Python ``ComaPy``.
 
 Scope:

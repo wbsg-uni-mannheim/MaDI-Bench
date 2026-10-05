@@ -1,0 +1,81 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+mbrainz_10080,discogs,discogs_45361,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,53
+mbrainz_10080,musicbrainz,mbrainz_10080,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,65
+mbrainz_11156,discogs,discogs_50910,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,53
+mbrainz_11156,musicbrainz,mbrainz_11156,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,65
+mbrainz_11156,discogs,discogs_50910,pub_dt,release-date,1980,1980-01-01,normalization,date_pad_year,,1
+mbrainz_11790,discogs,discogs_90880,origin_loc,release-country,Russia,Russian Federation,knowledge,country_full_name,,1
+mbrainz_11790,musicbrainz,mbrainz_11790,Attribute_5,release-country,Russian Federation,Russian Federation,identity,,,1
+mbrainz_11821,discogs,discogs_69253,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,25
+mbrainz_11821,musicbrainz,mbrainz_11821,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,65
+mbrainz_12115,musicbrainz,mbrainz_12115,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,65
+mbrainz_12193,discogs,discogs_55909,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,53
+mbrainz_12193,musicbrainz,mbrainz_12193,Attribute_5,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,65
+mbrainz_123,discogs,discogs_259,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,25
+mbrainz_123,discogs,discogs_259,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,53
+mbrainz_12500,discogs,discogs_57381,origin_loc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,53
+mbrainz_12500,discogs,discogs_57381,pub_dt,release-date,1984,1984-01-01,normalization,date_pad_year,,1
+mbrainz_1269,discogs,discogs_6025,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,25
+mbrainz_12766,discogs,discogs_58657,pub_dt,release-date,1998,1998-01-01,normalization,date_pad_year,,1
+mbrainz_1314,discogs,discogs_6285,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,25
+mbrainz_1337,discogs,discogs_6414,pub_dt,release-date,1989,1989-01-01,normalization,date_pad_year,,3
+mbrainz_1337,musicbrainz,mbrainz_1337,Attribute_4,release-date,1989-01-01,1989-01-01,identity,,,3
+mbrainz_135,discogs,discogs_289,category,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,25
+mbrainz_13699,musicbrainz,mbrainz_13699,Attribute_4,release-date,2002-05,2002-05-01,normalization,date_pad_month,,1
+mbrainz_143,discogs,discogs_316,pub_dt,release-date,2001,2001-01-01,normalization,date_pad_year,,1
+mbrainz_1502,musicbrainz,mbrainz_1502,Attribute_4,release-date,2004-01-01,2004-01-01,identity,,,2
+mbrainz_15029,discogs,discogs_70907,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,2
+mbrainz_15127,lastfm,lastFM_33278,album_title,name,"Album: You, Me, the Music and Me","You, Me, the Music and Me",normalization,lastfm_prefix,,1
+mbrainz_15127,musicbrainz,mbrainz_15127,Attribute_2,name,"You, Me, the Music and Me","You, Me, the Music and Me",identity,,,1
+mbrainz_15127,discogs,discogs_71459,pub_dt,release-date,1989,1989-01-01,normalization,date_pad_year,,3
+mbrainz_15132,musicbrainz,mbrainz_15132,Attribute_4,release-date,2011-10,2011-10-01,normalization,date_pad_month,,1
+mbrainz_1568,discogs,discogs_7716,pub_dt,release-date,1997,1997-01-01,normalization,date_pad_year,,1
+mbrainz_159,discogs,discogs_375,pub_dt,release-date,1998-11-01,1998-11-01,identity,,,1
+mbrainz_159,musicbrainz,mbrainz_159,Attribute_4,release-date,1998-11,1998-11-01,normalization,date_pad_month,,1
+mbrainz_1651,musicbrainz,mbrainz_1651,Attribute_9,tracks,"['The Riverboat Song', 'The Day We Caught the Train', 'The Circle', 'Lining Your Pockets', 'Fleeting Mind', '40 Past Midnight', 'One for the Road', 'Itâ€™s My Shadow', 'Policemen & Pirates', 'The Downstream', 'Youâ€™ve Got It Bad', 'Get Away']","[""The Riverboat Song"", ""The Day We Caught the Train"", ""The Circle"", ""Lining Your Pockets"", ""Fleeting Mind"", ""40 Past Midnight"", ""One for the Road"", ""It’s My Shadow"", ""Policemen & Pirates"", ""The Downstream"", ""You’ve Got It Bad"", ""Get Away""]",normalization,mojibake,,1
+mbrainz_175,musicbrainz,mbrainz_175,Attribute_4,release-date,1996-08,1996-08-01,normalization,date_pad_month,,1
+mbrainz_18332,lastfm,lastFM_44432,album_title,name,One Way System -  Singles Collection,Singles Collection,normalization,lastfm_artist_prefix,,1
+mbrainz_18332,musicbrainz,mbrainz_18332,Attribute_2,name,Singles Collection,Singles Collection,identity,,,1
+mbrainz_18332,musicbrainz,mbrainz_18332,Attribute_4,release-date,2003-01-01,2003-01-01,identity,,,3
+mbrainz_188,musicbrainz,mbrainz_188,Attribute_4,release-date,2001-06,2001-06-01,normalization,date_pad_month,,1
+mbrainz_188,musicbrainz,mbrainz_188,Attribute_9,tracks,"['Jim Clark Theorem', ""Les courants d'air"", 'Snakeplayer', 'Bassmajazz', 'Hybrid Story', 'Variations Sur Emma Peel', 'Sweet Sitar Street', 'Act of Love', 'Le Surboomer', 'Romantic Hold Up', 'La Baie Du Fakir', 'Vega Music', 'La guitare enchantÃ©e']","[""Jim Clark Theorem"", ""Les courants d'air"", ""Snakeplayer"", ""Bassmajazz"", ""Hybrid Story"", ""Variations Sur Emma Peel"", ""Sweet Sitar Street"", ""Act of Love"", ""Le Surboomer"", ""Romantic Hold Up"", ""La Baie Du Fakir"", ""Vega Music"", ""La guitare enchantée""]",normalization,mojibake,,1
+mbrainz_20856,musicbrainz,mbrainz_20856,Attribute_4,release-date,1998-02,1998-02-01,normalization,date_pad_month,,1
+mbrainz_2170,lastfm,lastFM_4711,album_title,name,A. Disco Ate My Baby -  The Drumstick EP,The Drumstick EP,normalization,lastfm_artist_prefix,,1
+mbrainz_2170,musicbrainz,mbrainz_2170,Attribute_2,name,The Drumstick EP,The Drumstick EP,identity,,,1
+mbrainz_23557,lastfm,lastFM_59772,album_title,name,R. Taylor -  Happiness?,Happiness?,normalization,lastfm_artist_prefix,,1
+mbrainz_23557,musicbrainz,mbrainz_23557,Attribute_2,name,Happiness?,Happiness?,identity,,,1
+mbrainz_23870,discogs,discogs_106146,pub_dt,release-date,2011,2011-01-01,normalization,date_pad_year,,1
+mbrainz_23870,discogs,discogs_106146,tracks_track-name,tracks,"['Knocking At Your Back Door', 'Dead Or Alive', ""A Gypsy's Kiss"", ""Hard Lovin' Woman"", 'Mad Dog', 'Perfect Strangers', 'Son Of Alerik', 'Not Responsible', 'Under The Gun', 'Knocking At Your Back Door - Live (1987 / Phoenix, AZ)', 'Child In Time - Live (1987 / Phoenix, AZ and Oslo, Norway)', 'Black Night - Live (1987 / Verona, Italy and Oslo, Norway)', 'Smoke On The Water - Live (1987 / Oslo, Norway)', 'Space Trucking - Live (1987 / Irvine Meadows, CA)', ""Hard Lovin' Woman - Live (1987 / Oslo, Norway)"", 'Hush - Live Version', 'Strange Kind Of Woman - Live (1987 / Irvine Meadows, CA)', 'Woman From Tokyo - Live (1987 /  Irvine Meadows, CA)', 'Highway Star - Live (1987 /  Irvine Meadows, CA)', 'Perfect Strangers - Live (1987 /  Irvine Meadows, CA)', 'Lazy - Live (1987 / Phoenix, AZ)', 'Dead Or Alive - Live (1987 / Milan, Italy)', 'Bad Attitude', 'Hungry Daze', 'The Unwritten Law', 'Mean Streak', 'The Spanish Archer', 'Call Of The Wild', 'Black & White', ""Nobody's Home"", 'Wasted Sunsets', 'Bad Attitude - Live (1987 / Phoenix, AZ)']","[""Knocking At Your Back Door"", ""Dead Or Alive"", ""A Gypsy's Kiss"", ""Hard Lovin' Woman"", ""Mad Dog"", ""Perfect Strangers"", ""Son Of Alerik"", ""Not Responsible"", ""Under The Gun"", ""Knocking At Your Back Door - Live (1987 / Phoenix, AZ)"", ""Child In Time - Live (1987 / Phoenix, AZ and Oslo, Norway)"", ""Black Night - Live (1987 / Verona, Italy and Oslo, Norway)"", ""Smoke On The Water - Live (1987 / Oslo, Norway)"", ""Space Trucking - Live (1987 / Irvine Meadows, CA)"", ""Hard Lovin' Woman - Live (1987 / Oslo, Norway)"", ""Hush - Live Version"", ""Strange Kind Of Woman - Live (1987 / Irvine Meadows, CA)"", ""Woman From Tokyo - Live (1987 / Irvine Meadows, CA)"", ""Highway Star - Live (1987 / Irvine Meadows, CA)"", ""Perfect Strangers - Live (1987 / Irvine Meadows, CA)"", ""Lazy - Live (1987 / Phoenix, AZ)"", ""Dead Or Alive - Live (1987 / Milan, Italy)"", ""Bad Attitude"", ""Hungry Daze"", ""The Unwritten Law"", ""Mean Streak"", ""The Spanish Archer"", ""Call Of The Wild"", ""Black & White"", ""Nobody's Home"", ""Wasted Sunsets"", ""Bad Attitude - Live (1987 / Phoenix, AZ)""]",normalization,whitespace,,1
+mbrainz_2397,discogs,discogs_10504,pub_dt,release-date,2005-08-01,2005-08-01,identity,,,1
+mbrainz_2397,musicbrainz,mbrainz_2397,Attribute_4,release-date,2005-08,2005-08-01,normalization,date_pad_month,,1
+mbrainz_25400,musicbrainz,mbrainz_25400,Attribute_2,name,The Singles â€™67-â€™78,The Singles ’67-’78,normalization,mojibake,,1
+mbrainz_25432,musicbrainz,mbrainz_25432,Attribute_4,release-date,2003-10,2003-10-01,normalization,date_pad_month,,1
+mbrainz_2807,discogs,discogs_12243,pub_dt,release-date,2005,2005-01-01,normalization,date_pad_year,,1
+mbrainz_32422,musicbrainz,mbrainz_32422,Attribute_2,name,Folie Ã  Deux,Folie à Deux,normalization,mojibake,,1
+mbrainz_3570,musicbrainz,mbrainz_3570,Attribute_2,name,Letâ€™s Get Out of This Country,Let's Get Out of This Country,normalization,mojibake+typography,,1
+mbrainz_375,discogs,discogs_1257,pub_dt,release-date,1991,1991-01-01,normalization,date_pad_year,,1
+mbrainz_375,musicbrainz,mbrainz_375,Attribute_4,release-date,1991-01-01,1991-01-01,identity,,,1
+mbrainz_4147,discogs,discogs_69529,pub_dt,release-date,1985,1985-01-01,normalization,date_pad_year,,1
+mbrainz_436,discogs,discogs_1636,pub_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,2
+mbrainz_436,musicbrainz,mbrainz_436,Attribute_4,release-date,2002-01-01,2002-01-01,identity,,,2
+mbrainz_469,discogs,discogs_1799,imprint,label,Warner Music UK Ltd.,Warner Music UK Ltd,normalization,trailing_period,,1
+mbrainz_5463,discogs,discogs_23650,pub_dt,release-date,2003,2003-01-01,normalization,date_pad_year,,2
+mbrainz_5549,discogs,discogs_50918,pub_dt,release-date,2004,2004-01-01,normalization,date_pad_year,,1
+mbrainz_5549,musicbrainz,mbrainz_5549,Attribute_4,release-date,2004-01-01,2004-01-01,identity,,,2
+mbrainz_5586,discogs,discogs_24299,pub_dt,release-date,1996,1996-01-01,normalization,date_pad_year,,1
+mbrainz_5586,musicbrainz,mbrainz_5586,Attribute_4,release-date,1996-01-01,1996-01-01,identity,,,1
+mbrainz_6419,discogs,discogs_82564,pub_dt,release-date,1989,1989-01-01,normalization,date_pad_year,,3
+mbrainz_6880,discogs,discogs_37434,pub_dt,release-date,1970,1970-01-01,normalization,date_pad_year,,1
+mbrainz_6891,discogs,discogs_30446,pub_dt,release-date,2003,2003-01-01,normalization,date_pad_year,,2
+mbrainz_7957,discogs,discogs_35648,pub_dt,release-date,1972,1972-01-01,normalization,date_pad_year,,1
+mbrainz_7957,musicbrainz,mbrainz_7957,Attribute_4,release-date,1972-01-01,1972-01-01,identity,,,1
+mbrainz_7969,discogs,discogs_35700,pub_dt,release-date,2009-03-01,2009-03-01,identity,,,1
+mbrainz_7969,musicbrainz,mbrainz_7969,Attribute_4,release-date,2009-03,2009-03-01,normalization,date_pad_month,,1
+mbrainz_7969,musicbrainz,mbrainz_7969,Attribute_9,tracks,"['It Doesnâ€™t Matter', 'Donâ€™t Stop the Rock', 'Under the Influence', 'Freak of the Week']","[""It Doesn't Matter"", ""Don't Stop the Rock"", ""Under the Influence"", ""Freak of the Week""]",normalization,mojibake+typography,,1
+mbrainz_803,discogs,discogs_3720,pub_dt,release-date,1998-10-01,1998-10-01,identity,,,1
+mbrainz_803,musicbrainz,mbrainz_803,Attribute_4,release-date,1998-10,1998-10-01,normalization,date_pad_month,,1
+mbrainz_8220,musicbrainz,mbrainz_8220,Attribute_4,release-date,2008-01-01,2008-01-01,identity,,,1
+mbrainz_8963,musicbrainz,mbrainz_8963,Attribute_9,tracks,"['Another Code Against the Gone', 'Install a Beak in the Heart That Clucks Time in Arabic', 'Retreat! Retreat!', 'Default This', 'I Swallowed Hard, Like I Understood', 'The Fall of Math', 'This Cat Is a Landmine', 'The Last Home Recording', 'Hole', 'Fix the Sky a Little', 'Arenâ€™t We All Running?']","[""Another Code Against the Gone"", ""Install a Beak in the Heart That Clucks Time in Arabic"", ""Retreat! Retreat!"", ""Default This"", ""I Swallowed Hard, Like I Understood"", ""The Fall of Math"", ""This Cat Is a Landmine"", ""The Last Home Recording"", ""Hole"", ""Fix the Sky a Little"", ""Aren't We All Running?""]",normalization,mojibake+typography,,1
+mbrainz_9185,lastfm,lastFM_19539,album_title,name,G. Gossip -  Dreamland,Dreamland,normalization,lastfm_artist_prefix,,1
+mbrainz_9185,musicbrainz,mbrainz_9185,Attribute_2,name,Dreamland,Dreamland,identity,,,1
+mbrainz_9858,discogs,discogs_96815,pub_dt,release-date,1990,1990-01-01,normalization,date_pad_year,,1

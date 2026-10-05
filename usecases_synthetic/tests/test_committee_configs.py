@@ -7,8 +7,7 @@ Checks:
   YAML's ``required_axes`` section.
 - Structural invariants: each member has a ``name`` and expected fields.
 
-Does **not** instantiate matchers or run any pipeline code — that is
-M2/M3/M4.
+Does **not** instantiate matchers or run any pipeline code.
 """
 
 from __future__ import annotations
@@ -126,18 +125,16 @@ class TestSMCommitteeConfig:
         embedding (SBERT over column name + sample values) both qualify
         — the roster must keep one of each as deterministic anchors.
 
-        ``duplicate_majority`` was disabled 2026-05-08 due to a
-        runner-shape mismatch and re-enabled 2026-05-10 after the SM
-        runner was patched to dispatch duplicate-typed members per
-        source-pair (see ``SMCommitteeRunner._run_duplicate_per_pair``
-        and plan_s1_scale.md §"R5 SM duplicate-matcher fix")."""
+        The SM runner dispatches duplicate-typed members such as
+        ``duplicate_majority`` per source-pair (see
+        ``SMCommitteeRunner._run_duplicate_per_pair``)."""
         enabled = _enabled_members(config["members"])
         types = {m["signal_type"] for m in enabled}
         assert "duplicate" in types, "No duplicate-based SM member enabled"
         assert "embedding" in types, "No embedding-based SM member enabled"
 
     def test_has_hybrid_member(self, config: dict[str, Any]) -> None:
-        """C1.6: the committee must include a hybrid-ensemble SM member.
+        """The committee must include a hybrid-ensemble SM member.
 
         The only shipped option is ``coma_hybrid`` (Valentine ``ComaPy``
         wrapper). Its aggregated label+instance+structural signal is
@@ -152,18 +149,15 @@ class TestSMCommitteeConfig:
 
 
 # ===================================================================
-# EM Blocking committee (C2.4b split)
+# EM Blocking committee
 # ===================================================================
 #
-# The former combined ``em_committee.yaml`` was retired in C4 — after
-# the C2.4b split, runtime reads ``em_blocking_committee.yaml`` +
-# ``em_matching_committee.yaml``.  Coverage of the old class is fully
-# subsumed by ``TestEMBlockingCommitteeConfig`` +
-# ``TestEMMatchingCommitteeConfig`` below.
+# Blocking and matching are separate committees: the runtime reads
+# ``em_blocking_committee.yaml`` + ``em_matching_committee.yaml``.
 
 
 class TestEMBlockingCommitteeConfig:
-    """Tests for ``em_blocking_committee.yaml`` (C2.4b split)."""
+    """Tests for ``em_blocking_committee.yaml``."""
 
     @pytest.fixture()
     def config(self) -> dict[str, Any]:
@@ -242,12 +236,12 @@ class TestEMBlockingCommitteeConfig:
 
 
 # ===================================================================
-# EM Matching committee (C2.4b split)
+# EM Matching committee
 # ===================================================================
 
 
 class TestEMMatchingCommitteeConfig:
-    """Tests for ``em_matching_committee.yaml`` (C2.4b split)."""
+    """Tests for ``em_matching_committee.yaml``."""
 
     @pytest.fixture()
     def config(self) -> dict[str, Any]:
@@ -311,8 +305,7 @@ class TestEMMatchingCommitteeConfig:
         blocking = _load_yaml("em_blocking_committee.yaml")
         assert config["column_mapping"] == blocking["column_mapping"], (
             "column_mapping drift between em_matching_committee.yaml and "
-            "em_blocking_committee.yaml — they must stay in sync "
-            "(C2.4b invariant)."
+            "em_blocking_committee.yaml — they must stay in sync."
         )
 
 
@@ -324,8 +317,7 @@ class TestEMMatchingCommitteeConfig:
 class TestFusionCommitteeConfig:
     """Tests for the companies ``fusion_committee.yaml``.
 
-    Companies adopted the C12 coherent-member schema (plan_revision.md
-    §C12) 2026-05-26. The tests branch on shape via :meth:`_is_c12_shape`
+    Companies adopted the C12 coherent-member schema. The tests branch on shape via :meth:`_is_c12_shape`
     so the negative branch stays exercised if a legacy YAML reappears
     in archive / experiment directories.
     """
@@ -411,10 +403,10 @@ class TestFusionCommitteeConfig:
     def test_expected_companies_attributes(self, config: dict[str, Any]) -> None:
         """Companies domain must cover these attributes.
 
-        ``industry`` is dropped (gold has no <industry> tag — see R5 Fusion
-        sign-off 2026-05-12). ``keypeople`` is re-added with list-aware
-        strategies (union/intersection/intersection_k_sources/ltm) and the
-        Jaccard-based ``tokenized_match`` eval per the same sign-off.
+        ``industry`` is not fusion-scored (no evaluation function).
+        ``keypeople`` is covered with list-aware strategies
+        (union/intersection/intersection_k_sources/ltm) and the
+        Jaccard-based ``tokenized_match`` eval.
         """
         expected = {
             "name",
@@ -461,7 +453,7 @@ class TestFusionCommitteeConfig:
                     td_strategies.append((attr_name, strategy["name"]))
         assert td_strategies, (
             "Fusion committee has no truth_discovery strategies. "
-            "C3.4 requires at least one TD member overall."
+            "The committee requires at least one TD member overall."
         )
 
     def test_llm_adjudicated_committee_coverage(self, config: dict[str, Any]) -> None:
@@ -485,11 +477,11 @@ class TestFusionCommitteeConfig:
                     llm_strategies.append((attr_name, strategy["name"]))
         assert llm_strategies, (
             "Fusion committee has no llm_adjudicated strategies. "
-            "C3.4 requires at least one LLM-judge member overall."
+            "The committee requires at least one LLM-judge member overall."
         )
 
     def test_c34_seven_member_roster_present(self, config: dict[str, Any]) -> None:
-        """Every C3.4 named member must be reachable from the YAML.
+        """Every named TD / LLM-judge member must be reachable from the YAML.
 
         Pre-C12: each TD/LLM member appears under at least one
         ``attributes.<attr>.strategies`` block; a robust_aggregators
@@ -537,7 +529,7 @@ class TestFusionCommitteeConfig:
             "llm_judge",
         }
         missing = td_singletons - wired_names
-        assert not missing, f"C3.4 members not wired in YAML: {missing}"
+        assert not missing, f"Named members not wired in YAML: {missing}"
 
         robust_family = {"trimmed_mean", "huber_m_estimator", "median_of_means"}
         assert wired_functions & robust_family, (
@@ -547,12 +539,12 @@ class TestFusionCommitteeConfig:
 
 
 # ===================================================================
-# Cross-committee invariants (C4)
+# Cross-committee invariants
 # ===================================================================
 
 
 class TestCrossCommitteeInvariants:
-    """Invariants that span multiple committee YAMLs (C4 consistency review).
+    """Invariants that span multiple committee YAMLs.
 
     These tests pin properties that cannot live in any single committee's
     own test class because they depend on agreement between two or more
@@ -577,18 +569,18 @@ class TestCrossCommitteeInvariants:
 
         assert blocking == matching, (
             "column_mapping drift between em_blocking_committee.yaml and "
-            "em_matching_committee.yaml (C2.4b invariant)."
+            "em_matching_committee.yaml."
         )
         assert blocking == fusion, (
             "column_mapping drift between em_blocking_committee.yaml and "
-            "fusion_committee.yaml (C4 invariant — fusion consumes the "
+            "fusion_committee.yaml (fusion consumes the "
             "same canonical schema as EM)."
         )
 
     def test_trust_scores_agree_with_td_learned_ordering(self) -> None:
         """Manual ``trust_scores`` in fusion must not contradict learned TD.
 
-        The C3.4.11 smoke test demonstrated that TruthFinder / FusionQuery
+        A smoke test demonstrated that TruthFinder / FusionQuery
         / AccuSim all learn ``forbes > fullcontact > dbpedia`` on the
         companies fixture.  Manual ``trust_scores`` feed ``favour_sources``
         and ``prefer_higher_trust``; if they disagreed with the learned
@@ -600,12 +592,12 @@ class TestCrossCommitteeInvariants:
         fusion = _load_yaml("fusion_committee.yaml")
         scores = fusion["trust_scores"]
         # Companies domain: learned TD consistently ranks dbpedia lowest
-        # (per C3.4.11 smoke test).  The manual prior must not push dbpedia
+        # (per that smoke test).  The manual prior must not push dbpedia
         # above either of the other two sources.
         assert scores["forbes"] > scores["dbpedia"], (
             "Manual trust_scores contradict learned TD ranking "
             f"(forbes={scores['forbes']}, dbpedia={scores['dbpedia']}); "
-            "see C3.4.11 smoke test."
+            "learned TD ranks dbpedia lowest."
         )
         assert scores["fullcontact"] > scores["dbpedia"], (
             "Manual trust_scores contradict learned TD ranking "
@@ -613,27 +605,26 @@ class TestCrossCommitteeInvariants:
         )
 
     def test_retired_em_committee_yaml_absent(self) -> None:
-        """The pre-C2.4b combined ``em_committee.yaml`` was retired in C4.
+        """There is no combined ``em_committee.yaml``.
 
         Runtime reads ``em_blocking_committee.yaml`` +
-        ``em_matching_committee.yaml`` after the split.  Resurrecting the
-        old file risks a reader picking up a stale schema; this test is
-        a regression guard against that mistake.
+        ``em_matching_committee.yaml``; a combined file would risk a
+        reader picking up a stale schema.
         """
         combined = CONFIG_DIR / "em_committee.yaml"
         assert not combined.exists(), (
-            f"{combined} was retired in C4 (plan_committee_finalization.md); "
-            "committee runtime now reads em_blocking_committee.yaml + "
-            "em_matching_committee.yaml.  Delete the restored file."
+            f"{combined} must not exist; "
+            "committee runtime reads em_blocking_committee.yaml + "
+            "em_matching_committee.yaml."
         )
 
 
 # ===================================================================
-# Per-domain committee forks (S10)
+# Per-domain committee forks
 # ===================================================================
 #
-# S10 of plans/plan_s1_scale.md forks em_blocking / em_matching / fusion
-# YAMLs per non-companies domain (games / music / movies / products).
+# em_blocking / em_matching / fusion are forked into per-domain
+# YAMLs per non-companies domain (games / music / papers / products).
 # The companies-targeted tests above remain authoritative for the
 # canonical files.  These parametrized tests assert the same structural
 # invariants on each per-domain fork without duplicating every
@@ -642,7 +633,6 @@ class TestCrossCommitteeInvariants:
 PER_DOMAIN_COMMITTEE_DOMAINS: list[str] = [
     "games",
     "music",
-    "movies",
     "papers",
     "products",
 ]
@@ -650,7 +640,7 @@ PER_DOMAIN_COMMITTEE_DOMAINS: list[str] = [
 
 @pytest.mark.parametrize("domain", PER_DOMAIN_COMMITTEE_DOMAINS)
 class TestPerDomainEMBlockingCommittee:
-    """Per-domain forks of ``em_blocking_committee.yaml`` (S10)."""
+    """Per-domain forks of ``em_blocking_committee.yaml``."""
 
     def _load(self, domain: str) -> dict[str, Any]:
         return _load_yaml(f"em_blocking_committee_{domain}.yaml")
@@ -706,13 +696,12 @@ class TestPerDomainEMBlockingCommittee:
     def test_blocking_name_column_set(self, domain: str) -> None:
         """Per-domain forks must declare ``blocking_name_column``.
 
-        The companies/games/music canonical primary is ``name``; movies
+        The companies/games/music canonical primary is ``name``; papers
         and products use ``title``. The committee runner reads this
         field and feeds it to the pattern-based blocking-key generator
         in ``committee_em._generate_blocking_keys``.
 
-        Accepted StandardBlocker keys (per the R5 EM blocking sweep
-        sign-off 2026-05-10): any ``<name>_first_<N>`` /
+        Accepted StandardBlocker keys: any ``<name>_first_<N>`` /
         ``<name>_first_token`` / ``<name>_norm`` pattern. Compound or
         unrecognised keys would fail the runner's pattern check at
         runtime; this test catches them at config-load.
@@ -740,7 +729,7 @@ class TestPerDomainEMBlockingCommittee:
 
 @pytest.mark.parametrize("domain", PER_DOMAIN_COMMITTEE_DOMAINS)
 class TestPerDomainEMMatchingCommittee:
-    """Per-domain forks of ``em_matching_committee.yaml`` (S10)."""
+    """Per-domain forks of ``em_matching_committee.yaml``."""
 
     def _load(self, domain: str) -> dict[str, Any]:
         return _load_yaml(f"em_matching_committee_{domain}.yaml")
@@ -794,7 +783,7 @@ class TestPerDomainEMMatchingCommittee:
 
 @pytest.mark.parametrize("domain", PER_DOMAIN_COMMITTEE_DOMAINS)
 class TestPerDomainFusionCommittee:
-    """Per-domain forks of ``fusion_committee.yaml`` (S10)."""
+    """Per-domain forks of ``fusion_committee.yaml``."""
 
     def _load(self, domain: str) -> dict[str, Any]:
         return _load_yaml(f"fusion_committee_{domain}.yaml")
@@ -802,7 +791,7 @@ class TestPerDomainFusionCommittee:
     @staticmethod
     def _is_c12_shape(config: dict[str, Any]) -> bool:
         """C12 forks use ``members:`` instead of per-(attribute, strategy)
-        ``attributes:`` blocks (plan_revision.md §C12)."""
+        ``attributes:`` blocks."""
         return "members" in config
 
     def test_loads(self, domain: str) -> None:
@@ -928,7 +917,7 @@ class TestPerDomainFusionCommittee:
 
 
 # ===================================================================
-# Per-domain committee-path resolver (S10)
+# Per-domain committee-path resolver
 # ===================================================================
 
 
@@ -977,8 +966,7 @@ class TestCommitteePathResolver:
 
         Unlike EM/Fusion where companies is the canonical unsuffixed
         file, the Normalization roster ships per-domain files for every
-        domain (no unsuffixed canonical exists). See
-        ``plan_s1_scale.md`` §"R5 Normalization sign-off (2026-05-10)".
+        domain (no unsuffixed canonical exists).
         """
         from usecases_synthetic.lib.committee_paths import resolve_committee_path
 
@@ -993,7 +981,7 @@ class TestCommitteePathResolver:
 
 
 # ===================================================================
-# Normalization committee (per-domain forks; R5 Normalization 2026-05-10)
+# Normalization committee (per-domain forks)
 # ===================================================================
 
 
@@ -1004,8 +992,8 @@ NORM_COMMITTEE_DOMAINS: list[str] = ["companies", "games", "music", "papers"]
 class TestNormCommitteeConfig:
     """Per-domain forks of ``normalization_committee_<domain>.yaml``.
 
-    All four norm YAMLs adopted the C12 coherent-member schema
-    (plan_revision.md §C12) 2026-05-26. Tests branch on shape via
+    All four norm YAMLs adopted the C12 coherent-member schema.
+    Tests branch on shape via
     :meth:`_is_c12_shape` so the legacy negative branch stays
     exercised if a legacy YAML reappears (e.g. archived experiment
     files).

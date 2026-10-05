@@ -9,7 +9,7 @@
     "wall_hms": "2m 41s",
     "pipeline_metric_total_seconds": 141.73,
     "pipeline_metric_total_hms": "2m 22s",
-    "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_20260609/companies",
+    "timing_dir": "DI-Bench/runs/timing/base_cached_20260609/companies",
     "step_2_validation_&_training_seconds": 0.01,
     "step_3_faiss_candidate_generation_seconds": 14.29,
     "step_4_active_learning_training_construction_seconds": 83.77,

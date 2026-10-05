@@ -1,4 +1,4 @@
-"""Tests for the S1 orchestrator and variant packager (Module 10).
+"""Tests for the S1 orchestrator and variant packager.
 
 Covers:
 
@@ -14,7 +14,7 @@ the real knob implementations (which have extensive unit tests of
 their own). Running the real knobs end-to-end on companies is covered
 by the existing per-module tests.
 
-Acceptance criteria (from ``plans/module_10_orchestrator.md``):
+Acceptance criteria:
 
 1. ``generate_variant.py --domain companies --level easy`` produces a
    valid variant directory.
@@ -185,7 +185,7 @@ class TestPackageVariant:
             }
         ).to_csv(sm / "sm_mapping.csv", index=False)
 
-        # Regenerated EM per-pair per-split files (from K2, C11): two
+        # Regenerated EM per-pair per-split files (from K2): two
         # parallel versions per split (baseline_pruned + corner_filled),
         # named ``<pair>_<split>_<version>.csv`` per generate_variant.
         for split in ("train", "val", "test"):
@@ -241,10 +241,9 @@ class TestPackageVariant:
         assert "source_column" in sm.columns
         assert len(sm) == 1
 
-        # --- Regenerated EM per-pair per-split files copied (C11) --------
-        # R10-F: copy_regenerated_em globs the C11 version-suffixed files
-        # (*_baseline_pruned.csv / *_corner_filled.csv), not the legacy
-        # *_regenerated.csv suffix.
+        # --- Regenerated EM per-pair per-split files copied --------------
+        # copy_regenerated_em globs the version-suffixed files
+        # (*_baseline_pruned.csv / *_corner_filled.csv).
         em_out = variant_dir / "input" / "entitymatching"
         for split in ("train", "val", "test"):
             for version in ("baseline_pruned", "corner_filled"):
@@ -384,8 +383,7 @@ class TestCheckMonotonicity:
                 ]
             ).to_csv(baselines_dir / "knob_04_realized_vs_target.csv", index=False)
 
-        # K2 realised CSV (added by step-1 instrumentation in
-        # plan_revision.md). The audit reads ``final_ratio`` (realised
+        # K2 realised CSV. The audit reads ``final_ratio`` (realised
         # corner-case ratio) and ``target_ratio`` (configured target)
         # from this file. Seed defaults that satisfy
         # ``knob_02_configured_monotonicity`` /
@@ -409,7 +407,7 @@ class TestCheckMonotonicity:
                 ]
             ).to_csv(baselines_dir / "knob_02_realised.csv", index=False)
 
-        # K1 realised CSV (plan_revision.md R-1 / G9 / step 4f). Audit
+        # K1 realised CSV. Audit
         # consumes ``paraphrase_committed`` (rate check) and
         # ``mean_edit_distance`` + ``mean_token_jaccard_drop`` (intensity
         # check). Default values reflect the typical "K1 fires more on
@@ -447,7 +445,7 @@ class TestCheckMonotonicity:
                 ]
             ).to_csv(baselines_dir / "knob_01_realised.csv", index=False)
 
-        # K10 realised CSV (step-1 C3 K10). Audit consumes ``swap_rate``
+        # K10 realised CSV. Audit consumes ``swap_rate``
         # (rate-based, K3-drop-invariant) plus the legacy
         # ``compromised_mask_count`` row. Default to non-decreasing rate.
         if (
@@ -550,7 +548,7 @@ class TestCheckMonotonicity:
         # K10 realised swap rate: non-decreasing across levels (dispersion
         # increases with difficulty) for the rate-based check.
         k10_rate_map = {"easy": 0.1, "medium": 0.3, "hard": 0.6}
-        # K1 realised metrics (plan_revision.md R-1 / G9 / step 4f):
+        # K1 realised metrics:
         # both committed count and intensity grow easy → hard for the
         # rate + intensity monotonicity checks.
         k01_committed_map = {"easy": 30, "medium": 60, "hard": 120}
@@ -663,7 +661,7 @@ class TestCheckMonotonicity:
 
 
 class TestK5DistinctFormatFamilies:
-    """C3 K5: distinct (transform_fn, target_fmt) families per level."""
+    """K5: distinct (transform_fn, target_fmt) families per level."""
 
     def test_empty_df_returns_zero(self) -> None:
         assert gv._k5_distinct_format_families(pd.DataFrame()) == 0
@@ -815,7 +813,7 @@ class TestStatusDowngrades:
         listed = self._row("knob_02_realised_vs_configured")
         gv._apply_status_downgrades(listed, "products")
         assert listed[0]["status"] == "WARN"
-        assert "REVISIT in a future variant iteration" in listed[0]["detail"]
+        assert "Documented K2 downward-dial limitation" in listed[0]["detail"]
 
         other = self._row("knob_02_realised_vs_configured")
         gv._apply_status_downgrades(other, "music")
@@ -834,7 +832,7 @@ class TestStatusDowngrades:
 
 
 class TestK10RealisedSwapRate:
-    """C3 K10: reading knob_10_realised.csv from a variant dir."""
+    """K10: reading knob_10_realised.csv from a variant dir."""
 
     def test_missing_file_returns_none(self, tmp_path: Path) -> None:
         assert gv._k10_realised_swap_rate(tmp_path) is None
@@ -863,7 +861,7 @@ class TestK10RealisedSwapRate:
 
 
 class TestK8NamingIntensity:
-    """C3 K8: rung-weighted naming intensity."""
+    """K8: rung-weighted naming intensity."""
 
     def test_empty_df_returns_zero(self) -> None:
         assert gv._k8_naming_intensity(pd.DataFrame()) == 0
@@ -1001,7 +999,7 @@ class _RunnerRecorder:
                     ]
                 ).to_csv(baselines_dir / "knob_02_realised.csv", index=False)
             if label == "k10":
-                # K10 rate-based audit (step-1 C3 K10) reads
+                # K10 rate-based audit reads
                 # ``baselines/knob_10_realised.csv``. Non-decreasing
                 # swap_rate so the rate monotonicity check passes.
                 baselines_dir = work_dir / "output" / "baselines"
@@ -1038,8 +1036,8 @@ class _RunnerRecorder:
             prov_dir = work_dir / "output" / "provenance"
             prov_dir.mkdir(parents=True, exist_ok=True)
 
-            # Joint stub emits K1's realised CSV alongside K1 provenance
-            # (plan_revision.md R-1 / G9 / step 4f). Non-decreasing
+            # Joint stub emits K1's realised CSV alongside K1 provenance.
+            # Non-decreasing
             # committed + intensity per level so the K1 monotonicity audit
             # checks pass under stub runs.
             baselines_dir = work_dir / "output" / "baselines"
@@ -1286,7 +1284,7 @@ class TestK2NonCornerCacheBuiltAtEveryLevel:
     None, which forced the dispatch in `apply_knob_02_niche` to fall
     through to ``noop_baseline_above_target`` even when
     ``non_corner_refill.enabled`` was true in the domain YAML. Products
-    easy + medium silently noop'd K2 on the 2026-05-28 first run.
+    easy + medium silently noop'd K2 before the fix.
 
     The fix builds the cache whenever the domain YAML opts in via
     ``non_corner_refill.enabled``, irrespective of level.
@@ -1489,7 +1487,7 @@ class TestK1LLMClientWiringAndCache:
 
 
 # ---------------------------------------------------------------------------
-# K1 realised audit (plan_revision.md R-1 / G9 / step 4f)
+# K1 realised audit
 # ---------------------------------------------------------------------------
 
 

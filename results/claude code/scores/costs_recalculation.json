@@ -1,0 +1,297 @@
+{
+  "scope": "Five base tasks only; full agent session incl. code generation; API-equivalent estimates, not subscription charges",
+  "rows": [
+    {
+      "task": "games",
+      "source": {
+        "path": "<p4-run:games_base>/costs.json",
+        "sha256": "5db9b21ae8eefb45dbd8fe54a64792a7c88f9bd71fcd7bf512465ef0e69bceff"
+      },
+      "token_columns": [
+        "input",
+        "output",
+        "cache_read",
+        "cache_write_5m",
+        "cache_write_1h"
+      ],
+      "tokens": [
+        86,
+        57434,
+        3769102,
+        0,
+        144470
+      ],
+      "pricing_snapshot": {
+        "date": "2026-09-23",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "basis": "standard global API list prices, USD per million tokens",
+        "models": {
+          "claude-opus-5-5": [
+            4.0,
+            20.0,
+            0.2,
+            5.0,
+            8.0
+          ],
+          "claude-sonnet-5": [
+            2.0,
+            10.0,
+            0.2,
+            2.5,
+            4.0
+          ],
+          "claude-haiku-4-5-20251001": [
+            1.0,
+            5.0,
+            0.1,
+            1.25,
+            2.0
+          ]
+        },
+        "columns": [
+          "input",
+          "output",
+          "cache_read",
+          "cache_write_5m",
+          "cache_write_1h"
+        ]
+      },
+      "cost_usd": "3.0586044",
+      "display_usd": "3.06"
+    },
+    {
+      "task": "companies",
+      "source": {
+        "path": "<p4-run:companies_base>/costs.json",
+        "sha256": "acaf1ee0ac1516c4ac49be063c07b3bb61aaafc5b1e0cd54a6b5399d0c491193"
+      },
+      "token_columns": [
+        "input",
+        "output",
+        "cache_read",
+        "cache_write_5m",
+        "cache_write_1h"
+      ],
+      "tokens": [
+        126,
+        80031,
+        6246892,
+        0,
+        170621
+      ],
+      "pricing_snapshot": {
+        "date": "2026-09-23",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "basis": "standard global API list prices, USD per million tokens",
+        "models": {
+          "claude-opus-5-5": [
+            4.0,
+            20.0,
+            0.2,
+            5.0,
+            8.0
+          ],
+          "claude-sonnet-5": [
+            2.0,
+            10.0,
+            0.2,
+            2.5,
+            4.0
+          ],
+          "claude-haiku-4-5-20251001": [
+            1.0,
+            5.0,
+            0.1,
+            1.25,
+            2.0
+          ]
+        },
+        "columns": [
+          "input",
+          "output",
+          "cache_read",
+          "cache_write_5m",
+          "cache_write_1h"
+        ]
+      },
+      "cost_usd": "4.2154704",
+      "display_usd": "4.22"
+    },
+    {
+      "task": "music",
+      "source": {
+        "path": "<p4-run:music_base>/costs.json",
+        "sha256": "78a8e2e178e5dfb5d301228ef71ed3e839ee20c4a65f50a1a5322105eb1fcb8b"
+      },
+      "token_columns": [
+        "input",
+        "output",
+        "cache_read",
+        "cache_write_5m",
+        "cache_write_1h"
+      ],
+      "tokens": [
+        112,
+        70000,
+        5175527,
+        0,
+        142915
+      ],
+      "pricing_snapshot": {
+        "date": "2026-09-23",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "basis": "standard global API list prices, USD per million tokens",
+        "models": {
+          "claude-opus-5-5": [
+            4.0,
+            20.0,
+            0.2,
+            5.0,
+            8.0
+          ],
+          "claude-sonnet-5": [
+            2.0,
+            10.0,
+            0.2,
+            2.5,
+            4.0
+          ],
+          "claude-haiku-4-5-20251001": [
+            1.0,
+            5.0,
+            0.1,
+            1.25,
+            2.0
+          ]
+        },
+        "columns": [
+          "input",
+          "output",
+          "cache_read",
+          "cache_write_5m",
+          "cache_write_1h"
+        ]
+      },
+      "cost_usd": "3.5788734",
+      "display_usd": "3.58"
+    },
+    {
+      "task": "products",
+      "source": {
+        "path": "<p4-run:products_base>/costs.json",
+        "sha256": "b9017d9ee4d8c42bc9e83b4cbbcaf9ad442e80b4d56c918be972b061a9869c94"
+      },
+      "token_columns": [
+        "input",
+        "output",
+        "cache_read",
+        "cache_write_5m",
+        "cache_write_1h"
+      ],
+      "tokens": [
+        132,
+        96521,
+        9905093,
+        0,
+        255082
+      ],
+      "pricing_snapshot": {
+        "date": "2026-09-23",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "basis": "standard global API list prices, USD per million tokens",
+        "models": {
+          "claude-opus-5-5": [
+            4.0,
+            20.0,
+            0.2,
+            5.0,
+            8.0
+          ],
+          "claude-sonnet-5": [
+            2.0,
+            10.0,
+            0.2,
+            2.5,
+            4.0
+          ],
+          "claude-haiku-4-5-20251001": [
+            1.0,
+            5.0,
+            0.1,
+            1.25,
+            2.0
+          ]
+        },
+        "columns": [
+          "input",
+          "output",
+          "cache_read",
+          "cache_write_5m",
+          "cache_write_1h"
+        ]
+      },
+      "cost_usd": "5.9526226",
+      "display_usd": "5.95"
+    },
+    {
+      "task": "papers",
+      "source": {
+        "path": "<p4-run:papers_base>/costs.json",
+        "sha256": "27c492e5538470149c91830f20b527871cb96c20fdf4423823c3dc0780c0b1bb"
+      },
+      "token_columns": [
+        "input",
+        "output",
+        "cache_read",
+        "cache_write_5m",
+        "cache_write_1h"
+      ],
+      "tokens": [
+        76,
+        48835,
+        2871128,
+        0,
+        114328
+      ],
+      "pricing_snapshot": {
+        "date": "2026-09-23",
+        "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+        "basis": "standard global API list prices, USD per million tokens",
+        "models": {
+          "claude-opus-5-5": [
+            4.0,
+            20.0,
+            0.2,
+            5.0,
+            8.0
+          ],
+          "claude-sonnet-5": [
+            2.0,
+            10.0,
+            0.2,
+            2.5,
+            4.0
+          ],
+          "claude-haiku-4-5-20251001": [
+            1.0,
+            5.0,
+            0.1,
+            1.25,
+            2.0
+          ]
+        },
+        "columns": [
+          "input",
+          "output",
+          "cache_read",
+          "cache_write_5m",
+          "cache_write_1h"
+        ]
+      },
+      "cost_usd": "2.4658536",
+      "display_usd": "2.47"
+    }
+  ],
+  "mean_usd": "3.85428488",
+  "mean_display_usd": "3.85"
+}

@@ -1,9 +1,8 @@
 # Knob 06 — Value Noise Injection Rate — Games
 #
-# Refreshed 2026-05-07 against the schema.org-style CSV sources at
-# usecases/games/input/data/. id_columns collapse to ``id`` via the
-# loader rename. New blocks: ``taxonomies`` (Pending #4 — Gaming_Platforms
-# + Video_Game_Genres) and ``numeric_attributes`` (Pending #6).
+# id_columns collapse to ``id`` via the loader rename. Blocks:
+# ``taxonomies`` (taxonomy_walk bindings for Gaming_Platforms +
+# Video_Game_Genres) and ``numeric_attributes`` (±2% relative jitter cap).
 
 domain: games
 
@@ -131,7 +130,7 @@ soft_global_primary_cap_hard: 0.35
 compression_factor: 0.5
 stretch_factor: 1.5
 
-# Pending #4: taxonomy bindings.
+# Taxonomy bindings for the taxonomy_walk operator.
 # - platform taxonomy: Platform Type → Manufacturer → Platform Name.
 # - genre taxonomy: Genre Name → Subgenre Name → Sub-Subgenre Name.
 # ESRB rating taxonomy is flat (no parent/child) and is intentionally
@@ -165,8 +164,8 @@ taxonomies:
       sales:
         genre: genre
 
-# Pending #6: ±2 % relative jitter cap. ``units_sold_mm`` is in millions
-# per K5 sign-off — cap applies to the raw float as stored.
+# ±2 % relative jitter cap. ``units_sold_mm`` is in millions; the cap
+# applies to the raw float as stored.
 numeric_jitter_max_relative: 0.02
 
 numeric_attributes:

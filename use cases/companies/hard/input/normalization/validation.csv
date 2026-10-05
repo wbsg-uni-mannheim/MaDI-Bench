@@ -1,0 +1,153 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+fullcontact_139,fullcontact,fullcontact_139,Attribute_3,country,Germany,Germany,identity,,,9
+fullcontact_252,fullcontact,fullcontact_252,Attribute_6,founded,01/01/1990,1990-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+fullcontact_305,fullcontact,fullcontact_305,Attribute_6,founded,01/01/77,1977-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+fullcontact_721,fullcontact,fullcontact_721,Attribute_6,founded,01/01/07,2007-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://dbpedia.org/resource/BP,fullcontact,fullcontact_166,Attribute_3,country,United Kingdom,United Kingdom,identity,,,4
+http://dbpedia.org/resource/BP,dbpedia,http://dbpedia.org/resource/BP,sg,industry,Petroleum industry,Oil Gas & Consumable Fuels,normalization,gics_label_map,,2
+http://dbpedia.org/resource/Bank_Permata,dbpedia,http://dbpedia.org/resource/Bank_Permata,ey,founded,1954-01-01,1954-01-01,identity,,,1
+http://dbpedia.org/resource/China_Mobile,dbpedia,http://dbpedia.org/resource/China_Mobile,cn,country,China,China,identity,,,6
+http://dbpedia.org/resource/China_Mobile,dbpedia,http://dbpedia.org/resource/China_Mobile,ey,founded,1997-01-01,1997-01-01,identity,,,1
+http://dbpedia.org/resource/Magyar_Telekom,fullcontact,fullcontact_9,Attribute_3,country,Germany,Germany,identity,,,9
+http://dbpedia.org/resource/Magyar_Telekom,dbpedia,http://dbpedia.org/resource/Magyar_Telekom,ey,founded,01.01.1991,1991-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/SanDisk,dbpedia,http://dbpedia.org/resource/SanDisk,ta,assets,10.49,10490000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://dbpedia.org/resource/SanDisk,dbpedia,http://dbpedia.org/resource/SanDisk,cn,country,United States,United States,identity,,,15
+http://dbpedia.org/resource/SanDisk,fullcontact,fullcontact_642,Attribute_3,country,United States,United States,identity,,,15
+http://dbpedia.org/resource/SanDisk,dbpedia,http://dbpedia.org/resource/SanDisk,ey,founded,01/01/88,1988-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/SanDisk,fullcontact,fullcontact_642,Attribute_6,founded,01/01/1988,1988-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/Tenaris,fullcontact,fullcontact_732,Attribute_6,founded,01/01/01,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://dbpedia.org/resource/Tenaris,dbpedia,http://dbpedia.org/resource/Tenaris,sg,industry,List of oilfield service companies,Energy Equipment & Services,normalization,gics_label_map,,1
+http://dbpedia.org/resource/Thales_Group,dbpedia,http://dbpedia.org/resource/Thales_Group,ey,founded,2000-01-01,2000-01-01,identity,,,1
+http://dbpedia.org/resource/Toshiba,dbpedia,http://dbpedia.org/resource/Toshiba,ey,founded,01.01.1939,1939-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/Western_Digital,dbpedia,http://dbpedia.org/resource/Western_Digital,cn,country,United States,United States,identity,,,15
+http://dbpedia.org/resource/Western_Digital,dbpedia,http://dbpedia.org/resource/Western_Digital,ey,founded,01/01/1970,1970-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/Western_Digital,fullcontact,fullcontact_809,Attribute_6,founded,01.01.1970,1970-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://dbpedia.org/resource/Western_Digital,dbpedia,http://dbpedia.org/resource/Western_Digital,sg,industry,Computer data storage,Technology Hardware Storage & Peripherals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/aberdeen-asset-management/,forbes,http://www.forbes.com/companies/aberdeen-asset-management/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",4
+http://www.forbes.com/companies/aberdeen-asset-management/,fullcontact,fullcontact_46,Attribute_3,country,United Kingdom,United Kingdom,identity,,,4
+http://www.forbes.com/companies/aberdeen-asset-management/,fullcontact,fullcontact_46,Attribute_6,founded,01.01.1983,1983-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/accor/,forbes,http://www.forbes.com/companies/accor/,bus_seg,industry,Hotels & Motels,Hotels Restaurants & Leisure,normalization,gics_label_map,,1
+http://www.forbes.com/companies/amphenol/,dbpedia,http://dbpedia.org/resource/Amphenol,ey,founded,01.01.1932,1932-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/areva/,dbpedia,http://dbpedia.org/resource/Areva,ey,founded,01.01.2001,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/astrazeneca/,forbes,http://www.forbes.com/companies/astrazeneca/,ast_val,assets,55900,55900000000,normalization,implicit_millions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/astrazeneca/,forbes,http://www.forbes.com/companies/astrazeneca/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",4
+http://www.forbes.com/companies/astrazeneca/,fullcontact,fullcontact_114,Attribute_3,country,United Kingdom,United Kingdom,identity,,,4
+http://www.forbes.com/companies/aurubis/,forbes,http://www.forbes.com/companies/aurubis/,bus_seg,industry,Diversified Metals & Mining,Metals & Mining,normalization,gics_label_map,,2
+http://www.forbes.com/companies/banca-popolare-di-milano/,forbes,http://www.forbes.com/companies/banca-popolare-di-milano/,bus_seg,industry,Regional Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/baywa/,dbpedia,http://dbpedia.org/resource/BayWa,cn,country,Germany,Germany,identity,,,9
+http://www.forbes.com/companies/baywa/,dbpedia,http://dbpedia.org/resource/BayWa,ey,founded,01/01/1923,1923-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/boeing/,forbes,http://www.forbes.com/companies/boeing/,region,country,United States of America,United States,normalization,country_alias,"{""provenance"": [[""10"", ""identity""]]}",14
+http://www.forbes.com/companies/boeing/,forbes,http://www.forbes.com/companies/boeing/,bus_seg,industry,Aerospace & Defense,Aerospace & Defense,identity,,,1
+http://www.forbes.com/companies/byd/,dbpedia,http://dbpedia.org/resource/BYD_Auto,cn,country,China,China,identity,,,6
+http://www.forbes.com/companies/byd/,forbes,http://www.forbes.com/companies/byd/,region,country,China,China,identity,,,6
+http://www.forbes.com/companies/byd/,fullcontact,fullcontact_180,Attribute_6,founded,01.01.1995,1995-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/byd/,forbes,http://www.forbes.com/companies/byd/,bus_seg,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,2
+http://www.forbes.com/companies/chang-hwa-bank/,forbes,http://www.forbes.com/companies/chang-hwa-bank/,region,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/chang-hwa-bank/,dbpedia,http://dbpedia.org/resource/Chang_Hwa_Bank,ey,founded,01/01/1905,1905-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/chang-hwa-bank/,dbpedia,http://dbpedia.org/resource/Chang_Hwa_Bank,sg,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/chang-hwa-bank/,forbes,http://www.forbes.com/companies/chang-hwa-bank/,bus_seg,industry,Regional Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/china-communications-services/,dbpedia,http://dbpedia.org/resource/China_Communications_Services_Corporation,cn,country,China,China,identity,,,6
+http://www.forbes.com/companies/china-communications-services/,forbes,http://www.forbes.com/companies/china-communications-services/,region,country,China,China,identity,,,6
+http://www.forbes.com/companies/china-communications-services/,forbes,http://www.forbes.com/companies/china-communications-services/,sls_fig,revenue,11100,11100000000,normalization,implicit_millions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/cit-group/,forbes,http://www.forbes.com/companies/cit-group/,region,country,United States of America,United States,normalization,country_alias,,14
+http://www.forbes.com/companies/coloplast/,dbpedia,http://dbpedia.org/resource/Coloplast,ey,founded,01/01/1957,1957-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/costco-wholesale/,dbpedia,http://dbpedia.org/resource/Costco,ey,founded,01.01.1983,1983-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/costco-wholesale/,forbes,http://www.forbes.com/companies/costco-wholesale/,bus_seg,industry,Discount Stores,Consumer Staples Distribution & Retail,normalization,gics_label_map,,1
+http://www.forbes.com/companies/credit-agricole/,forbes,http://www.forbes.com/companies/credit-agricole/,bus_seg,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/crown-resorts/,forbes,http://www.forbes.com/companies/crown-resorts/,bus_seg,industry,Casinos & Gaming,Hotels Restaurants & Leisure,normalization,gics_label_map,,1
+http://www.forbes.com/companies/dicks-sporting-goods/,forbes,http://www.forbes.com/companies/dicks-sporting-goods/,ast_val,assets,"3,100,000,000.0",3100000000,normalization,number_locale,"{""k5_locale"": ""en_US"", ""provenance"": [[""5"", ""reformat_number""]]}",1
+http://www.forbes.com/companies/dicks-sporting-goods/,forbes,http://www.forbes.com/companies/dicks-sporting-goods/,sls_fig,revenue,6 200,6200000000,normalization,number_locale+implicit_millions,"{""k5_locale"": ""fr_FR"", ""provenance"": [[""5"", ""reconvert_unit""], [""5"", ""reformat_number""]]}",1
+http://www.forbes.com/companies/dish-network/,dbpedia,http://dbpedia.org/resource/Dish_Network,cn,country,United States of America,United States,normalization,country_alias,,14
+http://www.forbes.com/companies/dish-network/,forbes,http://www.forbes.com/companies/dish-network/,region,country,United States,United States,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",15
+http://www.forbes.com/companies/dish-network/,dbpedia,http://dbpedia.org/resource/Dish_Network,ey,founded,01/01/80,1980-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/dish-network/,dbpedia,http://dbpedia.org/resource/Dish_Network,sg,industry,Satellite television,Media,normalization,gics_label_map,,1
+http://www.forbes.com/companies/dongbu-insurance/,dbpedia,http://dbpedia.org/resource/Combined_Insurance,ey,founded,01.01.1922,1922-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/dongbu-insurance/,forbes,http://www.forbes.com/companies/dongbu-insurance/,bus_seg,industry,Property & Casualty Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/edp-energias-de-portugal/,forbes,http://www.forbes.com/companies/edp-energias-de-portugal/,bus_seg,industry,Electric Utilities,Electric Utilities,identity,,,2
+http://www.forbes.com/companies/exelon/,dbpedia,http://dbpedia.org/resource/Exelon,ey,founded,01.01.2000,2000-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/exelon/,fullcontact,fullcontact_1541,Attribute_6,founded,01/01/2000,2000-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/exelon/,forbes,http://www.forbes.com/companies/exelon/,bus_seg,industry,Electric Utilities,Electric Utilities,identity,,,2
+http://www.forbes.com/companies/fresenius/,dbpedia,http://dbpedia.org/resource/Fresenius_(company),cn,country,German y,Germany,normalization,country_alias,"{""provenance"": [[""6"", ""whitespace_corrupt""]]}",1
+http://www.forbes.com/companies/fresenius/,dbpedia,http://dbpedia.org/resource/Fresenius_(company),ey,founded,01/01/1912,1912-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/fresenius/,fullcontact,fullcontact_330,Attribute_6,founded,01.01.1912,1912-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/fresenius/,dbpedia,http://dbpedia.org/resource/Fresenius_(company),nm,name,Fresenius (company),Fresenius,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/fresenius/,forbes,http://www.forbes.com/companies/fresenius/,co_nm,name,Fresenius,Fresenius,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+http://www.forbes.com/companies/grupo-carso/,forbes,http://www.forbes.com/companies/grupo-carso/,bus_seg,industry,Conglomerates,Industrial Conglomerates,normalization,gics_label_map,,2
+http://www.forbes.com/companies/herbalife/,fullcontact,fullcontact_376,Attribute_6,founded,01/01/80,1980-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/hermes-international/,forbes,http://www.forbes.com/companies/hermes-international/,bus_seg,industry,Apparel/Accessories,Textiles Apparel & Luxury Goods,normalization,gics_label_map,,1
+http://www.forbes.com/companies/hermes-international/,fullcontact,fullcontact_12,Attribute_2,name,Hermès International,Hermès International,identity,,,1
+http://www.forbes.com/companies/hyundai-hysco/,forbes,http://www.forbes.com/companies/hyundai-hysco/,region,country,Korea (Republic of),South Korea,normalization,country_alias,,1
+http://www.forbes.com/companies/hyundai-hysco/,forbes,http://www.forbes.com/companies/hyundai-hysco/,bus_seg,industry,Iron & Steel,Metals & Mining,normalization,gics_label_map,,1
+http://www.forbes.com/companies/iliad/,dbpedia,http://dbpedia.org/resource/Iliad_(company),ey,founded,01/01/99,1999-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/iliad/,dbpedia,http://dbpedia.org/resource/Iliad_(company),nm,name,Iliad (company),Iliad,normalization,disambiguation_suffix,,1
+http://www.forbes.com/companies/iliad/,forbes,http://www.forbes.com/companies/iliad/,co_nm,name,Iliad,Iliad,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+http://www.forbes.com/companies/industrial-alliance-insurance/,forbes,http://www.forbes.com/companies/industrial-alliance-insurance/,bus_seg,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/juniper-networks/,fullcontact,fullcontact_447,Attribute_3,country,United States of America,United States,normalization,country_alias,"{""provenance"": [[""1"", ""eda_random_delete""]]}",14
+http://www.forbes.com/companies/kellogg/,forbes,http://www.forbes.com/companies/kellogg/,bus_seg,industry,Food Processing,Food Products,normalization,gics_label_map,,1
+http://www.forbes.com/companies/kone/,dbpedia,http://dbpedia.org/resource/Kone,ey,founded,01.01.1910,1910-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/krung-thai-bank/,dbpedia,http://dbpedia.org/resource/Krung_Thai_Bank,sg,industry,Bank,Banks,normalization,gics_label_map,,2
+http://www.forbes.com/companies/krung-thai-bank/,forbes,http://www.forbes.com/companies/krung-thai-bank/,bus_seg,industry,Regional Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/lafarge/,fullcontact,fullcontact_470,Attribute_6,founded,1924-01-01,1924-01-01,identity,,,1
+http://www.forbes.com/companies/lafarge/,forbes,http://www.forbes.com/companies/lafarge/,bus_seg,industry,Construction Materials,Construction Materials,identity,,,1
+http://www.forbes.com/companies/level-3-communications/,dbpedia,http://dbpedia.org/resource/Nextel_Communications,ey,founded,01/01/1987,1987-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/linde/,dbpedia,http://dbpedia.org/resource/The_Linde_Group,cn,country,Germany,Germany,identity,,,9
+http://www.forbes.com/companies/linde/,forbes,http://www.forbes.com/companies/linde/,bus_seg,industry,Diversified Chemicals,Chemicals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/lyondellbasell-industries/,dbpedia,http://dbpedia.org/resource/LyondellBasell,ey,founded,01/01/07,2007-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/lyondellbasell-industries/,dbpedia,http://dbpedia.org/resource/LyondellBasell,sg,industry,Chemical substance,Chemicals,normalization,gics_label_map,,1
+http://www.forbes.com/companies/lyondellbasell-industries/,forbes,http://www.forbes.com/companies/lyondellbasell-industries/,bus_seg,industry,Specialty Chemicals,Chemicals,normalization,gics_label_map,"{""provenance"": [[""1"", ""llm_paraphrase_categorical""]]}",1
+http://www.forbes.com/companies/manpower/,dbpedia,http://dbpedia.org/resource/Manpower_Inc.,ey,founded,01.01.1948,1948-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/manpower/,fullcontact,fullcontact_486,Attribute_6,founded,01.01.1948,1948-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/manpower/,dbpedia,http://dbpedia.org/resource/Manpower_Inc.,sg,industry,Professional services,Professional Services,normalization,gics_label_map,,1
+http://www.forbes.com/companies/mapfre/,dbpedia,http://dbpedia.org/resource/Mapfre,ey,founded,01.01.1933,1933-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/mapfre/,dbpedia,http://dbpedia.org/resource/Mapfre,sg,industry,Insurance,Insurance,identity,,,1
+http://www.forbes.com/companies/mapfre/,forbes,http://www.forbes.com/companies/mapfre/,bus_seg,industry,Diversified Insurance,Insurance,normalization,gics_label_map,,1
+http://www.forbes.com/companies/metro-group/,fullcontact,fullcontact_507,Attribute_4,city,Düsseldorf,Düsseldorf,identity,,,1
+http://www.forbes.com/companies/mitsubishi-ufj-financial/,dbpedia,http://dbpedia.org/resource/Mitsubishi_UFJ_Financial_Group,ey,founded,01.01.2005,2005-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/mitsubishi-ufj-financial/,forbes,http://www.forbes.com/companies/mitsubishi-ufj-financial/,bus_seg,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/mtr/,forbes,http://www.forbes.com/companies/mtr/,bus_seg,industry,Railroads,Ground Transportation,normalization,gics_label_map,,1
+http://www.forbes.com/companies/nabors-industries/,dbpedia,http://dbpedia.org/resource/NACCO_Industries,ey,founded,1913-01-01,1913-01-01,identity,,,1
+http://www.forbes.com/companies/nec/,dbpedia,http://dbpedia.org/resource/NEC,ey,founded,1899-01-01,1899-01-01,identity,,,1
+http://www.forbes.com/companies/petrobras/,dbpedia,http://dbpedia.org/resource/Petrobras,sg,industry,Petroleum industry,Oil Gas & Consumable Fuels,normalization,gics_label_map,,2
+http://www.forbes.com/companies/prudential-financial/,dbpedia,http://dbpedia.org/resource/Prudential_Financial,cn,country,United States of America,United States,normalization,country_alias,,14
+http://www.forbes.com/companies/prudential-financial/,forbes,http://www.forbes.com/companies/prudential-financial/,region,country,United States,United States,identity,,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",15
+http://www.forbes.com/companies/prudential-financial/,dbpedia,http://dbpedia.org/resource/Prudential_Financial,ey,founded,1875-01-01,1875-01-01,identity,,,1
+http://www.forbes.com/companies/prudential-financial/,fullcontact,fullcontact_1322,Attribute_6,founded,01/01/1875,1875-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/prudential-financial/,forbes,http://www.forbes.com/companies/prudential-financial/,bus_seg,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/prudential/,dbpedia,http://dbpedia.org/resource/Prudential_plc,cn,country,United Kingdom,United Kingdom,identity,,,4
+http://www.forbes.com/companies/prudential/,forbes,http://www.forbes.com/companies/prudential/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,4
+http://www.forbes.com/companies/prudential/,dbpedia,http://dbpedia.org/resource/Prudential_plc,ey,founded,01/01/1848,1848-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/prudential/,forbes,http://www.forbes.com/companies/prudential/,bus_seg,industry,Life & Health Insurance,Insurance,normalization,gics_label_map,,3
+http://www.forbes.com/companies/prudential/,forbes,http://www.forbes.com/companies/prudential/,sls_fig,revenue,81.90,81900000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/qualcomm/,forbes,http://www.forbes.com/companies/qualcomm/,ast_val,assets,46.30,46300000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/qualcomm/,dbpedia,http://dbpedia.org/resource/Qualcomm,ey,founded,01.01.1985,1985-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/qualcomm/,fullcontact,fullcontact_613,Attribute_6,founded,01.01.1985,1985-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/qualcomm/,forbes,http://www.forbes.com/companies/qualcomm/,bus_seg,industry,Semiconductors,Semiconductors & Semiconductor Equipment,normalization,gics_label_map,,1
+http://www.forbes.com/companies/qualcomm/,forbes,http://www.forbes.com/companies/qualcomm/,sls_fig,revenue,"25,500",25500000000,normalization,number_locale+implicit_millions,"{""k5_locale"": ""en_US"", ""provenance"": [[""5"", ""reconvert_unit""], [""5"", ""reformat_number""]]}",1
+http://www.forbes.com/companies/renault/,forbes,http://www.forbes.com/companies/renault/,bus_seg,industry,Auto & Truck Manufacturers,Automobiles,normalization,gics_label_map,,2
+http://www.forbes.com/companies/schlumberger/,forbes,http://www.forbes.com/companies/schlumberger/,sls_fig,revenue,45.40,45400000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/shiseido/,dbpedia,http://dbpedia.org/resource/Shiseido,ey,founded,01.01.1872,1872-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/shiseido/,fullcontact,fullcontact_1943,Attribute_6,founded,01/01/1872,1872-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/shoprite-holdings/,forbes,http://www.forbes.com/companies/shoprite-holdings/,sls_fig,revenue,10.10,10100000000,normalization,implicit_billions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/smiths-group/,forbes,http://www.forbes.com/companies/smiths-group/,region,country,United Kingdom of Great Britain and Northern Ireland,United Kingdom,normalization,country_alias,,4
+http://www.forbes.com/companies/smiths-group/,forbes,http://www.forbes.com/companies/smiths-group/,bus_seg,industry,Conglomerates,Industrial Conglomerates,normalization,gics_label_map,,2
+http://www.forbes.com/companies/smiths-group/,forbes,http://www.forbes.com/companies/smiths-group/,sls_fig,revenue,4800,4800000000,normalization,implicit_millions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/sumitomo-mitsui-trust/,forbes,http://www.forbes.com/companies/sumitomo-mitsui-trust/,bus_seg,industry,Major Banks,Banks,normalization,gics_label_map,,3
+http://www.forbes.com/companies/tdc/,fullcontact,fullcontact_719,Attribute_6,founded,01/01/1882,1882-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/tdc/,forbes,http://www.forbes.com/companies/tdc/,sls_fig,revenue,4400,4400000000,normalization,implicit_millions,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+http://www.forbes.com/companies/ugi/,forbes,http://www.forbes.com/companies/ugi/,bus_seg,industry,Natural Gas Utilities,Gas Utilities,normalization,gics_label_map,,1
+http://www.forbes.com/companies/verisign/,fullcontact,fullcontact_790,Attribute_6,founded,01.01.1995,1995-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/volkswagen-group/,dbpedia,http://dbpedia.org/resource/Volkswagen_Group,cn,country,Germany,Germany,identity,,,9
+http://www.forbes.com/companies/volkswagen-group/,dbpedia,http://dbpedia.org/resource/Volkswagen_Group,ey,founded,01.01.1937,1937-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/volkswagen-group/,fullcontact,fullcontact_802,Attribute_6,founded,1937-01-01,1937-01-01,identity,,,1
+http://www.forbes.com/companies/volkswagen-group/,dbpedia,http://dbpedia.org/resource/Volkswagen_Group,sg,industry,Automotive industry,Automobiles,normalization,gics_label_map,,1
+http://www.forbes.com/companies/wendel/,dbpedia,http://dbpedia.org/resource/Wendel_(group),ey,founded,01.01.1704,1704-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/wendel/,dbpedia,http://dbpedia.org/resource/Wendel_(group),sg,industry,Investment,Capital Markets,normalization,gics_label_map,,1
+http://www.forbes.com/companies/wendel/,dbpedia,http://dbpedia.org/resource/Wendel_(group),nm,name,Wendel,Wendel,identity,,,1
+http://www.forbes.com/companies/wendel/,forbes,http://www.forbes.com/companies/wendel/,co_nm,name,Wendel (group),Wendel,normalization,disambiguation_suffix,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+http://www.forbes.com/companies/westfield-group/,forbes,http://www.forbes.com/companies/westfield-group/,sls_fig,revenue,"2,300",2300000000,normalization,number_locale+implicit_millions,"{""k5_locale"": ""en_US"", ""provenance"": [[""5"", ""reconvert_unit""], [""5"", ""reformat_number""]]}",1
+http://www.forbes.com/companies/wistron/,dbpedia,http://dbpedia.org/resource/Wistron_Corporation,cn,country,Taiwan,Taiwan,identity,,,2
+http://www.forbes.com/companies/wistron/,forbes,http://www.forbes.com/companies/wistron/,region,country,"Taiwan, Province of China[a]",Taiwan,normalization,country_alias,,2
+http://www.forbes.com/companies/wistron/,fullcontact,fullcontact_823,Attribute_3,country,Taiwan,Taiwan,identity,,,2
+http://www.forbes.com/companies/wistron/,dbpedia,http://dbpedia.org/resource/Wistron_Corporation,ey,founded,01/01/01,2001-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+http://www.forbes.com/companies/yamaha-motor/,dbpedia,http://dbpedia.org/resource/Mabuchi_Motor,ey,founded,01/01/1946,1946-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+http://www.forbes.com/companies/zijin-mining-group/,forbes,http://www.forbes.com/companies/zijin-mining-group/,bus_seg,industry,Diversified Metals & Mining,Metals & Mining,normalization,gics_label_map,,2

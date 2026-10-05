@@ -536,13 +536,12 @@ def _build_fusion_gold_ids(domain_config: DomainConfig) -> set[str]:
 
     Reads both fusion files declared by the domain config's
     ``fusion_files`` block (defaults: ``validation_set.xml`` and
-    ``test_set.xml``). Per §"Terminology convention" in
-    plan_s1_scale.md, both fusion validation and test entities are
+    ``test_set.xml``). Both fusion validation and test entities are
     protected at every value- and entity-mutating knob, K3 included.
     """
-    # Delegate to the shared protection loader so XML (pre-2026 domains)
-    # and JSONL-by-DOI fusion gold (papers; mapped to per-DOI anchor source
-    # ids) are handled identically and in one place.
+    # Delegate to the shared protection loader so id-keyed XML gold and
+    # source_ids-keyed gold (papers JSONL, products variant XML; keyed on the
+    # anchor of the members) are handled identically and in one place.
     from usecases_synthetic.lib.protection import _load_fusion_protected_ids
 
     return _load_fusion_protected_ids(domain_config.domain)
@@ -566,7 +565,7 @@ def _compute_protected_cells(
     1. **Fusion survivor floor**: for each entity group in the fusion
        gold, for each target attribute, protect the non-null cell whose
        value is closest to the fusion target value under
-       :func:`protection.is_close_enough` (Pending #5 contract). When
+       :func:`protection.is_close_enough` (closeness contract). When
        *domain* is ``None`` or no fusion target is available, fall back
        to the first cell in sorted source order.
     2. **Conflict preservation**: for each entity group with ≥2 distinct
@@ -597,7 +596,7 @@ def _compute_protected_cells(
     id_columns: dict[str, str] = config.get("id_columns", {})
     attr_mapping: dict[str, dict[str, str]] = config.get("attribute_mapping", {})
 
-    # Pending #5 hand-off: load fusion target values + per-attribute
+    # Closeness contract: load fusion target values + per-attribute
     # tolerance so the survivor floor protects the carrier closest to
     # the fusion target rather than the first source by sorted order.
     fusion_targets: dict[str, dict[str, list[str]]] = {}
@@ -803,7 +802,7 @@ def apply_constraints(
     # hard calls. Trade-off: phantom protection — if K4 hard later
     # removes a sibling whose value Constraint 2 thought was "going to
     # be dropped", the protection might be unnecessary. Detected by
-    # R7.2's realised-vs-configured K3 drop-rate gap.
+    # the realised-vs-configured K3 drop-rate gap.
     use_ref_mask = uniforms is not None and target_rates is not None
     ref_mask: dict[str, pd.DataFrame] = {}
     if use_ref_mask:

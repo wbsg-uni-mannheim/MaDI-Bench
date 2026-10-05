@@ -1,9 +1,9 @@
-"""R10-I: ``ditto/train.py`` --domain train-fields wiring.
+"""``ditto/train.py`` --domain train-fields wiring.
 
 ``_resolve_field_scope`` sources the serialization field list from the
 canonical wide committee scope when ``--domain`` is set, overriding any
 stale narrow ``fields`` default in ``--config`` and rejecting an explicit
-``--fields`` that disagrees — so a baseline (R10-H) retrain can never train
+``--fields`` that disagrees — so a baseline retrain can never train
 on a narrower surface than wide inference serializes.
 """
 
@@ -27,7 +27,7 @@ class TestResolveFieldScope:
         # --config default carries the narrow legacy list; --domain wins.
         out = _resolve_field_scope(_NARROW, "products", cli_fields_given=False)
         assert out == committee_ditto_fields("products")
-        assert "form_factor" in out and len(out) == 19
+        assert "form_factor" in out and len(out) == 18  # the 18 schema attributes
 
     def test_domain_drops_reserved_for_music(self) -> None:
         out = _resolve_field_scope(["x"], "music", cli_fields_given=False)

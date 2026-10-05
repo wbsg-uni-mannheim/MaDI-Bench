@@ -2,9 +2,17 @@
   "attribute_rules": {
     "brand": {
       "kwargs": {},
-      "resolver": "weighted_voting"
+      "resolver": "voting"
     },
     "bus_type": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "chipset_name": {
+      "kwargs": {},
+      "resolver": "longest_string"
+    },
+    "color": {
       "kwargs": {
         "sources": [
           "products_1"
@@ -12,29 +20,21 @@
       },
       "resolver": "favour_sources"
     },
-    "chipset_name": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
-    },
-    "color": {
-      "kwargs": {},
-      "resolver": "weighted_voting"
-    },
     "description": {
       "kwargs": {},
       "resolver": "longest_string"
     },
     "form_factor": {
-      "kwargs": {},
-      "resolver": "weighted_voting"
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "height_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "interface_type": {
       "kwargs": {},
@@ -42,43 +42,29 @@
     },
     "length_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "memory_type": {
       "kwargs": {
-        "sources": [
-          "products_1"
-        ]
+        "trust_key": "trust_score"
       },
-      "resolver": "favour_sources"
+      "resolver": "prefer_higher_trust"
     },
     "model": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "longest_string"
     },
     "model_number": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "price": {
       "kwargs": {},
       "resolver": "median"
     },
     "priceCurrency": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "product_type": {
       "kwargs": {},
@@ -87,50 +73,35 @@
     "read_speed_mb_s": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_3",
+          "products_2",
+          "products_1",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     },
     "storage_connection_type": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "longest_string"
     },
     "storage_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
     "url": {
       "kwargs": {
-        "sources": [
-          "products_1"
-        ]
+        "trust_key": "trust_score"
       },
-      "resolver": "favour_sources"
+      "resolver": "prefer_higher_trust"
     },
     "vram_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "weight_g": {
       "kwargs": {},
@@ -138,16 +109,19 @@
     },
     "width_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "write_speed_mb_s": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_2",
+          "products_3",
+          "products_1",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     }
   },
-  "main_entity": "computer hardware product"
+  "main_entity": "computer hardware and electronics product"
 }

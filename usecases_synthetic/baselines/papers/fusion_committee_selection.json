@@ -1,0 +1,42 @@
+{
+  "casefusion_only": {
+    "authors": "prefer_higher_trust",
+    "cited_by_count": "median",
+    "first_page": "median",
+    "last_page": "median",
+    "referenced_works_count": "median"
+  },
+  "fusionquery_only": {
+    "authors": "prefer_higher_trust",
+    "cited_by_count": "median",
+    "first_page": "median",
+    "last_page": "median",
+    "referenced_works_count": "median"
+  },
+  "ltm_only": {
+    "cited_by_count": "median",
+    "first_page": "median",
+    "last_page": "median",
+    "referenced_works_count": "median"
+  },
+  "pydi_per_attribute_optimal": {
+    "authors": "prefer_higher_trust",
+    "cited_by_count": "median",
+    "first_page": "median",
+    "issue": "longest_string",
+    "journal": "most_complete",
+    "last_page": "median",
+    "publication_year": "voting",
+    "referenced_works_count": "median",
+    "title": "longest_string",
+    "type": "voting",
+    "volume": "shortest_string"
+  },
+  "truthfinder_only": {
+    "authors": "prefer_higher_trust",
+    "cited_by_count": "median",
+    "first_page": "median",
+    "last_page": "median",
+    "referenced_works_count": "median"
+  }
+}

@@ -1,0 +1,40 @@
+# End-to-end panel configuration for the music tasks (score_e2e.py).
+# The keys below are the ones the panel reads, copied unchanged from the
+# configuration the paper's panels were computed with (the best-of-breed
+# pipeline's music config of 2026-07, with PyDI's names for the column types).
+
+domain: music
+
+column_types:
+  id: identifier
+  cluster_id: identifier
+  name: text
+  artist: text
+  release-date: datetime  # PyDI's panel type name ("temporal" in pipelines/configs/music.yaml)
+  release-country: categorical
+  label: categorical
+  genre: categorical
+  tracks: list  # array of track names; handled at cluster level (skip distributional)
+  duration: numerical
+
+# Panel numerical tolerance. Music notebook uses
+# numeric_tolerance_match(tolerance=10) for duration (seconds). Other
+# attributes are categorical / text so tolerance only applies to
+# duration.
+panel_tolerance:
+  default: 0.05
+  overrides:
+    duration: 0.10
+
+composite_weights:
+  entity_coverage: 0.10
+  fact_coverage: 0.10
+  source_based_fact_coverage: 0.10
+  consistency: 0.10
+  cluster_correctness: 0.30
+  fact_correctness: 0.30
+
+source_prefix_map:
+  mbrainz_: musicbrainz
+  discogs_: discogs
+  lastFM_: lastfm

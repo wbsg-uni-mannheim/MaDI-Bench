@@ -1,0 +1,265 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+dblp-00185,dblp,dblp-00185,authors,authors,"['Lisong Qiu', 'Yingwai Shiu', 'Pingping Lin', 'Ruihua Song', 'Yue Liu', 'Dongyan Zhao 0001', 'Rui Yan 0001']","[""Lisong Qiu"", ""Yingwai Shiu"", ""Pingping Lin"", ""Ruihua Song"", ""Yue Liu"", ""Dongyan Zhao"", ""Rui Yan""]",normalization,dblp_homonym_suffix,,1
+dblp-00494,dblp,dblp-00494,authors,authors,"['Ju Wang 0003', 'Liqiong Chang', 'Omid Abari', 'Srinivasan Keshav']","[""Ju Wang"", ""Liqiong Chang"", ""Omid Abari"", ""Srinivasan Keshav""]",normalization,dblp_homonym_suffix,,1
+dblp-01906,dblp,dblp-01906,authors,authors,"['Yuliang Li', 'Rui Miao 0001', 'Hongqiang Harry Liu', 'Yan Zhuang', 'Fei Feng', 'Lingbo Tang', 'Zheng Cao 0003', 'Ming Zhang 0005', 'Frank Kelly', 'Mohammad Alizadeh', 'Minlan Yu']","[""Yuliang Li"", ""Rui Miao"", ""Hongqiang Harry Liu"", ""Yan Zhuang"", ""Fei Feng"", ""Lingbo Tang"", ""Zheng Cao"", ""Ming Zhang"", ""Frank Kelly"", ""Mohammad Alizadeh"", ""Minlan Yu""]",normalization,dblp_homonym_suffix,,1
+dblp-03740,dblp,dblp-03740,authors,authors,"['Na Sun', 'Xiying Wang 0001', 'Mary Beth Rosson']","[""Na Sun"", ""Xiying Wang"", ""Mary Beth Rosson""]",normalization,dblp_homonym_suffix,,1
+dblp-04547,dblp,dblp-04547,title,title,When Good Components Go Bad: Formally Secure Compilation Despite Dynamic Compromise.,When Good Components Go Bad: Formally Secure Compilation Despite Dynamic Compromise,normalization,trailing_period,,1
+dblp-05129,dblp,dblp-05129,title,title,Speech acts redux: Beyond request-response interactions.,Speech acts redux: Beyond request-response interactions,normalization,trailing_period,,1
+dblp-09974,dblp,dblp-09974,title,title,Snap: a microkernel approach to host networking.,Snap: a microkernel approach to host networking,normalization,trailing_period,,1
+dblp-14797,dblp,dblp-14797,authors,authors,"['Dandan Huang', 'Leyang Cui', 'Sen Yang 0005', 'Guangsheng Bao', 'Kun Wang', 'Jun Xie', 'Yue Zhang 0004']","[""Dandan Huang"", ""Leyang Cui"", ""Sen Yang"", ""Guangsheng Bao"", ""Kun Wang"", ""Jun Xie"", ""Yue Zhang""]",normalization,dblp_homonym_suffix,,1
+dblp-16992,dblp,dblp-16992,journal,journal,Remote. Sens.,Remote Sensing,knowledge,journal_abbreviation,,1
+dblp-17105,dblp,dblp-17105,authors,authors,"['Dabin Lee', 'SeungHyun Son', 'Wonkook Kim', 'Joo Myun Park', 'Huitae Joo', 'Sang Heon Lee 0005']","[""Dabin Lee"", ""SeungHyun Son"", ""Wonkook Kim"", ""Joo Myun Park"", ""Huitae Joo"", ""Sang Heon Lee""]",normalization,dblp_homonym_suffix,,1
+dblp-17105,crossref,crossref-08716,journal,journal,Remote Sensing,Remote Sensing,identity,,,2
+dblp-19288,dblp,dblp-19288,authors,authors,"['Shweta Yadav 0001', 'Asif Ekbal', 'Sriparna Saha 0001', 'Ankit Kumar', 'Pushpak Bhattacharyya']","[""Shweta Yadav"", ""Asif Ekbal"", ""Sriparna Saha"", ""Ankit Kumar"", ""Pushpak Bhattacharyya""]",normalization,dblp_homonym_suffix,,1
+dblp-19288,dblp,dblp-19288,journal,journal,Knowl. Based Syst.,Knowledge-Based Systems,knowledge,journal_abbreviation,,1
+dblp-20269,crossref,crossref-45116,journal,journal,Interacting with Computers,Interacting with Computers,identity,,,2
+dblp-20269,dblp,dblp-20269,journal,journal,Interact. Comput.,Interacting with Computers,knowledge,journal_abbreviation,,1
+dblp-20269,dblp,dblp-20269,title,title,Understanding Users' Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value.,Understanding Users' Engagement and Responses in 3D Virtual Reality: The Influence of Presence on User Value,normalization,trailing_period,,1
+dblp-20892,crossref,crossref-54519,journal,journal,npj Digital Medicine,npj Digital Medicine,identity,,,2
+dblp-20892,dblp,dblp-20892,journal,journal,npj Digit. Medicine,npj Digital Medicine,knowledge,journal_abbreviation,,1
+dblp-21241,dblp,dblp-21241,authors,authors,"['Carolyn Lamb', 'Daniel G. Brown 0001', 'Charles L. A. Clarke']","[""Carolyn Lamb"", ""Daniel G. Brown"", ""Charles L. A. Clarke""]",normalization,dblp_homonym_suffix,,1
+dblp-21241,dblp,dblp-21241,journal,journal,ACM Comput. Surv.,ACM Computing Surveys,knowledge,journal_abbreviation,,1
+dblp-21241,open_alex,open_alex-05961,journal,journal,ACM Computing Surveys,ACM Computing Surveys,identity,,,2
+dblp-21241,dblp,dblp-21241,title,title,Evaluating Computational Creativity: An Interdisciplinary Tutorial.,Evaluating Computational Creativity: An Interdisciplinary Tutorial,normalization,trailing_period,,1
+dblp-21517,dblp,dblp-21517,journal,journal,Manuf. Serv. Oper. Manag.,Manufacturing & Service Operations Management,knowledge,journal_abbreviation,,2
+dblp-21517,open_alex,open_alex-23118,journal,journal,Manufacturing & Service Operations Management,Manufacturing & Service Operations Management,identity,,,2
+dblp-21517,crossref,crossref-41534,title,title,Sustainable Operations Management Through the Perspective of <i>Manufacturing &amp; Service Operations Management</i>,Sustainable Operations Management Through the Perspective of Manufacturing & Service Operations Management,normalization,markup,,2
+dblp-21517,open_alex,open_alex-23118,title,title,Sustainable Operations Management Through the Perspective of <i>Manufacturing &amp; Service Operations Management</i>,Sustainable Operations Management Through the Perspective of Manufacturing & Service Operations Management,normalization,markup,,2
+dblp-21537,dblp,dblp-21537,journal,journal,Manuf. Serv. Oper. Manag.,Manufacturing & Service Operations Management,knowledge,journal_abbreviation,,2
+dblp-22022,dblp,dblp-22022,journal,journal,Int. J. Approx. Reason.,International Journal of Approximate Reasoning,knowledge,journal_abbreviation,,1
+dblp-22022,open_alex,open_alex-03884,journal,journal,International Journal of Approximate Reasoning,International Journal of Approximate Reasoning,identity,,,1
+dblp-22672,crossref,crossref-38922,authors,authors,"['Heiko Koziolek', ' Andreas Burger', ' Marie Platenius‐Mohr', ' Julius Rückert', ' Francisco Mendoza', ' Roland Braun']","[""Heiko Koziolek"", ""Andreas Burger"", ""Marie Platenius-Mohr"", ""Julius Rückert"", ""Francisco Mendoza"", ""Roland Braun""]",normalization,unicode_hyphen,,1
+dblp-22672,dblp,dblp-22672,authors,authors,"['Heiko Koziolek', 'Andreas Burger', 'Marie Platenius-Mohr', 'Julius Rückert', 'Francisco Mendoza 0001', 'Roland Braun']","[""Heiko Koziolek"", ""Andreas Burger"", ""Marie Platenius-Mohr"", ""Julius Rückert"", ""Francisco Mendoza"", ""Roland Braun""]",normalization,dblp_homonym_suffix,,1
+dblp-22672,open_alex,open_alex-42956,authors,authors,"['Heiko Koziolek', 'Andreas Burger', 'Marie Platenius‐Mohr', 'Julius Rückert', 'Francisco Mendoza', 'Roland Braun']","[""Heiko Koziolek"", ""Andreas Burger"", ""Marie Platenius-Mohr"", ""Julius Rückert"", ""Francisco Mendoza"", ""Roland Braun""]",normalization,unicode_hyphen,,1
+dblp-22672,crossref,crossref-38922,journal,journal,Software: Practice and Experience,Software: Practice and Experience,identity,,,1
+dblp-22672,dblp,dblp-22672,journal,journal,Softw. Pract. Exp.,Software: Practice and Experience,knowledge,journal_abbreviation,,1
+dblp-22766,dblp,dblp-22766,journal,journal,Briefings Bioinform.,Briefings in Bioinformatics,knowledge,journal_abbreviation,,1
+dblp-22766,open_alex,open_alex-34494,journal,journal,Briefings in Bioinformatics,Briefings in Bioinformatics,identity,,,1
+dblp-22766,crossref,crossref-36610,title,title,Beware the Jaccard: the choice of <b>similarity measure</b> is important and non-trivial in genomic colocalisation analysis,Beware the Jaccard: the choice of similarity measure is important and non-trivial in genomic colocalisation analysis,normalization,markup,,2
+dblp-22766,dblp,dblp-22766,title,title,Beware the Jaccard: the choice of similarity measure is important and non-trivial in genomic colocalisation analysis.,Beware the Jaccard: the choice of similarity measure is important and non-trivial in genomic colocalisation analysis,normalization,trailing_period,,1
+dblp-22766,open_alex,open_alex-34494,title,title,Beware the Jaccard: the choice of <b>similarity measure</b> is important and non-trivial in genomic colocalisation analysis,Beware the Jaccard: the choice of similarity measure is important and non-trivial in genomic colocalisation analysis,normalization,markup,,2
+dblp-22806,crossref,crossref-48614,journal,journal,The International Journal of Robotics Research,The International Journal of Robotics Research,identity,,,2
+dblp-22806,dblp,dblp-22806,journal,journal,Int. J. Robotics Res.,The International Journal of Robotics Research,knowledge,journal_abbreviation,,1
+dblp-22806,open_alex,open_alex-45066,journal,journal,The International Journal of Robotics Research,The International Journal of Robotics Research,identity,,,2
+dblp-22806,crossref,crossref-48614,title,title,STyLuS<sup>*</sup>: A Temporal Logic Optimal Control Synthesis Algorithm for Large-Scale Multi-Robot Systems,STyLuS*: A Temporal Logic Optimal Control Synthesis Algorithm for Large-Scale Multi-Robot Systems,normalization,markup,,2
+dblp-22806,open_alex,open_alex-45066,title,title,STyLuS<sup>*</sup>: A Temporal Logic Optimal Control Synthesis Algorithm for Large-Scale Multi-Robot Systems,STyLuS*: A Temporal Logic Optimal Control Synthesis Algorithm for Large-Scale Multi-Robot Systems,normalization,markup,,2
+dblp-23341,dblp,dblp-23341,journal,journal,IET Image Process.,IET Image Processing,knowledge,journal_abbreviation,,1
+dblp-23341,dblp,dblp-23341,title,title,Automatic optical-to-SAR image registration using a structural descriptor.,Automatic optical-to-SAR image registration using a structural descriptor,normalization,trailing_period,,1
+dblp-25035,dblp,dblp-25035,authors,authors,"['Chunyu Yang 0002', 'Weiwei Wang 0005', 'Xiangchu Feng', 'Xin Liu']","[""Chunyu Yang"", ""Weiwei Wang"", ""Xiangchu Feng"", ""Xin Liu""]",normalization,dblp_homonym_suffix,,1
+dblp-25035,dblp,dblp-25035,journal,journal,Signal Process.,Signal Processing,knowledge,journal_abbreviation,,1
+dblp-26244,dblp,dblp-26244,authors,authors,"['Jiaojiao Zhao', 'Jungong Han', 'Ling Shao 0001', 'Cees G. M. Snoek']","[""Jiaojiao Zhao"", ""Jungong Han"", ""Ling Shao"", ""Cees G. M. Snoek""]",normalization,dblp_homonym_suffix,,1
+dblp-26244,crossref,crossref-39953,title,title,Pixelated Semantic Colorization,Pixelated Semantic Colorization,identity,,,2
+dblp-26244,dblp,dblp-26244,title,title,Pixelated Semantic Colorization.,Pixelated Semantic Colorization,normalization,trailing_period,,1
+dblp-26244,open_alex,open_alex-24635,title,title,Pixelated Semantic Colorization,Pixelated Semantic Colorization,identity,,,2
+dblp-27913,crossref,crossref-15957,journal,journal,Journal of Computational Chemistry,Journal of Computational Chemistry,identity,,,2
+dblp-27913,dblp,dblp-27913,journal,journal,J. Comput. Chem.,Journal of Computational Chemistry,knowledge,journal_abbreviation,,1
+dblp-27913,open_alex,open_alex-02269,journal,journal,Journal of Computational Chemistry,Journal of Computational Chemistry,identity,,,2
+dblp-27913,dblp,dblp-27913,title,title,An Fe-Ni-Cr embedded atom method potential for austenitic and ferritic systems.,An Fe-Ni-Cr embedded atom method potential for austenitic and ferritic systems,normalization,trailing_period,,1
+dblp-28192,dblp,dblp-28192,authors,authors,"['Martin Sudmanns', 'Dirk Tiede', 'Stefan Lang 0001', 'Helena Bergstedt', 'Georg Trost', 'Hannah Augustin', 'Andrea Baraldi 0001', 'Thomas Blaschke']","[""Martin Sudmanns"", ""Dirk Tiede"", ""Stefan Lang"", ""Helena Bergstedt"", ""Georg Trost"", ""Hannah Augustin"", ""Andrea Baraldi"", ""Thomas Blaschke""]",normalization,dblp_homonym_suffix,,1
+dblp-28192,dblp,dblp-28192,journal,journal,Int. J. Digit. Earth,International Journal of Digital Earth,knowledge,journal_abbreviation,,1
+dblp-28855,dblp,dblp-28855,journal,journal,Int. J. Document Anal. Recognit.,International Journal on Document Analysis and Recognition (IJDAR),knowledge,journal_abbreviation,,1
+dblp-28855,crossref,crossref-44136,title,title,Fast multi-language LSTM-based online handwriting recognition,Fast multi-language LSTM-based online handwriting recognition,identity,,,2
+dblp-28855,dblp,dblp-28855,title,title,Fast multi-language LSTM-based online handwriting recognition.,Fast multi-language LSTM-based online handwriting recognition,normalization,trailing_period,,1
+dblp-28855,open_alex,open_alex-43935,title,title,Fast multi-language LSTM-based online handwriting recognition,Fast multi-language LSTM-based online handwriting recognition,identity,,,2
+dblp-29270,dblp,dblp-29270,title,title,Edge-Assisted Control for Healthcare Internet of Things: A Case Study on PPG-Based Early Warning Score.,Edge-Assisted Control for Healthcare Internet of Things: A Case Study on PPG-Based Early Warning Score,normalization,trailing_period,,1
+dblp-29597,dblp,dblp-29597,authors,authors,"['Paul Kocher', 'Jann Horn', 'Anders Fogh', 'Daniel Genkin', 'Daniel Gruss', 'Werner Haas 0004', 'Mike Hamburg', 'Moritz Lipp', 'Stefan Mangard', 'Thomas Prescher 0002', 'Michael Schwarz 0001', 'Yuval Yarom']","[""Paul Kocher"", ""Jann Horn"", ""Anders Fogh"", ""Daniel Genkin"", ""Daniel Gruss"", ""Werner Haas"", ""Mike Hamburg"", ""Moritz Lipp"", ""Stefan Mangard"", ""Thomas Prescher"", ""Michael Schwarz"", ""Yuval Yarom""]",normalization,dblp_homonym_suffix,,1
+dblp-29597,dblp,dblp-29597,journal,journal,Commun. ACM,Communications of the ACM,knowledge,journal_abbreviation,,1
+dblp-29741,crossref,crossref-19099,title,title,A Categorization of Interoperability Issues in Networks of Transformations.,A Categorization of Interoperability Issues in Networks of Transformations,normalization,trailing_period,,3
+dblp-29741,dblp,dblp-29741,title,title,A Categorization of Interoperability Issues in Networks of Transformations.,A Categorization of Interoperability Issues in Networks of Transformations,normalization,trailing_period,,3
+dblp-29741,open_alex,open_alex-42594,title,title,A Categorization of Interoperability Issues in Networks of Transformations.,A Categorization of Interoperability Issues in Networks of Transformations,normalization,trailing_period,,3
+dblp-29818,crossref,crossref-40559,journal,journal,Journal of Field Robotics,Journal of Field Robotics,identity,,,2
+dblp-29818,dblp,dblp-29818,journal,journal,J. Field Robotics,Journal of Field Robotics,knowledge,journal_abbreviation,,1
+dblp-29818,open_alex,open_alex-25389,journal,journal,Journal of Field Robotics,Journal of Field Robotics,identity,,,2
+dblp-29935,dblp,dblp-29935,authors,authors,"['Feng Zhou 0007', 'Yong Hu', 'Xukun Shen']","[""Feng Zhou"", ""Yong Hu"", ""Xukun Shen""]",normalization,dblp_homonym_suffix,,1
+dblp-29935,dblp,dblp-29935,journal,journal,Vis. Comput.,The Visual Computer,knowledge,journal_abbreviation,,1
+dblp-29975,crossref,crossref-22339,journal,journal,Computer Applications in Engineering Education,Computer Applications in Engineering Education,identity,,,5
+dblp-29975,dblp,dblp-29975,journal,journal,Comput. Appl. Eng. Educ.,Computer Applications in Engineering Education,knowledge,journal_abbreviation,,2
+dblp-29989,crossref,crossref-16758,journal,journal,Computer Applications in Engineering Education,Computer Applications in Engineering Education,identity,,,5
+dblp-29989,dblp,dblp-29989,journal,journal,Comput. Appl. Eng. Educ.,Computer Applications in Engineering Education,knowledge,journal_abbreviation,,2
+dblp-30001,open_alex,open_alex-35656,journal,journal,Computer Applications in Engineering Education,Computer Applications in Engineering Education,identity,,,5
+dblp-31649,open_alex,open_alex-00408,journal,journal,ACM Transactions on Reconfigurable Technology and Systems,ACM Transactions on Reconfigurable Technology and Systems,identity,,,4
+dblp-31650,crossref,crossref-38822,journal,journal,ACM Transactions on Reconfigurable Technology and Systems,ACM Transactions on Reconfigurable Technology and Systems,identity,,,4
+dblp-31650,dblp,dblp-31650,journal,journal,ACM Trans. Reconfigurable Technol. Syst.,ACM Transactions on Reconfigurable Technology and Systems,knowledge,journal_abbreviation,,1
+dblp-31650,open_alex,open_alex-42843,journal,journal,ACM Transactions on Reconfigurable Technology and Systems,ACM Transactions on Reconfigurable Technology and Systems,identity,,,4
+dblp-35654,crossref,crossref-07702,journal,journal,Journal of Complex Networks,Journal of Complex Networks,identity,,,4
+dblp-35654,dblp,dblp-35654,journal,journal,J. Complex Networks,Journal of Complex Networks,knowledge,journal_abbreviation,,2
+dblp-35654,open_alex,open_alex-09929,journal,journal,Journal of Complex Networks,Journal of Complex Networks,identity,,,4
+dblp-35655,dblp,dblp-35655,authors,authors,"['Sen Pei', 'Jiannan Wang 0003', 'Flaviano Morone', 'Hernán A. Makse']","[""Sen Pei"", ""Jiannan Wang"", ""Flaviano Morone"", ""Hernán A. Makse""]",normalization,dblp_homonym_suffix,,1
+dblp-35655,dblp,dblp-35655,journal,journal,J. Complex Networks,Journal of Complex Networks,knowledge,journal_abbreviation,,2
+dblp-35655,crossref,crossref-33023,title,title,Influencer identification in dynamical complex systems,Influencer identification in dynamical complex systems,identity,,,2
+dblp-35655,dblp,dblp-35655,title,title,Influencer identification in dynamical complex systems.,Influencer identification in dynamical complex systems,normalization,trailing_period,,1
+dblp-35655,open_alex,open_alex-29223,title,title,Influencer identification in dynamical complex systems,Influencer identification in dynamical complex systems,identity,,,2
+dblp-35800,dblp,dblp-35800,authors,authors,"['Agostino Capponi', 'Xu Sun 0004', 'David D. Yao']","[""Agostino Capponi"", ""Xu Sun"", ""David D. Yao""]",normalization,dblp_homonym_suffix,,1
+dblp-35800,open_alex,open_alex-54591,journal,journal,Mathematics of Operations Research,Mathematics of Operations Research,identity,,,1
+dblp-36977,crossref,crossref-16940,journal,journal,ISPRS International Journal of Geo-Information,ISPRS International Journal of Geo-Information,identity,,,2
+dblp-36977,dblp,dblp-36977,journal,journal,ISPRS Int. J. Geo Inf.,ISPRS International Journal of Geo-Information,knowledge,journal_abbreviation,,1
+dblp-36977,open_alex,open_alex-19268,journal,journal,ISPRS International Journal of Geo-Information,ISPRS International Journal of Geo-Information,identity,,,2
+dblp-38202,open_alex,open_alex-19015,authors,authors,"['Amit Phadikar', 'Goutam Kumar Maity', 'Tien‐Lung Chiu', 'Himadri Mandal']","[""Amit Phadikar"", ""Goutam Kumar Maity"", ""Tien-Lung Chiu"", ""Himadri Mandal""]",normalization,unicode_hyphen,,1
+dblp-38202,dblp,dblp-38202,journal,journal,Circuits Syst. Signal Process.,"Circuits, Systems, and Signal Processing",knowledge,journal_abbreviation,,1
+dblp-39236,dblp,dblp-39236,authors,authors,"['Xueqin Guo', 'Fengzhen Chen', 'Fei Gao', 'Ling Li', 'Ke Liu', 'Lijin You', 'Cong Hua', 'Fan Yang 0035', 'Wanliang Liu', 'Chunhua Peng', 'Lina Wang', 'Xiaoxia Yang', 'Feiyu Zhou', 'Jiawei Tong', 'Jia Cai', 'Zhiyong Li', 'Bo Wan', 'Lei Zhang 0036', 'Tao Yang 0032', 'Minwen Zhang', 'Linlin Yang', 'Yawen Yang', 'Wenjun Zeng 0001', 'Bo Wang', 'Xiaofeng Wei', 'Xun Xu']","[""Xueqin Guo"", ""Fengzhen Chen"", ""Fei Gao"", ""Ling Li"", ""Ke Liu"", ""Lijin You"", ""Cong Hua"", ""Fan Yang"", ""Wanliang Liu"", ""Chunhua Peng"", ""Lina Wang"", ""Xiaoxia Yang"", ""Feiyu Zhou"", ""Jiawei Tong"", ""Jia Cai"", ""Zhiyong Li"", ""Bo Wan"", ""Lei Zhang"", ""Tao Yang"", ""Minwen Zhang"", ""Linlin Yang"", ""Yawen Yang"", ""Wenjun Zeng"", ""Bo Wang"", ""Xiaofeng Wei"", ""Xun Xu""]",normalization,dblp_homonym_suffix,,1
+dblp-39407,dblp,dblp-39407,authors,authors,"['Justin P. Yuan', 'Eva Henje Blom', 'Trevor Flynn', 'Yiran Chen 0004', 'Tiffany C. Ho', 'Colm G. Connolly', 'Rebecca A. Dumont Walter', 'Tony T. Yang', 'Duan Xu', 'Olga Tymofiyeva']","[""Justin P. Yuan"", ""Eva Henje Blom"", ""Trevor Flynn"", ""Yiran Chen"", ""Tiffany C. Ho"", ""Colm G. Connolly"", ""Rebecca A. Dumont Walter"", ""Tony T. Yang"", ""Duan Xu"", ""Olga Tymofiyeva""]",normalization,dblp_homonym_suffix,,1
+dblp-39407,dblp,dblp-39407,journal,journal,Brain Connect.,Brain Connectivity,knowledge,journal_abbreviation,,1
+dblp-39529,dblp,dblp-39529,title,title,FarmChat: A Conversational Agent to Answer Farmer Queries.,FarmChat: A Conversational Agent to Answer Farmer Queries,normalization,trailing_period,,1
+dblp-39564,crossref,crossref-55715,journal,journal,"Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies","Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",identity,,,1
+dblp-39564,dblp,dblp-39564,journal,journal,Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.,"Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",knowledge,journal_abbreviation,,2
+dblp-39564,dblp,dblp-39564,title,title,OptoSense: Towards Ubiquitous Self-Powered Ambient Light Sensing Surfaces.,OptoSense: Towards Ubiquitous Self-Powered Ambient Light Sensing Surfaces,normalization,trailing_period,,1
+dblp-39723,dblp,dblp-39723,journal,journal,Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.,"Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",knowledge,journal_abbreviation,,2
+dblp-39723,dblp,dblp-39723,title,title,I Can't Be Myself: Effects of Wearable Cameras on the Capture of Authentic Behavior in the Wild.,I Can't Be Myself: Effects of Wearable Cameras on the Capture of Authentic Behavior in the Wild,normalization,trailing_period,,1
+dblp-39895,dblp,dblp-39895,journal,journal,ACM Trans. Design Autom. Electr. Syst.,ACM Transactions on Design Automation of Electronic Systems,knowledge,journal_abbreviation,,1
+dblp-39924,dblp,dblp-39924,authors,authors,"['Balázs Bodó 0001', 'Daniel Gervais', 'João Pedro Quintais']","[""Balázs Bodó"", ""Daniel Gervais"", ""João Pedro Quintais""]",normalization,dblp_homonym_suffix,,1
+dblp-40597,dblp,dblp-40597,authors,authors,"['Youqiang Zhang', 'Guo Cao', 'Bisheng Wang', 'Xuesong Li 0002']","[""Youqiang Zhang"", ""Guo Cao"", ""Bisheng Wang"", ""Xuesong Li""]",normalization,dblp_homonym_suffix,,1
+dblp-40597,dblp,dblp-40597,journal,journal,Pattern Recognit.,Pattern Recognition,knowledge,journal_abbreviation,,1
+dblp-40597,open_alex,open_alex-01725,journal,journal,Pattern Recognition,Pattern Recognition,identity,,,1
+dblp-40913,crossref,crossref-18901,title,title,Tithonus: A Bitcoin Based Censorship Resilient System,Tithonus: A Bitcoin Based Censorship Resilient System,identity,,,2
+dblp-40913,dblp,dblp-40913,title,title,Tithonus: A Bitcoin Based Censorship Resilient System.,Tithonus: A Bitcoin Based Censorship Resilient System,normalization,trailing_period,,1
+dblp-40913,open_alex,open_alex-13979,title,title,Tithonus: A Bitcoin Based Censorship Resilient System,Tithonus: A Bitcoin Based Censorship Resilient System,identity,,,2
+dblp-40993,dblp,dblp-40993,journal,journal,ACM Trans. Comput. Hum. Interact.,ACM Transactions on Computer-Human Interaction,knowledge,journal_abbreviation,,1
+dblp-40993,dblp,dblp-40993,title,title,Attention Regulation Framework: Designing Self-Regulated Mindfulness Technologies.,Attention Regulation Framework: Designing Self-Regulated Mindfulness Technologies,normalization,trailing_period,,1
+dblp-41189,crossref,crossref-28161,journal,journal,International Journal of Communication Systems,International Journal of Communication Systems,identity,,,2
+dblp-41189,dblp,dblp-41189,journal,journal,Int. J. Commun. Syst.,International Journal of Communication Systems,knowledge,journal_abbreviation,,1
+dblp-41189,open_alex,open_alex-36940,journal,journal,International Journal of Communication Systems,International Journal of Communication Systems,identity,,,2
+dblp-41189,dblp,dblp-41189,title,title,On the analysis of achievable rate for NOMA networks with cooperative users over κ-μ shadowed fading channels.,On the analysis of achievable rate for NOMA networks with cooperative users over κ-μ shadowed fading channels,normalization,trailing_period,,1
+dblp-41920,dblp,dblp-41920,authors,authors,"['Sara Nasiri', 'Julien Helsper', 'Matthias Jung 0003', 'Madjid Fathi']","[""Sara Nasiri"", ""Julien Helsper"", ""Matthias Jung"", ""Madjid Fathi""]",normalization,dblp_homonym_suffix,,1
+dblp-41920,dblp,dblp-41920,journal,journal,BMC Bioinform.,BMC Bioinformatics,knowledge,journal_abbreviation,,2
+dblp-41920,open_alex,open_alex-48192,journal,journal,BMC Bioinformatics,BMC Bioinformatics,identity,,,3
+dblp-41953,crossref,crossref-18133,journal,journal,BMC Bioinformatics,BMC Bioinformatics,identity,,,3
+dblp-41953,dblp,dblp-41953,journal,journal,BMC Bioinform.,BMC Bioinformatics,knowledge,journal_abbreviation,,2
+dblp-41953,open_alex,open_alex-03326,journal,journal,BMC Bioinformatics,BMC Bioinformatics,identity,,,3
+dblp-41953,crossref,crossref-18133,title,title,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research,identity,,,2
+dblp-41953,dblp,dblp-41953,title,title,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research.,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research,normalization,trailing_period,,1
+dblp-41953,open_alex,open_alex-03326,title,title,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research,CANDLE/Supervisor: a workflow framework for machine learning applied to cancer research,identity,,,2
+dblp-43755,dblp,dblp-43755,journal,journal,ACM Trans. Graph.,ACM Transactions on Graphics,knowledge,journal_abbreviation,,5
+dblp-43755,dblp,dblp-43755,title,title,Arnold: A Brute-Force Production Path Tracer.,Arnold: A Brute-Force Production Path Tracer,normalization,trailing_period,,1
+dblp-43812,dblp,dblp-43812,journal,journal,ACM Trans. Graph.,ACM Transactions on Graphics,knowledge,journal_abbreviation,,5
+dblp-43874,dblp,dblp-43874,authors,authors,"['Jiayi Wang 0001', 'Franziska Mueller 0001', 'Florian Bernard', 'Suzanne Sorli', 'Oleksandr Sotnychenko', 'Neng Qian', 'Miguel A. Otaduy', 'Dan Casas', 'Christian Theobalt']","[""Jiayi Wang"", ""Franziska Mueller"", ""Florian Bernard"", ""Suzanne Sorli"", ""Oleksandr Sotnychenko"", ""Neng Qian"", ""Miguel A. Otaduy"", ""Dan Casas"", ""Christian Theobalt""]",normalization,dblp_homonym_suffix,,1
+dblp-43874,dblp,dblp-43874,journal,journal,ACM Trans. Graph.,ACM Transactions on Graphics,knowledge,journal_abbreviation,,5
+dblp-43905,crossref,crossref-59565,journal,journal,ACM Transactions on Graphics,ACM Transactions on Graphics,identity,,,8
+dblp-43926,crossref,crossref-59576,journal,journal,ACM Transactions on Graphics,ACM Transactions on Graphics,identity,,,8
+dblp-43926,dblp,dblp-43926,journal,journal,ACM Trans. Graph.,ACM Transactions on Graphics,knowledge,journal_abbreviation,,5
+dblp-43926,dblp,dblp-43926,title,title,Weavecraft: an interactive design and simulation tool for 3D weaving.,Weavecraft: an interactive design and simulation tool for 3D weaving,normalization,trailing_period,,1
+dblp-43955,dblp,dblp-43955,authors,authors,"['Joshuah Wolper', 'Yunuo Chen 0001', 'Minchen Li', 'Yu Fang 0010', 'Ziyin Qu', 'Jiecong Lu', 'Meggie Cheng', 'Chenfanfu Jiang']","[""Joshuah Wolper"", ""Yunuo Chen"", ""Minchen Li"", ""Yu Fang"", ""Ziyin Qu"", ""Jiecong Lu"", ""Meggie Cheng"", ""Chenfanfu Jiang""]",normalization,dblp_homonym_suffix,,1
+dblp-43955,dblp,dblp-43955,journal,journal,ACM Trans. Graph.,ACM Transactions on Graphics,knowledge,journal_abbreviation,,5
+dblp-44426,crossref,crossref-36579,title,title,Geographic Diversification of Recommended POIs in Frequently Visited Areas,Geographic Diversification of Recommended POIs in Frequently Visited Areas,identity,,,2
+dblp-44426,dblp,dblp-44426,title,title,Geographic Diversification of Recommended POIs in Frequently Visited Areas.,Geographic Diversification of Recommended POIs in Frequently Visited Areas,normalization,trailing_period,,1
+dblp-44426,open_alex,open_alex-37805,title,title,Geographic Diversification of Recommended POIs in Frequently Visited Areas,Geographic Diversification of Recommended POIs in Frequently Visited Areas,identity,,,2
+dblp-44771,crossref,crossref-16808,first_page,first_page,D84,D84,normalization,float_noise,,2
+dblp-44771,open_alex,open_alex-01833,first_page,first_page,D84,D84,normalization,float_noise,,2
+dblp-44771,dblp,dblp-44771,journal,journal,Nucleic Acids Res.,Nucleic Acids Research,knowledge,journal_abbreviation,,1
+dblp-44771,crossref,crossref-16808,last_page,last_page,D88,D88,normalization,float_noise,,2
+dblp-44771,open_alex,open_alex-01833,last_page,last_page,D88,D88,normalization,float_noise,,2
+dblp-44771,crossref,crossref-16808,title,title,The European Nucleotide Archive in 2018,The European Nucleotide Archive in 2018,identity,,,2
+dblp-44771,dblp,dblp-44771,title,title,The European Nucleotide Archive in 2018.,The European Nucleotide Archive in 2018,normalization,trailing_period,,1
+dblp-44771,open_alex,open_alex-01833,title,title,The European Nucleotide Archive in 2018,The European Nucleotide Archive in 2018,identity,,,2
+dblp-44828,crossref,crossref-50297,first_page,first_page,W372,W372,normalization,float_noise,,2
+dblp-44828,open_alex,open_alex-53871,first_page,first_page,W372,W372,normalization,float_noise,,2
+dblp-44828,crossref,crossref-50297,journal,journal,Nucleic Acids Research,Nucleic Acids Research,identity,,,4
+dblp-44828,open_alex,open_alex-53871,journal,journal,Nucleic Acids Research,Nucleic Acids Research,identity,,,4
+dblp-44828,open_alex,open_alex-53871,last_page,last_page,W379,W379,normalization,float_noise,,1
+dblp-44828,crossref,crossref-50297,title,title,CReSCENT: CanceR Single Cell ExpressioN Toolkit,CReSCENT: CanceR Single Cell ExpressioN Toolkit,identity,,,2
+dblp-44828,dblp,dblp-44828,title,title,CReSCENT: CanceR Single Cell ExpressioN Toolkit.,CReSCENT: CanceR Single Cell ExpressioN Toolkit,normalization,trailing_period,,1
+dblp-44828,open_alex,open_alex-53871,title,title,CReSCENT: CanceR Single Cell ExpressioN Toolkit,CReSCENT: CanceR Single Cell ExpressioN Toolkit,identity,,,2
+dblp-45818,crossref,crossref-36582,title,title,<i>CostMAP</i>: an open-source software package for developing cost surfaces using a multi-scale search kernel,CostMAP: an open-source software package for developing cost surfaces using a multi-scale search kernel,normalization,markup,,2
+dblp-45818,dblp,dblp-45818,title,title,CostMAP: an open-source software package for developing cost surfaces using a multi-scale search kernel.,CostMAP: an open-source software package for developing cost surfaces using a multi-scale search kernel,normalization,trailing_period,,1
+dblp-45818,open_alex,open_alex-29721,title,title,<i>CostMAP</i>: an open-source software package for developing cost surfaces using a multi-scale search kernel,CostMAP: an open-source software package for developing cost surfaces using a multi-scale search kernel,normalization,markup,,2
+dblp-46459,crossref,crossref-30233,journal,journal,Management Science,Management Science,identity,,,2
+dblp-46468,crossref,crossref-49102,journal,journal,Management Science,Management Science,identity,,,2
+dblp-46468,dblp,dblp-46468,journal,journal,Manag. Sci.,Management Science,knowledge,journal_abbreviation,,1
+dblp-46468,crossref,crossref-49102,title,title,Relational Adaptation Under Reel Authority,Relational Adaptation Under Reel Authority,identity,,,2
+dblp-46468,dblp,dblp-46468,title,title,Relational Adaptation Under Reel Authority.,Relational Adaptation Under Reel Authority,normalization,trailing_period,,1
+dblp-46468,open_alex,open_alex-34763,title,title,Relational Adaptation Under Reel Authority,Relational Adaptation Under Reel Authority,identity,,,2
+dblp-47398,dblp,dblp-47398,authors,authors,"['Jaewook Kwak', 'Sangjin Lee 0001', 'Kibin Park', 'Jinwoo Jeong 0001', 'Yong Ho Song']","[""Jaewook Kwak"", ""Sangjin Lee"", ""Kibin Park"", ""Jinwoo Jeong"", ""Yong Ho Song""]",normalization,dblp_homonym_suffix,,1
+dblp-47398,dblp,dblp-47398,journal,journal,ACM Trans. Storage,ACM Transactions on Storage,knowledge,journal_abbreviation,,1
+dblp-47398,dblp,dblp-47398,title,title,Cosmos+ OpenSSD: Rapid Prototype for Flash Storage Systems.,Cosmos+ OpenSSD: Rapid Prototype for Flash Storage Systems,normalization,trailing_period,,1
+dblp-47668,dblp,dblp-47668,authors,authors,"['John Selberg', 'Mohammad Jafari 0001', 'Juanita Mathews', 'Manping Jia', 'Pattawong Pansodtee', 'Harika Dechiraju', 'Chunxiao Wu', 'Sergio Cordero', 'Alexander Flora', 'Nebyu Yonas', 'Sophia Jannetty', 'Miranda Diberardinis', 'Mircea Teodorescu', 'Michael Levin 0001', 'Marcella Gomez', 'Marco Rolandi']","[""John Selberg"", ""Mohammad Jafari"", ""Juanita Mathews"", ""Manping Jia"", ""Pattawong Pansodtee"", ""Harika Dechiraju"", ""Chunxiao Wu"", ""Sergio Cordero"", ""Alexander Flora"", ""Nebyu Yonas"", ""Sophia Jannetty"", ""Miranda Diberardinis"", ""Mircea Teodorescu"", ""Michael Levin"", ""Marcella Gomez"", ""Marco Rolandi""]",normalization,dblp_homonym_suffix,,1
+dblp-47668,dblp,dblp-47668,journal,journal,Adv. Intell. Syst.,Advanced Intelligent Systems,knowledge,journal_abbreviation,,1
+dblp-47668,dblp,dblp-47668,title,title,Machine Learning-Driven Bioelectronics for Closed-Loop Control of Cells.,Machine Learning-Driven Bioelectronics for Closed-Loop Control of Cells,normalization,trailing_period,,1
+dblp-47772,dblp,dblp-47772,authors,authors,"['Yu Zhang 0027', 'Xiaofei Liao', 'Lin Gu 0002', 'Hai Jin 0001', 'Kan Hu', 'Haikun Liu', 'Bingsheng He']","[""Yu Zhang"", ""Xiaofei Liao"", ""Lin Gu"", ""Hai Jin"", ""Kan Hu"", ""Haikun Liu"", ""Bingsheng He""]",normalization,dblp_homonym_suffix,,1
+dblp-47772,dblp,dblp-47772,journal,journal,ACM Trans. Archit. Code Optim.,ACM Transactions on Architecture and Code Optimization,knowledge,journal_abbreviation,,3
+dblp-47772,open_alex,open_alex-58043,journal,journal,ACM Transactions on Architecture and Code Optimization,ACM Transactions on Architecture and Code Optimization,identity,,,5
+dblp-47772,dblp,dblp-47772,title,title,AsynGraph: Maximizing Data Parallelism for Efficient Iterative Graph Processing on GPUs.,AsynGraph: Maximizing Data Parallelism for Efficient Iterative Graph Processing on GPUs,normalization,trailing_period,,1
+dblp-47775,dblp,dblp-47775,journal,journal,ACM Trans. Archit. Code Optim.,ACM Transactions on Architecture and Code Optimization,knowledge,journal_abbreviation,,3
+dblp-47775,open_alex,open_alex-15775,journal,journal,ACM Transactions on Architecture and Code Optimization,ACM Transactions on Architecture and Code Optimization,identity,,,5
+dblp-47775,dblp,dblp-47775,title,title,CODA: Enabling Co-location of Computation and Data for Multiple GPU Systems.,CODA: Enabling Co-location of Computation and Data for Multiple GPU Systems,normalization,trailing_period,,1
+dblp-47782,dblp,dblp-47782,authors,authors,"['Jie Zhao 0002', 'Albert Cohen 0001']","[""Jie Zhao"", ""Albert Cohen""]",normalization,dblp_homonym_suffix,,1
+dblp-47782,dblp,dblp-47782,journal,journal,ACM Trans. Archit. Code Optim.,ACM Transactions on Architecture and Code Optimization,knowledge,journal_abbreviation,,3
+dblp-47782,dblp,dblp-47782,title,title,Flextended Tiles: A Flexible Extension of Overlapped Tiles for Polyhedral Compilation.,Flextended Tiles: A Flexible Extension of Overlapped Tiles for Polyhedral Compilation,normalization,trailing_period,,1
+dblp-51055,crossref,crossref-22808,journal,journal,Bioinformatics,Bioinformatics,identity,,,10
+dblp-51055,dblp,dblp-51055,journal,journal,Bioinform.,Bioinformatics,knowledge,journal_abbreviation,,6
+dblp-51063,crossref,crossref-13478,journal,journal,Bioinformatics,Bioinformatics,identity,,,10
+dblp-51063,dblp,dblp-51063,journal,journal,Bioinform.,Bioinformatics,knowledge,journal_abbreviation,,6
+dblp-51063,crossref,crossref-13478,title,title,Combining count- and length-based <i>z</i>-scores leads to improved predictions in non-invasive prenatal testing,Combining count- and length-based z-scores leads to improved predictions in non-invasive prenatal testing,normalization,markup,,2
+dblp-51063,dblp,dblp-51063,title,title,Combining count- and length-based z-scores leads to improved predictions in non-invasive prenatal testing.,Combining count- and length-based z-scores leads to improved predictions in non-invasive prenatal testing,normalization,trailing_period,,1
+dblp-51063,open_alex,open_alex-16675,title,title,Combining count- and length-based <i>z</i>-scores leads to improved predictions in non-invasive prenatal testing,Combining count- and length-based z-scores leads to improved predictions in non-invasive prenatal testing,normalization,markup,,2
+dblp-51100,dblp,dblp-51100,journal,journal,Bioinform.,Bioinformatics,knowledge,journal_abbreviation,,6
+dblp-51100,open_alex,open_alex-42825,journal,journal,Bioinformatics,Bioinformatics,identity,,,10
+dblp-51100,crossref,crossref-36164,title,title,Soft windowing application to improve analysis of high-throughput phenotyping data,Soft windowing application to improve analysis of high-throughput phenotyping data,identity,,,2
+dblp-51100,dblp,dblp-51100,title,title,Soft windowing application to improve analysis of high-throughput phenotyping data.,Soft windowing application to improve analysis of high-throughput phenotyping data,normalization,trailing_period,,1
+dblp-51100,open_alex,open_alex-42825,title,title,Soft windowing application to improve analysis of high-throughput phenotyping data,Soft windowing application to improve analysis of high-throughput phenotyping data,identity,,,2
+dblp-51374,dblp,dblp-51374,journal,journal,Bioinform.,Bioinformatics,knowledge,journal_abbreviation,,6
+dblp-51374,crossref,crossref-21412,title,title,DeepAMR for predicting co-occurrent resistance of <i>Mycobacterium tuberculosis</i>,DeepAMR for predicting co-occurrent resistance of Mycobacterium tuberculosis,normalization,markup,,2
+dblp-51374,dblp,dblp-51374,title,title,DeepAMR for predicting co-occurrent resistance of Mycobacterium tuberculosis.,DeepAMR for predicting co-occurrent resistance of Mycobacterium tuberculosis,normalization,trailing_period,,1
+dblp-51374,open_alex,open_alex-26427,title,title,DeepAMR for predicting co-occurrent resistance of <i>Mycobacterium tuberculosis</i>,DeepAMR for predicting co-occurrent resistance of Mycobacterium tuberculosis,normalization,markup,,2
+dblp-51495,crossref,crossref-52023,first_page,first_page,i525,i525,normalization,float_noise,,2
+dblp-51495,open_alex,open_alex-45603,first_page,first_page,i525,i525,normalization,float_noise,,2
+dblp-51495,dblp,dblp-51495,journal,journal,Bioinform.,Bioinformatics,knowledge,journal_abbreviation,,6
+dblp-51495,crossref,crossref-52023,last_page,last_page,i533,i533,normalization,float_noise,,2
+dblp-51495,open_alex,open_alex-45603,last_page,last_page,i533,i533,normalization,float_noise,,2
+dblp-51558,dblp,dblp-51558,authors,authors,"['Chih-Hsu Lin', 'Daniel M. Konecki', 'Meng Liu 0027', 'Stephen J. Wilson', 'Huda Nassar', 'Angela D. Wilkins', 'David F. Gleich', 'Olivier Lichtarge']","[""Chih-Hsu Lin"", ""Daniel M. Konecki"", ""Meng Liu"", ""Stephen J. Wilson"", ""Huda Nassar"", ""Angela D. Wilkins"", ""David F. Gleich"", ""Olivier Lichtarge""]",normalization,dblp_homonym_suffix,,1
+dblp-51558,dblp,dblp-51558,title,title,Multimodal network diffusion predicts future disease-gene-chemical associations.,Multimodal network diffusion predicts future disease-gene-chemical associations,normalization,trailing_period,,1
+dblp-51832,dblp,dblp-51832,title,title,GOOGLE'S Duplex: Pretending to be human.,GOOGLE'S Duplex: Pretending to be human,normalization,trailing_period,,1
+dblp-51832,open_alex,open_alex-26802,title,title,GOOGLE'S Duplex: Pretending to be human,GOOGLE'S Duplex: Pretending to be human,identity,,,1
+dblp-52639,crossref,crossref-28464,journal,journal,Discrete Applied Mathematics,Discrete Applied Mathematics,identity,,,2
+dblp-52639,dblp,dblp-52639,journal,journal,Discret. Appl. Math.,Discrete Applied Mathematics,knowledge,journal_abbreviation,,1
+dblp-52639,crossref,crossref-28464,title,title,"On the global total <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" id=""mml11"" display=""inline"" overflow=""scroll"" altimg=""si11.gif""><mml:mi>k</mml:mi></mml:math>-domination number of graphs",On the global total k-domination number of graphs,normalization,markup,,2
+dblp-52639,dblp,dblp-52639,title,title,On the global total k-domination number of graphs.,On the global total k-domination number of graphs,normalization,trailing_period,,1
+dblp-52639,open_alex,open_alex-15507,title,title,"On the global total <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" id=""mml11"" display=""inline"" overflow=""scroll"" altimg=""si11.gif""><mml:mi>k</mml:mi></mml:math>-domination number of graphs",On the global total k-domination number of graphs,normalization,markup,,2
+dblp-52701,dblp,dblp-52701,authors,authors,"['Heng Zhang 0008', 'Paat Rusmevichientong', 'Huseyin Topaloglu']","[""Heng Zhang"", ""Paat Rusmevichientong"", ""Huseyin Topaloglu""]",normalization,dblp_homonym_suffix,,1
+dblp-52701,dblp,dblp-52701,journal,journal,Oper. Res.,Operations Research,knowledge,journal_abbreviation,,1
+dblp-52701,open_alex,open_alex-07713,journal,journal,Operations Research,Operations Research,identity,,,1
+dblp-53914,crossref,crossref-23817,journal,journal,Games and Culture,Games and Culture,identity,,,2
+dblp-53914,dblp,dblp-53914,journal,journal,Games Cult.,Games and Culture,knowledge,journal_abbreviation,,1
+dblp-53914,open_alex,open_alex-33744,journal,journal,Games and Culture,Games and Culture,identity,,,2
+dblp-53914,crossref,crossref-23817,title,title,Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in <i>Gone Home</i>,Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in Gone Home,normalization,markup,,2
+dblp-53914,open_alex,open_alex-33744,title,title,Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in <i>Gone Home</i>,Straight Paths Through Queer Walking Simulators: Wandering on Rails and Speedrunning in Gone Home,normalization,markup,,2
+dblp-54071,dblp,dblp-54071,authors,authors,['Richard Heeks 0001'],"[""Richard Heeks""]",normalization,dblp_homonym_suffix,,1
+dblp-54071,crossref,crossref-42659,journal,journal,THE ELECTRONIC JOURNAL OF INFORMATION SYSTEMS IN DEVELOPING COUNTRIES,The Electronic Journal of Information Systems in Developing Countries,normalization,title_case_small_words,,1
+dblp-54071,dblp,dblp-54071,journal,journal,Electron. J. Inf. Syst. Dev. Ctries.,The Electronic Journal of Information Systems in Developing Countries,knowledge,journal_abbreviation,,1
+dblp-54071,open_alex,open_alex-57537,journal,journal,The Electronic Journal of Information Systems in Developing Countries,The Electronic Journal of Information Systems in Developing Countries,identity,,,1
+dblp-54188,dblp,dblp-54188,title,title,An Ideology of IT Occupational Culture: The ASPIRE Values.,An Ideology of IT Occupational Culture: The ASPIRE Values,normalization,trailing_period,,1
+dblp-54251,dblp,dblp-54251,authors,authors,"['Thibault Tricard', 'Frédéric Claux', 'Sylvain Lefebvre 0001']","[""Thibault Tricard"", ""Frédéric Claux"", ""Sylvain Lefebvre""]",normalization,dblp_homonym_suffix,,1
+dblp-54251,crossref,crossref-30025,journal,journal,Computer Graphics Forum,Computer Graphics Forum,identity,,,2
+dblp-54251,dblp,dblp-54251,journal,journal,Comput. Graph. Forum,Computer Graphics Forum,knowledge,journal_abbreviation,,1
+dblp-54251,open_alex,open_alex-39006,journal,journal,Computer Graphics Forum,Computer Graphics Forum,identity,,,2
+dblp-54251,crossref,crossref-30025,title,title,Ribbed Support Vaults for 3D Printing of Hollowed Objects,Ribbed Support Vaults for 3D Printing of Hollowed Objects,identity,,,2
+dblp-54251,dblp,dblp-54251,title,title,Ribbed Support Vaults for 3D Printing of Hollowed Objects.,Ribbed Support Vaults for 3D Printing of Hollowed Objects,normalization,trailing_period,,1
+dblp-54251,open_alex,open_alex-39006,title,title,Ribbed Support Vaults for 3D Printing of Hollowed Objects,Ribbed Support Vaults for 3D Printing of Hollowed Objects,identity,,,2
+dblp-56463,dblp,dblp-56463,journal,journal,Proc. ACM Hum. Comput. Interact.,Proceedings of the ACM on Human-Computer Interaction,knowledge,journal_abbreviation,,2
+dblp-56463,dblp,dblp-56463,title,title,Life-Tags: A Smartglasses-based System for Recording and Abstracting Life with Tag Clouds.,Life-Tags: A Smartglasses-based System for Recording and Abstracting Life with Tag Clouds,normalization,trailing_period,,1
+dblp-56559,crossref,crossref-38137,journal,journal,Proceedings of the ACM on Human-Computer Interaction,Proceedings of the ACM on Human-Computer Interaction,identity,,,5
+dblp-56559,dblp,dblp-56559,journal,journal,Proc. ACM Hum. Comput. Interact.,Proceedings of the ACM on Human-Computer Interaction,knowledge,journal_abbreviation,,2
+dblp-56559,dblp,dblp-56559,title,title,Safe Enough to Share: Setting the Dementia Agenda Online.,Safe Enough to Share: Setting the Dementia Agenda Online,normalization,trailing_period,,1
+dblp-56667,dblp,dblp-56667,title,title,A Taxonomy of Team-Assembly Systems: Understanding How People Use Technologies to Form Teams.,A Taxonomy of Team-Assembly Systems: Understanding How People Use Technologies to Form Teams,normalization,trailing_period,,1
+dblp-56975,dblp,dblp-56975,authors,authors,"['Mingyue Cheng', 'Kang Ning 0001']","[""Mingyue Cheng"", ""Kang Ning""]",normalization,dblp_homonym_suffix,,1
+dblp-56975,crossref,crossref-21987,journal,journal,"Genomics, Proteomics &amp; Bioinformatics","Genomics, Proteomics & Bioinformatics",normalization,markup,,2
+dblp-56975,dblp,dblp-56975,journal,journal,Genom. Proteom. Bioinform.,"Genomics, Proteomics & Bioinformatics",knowledge,journal_abbreviation,,3
+dblp-56975,dblp,dblp-56975,title,title,Stereotypes About Enterotype: the Old and New Ideas.,Stereotypes About Enterotype: the Old and New Ideas,normalization,trailing_period,,1
+dblp-56979,dblp,dblp-56979,authors,authors,"['Guan Ning Lin', 'Sijia Guo', 'Xian Tan', 'Weidi Wang', 'Wei Qian', 'Weichen Song', 'Jingru Wang', 'Shunying Yu', 'Zhen Wang 0015', 'Donghong Cui', 'Han Wang 0028']","[""Guan Ning Lin"", ""Sijia Guo"", ""Xian Tan"", ""Weidi Wang"", ""Wei Qian"", ""Weichen Song"", ""Jingru Wang"", ""Shunying Yu"", ""Zhen Wang"", ""Donghong Cui"", ""Han Wang""]",normalization,dblp_homonym_suffix,,1
+dblp-56979,dblp,dblp-56979,journal,journal,Genom. Proteom. Bioinform.,"Genomics, Proteomics & Bioinformatics",knowledge,journal_abbreviation,,3
+dblp-56979,crossref,crossref-32275,title,title,PsyMuKB: An Integrative <i>De Novo</i> Variant Knowledge Base for Developmental Disorders,PsyMuKB: An Integrative De Novo Variant Knowledge Base for Developmental Disorders,normalization,markup,,2
+dblp-56979,open_alex,open_alex-39394,title,title,PsyMuKB: An Integrative <i>De Novo</i> Variant Knowledge Base for Developmental Disorders,PsyMuKB: An Integrative De Novo Variant Knowledge Base for Developmental Disorders,normalization,markup,,2
+dblp-56980,crossref,crossref-39720,journal,journal,"Genomics, Proteomics &amp; Bioinformatics","Genomics, Proteomics & Bioinformatics",normalization,markup,,2
+dblp-56980,dblp,dblp-56980,journal,journal,Genom. Proteom. Bioinform.,"Genomics, Proteomics & Bioinformatics",knowledge,journal_abbreviation,,3
+dblp-57216,crossref,crossref-45306,journal,journal,Information Sciences,Information Sciences,identity,,,4
+dblp-57216,dblp,dblp-57216,journal,journal,Inf. Sci.,Information Sciences,knowledge,journal_abbreviation,,2
+dblp-57216,open_alex,open_alex-40050,journal,journal,Information Sciences,Information Sciences,identity,,,4
+dblp-57635,dblp,dblp-57635,authors,authors,"['Guangquan Xu', 'Yao Zhang 0019', 'Arun Kumar Sangaiah', 'Xiaohong Li 0001', 'Aniello Castiglione', 'Xi Zheng 0001']","[""Guangquan Xu"", ""Yao Zhang"", ""Arun Kumar Sangaiah"", ""Xiaohong Li"", ""Aniello Castiglione"", ""Xi Zheng""]",normalization,dblp_homonym_suffix,,1
+dblp-57635,crossref,crossref-21715,journal,journal,Information Sciences,Information Sciences,identity,,,4
+dblp-57635,dblp,dblp-57635,journal,journal,Inf. Sci.,Information Sciences,knowledge,journal_abbreviation,,2
+dblp-57635,open_alex,open_alex-05477,journal,journal,Information Sciences,Information Sciences,identity,,,4
+dblp-58290,crossref,crossref-52341,journal,journal,Big Data &amp; Society,Big Data & Society,normalization,markup,,1
+dblp-58290,dblp,dblp-58290,journal,journal,Big Data Soc.,Big Data & Society,knowledge,journal_abbreviation,,1
+dblp-59736,dblp,dblp-59736,authors,authors,"['Fernando Rubio 0001', 'Ismael Rodríguez 0001']","[""Fernando Rubio"", ""Ismael Rodríguez""]",normalization,dblp_homonym_suffix,,1
+dblp-59736,open_alex,open_alex-37470,authors,authors,"['Fernando Rubio', 'Ismael Rodrı́guez']","[""Fernando Rubio"", ""Ismael Rodríguez""]",normalization,dotless_i_repair,,1
+dblp-59736,dblp,dblp-59736,journal,journal,Complex.,Complexity,knowledge,journal_abbreviation,,1
+dblp-59736,open_alex,open_alex-37470,journal,journal,Complexity,Complexity,identity,,,1
+dblp-59736,dblp,dblp-59736,title,title,Water-Based Metaheuristics: How Water Dynamics Can Help Us to Solve NP-Hard Problems.,Water-Based Metaheuristics: How Water Dynamics Can Help Us to Solve NP-Hard Problems,normalization,trailing_period,,1

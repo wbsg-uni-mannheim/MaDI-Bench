@@ -5,9 +5,7 @@ products_1,product_name,products,title,1.0
 products_1,product_description,products,description,1.0
 products_1,list_price,products,price,1.0
 products_1,currency_code,products,priceCurrency,1.0
-products_1,cluster_id,products,cluster_id,1.0
 products_1,product_url,products,url,1.0
-products_1,name_and_description,products,title_description,1.0
 products_1,model_name,products,model,1.0
 products_1,manufacturer_part_number,products,model_number,1.0
 products_1,category,products,product_type,1.0
@@ -32,9 +30,7 @@ products_2,name,products,title,1.0
 products_2,descriptionText,products,description,1.0
 products_2,priceAmount,products,price,1.0
 products_2,currency,products,priceCurrency,1.0
-products_2,cluster_id,products,cluster_id,1.0
 products_2,productUrl,products,url,1.0
-products_2,titleAndDescription,products,title_description,1.0
 products_2,modelName,products,model,1.0
 products_2,mpn,products,model_number,1.0
 products_2,productCategory,products,product_type,1.0
@@ -59,9 +55,7 @@ products_3,ProductTitle,products,title,1.0
 products_3,Details,products,description,1.0
 products_3,Price,products,price,1.0
 products_3,Currency,products,priceCurrency,1.0
-products_3,cluster_id,products,cluster_id,1.0
 products_3,Link,products,url,1.0
-products_3,TitleDetails,products,title_description,1.0
 products_3,Model,products,model,1.0
 products_3,PartNo,products,model_number,1.0
 products_3,Type,products,product_type,1.0
@@ -86,9 +80,7 @@ products_4,name,products,title,1.0
 products_4,desc,products,description,1.0
 products_4,amt,products,price,1.0
 products_4,cur,products,priceCurrency,1.0
-products_4,cluster_id,products,cluster_id,1.0
 products_4,link,products,url,1.0
-products_4,name_desc,products,title_description,1.0
 products_4,mdl,products,model,1.0
 products_4,pn,products,model_number,1.0
 products_4,cat,products,product_type,1.0

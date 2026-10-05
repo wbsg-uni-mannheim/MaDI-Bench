@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R10-G: retrain the *variant* SC-Block checkpoint for one (domain, level).
+"""Retrain the *variant* SC-Block checkpoint for one (domain, level).
 
 Loads the K8-resolved *variant* (perturbed) source records and the
 K2-regenerated ``<pair>_{train,val}_corner_filled.csv`` splits, then
@@ -10,8 +10,8 @@ is exactly the path the committee runner reads:
 ``cache/sc_block_checkpoints/<domain>/variant_<level>/best``
 (see :func:`committee_em._resolve_variant_checkpoint_path`).
 
-Phase 1 (R10-G) is code-only: this script + a smoke test. The actual
-training runs per-domain in phase 2, driven by
+The per-domain training runs are
+driven by
 ``scripts/retrain_variant_cascade.py``.
 """
 
@@ -166,7 +166,7 @@ def retrain_variant_sc_block(
     if not em_train_by_pair:
         raise RuntimeError(
             f"No corner_filled train splits for {domain}/{level}; did "
-            "generate_variant + package_variant (R10-F) land the "
+            "generate_variant + package_variant land the "
             "*_train_corner_filled.csv files?"
         )
 

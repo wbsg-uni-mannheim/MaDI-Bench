@@ -6,8 +6,7 @@
 
 domain: games
 
-# All sources collapse to the canonical "id" column post-loader-rename
-# (per K1/K5/K6/K10 sign-offs in plan_s1_scale.md).
+# All sources collapse to the canonical "id" column post-loader-rename.
 id_columns:
   dbpedia: id
   metacritic: id

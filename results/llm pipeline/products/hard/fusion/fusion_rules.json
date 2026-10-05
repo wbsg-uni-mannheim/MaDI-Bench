@@ -10,11 +10,7 @@
     },
     "chipset_name": {
       "kwargs": {},
-      "resolver": "voting"
-    },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
     },
     "color": {
       "kwargs": {},
@@ -22,7 +18,7 @@
     },
     "description": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "longest_string"
     },
     "form_factor": {
       "kwargs": {},
@@ -46,7 +42,7 @@
     },
     "model": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
     },
     "model_number": {
       "kwargs": {},
@@ -78,17 +74,11 @@
     },
     "title": {
       "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "longest_string"
     },
     "url": {
-      "kwargs": {
-        "separator": "|"
-      },
-      "resolver": "union"
+      "kwargs": {},
+      "resolver": "most_complete"
     },
     "vram_gb": {
       "kwargs": {},

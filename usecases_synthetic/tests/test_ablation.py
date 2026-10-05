@@ -1,4 +1,4 @@
-"""Tests for the M9 per-knob ablation runner + analyzer.
+"""Tests for the per-knob ablation runner + analyzer.
 
 Covers:
 

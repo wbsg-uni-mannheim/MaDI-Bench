@@ -7,7 +7,7 @@
     "metric": "f1",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": null,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 1.0
   },
@@ -19,7 +19,7 @@
     "metric": "precision",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": 18,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 1.0
   },
@@ -31,7 +31,7 @@
     "metric": "recall",
     "note": "Official schema-matching gold evaluation from manifest schema_gold.",
     "numerator": 18,
-    "source_file": "/Users/aaronsteiner/Documents/GitHub/PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
+    "source_file": "PyDI/usecases/companies-augmented/medium/input/schemamatching/sm_mapping.csv",
     "split": "official_gold",
     "value": 1.0
   },

@@ -1,0 +1,33 @@
+{
+  "base_case": "papers",
+  "case": "papers-augmented-hard",
+  "data_dir": "../../use cases/papers/hard/input/data",
+  "entitymatching_dir": "../../use cases/papers/hard/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "excluded_columns": [
+    "doi"
+  ],
+  "fusion_alignment_columns": [
+    "doi"
+  ],
+  "fusion_dir": "../../use cases/papers/hard/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/papers/hard",
+  "pairs": [
+    {
+      "left": "dblp",
+      "right": "crossref",
+      "test_set": "../../use cases/papers/hard/input/entitymatching/dblp_2_crossref_test_corner_filled.csv"
+    },
+    {
+      "left": "dblp",
+      "right": "open_alex",
+      "test_set": "../../use cases/papers/hard/input/entitymatching/dblp_2_open_alex_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/papers/hard/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/papers/hard/input/schemamatching/sm_mapping.csv",
+  "variant": "hard"
+}

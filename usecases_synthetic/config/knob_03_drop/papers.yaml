@@ -1,7 +1,6 @@
 # Knob 03 — Per-source Attribute Drop Rate — Papers
 #
-# Seeded from music 2026-06-02; rate tables are UNTUNED starting points,
-# to be validated/tuned before a real papers run.
+# Seeded from music; rate tables are UNTUNED for papers.
 #
 # Papers data is already target-shaped after load: all three sources (dblp,
 # crossref, open_alex) expose the SAME 13 canonical value columns, so every
@@ -82,12 +81,10 @@ stretch_factor: 1.5
 single_source_survivor_cap_hard: 0.05
 per_cell_ceiling_delta: 0.10
 
-# No per-source attribute overrides yet: papers has no measured per-attribute
-# baseline coverage (no pool/baseline-audit artifacts built for papers), so we
-# cannot identify already-sparse attributes the way music tightens discogs /
-# lastfm duration ceilings. Add per_source_attribute_overrides here once a
-# papers baseline-coverage audit exists, to keep stretch from demanding
-# negative headroom on sparse attributes.
+# No per-source attribute overrides for papers: unlike music (discogs /
+# lastfm duration ceilings), no already-sparse attribute gets a tightened
+# ceiling. Add per_source_attribute_overrides here to keep stretch from
+# demanding negative headroom on sparse attributes.
 # per_source_attribute_overrides:
 #   <source>:
 #     <attribute>: <ceiling>

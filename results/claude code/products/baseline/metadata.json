@@ -1,0 +1,379 @@
+{
+ "task_id": "products_base",
+ "system": "claudecode",
+ "claude_code_version": "2.1.280 (Claude Code)",
+ "session_id": "9f77961f-5ee4-431d-8c95-b99eb91e64c9",
+ "model": "claude-opus-5-5",
+ "effort": null,
+ "provider": "anthropic",
+ "auth_mode": "subscription",
+ "isolation": "bwrap",
+ "gpu": false,
+ "kit": "full",
+ "labeling_enabled": false,
+ "ditto_training_enabled": false,
+ "denied_tools": [
+  "WebSearch",
+  "WebFetch"
+ ],
+ "pydi_available": false,
+ "pydi_docs": false,
+ "exit_reason": "completed",
+ "returncode": 0,
+ "run_dir": "<p4-run:products_base>",
+ "workspace_build": {
+  "sanitizer": {
+   "task_id": "products_base",
+   "dest": "<p4-run:products_base>/workspace/task",
+   "manifest_tree_sha256": "cf5d172ee4dd7dc973777afffa5e470a201a20345e56664ff1973fa10aab52a5",
+   "n_copied": 12,
+   "n_hidden_withheld": 145,
+   "copied": [
+    {
+     "path": "input/data/dataset_1.json",
+     "sha256": "4eba8972eefcc11326949054f359b42545f67754711f47568c519951dea142c3",
+     "size": 1039570,
+     "transform": "scrub-cluster-id-json+permute-d1"
+    },
+    {
+     "path": "input/data/dataset_1_metadata.json",
+     "sha256": "5487fa49475fe66496419d975942d9e95e171a928fe2fd77a27929f1f40b95af",
+     "size": 6917,
+     "transform": "scrub-cluster-id-meta"
+    },
+    {
+     "path": "input/data/dataset_2.json",
+     "sha256": "2913723155dc579895efbcbefc6a97f1464900d9cd608163e394c467822aeb20",
+     "size": 879125,
+     "transform": "scrub-cluster-id-json+permute-d2"
+    },
+    {
+     "path": "input/data/dataset_2_metadata.json",
+     "sha256": "840c07418dcdcbae808459d4ea86f528f3199f999426ddd0270125df18d06180",
+     "size": 6812,
+     "transform": "scrub-cluster-id-meta"
+    },
+    {
+     "path": "input/data/dataset_3.json",
+     "sha256": "f8e98de7045b492ed869c1c051561331e5df2c70fc76200a4dd57fb903902a75",
+     "size": 754472,
+     "transform": "scrub-cluster-id-json"
+    },
+    {
+     "path": "input/data/dataset_3_metadata.json",
+     "sha256": "73742346ddb14ea1861ca0c4e510facfde8adee66db0305d749e935d365530c6",
+     "size": 6768,
+     "transform": "scrub-cluster-id-meta"
+    },
+    {
+     "path": "input/data/dataset_4.json",
+     "sha256": "be007d13284c4727f21b6855ce3a6160a7a17f746ee27e430c85454a78a9ddc2",
+     "size": 542188,
+     "transform": "scrub-cluster-id-json"
+    },
+    {
+     "path": "input/data/dataset_4_metadata.json",
+     "sha256": "f2e9658e652b32d3e5620b769bf24eefe2bb5311a5bc26d9956a195ad615de7f",
+     "size": 6694,
+     "transform": "scrub-cluster-id-meta"
+    },
+    {
+     "path": "input/schemamatching/GPU_Memory_Taxonomy.csv",
+     "sha256": "258bf6a1a86aa0f0ef732734d3853d3184ebccd8b2ebef51047479a3bad84b8f",
+     "size": 364
+    },
+    {
+     "path": "input/schemamatching/Product_Type_Taxonomy.csv",
+     "sha256": "d7d7b2b6c55408850a543b4b497e88ea8e5345fd90cca03223356a08b1af2d14",
+     "size": 624
+    },
+    {
+     "path": "input/schemamatching/Storage_Interface_Taxonomy.csv",
+     "sha256": "9ec7830f1382a608cca3abe93600dd0d85421e551a4a59c045110e0b12dd73ef",
+     "size": 677
+    },
+    {
+     "path": "input/schemamatching/target_schema.json",
+     "sha256": "88e30ec050fd7871ffc6214c74b1b2cd43d4d8c2c72e7ab88b3b344683cb6d5b",
+     "size": 6316
+    }
+   ]
+  },
+  "brief_chars": 2307,
+  "entity_definition_version": 1,
+  "entity_definition_sha256": "193b8e848586ef1b6d4ce86a21f566a2363871206206aa2958d055d658daac28",
+  "n_skills": 7,
+  "kit": "minimal",
+  "n_scripts": 1,
+  "pydi_docs": null,
+  "advice": false,
+  "provided_validation": "self_made",
+  "provided_validation_files": {},
+  "provided_validation_health": null,
+  "official_fusion_validation": null,
+  "profile": "claudecode_label_free",
+  "labeling_enabled": false,
+  "ditto_training_enabled": false,
+  "skills_variant": "label_free",
+  "pydi_available": false
+ },
+ "resume_archive": null,
+ "openai_key_exposed": false,
+ "archive_errors": [],
+ "agent_openai": {
+  "access": "embeddings",
+  "route": "proxy"
+ },
+ "embeddings_proxy": {
+  "forwarded": 0,
+  "pinned": 0,
+  "errors": 0,
+  "cache_hits": 0,
+  "client_gone": 0,
+  "refused": 0,
+  "prompt_tokens": 0,
+  "total_tokens": 0,
+  "spend_usd": 0.0,
+  "unpriced_calls": 0,
+  "unpriced_models": [],
+  "allow": [
+   "embeddings"
+  ],
+  "refused_paths": [],
+  "by_kind": {},
+  "route": "proxy"
+ },
+ "stream": {
+  "n_events": 698,
+  "n_tool_calls": 66,
+  "tools": {
+   "Bash": 60,
+   "Write": 6
+  },
+  "result": {
+   "subtype": "success",
+   "is_error": false,
+   "num_turns": 67,
+   "duration_ms": 1055201,
+   "total_cost_usd": 5.9526226,
+   "session_id": "9f77961f-5ee4-431d-8c95-b99eb91e64c9",
+   "usage": {
+    "input_tokens": 132,
+    "cache_creation_input_tokens": 255082,
+    "cache_read_input_tokens": 9905093,
+    "output_tokens": 96521,
+    "output_tokens_details": {
+     "thinking_tokens": 32597
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 255082,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 1184,
+      "cache_read_input_tokens": 264459,
+      "cache_creation_input_tokens": 612,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 612
+      },
+      "type": "message",
+      "model": null
+     }
+    ],
+    "speed": "standard"
+   },
+   "modelUsage": {
+    "claude-opus-5-5": {
+     "inputTokens": 132,
+     "outputTokens": 96521,
+     "cacheReadInputTokens": 9905093,
+     "cacheCreationInputTokens": 255082,
+     "webSearchRequests": 0,
+     "costUSD": 5.9526226,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 32597,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   }
+  }
+ },
+ "is_error": false,
+ "gold_timeline": {
+  "stage_revisions": {
+   "schema_matching": 1,
+   "entity_matching": 1,
+   "blocking": 1,
+   "fusion": 1,
+   "e2e_panel": 1
+  },
+  "last_headline_per_stage": {
+   "schema_matching": "F1=1.000",
+   "entity_matching": "F1(pair-mean)=0.885 (pooled=0.885)",
+   "blocking": "PC=1.000",
+   "fusion": "acc[strict]=0.828 (all gold) | 0.828 on 100/100 evaluated",
+   "e2e_panel": "GR=0.717"
+  },
+  "n_revisions_mirrored": 0,
+  "n_revision_names": 0,
+  "n_revisions_unmirrored_budget": 0,
+  "n_blobs": 0,
+  "blob_bytes": 0,
+  "mirror_bytes": 0,
+  "mirror_byte_budget": 1500000000,
+  "mirror_errors": []
+ },
+ "submission": {
+  "n_files": 6,
+  "files": [
+   "candidates.csv",
+   "correspondences.csv",
+   "fused.csv",
+   "membership.csv",
+   "report.md",
+   "sm_mapping.csv"
+  ]
+ },
+ "self_check": {
+  "ok": true,
+  "problems": [],
+  "warnings": []
+ },
+ "leak_scan": {
+  "task_mirror_ok": true,
+  "outputs_ok": true,
+  "violations": []
+ },
+ "n_turns": 67,
+ "cost_usd_cli": 5.9526226,
+ "pricing": null,
+ "cli_budget_usd": 100.0,
+ "budget_scale": 1.0,
+ "cost_usd_real": null,
+ "cost_usd": 5.9526226,
+ "broker_summaries": {},
+ "cost_accounting": {
+  "auth_mode": "subscription",
+  "billing_basis": "subscription",
+  "billed_solver_usd": null,
+  "billing_note": "Not an invoice. Subscription allowance is not a dollar balance. Zero extra solver charges requires included usage and usage credits disabled. No API-key fallback is configured; auxiliary APIs are billed separately.",
+  "cli_api_equivalent_usd": 5.9526226,
+  "standard_api_equivalent_usd_range": [
+   5.952623,
+   5.952623
+  ],
+  "estimate_note": "Range reflects unknown cache-write TTL; no fast/residency surcharges included.",
+  "usage": {
+   "input_tokens": 132,
+   "cache_creation_input_tokens": 255082,
+   "cache_read_input_tokens": 9905093,
+   "output_tokens": 96521,
+   "output_tokens_details": {
+    "thinking_tokens": 32597
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 255082,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 1184,
+     "cache_read_input_tokens": 264459,
+     "cache_creation_input_tokens": 612,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 612
+     },
+     "type": "message",
+     "model": null
+    }
+   ],
+   "speed": "standard"
+  },
+  "models": {
+   "claude-opus-5-5": {
+    "usage": {
+     "inputTokens": 132,
+     "outputTokens": 96521,
+     "cacheReadInputTokens": 9905093,
+     "cacheCreationInputTokens": 255082,
+     "webSearchRequests": 0,
+     "costUSD": 5.9526226,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 32597,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    },
+    "cli_estimate_usd": 5.9526226,
+    "standard_api_equivalent_usd_range": [
+     5.952623,
+     5.952623
+    ]
+   }
+  },
+  "pricing_snapshot": {
+   "date": "2026-09-23",
+   "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "basis": "standard global API list prices, USD per million tokens",
+   "models": {
+    "claude-opus-5-5": [
+     4.0,
+     20.0,
+     0.2,
+     5.0,
+     8.0
+    ],
+    "claude-sonnet-5": [
+     2.0,
+     10.0,
+     0.2,
+     2.5,
+     4.0
+    ],
+    "claude-haiku-4-5-20251001": [
+     1.0,
+     5.0,
+     0.1,
+     1.25,
+     2.0
+    ]
+   },
+   "columns": [
+    "input",
+    "output",
+    "cache_read",
+    "cache_write_5m",
+    "cache_write_1h"
+   ]
+  },
+  "auxiliary_api_estimate_usd": 0.0,
+  "auxiliary_breakdown": {
+   "brokers": {},
+   "embeddings_proxy": 0.0
+  },
+  "complete": true
+ },
+ "segment_wall_seconds": 1077.5,
+ "wall_seconds": 1077.5,
+ "submission_ready": true
+}

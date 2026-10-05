@@ -231,7 +231,7 @@ class PairDataset(Dataset):
         to classify with CLS attention masked out. Inference under HF
         defaults (which pad correctly with id=1 and give CLS
         attention=1) produced a different attention pattern → score
-        distribution shifted. See plan_revision.md R7 + R6-4.
+        distribution shifted.
 
         Bound-instance method (not @staticmethod) so it can read
         ``self.tokenizer.pad_token_id``. Callers pass ``dataset.pad``

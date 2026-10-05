@@ -23,8 +23,8 @@ to ``dblp`` and ``id2`` to the right source.
 Field projection: the wide committee scope
 (``committee_ditto_fields("papers")`` == ``DOMAIN_TEXT_COLS["papers"]``
 == ``em_matching_committee_papers.yaml`` ``ditto_plm.fields`` ==
-``[title, authors, journal, publication_year, doi, type, volume,
-issue]``).
+``[title, authors, journal, publication_year, type, volume, issue,
+first_page, last_page, referenced_works_count, cited_by_count]``).
 
 Leak removal: test pairs dropped from train and val (frozenset key on
 (id1, id2)). Intra-train duplicates deduped.
@@ -52,7 +52,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR
+from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR, task_dir
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
     build_ditto_pair_records_committee_scope,
@@ -62,7 +62,7 @@ from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
 )
 
 DOMAIN = "papers"
-PYDI_EM_GOLD_DIR = USECASES_DIR / DOMAIN / "input" / "entitymatching"
+PYDI_EM_GOLD_DIR = task_dir(DOMAIN, root=USECASES_DIR) / "input" / "entitymatching"
 OUTPUT_DIR = SYNTHETIC_DIR / "output" / "ditto" / DOMAIN
 
 

@@ -59,6 +59,13 @@ from usecases_synthetic.lib.domain_config import (  # noqa: E402
     SourceSpec,
     USECASES_DIR,
     load_domain_config,
+    task_dir,
+)
+from usecases_synthetic.lib.fusion_gold_keys import (  # noqa: E402
+    read_json_records,
+    sniff_fusion_format,
+    source_id_members,
+    xml_record_members,
 )
 from usecases_synthetic.lib.loaders import read_em_gold_csv  # noqa: E402
 
@@ -127,34 +134,37 @@ def _collect_fusion_ids(
     fusion_dir: Path,
     source_prefixes: dict[str, str],
 ) -> dict[str, set[str]]:
-    """Scan fusion gold XMLs and bucket ids by source.
+    """Scan fusion gold files and bucket ids by source.
 
-    Both the top-level ``<id>`` text and every ``provenance`` attribute
-    (split on ``+``) contribute.
+    XML records contribute the top-level ``<id>`` text, the ``<source_ids>``
+    members (records keyed by member list, e.g. the products task
+    variants) and every ``provenance`` attribute (split on ``+``). JSON gold
+    (papers ``fusion_*.jsonl``, or JSON lines under an ``*.xml`` name)
+    contributes each record's ``id`` and ``source_ids`` members.
     """
     protected: dict[str, set[str]] = {name: set() for name in source_prefixes}
     if not fusion_dir.exists():
         return protected
-    for xml_path in sorted(fusion_dir.glob("*.xml")):
-        tree = ET.parse(xml_path)
+
+    def _add(raw_id: str) -> None:
+        source = _classify_id(raw_id, source_prefixes)
+        if source is not None:
+            protected[source].add(raw_id)
+
+    paths = sorted({*fusion_dir.glob("*.xml"), *fusion_dir.glob("*.jsonl")})
+    for gold_path in paths:
+        if sniff_fusion_format(gold_path) in ("jsonl", "json"):
+            for record in read_json_records(gold_path):
+                if record.get("id") is not None and str(record["id"]).strip():
+                    _add(str(record["id"]).strip())
+                for member in source_id_members(record.get("source_ids")):
+                    _add(member)
+            continue
+        tree = ET.parse(gold_path)
         root = tree.getroot()
         for entity in root:
-            id_el = entity.find("id")
-            if id_el is not None and id_el.text:
-                source = _classify_id(id_el.text.strip(), source_prefixes)
-                if source is not None:
-                    protected[source].add(id_el.text.strip())
-            for child in entity.iter():
-                prov = child.attrib.get("provenance")
-                if not prov:
-                    continue
-                for token in prov.split("+"):
-                    token = token.strip()
-                    if not token:
-                        continue
-                    source = _classify_id(token, source_prefixes)
-                    if source is not None:
-                        protected[source].add(token)
+            for member in xml_record_members(entity):
+                _add(member)
     return protected
 
 
@@ -193,7 +203,7 @@ def _detect_csv_id_column(header: list[str], *, override: str | None = None) -> 
     When ``override`` is supplied (typically from a domain YAML
     ``id_column`` field), use it directly after verifying it is in the
     header. Otherwise fall back to the legacy candidate list, which
-    covers the pre-2026-05-04 sources whose id columns followed a
+    covers the earlier sources whose id columns followed a
     handful of conventional names.
     """
     if override is not None:
@@ -526,8 +536,8 @@ def downsample_domain(
     config = load_domain_config(source_domain)
     source_prefixes = {s.name: s.id_prefix for s in config.sources}
 
-    source_in = usecases_dir / source_domain / "input"
-    target_in = usecases_dir / target_domain / "input"
+    source_in = task_dir(source_domain, root=usecases_dir) / "input"
+    target_in = task_dir(target_domain, root=usecases_dir) / "input"
 
     em_gold = _collect_em_ids(source_in / "entitymatching", source_prefixes)
     fusion_gold = _collect_fusion_ids(source_in / "fusion", source_prefixes)

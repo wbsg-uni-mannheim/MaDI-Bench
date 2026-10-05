@@ -6,7 +6,6 @@ description,description,desc,dsc,desc
 price,price,prc,amt,prc
 priceCurrency,priceCurrency,cur,ccy,cur
 url,product_url,productUrl,Link,link
-title_description,title_description,t_desc,tdsc,t_desc
 model,model,mdl,m,mdl
 model_number,model_number,mdl_no,mno,mdl_no
 product_type,product_type,prd_typ,ptyp,prd_typ
@@ -25,4 +24,4 @@ storage_connection_type,storage_connection_type,stor_conn,sc,stor_conn
 memory_type,memory_type,mem_t,mt,mem_t
 color,color,clr,col,clr
 form_factor,form_factor,form_f,ff,form_f
-Mapped,26/26,26/26,26/26,26/26
+Mapped,25/25,25/25,25/25,25/25

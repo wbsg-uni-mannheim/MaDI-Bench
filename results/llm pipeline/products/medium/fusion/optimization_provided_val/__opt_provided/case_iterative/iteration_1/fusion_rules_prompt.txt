@@ -29,10 +29,6 @@ Starting point (heuristic plan you can override):
     "kwargs": {},
     "resolver": "longest_string"
   },
-  "cluster_id": {
-    "kwargs": {},
-    "resolver": "median"
-  },
   "color": {
     "kwargs": {},
     "resolver": "most_complete"
@@ -48,16 +44,20 @@ Starting point (heuristic plan you can override):
     "resolver": "most_complete"
   },
   "height_mm": {
-    "kwargs": {},
-    "resolver": "median"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "interface_type": {
     "kwargs": {},
     "resolver": "most_complete"
   },
   "length_mm": {
-    "kwargs": {},
-    "resolver": "median"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "memory_type": {
     "kwargs": {},
@@ -72,8 +72,10 @@ Starting point (heuristic plan you can override):
     "resolver": "most_complete"
   },
   "price": {
-    "kwargs": {},
-    "resolver": "median"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "priceCurrency": {
     "kwargs": {},
@@ -84,103 +86,107 @@ Starting point (heuristic plan you can override):
     "resolver": "most_complete"
   },
   "read_speed_mb_s": {
-    "kwargs": {},
-    "resolver": "most_complete"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "storage_connection_type": {
     "kwargs": {},
     "resolver": "most_complete"
   },
   "storage_gb": {
-    "kwargs": {},
-    "resolver": "most_complete"
-  },
-  "title": {
-    "kwargs": {},
-    "resolver": "longest_string"
-  },
-  "title_description": {
     "kwargs": {
       "separator": ","
     },
     "resolver": "union"
+  },
+  "title": {
+    "kwargs": {},
+    "resolver": "longest_string"
   },
   "url": {
     "kwargs": {},
     "resolver": "most_complete"
   },
   "vram_gb": {
-    "kwargs": {},
-    "resolver": "most_complete"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "weight_g": {
-    "kwargs": {},
-    "resolver": "median"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "width_mm": {
-    "kwargs": {},
-    "resolver": "median"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   },
   "write_speed_mb_s": {
-    "kwargs": {},
-    "resolver": "most_complete"
+    "kwargs": {
+      "separator": ","
+    },
+    "resolver": "union"
   }
 }
 
 Attribute diagnostics:
-              attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          sample_values
-                  brand          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [Gigabyte, Corsair, Gigabyte, Asus, Asus, GB, Samsung, Western Digital]
-               bus_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [PCI Express x16, PCI Express x16, PCI Express x8, SATA, PCI Express x4, USB 3.0, PCI Express x16, USB 3.0]
-           chipset_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [GeForce GTX 1660 Super, GeForce GTX 1660 Ti, GeForce RTX 2070, GeForce GT 1030, GeForce RTX 3080, GeForce GT 710, GeForce GT 710, GeForce GTX 1660 Ti]
-             cluster_id          False               None             False              True          False             True                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [1002037.0, 1004942.0, 1007272.0, 1028734.0, 1029916.0, 1036963.0, 1038355.0, 1048970.0]
-                  color          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [Black, Silver/Black, Metal casing with red, Metal/Blue, alb-galben, Zilver, Sort, Blue]
-            description           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                              [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail, Dysk BLUE 6TB 3,5 SATAIII/5400rpm, Massive 960GB storage capacity with super-fast 3480Mbps read speed and 3000Mbps write speed., GTX 1660 SUPER, 6GB GDDR6, Boost Clock 1860MHz, Dual Fan Cooling, Twin Frozr 7 Thermal DesignRGB Mystic LightDragon Center, ASUS ROG ROG-STRIX-RTX2080S-A8G-GAMING, GeForce RTX 2080 SUPER, 8 GB, GDDR6, 256 bit, 7680 x 4320 Pixel, PCI Express 3.0, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd, RX 5600 XT, 6GB GDDR6, 1620 MHz Boost Clock, Triple Fan Cooling]
-            form_factor          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [3.5-inch, M.2 2280, 2.5-Inch, 2.5-inch, 2.5-inch, 2.5-inch, 2.5-inch, 2.5-inch]
-              height_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [7.0, 15. 0, 15.6, 26.1, 2.4, 10.2, 26.1, 7.0]
-         interface_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [SATA III, SATA III, SAS, SATA III, SATA III, SAS, SAS, USB Type-C]
-              length_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   [88.9, 67.0, 170.0, 80.2, 147.0, 80.0, 100.0, 149.9]
-            memory_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [GDDR6, Gddr5, GDDR6, DDR3, GDDR6, GDDR6, GDDR5, Gddr6]
-                  model          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [GeForce RTX 3080 GAMING OC, Blue, MP510, GeForce GTX 1660 SUPER OC, GeForce 6G 1660 Ti GAMING X GTX, ROG-STRIX-RTX2080S-A8G-GAMING, Strix Rtx 2060S Oc Evo, <Radeon Pro WX 4100>]
-           model_number          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [GV-N3080GAMING OC-10GD, 912-V375-040, PBU240GS25SSDR, DT100G3/128GB, N20702-08D6-1710VA23, GV-N1030OC-2GI, 02G-P3-2717-KR, WDS200T2B0B]
-                  price          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [791.99, 214.98, 1400.3, 1046.75, 584.02, 279.99, 569.0, 2569.0]
-          priceCurrency          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [USD, AED, EUR, ZAR, AUD, AED, RSD, EUR]
-           product_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [GPU, HDD, SSD, GPU, GPU, GPU, GPU, gPU]
-        read_speed_mb_s          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [3,480.0 MB/s, 3,400.0 MB/s, 560.0 MB/s, 2,000.0 MB/s, 560.0 MB/s, 550.0 MB/s, 3,500.0 MB/s, 110.0 MB/s]
-storage_connection_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [M.2, 2,5, 2.5-inch SAS, 2.5-inch SATA, 2.5-inch SATA, M2, 3.5-inch SATA, 2.5-inch SAS]
-             storage_gb          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [5587.94 GiB, 960.0, 3725.29 GiB, 223.52 GiB, 931.32 GiB, 3725.29 GiB, 119.21 GiB, 238.42 GiB]
-                  title          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail, Western Digital HDD Blue 6TB 3,5\" 256MB SATAIII/5400rpm, Corsair MP510 M.2-2280 960GB, Gigabyte GeForce GTX 1660 SUPER OC 6GB Graphics Card, MSI GeForce GTX 1660 Ti GAMING X 6G PCI Express x16 3.0 6GB GDDR6 192-bit | 912-V375-040, ASUS ROG -STRIX-RTX2080S-A8G-GAMING GeForce RTX 2080 SUPER 8 GB GDDR6, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd, Gigabyte Radeon RX 5600 XT GAMING OC 6GB Graphics Card]
-      title_description           True                  ,             False             False          False            False [Gigabyte Video Card GV-N3080GAMING OC-10GD GeForce RTX 3080 GAMING OC 10GB GDDR6X Retail. Description: Gigabyte Video Ca, Western Digital HDD Blue 6TB 3,5\" 256MB SATAIII/5400rpm. Description: Dysk BLUE 6TB 3,5 256MB SATAIII/5400rpm, Corsair MP510 M.2-2280 960GB. Description: Huge 960GB storage capacity and super Rapid 3480Mbps read speed and amazingly, Gigabytw GeForce GTX 1660 SUPER OC 6GB Graphics Card. Description: GTX 1660 SUPER, 6GB GDDR6, Boost Clock 1860MHz, Dual , MSI GeForce GTX 1660 Ti GAMING X 6G PCI Express x16 3.0 6GB GDDR6 192-bit | 912-V375-040. Description: Twin Frozr 7 Ther, ASUS ROG -STRIX-RTX2080S-A8G-GAMING GeForce RTX 2080 SUPER 8 GB GDDR6. Description: ASUS ROG ROG-STRIX-RTX2080S-A8G-GAMI, Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2Xd. Description: Asus Strix Rtx 2060S Oc Evo - 8GB, 2Xfan, 2Xhdmi, 2X, Gigabyte Radeon RX 5600 XT GAMING OC 6GB Graphics Card. Description: RX 5600 XT, 6GB GDDR6, 1620 MHz Boost Clock, Triple]
-                    url          False               None             False             False          False            False                                                                                                                                        [https://www.thekeykey.com/detail/GV-N3080GAMING-OC-10GD/?name=247479, https://www.alsen.pl/podzespoly-komputerowe/dyski-twarde-hdd-ssd/dyski-wewnetrzne/western-digital-dysk-blue-6tb-3-5-256m, https://www.cclonline.com/product/287495/CSSD-F960GBMP510/Solid-State-Drives-SSDs-/Corsair-Force-MP510-960GB-M-2-Solid-S, https://www.ebuyer.com/915241-gigabyte-geforce-gtx-1660-super-oc-6gb-graphics-card-gv-n166soc-6gd, https://pcdubai.com/product/msi-geforce-gtx-1660-ti-gaming-x-6g-pci-express-x16-3-0-6gb-gddr6-192-bit-912-v375-040, https://www.computerunion.it/geforce/43703-asus-rog-strix-rtx2080s-a8g-gaming-geforce-rtx-2080-super-8-gb-gddr6-47180174, https://sbsdomain.com/asus-strix-rtx-2060s-oc-evo-8gb-2xfan-2xhdmi-2xd, https://www.ebuyer.com/957897-gigabyte-radeon-rx-5600-xt-gaming-oc-6gb-graphics-card-gv-r56xtgaming-oc-6gd]
-                vram_gb          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         [6.0, 8.0, 10.0, 2.0, 6.0, 4.0, 7.45 GiB, 2.0]
-               weight_g          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [8.0, 3.134, 720.0, 58.0, 500.0, 650.0, 11.0, 11.2]
-               width_mm          False               None             False              True          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [22.0, 42.2, 75.7, 22.1, 68.6, 504.0, 101.6, 22.0]
-       write_speed_mb_s          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [3000.0, 1700.0, 520.0, 520.0, 3 GB/s, 15.0, 1750.0, 520.0]
+              attribute  inferred_list inferred_separator  inferred_boolean  inferred_numeric  inferred_date  identifier_like                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     sample_values
+                  brand          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [Dell, HelioNest, Nimble, Vellum, Seagate, LumenForge, Samsung, Aurex]
+               bus_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [SATA-6GBPS, SAS, SATA III, USB 3.1, PCIe 3.0, SATA-600, SATA III 6Gb/s, SATA 6Gb/s]
+           chipset_name          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [NexusFlash X1, AdaptiveSync, QhantumVista QD32 controller, Radeon RX 580, NVMe, Integrated Display Controller, IPS, NovaPlay NP-7]
+                  color          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              [Colbolt, Bladk, Black, Blue/Black, Zwart, White+Blue, black-on-black, Black/Silver]
+            description           True                  ,             False             False          False            False [PRODUCT DETAILManufacturer: SeagateManufacturer Part Number: ST2000NM0033Type : Hard Disk Drive (HDD)Sub-Type : SATA-6GB, Increase the storage capacity of your system with the 400GB Hard Drive from Dell. Offering a rotational speed of 10K RPM, A fictional high-speed memory card designed for compact cameras, handheld scanners, and embedded logging devices. It off, Compact 14-inch desktop studio monitor with 1920x1080 IPS panel, 75Hz refresh rate, adjustable stand, and dual HDMI/Disp, 27-inch curved LCD display for creative workstations and gaming setups, featuring 2560x1440 resolution, 165Hz refresh ra, IronWolf 110, 3.84 TB, SATA 6Gb/s, 3D TLC, A fictional 32-inch desktop monitor designed for color-critical creative work and cinematic viewing. The Aurora Display , Intel Core i5 processors (13-inch model)Plug and Play, Driver free DesignSupports Hot-swapUp to 10 hours of battery life]
+            form_factor          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             [3.5 X 1/3h, 3.5-inch, 2.5", 2,5, 2.5-Inch, M.2 2280, 2.5 Inch, 3.5"]
+              height_mm           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [3,5, 2,3, 6,1, 3,5, 10,0, 3,7, 46,0, 26,1]
+         interface_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   [SATA, SAS, SATA, SATA, SATA, SaTA, SATA, SATA]
+              length_mm           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                [80.0, 80.0, 80.0, 60.0, 1.63, 80.0, 232.0, 147.0]
+            memory_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           [GDDR5, GDDR6, GDDR6, GDDR5, GDDR5, DDR6, GDDR6, GDDR5]
+                  model          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            [Constellation, ArcMini, Arcadia XR-14, Arcadia 27Q, IronWolf 110, Aurora Display Panel 32Q, SSD 860 QVO, QuillMotion]
+           model_number          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [ST3400755SS 9EA066-042 0GY583, HN-ACM32, XR14-MON-01, VA27Q165, LF-ADP32Q-165, MZ-76Q2T0BW, AQM-24C, MZ-76E2T0B]
+                  price           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [58.0, 7.080,00, 24,95, 159,99, 329,99, 730,29, 799,00, 385.0]
+          priceCurrency          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          [USD, INR, USD, uSD, USD, EUR, USD, INR]
+           product_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      [HDD, HDD, MEMORY_CARD, MONITOR, monitor, SSD, MONITOR, SSD]
+        read_speed_mb_s           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    [550.0, 560.0, 3200.0, 40.0, 200.0, 3,400.0, 2,100.0, 3,500.0]
+storage_connection_type          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       [3.5-inch SATA, 3.5-inch SAS, 2.5" SATA, 2,5, 2.5" SATA, M.2, 2.5-inch SATA, 3.5-inch SATA]
+             storage_gb           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  [2.000,0, 400,0, 32,0, 3.840,0, 1.750,0, 2.000,0, 24,0, 2.000,0]
+                  title          False               None             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                         [ST2000NM0033 Seagate Constellation 2TB 7.2K RPM 3.5INCH 128MB Buffer SATA 6.0GBPS Enterprise Hard Disk Drive. Refurbishe, Dell 400GB 10K RPM 3G 3.5 Inch SAS HDD ST3400755SS 9EA066-042 0GY583, Aurora ArcMini 32GB Compact Flash Card, Nimble Arcadia XR-14 studio monitor, Vellum Arcadia Studio Monitor 27-inch, Seagate IronWolf 110 internal solid state drive 2.5\" 3840 GB SATA III 3D TLC, LumenForge Aurora Display Panel 32-inch QHD OLED Monitor, External SSD USB 3.1750 GB]
+                    url          False               None             False             False          False            False                                                                                                           [https://www.allhdd.com/hard-drive/sata-6gbps/2tb-7.2k-rpm/seagate-st2000nm0033-rfb, https://www.xfurbish.com/dell-400gb-10k-rpm-3g-3-5-inch-sas-hdd-st3400755ss-9ea066-042-0gy583, https://shop.switch.nl/product/seagate-ironwolf-110-internal-solid-state-drive-2-5-3840-gb-sata-iii-3d-tlc, https://esecurityproducts.in/product/external-ssd-usb-3-1-750-gb-copy, https://www.novatech.co.uk/products/samsung-860-qvo-2tb-solid-state-drivessd/mz-76q2t0bw.html, https://www.microcenter.com/product/478681/sapphire-technology-radeon-rx-580-overclocked-pulse-dual-fan-8gb-gddr5-pcie-3, https://www.gulfmicro.ae/samsung-evo-860-2tb-serie-ssd-2-5-sata-600-7mm-mz-76e2t0b-mz-76e2t0b-eu, https://www.scan.co.uk/products/1tb-wd-red-sa500-25-nas-ssd-sata-iii-6gb-s-3d-nand-560mb-s-read-530mb-s-95k-85k-iops]
+                vram_gb           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          [8,0, 8,0, 2,0, 8,0, 6,0, 4,0, 2,0, 4,0]
+               weight_g           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   [8.0, 11.0, 8.0, 11.2, 720.0, 8.0, 720.0, 10.0]
+               width_mm           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 [22.0, 22.0, 22.0, 21.2, 22.0, 126.0, 101.6, 0.8]
+       write_speed_mb_s           True                  ,             False             False          False            False                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     [520.0, 530.0, 3,000.0, 10.0, 2300.0, 1500.O, 1,200.0, 520.0]
 
 Dataset overview:
 [
   {
-    "dataset_name": "products_4",
-    "rows": 703,
-    "columns": 27,
-    "trust_score": 1.0
-  },
-  {
     "dataset_name": "products_1",
-    "rows": 810,
-    "columns": 27,
+    "rows": 811,
+    "columns": 25,
     "trust_score": 3.0
-  },
-  {
-    "dataset_name": "products_2",
-    "rows": 810,
-    "columns": 27,
-    "trust_score": 1.8618796859241278
   },
   {
     "dataset_name": "products_3",
     "rows": 780,
-    "columns": 27,
-    "trust_score": 1.4672051154712058
+    "columns": 25,
+    "trust_score": 1.0713327609850611
+  },
+  {
+    "dataset_name": "products_2",
+    "rows": 811,
+    "columns": 25,
+    "trust_score": 1.7291732278939314
+  },
+  {
+    "dataset_name": "products_4",
+    "rows": 698,
+    "columns": 25,
+    "trust_score": 1.0
   }
 ]
 
@@ -188,350 +194,350 @@ VALIDATION FEEDBACK:
 (Showing which source values were correct for sample entities)
 
 Attribute "brand":
-  - Sources: products_3=ADATA, products_1=ADATA, products_2=ADATA
+  - Sources: products_1=A-DATA, products_3=ADATA, products_4=Adata, products_2=ADATA
     → Correct: ADATA
-  - Sources: products_2=ADATA, products_1=ADATA
+  - Sources: products_3=ADATA, products_2=A-DATA, products_1=ADATA
     → Correct: ADATA
+  - Sources: products_2=Moweek
+    → Correct: Moweek
   - Sources: products_1=Biyetimi
     → Correct: Biyetimi
-  - Sources: products_1=Memoria
+  - Sources: products_1=WANSENDA, products_2=Memoria
     → Correct: Wansenda
-  - Sources: products_1=Sandisk, products_3=Sandisk
-    → Correct: Sandisk
 
 Attribute "bus_type":
-  - Sources: products_3=USB 3.0, products_1=USB 3.0, products_2=USB 3.0
+  - Sources: products_1=USB 3.0, products_3=USB 3.0, products_4=USB 3.0, products_2=USB 3.0
     → Correct: USB 3.0
-  - Sources: products_2=USB 3.0, products_1=USB 3.0, products_3=USB 3.0
+  - Sources: products_2=USB 3.0, products_1=USB 3.0
     → Correct: USB 3.0
-  - Sources: products_1=USB 2.0
+  - Sources: products_3=USB 2.0, products_2=USB 2.0
     → Correct: USB 2.0
-  - Sources: products_1=USB 3.0
-    → Correct: USB 3.0
-  - Sources: products_1=USB 3.0
+  - Sources: products_4=USB, products_1=USB 2.0
+    → Correct: USB 2.0
+  - Sources: products_1=USB, products_3=USB 3.0
     → Correct: USB 3.0
 
 Attribute "chipset_name":
-  - Sources: products_1=Radeon RX 550, products_3=Radeon RX 550
+  - Sources: products_3=Radeon RX 550, products_1=Radeon RX 550
     → Correct: AMD Radeon RX 550
-  - Sources: products_1=GeForce GT 1030, products_4=GeForce GT 1030
+  - Sources: products_1=GeForce GT 1030, products_3=GeForce® GT 1030
     → Correct: NVIDIA GeForce GT 1030
-  - Sources: products_1=GeForce RTX 2080 Ti
+  - Sources: products_4=GeForce RTX 2080 Ti, products_1=GeForce RTX 2080 Ti, products_3=RTX 2080 Ti
     → Correct: NVIDIA GeForce RTX 2080 Ti
-  - Sources: products_3=GeForce RTX 2080, products_1=GeForce RTX 2080 Super
+  - Sources: products_1=GeForce RTX 2080, products_4=GeForce RTX 2080 SUPER, products_3=GeForce RTX 2080 SUPER
     → Correct: GeForce RTX 2080 Super
-  - Sources: products_3=Quadro P400, products_1=Quadro P400
+  - Sources: products_3=NVIDIA Quadro P400, products_1=Quadro P400
     → Correct: NVIDIA Quadro P400
 
-Attribute "description":
-  - Sources: products_3=A-DATA FlashDrive UV131 32GB Chromium Grey USB 3.0 Flash Drive, Retail, products_1=A-DATA DashDrive UV128 64GB Black+Blue USB 3.0 Flash Drive, Retail, products_2=16GB | USB 3.0
-    → Correct: ADATA DashDrive UV128 32GB Retractable USB 3.0 Flash Drive - Black/Blue Upto 90MB/s Read, 40MB/s Write (AUV128-32G-RBE)CanDo I.T Warranty: 30 DaysManufacturer warranty: Limited Lifetime Warranty
-  - Sources: products_2=A-DATA DashDrive UV128 32GB Black+Blue USB 3.0 Flash Drive, Retail, products_1=​ ADATA UV128 is a USB 3.0 capless flash drive with retractable USB connector and superior 90/40MB/s read/write performance (128GB model). Full USB 2.0 backward compatibility ensures seamless data sharing among various devices supporting both standards without unwanted loss of data., products_3=USB 3.0, Compatible with USB 2.0, Retractable USB, 10g, 60x20x9
-    → Correct: ADATA UV128 is a USB 3.0 capless flash drive with retractable USB connector and superior 90/40MB/s read/write performance (128GB model). Full USB 2.0 backward compatibility ensures seamless data sharing among various devices supporting both standards without unwanted loss of data.
-  - Sources: products_1=Buy 2018 OTG USB Flash Drive Android Micro Pen drive USB Memory Stick 4GB 8GB 16GB 32GB 64GB Pendrive Mobile u disk at www.trendyshopperdeals.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: Item Type: USB Flash Drive Material: Wood Interface Type:USB 2.0 Capacity: 4 GB, 8 GB, 16 GB, 32 GB, 64 GB Weight: 55 g / 0.12 lbs Package Includes: 1 xFlash Drive, 1 x Box Please leave us a message with your personal information to be engraved.
-  - Sources: products_1=Buy Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria at geeksmartbuy.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: Buy Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria at geeksmartbuy.com! Free shipping to 185 countries. 45 days money back guarantee.
-  - Sources: products_1=Buy Wooden USB 3.0 Flash Drive with Box at 24x7deal.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: Buy WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain at www.qualityonlinestores.com! Free shipping to 185 countries. 45 days money back guarantee.
+Attribute "color":
+  - Sources: products_1=Blue/Black, products_3=Black+Blue, products_4=Blue, products_2=Black/ Blue
+    → Correct: Black/Blue
+  - Sources: products_2=Black+Blue, products_1=Black/Blue
+    → Correct: Black/Blue
+  - Sources: products_4=Silver/Black
+    → Correct: Silver/Black
+  - Sources: products_3=Titaniumgrey, products_2=Titanium Gray, products_1=Titanium Gray, products_4=gray
+    → Correct: Titanium Gray
+  - Sources: products_3=white blue, products_2=White+Blue, products_1=Blue/White
+    → Correct: Blue/White
 
 Attribute "form_factor":
-  - Sources: products_3=2.5-inch, products_2=2.5-inch, products_1=2.5-inch
+  - Sources: products_4=2.5", products_1=2.5-inch, products_3=2.5-inch, products_2=2.5" SFF
     → Correct: 2.5-inch
-  - Sources: products_1=2.5-inch, products_3=2.5-inch
+  - Sources: products_3=SFF (2.5-inch), products_4=2.5-inch SFF, products_2=2.5" SFF, products_1=2.5-inch
     → Correct: 2.5-inch
-  - Sources: products_1=3.5-inch, products_4=3.5-inch
+  - Sources: products_1=3.5 Inch, products_3=3.5
     → Correct: 3.5-inch
-  - Sources: products_1=3.5-inch
+  - Sources: products_2=3.5 Inch, products_3=3.5" LFF, products_1=3.5Inch
     → Correct: 3.5-inch
-  - Sources: products_3=3.5-imch, products_4=3.5-inch, products_1=3.5-inch
+  - Sources: products_1=3.5", products_4=3.5
     → Correct: 3.5-inch
+
+Attribute "height_mm":
+  - Sources: products_3=9,0
+    → Correct: 9.0
+  - Sources: products_4=26.1
+    → Correct: 26.1
+  - Sources: products_2=1.0
+    → Correct: 25.4
+  - Sources: products_2=19.85
+    → Correct: 19.85
+  - Sources: products_3=1,0
+    → Correct: 26.1
 
 Attribute "interface_type":
-  - Sources: products_1=USB Type-C, products_3=USB Type-C
+  - Sources: products_3=USB
+    → Correct: USB Type-A
+  - Sources: products_4=Lightning
+    → Correct: USB Type-A and Lightning
+  - Sources: products_3=Type-C, products_1=USB Type-A / USB Type-C, products_2=USB-A and USB-C, products_4=USB Tip C
     → Correct: USB Type-A / USB Type-C
-  - Sources: products_1=USB Type-A
-    → Correct: USB 3.0
-  - Sources: products_1=USB Type-C, products_3=USB Type-A / USB Typ3-C
+  - Sources: products_3=USB Type-C, products_2=Type-C, products_4=Type C, products_1=USB Type C
     → Correct: USB Type-A / USB Type-C
-  - Sources: products_1=USB Type-C
-    → Correct: USB Type-A and Type-C
-  - Sources: products_3=USB TYpe-C, products_1=USB Type-C, products_4=USB Type-C
-    → Correct: USB Type-C
+  - Sources: products_2=USB Type-A
+    → Correct: USB Type-A
+
+Attribute "length_mm":
+  - Sources: products_3=60.0
+    → Correct: 60.0
+  - Sources: products_2=118.2
+    → Correct: 118.2
+  - Sources: products_4=147,0
+    → Correct: 147.0
+  - Sources: products_1=147.0
+    → Correct: 147.0
+  - Sources: products_2=147.0
+    → Correct: 147.0
 
 Attribute "memory_type":
-  - Sources: products_1=GDDR5, products_2=GDDR5, products_3=GDDR5
+  - Sources: products_4=Gddr5, products_1=GDDR5
     → Correct: GDDR5
-  - Sources: products_1=GDDR5, products_3=GDDR5, products_4=DDR5
+  - Sources: products_4=GDDR5, products_1=GDDR5
     → Correct: GDDR5
-  - Sources: products_3=GDDR6, products_2=GDDR6, products_1=GDDR6
+  - Sources: products_4=GDDR6, products_2=GDDR6
     → Correct: GDDR6
-  - Sources: products_3=GDDR5, products_1=GDDR5
-    → Correct: GDDR5
-  - Sources: products_3=GDDr6, products_2=GDDR6, products_1=GDDR5
+  - Sources: products_1=GDDR6, products_2=GDDR6
+    → Correct: GDDR6
+  - Sources: products_1=GDDR5
     → Correct: GDDR5
 
 Attribute "model":
-  - Sources: products_3=UV131 FlashDrive, products_1=DashDrive UV128, products_2=DashDrive UV150
+  - Sources: products_1=DashDrive UV128, products_3=UV128 DashDrive, products_4=UV128 Dashdrive Retractable, products_2=DashDrive UV128
     → Correct: UV128 Dashdrive Retractable
-  - Sources: products_2=DashDrive UV128, products_1=DashDrive UV128, products_3=UV128 DashDrive
+  - Sources: products_3=DashDrive UV128, products_2=DashDrive UV128, products_1=DashDrive Series UV128
     → Correct: DashDrive Series UV128
-  - Sources: products_1=Multifunctional USB Flash Drive pendrive
-    → Correct: Biyetimi Multifunctional USB Flash Drive
-  - Sources: products_1=Waterproof USB Flash Drive Metal Pen Drive
-    → Correct: Wansenda Usb Flash Drive
-  - Sources: products_1=IXPAND, products_3=iXpand Flash Drivs
+  - Sources: products_3=iXpand Fkash Drive, products_1=iXpand Flash Drive, products_2=IXPAND
     → Correct: iXpand Flash Drive
+  - Sources: products_1=DataTraveler MicroDuo 3C, products_2=DataTraveler DUO 3C, products_4=DataTraveler microDuk 3C
+    → Correct: DataTraveler MicroDuo 3C
+  - Sources: products_3=DataTraveler® G4, products_2=DataTraveler DTIG4, products_1=DataTraveler G4, products_4=G4
+    → Correct: DataTraveler DTIG4
 
 Attribute "model_number":
-  - Sources: products_1=AUV128-32G-RBE
+  - Sources: products_2=AUV128-32G-RBE
     → Correct: AUV128-32G-RBE
-  - Sources: products_1=DTDU93C/64GB, products_2=DTDU03C/32GB
+  - Sources: products_3=AUV128-32G-RBE, products_1=AUV128-32G-RBE
+    → Correct: AUV128-32G-RBE
+  - Sources: products_4=SDIX30C-032G-GN6NN, products_2=SDIX30C-032G-GN6NN
+    → Correct: SDIX30C-032G-GN6NN
+  - Sources: products_1=DTDU93C/64GB
     → Correct: DTDUO3C/64GB
-  - Sources: products_1=AC008-64G-RWE
-    → Correct: AC008-64G-RWE
-  - Sources: products_1=DTIG4/8GB, products_3=DTEG2/64GB
-    → Correct: DTIG4/8GB
-  - Sources: products_3=DTIG4
-    → Correct: DTEG2/64GB
-
-Attribute "price":
-  - Sources: products_3=6.49, products_1=24.99, products_2=3.99
-    → Correct: 10.99
-  - Sources: products_2=5.49, products_1=14.99, products_3=34.08
-    → Correct: 14.99
-  - Sources: products_1=15.25
-    → Correct: 11.96
-  - Sources: products_1=9.95
-    → Correct: 9.95
-  - Sources: products_1=9.0
-    → Correct: 9.99
-
-Attribute "priceCurrency":
-  - Sources: products_3=EUR, products_1=NZD, products_2=EUR
-    → Correct: EUR
-  - Sources: products_2=EUR, products_1=CAD, products_3=EUR
-    → Correct: CAD
-  - Sources: products_1=USD
-    → Correct: USD
-  - Sources: products_1=USD
-    → Correct: USD
-  - Sources: products_1=USD
-    → Correct: USD
+  - Sources: products_4=AS102P-32G-RGY
+    → Correct: AS102P-32G-RGY
 
 Attribute "product_type":
-  - Sources: products_3=USB_STICK, products_1=USB_STICK, products_2=USB_STICK
+  - Sources: products_1=USB_STICK, products_3=USB_STICK, products_4=USB_STICK, products_2=USB_STICK
     → Correct: USB_STICK
-  - Sources: products_2=USB_STICK, products_1=USB_STICK, products_3=USB_STICK
+  - Sources: products_3=USB_STICK, products_2=USB_STICK, products_1=USB_STICK
     → Correct: USB_STICK
-  - Sources: products_1=USB_STICK
+  - Sources: products_3=USB_STICK, products_2=USB_STICK, products_4=USB_STICK, products_1=USB_STICK
     → Correct: USB_STICK
-  - Sources: products_1=USB_STICK
+  - Sources: products_2=USB_STICK, products_4=USB_STICK, products_1=USB_STICK
     → Correct: USB_STICK
-  - Sources: products_1=USB_STICK
+  - Sources: products_1=USB_STICK, products_2=USB_STICK, products_3=USB_STICK, products_4=USB_STICK
     → Correct: USB_STICK
 
 Attribute "read_speed_mb_s":
-  - Sources: products_1=0.04 GB/s
+  - Sources: products_2=90.0
     → Correct: 90.0
+  - Sources: products_3=90.0, products_1=40.0
+    → Correct: 90.0
+  - Sources: products_4=20.0
+    → Correct: 20.0
   - Sources: products_1=100.0, products_2=100.0
     → Correct: 100.0
-  - Sources: products_3=180.0 MB/s
-    → Correct: 40.0
-  - Sources: products_1=0.20 GB/s
-    → Correct: 200.0
-  - Sources: products_1=135.0
-    → Correct: 135.0
+  - Sources: products_3=100.0, products_2=200.0
+    → Correct: 100.0
 
 Attribute "storage_connection_type":
-  - Sources: products_1=USB Type-A and USB Type-C, products_3=USB Type-C, products_2=USB Type-C
-    → Correct: USB Type-A and USB Type-C
   - Sources: products_1=USB Type-A
     → Correct: USB Type-A
-  - Sources: products_3=USB Type-C
-    → Correct: USB Type-A and USB Type-C
-  - Sources: products_1=USB Type-C
-    → Correct: USB Type-A and USB Type-C
-  - Sources: products_3=USB Type-C, products_1=USB Type-C, products_4=USB Typ4-C
+  - Sources: products_2=USB Type-A
+    → Correct: USB Type-A
+  - Sources: products_2=USB Type C, products_3=USB-C, products_1=Type-C
     → Correct: USB Type-C
+  - Sources: products_1=USB-A
+    → Correct: USB Type-A
+  - Sources: products_1=USB Type-A
+    → Correct: USB Type-A
 
 Attribute "storage_gb":
-  - Sources: products_1=64.0, products_2=14.90 GiB
+  - Sources: products_1=64,0, products_3=64,0
     → Correct: 64.0
-  - Sources: products_1=32.0
+  - Sources: products_3=32,0, products_2=32.0, products_1=32,0
     → Correct: 32.0
-  - Sources: products_1=64.0
+  - Sources: products_2=128.0
+    → Correct: 128.0
+  - Sources: products_1=64,0
     → Correct: 64.0
-  - Sources: products_1=29.80 GiB
+  - Sources: products_4=32.0, products_1=32,0, products_2=32.0
     → Correct: 32.0
-  - Sources: products_1=59.60 GiB, products_3=119.21 GiB, products_2=29.80 GiB
-    → Correct: 64.0
-
-Attribute "title":
-  - Sources: products_3=A-DATA FlashDrive UV131 32GB Chromium Grey USB 3.0 Flash Drive, Retail, products_1=A-DATA DashDrive UV128 64GB Black+Blue USB 3.0 Flash Drive, Retail, products_2=A-DATA DashDrive UV150 16GB Red USB 3.0 Flash Drive, Retail
-    → Correct: ADATA DashDrive UV128 32GB Retractable USB 3.0 Flash Drive - Black/ Blue
-  - Sources: products_2=ADATA USB Drive DashDrive Series UV128 32GB USB 3.0, Black/Blue (AUV128-32G-RBE) - New, products_1=A-DATA DashDrive UV128 32GB Black+Blue USB 3.0 Flash Drive, Retail, products_3=ADATA UV128 Dashdrive Retractable USB 3.0 64GB Blue/Black Flash Drive
-    → Correct: ADATA USB Drive DashDrive Series UV128 32GB USB 3.0, Black/Blue (AUV128-32G-RBE) - New
-  - Sources: products_1=2018 OTG USB Flash Drive Android Micro Pen drive USB Memory Stick 4GB 8GB 16GB 32GB 64GB Pendrive Mobile u disk
-    → Correct: Moweek Multifunctional USB Flash Drive 128gb 64gb cle usb stick 32gb Pendrive 16gb 8gb 4 gb usb 2.0 memory stickfor android
-  - Sources: products_1=Solid Color OTG USB Flash Drive
-    → Correct: Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria
-  - Sources: products_1=WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain
-    → Correct: Memoria Usb Flash Drives Factory Wholesale Price Pen Drive 8GB 16GB 32GB Usb Stick Key 64GB 128GB Pendrive 1TB 2TB Pass H2testw
-
-Attribute "title_description":
-  - Sources: products_3=A-DATA FlashDrive UV131 32GB Chromium Grey USB 3.0 Flash Drive, Retail. Description: A-DATA FlashDrive UV131 32GB Chromium Grey USB 3.0 Flash Drive, Retail, products_1=A-DATA DashDrive UV128 64GB Black+Blue USB 3.0 Flash Drive, Retail. Description: A-DATA DashDrive UV128 64GB Black+Blue USB 3.0 Flash Drive, Retail, products_2=A-DATA DashDrive UV150 16GB Red USB 3.0 Flash Drive, Retail. Description: 16GB | USB 3.0
-    → Correct: ADATA DashDrive UV128 64GB Retractable USB 3.0 Flash Drive - Black/ Blue. Description: ADATA DashDrive UV128 32GB Retractable USB 3.0 Flash Drive - Black/Blue Upto 90MB/s Read, 40MB/s Write (AUV128-32G-RBE)CanDo I.T Warranty: 30 DaysManufacturer warranty: Limited Lifetime Warranty
-  - Sources: products_2=A-DATA DashDrive UV128 32GB Black+Blue USB 3.0 Flash Drive, Retail. Description: A-DATA DashDrive UV128 32GB Black+Blue USB 3.0 Flash Drive, Retail, products_1=ADATA USB Drive DashDrive Series UV128 32GB USB 3.0, Black/Blue (AUV128-32G-RBE) - New. Description: ADATA DashDrive Series UV128 32GB USB 3.0 Flash Drive, Black/Blue (AUV128-32G-RBE)NewUSB 3.0 High-Speed Transmission Interface^R/W: 40/20MBs^Easy Thumb Activated Capless Design^Graceful and Minimalist Design, products_3=ADATA UV128 Dashdrive Retractable USB 3.0 64GB Blue/Black Flash Drive. Description: USB 3.0, Compatible with USB 2.0, Retractable USB, 10g, 60x20x9
-    → Correct: ADATA 32GB USB3.0 FLASH DRIVE. Description:  ADATA UV128 is a USB 3.0 capless flash drive with retractable USB connector and superior  read/write performance. Full USB 2.0 backward compatibility ensures seamless data sharing among various devices supporting both standards without unwanted loss of data.
-  - Sources: products_1=2018 OTG USB Flash Drive Android Micro Pen drive USB Memory Stick 4GB 8GB 16GB 32GB 64GB Pendrive Mobile u disk. Description: Buy 2018 OTG USB Flash Drive Android Micro pen drive USB Memory Stick 4GB 8GB 16GB 32GB 64GB Pendrive Mobile u disk at www.trendyshopperdeals.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: Moweek Multifunctional USB Flash Drive 128gb 64gb cle usb stick 32gb Pendrive 16gb 8gb 4 gb usb 2.0 memory stickfor android. Description: Buy Moweek Multifunctional USB Flash Drive 128gb 64gb cle usb stick 32gb Pendrive 16gb 8gb 4 gb usb 2.0 memory stickfor android at xmsstore.com! Free shipping to 185 countries. 45 days money back guarantee.
-  - Sources: products_1=Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria. Description: Buy Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria at geeksmartbuy.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria. Description: Buy Biyetimi Multifunctional USB Flash Drive pendrive 64gb cle usb stick 32gb 16gb 8gb 4gb usb 2.0 Pen Drive for android/pc memoria at geeksmartbuy.com! Free shipping to 185 countries. 45 days money back guarantee.
-  - Sources: products_1=WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain. Description: Buy WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain at www.qualityonlinestores.com! Free shipping to 185 countries. 45 days money back guarantee.
-    → Correct: WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain. Description: Buy WANSENDA Waterproof USB Flash Drive Metal Pen Drive 4GB 8GB 16GB 32GB 64GB Pendrive USB Stick Flash Drive with Keychain at www.qualityonlinestores.com! Free shipping to 185 countries. 45 days money back guarantee.
 
 Attribute "vram_gb":
-  - Sources: products_1=2.0, products_3=4.0
+  - Sources: products_2=2,0, products_1=2,0
     → Correct: 2.0
-  - Sources: products_1=2.0, products_4=2.0
+  - Sources: products_1=2,0, products_3=2.0
     → Correct: 2.0
-  - Sources: products_1=11.0
+  - Sources: products_4=11.0, products_1=11,0
     → Correct: 11.0
-  - Sources: products_2=8.0, products_1=7.45 GiB
+  - Sources: products_1=8,0, products_2=8,0
     → Correct: 8.0
-  - Sources: products_3=2.0, products_1=2.0
+  - Sources: products_1=2,0, products_2=2,0
     → Correct: 2.0
 
+Attribute "weight_g":
+  - Sources: products_3=10.0
+    → Correct: 10.0
+  - Sources: products_3=5.4
+    → Correct: 5.4
+  - Sources: products_4=720,0
+    → Correct: 720.0
+  - Sources: products_1=720.0
+    → Correct: 720.0
+  - Sources: products_2=680.0
+    → Correct: 680.0
+
+Attribute "width_mm":
+  - Sources: products_3=20.0
+    → Correct: 20.0
+  - Sources: products_2=4,0
+    → Correct: 101.6
+  - Sources: products_2=82,0
+    → Correct: 82.0
+  - Sources: products_3=4.0
+    → Correct: 101.6
+  - Sources: products_4=101,6
+    → Correct: 101.6
+
 Attribute "write_speed_mb_s":
-  - Sources: products_1=20.0
+  - Sources: products_2=40.0
     → Correct: 40.0
+  - Sources: products_3=40.0, products_1=20.0
+    → Correct: 40.0
+  - Sources: products_4=5.0
+    → Correct: 5.0
   - Sources: products_1=15.0, products_2=15.0
     → Correct: 15.0
-  - Sources: products_3=0.07 GB/s
-    → Correct: 10.0
-  - Sources: products_3=15.0
-    → Correct: 15.0
-  - Sources: products_1=40.0
-    → Correct: 40.0
+  - Sources: products_3=120.0, products_2=50.0
+    → Correct: 50.0
 
 
 
 SOURCE ACCURACY STATISTICS (from validation set):
 
 Attribute "brand":
-  - products_1: 88% correct (83/94 values)
-  - products_2: 89% correct (25/28 values)
-  - products_3: 94% correct (48/51 values)
-  - products_4: 100% correct (19/19 values)
+  - products_1: 84% correct (73/87 values)
+  - products_2: 85% correct (72/85 values)
+  - products_3: 76% correct (56/74 values)
+  - products_4: 86% correct (51/59 values)
 
 Attribute "bus_type":
-  - products_1: 72% correct (53/74 values)
-  - products_2: 53% correct (9/17 values)
-  - products_3: 58% correct (19/33 values)
-  - products_4: 67% correct (8/12 values)
+  - products_1: 40% correct (20/50 values)
+  - products_2: 30% correct (14/47 values)
+  - products_3: 35% correct (16/46 values)
+  - products_4: 37% correct (13/35 values)
 
 Attribute "chipset_name":
-  - products_1: 24% correct (6/25 values)
-  - products_2: 0% correct (0/3 values)
-  - products_3: 21% correct (3/14 values)
-  - products_4: 0% correct (0/3 values)
+  - products_1: 16% correct (4/25 values)
+  - products_2: 23% correct (3/13 values)
+  - products_3: 36% correct (4/11 values)
+  - products_4: 14% correct (2/14 values)
 
-Attribute "description":
-  - products_1: 30% correct (30/100 values)
-  - products_2: 7% correct (2/28 values)
-  - products_3: 2% correct (1/57 values)
-  - products_4: 12% correct (3/26 values)
-
-Attribute "form_factor":
-  - products_1: 92% correct (44/48 values)
-  - products_2: 100% correct (5/5 values)
-  - products_3: 75% correct (12/16 values)
-  - products_4: 78% correct (7/9 values)
-
-Attribute "interface_type":
-  - products_1: 38% correct (21/56 values)
-  - products_2: 50% correct (3/6 values)
-  - products_3: 21% correct (4/19 values)
-  - products_4: 70% correct (7/10 values)
-
-Attribute "memory_type":
-  - products_1: 95% correct (19/20 values)
-  - products_2: 57% correct (4/7 values)
-  - products_3: 90% correct (9/10 values)
-  - products_4: 0% correct (0/1 values)
-
-Attribute "model":
-  - products_1: 35% correct (31/88 values)
-  - products_2: 29% correct (6/21 values)
-  - products_3: 20% correct (10/49 values)
-  - products_4: 28% correct (7/25 values)
-
-Attribute "model_number":
-  - products_1: 83% correct (40/48 values)
-  - products_2: 40% correct (2/5 values)
-  - products_3: 21% correct (3/14 values)
+Attribute "color":
+  - products_1: 92% correct (11/12 values)
+  - products_2: 60% correct (9/15 values)
+  - products_3: 57% correct (4/7 values)
   - products_4: 56% correct (5/9 values)
 
-Attribute "price":
-  - products_1: 15% correct (14/92 values)
-  - products_2: 19% correct (5/26 values)
-  - products_3: 15% correct (8/54 values)
-  - products_4: 18% correct (4/22 values)
+Attribute "form_factor":
+  - products_1: 40% correct (18/45 values)
+  - products_2: 26% correct (10/39 values)
+  - products_3: 17% correct (6/35 values)
+  - products_4: 10% correct (3/31 values)
 
-Attribute "priceCurrency":
-  - products_1: 47% correct (43/92 values)
-  - products_2: 42% correct (10/24 values)
-  - products_3: 41% correct (20/49 values)
-  - products_4: 42% correct (8/19 values)
+Attribute "height_mm":
+  - products_1: 0% correct (0/5 values)
+  - products_2: 67% correct (2/3 values)
+  - products_3: 0% correct (0/4 values)
+  - products_4: 67% correct (2/3 values)
+
+Attribute "interface_type":
+  - products_1: 7% correct (2/30 values)
+  - products_2: 15% correct (3/20 values)
+  - products_3: 0% correct (0/17 values)
+  - products_4: 6% correct (1/17 values)
+
+Attribute "length_mm":
+  - products_1: 100% correct (6/6 values)
+  - products_2: 100% correct (4/4 values)
+  - products_3: 100% correct (4/4 values)
+  - products_4: 0% correct (0/2 values)
+
+Attribute "memory_type":
+  - products_1: 90% correct (18/20 values)
+  - products_2: 100% correct (7/7 values)
+  - products_3: 80% correct (8/10 values)
+  - products_4: 92% correct (12/13 values)
+
+Attribute "model":
+  - products_1: 59% correct (34/58 values)
+  - products_2: 46% correct (26/57 values)
+  - products_3: 35% correct (18/52 values)
+  - products_4: 38% correct (15/39 values)
+
+Attribute "model_number":
+  - products_1: 82% correct (37/45 values)
+  - products_2: 83% correct (25/30 values)
+  - products_3: 85% correct (22/26 values)
+  - products_4: 88% correct (21/24 values)
 
 Attribute "product_type":
-  - products_1: 97% correct (97/100 values)
-  - products_2: 100% correct (28/28 values)
-  - products_3: 96% correct (49/51 values)
-  - products_4: 100% correct (23/23 values)
+  - products_1: 94% correct (94/100 values)
+  - products_2: 98% correct (88/90 values)
+  - products_3: 100% correct (80/80 values)
+  - products_4: 100% correct (71/71 values)
 
 Attribute "read_speed_mb_s":
-  - products_1: 29% correct (5/17 values)
-  - products_2: 60% correct (3/5 values)
-  - products_3: 0% correct (0/4 values)
-  - products_4: 0% correct (0/4 values)
+  - products_1: 56% correct (9/16 values)
+  - products_2: 88% correct (15/17 values)
+  - products_3: 80% correct (8/10 values)
+  - products_4: 100% correct (13/13 values)
 
 Attribute "storage_connection_type":
-  - products_1: 76% correct (39/51 values)
-  - products_2: 57% correct (4/7 values)
-  - products_3: 67% correct (12/18 values)
-  - products_4: 60% correct (6/10 values)
+  - products_1: 69% correct (33/48 values)
+  - products_2: 38% correct (14/37 values)
+  - products_3: 50% correct (16/32 values)
+  - products_4: 56% correct (9/16 values)
 
 Attribute "storage_gb":
-  - products_1: 53% correct (39/73 values)
-  - products_2: 7% correct (1/14 values)
-  - products_3: 17% correct (4/24 values)
-  - products_4: 7% correct (1/15 values)
-
-Attribute "title":
-  - products_1: 35% correct (35/100 values)
-  - products_2: 4% correct (1/28 values)
-  - products_3: 5% correct (3/57 values)
-  - products_4: 8% correct (2/26 values)
-
-Attribute "title_description":
-  - products_1: 28% correct (28/100 values)
-  - products_2: 7% correct (2/28 values)
-  - products_3: 4% correct (2/57 values)
-  - products_4: 4% correct (1/26 values)
+  - products_1: 1% correct (1/72 values)
+  - products_2: 89% correct (41/46 values)
+  - products_3: 0% correct (0/51 values)
+  - products_4: 56% correct (20/36 values)
 
 Attribute "vram_gb":
-  - products_1: 92% correct (23/25 values)
-  - products_2: 80% correct (4/5 values)
-  - products_3: 62% correct (5/8 values)
-  - products_4: 75% correct (3/4 values)
+  - products_1: 0% correct (0/25 values)
+  - products_2: 0% correct (0/16 values)
+  - products_3: 86% correct (6/7 values)
+  - products_4: 62% correct (5/8 values)
+
+Attribute "weight_g":
+  - products_1: 100% correct (4/4 values)
+  - products_2: 50% correct (1/2 values)
+  - products_3: 100% correct (2/2 values)
+  - products_4: 0% correct (0/1 values)
+
+Attribute "width_mm":
+  - products_1: 100% correct (5/5 values)
+  - products_2: 0% correct (0/3 values)
+  - products_3: 50% correct (1/2 values)
+  - products_4: 0% correct (0/2 values)
 
 Attribute "write_speed_mb_s":
-  - products_1: 59% correct (10/17 values)
-  - products_2: 67% correct (2/3 values)
-  - products_3: 14% correct (1/7 values)
-  - products_4: 60% correct (3/5 values)
+  - products_1: 86% correct (12/14 values)
+  - products_2: 67% correct (10/15 values)
+  - products_3: 88% correct (7/8 values)
+  - products_4: 58% correct (7/12 values)
 
 RECOMMENDATION: For attributes where one source is significantly more accurate (>80%),
 consider using 'favour_sources' to prefer that source's values.
@@ -540,9 +546,17 @@ PREVIOUS ITERATION RULES (you may keep, modify, or discard):
 {
   "brand": {
     "kwargs": {},
-    "resolver": "weighted_voting"
+    "resolver": "voting"
   },
   "bus_type": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "chipset_name": {
+    "kwargs": {},
+    "resolver": "longest_string"
+  },
+  "color": {
     "kwargs": {
       "sources": [
         "products_1"
@@ -550,29 +564,21 @@ PREVIOUS ITERATION RULES (you may keep, modify, or discard):
     },
     "resolver": "favour_sources"
   },
-  "chipset_name": {
-    "kwargs": {},
-    "resolver": "longest_string"
-  },
-  "cluster_id": {
-    "kwargs": {},
-    "resolver": "voting"
-  },
-  "color": {
-    "kwargs": {},
-    "resolver": "weighted_voting"
-  },
   "description": {
     "kwargs": {},
     "resolver": "longest_string"
   },
   "form_factor": {
-    "kwargs": {},
-    "resolver": "weighted_voting"
+    "kwargs": {
+      "sources": [
+        "products_1"
+      ]
+    },
+    "resolver": "favour_sources"
   },
   "height_mm": {
     "kwargs": {},
-    "resolver": "median"
+    "resolver": "maximum"
   },
   "interface_type": {
     "kwargs": {},
@@ -580,43 +586,29 @@ PREVIOUS ITERATION RULES (you may keep, modify, or discard):
   },
   "length_mm": {
     "kwargs": {},
-    "resolver": "median"
+    "resolver": "maximum"
   },
   "memory_type": {
     "kwargs": {
-      "sources": [
-        "products_1"
-      ]
+      "trust_key": "trust_score"
     },
-    "resolver": "favour_sources"
+    "resolver": "prefer_higher_trust"
   },
   "model": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "longest_string"
   },
   "model_number": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "voting"
   },
   "price": {
     "kwargs": {},
     "resolver": "median"
   },
   "priceCurrency": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "voting"
   },
   "product_type": {
     "kwargs": {},
@@ -625,50 +617,35 @@ PREVIOUS ITERATION RULES (you may keep, modify, or discard):
   "read_speed_mb_s": {
     "kwargs": {
       "sources": [
-        "products_1"
+        "products_3",
+        "products_2",
+        "products_1",
+        "products_4"
       ]
     },
     "resolver": "favour_sources"
   },
   "storage_connection_type": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "longest_string"
   },
   "storage_gb": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "median"
   },
   "title": {
     "kwargs": {},
     "resolver": "longest_string"
   },
-  "title_description": {
-    "kwargs": {},
-    "resolver": "longest_string"
-  },
   "url": {
     "kwargs": {
-      "sources": [
-        "products_1"
-      ]
+      "trust_key": "trust_score"
     },
-    "resolver": "favour_sources"
+    "resolver": "prefer_higher_trust"
   },
   "vram_gb": {
-    "kwargs": {
-      "sources": [
-        "products_1"
-      ]
-    },
-    "resolver": "favour_sources"
+    "kwargs": {},
+    "resolver": "median"
   },
   "weight_g": {
     "kwargs": {},
@@ -676,12 +653,15 @@ PREVIOUS ITERATION RULES (you may keep, modify, or discard):
   },
   "width_mm": {
     "kwargs": {},
-    "resolver": "median"
+    "resolver": "maximum"
   },
   "write_speed_mb_s": {
     "kwargs": {
       "sources": [
-        "products_1"
+        "products_2",
+        "products_3",
+        "products_1",
+        "products_4"
       ]
     },
     "resolver": "favour_sources"

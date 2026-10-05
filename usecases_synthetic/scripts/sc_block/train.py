@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Train a per-domain SC-Block encoder (supervised contrastive blocking).
 
-Implements R5 EM blocking sub-D (B8) from
-``plans/plan_s1_scale.md``: produce one HuggingFace-format checkpoint
+Produce one HuggingFace-format checkpoint
 per domain at
 ``cache/sc_block_checkpoints/<domain>/run_<ts>/checkpoints/best/`` and
 symlink ``cache/sc_block_checkpoints/<domain>/best/`` to the winning
@@ -10,7 +9,7 @@ run so :class:`usecases_synthetic.lib.sc_block_blocker.SCBlockBlocker`
 can load it via
 :func:`transformers.AutoModel.from_pretrained`.
 
-Recipe (user-signed-off 2026-05-10)
+Recipe
 -----------------------------------
 
 - **Encoder**: ``roberta-base`` (RoBERTa tokenizer handles
@@ -20,7 +19,7 @@ Recipe (user-signed-off 2026-05-10)
   0.07). Cluster-balanced batches: 32 distinct clusters x 2 records =
   batch 64. Singletons excluded by default so every anchor has at
   least one in-batch positive.
-- **Hard negatives**: in-batch random only (v1).
+- **Hard negatives**: in-batch random only.
 - **Hyperparameters**: lr 2e-5, weight_decay 0.01, warmup_ratio 0.1,
   epochs 10, max_len 128, fp32 (MPS autocast is unreliable).
 - **Per-domain field set** (matches the per-domain Ditto fields so
@@ -83,6 +82,7 @@ from usecases_synthetic.lib.column_mapping import apply_column_mapping  # noqa: 
 from usecases_synthetic.lib.domain_config import (  # noqa: E402
     USECASES_DIR,
     data_root_for_domain,
+    task_dir,
 )
 from usecases_synthetic.lib.loaders import (  # noqa: E402
     load_domain_sources,
@@ -109,7 +109,7 @@ def _em_dir_for_domain(domain: str) -> Path:
     ``usecases/<domain>`` path.
     """
     root = data_root_for_domain(domain) or USECASES_DIR
-    return root / domain / "input" / "entitymatching"
+    return task_dir(domain, root=root) / "input" / "entitymatching"
 
 
 logger = logging.getLogger("sc_block.train")
@@ -449,8 +449,9 @@ def train(
     from torch.optim import AdamW
     from transformers import AutoModel, AutoTokenizer, get_linear_schedule_with_warmup
 
-    # Blocking text_cols may be narrower than the matching field set (e.g.
-    # papers blocks on [title] only); fall back to DOMAIN_TEXT_COLS otherwise.
+    # Blocking text_cols may be narrower than the matching field set via
+    # SC_BLOCK_TEXT_COLS_OVERRIDE (empty, so every domain, papers included,
+    # blocks on DOMAIN_TEXT_COLS).
     text_cols = SC_BLOCK_TEXT_COLS_OVERRIDE.get(domain, DOMAIN_TEXT_COLS[domain])
     timestamp = time.strftime("%Y%m%d-%H%M%S")
     run_dir = output_dir / f"run_{timestamp}"
@@ -473,7 +474,7 @@ def train(
     logger.info("text_cols=%s", text_cols)
 
     # ----- Data prep
-    # R10-G: ``data_override`` lets a variant-retrain caller inject
+    # ``data_override`` lets a variant-retrain caller inject
     # pre-loaded (K8-resolved) variant sources + corner_filled splits so
     # the variant encoder trains on the perturbed data without this
     # function reaching into the baseline ``usecases/<domain>/`` dir.
@@ -715,8 +716,7 @@ _DEFAULT_EVAL_PAIRS: dict[str, tuple[str, str]] = {
     # products: anchor pair is products_1 ↔ products_2 (the largest
     # authored pair: 812 ↔ 812 rows, ~1800 train pairs).
     "products": ("products_1", "products_2"),
-    # papers: anchor pair is dblp ↔ crossref; both have ~60k records
-    # with the canonical 15-attr target schema.
+    # papers: anchor pair is dblp ↔ crossref; both have ~60k records.
     "papers": ("dblp", "crossref"),
 }
 

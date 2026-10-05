@@ -1,49 +1,49 @@
 {
   "best_strategy": "MaximumBipartiteMatching",
   "before": {
-    "total_correspondences": 1959,
-    "total_clusters": 454,
-    "oversized_clusters": 35,
-    "target_range_clusters": 419,
-    "max_cluster_size": 146
+    "total_correspondences": 3556,
+    "total_clusters": 393,
+    "oversized_clusters": 30,
+    "target_range_clusters": 363,
+    "max_cluster_size": 322
   },
   "after": {
-    "total_correspondences": 1523,
-    "total_clusters": 647,
+    "total_correspondences": 1789,
+    "total_clusters": 753,
     "oversized_clusters": 0,
-    "target_range_clusters": 647,
+    "target_range_clusters": 753,
     "max_cluster_size": 4
   },
   "strategies": [
     {
       "strategy": "MaximumBipartiteMatching",
-      "correspondences_after": 1523,
-      "clusters_after": 647,
+      "correspondences_after": 1789,
+      "clusters_after": 753,
       "oversized_after": 0,
-      "target_range_after": 647,
+      "target_range_after": 753,
       "max_cluster_size_after": 4,
-      "oversized_fixed": 35,
-      "collateral_damage": -228
+      "oversized_fixed": 30,
+      "collateral_damage": -390
     },
     {
       "strategy": "GreedyOneToOne",
-      "correspondences_after": 1503,
-      "clusters_after": 641,
+      "correspondences_after": 1729,
+      "clusters_after": 727,
       "oversized_after": 0,
-      "target_range_after": 641,
+      "target_range_after": 727,
       "max_cluster_size_after": 4,
-      "oversized_fixed": 35,
-      "collateral_damage": -222
+      "oversized_fixed": 30,
+      "collateral_damage": -364
     },
     {
       "strategy": "StableMatching",
-      "correspondences_after": 1489,
-      "clusters_after": 631,
+      "correspondences_after": 1685,
+      "clusters_after": 709,
       "oversized_after": 0,
-      "target_range_after": 631,
+      "target_range_after": 709,
       "max_cluster_size_after": 4,
-      "oversized_fixed": 35,
-      "collateral_damage": -212
+      "oversized_fixed": 30,
+      "collateral_damage": -346
     }
   ]
 }

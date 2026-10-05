@@ -1,0 +1,446 @@
+{
+  "usecase": "music",
+  "run_id": "",
+  "silver_source": "p1_run_20260924T150839Z",
+  "headline": {
+    "RF": {
+      "composite_score": 0.8161080657152686
+    },
+    "SR": {
+      "bcubed_f1": 0.8239392030105946,
+      "macro_accuracy": 0.6963173061285705,
+      "composite_score": 0.6378147278485808
+    }
+  },
+  "coverage": {
+    "entity": {
+      "RF": {
+        "n_rows_output": 31090,
+        "n_rows_largest_input": 22627,
+        "row_gain_vs_largest_input": 0.37402218588412073,
+        "fusion_ratio": 0.14577034416211002
+      },
+      "SR": {
+        "n_reference": 3624,
+        "row_count_abs_diff": 27466,
+        "row_count_rel_diff": 7.578918322295806,
+        "n_recovered": 2779,
+        "n_partial": 845,
+        "n_lost": 0,
+        "n_fabricated": 27466,
+        "recovery_rate": 0.766832229580574
+      }
+    },
+    "fact": {
+      "RF": {
+        "density_output": 0.8415366677388227,
+        "density_largest_input": 0.9843439253988597,
+        "density_gain": -0.142807257660037
+      },
+      "SR": {
+        "per_column_drift_normalized": {
+          "artist": 0.36388573991573886,
+          "label": 0.5191312109146727,
+          "release-date": 1.0,
+          "release-country": 0.5968755425668446,
+          "name": 0.1821180836936227,
+          "duration": 0.020988307317448884,
+          "genre": 0.6078532743961436
+        },
+        "overall_drift": 0.4701217369720673,
+        "density_delta_per_attribute": {
+          "name": {
+            "reference_density": 1.0,
+            "pipe_density": 1.0,
+            "delta": 0.0
+          },
+          "artist": {
+            "reference_density": 1.0,
+            "pipe_density": 1.0,
+            "delta": 0.0
+          },
+          "release-date": {
+            "reference_density": 0.9555739514348786,
+            "pipe_density": 0.7020907044065616,
+            "delta": -0.2534832470283169
+          },
+          "release-country": {
+            "reference_density": 0.9183222958057395,
+            "pipe_density": 0.7473142489546478,
+            "delta": -0.17100804685109172
+          },
+          "label": {
+            "reference_density": 0.7157836644591611,
+            "pipe_density": 0.7277902862656802,
+            "delta": 0.012006621806519124
+          },
+          "genre": {
+            "reference_density": 0.7157836644591611,
+            "pipe_density": 0.7212930202637504,
+            "delta": 0.005509355804589333
+          },
+          "tracks": {
+            "reference_density": 1.0,
+            "pipe_density": 1.0,
+            "delta": 0.0
+          },
+          "duration": {
+            "reference_density": 1.0,
+            "pipe_density": 0.8338050820199421,
+            "delta": -0.16619491798005792
+          }
+        },
+        "value_density_delta_mean": -0.07164627928104476
+      }
+    },
+    "source_based": {
+      "RF": {},
+      "SR": {
+        "same_source_collision_rate": {
+          "reference": 0.19619205298013245,
+          "pipe": 0.0,
+          "delta": -0.19619205298013245,
+          "by_source": {
+            "discogs": {
+              "reference": 0.15176600441501104,
+              "pipe": 0.0,
+              "delta": -0.15176600441501104
+            },
+            "lastfm": {
+              "reference": 0.07560706401766004,
+              "pipe": 0.0,
+              "delta": -0.07560706401766004
+            },
+            "musicbrainz": {
+              "reference": 0.07781456953642384,
+              "pipe": 0.0,
+              "delta": -0.07781456953642384
+            }
+          }
+        },
+        "source_mix_distribution_js": 0.6853023207249527,
+        "per_source_coverage_rate": {
+          "discogs": {
+            "reference": 0.7157836644591612,
+            "pipe": 0.7277902862656803,
+            "delta": 0.012006621806519124
+          },
+          "lastfm": {
+            "reference": 0.6771523178807947,
+            "pipe": 0.3173045995496944,
+            "delta": -0.35984771833110024
+          },
+          "musicbrainz": {
+            "reference": 1.0,
+            "pipe": 0.15320038597619814,
+            "delta": -0.8467996140238019
+          }
+        },
+        "source_mix_distribution_reference": {
+          "discogs|musicbrainz": 0.3228476821192053,
+          "discogs|lastfm|musicbrainz": 0.39293598233995586,
+          "lastfm|musicbrainz": 0.28421633554083886
+        },
+        "source_mix_distribution_pipe": {
+          "discogs": 0.6276937922161466,
+          "discogs|musicbrainz": 0.047571566420070766,
+          "discogs|lastfm|musicbrainz": 0.05252492762946285,
+          "lastfm": 0.2191058218076552,
+          "lastfm|musicbrainz": 0.04567385011257639,
+          "musicbrainz": 0.007430041814088131
+        }
+      }
+    }
+  },
+  "consistency": {
+    "RF": {
+      "consistency_score": 0.9723335146165859,
+      "n_evaluated": 200423,
+      "n_consistent": 194878,
+      "n_inconsistent": 5545,
+      "per_column": {
+        "id": {
+          "consistency_score": null,
+          "n_evaluated": 0,
+          "n_consistent": 0,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": true,
+          "skipped": true,
+          "skip_reason": "identifier_column"
+        },
+        "name": {
+          "consistency_score": 1.0,
+          "n_evaluated": 31090,
+          "n_consistent": 31090,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "artist": {
+          "consistency_score": 1.0,
+          "n_evaluated": 31090,
+          "n_consistent": 31090,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "release-date": {
+          "consistency_score": 1.0,
+          "n_evaluated": 21828,
+          "n_consistent": 21828,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "release-country": {
+          "consistency_score": 1.0,
+          "n_evaluated": 23234,
+          "n_consistent": 23234,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "label": {
+          "consistency_score": 1.0,
+          "n_evaluated": 22627,
+          "n_consistent": 22627,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false
+        },
+        "genre": {
+          "consistency_score": 1.0,
+          "n_evaluated": 22425,
+          "n_consistent": 22425,
+          "n_inconsistent": 0,
+          "failure_counts": {},
+          "excluded_from_dataset_score": false,
+          "diagnostics": {
+            "taxonomy": {
+              "exhaustive": true,
+              "membership_enforced": true,
+              "n_values_checked": 22425,
+              "n_known_values": 22425,
+              "n_unknown_values": 0,
+              "known_value_rate": 1.0
+            }
+          }
+        },
+        "tracks": {
+          "consistency_score": 0.8216789964618848,
+          "n_evaluated": 31090,
+          "n_consistent": 25546,
+          "n_inconsistent": 5544,
+          "failure_counts": {
+            "items.minLength": 357,
+            "maxItems": 1,
+            "minItems": 5186
+          },
+          "excluded_from_dataset_score": false
+        },
+        "duration": {
+          "consistency_score": 0.9999413111098069,
+          "n_evaluated": 17039,
+          "n_consistent": 17038,
+          "n_inconsistent": 1,
+          "failure_counts": {
+            "maximum": 1
+          },
+          "excluded_from_dataset_score": false
+        }
+      },
+      "columns_missing_from_dataframe": [],
+      "extra_columns_ignored": [
+        "_id",
+        "_fusion_sources",
+        "_fusion_source_datasets"
+      ],
+      "n_empty_columns_excluded": 0
+    },
+    "_design_extensions_pending": "Broader consistency design (ontology-style disjointness checks, cross-attribute constraints) is still pending. The target-schema consistency_score (native + x-pydi constraints) is the first first-class consistency signal.",
+    "SR": {
+      "consistency_score_pipe": 0.9723335146165859,
+      "consistency_score_reference": 0.9390179113539769,
+      "delta": 0.03331560326260896,
+      "per_column": {
+        "artist": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "duration": {
+          "consistency_score_pipe": 0.9999413111098069,
+          "consistency_score_reference": 1.0,
+          "delta": -5.868889019311485e-05
+        },
+        "genre": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 0.38049344641480337,
+          "delta": 0.6195065535851967
+        },
+        "id": {
+          "consistency_score_pipe": null,
+          "consistency_score_reference": null,
+          "delta": null
+        },
+        "label": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "name": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "release-country": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "release-date": {
+          "consistency_score_pipe": 1.0,
+          "consistency_score_reference": 1.0,
+          "delta": 0.0
+        },
+        "tracks": {
+          "consistency_score_pipe": 0.8216789964618848,
+          "consistency_score_reference": 1.0,
+          "delta": -0.1783210035381152
+        }
+      }
+    }
+  },
+  "correctness": {
+    "cluster": {
+      "SR": {
+        "bcubed": {
+          "precision": 0.9994808341265035,
+          "recall": 0.7008474018619394,
+          "f1": 0.8239392030105946
+        },
+        "alignment": {
+          "mean_jaccard": 0.8929043784260082,
+          "matched_cluster_rate_at_threshold": 0.9445364238410596,
+          "matched_threshold": 0.5,
+          "size_match_rate": 0.766832229580574,
+          "mean_size_delta": -0.8576158940397351,
+          "max_size_overshoot": -115
+        }
+      }
+    },
+    "fact": {
+      "SR": {
+        "per_attribute": {
+          "name": {
+            "accuracy": 0.6244481236203091,
+            "count": 3624,
+            "similarity_mean": 0.8649655237717764,
+            "accuracy_similarity_gap": 0.24051740015146728,
+            "mismatch_fingerprint": "normalization_difference_suspected"
+          },
+          "artist": {
+            "accuracy": 0.9285320088300221,
+            "count": 3624,
+            "similarity_mean": 0.9410278701097703,
+            "accuracy_similarity_gap": 0.012495861279748222,
+            "mismatch_fingerprint": "real_value_errors"
+          },
+          "release-date": {
+            "accuracy": 0.7840023101357205,
+            "count": 3463,
+            "similarity_mean": 0.7840023101357205,
+            "pct_within_tolerance": 0.0,
+            "day_delta_mean": 165.2751971954426
+          },
+          "release-country": {
+            "accuracy": 0.3641826923076923,
+            "count": 3328,
+            "similarity_mean": 0.6250378258427498,
+            "pct_within_tolerance": 0.0
+          },
+          "label": {
+            "accuracy": 0.9032382420971473,
+            "count": 2594,
+            "similarity_mean": 0.9227588655086257,
+            "pct_within_tolerance": 0.0
+          },
+          "genre": {
+            "accuracy": 0.36584425597532766,
+            "count": 2594,
+            "similarity_mean": 0.6729902259733168,
+            "pct_within_tolerance": 0.0
+          },
+          "duration": {
+            "accuracy": 0.9039735099337748,
+            "count": 3624,
+            "similarity_mean": 0.9039735099337748,
+            "mae": 96.30207468879668,
+            "medae": 0.0,
+            "pct_within_tolerance": 0.9472958057395143
+          }
+        },
+        "macro_accuracy": 0.6963173061285705,
+        "micro_accuracy": 0.7055708721718962,
+        "conflict_only_accuracy": 0.49959587887463996,
+        "conflict_only_micro_accuracy": 0.6440281030444965,
+        "conflict_only_per_attribute": {
+          "name": {
+            "accuracy": 0.36932344763670066,
+            "count": 2158
+          },
+          "release-country": {
+            "accuracy": 0.13313609467455623,
+            "count": 1014
+          },
+          "duration": {
+            "accuracy": 0.8955132145052244,
+            "count": 3254
+          },
+          "artist": {
+            "accuracy": 0.8759578544061303,
+            "count": 2088
+          },
+          "release-date": {
+            "accuracy": 0.6468827930174563,
+            "count": 2005
+          },
+          "label": {
+            "accuracy": 0.3611111111111111,
+            "count": 360
+          },
+          "genre": {
+            "accuracy": 0.21524663677130046,
+            "count": 223
+          }
+        },
+        "conflict_rate_pipe": 0.1439047925377935,
+        "conflict_rate_reference": 0.9881346578366446,
+        "conflict_rate_delta": -0.844229865298851,
+        "fully_correct_cluster_rate": 0.12527593818984548,
+        "list_attribute_set_metrics": {
+          "tracks": {
+            "set_f1": 0.0005518763796909492,
+            "set_jaccard": 0.0005518763796909492,
+            "count": 3624
+          }
+        }
+      }
+    }
+  },
+  "task_step": {
+    "_placeholder": true,
+    "_design_intent": "Integrate per-stage metrics from PyDI.{schemamatching,entitymatching,fusion}.evaluation. Caller passes them in via the optional task_step_metrics kwarg; orchestrator packs them verbatim into this block."
+  },
+  "aggregated": {
+    "_placeholder": true,
+    "_design_intent": "Two-dimensional weighting (Quality \u00d7 Reference). Revisit after collecting first metric results across multiple pipelines. headline.<level>.composite_score carries a per-reference-level single-axis composite in the meantime."
+  },
+  "warnings": [
+    "Source-attribution and synthesis-rate metrics skipped against silver (silver.cell_provenance is None, cell_provenance_pipe was not passed).",
+    "Source coverage dropped by more than 15pp for 2 source(s); worst: musicbrainz delta=-0.847. Likely cause: blocking-recall or matcher-recall regression on cross-source pairs for that source.",
+    "Possible normalization differences (accuracy \u226a similarity_mean) on text attributes: ['name']. Share the NormalizationSpec between silver builder and pipeline to rule out, or pass a semantic_value_similarity callable to confirm.",
+    "Schema consistency dropped by \u2265 5pp vs silver on 1 column(s); worst: 'tracks' delta=-0.178. The pipeline emits cells that violate the target schema's declared type or constraints (out-of-range values, enum/taxonomy violations). Read consistency.SR.per_column.<column> for the per-side scores."
+  ]
+}

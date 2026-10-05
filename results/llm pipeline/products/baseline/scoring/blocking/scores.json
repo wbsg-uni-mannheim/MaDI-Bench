@@ -1,0 +1,69 @@
+{
+  "task": "products_base",
+  "source_run": "p3_products_20260927T111322Z",
+  "method": "Offline replay of original FAISS exact inner-product blocking from saved normalized rows and embedding cache, k=20, bottom_k=0, random_state=42. No LLM or embedding API calls.",
+  "per_pair": {
+    "products_1__products_2": {
+      "gold_positive_pairs": 50,
+      "retained_gold_positive_pairs": 46,
+      "pair_completeness": 0.92,
+      "candidate_pairs": 16240,
+      "all_cross_source_pairs": 659344,
+      "reduction_ratio": 0.9753694581280788,
+      "logged_count_matches": true,
+      "saved_correspondences_all_in_candidates": true,
+      "saved_correspondences_count": 5010,
+      "query_source": "products_1",
+      "index_source": "products_2"
+    },
+    "products_1__products_3": {
+      "gold_positive_pairs": 50,
+      "retained_gold_positive_pairs": 46,
+      "pair_completeness": 0.92,
+      "candidate_pairs": 15240,
+      "all_cross_source_pairs": 618744,
+      "reduction_ratio": 0.9753694581280788,
+      "logged_count_matches": true,
+      "saved_correspondences_all_in_candidates": true,
+      "saved_correspondences_count": 4801,
+      "query_source": "products_3",
+      "index_source": "products_1"
+    },
+    "products_1__products_4": {
+      "gold_positive_pairs": 50,
+      "retained_gold_positive_pairs": 48,
+      "pair_completeness": 0.96,
+      "candidate_pairs": 12520,
+      "all_cross_source_pairs": 508312,
+      "reduction_ratio": 0.9753694581280788,
+      "logged_count_matches": true,
+      "saved_correspondences_all_in_candidates": true,
+      "saved_correspondences_count": 4314,
+      "query_source": "products_4",
+      "index_source": "products_1"
+    }
+  },
+  "mean_pair_completeness": 0.9333333333333332,
+  "mean_reduction_ratio": 0.9753694581280788,
+  "input_sha256": {
+    "p3_products_rerun_20260927/code/scripts/run_pipeline.py": "3d5d7df31b9f3cf7d91cf84af36fe31169b517795b63f93fe75b4b416102c5f9",
+    "p3_products_rerun_20260927/code/PyDI/pipeline/similarity_set_generation.py": "ae3d1160cbcb4ac38bd986bdb42129de614753fb3dad5f5651882f55cd84beac",
+    "p3_products_rerun_20260927/tasks/base/run_manifest.json": "ba3e108950dd11b1085f90d93a0f8b68fac2f7823a60ffc94364e8675c314612",
+    "p3_products_rerun_20260927/logs/base-351921.out": "6cb4be557feb2f3040490e6579e9a886d2d61e47267bf9592225f41a294be73b",
+    "p3_products_rerun_20260927/results/base/schema_matching/products_1.csv": "4fd3f4efa9a87146c7110f3888a2159ce2e683459891e2b7909444799168ae50",
+    "p3_products_rerun_20260927/results/base/entity_resolution/embeddings/embeddings_products_1_excluded_noem_cluster_id.npy": "9a03681ab0649cb673f22df88be9759f71fb095f51f35901820977d14e925012",
+    "p3_products_rerun_20260927/results/base/schema_matching/products_2.csv": "679589cda06a43dd0a615a9dd038c60abb7616b127bd2c858c838e27d7c95c41",
+    "p3_products_rerun_20260927/results/base/entity_resolution/embeddings/embeddings_products_2_excluded_noem_cluster_id.npy": "9d4ef55e9477c5b3e6be3d7dcbbf7456be0d42a7b50e5770689f5004543503bc",
+    "p3_products_rerun_20260927/results/base/entity_resolution/matching/correspondences_products_1_products_2.csv": "f11dca485951fcf8837c0b63ea8e328b39d5805a7c0560a16c76e822f08b819a",
+    "p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_2_test.csv": "26a9484ac3ce5f4fcf0fec14330fe75ab00489e8bd35b3e66372037d2c3057a7",
+    "p3_products_rerun_20260927/results/base/schema_matching/products_3.csv": "b58b9801ed863681a9bd8af5880f622b6f37d4235861ccc63f35e13bd78d9383",
+    "p3_products_rerun_20260927/results/base/entity_resolution/embeddings/embeddings_products_3_excluded_noem_cluster_id.npy": "b899d00ab5a29463f84dc1a50575f9752725814ebfb2fb06b0045d8d40db374c",
+    "p3_products_rerun_20260927/results/base/entity_resolution/matching/correspondences_products_1_products_3.csv": "f5497540a350e447f8badc1eccf089ac4e5f7849364f4ac4195e828981076319",
+    "p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_3_test.csv": "67877f829da455e5e0bc50a0717bea0e5c235c9342a819c1455d27793515781e",
+    "p3_products_rerun_20260927/results/base/schema_matching/products_4.csv": "a0a67e6eb9616a79dba75c6d1063f9e6fd4b348759069b81e7cbcb65a8e8b7d6",
+    "p3_products_rerun_20260927/results/base/entity_resolution/embeddings/embeddings_products_4_excluded_noem_cluster_id.npy": "e389155e4b298c65ec0a26409de36a159f2cb81ee60f757a2e9dcbb5b71ce1b0",
+    "p3_products_rerun_20260927/results/base/entity_resolution/matching/correspondences_products_1_products_4.csv": "dee1a3afe98aeddd2ca926231184f489ceb7fc1365ed72c9828e8b7cb9ebb2b0",
+    "p3_products_rerun_20260927/tasks/base/runtime/entitymatching/products_1_2_products_4_test.csv": "35b307270f0cbfd4bb2145dbd478af525f037c208f0c927ef38d5d537b4d69c9"
+  },
+  "inputs_unchanged": true
+}

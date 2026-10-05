@@ -1,101 +1,101 @@
 source_ids,brand,model,model_number,product_type,chipset_name,vram_gb,storage_gb,read_speed_mb_s,write_speed_mb_s,bus_type,interface_type,width_mm,length_mm,height_mm,weight_g,storage_connection_type,memory_type,color,form_factor
-"products_1_66284906,products_2_94735407,products_3_94836578,products_4_95303225",ADATA,UV128 Dashdrive Retractable,AUV128-32G-RBE,USB_STICK,,,64.0,90.0,40.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_94807470,products_2_27226970,products_3_78086660,products_4_79085544",ADATA,DashDrive Series UV128,AUV128-32G-RBE,USB_STICK,,,32.0,90.0,40.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_72380436,products_2_86677460,products_3_18207118,products_4_24687585",Moweek,Moweek Multifunctional USB Flash Drive 128gb,,USB_STICK,,,128.0,,,USB 2.0,USB 2.0 and OTG,,,,,USB 2.0 and OTG,,,
-"products_1_24673290,products_2_14997181,products_3_18997869,products_4_22519203",Biyetimi,Biyetimi Multifunctional USB Flash Drive,EMO-006,USB_STICK,,,64.0,,,USB 2.0,USB 2.0 and OTG,,,,,USB 2.0 and OTG,,,
-"products_1_73035052,products_2_5992480,products_3_10627843,products_4_15081125",Wansenda,Wansenda Usb Flash Drive,WSD TC108,USB_STICK,,,16.0,,,USB 3.0,USB Type-A and USB Type-C,,,,,USB Type-A and USB Type-C,,,
-"products_1_16479164,products_2_21730806,products_3_25774360,products_4_40216773",Sandisk,iXpand Flash Drive,SDIX30C-032G-GN6NN,USB_STICK,,,32.0,20.0,5.0,USB 3.0,USB Type-A and Lightning,,,,,USB Type-A and Lightning,NAND flash,,
-"products_1_27965637,products_2_37065189,products_3_39434551,products_4_64958976",Kingston,DataTraveler MicroDuo 3C,DTDUO3C/64GB,USB_STICK,,,64.0,100.0,15.0,USB 3.2 Gen 1,USB Type-A / USB Type-C,,,,,USB Type-A and USB Type-C,,,
-"products_1_24038266,products_2_68662600,products_3_98078792,products_4_8387407",ADATA,S102 Pro,AS102P-32G-RGY,USB_STICK,,,32.0,100.0,50.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_7871781,products_2_52338887,products_3_89550243",ADATA,ADATA C008,AC008-64G-RWE,USB_STICK,,,64.0,112.0,30.0,USB 2.0,USB Type-A,,,,,USB Type-A,NAND flash,,with lid
-"products_1_85544471,products_2_82620263,products_3_5537930,products_4_24048664",Qixing,QIXING USB flash drive,TF-0716,USB_STICK,,,32.0,,,USB 2.0,USB 2.0 and OTG,,,,,USB 2.0 and OTG,,,
-"products_1_23694723,products_2_28963007,products_3_61198101,products_4_94651152",Kingston,DataTraveler DTIG4,DTIG4/8GB,USB_STICK,,,8.0,40.0,10.0,USB 3.0,USB 3.0,,,,,USB Type-A,,,
-"products_1_3957588,products_2_31237395,products_3_31447687,products_4_52499748",Kingston,DataTraveler MicroDuo 3C,DTDUO3C/32GB,USB_STICK,,,32.0,100.0,15.0,USB 3.0,USB Type-A / USB Type-C,,,,,USB Type-A and USB Type-C,,,with lid
-"products_1_2237933,products_2_7582500,products_3_5160662",Kingston,DataTraveler Elite G2,DTEG2/64GB,USB_STICK,,,64.0,180.0,70.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_13600999,products_2_88687859",Sandisk,Ultra Dual Drive Go USB Type-C,SDDDC3-256G-G46,USB_STICK,,,256.0,400.0,30.0,USB 3.2 Gen 1,USB Type-A and Type-C,,,,,USB Type-A and USB Type-C,,,
-"products_1_18451047,products_2_54361651,products_3_80768725",Sandisk,ULTRA FLAIR,SDCZ73-032G,USB_STICK,,,32.0,150.0,22.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,without lid
-"products_1_84278896,products_2_4557639,products_3_51601254,products_4_69971378",Sandisk,iXpand Flash Drive Go,SDIX60N-128G-GN6NE,USB_STICK,,,128.0,150.0,130.0,USB 3.0,USB Type-A and Lightning,,,,,USB Type-A and Lightning,,,
-"products_1_70026799,products_2_8846424,products_3_17471458,products_4_20551993",Kingston,DataTraveler 80,DT80/32GB,USB_STICK,,,32.0,200.0,60.0,USB 3.2 Gen 1,USB Type-C,,,,,USB Type-C,,,with lid
-"products_1_13163468,products_2_22689923,products_3_17406325,products_4_23589087",Kingston,DataTraveler MicroDuo OTG,DTDUO3/64GB,USB_STICK,,,64.0,70.0,15.0,USB 3.0,USB Type-A and Micro-USB,,,,,USB Type-A and Micro-USB,NAND flash,,
-"products_1_12424905,products_2_23846849,products_3_96863812",Sandisk,iXpand Flash Drive,SDIX30C-128G-GN6NE,USB_STICK,,,128.0,70.0,10.0,USB 3.0,USB Type-A and Lightning,,,,,USB Type-A and Lightning,NAND flash,,
-"products_1_16849538,products_2_36176263,products_3_61906477",Kingston,DataTraveler Locker+ G3,DTLPG3/64GB,USB_STICK,,,64.0,135.0,40.0,USB 3.2 Gen 1,USB Type-A,,,,,USB Type-A,NAND flash,,with lid
-"products_1_65837616,products_2_69985226",ADATA,Classic C008,,USB_STICK,,,16.0,100.0,30.0,USB 2.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_12049659,products_2_69277053,products_3_50802898,products_4_80286980",Wansenda,Wansenda Usb Flash Drive,WSD TC108,USB_STICK,,,16.0,,,USB 3.0,USB Type-A and USB Type-C,,,,,USB Type-A and USB Type-C,,,
-"products_1_86835292,products_2_95926675,products_3_53357791,products_4_43921466",Kingston,DataTraveler SE9 G2,DTSE9G2/16GB,USB_STICK,,,16.0,100.0,15.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
-"products_1_1252810,products_2_3708141,products_3_22646558,products_4_60975501",Kingston,DataTraveler SE9,DTSE9H/16GB,USB_STICK,,,16.0,10.0,,USB 2.0,USB Type-A,,,,,USB Type-A,,,without lid
-"products_1_16588524,products_2_33848192,products_3_82272597",Sandisk,iXpand Flash Drive,SDIX30C-016G-GN6NN,USB_STICK,,,16.0,560.0,53.0,USB 3.2 Gen 1,USB Type-A and Lightning,,,,,USB Type-A and Lightning,,,
-"products_1_21663730,products_2_58710753,products_3_18175862,products_4_50360533",Hewlett Packard Enterprise,,759208-B21,HDD,,,300.0,,,SAS,SAS 12G,,,,,2.5-inch SAS,,,2.5-inch
-"products_1_14296399,products_2_51932172,products_3_47613152,products_4_51893803",Hewlett Packard Enterprise,Dual Port Enterprise,619291-B21,HDD,,,900.0,,,SAS,SAS 6G,,,,,2.5-inch SAS,,,2.5-inch
-"products_1_21446102,products_2_25776315",Western Digital,My Passport,WDBYNN0010BWT-WESN,HDD,,,1000.0,,,USB,USB 3.0,,,,,2.5-inch External,,,2.5-inch
-"products_1_71883742,products_2_75172014,products_3_29257602,products_4_45372457",Western Digital,WD Red,WD100EFAX,HDD,,,10000.0,210.0,210.0,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_95573755,products_2_42633194,products_3_26401991,products_4_65070554",Seagate,Constellation ES.3,ST2000NM0023,HDD,,,2000.0,175.0,175.0,SAS,SAS 6G,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_47930825,products_2_61698087,products_3_693299,products_4_4601555",Western Digital,Red Plus,WD101EFAX,HDD,,,10000.0,215.0,,SATA,SAS 6G,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_98624308,products_2_38470155,products_3_82337278",Western Digital,WD Black,WD2003FZEX,HDD,,,2000.0,164.0,164.0,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_97905619,products_2_37669303,products_3_66040433,products_4_9556599",Toshiba,MG08 Series,MG08ACA16TA,HDD,,,16000.0,262.0,262.0,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_48281373,products_2_91504889,products_3_58718563,products_4_68607451",Seagate,Cheetah 15K.7,ST3300657SS,HDD,,,300.0,204.0,204.0,SAS,SAS 6G,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_87572356,products_2_5623956,products_3_30114774,products_4_31966474",Hewlett Packard Enterprise,,652564-B21,HDD,,,300.0,,,SAS,SAS 6G,,,,,2.5-inch SAS,,,2.5-inch
-"products_1_82091590,products_2_97351682,products_3_52720711,products_4_62327624",Seagate,Cheetah 15K.7,ST3600057SS,HDD,,,600.0,204.0,204.0,SAS,SAS 6G,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_6557275,products_2_53105255,products_3_64571081",Seagate,M3 Portable,STSHX-M401TCBM,HDD,,,4000.0,120.0,,USB,USB 3.0,,,,,2.5-inch External,,,2.5-inch
-"products_1_42551174,products_2_22018751,products_3_42008504,products_4_67818648",Seagate,Constellation Es.2,ST33000650NS,HDD,,,3000.0,155.0,,SATA,SAS 6G,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_31239709,products_2_52606639,products_3_76507424,products_4_87067165",Western Digital,WD Red,WD80EFZX,HDD,,,8000.0,178.0,178.0,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_53672855,products_2_56280047,products_3_55948609,products_4_57859900",Toshiba,X300,HDWE140EZSTA,HDD,,,4000.0,,,SATA,SAS 6G,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_47203114,products_2_86393668,products_3_35980976,products_4_85843294",Hewlett Packard Enterprise,Critical 7.2K,872491-B21,HDD,,,4000.0,210.0,210.0,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_28606757,products_2_1830308,products_3_5834181",Western Digital,My Passport,WDBYVG0010BBK-WESN,HDD,,,1000.0,,,USB,USB 3.0,,,,,2.5-inch External,,,2.5-inch
-"products_1_83479410,products_2_4784233,products_3_82786105",Hewlett Packard,"600GB 6G 15K 3.5"" SAS DP SAS Server Hard Disk",516828-B21,HDD,,,600.0,,,SAS,SAS 6G,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_79539273,products_2_3427495,products_3_67086760",Seagate,Constellation ES.3,ST4000NM0023,HDD,,,4000.0,175.0,175.0,SAS,SATA III,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_18406024,products_2_41211362,products_3_91452319,products_4_3817876",Seagate,Enterprise,ST8000NM000A,HDD,,,8000.0,,,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_70715850,products_2_71688211,products_3_20462564,products_4_51881114",Seagate,Exos,ST2000NX0253,HDD,,,2000.0,136.0,136.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_23418968,products_2_35250546,products_3_56747635,products_4_74691870",Seagate,Enterprise Capacity,ST4000NM0025,HDD,,,4000.0,215.0,,SAS,SAS 12G,,,,,3.5-inch SAS,,,3.5-inch
-"products_1_4586576,products_2_82047845,products_3_84832709,products_4_85163859",Hewlett Packard Enterprise,"600GB 6G SAS 10K 2.5"" SC Server Hard Disk",652583-B21,HDD,,,600.0,205.0,205.0,SAS,SAS 6G,,,,,2.5-inch SAS,,,2.5-inch
-"products_1_92213757,products_2_63735890,products_3_50853852,products_4_92930814",Western Digital,PURPLE NAS Hard Drive,WD80PURZ,HDD,,,8000.0,178.0,,SATA,SAS 6G,,,,,3.5-inch SATA,,,3.5-inch
-"products_1_44551871,products_2_63973332,products_3_17899082,products_4_46802224",Hewlett Packard Enterprise,2.4TB SAS 12G 10K SFF SC 512E DS HDD,881457-B21,HDD,,,2400.0,,,SAS,SAS 12G,,,,,2.5-inch SAS,,,2.5-inch
-"products_1_675322,products_2_57731827,products_3_2823713,products_4_77070657",Western Digital,WD Blue,WDS500G1B0A,SSD,,,500.0,545.0,525.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_25541170,products_2_63895377,products_3_92310352,products_4_66179582",ADATA,XPG Spectrix S40G RGB,AS40G-256GT-C,SSD,,,256.0,3500.0,3000.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_36708398,products_2_44040429,products_3_12636108",Seagate,Ironwolf 110,ZA960NM10011,SSD,,,960.0,560.0,535.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_67813666,products_2_49236530,products_3_58345950,products_4_93635611",Intel,S4500,SSDSC2KB019T7,SSD,,,1900.0,500.0,490.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_25370721,products_2_85950331,products_3_86362376,products_4_87017633",Seagate,BarraCuda Fast Portable SSD,STJM2000400,SSD,,,2000.0,540.0,540.0,USB Type C,USB 3.2 Gen 2,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_61786604,products_2_54049265,products_3_84153542",ADATA,Spectrix S40G,AS40G-512GT-C,SSD,,,512.0,3500.0,2400.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_72884596,products_2_10329471,products_3_49739678,products_4_63700999",Samsung,860 EVO,MZ-76E250B/EU,SSD,,,250.0,550.0,520.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_62078047,products_2_7450716,products_3_12117192,products_4_22696080",Samsung,SSD 870 QVO,MZ-77Q1T0BW,SSD,,,1000.0,560.0,530.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_26353099,products_2_55562405,products_3_9744227,products_4_43400546",Samsung,970 EVO Plus,MZ-V7S1T0B/AM,SSD,,,1000.0,3500.0,3300.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_32738830,products_2_35384524,products_3_43317133,products_4_49228214",Patriot,Burst,PBU240GS25SSDR,SSD,,,240.0,555.0,500.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_80641070,products_2_46775597,products_3_86850217,products_4_77571226",Corsair,Force Series MP510,CSSD-F960GBMP510,SSD,,,960.0,3480.0,3000.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_84704597,products_2_1856731,products_3_17756844,products_4_51924648",Team Group,L3 EVO,T253LE240GTC101,SSD,,,240.0,530.0,470.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_15871125,products_2_43883075,products_3_23016862,products_4_67488123",Gigabyte,GIGABYTE NVMe SSD,GP-GSM2NE3128GNTD,SSD,,,128.0,1550.0,550.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_62156844,products_2_11565762,products_3_34301207,products_4_52586114",Western Digital,WD Blue,WDS250G1B0A,SSD,,,250.0,540.0,500.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_10006478,products_2_8399803,products_3_13012302,products_4_39947591",Seagate,Nytro 1551,XA480ME10063,SSD,,,480.0,560.0,535.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_705891,products_2_59308229,products_3_93741977",Silicon Power,Ace A80,SP256GBP34A80M28,SSD,,,256.0,3100.0,1100.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_31663634,products_2_6540379,products_3_79517683,products_4_39481519",Intel,SSD 660P,SSDPEKNW512G8X1,SSD,,,512.0,1800.0,1800.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_10565065,products_2_72827975,products_3_36838708,products_4_38328055",Western Digital,WD Blue SN550,WDS500G2B0C,SSD,,,250.0,2400.0,1750.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_6186646,products_2_37639686,products_3_40157515,products_4_45835121",Samsung,850 Series Evo Basic,MZ-75E500B/EU,SSD,,,500.0,540.0,520.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_8217265,products_2_3713348,products_3_4121449,products_4_59583035",Western Digital,WD Blue SN550,WDS250G2B0C,SSD,,,250.0,2400.0,950.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_61307663,products_2_72477277,products_3_65987337,products_4_70539715",Samsung,Portable SSD T5,MU-PA1T0B/AM,SSD,,,1000.0,540.0,540.0,USB Type C,USB 3.1 Gen 2,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_61433092,products_2_33137302,products_3_49263678,products_4_58196146",Kingston,A400,SA400S37/240G,SSD,,,240.0,500.0,350.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
-"products_1_19453676,products_2_69750969,products_3_38275815,products_4_54530409",Western Digital,P1,CT2000P1SSD8,SSD,,,2000.0,2000.0,1700.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_1088849,products_2_21120495,products_3_18576054,products_4_21085676",ADATA,XPG SX8200 Pro,ASX8200PNP-512GT-C,SSD,,,512.0,3500.0,3000.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_74635538,products_2_80184260,products_3_22323468,products_4_98406611",Western Digital,WD Black SN750,WDS500G3XHC,SSD,,,500.0,3470.0,2600.0,NVMe,PCIe 3.0 x4,,,,,M.2,,,M.2 2280
-"products_1_6817605,products_2_9479923,products_3_13750671,products_4_45991513",Sapphire,Sapphire Pulse Radeon RX 550 2G GDDR5 64-bit,11268-21-20G,GPU,AMD Radeon RX 550,2.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,1.5 Slot
-"products_1_39143445,products_2_49222969,products_3_63864528,products_4_6875909",Gigabyte,Gigabyte GeForce GT 1030 Silent Low Profile 2G,GV-N1030SL-2GL,GPU,NVIDIA GeForce GT 1030,2.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_40530169,products_2_64306530,products_3_25666817,products_4_35456507",Gigabyte,Gigabyte GeForce RTX 2080 Ti TURBO 11G,GV-N208TTURBO-11GC,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Dual Slot
-"products_1_52172790,products_2_9857576,products_3_37026032,products_4_97231319",Zotac,GeForce RTX 2080 8GB GDDR6 SUPER AMP,ZT-T20820D-10P,GPU,GeForce RTX 2080 Super,8.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Dual Slot
-"products_1_22055981,products_2_30142035,products_3_85807926",Nvidia,NVIDIA Quadro P400,VCQP400-PB,GPU,NVIDIA Quadro P400,2.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Single Slot
-"products_1_7179251,products_2_23373474,products_3_69586730,products_4_85028460",Gigabyte,Gigabyte GeForce GTX 1660 OC 6G,GV-N1660OC-6GD,GPU,NVIDIA GeForce GTX 1660,6.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_68277426,products_2_98699269,products_3_60658347,products_4_65320459",Gigabyte,Gigabyte GeForce GTX 1660 Ti GAMING OC 6G,GV-N166TGAMING OC-6GD,GPU,NVIDIA GeForce GTX 1660 Ti,6.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Dual Slot
-"products_1_66404124,products_2_11618943,products_3_420268,products_4_26193625",Palit,Palit GeForce RTX 3080 GamingPro,NED3080019IA-132AA,GPU,NVIDIA GeForce RTX 3080,10.0,,,,PCI Express x16,PCIe 4.0 x16,,,,,,GDDR6X,,2.7 Slot
-"products_1_72112341,products_2_1697045,products_3_90625496,products_4_60632785",Asus,ASUS Phoenix GeForce GTX 1660 OC edition 6GB,PH-GTX1660-O6G,GPU,NVIDIA GeForce GTX 1660,6.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,2.3 Slot
-"products_1_46100256,products_2_58630412,products_3_54755582,products_4_60529926",MSI,GeForce GTX 1050 Ti 4GB Boost,V809-2404R,GPU,GeForce GTX 1050 Ti,4.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_28212814,products_2_39418692,products_3_40032101,products_4_18197151",PNY,GeForce RTX 2070 SUPER 8GB XLR8 Gaming OC Triple Fan Turing Graphics Card,VCG20708STFMPB-O,GPU,GeForce RTX 2070 Super,8.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Dual Slot
-"products_1_46937084,products_2_76673511,products_3_87088183,products_4_7695737",Gigabyte,GeForce GT 1030 Silent,GV-N1030SL-2GL,GPU,GeForce GT 1030,2.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_98557440,products_2_13794201,products_3_12404184,products_4_75418922",Asus,ASUS GT 710 2GB GDDR5,GT710-SL-2GD5-CSM,GPU,NVIDIA GeForce GT 710,2.0,,,,PCI Express x8,PCIe 2.0 x8,,,,,,GDDR5,,Single Slot
-"products_1_18374077,products_2_54337235",Gigabyte,Gigabyte NVIDIA GeForce GT 710 2GB GDDR5 Low Profile,GV-N710D5-2GIL,GPU,NVIDIA GeForce GT 710,2.0,,,,PCI Express x8,PCIe 2.0 x8,,,,,,GDDR5,,Single Slot
-"products_1_26544937,products_2_71970308,products_3_55362281,products_4_70011599",Gigabyte,Gigabyte GeForce RTX 2080 Ti GAMING OC 11G,GV-N208TGAMING OC-11GC,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Triple Slot
-"products_1_5371368,products_2_14653650,products_3_18402228,products_4_66415332",EVGA,EVGA GeForce GT 710 Single Slot 2GB,02G-P3-2717-KR,GPU,NVIDIA GeForce GT 710,2.0,,,,PCI Express x16,PCIe 2.0 x16,,,,,,DDR3,,Single Slot
-"products_1_22326836,products_2_62202192,products_3_47205216,products_4_76264958",Sapphire,Radeon RX 580 Overclocked Pulse Dual-Fan,,GPU,Radeon RX 580,8.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_8904814,products_2_5278516,products_3_45917002,products_4_4210690",Gigabyte,Gigabyte AORUS GeForce RTX 1660 Ti 6G,GV-N166TAORUS-6GD,GPU,NVIDIA GeForce GTX 1660 Ti,6.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Triple Slot
-"products_1_9569117,products_2_15708615,products_3_56037532,products_4_90172558",AMD,AMD Radeon Pro WX 7100,100-505826,GPU,AMD Radeon Pro WX 7100,8.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Single Slot
-"products_1_24614355,products_2_29928344,products_3_47160280,products_4_86658262",MSI,RTX 2080 Ti GAMING X TRIO,912-V371-026,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,Triple Slot
-"products_1_44678762,products_2_66038575,products_3_89923273,products_4_66417148",Asus,ASUS ROG Strix GeForce RTX 2060 SUPER EVO OC edition,ROG-STRIX-RTX2060S-O8G-EVO-GAMING,GPU,NVIDIA GeForce RTX 2060 SUPER,8.0,,,,PCI Express x16,PCIe 4.0 x16,,,,,,GDDR6,,2.5 Slot
-"products_1_19733045,products_2_90143852,products_3_93281278,products_4_52225477",Asus,ASUS ROG Strix GeForce RTX 2070 OC Edition,ROG-STRIX-RTX2070-O8G-GAMING,GPU,NVIDIA GeForce RTX 2070,8.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR6,,2.5 Slot
-"products_1_19807424,products_2_8975311,products_3_64356572,products_4_71377449",Asus,GeForce GTX 1660 6GB TUF Boost,TUF-GTX1660-6G-GAMING,GPU,GeForce GTX 1660,6.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,Dual Slot
-"products_1_35479899,products_2_41594394,products_3_87884973,products_4_32492686",Gigabyte,Gigabyte Radeon RX 5700 XT GAMING OC 8G,GV-R57XTGAMING OC-8GD,GPU,AMD Radeon RX 5700 XT,8.0,,,,PCI Express x16,PCIe 4.0 x16,,,,,,GDDR6,,2.5 Slot
-"products_1_19001308,products_2_55013364,products_3_18687923,products_4_22290248",Gigabyte,Gigabyte GeForce GTX 1050 Ti OC 4G,GV-N105TOC-4GD,GPU,NVIDIA GeForce GTX 1050 Ti,4.0,,,,PCI Express x16,PCIe 3.0 x16,,,,,,GDDR5,,ATX
+"products_1_66284906,products_2_94735407,products_4_95303225",ADATA,UV128 Dashdrive Retractable,AUV128-32G-RBE,USB_STICK,,,64.0,90.0,40.0,USB 3.0,,20.0,60.0,9.0,10.0,,,Black/Blue,
+"products_1_94807470,products_3_78086660,products_4_79085544",ADATA,DashDrive Series UV128,AUV128-32G-RBE,USB_STICK,,,32.0,90.0,40.0,USB 3.0,USB Type-A,,,,,,,Black/Blue,
+"products_1_72380436,products_2_86677460,products_3_18207118",Moweek,,,USB_STICK,,,128.0,,,USB 2.0,,,,,,,,,
+"products_1_24673290,products_3_18997869,products_4_22519203",Biyetimi,,,USB_STICK,,,64.0,,,USB 2.0,,,,,,,,,
+"products_1_73035052,products_2_5992480,products_3_10627843",Wansenda,,,USB_STICK,,,,,,USB 3.0,,,,,,,,,
+"products_2_21730806,products_3_25774360,products_4_40216773",Sandisk,iXpand Flash Drive,SDIX30C-032G-GN6NN,USB_STICK,,,32.0,20.0,5.0,USB 3.0,USB Type-A and Lightning,,,,,,,Silver/Black,
+"products_1_27965637,products_2_37065189,products_3_39434551,products_4_64958976",Kingston,DataTraveler MicroDuo 3C,DTDUO3C/64GB,USB_STICK,,,64.0,100.0,15.0,USB 3.0,USB Type-A / USB Type-C,,,,,,,,
+"products_2_68662600,products_3_98078792,products_4_8387407",ADATA,,AS102P-32G-RGY,USB_STICK,,,32.0,100.0,50.0,USB 3.0,,,,,,,,Titanium Gray,
+"products_1_7871781,products_3_89550243",ADATA,,AC008-64G-RWE,USB_STICK,,,64.0,,,USB 2.0,,,,,,,,Blue/White,
+"products_1_85544471,products_2_82620263,products_3_5537930",Qixing,,,USB_STICK,,,32.0,,,USB 2.0,,,,,,,,,
+"products_1_23694723,products_3_61198101,products_4_94651152",Kingston,DataTraveler DTIG4,DTIG4/8GB,USB_STICK,,,8.0,,,USB 3.0,,,,,,USB Type-A,,White/Yellow,
+"products_1_3957588,products_2_31237395,products_3_31447687,products_4_52499748",Kingston,DataTraveler MicroDuo 3C,DTDUO3C/32GB,USB_STICK,,,32.0,100.0,15.0,,USB Type-A / USB Type-C,,,,,,,Silver,
+"products_2_7582500,products_3_5160662",Kingston,DataTraveler Elite G2,DTEG2/64GB,USB_STICK,,,64.0,180.0,70.0,,USB Type-A,,,,,USB Type-A,,Black,
+"products_1_13600999,products_2_88687859",Sandisk,,SDDDC3-256G-G46,USB_STICK,,,256.0,,,USB 3.0,USB Type-A and Type-C,,,,,,,Black,
+"products_2_54361651,products_3_80768725",Sandisk,ULTRA FLAIR,,USB_STICK,,,32.0,150.0,,USB 3.0,,,,,,,,,
+"products_1_84278896,products_2_4557639,products_3_51601254",Sandisk,iXpand Flash Drive Go,SDIX60N-128G-GN6NE,USB_STICK,,,128.0,,,USB 3.0,USB Type-A and Lightning,,,,,,,,
+"products_1_70026799,products_3_17471458,products_4_20551993",Kingston,DataTraveler 80,DT80/32GB,USB_STICK,,,32.0,200.0,,USB 3.0,USB Type-C,,,,,USB Type-C,,Black/Silver,
+"products_1_13163468,products_3_17406325,products_4_23589087",Kingston,DataTraveler MicroDuo OTG,DTDUO3/64GB,USB_STICK,,,64.0,70.0,15.0,USB 3.0,USB Type-A and Micro-USB,,,,,,,,
+"products_1_12424905,products_3_96863812",Sandisk,iXpand Flash Drive,SDIX30C-128G-GN6NE,USB_STICK,,,128.0,,,USB 3.0,,,,,5.4,,,Black/Silver,
+"products_1_16849538,products_3_61906477",Kingston,DataTraveler Locker+ G3,,USB_STICK,,,64.0,135.0,40.0,USB 3.0,USB Type-A,,,,,USB Type-A,,,
+"products_1_65837616,products_2_69985226",ADATA,Classic C008,,USB_STICK,,,16.0,,,,,,,,,,,White/Blue,
+"products_1_12049659,products_2_69277053,products_3_50802898",Wansenda,,,USB_STICK,,,,,,USB 3.0,USB Type-A and USB Type-C,,,,,,,,
+"products_1_86835292,products_3_53357791,products_4_43921466",Kingston,DataTraveler SE9 G2,,USB_STICK,,,16.0,,,USB 3.0,USB Type-A,,,,,USB Type-A,,Silver,
+"products_1_1252810,products_2_3708141,products_3_22646558,products_4_60975501",Kingston,DataTraveler SE9,,USB_STICK,,,16.0,,,USB 2.0,USB Type-A,,,,,USB Type-A,,Silver,
+"products_1_16588524,products_2_33848192",Sandisk,iXpand Flash Drive,SDIX30C-016G-GN6NN,USB_STICK,,,16.0,,53.0,USB 3.0,USB Type-A and Lightning,,,,,USB Type-A and Lightning,,,
+"products_1_21663730,products_2_58710753,products_4_50360533",,,759208-B21,HDD,,,300.0,,,SAS,,,,,,2.5-inch SAS,,,2.5-inch
+"products_1_14296399,products_2_51932172,products_4_51893803",,Dual Port Enterprise,619291-B21,HDD,,,900.0,,,SAS,,,,,,2.5-inch SAS,,,2.5-inch
+products_2_25776315,Western Digital,My Passport,WDBYNN0010BWT-WESN,HDD,,,1000.0,,,,,,,,,,,White,
+"products_2_75172014,products_3_29257602,products_4_45372457",Western Digital,WD Red,,HDD,,,10000.0,,,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
+"products_2_42633194,products_3_26401991,products_4_65070554",Seagate,Constellation ES.3,ST2000NM0023,HDD,,,2000.0,,,SAS,SAS 6G,,,,,3.5-inch SAS,,,3.5-inch
+"products_1_47930825,products_3_693299,products_4_4601555",Western Digital,,WD101EFAX,HDD,,,10000.0,,,SATA,,,,,,3.5-inch SATA,,,3.5-inch
+"products_1_98624308,products_2_38470155,products_3_82337278",Western Digital,WD Black,WD2003FZEX,HDD,,,2000.0,,,SATA,SATA III,,,,,3.5-inch SATA,,Black,3.5-inch
+"products_1_97905619,products_2_37669303,products_3_66040433",Toshiba,MG08 Series,,HDD,,,16000.0,,,SATA,SATA III,,,26.1,720.0,3.5-inch SATA,,,3.5-inch
+"products_1_48281373,products_3_58718563,products_4_68607451",Seagate,Cheetah 15K.7,ST3300657SS,HDD,,,300.0,,,SAS,,101.6,,25.4,,3.5-inch SAS,,,3.5-inch
+"products_1_87572356,products_2_5623956,products_3_30114774",,,652564-B21,HDD,,,300.0,,,SAS,,,,,,2.5-inch SAS,,,2.5-inch
+"products_2_97351682,products_3_52720711,products_4_62327624",Seagate,Cheetah 15K.7,ST3600057SS,HDD,,,600.0,,,SAS,,,,,,3.5-inch SAS,,,3.5-inch
+"products_2_53105255,products_3_64571081",,M3 Portable,,HDD,,,4000.0,,,,USB 3.0,82.0,118.2,19.85,,,,Black,2.5-inch
+"products_1_42551174,products_3_42008504,products_4_67818648",Seagate,Constellation Es.2,ST33000650NS,HDD,,,3000.0,,,SATA,,101.6,,26.1,,3.5-inch SATA,,,3.5-inch
+"products_1_31239709,products_2_52606639,products_3_76507424,products_4_87067165",Western Digital,WD Red,WD80EFZX,HDD,,,8000.0,,,SATA,SATA III,101.6,147.0,26.1,,3.5-inch SATA,,Red,3.5-inch
+"products_2_56280047,products_3_55948609,products_4_57859900",Toshiba,X300,HDWE140EZSTA,HDD,,,4000.0,,,SATA,,101.6,147.0,26.1,720.0,3.5-inch SATA,,,3.5-inch
+"products_2_86393668,products_3_35980976,products_4_85843294",,,872491-B21,HDD,,,4000.0,,,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
+"products_2_1830308,products_3_5834181",Western Digital,My Passport,WDBYVG0010BBK-WESN,HDD,,,1000.0,,,,USB 3.0,,,,,,,Black,2.5-inch
+"products_1_83479410,products_2_4784233,products_3_82786105",,"600GB 6G 15K 3.5"" SAS DP SAS Server Hard Disk",516828-B21,HDD,,,600.0,,,SAS,,,,,,3.5-inch SAS,,,3.5-inch
+"products_1_79539273,products_2_3427495,products_3_67086760",Seagate,Constellation ES.3,ST4000NM0023,HDD,,,4000.0,,,SAS,,,,,,3.5-inch SAS,,,3.5-inch
+"products_1_18406024,products_2_41211362,products_3_91452319",Seagate,Enterprise,ST8000NM000A,HDD,,,8000.0,,,SATA,SATA III,,,,,3.5-inch SATA,,,3.5-inch
+"products_1_70715850,products_3_20462564,products_4_51881114",Seagate,,ST2000NX0253,HDD,,,2000.0,136.0,,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_1_23418968,products_2_35250546,products_3_56747635",Seagate,,ST4000NM0025,HDD,,,4000.0,215.0,,SAS,,101.8,147.0,26.1,680.0,3.5-inch SAS,,,3.5-inch
+"products_1_4586576,products_2_82047845,products_4_85163859",,"600GB 6G SAS 10K 2.5"" SC Server Hard Disk",652583-B21,HDD,,,600.0,,,SAS,,,,,,2.5-inch SAS,,,2.5-inch
+"products_1_92213757,products_3_50853852,products_4_92930814",Western Digital,PURPLE NAS Hard Drive,WD80PURZ,HDD,,,8000.0,,,SATA,,,,,,3.5-inch SATA,,Purple,3.5-inch
+"products_1_44551871,products_2_63973332,products_4_46802224",,2.4TB SAS 12G 10K SFF SC 512E DS HDD,881457-B21,HDD,,,2400.0,,,SAS,,,,,,,,,2.5-inch
+"products_2_57731827,products_3_2823713,products_4_77070657",Western Digital,WD Blue,WDS500G1B0A,SSD,,,500.0,545.0,525.0,SATA,SATA III,,,7.0,,2.5-inch SATA,,Blue,2.5-inch
+"products_2_63895377,products_3_92310352,products_4_66179582",ADATA,XPG Spectrix S40G RGB,AS40G-256GT-C,SSD,,,256.0,3500.0,3000.0,,,,,,,M.2,,,M.2 2280
+"products_2_44040429,products_3_12636108",Seagate,Ironwolf 110,ZA960NM10011,SSD,,,960.0,560.0,,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_49236530,products_3_58345950,products_4_93635611",Intel,,SSDSC2KB019T7,SSD,,,1900.0,500.0,490.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_1_25370721,products_3_86362376,products_4_87017633",Seagate,BarraCuda Fast Portable SSD,STJM2000400,SSD,,,2000.0,540.0,540.0,USB Type C,,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_54049265,products_3_84153542",ADATA,Spectrix S40G,,SSD,,,512.0,3500.0,,,,22.0,80.0,,11.0,M.2,,,M.2 2280
+"products_2_10329471,products_3_49739678,products_4_63700999",Samsung,860 EVO,MZ-76E250B/EU,SSD,,,250.0,550.0,520.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_7450716,products_3_12117192,products_4_22696080",Samsung,SSD 870 QVO,MZ-77Q1T0BW,SSD,,,1000.0,560.0,530.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_55562405,products_3_9744227,products_4_43400546",Samsung,970 EVO Plus,MZ-V7S1T0B/AM,SSD,,,1000.0,,,,,,,,,M.2,,,M.2 2280
+"products_1_32738830,products_2_35384524,products_3_43317133,products_4_49228214",Patriot,Burst,PBU240GS25SSDR,SSD,,,240.0,555.0,500.0,SATA,SATA III,,,7.0,,2.5-inch SATA,,,2.5-inch
+"products_2_46775597,products_3_86850217,products_4_77571226",Corsair,Force Series MP510,CSSD-F960GBMP510,SSD,,,960.0,3480.0,3000.0,,,,,,,M.2,,,M.2 2280
+"products_1_84704597,products_2_1856731,products_3_17756844,products_4_51924648",Team Group,L3 EVO,T253LE240GTC101,SSD,,,240.0,,,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_1_15871125,products_2_43883075,products_3_23016862,products_4_67488123",Gigabyte,GIGABYTE NVMe SSD,GP-GSM2NE3128GNTD,SSD,,,128.0,1550.0,550.0,,,22.0,80.0,2.3,,M.2,,,M.2 2280
+"products_1_62156844,products_2_11565762,products_4_52586114",Western Digital,WD Blue,WDS250G1B0A,SSD,,,250.0,540.0,500.0,SATA,SATA III,,,,,2.5-inch SATA,,Blue,2.5-inch
+"products_1_10006478,products_2_8399803,products_3_13012302",Seagate,Nytro 1551,XA480ME10063,SSD,,,480.0,560.0,535.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_59308229,products_3_93741977",Silicon Power,Ace A80,SP256GBP34A80M28,SSD,,,256.0,3100.0,1100.0,,,,,,,M.2,,,M.2 2280
+"products_1_31663634,products_2_6540379,products_3_79517683",Intel,,SSDPEKNW512G8X1,SSD,,,512.0,,,,,,,,,M.2,,,M.2 2280
+"products_1_10565065,products_3_36838708,products_4_38328055",Western Digital,WD Blue SN550,WDS500G2B0C,SSD,,,250.0,2400.0,,,,22.0,80.0,2.38,6.5,M.2,,,M.2 2280
+"products_1_6186646,products_2_37639686,products_4_45835121",Samsung,850 Series Evo Basic,MZ-75E500B/EU,SSD,,,500.0,540.0,520.0,SATA,SATA III,,,,,2.5-inch SATA,,,2.5-inch
+"products_2_3713348,products_3_4121449,products_4_59583035",Western Digital,WD Blue SN550,WDS250G2B0C,SSD,,,250.0,2400.0,950.0,,,,,,,M.2,,,M.2 2280
+"products_1_61307663,products_3_65987337,products_4_70539715",Samsung,,MU-PA1T0B/AM,SSD,,,1000.0,540.0,540.0,,,,,,,,,Black,2.5-inch
+"products_1_61433092,products_2_33137302,products_4_58196146",Kingston,A400,,SSD,,,240.0,500.0,350.0,SATA,SATA III,,,,,,,,
+"products_1_19453676,products_2_69750969,products_4_54530409",Western Digital,P1,CT2000P1SSD8,SSD,,,2000.0,2000.0,1700.0,,,,,,,M.2,,,M.2 2280
+"products_2_21120495,products_3_18576054,products_4_21085676",ADATA,XPG SX8200 Pro,ASX8200PNP-512GT-C,SSD,,,512.0,3500.0,3000.0,,,22.0,80.0,3.5,8.0,M.2,,Black,M.2 2280
+"products_1_74635538,products_2_80184260,products_4_98406611",Western Digital,WD Black SN750,WDS500G3XHC,SSD,,,500.0,3470.0,2600.0,,,,,,,M.2,,Black,M.2 2280
+"products_1_6817605,products_2_9479923,products_3_13750671",Sapphire,,,GPU,AMD Radeon RX 550,2.0,,,,,,,,,,,GDDR5,,
+"products_1_39143445,products_2_49222969,products_3_63864528,products_4_6875909",Gigabyte,,GV-N1030SL-2GL,GPU,NVIDIA GeForce GT 1030,2.0,,,,,,,175.0,,,,GDDR5,,
+"products_1_40530169,products_3_25666817,products_4_35456507",Gigabyte,,GV-N208TTURBO-11GC,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,,,,,,,,GDDR6,,
+"products_1_52172790,products_2_9857576,products_3_37026032",Zotac,GeForce RTX 2080 8GB GDDR6 SUPER AMP,,GPU,GeForce RTX 2080 Super,8.0,,,,,,,298.0,,,,GDDR6,,
+"products_2_30142035,products_3_85807926",Nvidia,,VCQP400-PB,GPU,NVIDIA Quadro P400,2.0,,,,PCI Express x16,,,,,,,GDDR5,,Single Slot
+"products_1_7179251,products_2_23373474,products_3_69586730",Gigabyte,,GV-N1660OC-6GD,GPU,NVIDIA GeForce GTX 1660,6.0,,,,,,,224.0,121.0,,,GDDR5,,
+"products_1_68277426,products_2_98699269,products_4_65320459",Gigabyte,,,GPU,NVIDIA GeForce GTX 1660 Ti,6.0,,,,,,,,,,,GDDR6,,
+"products_1_66404124,products_2_11618943,products_4_26193625",Palit,,,GPU,NVIDIA GeForce RTX 3080,10.0,,,,,,,,,,,GDDR6X,,
+"products_1_72112341,products_2_1697045,products_3_90625496,products_4_60632785",Asus,,PH-GTX1660-O6G,GPU,NVIDIA GeForce GTX 1660,6.0,,,,,,,,,,,GDDR5,,
+"products_2_58630412,products_3_54755582,products_4_60529926",MSI,GeForce GTX 1050 Ti 4GB Boost,V809-2404R,GPU,GeForce GTX 1050 Ti,4.0,,,,,,,,,,,GDDR5,,
+"products_1_28212814,products_2_39418692,products_3_40032101,products_4_18197151",PNY,GeForce RTX 2070 SUPER 8GB XLR8 Gaming OC Triple Fan Turing Graphics Card,VCG20708STFMPB-O,GPU,GeForce RTX 2070 Super,8.0,,,,,,43.94,313.94,128.02,,,GDDR6,,Dual Slot
+"products_1_46937084,products_3_87088183,products_4_7695737",Gigabyte,GeForce GT 1030 Silent,GV-N1030SL-2GL,GPU,GeForce GT 1030,2.0,,,,,,,,,,,GDDR5,,
+"products_1_98557440,products_3_12404184,products_4_75418922",Asus,,GT710-SL-2GD5-CSM,GPU,NVIDIA GeForce GT 710,2.0,,,,,,,,,,,GDDR5,,
+"products_1_18374077,products_2_54337235",Gigabyte,,GV-N710D5-2GIL,GPU,NVIDIA GeForce GT 710,2.0,,,,,,,,,,,GDDR5,,
+"products_1_26544937,products_3_55362281,products_4_70011599",Gigabyte,,GV-N208TGAMING OC-11GC,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,,,,286.5,,,,GDDR6,,
+"products_1_5371368,products_3_18402228,products_4_66415332",EVGA,,02G-P3-2717-KR,GPU,NVIDIA GeForce GT 710,2.0,,,,,,,,,,,DDR3,,Single Slot
+"products_1_22326836,products_3_47205216,products_4_76264958",Sapphire,Radeon RX 580 Overclocked Pulse Dual-Fan,,GPU,Radeon RX 580,8.0,,,,,,,,,,,GDDR5,,
+"products_2_5278516,products_3_45917002,products_4_4210690",Gigabyte,,GV-N166TAORUS-6GD,GPU,NVIDIA GeForce GTX 1660 Ti,6.0,,,,PCI Express x16,,,,,,,GDDR6,,
+"products_1_9569117,products_3_56037532,products_4_90172558",AMD,,100-505826,GPU,AMD Radeon Pro WX 7100,8.0,,,,,,,,,,,GDDR5,,Single Slot
+"products_1_24614355,products_2_29928344,products_3_47160280",MSI,,912-V371-026,GPU,NVIDIA GeForce RTX 2080 Ti,11.0,,,,,,,,,,,GDDR6,,
+"products_1_44678762,products_3_89923273,products_4_66417148",Asus,,,GPU,NVIDIA GeForce RTX 2060 SUPER,8.0,,,,,,,,,,,GDDR6,,
+"products_1_19733045,products_3_93281278,products_4_52225477",Asus,,ROG-STRIX-RTX2070-O8G-GAMING,GPU,NVIDIA GeForce RTX 2070,8.0,,,,,,,,,,,GDDR6,,
+"products_2_8975311,products_3_64356572,products_4_71377449",Asus,GeForce GTX 1660 6GB TUF Boost,TUF-GTX1660-6G-GAMING,GPU,GeForce GTX 1660,6.0,,,,,,,,,,,GDDR5,,
+"products_1_35479899,products_2_41594394,products_3_87884973",Gigabyte,,GV-R57XTGAMING OC-8GD,GPU,AMD Radeon RX 5700 XT,8.0,,,,,,,280.0,,,,GDDR6,,
+"products_1_19001308,products_2_55013364,products_4_22290248",Gigabyte,,GV-N105TOC-4GD,GPU,NVIDIA GeForce GTX 1050 Ti,4.0,,,,,,,,,600.0,,GDDR5,,

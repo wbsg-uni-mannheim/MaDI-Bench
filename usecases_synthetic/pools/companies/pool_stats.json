@@ -27,7 +27,7 @@
     "percentile": 90.0,
     "raw_percentile": 0.4998567700386047
   },
-  "ditto_checkpoint": "/Users/ralph/Dev/PyDI/cache/ditto_checkpoints/companies/best",
+  "ditto_checkpoint": "cache/ditto_checkpoints/companies/best",
   "ditto_threshold": 0.5,
   "domain": "companies",
   "llm_model_id": "gpt-5.4",

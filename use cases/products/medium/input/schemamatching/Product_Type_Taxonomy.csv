@@ -1,0 +1,25 @@
+Category,Subcategory,Type
+Storage,HDD,3.5-inch HDD
+Storage,HDD,2.5-inch HDD
+Storage,HDD,External HDD
+Storage,SSD,SATA SSD
+Storage,SSD,M.2 SSD
+Storage,SSD,NVMe SSD
+Storage,SSD,External SSD
+Storage,SSD,U.2 SSD
+Graphics,Discrete GPU,Gaming GPU
+Graphics,Discrete GPU,Workstation GPU
+Graphics,Discrete GPU,Mining GPU
+Graphics,Integrated GPU,iGPU
+Memory,RAM,DDR4 RAM
+Memory,RAM,DDR5 RAM
+Memory,RAM,Server RAM
+Memory,RAM,Laptop RAM
+Power,PSU,ATX PSU
+Power,PSU,SFX PSU
+Power,PSU,TFX PSU
+Cooling,CPU Cooler,Air Cooler
+Cooling,CPU Cooler,AIO Cooler
+Cooling,CPU Cooler,Custom Loop
+Cooling,Case Fan,120mm Fan
+Cooling,Case Fan,140mm Fan

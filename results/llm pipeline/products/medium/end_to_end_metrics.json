@@ -1,43 +1,43 @@
 {
   "input_sources": 4,
-  "total_input_records": 3103,
-  "fused_output_records": 1479,
-  "fusion_ratio": 0.5234,
-  "row_gain_over_largest": 669,
-  "row_gain_percentage": 82.59,
-  "merged_records": 669,
-  "input_columns_target_schema": 27,
-  "fused_output_columns": 28,
-  "average_input_density": 0.4586,
-  "fused_data_density": 0.5139,
-  "data_density_change": 0.0553,
+  "total_input_records": 3100,
+  "fused_output_records": 1707,
+  "fusion_ratio": 0.4494,
+  "row_gain_over_largest": 896,
+  "row_gain_percentage": 110.48,
+  "merged_records": 616,
+  "input_columns_target_schema": 25,
+  "fused_output_columns": 26,
+  "average_input_density": 0.4398,
+  "fused_data_density": 0.4819,
+  "data_density_change": 0.042,
   "largest_source_name": "products_1",
-  "largest_source_density": 0.4755,
-  "density_change_vs_largest": 0.0384,
+  "largest_source_density": 0.4593,
+  "density_change_vs_largest": 0.0226,
   "per_source_stats": [
     {
-      "name": "products_4",
-      "rows": 703,
-      "columns": 27,
-      "density": 0.4458
-    },
-    {
       "name": "products_1",
-      "rows": 810,
-      "columns": 27,
-      "density": 0.4755
-    },
-    {
-      "name": "products_2",
-      "rows": 810,
-      "columns": 27,
-      "density": 0.4586
+      "rows": 811,
+      "columns": 25,
+      "density": 0.4593
     },
     {
       "name": "products_3",
       "rows": 780,
-      "columns": 27,
-      "density": 0.4527
+      "columns": 25,
+      "density": 0.4297
+    },
+    {
+      "name": "products_2",
+      "rows": 811,
+      "columns": 25,
+      "density": 0.4398
+    },
+    {
+      "name": "products_4",
+      "rows": 698,
+      "columns": 25,
+      "density": 0.4286
     }
   ]
 }

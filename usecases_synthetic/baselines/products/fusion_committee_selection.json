@@ -1,0 +1,63 @@
+{
+  "casefusion_only": {
+    "height_mm": "median",
+    "length_mm": "median",
+    "read_speed_mb_s": "minimum",
+    "storage_gb": "median",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  },
+  "fusionquery_only": {
+    "height_mm": "median",
+    "length_mm": "median",
+    "read_speed_mb_s": "minimum",
+    "storage_gb": "median",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  },
+  "ltm_only": {
+    "height_mm": "median",
+    "length_mm": "median",
+    "read_speed_mb_s": "minimum",
+    "storage_gb": "median",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  },
+  "pydi_per_attribute_optimal": {
+    "brand": "most_complete",
+    "bus_type": "voting",
+    "chipset_name": "longest_string",
+    "color": "voting",
+    "form_factor": "most_complete",
+    "height_mm": "median",
+    "interface_type": "most_complete",
+    "length_mm": "median",
+    "memory_type": "voting",
+    "model": "longest_string",
+    "model_number": "voting",
+    "product_type": "voting",
+    "read_speed_mb_s": "minimum",
+    "storage_connection_type": "most_complete",
+    "storage_gb": "median",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  },
+  "truthfinder_only": {
+    "height_mm": "median",
+    "length_mm": "median",
+    "read_speed_mb_s": "minimum",
+    "storage_gb": "median",
+    "vram_gb": "median",
+    "weight_g": "median",
+    "width_mm": "median",
+    "write_speed_mb_s": "maximum"
+  }
+}

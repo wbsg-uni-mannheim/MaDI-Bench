@@ -1,10 +1,7 @@
 # Knob 08 — Schema Naming Divergence: Papers
 #
-# Seeded from music 2026-05-04; K8 carries NO numeric rate tables
-# (schema naming only renames headers), so there is nothing rate-like to
-# tune here -- but per the shared papers spec this file is still a seeded,
-# UNTUNED starting point and the name variants below should be reviewed
-# before a real papers run.
+# Seeded from music; K8 carries NO numeric rate tables (schema naming only
+# renames headers), so there is nothing rate-like to tune here.
 #
 # All three sources (dblp, crossref, open_alex) are target-shaped after
 # load: each exposes the same 13 canonical value columns
@@ -12,7 +9,7 @@
 # volume, issue, first_page, last_page, referenced_works_count,
 # cited_by_count`) plus the stable source-record `id`. DOI is intentionally
 # absent from source files and the target schema. Baseline naming is
-# uniformly descriptive (matches spec call "papers @ easy"). K8 only
+# uniformly descriptive (the easy level keeps it). K8 only
 # renames headers, so even rarely-populated columns cost nothing to author.
 # dblp is the anchor source.
 
@@ -33,9 +30,12 @@ level_assignments:
 # Ground-truth schema mapping: source_col -> target_col.
 # Data is already canonical, so every mapping is identity (src_col == target_col).
 # Canonical target names match input/schemamatching/target_schema.json and the
-# K10 sign-off attribute_mapping. `id` is included as the stable source-record
+# K10 attribute_mapping. `id` is included as the stable source-record
 # id; DOI is intentionally absent.
 sm_mapping:
+  # publisher and keywords are not target-schema attributes (the base gold lists them
+  # unmapped): no schema-matching correspondence. The columns stay
+  # in the data and are still renamed per rename_table.
   dblp:
     id: id
     type: type
@@ -43,8 +43,6 @@ sm_mapping:
     authors: authors
     publication_year: publication_year
     journal: journal
-    publisher: publisher
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page
@@ -58,8 +56,6 @@ sm_mapping:
     authors: authors
     publication_year: publication_year
     journal: journal
-    publisher: publisher
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page
@@ -73,8 +69,6 @@ sm_mapping:
     authors: authors
     publication_year: publication_year
     journal: journal
-    publisher: publisher
-    keywords: keywords
     volume: volume
     issue: issue
     first_page: first_page

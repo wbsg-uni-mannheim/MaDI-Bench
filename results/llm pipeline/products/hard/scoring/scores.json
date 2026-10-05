@@ -1,0 +1,377 @@
+{
+  "task": "products_hard",
+  "selection": {
+    "best_case_key": "llm_no_val",
+    "best_case_name": "llm_no_val",
+    "best_validation_accuracy": 0.38980891719745225,
+    "best_test_accuracy": 0.4270334928229665,
+    "best_case_dir": "p3_products_rerun_20260927/results/hard/fusion/optimization_provided_val/case_llm_no_val",
+    "rules": {
+      "brand": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "bus_type": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "chipset_name": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "color": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "description": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "form_factor": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "height_mm": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "interface_type": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "length_mm": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "memory_type": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "model": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "model_number": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "price": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "priceCurrency": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "product_type": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "read_speed_mb_s": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "storage_connection_type": {
+        "resolver": "voting",
+        "kwargs": {}
+      },
+      "storage_gb": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "title": {
+        "resolver": "longest_string",
+        "kwargs": {}
+      },
+      "url": {
+        "resolver": "most_complete",
+        "kwargs": {}
+      },
+      "vram_gb": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "weight_g": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "width_mm": {
+        "resolver": "median",
+        "kwargs": {}
+      },
+      "write_speed_mb_s": {
+        "resolver": "median",
+        "kwargs": {}
+      }
+    }
+  },
+  "selection_policy": "P3 selection on official validation set; no test-based reselection",
+  "fused_path": "p3_products_rerun_20260927/results/hard/fusion/optimization_provided_val/case_llm_no_val/fused.csv",
+  "schema_matching": {
+    "stage": "schema_matching",
+    "task_id": "products_hard",
+    "n_submitted": 100,
+    "n_gold": 100,
+    "target_dataset_mismatch": [
+      "Hardware Product"
+    ],
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "entity_matching": {
+    "stage": "entity_matching",
+    "task_id": "products_hard",
+    "score_column_absent": false,
+    "n_correspondences": 13773,
+    "n_correspondences_unmatched_to_any_pair": 12693,
+    "n_nonnumeric_scores": 0,
+    "id_coverage": 0.3396311291048133,
+    "per_pair": {
+      "products_1_2_products_2": {
+        "precision": 0.4318181818181818,
+        "recall": 0.7037037037037037,
+        "f1": 0.5352112676056339,
+        "n_test_pairs": 177,
+        "n_relevant_correspondences": 240,
+        "n_predictions_outside_labeled_set": 196
+      },
+      "products_1_2_products_3": {
+        "precision": 0.45454545454545453,
+        "recall": 0.5,
+        "f1": 0.47619047619047616,
+        "n_test_pairs": 180,
+        "n_relevant_correspondences": 203,
+        "n_predictions_outside_labeled_set": 170
+      },
+      "products_1_2_products_4": {
+        "precision": 0.48484848484848486,
+        "recall": 0.5,
+        "f1": 0.49230769230769234,
+        "n_test_pairs": 182,
+        "n_relevant_correspondences": 637,
+        "n_predictions_outside_labeled_set": 604
+      }
+    },
+    "per_pair_mean": {
+      "precision": 0.457071,
+      "recall": 0.567901,
+      "f1": 0.501236
+    },
+    "micro": {
+      "precision": 0.45454545454545453,
+      "recall": 0.5617977528089888,
+      "f1": 0.5025125628140704
+    }
+  },
+  "fusion": {
+    "stage": "fusion",
+    "task_id": "products_hard",
+    "overall_accuracy_all_gold": 0.37032296650717705,
+    "overall_accuracy_evaluated": 0.4461722488038278,
+    "per_attribute_accuracy_all_gold": {
+      "width_mm_accuracy": 0.12449999999999999,
+      "product_type_accuracy": 0.7636,
+      "read_speed_mb_s_accuracy": 0.15441860465116278,
+      "color_accuracy": 0.35115384615384615,
+      "form_factor_accuracy": 0.166,
+      "chipset_name_accuracy": 0.3984,
+      "model_number_accuracy": 0.22,
+      "storage_connection_type_accuracy": 0.4565,
+      "vram_gb_accuracy": 0.29879999999999995,
+      "weight_g_accuracy": 0.2075,
+      "model_accuracy": 0.15702702702702703,
+      "length_mm_accuracy": 0.3018181818181818,
+      "brand_accuracy": 0.6160824742268041,
+      "memory_type_accuracy": 0.5312,
+      "interface_type_accuracy": 0.3804166666666666,
+      "storage_gb_accuracy": 0.2766666666666666,
+      "height_mm_accuracy": 0.1976190476190476,
+      "bus_type_accuracy": 0.36711538461538457,
+      "write_speed_mb_s_accuracy": 0.2334375
+    },
+    "n_gold": 100,
+    "n_gold_evaluated": 83,
+    "n_gold_missing": 17,
+    "n_submitted_aligned": 850,
+    "n_duplicate_anchor_rows": 0,
+    "dtype_mismatches": [],
+    "gold_coverage": 0.83,
+    "expected_attributes": [
+      "brand",
+      "product_type",
+      "vram_gb",
+      "storage_gb",
+      "read_speed_mb_s",
+      "write_speed_mb_s",
+      "width_mm",
+      "length_mm",
+      "height_mm",
+      "weight_g",
+      "chipset_name",
+      "bus_type",
+      "interface_type",
+      "memory_type",
+      "model",
+      "model_number",
+      "storage_connection_type",
+      "color",
+      "form_factor"
+    ],
+    "missing_attributes": [],
+    "rules_variant": "strict",
+    "gold_variant": "v2",
+    "attribute_coverage": 1.0,
+    "attribute_cell_coverage": 1.0,
+    "missing_schema_attributes": [],
+    "gold_cells_total": 836,
+    "gold_cells_gradeable": 836,
+    "n_clusters_with_multiple_sources": 619,
+    "n_anchors_shadowed": 17,
+    "n_anchors_absent": 0,
+    "max_cluster_size": 4,
+    "n_clusters_gt10": 0,
+    "coverage_adjusted_overall_accuracy": 0.37032296650717705,
+    "scores": {
+      "overall_accuracy": 0.4461722488038278,
+      "macro_accuracy": 0.39329457193689205,
+      "num_evaluated_records": 100,
+      "num_evaluated_attributes": 19,
+      "total_evaluations": 836,
+      "total_correct": 373,
+      "width_mm_accuracy": 0.15,
+      "width_mm_count": 20,
+      "product_type_accuracy": 0.92,
+      "product_type_count": 100,
+      "read_speed_mb_s_accuracy": 0.18604651162790697,
+      "read_speed_mb_s_count": 43,
+      "color_accuracy": 0.4230769230769231,
+      "color_count": 26,
+      "form_factor_accuracy": 0.2,
+      "form_factor_count": 40,
+      "chipset_name_accuracy": 0.48,
+      "chipset_name_count": 25,
+      "model_number_accuracy": 0.26506024096385544,
+      "model_number_count": 83,
+      "storage_connection_type_accuracy": 0.55,
+      "storage_connection_type_count": 40,
+      "vram_gb_accuracy": 0.36,
+      "vram_gb_count": 25,
+      "weight_g_accuracy": 0.25,
+      "weight_g_count": 12,
+      "model_accuracy": 0.1891891891891892,
+      "model_count": 74,
+      "length_mm_accuracy": 0.36363636363636365,
+      "length_mm_count": 22,
+      "brand_accuracy": 0.7422680412371134,
+      "brand_count": 97,
+      "memory_type_accuracy": 0.64,
+      "memory_type_count": 25,
+      "interface_type_accuracy": 0.4583333333333333,
+      "interface_type_count": 24,
+      "storage_gb_accuracy": 0.3333333333333333,
+      "storage_gb_count": 75,
+      "height_mm_accuracy": 0.23809523809523808,
+      "height_mm_count": 21,
+      "bus_type_accuracy": 0.4423076923076923,
+      "bus_type_count": 52,
+      "write_speed_mb_s_accuracy": 0.28125,
+      "write_speed_mb_s_count": 32
+    },
+    "basis": "strict",
+    "v1": null,
+    "v1_unavailable": "canonical files carry the v2 gold (GOLD_VERSION); v1 is not scored",
+    "v2": {
+      "overall_accuracy_all_gold": 0.3584090909090909,
+      "overall_accuracy_evaluated": 0.4318181818181818,
+      "per_attribute_accuracy_all_gold": {
+        "width_mm_accuracy": 0.12449999999999999,
+        "product_type_accuracy": 0.7636,
+        "read_speed_mb_s_accuracy": 0.17372093023255814,
+        "color_accuracy": 0.35115384615384615,
+        "form_factor_accuracy": 0.166,
+        "chipset_name_accuracy": 0.3984,
+        "model_number_accuracy": 0.22,
+        "storage_connection_type_accuracy": 0.4565,
+        "vram_gb_accuracy": 0.36519999999999997,
+        "weight_g_accuracy": 0.2075,
+        "model_accuracy": 0.15702702702702703,
+        "length_mm_accuracy": 0.3018181818181818,
+        "brand_accuracy": 0.4620618556701031,
+        "memory_type_accuracy": 0.5312,
+        "interface_type_accuracy": 0.3804166666666666,
+        "storage_gb_accuracy": 0.3098666666666667,
+        "height_mm_accuracy": 0.1976190476190476,
+        "bus_type_accuracy": 0.36711538461538457,
+        "write_speed_mb_s_accuracy": 0.2334375
+      },
+      "gold_coverage": 0.83,
+      "n_gold": 100,
+      "n_gold_evaluated": 83,
+      "attribute_cell_coverage": 1.0,
+      "rules_variant": "v2",
+      "gold_variant": "v2",
+      "scores": {
+        "overall_accuracy": 0.4318181818181818,
+        "macro_accuracy": 0.3910676668655347,
+        "num_evaluated_records": 100,
+        "num_evaluated_attributes": 19,
+        "total_evaluations": 836,
+        "total_correct": 361,
+        "width_mm_accuracy": 0.15,
+        "width_mm_count": 20,
+        "product_type_accuracy": 0.92,
+        "product_type_count": 100,
+        "read_speed_mb_s_accuracy": 0.20930232558139536,
+        "read_speed_mb_s_count": 43,
+        "color_accuracy": 0.4230769230769231,
+        "color_count": 26,
+        "form_factor_accuracy": 0.2,
+        "form_factor_count": 40,
+        "chipset_name_accuracy": 0.48,
+        "chipset_name_count": 25,
+        "model_number_accuracy": 0.26506024096385544,
+        "model_number_count": 83,
+        "storage_connection_type_accuracy": 0.55,
+        "storage_connection_type_count": 40,
+        "vram_gb_accuracy": 0.44,
+        "vram_gb_count": 25,
+        "weight_g_accuracy": 0.25,
+        "weight_g_count": 12,
+        "model_accuracy": 0.1891891891891892,
+        "model_count": 74,
+        "length_mm_accuracy": 0.36363636363636365,
+        "length_mm_count": 22,
+        "brand_accuracy": 0.5567010309278351,
+        "brand_count": 97,
+        "memory_type_accuracy": 0.64,
+        "memory_type_count": 25,
+        "interface_type_accuracy": 0.4583333333333333,
+        "interface_type_count": 24,
+        "storage_gb_accuracy": 0.37333333333333335,
+        "storage_gb_count": 75,
+        "height_mm_accuracy": 0.23809523809523808,
+        "height_mm_count": 21,
+        "bus_type_accuracy": 0.4423076923076923,
+        "bus_type_count": 52,
+        "write_speed_mb_s_accuracy": 0.28125,
+        "write_speed_mb_s_count": 32
+      }
+    }
+  },
+  "scorer_sha256": {
+    "<scorer>/notebook_fusion_eval.py": "c761b411a85aaa6901623f16c59c52a520f69b7179177104d5f37f7d2e912ca0",
+    "<scorer>/adapters.py": "751039a1934996798975547f813bef0d53f774a12f712cdc574cbafd7d36953c",
+    "<scorer>/__init__.py": "5920d562784f6eceae12b61b2a2c3500d5bffecb2f76b358eb0f2ddd79b67f47",
+    "<scorer>/comparison_spec.py": "e3a8cc8f2a7405d234ae21912e931e321509ccb008d02bbe0b977ff5e1ca20e5",
+    "<scorer>/score_e2e.py": "ee186f97fe4fba7f16dfe9da0b5a905f65741b48d9f4a36f8b255e69713112a2",
+    "<scorer>/score_sm.py": "3b2a76d06f4a5a864b4d344e979f86759b8aef00f777ef8c33ec18ab07f2de1a",
+    "<scorer>/audit_fusion_generator.py": "ee0c0c0d706313bfd48c46e1265137fcddb3e6253bd4ecb699c17b6e1eb33807",
+    "<scorer>/score_fusion.py": "6079b6a1a0e429fd89c1af4aa79ef4343e0865d6412b909c5d0202f79ba6efaa",
+    "<scorer>/aliases.py": "f036cace5eb9f13d5b9fc2acce2cbc88ffd07cd9c9ce0b29778bf5c05e319a7a",
+    "<scorer>/gold.py": "84a1c15ef8095431938c3069fa3846a22ab7153e0e7889c6dc9dde27dc25c414",
+    "<scorer>/score_em.py": "cfb72282bdfe34752c74b6c3d953a2585fe6de57cc86c6cfcd3f1cf657ce5d51",
+    "<scorer>/score_blocking.py": "3acf7c79d8f23f58cf4e6e352590f9d4f7be4aab099bcbf4b661fe391a126cdb",
+    "<scorer>/score_normalization.py": "242d552a5ba56fe5959e681d3297ee3fa1e7346b0796e231711ca6aeb5173d25"
+  }
+}

@@ -14,7 +14,7 @@
 # Scope: the fusion committee scores exactly the current products fusion
 # gold attributes after removing helper/descriptive/commercial fields
 # that are not meaningful fusion targets (title, description, price,
-# priceCurrency, url, title_description). Those columns stay mapped for
+# priceCurrency, url). Those columns stay mapped for
 # earlier stages but are not fusion-scored. The readable CSV gold carries
 # 19 scored attributes; XML variants may omit all-empty sparse tags and
 # PyDI then evaluates the common attributes present in both frames.
@@ -52,7 +52,6 @@ column_mapping:
     currency_code: priceCurrency
     cluster_id: cluster_id
     product_url: url
-    name_and_description: title_description
     model_name: model
     manufacturer_part_number: model_number
     category: product_type
@@ -79,7 +78,6 @@ column_mapping:
     currency: priceCurrency
     cluster_id: cluster_id
     productUrl: url
-    titleAndDescription: title_description
     modelName: model
     mpn: model_number
     productCategory: product_type
@@ -106,7 +104,6 @@ column_mapping:
     Currency: priceCurrency
     cluster_id: cluster_id
     Link: url
-    TitleDetails: title_description
     Model: model
     PartNo: model_number
     Type: product_type
@@ -133,7 +130,6 @@ column_mapping:
     cur: priceCurrency
     cluster_id: cluster_id
     link: url
-    name_desc: title_description
     mdl: model
     pn: model_number
     cat: product_type

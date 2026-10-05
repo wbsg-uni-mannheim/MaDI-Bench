@@ -6,21 +6,27 @@
 
 domain: music
 
-# All sources expose `id` after the loader (refreshed CSVs ship a
-# native `id` column with source-specific prefix mbrainz_/discogs_/lastFM_).
+# All sources expose `id` after the loader, which renames each native id
+# column (musicbrainz.Attribute_1 / discogs.rec_uid / lastfm.item_code,
+# values prefixed mbrainz_/discogs_/lastFM_) to `id`.
 id_columns:
   musicbrainz: id
   discogs: id
   lastfm: id
 
+# Loaded (native) column names; see attribute_mapping below.
 primary_column_per_source:
-  musicbrainz: name
-  discogs: name
-  lastfm: name
+  musicbrainz: Attribute_2
+  discogs: title_str
+  lastfm: album_title
 
-# Refreshed 2026-05-04. All 3 sources share an identical CSV column
-# set: [id, name, artist, release-date, release-country, duration,
-# label, genre, tracks]. Canonical-field coverage:
+# attribute_mapping is keyed on the LOADED column names of the base
+# sources (2026-09-25 remap; the 2026-06-03 header rewrite put raw WDC
+# headers on disk and dropped the all-empty columns, so musicbrainz has
+# no genre/label and lastfm no release-date/release-country/genre/label
+# column). canonical_schema / text_concat_order / attribute_overlap_weights
+# / numeric_overlap / plm_fields stay on canonical names. Canonical-field
+# coverage (measured on the pre-2026-06-03 canonical-header sources):
 #   name             mb 100%  discogs 100%  lastfm 100%
 #   artist           mb 100%  discogs 100%  lastfm 100%
 #   release-date     mb  93%  discogs  90%  lastfm   0%
@@ -39,23 +45,23 @@ canonical_schema:
 
 attribute_mapping:
   musicbrainz:
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
-    duration: duration
+    Attribute_2: name
+    Attribute_3: artist
+    Attribute_4: release-date
+    Attribute_5: release-country
+    Attribute_6: duration
   discogs:
-    name: name
-    artist: artist
-    release-date: release-date
-    release-country: release-country
+    title_str: name
+    performer: artist
+    pub_dt: release-date
+    origin_loc: release-country
     duration: duration
-    genre: genre
-    label: label
+    category: genre
+    imprint: label
   lastfm:
-    name: name
-    artist: artist
-    duration: duration
+    album_title: name
+    band: artist
+    album_length: duration
 
 source_priority:
   - musicbrainz
@@ -130,8 +136,7 @@ stopword_list:
 # would require +50-280% synthetic entities (infeasible + domain-distorting).
 # Easy stays 0.20 (drop path; baseline ~0.27 -> ~0.22). medium/hard are
 # modest monotone bumps within reach. K2 is intrinsically a small-range knob
-# for music; the difficulty signal leans on K1/K3/K4/K6/K8. (See the
-# capped-sample-metric note in apply_knob_02_niche / the 2026-05-31 K2 dig.)
+# for music; the difficulty signal leans on K1/K3/K4/K6/K8.
 levels:
   easy:
     target_corner_case_ratio: 0.20
@@ -141,9 +146,8 @@ levels:
     target_corner_case_ratio: 0.35
 
 max_interp_fraction: 0.60
-# 2026-05-27 (step 4h): equal train/test split for newly-mined corner pairs.
-# Was 0.6 (60% test / 40% train); user signed off equal distribution so the
-# regen splits have the same corner-case shape on both sides.
+# Half of the interpolated entities are placed across all sources
+# (matched near-twins), half into a single source (distractors).
 placement_split: 0.5
 # Calibrated 2026-05-14 from music-small smoke. The original 0.5 default
 # assumed ~15 corner-pair adds per interpolation (metric_top_k * 0.5);
@@ -157,22 +161,17 @@ interp_pair_factor: 0.05
 em_test_regeneration:
   candidate_pool_cap: 2000
 
-# Default model gpt-5.4-mini for cost. Ask user before each K2 run
-# whether to bump to gpt-5.4 (invalidates cache).
-# 2026-05-27 (step 4h): prompt v1 -> v2 — interpolate_v2.txt broadens
-# the lead-sentence domain enumeration to include products (GPUs / SSDs /
-# HDDs / etc.) and carries a domain-extension maintenance note.
-# Invalidates the existing K2 LLM cache by construction.
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the cache.
+# The prompt version is part of the K2 LLM cache key.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0
 
-# Step 4i (2026-05-27): drop-corner-touching operator + non-corner
-# refill. New K2 dispatch branch at baseline_ratio > target_ratio
-# replaces the legacy noop_baseline_above_target path — K2 now actually
-# moves the ratio downward when configured. Each drop pairs with a
-# 1-for-1 LLM-synthesized non-corner entity refill so canonical set
-# size stays stable.
+# Drop-corner-touching operator + non-corner refill: when the baseline
+# ratio is above the target, K2 drops corner-touching entities to move
+# the ratio downward. Each drop pairs with a 1-for-1 LLM-synthesized
+# non-corner entity refill so canonical set size stays stable.
 non_corner_refill:
   enabled: true
   reference_count: 5            # K reference entities for the dissimilarity anchor
@@ -182,20 +181,20 @@ non_corner_prompt_version: v1
 
 pool_quality: two_system
 
-# Hard-negative score-margin gate (S3). Pinned to the R2.2 winner from
-# plan_s1_scale.md: roberta-base, lr=1e-4, batch_size=32, max_len=256,
+# Hard-negative score-margin gate. Pinned to the winner of the Ditto
+# learning-rate sweep: roberta-base, lr=1e-4, batch_size=32, max_len=256,
 # max_field_len=350, epochs=50 with early-stopping patience=5
 # (early-stopped at epoch 2), warmup_ratio=0.06, MixDA --da del,
 # class-balanced via --sample-weights-csv (pos≈5.62, neg≈0.55 — train
 # is 8.9% positive so positives are up-weighted), --fixed-threshold 0.5.
-# Trained on PyDI's natural train/val/test splits (option (b) — pure
-# PyDI throughout: train 36,658 / val 17,010 / test 2,000 pairs).
+# Trained on PyDI's natural train/val/test splits (PyDI data
+# throughout: train 36,658 / val 17,010 / test 2,000 pairs).
 # Combined test F1=0.9837 (P=0.969, R=0.998); per-pair test F1:
 # musicbrainz↔discogs 0.979 (P=0.960, R=1.000, **beats ADI 0.976**),
 # musicbrainz↔lastfm 0.988 (P=0.979, R=0.997, vs ADI 0.995, -0.7pp).
 # Run dir: cache/ditto_checkpoints/music/sweep_lr_1e-4_weighted/run_20260505_063929
 # Fields: drops `genre` (single-source — only discogs has it) and
-# `label` (S11 fix: collides with Ditto's reserved binary class column).
+# `label` (collides with Ditto's reserved binary class column).
 # `duration` added in place of `genre` — 41-51% both-sides coverage,
 # better signal than 0% both-sides genre.
 hard_negative_gate:
@@ -212,11 +211,9 @@ hard_negative_gate:
   plm_max_field_len: 350
   plm_batch_size: 32
   plm_margin_delta: 0.08
-  # 2026-05-27 (step 4h option a): full LLM adjudication on every
-  # gate decision via new gate_mode field. Mirrors bucket-C policy:
-  # PLM score becomes audit telemetry, not a decision shortcut.
-  # Insurance against transitional-state Ditto calibration on
-  # music / companies / products (pre-R7 padding fix).
+  # full_llm: the LLM adjudicates every gate decision; the PLM score is
+  # recorded as audit telemetry only, so decisions do not depend on the
+  # Ditto checkpoint's calibration (the pool builder's bucket-C policy).
   gate_mode: full_llm
   per_level:
     easy:

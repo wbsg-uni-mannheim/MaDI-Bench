@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""R2.1 helper (ADI-data variant): build Ditto json.gz files for games.
+"""Helper (ADI-data variant): build Ditto json.gz files for games.
 
 Per pair:
 
@@ -14,7 +14,7 @@ Per pair:
     test  = PyDI top-level dbpedia_2_sales_test.csv (402 pairs, clean ids)
 
 * metacritic_sales
-    train = (none — option A from R2.2 redo: ADI has no data for this
+    train = (none — ADI has no data for this
             pair, and the top-level PyDI train/test files are
             byte-identical so cannot be split safely. Model must learn
             mc↔sales by transfer from the other 2 pairs.)
@@ -54,7 +54,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR
+from usecases_synthetic.lib.domain_config import SYNTHETIC_DIR, USECASES_DIR, task_dir
 from usecases_synthetic.lib.loaders import load_domain_sources, read_em_gold_csv
 from usecases_synthetic.scripts.ditto.prepare_em_training_data import (
     build_ditto_pair_records_committee_scope,
@@ -73,7 +73,7 @@ ADI_DIR = (
     / "games_0302"
     / "entity_resolution"
 )
-PYDI_EM_GOLD_DIR = USECASES_DIR / DOMAIN / "input" / "entitymatching"
+PYDI_EM_GOLD_DIR = task_dir(DOMAIN, root=USECASES_DIR) / "input" / "entitymatching"
 OUTPUT_DIR_RAW = SYNTHETIC_DIR / "output" / "ditto" / DOMAIN
 OUTPUT_DIR_NORMALIZED = SYNTHETIC_DIR / "output" / "ditto" / f"{DOMAIN}_normalized"
 OUTPUT_DIR_PYDI_RAW = SYNTHETIC_DIR / "output" / "ditto" / f"{DOMAIN}_pydi_raw"
@@ -168,7 +168,7 @@ def _load_pydi_train_for_pair(pair: "Pair") -> pd.DataFrame | None:
     ``id2 = src_right id`` (matches what ``_canonical_record`` expects).
 
     Mirrors the direction tolerance in ``variant_loader._load_em_gold``
-    (landed 2026-05-26), with the addition of an explicit column swap
+    with the addition of an explicit column swap
     here because Ditto's COL/VAL serialisation is order-sensitive (the
     ``_left`` / ``_right`` sides must match the trained model's
     convention). Closed-set scoring is order-invariant via
@@ -325,11 +325,11 @@ def main() -> None:
         default="pydi",
         help=(
             "Where train + val records come from. 'pydi' (default, "
-            "committee-correct per plan_revision.md R6-3) loads "
+            "committee-correct) loads "
             "<pair>_train.csv and <pair>_val.csv from "
             "usecases/games/input/entitymatching/; if a val file is "
             "missing, it holds out 20%% of train with seed=42. 'adi' is "
-            "the legacy R2 setup that "
+            "the legacy setup that "
             "trains on automatic-data-integration's labeled pool — "
             "kept only for pool-builder use; must NOT be wired to the "
             "committee."
@@ -354,7 +354,7 @@ def main() -> None:
         output_dir = OUTPUT_DIR_NORMALIZED if normalize else OUTPUT_DIR_RAW
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # R10-I: the committee (pydi) path builds the wide committee field scope
+    # The committee (pydi) path builds the wide committee field scope
     # column-mapped off the base PyDI sources; the legacy ADI path (pool
     # builder only) stays on the narrow knob-02 projection.
     use_committee_scope = train_source == "pydi"
@@ -376,10 +376,10 @@ def main() -> None:
         f"({src_tag}, {norm_tag})..."
     )
     for pair in PAIRS:
-        # F11 dropped metacritic_2_sales_test.csv (100% canonical-pair
+        # metacritic_2_sales_test.csv was dropped (100% canonical-pair
         # overlap with the test split). The pair is gone from
         # config/domains/games.yaml; skip it here too rather than
-        # crash. Both pre-F11 and post-F11 callers stay happy.
+        # crash. Callers with and without the file stay happy.
         pydi_test_path = PYDI_EM_GOLD_DIR / f"{pair.pydi_test_file}.csv"
         if not pydi_test_path.exists():
             print(f"  {pair.name:<22}  SKIP (missing {pydi_test_path.name})")

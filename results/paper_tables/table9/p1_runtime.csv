@@ -1,0 +1,6 @@
+domain,run,notebook_timer_s,added_cells_s,corrected_s_cells_log,corrected_s_file_stamps,runtime_s
+games,2026-09-24 P1 run,791.78,2.9,788.88,788.848,789
+companies,2026-09-24 P1 run,270.02,1.2,268.82,268.745,269
+music,2026-09-24 P1 run,729.32,1.6,727.72,727.708,728
+products,2026-09-27 timing run of the P1 products notebook,407.02,0.4,406.62,406.498,406
+papers,2026-09-24 P1 run,1965.4,21.9,1943.5,1943.535,1944

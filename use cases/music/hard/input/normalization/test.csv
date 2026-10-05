@@ -1,0 +1,163 @@
+entity_id,source,source_id,source_column,attribute,raw_value,expected_value,category,rule,context,n_instances
+discogs_10504,discogs,discogs_10504,dur,duration,0:15:28,928,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_10504,discogs,discogs_10504,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,22
+discogs_10504,discogs,discogs_10504,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,40
+discogs_11632,discogs,discogs_11632,dur,duration,1h 7m 12s,4032,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_11632,discogs,discogs_11632,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,40
+discogs_118956,discogs,discogs_118956,rel_ctry,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,,40
+discogs_1636,discogs,discogs_1636,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,22
+discogs_1636,discogs,discogs_1636,rel_nm,name,The Bends / Sanctuary,The Bends / Sanctuary,identity,,,1
+discogs_1636,discogs,discogs_1636,rel_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,3
+discogs_1799,discogs,discogs_1799,lbl,label,Warner Music UK Ltd.,Warner Music UK Ltd,normalization,trailing_period,,1
+discogs_23005,discogs,discogs_23005,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,22
+discogs_23650,discogs,discogs_23650,rel_ctry,release-country,United States of America,United States of America,identity,,,10
+discogs_23650,discogs,discogs_23650,rel_dt,release-date,2003,2003-01-01,normalization,date_pad_year,,2
+discogs_259,discogs,discogs_259,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,22
+discogs_30446,discogs,discogs_30446,dur,duration,46:38,2798,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_30446,discogs,discogs_30446,rel_ctry,release-country,United States of America,United States of America,identity,,,10
+discogs_30446,discogs,discogs_30446,rel_dt,release-date,01.01.2003,2003-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_36981,discogs,discogs_96377,dur,duration,37:14,2234,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_36981,discogs,discogs_36981,gnr,genre,Electronic,Electronic / Dance,normalization,genre_taxonomy_map,,22
+discogs_36981,discogs,discogs_36981,rel_ctry,release-country,United States of America,United States of America,identity,,,10
+discogs_36981,discogs,discogs_96377,rel_ctry,release-country,USA,United States of America,knowledge,country_full_name,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+discogs_36981,discogs,discogs_36981,rel_dt,release-date,2008-01-01,2008-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_3720,discogs,discogs_3720,dur,duration,69:34,4174,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_3720,discogs,discogs_3720,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",2
+discogs_45361,discogs,discogs_45361,rel_dt,release-date,05/04/2009,2009-05-04,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_48169,discogs,discogs_48169,rel_dt,release-date,15.04.2010,2010-04-15,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_50918,discogs,discogs_50918,rel_dt,release-date,01/01/2004,2004-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+discogs_55909,discogs,discogs_55909,rel_dt,release-date,22.11.2010,2010-11-22,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_58657,discogs,discogs_58657,dur,duration,45:33,2733,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_58657,lastfm,lastFM_27490,Attribute_2,name,Music is  Weapon of the Future,Music is  Weapon of the Future,identity,,,1
+discogs_58657,discogs,discogs_58657,rel_dt,release-date,1998-01-01,1998-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_6414,discogs,discogs_6414,dur,duration,0:15:52,952,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_6414,discogs,discogs_6414,rel_dt,release-date,1989-01-01,1989-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",3
+discogs_67328,discogs,discogs_67328,trks,tracks,"['Land Of The Midnight Sun', 'The Wizard', 'Land Of The Midnight Sun', 'Sarabande From Violin Sonata In B Minor', ""Love Theme From 'Pictures Of The Sea'"", 'Suite - Golden Dawn', 'Short Tales Of The Black Forest', 'Elegant Gypsy', 'Flight Over Rio', 'Midnight Tango', 'Mediterranean Sundance', 'Race With Devil On Spanish Highway', 'Lady Of Rome, Sister Of Brazil', 'Elegant Gypsy Suite', 'Casino', 'Egyptian Danza', ""Chasin' The Voodoo"", 'Dark Eye Tango', 'Señor Mouse', 'Fantasia Suite For Two Guitars', 'Casino', 'Splendido Hotel', 'Alien Chase On Arabian Desert', 'Silent Story In Her Eyes', 'Roller Jubilee', 'Two To Tango', ""Al Di's Dream Theme"", 'Dinner Music Of The Gods', 'Splendido Sundance', 'I Can Tell', 'Spanish Eyes', 'Isfahan', ""Bianca's Midnight Lullaby"", 'Electric Rendezvous', 'God Bird Change', 'Electric Rendezvous', 'Passion, Grace & Fire', ""Cruisin'"", 'Black Cat Shuffle', 'Ritmo De La Noche', 'Somalia', 'Jewel Inside A Dream']","[""Land Of The Midnight Sun"", ""The Wizard"", ""Land Of The Midnight Sun"", ""Sarabande From Violin Sonata In B Minor"", ""Love Theme From 'Pictures Of The Sea'"", ""Suite - Golden Dawn"", ""Short Tales Of The Black Forest"", ""Elegant Gypsy"", ""Flight Over Rio"", ""Midnight Tango"", ""Mediterranean Sundance"", ""Race With Devil On Spanish Highway"", ""Lady Of Rome, Sister Of Brazil"", ""Elegant Gypsy Suite"", ""Casino"", ""Egyptian Danza"", ""Chasin' The Voodoo"", ""Dark Eye Tango"", ""Señor Mouse"", ""Fantasia Suite For Two Guitars"", ""Casino"", ""Splendido Hotel"", ""Alien Chase On Arabian Desert"", ""Silent Story In Her Eyes"", ""Roller Jubilee"", ""Two To Tango"", ""Al Di's Dream Theme"", ""Dinner Music Of The Gods"", ""Splendido Sundance"", ""I Can Tell"", ""Spanish Eyes"", ""Isfahan"", ""Bianca's Midnight Lullaby"", ""Electric Rendezvous"", ""God Bird Change"", ""Electric Rendezvous"", ""Passion, Grace & Fire"", ""Cruisin'"", ""Black Cat Shuffle"", ""Ritmo De La Noche"", ""Somalia"", ""Jewel Inside A Dream""]",identity,,,1
+discogs_71795,discogs,discogs_71795,dur,duration,21:43,1303,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_71795,discogs,discogs_71795,rel_dt,release-date,25.10.2011,2011-10-25,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+discogs_78499,discogs,discogs_78499,dur,duration,32:37,1957,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_90880,discogs,discogs_90880,dur,duration,54:34,3274,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_90880,discogs,discogs_90880,rel_ctry,release-country,Russia,Russian Federation,knowledge,country_full_name,,1
+discogs_9616,discogs,discogs_9616,dur,duration,18:44,1124,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_9616,lastfm,lastFM_4711,Attribute_6,duration,0:18:44,1124,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+discogs_9616,discogs,discogs_9616,rel_nm,name,The Drumstick EP,The Drumstick EP,identity,,,1
+discogs_9616,lastfm,lastFM_4711,Attribute_2,name,A. Disco Ate My Baby -  The Drumstick EP,The Drumstick EP,normalization,lastfm_artist_prefix,,1
+discogs_9616,discogs,discogs_9616,rel_dt,release-date,2005,2005-01-01,normalization,date_pad_year,,1
+lastFM_73829,lastfm,lastFM_73829,Attribute_6,duration,6m 0s,360,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_11156,musicbrainz,mbrainz_11156,rc,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,"{""provenance"": [[""10"", ""identity""]]}",40
+mbrainz_11156,discogs,discogs_50910,rel_dt,release-date,1980-01-01,1980-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_11156,musicbrainz,mbrainz_11156,rd,release-date,01/01/1980,1980-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_11821,discogs,discogs_69253,rel_nm,name,Psychic Chasms / Mind Ctrl: Psychic Chasms Possessed,Psychic Chasms / Mind Ctrl: Psychic Chasms Possessed,identity,,,2
+mbrainz_11821,musicbrainz,mbrainz_11821,t,name,Psychic Chasms / Mind Ctrl: Psychic Chasms Possessed,Psychic Chasms / Mind Ctrl: Psychic Chasms Possessed,identity,,,2
+mbrainz_12115,musicbrainz,mbrainz_12115,rc,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,40
+mbrainz_12115,musicbrainz,mbrainz_12115,rd,release-date,09/20/2010,2010-09-20,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_12500,discogs,discogs_57381,rel_dt,release-date,01/01/1984,1984-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_12500,musicbrainz,mbrainz_12500,rd,release-date,1984,1984-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_12847,discogs,discogs_59074,dur,duration,33m 51s,2031,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_12847,musicbrainz,mbrainz_12847,rc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",40
+mbrainz_135,discogs,discogs_289,dur,duration,888,888,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_135,musicbrainz,mbrainz_135,du,duration,14:48,888,normalization,duration_parse,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_135,discogs,discogs_289,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,40
+mbrainz_135,musicbrainz,mbrainz_135,rc,release-country,UK,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""10"", ""reassign_gold_carrier""]]}",40
+mbrainz_135,discogs,discogs_289,rel_dt,release-date,10/01/2001,2001-10-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_13699,musicbrainz,mbrainz_13699,du,duration,15:58,958,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_13699,musicbrainz,mbrainz_13699,rc,release-country,United States of America,United States of America,identity,,,10
+mbrainz_13699,musicbrainz,mbrainz_13699,rd,release-date,2002-05,2002-05-01,normalization,date_pad_month,,1
+mbrainz_13786,discogs,discogs_63403,dur,duration,20m 46s,1246,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_13786,musicbrainz,mbrainz_13786,du,duration,1246,1246,identity,,"{""provenance"": [[""5"", ""reconvert_unit""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_13786,discogs,discogs_63403,rel_dt,release-date,05/09/2011,2011-05-09,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_13786,musicbrainz,mbrainz_13786,rd,release-date,2011-05-09,2011-05-09,identity,,,1
+mbrainz_13875,musicbrainz,mbrainz_13875,rd,release-date,01/01/1962,1962-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_143,musicbrainz,mbrainz_143,t,name,Fallen (remix) / Bad Dreams,Fallen (remix) / Bad Dreams,identity,,,1
+mbrainz_143,musicbrainz,mbrainz_143,rd,release-date,2001-01-01,2001-01-01,identity,,,1
+mbrainz_15003,discogs,discogs_78685,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,40
+mbrainz_15003,musicbrainz,mbrainz_15003,rd,release-date,05/28/1996,1996-05-28,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""], [""10"", ""identity""]]}",1
+mbrainz_1502,musicbrainz,mbrainz_1502,rd,release-date,01/01/2004,2004-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_15029,musicbrainz,mbrainz_15029,du,duration,1h 18m 0s,4680,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_15029,discogs,discogs_70907,rel_ctry,release-country,United Kingdom of Great Britain and Northern Ireland,United Kingdom of Great Britain and Northern Ireland,identity,,,40
+mbrainz_15029,discogs,discogs_70907,rel_dt,release-date,2002,2002-01-01,normalization,date_pad_year,,3
+mbrainz_15029,musicbrainz,mbrainz_15029,rd,release-date,2002,2002-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",3
+mbrainz_15127,discogs,discogs_71459,dur,duration,2295,2295,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_15127,musicbrainz,mbrainz_15127,du,duration,0:38:15,2295,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_15127,lastfm,lastFM_33278,Attribute_2,name,"Album: You, Me, the Music and Me","You, Me, the Music and Me",normalization,lastfm_prefix,,1
+mbrainz_15127,musicbrainz,mbrainz_15127,t,name,"You, Me, the Music and Me","You, Me, the Music and Me",identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_15127,musicbrainz,mbrainz_15127,rc,release-country,USA,United States of America,knowledge,country_full_name,"{""provenance"": [[""1"", ""abbreviate""]]}",2
+mbrainz_15127,discogs,discogs_71459,rel_dt,release-date,1989-01-01,1989-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",3
+mbrainz_1568,musicbrainz,mbrainz_1568,du,duration,57m 47s,3467,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1568,discogs,discogs_7716,rel_dt,release-date,01/01/1997,1997-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_1568,musicbrainz,mbrainz_1568,rd,release-date,01/01/1997,1997-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_159,musicbrainz,mbrainz_159,du,duration,0:18:08,1088,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1651,musicbrainz,mbrainz_1651,tk,tracks,"['The Riverboat Song', 'The Day We Caught the Train', 'The Circle', 'Lining Your Pockets', 'Fleeting Mind', '40 Past Midnight', 'One for the Road', 'Itâ€™s My Shadow', 'Policemen & Pirates', 'The Downstream', 'Youâ€™ve Got It Bad', 'Get Away']","[""The Riverboat Song"", ""The Day We Caught the Train"", ""The Circle"", ""Lining Your Pockets"", ""Fleeting Mind"", ""40 Past Midnight"", ""One for the Road"", ""It’s My Shadow"", ""Policemen & Pirates"", ""The Downstream"", ""You’ve Got It Bad"", ""Get Away""]",normalization,mojibake,,1
+mbrainz_175,discogs,discogs_473,dur,duration,23:14,1394,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_18332,lastfm,lastFM_44432,Attribute_2,name,One Way System -  Singles Collection,Singles Collection,normalization,lastfm_artist_prefix,,1
+mbrainz_18332,musicbrainz,mbrainz_18332,t,name,Singles Collection,Singles Collection,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_18332,musicbrainz,mbrainz_18332,rd,release-date,2003,2003-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",2
+mbrainz_1834,musicbrainz,mbrainz_1834,du,duration,0:51:20,3080,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_1834,musicbrainz,mbrainz_1834,rd,release-date,26.04.2004,2004-04-26,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_18462,discogs,discogs_98622,dur,duration,51m 40s,3100,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_18462,discogs,discogs_98622,rel_dt,release-date,02/01/2013,2013-02-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_18462,musicbrainz,mbrainz_18462,rd,release-date,2013-02-01,2013-02-01,identity,,,1
+mbrainz_188,musicbrainz,mbrainz_188,rc,release-country,United States of America,United States of America,identity,,,10
+mbrainz_188,musicbrainz,mbrainz_188,tk,tracks,"['Jim Clark Theorem', ""Les courants d'air"", 'Snakeplayer', 'Bassmajazz', 'Hybrid Story', 'Variations Sur Emma Peel', 'Sweet Sitar Street', 'Act of Love', 'Le Surboomer', 'Romantic Hold Up', 'La Baie Du Fakir', 'Vega Music', 'La guitare enchantÃ©e']","[""Jim Clark Theorem"", ""Les courants d'air"", ""Snakeplayer"", ""Bassmajazz"", ""Hybrid Story"", ""Variations Sur Emma Peel"", ""Sweet Sitar Street"", ""Act of Love"", ""Le Surboomer"", ""Romantic Hold Up"", ""La Baie Du Fakir"", ""Vega Music"", ""La guitare enchantée""]",normalization,mojibake,,1
+mbrainz_2083,discogs,discogs_9334,rel_dt,release-date,01/29/2005,2005-01-29,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_20856,musicbrainz,mbrainz_20856,rd,release-date,1998-02,1998-02-01,normalization,date_pad_month,,1
+mbrainz_2091,musicbrainz,mbrainz_2091,rd,release-date,15.10.1996,1996-10-15,normalization,date_reformat,"{""provenance"": [[""6"", ""ocr_confuse""], [""10"", ""reassign_gold_carrier""]]}",1
+mbrainz_2110,discogs,discogs_9404,dur,duration,52m 21s,3141,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2222,musicbrainz,mbrainz_2222,du,duration,10:14,614,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2347,discogs,discogs_10320,dur,duration,14:38,878,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2347,discogs,discogs_10320,rel_dt,release-date,23.05.2005,2005-05-23,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_25400,musicbrainz,mbrainz_25400,t,name,The Singles â€™67-â€™78,The Singles ’67-’78,normalization,mojibake,,1
+mbrainz_25400,musicbrainz,mbrainz_25400,rd,release-date,11/24/1997,1997-11-24,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_25432,musicbrainz,mbrainz_25432,du,duration,1:00:36,3636,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2558,discogs,discogs_11149,dur,duration,1h 14m 2s,4442,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2807,lastfm,lastFM_5959,Attribute_6,duration,0:41:34,2494,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_2807,discogs,discogs_12243,rel_dt,release-date,2005-01-01,2005-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_2807,musicbrainz,mbrainz_2807,rd,release-date,01/01/2005,2005-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_28928,musicbrainz,mbrainz_28928,rd,release-date,01/01/2011,2011-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_3151,discogs,discogs_14247,lbl,label,Fiction Records|Polydor,Fiction Records|Polydor,identity,,,1
+mbrainz_3202,discogs,discogs_13862,dur,duration,701,701,identity,,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_3202,discogs,discogs_13862,rel_nm,name,Blackout / Bounce,Blackout / Bounce,identity,,,2
+mbrainz_3202,musicbrainz,mbrainz_3202,t,name,Blackout / Bounce,Blackout / Bounce,identity,,,2
+mbrainz_32422,musicbrainz,mbrainz_32422,du,duration,0:39:54,2394,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_32422,musicbrainz,mbrainz_32422,t,name,Folie Ã  Deux,Folie à Deux,normalization,mojibake,,1
+mbrainz_348,discogs,discogs_1143,rel_nm,name,Digitonal -  23 Things Fall Apart,23 Things Fall Apart,normalization,lastfm_artist_prefix,,1
+mbrainz_348,musicbrainz,mbrainz_348,t,name,23 Things Fall Apart,23 Things Fall Apart,identity,,,1
+mbrainz_348,discogs,discogs_1143,rel_dt,release-date,09.09.2002,2002-09-09,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_375,musicbrainz,mbrainz_375,rd,release-date,01.01.1991,1991-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_3787,lastfm,lastFM_7870,Attribute_6,duration,12m 2s,722,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_3787,musicbrainz,mbrainz_3787,du,duration,12m 2s,722,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",2
+mbrainz_3787,musicbrainz,mbrainz_3787,rd,release-date,01/01/2006,2006-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_4147,musicbrainz,mbrainz_4147,du,duration,19:26,1166,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_4147,discogs,discogs_69529,rel_dt,release-date,01.01.1985,1985-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_4147,musicbrainz,mbrainz_4147,rd,release-date,1985-01-01,1985-01-01,identity,,,1
+mbrainz_4615,musicbrainz,mbrainz_4615,du,duration,12m 27s,747,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5095,lastfm,lastFM_10595,Attribute_6,duration,1:11:53,4313,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5095,musicbrainz,mbrainz_5095,rd,release-date,2007,2007-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_5189,musicbrainz,mbrainz_5189,du,duration,1h 13m 24s,4404,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5260,discogs,discogs_43498,rel_ctry,release-country,United Kingdom,United Kingdom of Great Britain and Northern Ireland,knowledge,country_full_name,"{""provenance"": [[""1"", ""llm_paraphrase_short""]]}",2
+mbrainz_5586,discogs,discogs_24299,dur,duration,6:08,368,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_5586,musicbrainz,mbrainz_5586,t,name,Hammering the Cramps / Spirit Ditch,Hammering the Cramps / Spirit Ditch,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_5586,discogs,discogs_24299,rel_dt,release-date,1996-01-01,1996-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_5586,musicbrainz,mbrainz_5586,rd,release-date,01.01.1996,1996-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6419,discogs,discogs_82564,rel_dt,release-date,1989-01-01,1989-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",3
+mbrainz_6419,musicbrainz,mbrainz_6419,rd,release-date,01/01/1989,1989-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6880,discogs,discogs_37434,rel_dt,release-date,1970,1970-01-01,normalization,date_pad_year,,1
+mbrainz_6880,musicbrainz,mbrainz_6880,rd,release-date,01.01.1970,1970-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_6947,musicbrainz,mbrainz_6947,du,duration,0:38:12,2292,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_77,musicbrainz,mbrainz_77,t,name,Momentum / Immersion,Momentum / Immersion,identity,,,1
+mbrainz_77,musicbrainz,mbrainz_77,rd,release-date,2001,2001-01-01,normalization,date_pad_year,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_7957,discogs,discogs_35648,rel_dt,release-date,01/01/1972,1972-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_7957,musicbrainz,mbrainz_7957,rd,release-date,01.01.1972,1972-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_7969,musicbrainz,mbrainz_7969,rd,release-date,03/01/2009,2009-03-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_7969,musicbrainz,mbrainz_7969,tk,tracks,"['It Doesnâ€™t Matter', 'Donâ€™t Stop the Rock', 'Under the Influence', 'Freak of the Week']","[""It Doesn't Matter"", ""Don't Stop the Rock"", ""Under the Influence"", ""Freak of the Week""]",normalization,mojibake+typography,,1
+mbrainz_8711,musicbrainz,mbrainz_8711,du,duration,0:42:49,2569,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_8711,musicbrainz,mbrainz_8711,rd,release-date,27.04.2009,2009-04-27,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_8963,lastfm,lastFM_19085,Attribute_6,duration,45:51,2751,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_8963,musicbrainz,mbrainz_8963,rd,release-date,10/04/2004,2004-10-04,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_8963,musicbrainz,mbrainz_8963,tk,tracks,"['Another Code Against the Gone', 'Install a Beak in the Heart That Clucks Time in Arabic', 'Retreat! Retreat!', 'Default This', 'I Swallowed Hard, Like I Understood', 'The Fall of Math', 'This Cat Is a Landmine', 'The Last Home Recording', 'Hole', 'Fix the Sky a Little', 'Arenâ€™t We All Running?']","[""Another Code Against the Gone"", ""Install a Beak in the Heart That Clucks Time in Arabic"", ""Retreat! Retreat!"", ""Default This"", ""I Swallowed Hard, Like I Understood"", ""The Fall of Math"", ""This Cat Is a Landmine"", ""The Last Home Recording"", ""Hole"", ""Fix the Sky a Little"", ""Aren't We All Running?""]",normalization,mojibake+typography,,1
+mbrainz_9185,lastfm,lastFM_19539,Attribute_6,duration,19m 36s,1176,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_9185,lastfm,lastFM_19539,Attribute_2,name,G. Gossip -  Dreamland,Dreamland,normalization,lastfm_artist_prefix,,1
+mbrainz_9185,musicbrainz,mbrainz_9185,t,name,Dreamland,Dreamland,identity,,"{""provenance"": [[""10"", ""identity""]]}",1
+mbrainz_9858,discogs,discogs_96815,dur,duration,40:03,2403,normalization,duration_parse,"{""provenance"": [[""5"", ""reconvert_unit""]]}",1
+mbrainz_9858,discogs,discogs_96815,rel_dt,release-date,1990-01-01,1990-01-01,identity,,"{""provenance"": [[""5"", ""reformat_date""]]}",1
+mbrainz_9858,musicbrainz,mbrainz_9858,rd,release-date,01.01.1990,1990-01-01,normalization,date_reformat,"{""provenance"": [[""5"", ""reformat_date""]]}",1

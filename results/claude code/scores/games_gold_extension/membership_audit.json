@@ -1,0 +1,32 @@
+{
+  "anchors": 100,
+  "accepted_links": 216,
+  "records": 316,
+  "anchors_with_partners": 99,
+  "singleton_anchors": [
+    "metacritic_8244"
+  ],
+  "cluster_size_distribution": {
+    "2": 31,
+    "4": 14,
+    "3": 41,
+    "5": 8,
+    "7": 2,
+    "6": 2,
+    "8": 1,
+    "1": 1
+  },
+  "confidence_counts": {
+    "high": 190,
+    "low": 26
+  },
+  "negative_label_conflicts": [],
+  "source_counts": {
+    "dbpedia": 129,
+    "metacritic": 100,
+    "sales": 87
+  },
+  "source_record_count": 74951,
+  "provenance": "Existing FINAL 2026-09-01 graph. LLM judged links with Ralph review of rejected/unsure links and a 30-accept sample; not every accepted link individually human reviewed.",
+  "unresolved": "Seven historical unsure links remain excluded. This is the existing accepted graph, not a claim of exhaustive annotation of all source records."
+}

@@ -1,3 +1,5 @@
+"""Adapted from megagonlabs/ditto (https://github.com/megagonlabs/ditto), Apache License 2.0
+(see LICENSE in this folder); modified for MaDI-Bench."""
 from __future__ import annotations
 
 from dataclasses import replace

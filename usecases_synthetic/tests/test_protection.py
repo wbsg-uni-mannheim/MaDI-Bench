@@ -1,12 +1,173 @@
-"""Tests for protection set construction."""
+"""Tests for protection set construction and the continuous closeness."""
 
 from __future__ import annotations
 
+import pytest
+
 from usecases_synthetic.lib.protection import (
+    ToleranceSpec,
+    _numeric_readings,
+    _parse_float,
     build_drop_corner_protection_set,
     build_expanded_positives,
+    cell_has_close_survivor,
+    is_close_enough,
     is_protected,
 )
+
+_CONT = ToleranceSpec(kind="continuous", threshold=0.03)
+
+
+class TestContinuousClosenessLocales:
+    """The continuous kind reads Knob 5 locale forms correctly.
+
+    ``_parse_float`` drops commas and reads the dot as the decimal point,
+    so K5's de_DE / fr_FR forms were misread and the K6 close-survivor
+    gate lost every de_DE / fr_FR sibling.
+    """
+
+    @pytest.mark.parametrize(
+        ("value", "readings"),
+        [
+            ("2.000,0", (2000.0,)),  # de_DE, was 2.0
+            ("500,0", (500.0,)),  # de_DE / fr_FR, was 5000
+            ("14 000,0", (14000.0,)),  # fr_FR, was 140000
+            ("14\u00a0000,0", (14000.0,)),  # fr_FR NBSP grouping
+            ("14\u202f000,0", (14000.0,)),  # fr_FR NNBSP grouping
+            ("1.234,56", (1234.56,)),  # de_DE, was 1.23456
+            ("1.234.567", (1234567.0,)),  # de_DE, was unparseable
+            ("2.048,0", (2048.0,)),  # de_DE, was 2.048
+            ("8,000.0", (8000.0,)),  # en_US
+            ("1 234", (1234.0,)),  # fr_FR integer
+            ("0,500", (0.5,)),  # de_DE / fr_FR; no en_US 500 (zero-led group)
+            # Ambiguous forms keep both readings.
+            ("2.000", (2.0, 2000.0)),
+            ("1,234", (1234.0, 1.234)),
+            ("3.134", (3.134, 3134.0)),  # plain 3-decimal: also de_DE 3134
+        ],
+    )
+    def test_locale_readings(self, value: str, readings: tuple[float, ...]) -> None:
+        assert _numeric_readings(value) == readings
+
+    @pytest.mark.parametrize(
+        ("value", "target", "wrong_target"),
+        [
+            ("2.000,0", "2000.0", "2.0"),
+            ("500,0", "500", "5000"),
+            ("14 000,0", "14000.0", "140000"),
+            ("14\u00a0000,0", "14000.0", "140000"),
+            ("14\u202f000,0", "14000.0", "140000"),
+            ("1.234,56", "1234.56", "1.23456"),
+            ("1.234.567", "1234567", "1.234567"),
+            # The spurious closeness of the old parser: 2048 MB is not 2 GB.
+            ("2.048,0", "2048.0", "2.0"),
+        ],
+    )
+    def test_decimal_comma_forms_close_to_true_value_only(
+        self, value: str, target: str, wrong_target: str
+    ) -> None:
+        assert is_close_enough(value, target, _CONT)
+        assert not is_close_enough(value, wrong_target, _CONT)
+
+    @pytest.mark.parametrize(
+        ("value", "targets"),
+        [("2.000", ("2.0", "2000")), ("1,234", ("1234", "1.234"))],
+    )
+    def test_ambiguous_forms_close_under_either_reading(
+        self, value: str, targets: tuple[str, str]
+    ) -> None:
+        for target in targets:
+            assert is_close_enough(value, target, _CONT)
+        assert not is_close_enough(value, "20", _CONT)
+
+    def test_k6_gate_counts_de_de_and_fr_fr_survivors(self) -> None:
+        gold = ["2000.0"]
+        assert cell_has_close_survivor(gold, ["corrupted", "2.000,0"], _CONT)
+        assert cell_has_close_survivor(gold, [None, "2 000,0"], _CONT)
+        assert cell_has_close_survivor(gold, ["2\u202f000,0"], _CONT)
+        assert not cell_has_close_survivor(gold, ["corrupted", "2.500,0"], _CONT)
+
+
+class TestContinuousClosenessPlainUnchanged:
+    """Values today's ``_parse_float`` reads correctly keep that reading."""
+
+    @pytest.mark.parametrize(
+        "value",
+        [
+            "2000.0",
+            "2000",
+            "0.5",
+            "-3.25",
+            "+1.5",
+            "123",
+            "12.5",
+            "148700000000",
+            "1e5",
+            "2.1492E2",
+            "-4.5e-3",
+            ".5",
+            "5.",
+            "8,000.0",
+            "148,700,000,000",
+            "$1,299.99",
+            "1 234.5",
+            "  42.0  ",
+            # Zero-led: never a de_DE thousands group.
+            "0.178",
+            "0.008",
+            "-0.125",
+        ],
+    )
+    def test_single_reading_equals_parse_float(self, value: str) -> None:
+        assert _numeric_readings(value) == (_parse_float(value),)
+
+    def test_zero_led_plain_values_keep_their_verdict(self) -> None:
+        # Products base weight_g cells in kg next to a gram gold value
+        # (products_4): read as de_DE thousands they would turn close.
+        assert not is_close_enough("0.178", "178.0", _CONT)
+        assert not is_close_enough("0.008", "8.0", _CONT)
+
+    @pytest.mark.parametrize(
+        "value", ["", "   ", "abc", "SAR 219", "R5 299,98 incl tax", "1.2.3,4,5"]
+    )
+    def test_unparseable_stays_unparseable(self, value: str) -> None:
+        assert _parse_float(value) is None
+        assert _numeric_readings(value) == ()
+        assert not is_close_enough(value, "1", _CONT)
+
+    def test_nan_and_inf_never_close(self) -> None:
+        assert not is_close_enough("nan", "1", _CONT)
+        assert not is_close_enough("inf", "1", _CONT)
+        assert not is_close_enough("1", "nan", _CONT)
+
+    @pytest.mark.parametrize(
+        ("value", "target", "expected"),
+        [
+            ("2000.0", "2000", True),
+            ("2059.0", "2000", True),  # +2.95%
+            ("2061.0", "2000", False),  # +3.05%
+            ("1.5", "1.52", True),
+            ("1.5", "1.6", False),
+            ("148700000000", "148,700,000,000", True),
+            ("$1,299.99", "1299.99", True),
+            ("2.1492E2", "214.92", True),
+            ("8,000.0", "8000", True),
+            (2000.0, "2000", True),
+            (7, "7.0", True),
+            ("0", "0", True),
+            ("0.0001", "0", False),
+        ],
+    )
+    def test_plain_verdicts(self, value: object, target: str, expected: bool) -> None:
+        assert is_close_enough(value, target, _CONT) is expected
+
+    def test_target_side_parsed_as_before(self) -> None:
+        # The target is the canonical fusion value: read by _parse_float,
+        # so a canonical "2.000" target stays 2.0.
+        assert is_close_enough("2.0", "2.000", _CONT)
+        assert not is_close_enough("2000.0", "2.000", _CONT)
+        # Empty target is vacuously close (unchanged).
+        assert is_close_enough("anything", "", _CONT)
 
 
 class TestProtectionSet:
@@ -52,16 +213,16 @@ class TestProtectionSet:
 
 
 class TestDropCornerProtectionSet:
-    """Regression for the 2026-05-28 K2 drop-corner zero-drop bug.
+    """Drop-corner protection set for K2.
 
     On ``pool_quality: live`` domains (products) BOTH pool and EM gold
     are coextensive with the full record set, so any protection scheme
-    that includes EM gold leaves zero droppable entities. The fix
-    narrows the drop-corner protection set to fusion val/test only
-    under default ``gold``; step 4c / C11's EM-regen handles dropped
+    that includes EM gold leaves zero droppable entities. The
+    drop-corner protection set is therefore fusion val/test only
+    under default ``gold``; the EM regeneration handles dropped
     EM-gold members downstream by pruning Set 1 and corner-mining
     Set 2 from the surviving pool. ``silver`` widens back to include
-    pool (matches C9 silver-standard semantics).
+    pool (the silver-standard semantics).
     """
 
     def test_gold_protection_is_fusion_only(self) -> None:
@@ -96,7 +257,7 @@ class TestDropCornerProtectionSet:
 
     def test_silver_protection_includes_pool(self) -> None:
         """Under ``protection_source="silver"``, the drop-corner set
-        widens to fusion ∪ pool (C9 silver-standard semantics: every
+        widens to fusion ∪ pool (silver-standard semantics: every
         pool-cluster member is fusion-recoverable, therefore
         protected). EM gold is still NOT included on its own — it
         only contributes via overlap with pool members."""
@@ -116,7 +277,7 @@ class TestDropCornerProtectionSet:
     def test_em_gold_members_droppable_under_gold(self) -> None:
         """EM gold positive ids that are NOT also in fusion val/test
         gold must NOT be in the gold protection set — i.e. drop-corner
-        is allowed to drop them. C11 EM-regen rebuilds the EM splits
+        is allowed to drop them. The EM regeneration rebuilds the EM splits
         from the surviving pool after the drops land."""
         from usecases_synthetic.lib.protection import (
             _load_em_gold_ids,
@@ -134,7 +295,7 @@ class TestDropCornerProtectionSet:
         intersection = em_only & gold
         assert intersection == set(), (
             f"{len(intersection)} EM-gold-only ids leaked into gold protection — "
-            "they should be droppable under the C11 EM-regen contract."
+            "they should be droppable under the EM-regen contract."
         )
 
     def test_gold_protection_default_when_param_omitted(self) -> None:

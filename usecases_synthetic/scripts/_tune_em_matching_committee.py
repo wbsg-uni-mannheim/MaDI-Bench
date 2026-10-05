@@ -1,9 +1,8 @@
 """Tune EM matching committee hyperparameters per member.
 
-One-off sweep harness for the R5 EM matching tuning pass. Scope per
-R5 sign-off (plans/plan_s1_scale.md):
+One-off sweep harness for the EM matching tuning pass. Scope:
 
-- **ditto_plm**: no sweep (R2 LR×class-balance sweep is the source of
+- **ditto_plm**: no sweep (the Ditto LR×class-balance sweep is the source of
   truth; checkpoints at ``cache/ditto_checkpoints/<d>/best/`` already
   picked. Threshold locked at 0.5.).
 - **magellan**: classifier sweep only (auto-feature-gen handles the
@@ -169,7 +168,7 @@ def _pre_block_pair(
     Picks the highest-priority blocker that clears the recall floor on
     this pair against EM gold. For the sweep we use a fast deterministic
     blocker — ``StandardBlocker`` on the per-domain key (which already
-    won at R5 EM blocking sub-B). Embedding-based blockers are skipped
+    won the EM blocking tuning). Embedding-based blockers are skipped
     here for sweep speed; the classifier scoring is stable across
     candidate-set sources.
     """
@@ -243,7 +242,7 @@ def _score_magellan_cell(
     set semantic) instead of running it across the full blocker
     candidate set. The relative ranking of classifier configs is
     preserved under closed-set scoring; the full-candidate open-set
-    measurement runs at R6.1 baseline (``measure_baseline.py``), not in
+    measurement runs in the baseline measurement (``measure_baseline.py``), not in
     the sweep. This is ~100× faster on large domains (games / music)
     because feature extraction only runs on a few hundred gold pairs
     instead of the ~50-100k blocker output.
@@ -387,7 +386,7 @@ def main() -> None:
         default="magellan",
         help=(
             "Comma-separated member list. "
-            "Only `magellan` is swept (the other 3 are locked per R5 sign-off)."
+            "Only `magellan` is swept (the other 3 are fixed)."
         ),
     )
     parser.add_argument(
@@ -411,8 +410,8 @@ def main() -> None:
     skipped_members = members - {"magellan"}
     if skipped_members:
         logger.warning(
-            "Skipping non-swept members per R5 lock: %s "
-            "(ditto/matchgpt/comem are locked, see R5 EM matching sign-off)",
+            "Skipping non-swept members (fixed configuration): %s "
+            "(ditto/matchgpt/comem are not swept)",
             sorted(skipped_members),
         )
 

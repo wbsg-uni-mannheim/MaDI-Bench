@@ -3,52 +3,55 @@
     "brand": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_3",
+          "products_1",
+          "products_2",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     },
     "bus_type": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "most_complete"
     },
     "chipset_name": {
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {
-        "trust_key": "trust_score"
-      },
-      "resolver": "prefer_higher_trust"
-    },
     "color": {
-      "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "description": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_1",
+          "products_2",
+          "products_4",
+          "products_3"
         ]
       },
       "resolver": "favour_sources"
     },
-    "form_factor": {
+    "description": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
+    },
+    "form_factor": {
+      "kwargs": {
+        "sources": [
+          "products_1",
+          "products_2",
+          "products_3",
+          "products_4"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "height_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "interface_type": {
       "kwargs": {},
-      "resolver": "longest_string"
+      "resolver": "most_complete"
     },
     "length_mm": {
       "kwargs": {},
@@ -57,38 +60,29 @@
     "memory_type": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_1",
+          "products_2",
+          "products_4",
+          "products_3"
         ]
       },
       "resolver": "favour_sources"
     },
     "model": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "longest_string"
     },
     "model_number": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "price": {
       "kwargs": {},
       "resolver": "median"
     },
     "priceCurrency": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "product_type": {
       "kwargs": {},
@@ -97,30 +91,25 @@
     "read_speed_mb_s": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_3",
+          "products_2",
+          "products_1",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"
     },
     "storage_connection_type": {
       "kwargs": {},
-      "resolver": "longest_string"
+      "resolver": "most_complete"
     },
     "storage_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "title": {
       "kwargs": {},
       "resolver": "longest_string"
-    },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "most_complete"
     },
     "url": {
       "kwargs": {
@@ -129,12 +118,8 @@
       "resolver": "prefer_higher_trust"
     },
     "vram_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "weight_g": {
       "kwargs": {},
@@ -142,12 +127,15 @@
     },
     "width_mm": {
       "kwargs": {},
-      "resolver": "median"
+      "resolver": "maximum"
     },
     "write_speed_mb_s": {
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_2",
+          "products_3",
+          "products_1",
+          "products_4"
         ]
       },
       "resolver": "favour_sources"

@@ -60,7 +60,7 @@ within_source_duplicate_rate:
 # ~1659 matchable entities rather than the full 12k corpus.
 singleton_cap_hard: 0.60
 
-# R10-E: maximum fraction of any single source's rows K4 may demote, so
+# Maximum fraction of any single source's rows K4 may demote, so
 # the conflict-ranking does not decimate one source and silently delete
 # EM-gold edges (not regenerated post-K4). 0.40 = at most 40% of a
 # source's rows.
@@ -80,8 +80,8 @@ delta_softening_step: 0.05
 fabrication_mode: paraphrase_only
 
 # LLM hygiene (unused at fabrication_mode=paraphrase_only but recorded).
-# Default model gpt-5.4-mini for cost. Ask user before each K4 run
-# whether to bump to gpt-5.4 (invalidates cache).
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the cache.
 llm_prompt_version: v1
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0

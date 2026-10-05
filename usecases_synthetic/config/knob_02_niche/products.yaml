@@ -2,10 +2,7 @@
 #
 # Products sources are small (812/812/762/626 = 3012 rows total) — much
 # smaller than companies/games/music. Per-level corner-ratio targets
-# carried over from companies' starting point; calibrate at S.5a if
-# the dispatcher under-shoots on hard (analogous to music's F4 in
-# plan_s1_final.md). ``interp_pair_factor`` defaults to 0.5; tune
-# per-domain at S.5a.
+# follow the companies ladder 0.20 / 0.50 / 0.80.
 
 domain: products
 
@@ -33,7 +30,6 @@ canonical_schema:
   - chipset_name
   - vram_gb
   - storage_gb
-  - title_description
 
 attribute_mapping:
   products_1:
@@ -48,7 +44,6 @@ attribute_mapping:
     gpu_chipset: chipset_name
     video_memory_gb: vram_gb
     capacity_gb: storage_gb
-    name_and_description: title_description
   products_2:
     name: title
     brandName: brand
@@ -61,7 +56,6 @@ attribute_mapping:
     chipset: chipset_name
     vramGb: vram_gb
     capacityGb: storage_gb
-    titleAndDescription: title_description
   products_3:
     ProductTitle: title
     Brand: brand
@@ -74,7 +68,6 @@ attribute_mapping:
     Chipset: chipset_name
     MemorySizeGB: vram_gb
     CapacityGB: storage_gb
-    TitleDetails: title_description
   products_4:
     name: title
     mfr: brand
@@ -87,7 +80,6 @@ attribute_mapping:
     chip: chipset_name
     vram: vram_gb
     cap_gb: storage_gb
-    name_desc: title_description
 
 source_priority:
   - products_1
@@ -148,24 +140,12 @@ stopword_list:
   - of
   - and
 
-# Per plan note: products may need lower relative intensities. These
-# carry over companies' rates as a starting point; S13 must lower if
-# baseline is already at hard.
-# 2026-05-27 (step 4h): raised hard target from 0.65 -> 0.80 per the
-# user's cross-domain uniform target decision. Note: max_interp_fraction
-# x n_entities = 0.60 x 3012 = 1807 may cap realised hard ratio short
-# of 0.80; audit will report this as cap-bound.
-# 2026-05-28: raised max_interp_fraction from 0.60 -> 0.85. First run
-# with the step-4i drop-corner-touching operator hit the 0.60 cap at
-# both easy + medium on products (baseline ratio ~0.83 vs easy target
-# 0.20 needs ~60% drops; the cap blocked it). 0.85 lets easy reach
-# closer to 0.20 and restores K2 cross-level monotonicity.
-# Per-level interpolation_count overrides at medium + hard removed
-# 2026-05-27 (step 4h): let the dispatcher derive them from
-# gap x interp_pair_factor. Easy retains interpolation_count: 0 to
-# enforce the drop-corner path with no interp at easy. Per-level
-# placement_split overrides also removed — superseded by the top-level
-# placement_split: 0.5.
+# The dispatcher derives interpolation counts from the corner-pair gap
+# and interp_pair_factor. max_interp_fraction (0.85) also caps the
+# number of drop-corner-touching drops (max_interp_fraction x
+# n_entities); at 0.60 that cap blocked the drops needed at easy and
+# medium. 0.85 lets easy get closer to 0.20 and keeps K2 monotone
+# across levels.
 levels:
   easy:
     target_corner_case_ratio: 0.20
@@ -180,9 +160,8 @@ levels:
 
 max_interp_fraction: 0.85
 
-# F4 calibration: align with music + games + companies (all set to 0.05
-# post-2026-05-15). Default 0.5 was documented as 7-15× under-shoot on
-# music's corner-pair target; products has small clusters (max size 4)
+# Same value as music, games and papers. The default 0.5 under-shot
+# music's corner-pair target 7-15×; products has small clusters (max size 4)
 # so the per-interpolation contribution is realistic at 1.0 corner pair
 # per interp -> per_interp_corner = max(1, int(20*0.05)) = 1.
 interp_pair_factor: 0.05
@@ -191,29 +170,22 @@ em_test_regeneration:
   target_size: 200
   candidate_pool_cap: 2000
 
-# 2026-05-27 (step 4h): equal train/test split for newly-mined corner pairs.
-# Was 0.6 (60% test / 40% train); user signed off equal distribution so the
-# regen splits have the same corner-case shape on both sides. Top-level
-# value supersedes the previous per-level overrides under levels:.
+# Half of the interpolated entities are placed across all sources
+# (matched near-twins), half into a single source (distractors).
 placement_split: 0.5
 
-# Default model gpt-5.4-mini for cost. Ask user before each K2 run
-# whether to bump to gpt-5.4 (invalidates the on-disk LLM cache, the
+# Default model gpt-5.4-mini for cost. Bumping to gpt-5.4
+# invalidates the on-disk LLM cache (the
 # key carries model_id).
-# 2026-05-27 (step 4h): prompt v1 -> v2 — interpolate_v2.txt broadens
-# the lead-sentence domain enumeration to include products (GPUs / SSDs /
-# HDDs / etc.) and carries a domain-extension maintenance note.
-# Invalidates the existing K2 LLM cache by construction.
+# The prompt version is part of the K2 LLM cache key.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0
 
-# Step 4i (2026-05-27): drop-corner-touching operator + non-corner
-# refill. New K2 dispatch branch at baseline_ratio > target_ratio
-# replaces the legacy noop_baseline_above_target path — K2 now actually
-# moves the ratio downward when configured. Each drop pairs with a
-# 1-for-1 LLM-synthesized non-corner entity refill so canonical set
-# size stays stable.
+# Drop-corner-touching operator + non-corner refill: when the baseline
+# ratio is above the target, K2 drops corner-touching entities to move
+# the ratio downward. Each drop pairs with a 1-for-1 LLM-synthesized
+# non-corner entity refill so canonical set size stays stable.
 non_corner_refill:
   enabled: true
   reference_count: 5            # K reference entities for the dissimilarity anchor
@@ -226,8 +198,8 @@ non_corner_prompt_version: v1
 # build_pool.py used for companies/games/music).
 pool_quality: live
 
-# Hard-negative score-margin gate (S3) — per-domain Ditto checkpoint
-# does not yet exist; S11 baseline step trains it.
+# Hard-negative score-margin gate. cluster/slurm/run_em_train_committee.sbatch
+# trains the products Ditto checkpoint at the path below.
 hard_negative_gate:
   enabled: true
   plm_checkpoint_path: usecases_synthetic/cache/ditto_checkpoints/products/best
@@ -246,11 +218,9 @@ hard_negative_gate:
   plm_max_field_len: 350
   plm_batch_size: 16
   plm_margin_delta: 0.08
-  # 2026-05-27 (step 4h option a): full LLM adjudication on every
-  # gate decision via new gate_mode field. Mirrors bucket-C policy:
-  # PLM score becomes audit telemetry, not a decision shortcut.
-  # Insurance against transitional-state Ditto calibration on
-  # music / companies / products (pre-R7 padding fix).
+  # full_llm: the LLM adjudicates every gate decision; the PLM score is
+  # recorded as audit telemetry only, so decisions do not depend on the
+  # Ditto checkpoint's calibration (the pool builder's bucket-C policy).
   gate_mode: full_llm
   per_level:
     easy:

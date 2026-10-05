@@ -1,0 +1,64 @@
+# End-to-end panel configuration for the products tasks (score_e2e.py).
+# The keys below are the ones the panel reads, copied unchanged from the
+# configuration the paper's panels were computed with (the best-of-breed
+# pipeline's products config of 2026-07, with PyDI's names for the column types).
+
+domain: products
+
+column_types:
+  id: identifier
+  cluster_id: identifier
+  url: identifier
+  title: text
+  brand: categorical
+  description: text
+  price: numerical
+  priceCurrency: categorical
+  product_type: categorical
+  model: text
+  model_number: text
+  chipset_name: text
+  vram_gb: numerical
+  storage_gb: numerical
+  read_speed_mb_s: numerical
+  write_speed_mb_s: numerical
+  bus_type: categorical
+  interface_type: categorical
+  width_mm: numerical
+  length_mm: numerical
+  height_mm: numerical
+  weight_g: numerical
+  storage_connection_type: categorical
+  memory_type: categorical
+  color: categorical
+  form_factor: categorical
+  title_description: text
+
+# Panel numerical tolerance defaults.
+panel_tolerance:
+  default: 0.04
+  overrides:
+    price: 0.10
+    vram_gb: 0.10
+    storage_gb: 0.10
+    read_speed_mb_s: 0.15
+    write_speed_mb_s: 0.15
+
+# Composite subscore weights, passed through to compute_e2e_panel (PyDI's
+# defaults). The paper reports the individual metrics, not the composite.
+composite_weights:
+  entity_coverage: 0.10
+  fact_coverage: 0.10
+  source_based_fact_coverage: 0.10
+  consistency: 0.10
+  cluster_correctness: 0.30
+  fact_correctness: 0.30
+
+# Record-id prefix -> source name. The gold and the scorers use the
+# products_<N>_ prefixed ids (aliases.py translates the raw ids of the
+# products base source tables).
+source_prefix_map:
+  products_1_: products_1
+  products_2_: products_2
+  products_3_: products_3
+  products_4_: products_4

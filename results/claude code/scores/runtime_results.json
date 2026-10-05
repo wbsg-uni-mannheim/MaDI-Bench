@@ -1,0 +1,357 @@
+{
+  "games": {
+    "original_task": "<p4-run:games_base>",
+    "stages": [
+      {
+        "command": [
+          "bash",
+          "work/rebuild.sh"
+        ],
+        "seconds": 373.5455275620334,
+        "returncode": 0
+      }
+    ],
+    "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+    "original_sha256": {
+      "<p4-run:games_base>/workspace/task/input/schemamatching/Gaming_Platforms_Taxonomy.csv": "5c50b18e39696cb7389ce39de50369d208e3d67fdf07f3da2dc7a40cea49f572",
+      "<p4-run:games_base>/workspace/task/input/schemamatching/ESRB_Rating_Taxonomy.csv": "3068183234cae431e9cf3d1ad39604c180bf751202cb270b0f7130dea7775ea1",
+      "<p4-run:games_base>/workspace/task/input/schemamatching/Video_Game_Genres_Taxonomy.csv": "9239ac6da7c1fc772b1c98f624c22bcf77550e434e5d2a18757bc57f5d5b4917",
+      "<p4-run:games_base>/workspace/task/input/schemamatching/target_schema.json": "db3357047845d8920e7f4195d903fc8811a2fc01ae8b118633a6ebac3569ec70",
+      "<p4-run:games_base>/workspace/task/input/data/sales_metadata.json": "dd166af088f64da45d7b138c4640ce494d388e21492fe85b375d7181401a4b40",
+      "<p4-run:games_base>/workspace/task/input/data/metacritic.csv": "08e1dfa5d8c00a9196a0c4de285eac44977acb37f95fdbdd4c56ebd8064a572e",
+      "<p4-run:games_base>/workspace/task/input/data/dbpedia_metadata.json": "8b2c41fb1ac65d0c4c30148a0b7064040c9e59ea192ab604bb2205f124d2de91",
+      "<p4-run:games_base>/workspace/task/input/data/dbpedia.csv": "e7c7e4677e8dc95b245c83ab320428b5ec3fca65217143a7c90e7871221ea4c0",
+      "<p4-run:games_base>/workspace/task/input/data/sales.csv": "184d4c4fc93c0775b5f283c6cda7118f4fe5bf22fa4ca579ada06701dc3cc5fd",
+      "<p4-run:games_base>/workspace/task/input/data/metacritic_metadata.json": "e118e92ca3d09293a12c92a1904d4fc2035c202bbdce151940d0ce3a95bd735f",
+      "<p4-run:games_base>/workspace/work/norm.py": "e98cd3380904999e6a58ada41332d2b13e514db9c8345ba28970e89cd2aa01bf",
+      "<p4-run:games_base>/workspace/work/s3_blocking.py": "bcd10b25b1dcb5f872e8ce6b808afc81b4dabc1d460aa997c8b1ab3190ac7f70",
+      "<p4-run:games_base>/workspace/work/s7_export_diag.py": "a64e2c2e36a32a56d756cea436bbb57c727e11f6386039b95124f4bb7431e626",
+      "<p4-run:games_base>/workspace/work/s1_schema.py": "686f601ab6ae285c7cc53eb03606aa792e120c848e10930f74e6d3c6667ffd6d",
+      "<p4-run:games_base>/workspace/work/s2_normalize.py": "151fdd02c3a974eeed38b12740647112d5271af1f8241d4d899744403ef6eb9c",
+      "<p4-run:games_base>/workspace/work/rebuild.sh": "84afe63fbaac4a0923a0d705153b09639d1302f0f569eaad84de54f42823d03c",
+      "<p4-run:games_base>/workspace/work/s4_matching.py": "0eedaa03544f8ce50b57ac9eebb8049d51738b0615976a403d86c2310a6b534c",
+      "<p4-run:games_base>/workspace/work/s5_cluster.py": "29c1ff3e134bb18ae9abdf81ec72af10ed2487093ecc9b420cb02ed5ba5ff889",
+      "<p4-run:games_base>/workspace/work/s6_fusion.py": "962e27455c6b5a74132b69993b3b284f475b539a2754b665da6b4c162737ddc2",
+      "<p4-run:games_base>/submission/sm_mapping.csv": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+      "<p4-run:games_base>/submission/blocking/candidates.csv": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+      "<p4-run:games_base>/submission/correspondences.csv": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+      "<p4-run:games_base>/submission/membership.csv": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+      "<p4-run:games_base>/submission/fused.csv": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b"
+    },
+    "fresh_state_verified": true,
+    "wall_seconds": 373.54554978059605,
+    "artifact_checks": {
+      "sm_mapping.csv": {
+        "original_sha256": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+        "replay_sha256": "bf21190dfd615135dfbbfd2dc6710c34fb5551bd9db23e5a04e12dc34e9b9aea",
+        "bytes_identical": true
+      },
+      "blocking/candidates.csv": {
+        "original_sha256": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+        "replay_sha256": "880f473e929310e2690f0572ac2a98978b1f3abb4523d36a0bf9f42160875b8e",
+        "bytes_identical": true
+      },
+      "correspondences.csv": {
+        "original_sha256": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+        "replay_sha256": "1f3b9c7c31805a571e649d4cc65a76cfc2b793225487c74593233f94d1b33ef0",
+        "bytes_identical": true
+      },
+      "membership.csv": {
+        "original_sha256": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+        "replay_sha256": "80c21ffea8657145e586e84a1324b69afc34300e88ae6baa6776f85ab7861b8b",
+        "bytes_identical": true
+      },
+      "fused.csv": {
+        "original_sha256": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+        "replay_sha256": "a1b55cac2837c22d9015ec115e146762fdccafa31cf2cc29f1d787f8b6224e9b",
+        "bytes_identical": true
+      }
+    },
+    "originals_unchanged": true,
+    "status": "executed"
+  },
+  "companies": {
+    "original_task": "<p4-run:companies_base>",
+    "stages": [
+      {
+        "command": [
+          "bash",
+          "work/rebuild.sh"
+        ],
+        "seconds": 179.79063267679885,
+        "returncode": 0
+      }
+    ],
+    "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+    "original_sha256": {
+      "<p4-run:companies_base>/workspace/task/input/schemamatching/GICS_Industry_Taxonomy.csv": "6753135c3f2854101167bc4724742d8c1eabbef43756215a59f04592d343027a",
+      "<p4-run:companies_base>/workspace/task/input/schemamatching/CLDR_Country_Taxonomy.csv": "ee9ef8ea3e6f0ed4150e1d608f247ec33ca4de3697bbbb58506bcafadf22c7d1",
+      "<p4-run:companies_base>/workspace/task/input/schemamatching/target_schema.json": "2b198a554bab5d2f72fcf6e5972d3855e9ac47bd1ae88ccacebbb1a6c5601e81",
+      "<p4-run:companies_base>/workspace/task/input/data/dbpedia_metadata.json": "beb102f80e8f592f47b300590a23049f3f888ea7d384193e87b0e828a747e9cf",
+      "<p4-run:companies_base>/workspace/task/input/data/forbes.csv": "1b95f9a611e6500aac69bf7dea27c1e1aa2b067181cea069158119da0f6580f3",
+      "<p4-run:companies_base>/workspace/task/input/data/fullcontact.csv": "40947bea53f0ccbc8b0e159d6a0b4081678fb087c946ab8605f2d7ff621449a3",
+      "<p4-run:companies_base>/workspace/task/input/data/dbpedia.csv": "c3e154fdd068d939b1724b57b4b2cd84b157a977a532646004a206cd2b418a37",
+      "<p4-run:companies_base>/workspace/task/input/data/forbes_metadata.json": "63b806ff8acb6e14d71708345a182ed75b00cfbf69a51515c9772ec5455db497",
+      "<p4-run:companies_base>/workspace/task/input/data/fullcontact_metadata.json": "4834fae0c70200950abe3281b17e7041d84eddcd3443cdb7453bfd930840cdc2",
+      "<p4-run:companies_base>/workspace/work/s3_blocking.py": "ed3b1f6cf1eab99e6334d341c14337a45df6b8d13841eccafc359240dd0064c7",
+      "<p4-run:companies_base>/workspace/work/s4_match.py": "21e8ffc803f88562e814b662efa6ea1b6d180544979d7a65577cfa53d4be03d9",
+      "<p4-run:companies_base>/workspace/work/common.py": "e84eefc6b40b3d386bef033ccdfb6fb96d4ddf621a6d36b00f5ed1f7af362d34",
+      "<p4-run:companies_base>/workspace/work/s1_schema.py": "65ae9ae3d39c1954dcd279871133f779cdc88e18404b671222f7cfcb983be681",
+      "<p4-run:companies_base>/workspace/work/s2_normalize.py": "f6c1b18fbd0c801bcd60e80c1c586a73e2ae0b9e958bfa7aa1399b854b067348",
+      "<p4-run:companies_base>/workspace/work/diagnostics.py": "ff93d19b5c55196f6d34daff24141e5bd58d0c670d0a16ebdddf2639dd7ea84f",
+      "<p4-run:companies_base>/workspace/work/industry_map.py": "59646b0f5148c9095f09a72a26db5081aaf8a7adea78ca9ecdc758fa28f68131",
+      "<p4-run:companies_base>/workspace/work/s7_export.py": "b461042489396dd75c78aa0195cb19b6ade2b8979fb4f37db4077fd5acc89df8",
+      "<p4-run:companies_base>/workspace/work/rebuild.sh": "4c0313e86992b6b35dd60c9ee4be87def300e75bc2fd3e04e1c9ff310131dc37",
+      "<p4-run:companies_base>/workspace/work/s5_cluster.py": "3da65eae698a0a1909e956825c4496cdbd0d78300b5faf62e00a58936abc1032",
+      "<p4-run:companies_base>/workspace/work/s4_features.py": "39777337b5522e6774a6f4392e2bf28e9268795e52bfd3a7aac251cc587a1383",
+      "<p4-run:companies_base>/workspace/work/s6_fusion.py": "d5ae9b9dd28df1f9d9486fa3f4caa9897a735092948638b763491cfef1e7c7de",
+      "<p4-run:companies_base>/submission/sm_mapping.csv": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+      "<p4-run:companies_base>/submission/blocking/candidates.csv": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+      "<p4-run:companies_base>/submission/correspondences.csv": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+      "<p4-run:companies_base>/submission/membership.csv": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+      "<p4-run:companies_base>/submission/fused.csv": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46"
+    },
+    "fresh_state_verified": true,
+    "wall_seconds": 179.79065548395738,
+    "artifact_checks": {
+      "sm_mapping.csv": {
+        "original_sha256": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+        "replay_sha256": "5fc9bf41e1d09ad1a213909f876acd178a70096dc4660a0d1e59bfcdfc6a9ad4",
+        "bytes_identical": true
+      },
+      "blocking/candidates.csv": {
+        "original_sha256": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+        "replay_sha256": "d8e11322a42134b0acc7f9dc6098bcba969992ec30dfbb0561f8d6b20ba64d94",
+        "bytes_identical": true
+      },
+      "correspondences.csv": {
+        "original_sha256": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+        "replay_sha256": "8fd1cbff836a59c2240089eb53c2b403a6d57cb42e8196565de01d02da1f174b",
+        "bytes_identical": true
+      },
+      "membership.csv": {
+        "original_sha256": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+        "replay_sha256": "683511363759088116e2ce58f812516d3c706ee24fc8b5f999068d2910118e80",
+        "bytes_identical": true
+      },
+      "fused.csv": {
+        "original_sha256": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46",
+        "replay_sha256": "857f4e0ae6c2c0c5472241984bd59e61b81a39d3d1c0380a80e64a1d61f93e46",
+        "bytes_identical": true
+      }
+    },
+    "originals_unchanged": true,
+    "status": "executed"
+  },
+  "music": {
+    "original_task": "<p4-run:music_base>",
+    "stages": [
+      {
+        "command": [
+          "bash",
+          "work/rebuild.sh"
+        ],
+        "seconds": 290.2268318189308,
+        "returncode": 0
+      }
+    ],
+    "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+    "original_sha256": {
+      "<p4-run:music_base>/workspace/task/input/schemamatching/Music_Genres_Taxonomy.csv": "be785bdc1941ab83bae13ecef63637bca3079ad573d9bc52711f758a9a624a26",
+      "<p4-run:music_base>/workspace/task/input/schemamatching/target_schema.json": "ac167d52a0623b2c8b78282f5cf97f7e6c5b6f3f17119c3d7c18a5cf7cbb12ec",
+      "<p4-run:music_base>/workspace/task/input/data/musicbrainz.csv": "746c14c4ef6d0f7a4882272501591ad91c3ac2ff4552dff57656fdb2dc53445a",
+      "<p4-run:music_base>/workspace/task/input/data/discogs_metadata.json": "8bf68d92f86f90fb9c23cfbe0174377dacfe2362063457c7cf5fe411b91a0221",
+      "<p4-run:music_base>/workspace/task/input/data/discogs.csv": "0fab4d11a01d8ef2db38a2b7ae98279f351583bba2459e21e0c62c778f3e3a9e",
+      "<p4-run:music_base>/workspace/task/input/data/lastfm_metadata.json": "6e055ed1a5e680547022bd51f3d35527e449a26de1a90898a40bab6b9becde98",
+      "<p4-run:music_base>/workspace/task/input/data/musicbrainz_metadata.json": "c95d00e8e38c7d216b9725f11d8e4459366ad31e7431444d0f5eada150034b03",
+      "<p4-run:music_base>/workspace/task/input/data/lastfm.csv": "5c12950dc9ecda3c097f98de64302f32f2f9ae0c25f72ac483ee2446a007984c",
+      "<p4-run:music_base>/workspace/work/s3_blocking.py": "29e868ecfe8c3421e8333dcace8f1c2778dcd032e507c00f01b57a3a74e2aac8",
+      "<p4-run:music_base>/workspace/work/s1_schema.py": "14c842483e07965cc8b0f837fecd6d04f90dddcd6eca69b4b803117196bc1ede",
+      "<p4-run:music_base>/workspace/work/s2_normalize.py": "804acbae4ef3b92c026d6c092a9bdc4bdb9366939263ce19d3b947dc0378ff85",
+      "<p4-run:music_base>/workspace/work/s7_fusion.py": "54bcc9de8b1a18d94d3bd45cb373b117a9e65d808ee0c9b634f1cbef7257f9aa",
+      "<p4-run:music_base>/workspace/work/s6_cluster.py": "e45db92856b1a48feef091c4b1fc822b48f05fae1628d2bc93b765f0e66d6542",
+      "<p4-run:music_base>/workspace/work/rebuild.sh": "72abe218ab1ad7d3d5334a13b401a53cb4832a3a550a1bf7495fa836d39118bf",
+      "<p4-run:music_base>/workspace/work/s8_diagnostics.py": "3377e9a4526a9edf11ea3a89e2e21fc0e0abe7a29a48b1b0added97b35d64414",
+      "<p4-run:music_base>/workspace/work/s5_match.py": "d58bfccb59f988b2be5133c8009dc8e485ee0da8489e162d2a3a069a3262eb19",
+      "<p4-run:music_base>/workspace/work/s4_features.py": "7faf73bc23da5930496b9b20869b3d598e80a5d20bebad00493b053bcc24d893",
+      "<p4-run:music_base>/submission/sm_mapping.csv": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+      "<p4-run:music_base>/submission/blocking/candidates.csv": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+      "<p4-run:music_base>/submission/correspondences.csv": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+      "<p4-run:music_base>/submission/membership.csv": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+      "<p4-run:music_base>/submission/fused.csv": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e"
+    },
+    "fresh_state_verified": true,
+    "wall_seconds": 290.2268538228236,
+    "artifact_checks": {
+      "sm_mapping.csv": {
+        "original_sha256": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+        "replay_sha256": "4bd43dc9d195c9be5e9f832ca5112c8665239987cca4c05e57aff0138fd2d55a",
+        "bytes_identical": true
+      },
+      "blocking/candidates.csv": {
+        "original_sha256": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+        "replay_sha256": "5c578954db892e164ecfa11f1788710553058d442146ebf61f6994b9960db79f",
+        "bytes_identical": true
+      },
+      "correspondences.csv": {
+        "original_sha256": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+        "replay_sha256": "5336cebdc43a11fe08f70420b09413ef7b6ab89dd1b24f33bbbdf58b1c282401",
+        "bytes_identical": true
+      },
+      "membership.csv": {
+        "original_sha256": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+        "replay_sha256": "672ff43ed4de4f6c3b43161d9685cedf4087706771f8de88a3798ca013f1800c",
+        "bytes_identical": true
+      },
+      "fused.csv": {
+        "original_sha256": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+        "replay_sha256": "8ac8e9fb23200899fa1c416c919423eb86919ba956bd3d24c9bacc364a31f14e",
+        "bytes_identical": true
+      }
+    },
+    "originals_unchanged": true,
+    "status": "executed"
+  },
+  "products": {
+    "original_task": "<p4-run:products_base>",
+    "stages": [
+      {
+        "command": [
+          "bash",
+          "work/rebuild.sh"
+        ],
+        "seconds": 22.479440219234675,
+        "returncode": 0
+      }
+    ],
+    "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+    "original_sha256": {
+      "<p4-run:products_base>/workspace/task/input/schemamatching/Storage_Interface_Taxonomy.csv": "9ec7830f1382a608cca3abe93600dd0d85421e551a4a59c045110e0b12dd73ef",
+      "<p4-run:products_base>/workspace/task/input/schemamatching/GPU_Memory_Taxonomy.csv": "258bf6a1a86aa0f0ef732734d3853d3184ebccd8b2ebef51047479a3bad84b8f",
+      "<p4-run:products_base>/workspace/task/input/schemamatching/Product_Type_Taxonomy.csv": "d7d7b2b6c55408850a543b4b497e88ea8e5345fd90cca03223356a08b1af2d14",
+      "<p4-run:products_base>/workspace/task/input/schemamatching/target_schema.json": "88e30ec050fd7871ffc6214c74b1b2cd43d4d8c2c72e7ab88b3b344683cb6d5b",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_1.json": "4eba8972eefcc11326949054f359b42545f67754711f47568c519951dea142c3",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_1_metadata.json": "5487fa49475fe66496419d975942d9e95e171a928fe2fd77a27929f1f40b95af",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_3_metadata.json": "73742346ddb14ea1861ca0c4e510facfde8adee66db0305d749e935d365530c6",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_2.json": "2913723155dc579895efbcbefc6a97f1464900d9cd608163e394c467822aeb20",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_2_metadata.json": "840c07418dcdcbae808459d4ea86f528f3199f999426ddd0270125df18d06180",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_4_metadata.json": "f2e9658e652b32d3e5620b769bf24eefe2bb5311a5bc26d9956a195ad615de7f",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_3.json": "f8e98de7045b492ed869c1c051561331e5df2c70fc76200a4dd57fb903902a75",
+      "<p4-run:products_base>/workspace/task/input/data/dataset_4.json": "be007d13284c4727f21b6855ce3a6160a7a17f746ee27e430c85454a78a9ddc2",
+      "<p4-run:products_base>/workspace/work/s4_match.py": "368d1a9ac940fdf8b53f982d465ef55dfb353524b8da86e3a9884833e863a8c9",
+      "<p4-run:products_base>/workspace/work/s1_schema.py": "9e8df2d2327f97401247b68b53435f2289859d17ed955a087fb82f5770934098",
+      "<p4-run:products_base>/workspace/work/s2_normalize.py": "e42398b977a933e74325febfbce8662b123a034947c91f9e4c6cdbc9cf8fbf8c",
+      "<p4-run:products_base>/workspace/work/inspect_conf.py": "391c6beed2222da11b536e06ad1a00da83598087e6ff9e2b1360133d3bf7d179",
+      "<p4-run:products_base>/workspace/work/s7_diag.py": "ef74b1396f0bec274ef54509c1f9f4e2cd6fb159dc9938ccce28f9d467edf00f",
+      "<p4-run:products_base>/workspace/work/rebuild.sh": "17a56e2b757fe963c551af8d10da1fa0520def5f2e35b47867319623dd76d9d2",
+      "<p4-run:products_base>/workspace/work/s3_block.py": "00339f5e187a340f6c727f55f54229b343b4524f5707f5bccba2d728c627728d",
+      "<p4-run:products_base>/workspace/work/inspect_rej.py": "f1ec010d90260dda84035019801d84a57714750f290014c859e887ef4a82adbd",
+      "<p4-run:products_base>/workspace/work/s6_fusion.py": "7c9482cdd9515bd101b8a22c0e65ea64312bd16cda190228fcc5ff36c2895c20",
+      "<p4-run:products_base>/workspace/work/inspect_unpaired.py": "0a1258b1e0a9f28b4732de7e1a688cd7965edabafe5f14704d80fed37d1d7ca3",
+      "<p4-run:products_base>/submission/sm_mapping.csv": "1a759a40180d80e301fd88c636a3cc2547e60088dc61eee816e298a8d3bd1bfd",
+      "<p4-run:products_base>/submission/blocking/candidates.csv": "4e7ffa833f4cda246a33889554823b20aab545a3ebd0eeda7a8d9f7db9a4a4c2",
+      "<p4-run:products_base>/submission/correspondences.csv": "bd700bfba6a9054dd183d691d62854618aa682d58241cbb04437255805ad6bee",
+      "<p4-run:products_base>/submission/membership.csv": "6bcca6c1e363a277522768f7f9023fab30d4b0fec1fcf9c5b9777d4017b20bcd",
+      "<p4-run:products_base>/submission/fused.csv": "fd4b3485aa7891d74bb4ff092d453e6770d4f5ff231d2e21e99c08f1507a4d99"
+    },
+    "fresh_state_verified": true,
+    "wall_seconds": 22.47946181287989,
+    "artifact_checks": {
+      "sm_mapping.csv": {
+        "original_sha256": "1a759a40180d80e301fd88c636a3cc2547e60088dc61eee816e298a8d3bd1bfd",
+        "replay_sha256": "1a759a40180d80e301fd88c636a3cc2547e60088dc61eee816e298a8d3bd1bfd",
+        "bytes_identical": true
+      },
+      "blocking/candidates.csv": {
+        "original_sha256": "4e7ffa833f4cda246a33889554823b20aab545a3ebd0eeda7a8d9f7db9a4a4c2",
+        "replay_sha256": "4e7ffa833f4cda246a33889554823b20aab545a3ebd0eeda7a8d9f7db9a4a4c2",
+        "bytes_identical": true
+      },
+      "correspondences.csv": {
+        "original_sha256": "bd700bfba6a9054dd183d691d62854618aa682d58241cbb04437255805ad6bee",
+        "replay_sha256": "bd700bfba6a9054dd183d691d62854618aa682d58241cbb04437255805ad6bee",
+        "bytes_identical": true
+      },
+      "membership.csv": {
+        "original_sha256": "6bcca6c1e363a277522768f7f9023fab30d4b0fec1fcf9c5b9777d4017b20bcd",
+        "replay_sha256": "6bcca6c1e363a277522768f7f9023fab30d4b0fec1fcf9c5b9777d4017b20bcd",
+        "bytes_identical": true
+      },
+      "fused.csv": {
+        "original_sha256": "fd4b3485aa7891d74bb4ff092d453e6770d4f5ff231d2e21e99c08f1507a4d99",
+        "replay_sha256": "fd4b3485aa7891d74bb4ff092d453e6770d4f5ff231d2e21e99c08f1507a4d99",
+        "bytes_identical": true
+      }
+    },
+    "originals_unchanged": true,
+    "status": "executed"
+  },
+  "papers": {
+    "original_task": "<p4-run:papers_base>",
+    "stages": [
+      {
+        "command": [
+          "bash",
+          "work/rebuild.sh"
+        ],
+        "seconds": 921.9161017620936,
+        "returncode": 0
+      }
+    ],
+    "protocol": "Unmodified complete rebuild.sh in fresh state with original task inputs; all source-to-submission steps and built-in label-free diagnostics included. Preparation, external gold scoring and agent code generation excluded. Filesystem cache not flushed. One complete measurement per domain.",
+    "original_sha256": {
+      "<p4-run:papers_base>/workspace/task/input/schemamatching/target_schema.json": "d1a6c65493ea3850e5d44d75d10b0919bc48b61e33ac6365a0a0c068f37be0ab",
+      "<p4-run:papers_base>/workspace/task/input/data/dblp_metadata.json": "6d92bb27fd5107e76d2ab01b4d8c8d13e380b7e7f6fe1059da600726b41efac9",
+      "<p4-run:papers_base>/workspace/task/input/data/open_alex_metadata.json": "d6b9b90ec98aca28ed538b4b4d098481493d54a99257a5e4bedbd404c814eee1",
+      "<p4-run:papers_base>/workspace/task/input/data/open_alex.jsonl": "1c3941b2af896eb45c0671d779333849bd3035dc749bdd23a9a381a4c23e7ed9",
+      "<p4-run:papers_base>/workspace/task/input/data/dblp.jsonl": "644a2c3ee63787e9745127c40c16dc6d903296dadd19760db9ece86aa10ebdf6",
+      "<p4-run:papers_base>/workspace/task/input/data/crossref_metadata.json": "cd9a2930d3143b57a02ee64658cb71e56e226093ea12969d1077d695b3c76845",
+      "<p4-run:papers_base>/workspace/task/input/data/crossref.jsonl": "5cf23872c9e62fac835312aa969291f1897186cfed764fc2fc401d4aeb333530",
+      "<p4-run:papers_base>/workspace/work/s3_blocking.py": "fe59d7badb0a2a736b0b6b3b58d71dc201cbc8895a5b2994104e12a501c662d8",
+      "<p4-run:papers_base>/workspace/work/s4_match.py": "ecd41944d513dc399fcef02f203e8f985f389fde8b6c16d32576d874cf8e5a3f",
+      "<p4-run:papers_base>/workspace/work/s1_schema.py": "d1e3b8bd94da139f073bd35bd76f3690329e48b710883f401f562cac8e876055",
+      "<p4-run:papers_base>/workspace/work/s2_normalize.py": "14af6766e0fa70ebf46ea3675689b223604a7e754e9cb046ef568a9b86ba4033",
+      "<p4-run:papers_base>/workspace/work/rebuild.sh": "e62ce54e6bf53ecf690842c478ad94887d73cb4387cb8785c5b1e252abb03f18",
+      "<p4-run:papers_base>/workspace/work/s5_cluster.py": "d6c789b267eb5f6eeda102449b148b8e2b2beaad06beb27925e68ff06a2adb2d",
+      "<p4-run:papers_base>/workspace/work/s4_features.py": "888142eb2b8819046d31f3303653b3cb1f3e37e978af4d6fee0f35104700d3f8",
+      "<p4-run:papers_base>/workspace/work/s7_diagnostics.py": "bbf3aa7540eff9a6964f241f79793c501f099f8ff10e322b4663ea65dcc41984",
+      "<p4-run:papers_base>/workspace/work/s6_fusion.py": "a4ccbadbf6e078556dd5b8003f1ed7c309b4ae832cb4463abc448cc31a045c35",
+      "<p4-run:papers_base>/submission/sm_mapping.csv": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+      "<p4-run:papers_base>/submission/blocking/candidates.csv": "0d0cb8c510a9adf3d0b368cd65bba94e290e4a7746195d3b2d0910733cd8f470",
+      "<p4-run:papers_base>/submission/correspondences.csv": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+      "<p4-run:papers_base>/submission/membership.csv": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+      "<p4-run:papers_base>/submission/fused.csv": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d"
+    },
+    "fresh_state_verified": true,
+    "wall_seconds": 921.916126254946,
+    "artifact_checks": {
+      "sm_mapping.csv": {
+        "original_sha256": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+        "replay_sha256": "2ea541c3bfeb65cf5b0042d0184be0f2de1cb8f978770c978ef5299341087503",
+        "bytes_identical": true
+      },
+      "blocking/candidates.csv": {
+        "original_sha256": "0d0cb8c510a9adf3d0b368cd65bba94e290e4a7746195d3b2d0910733cd8f470",
+        "replay_sha256": "22b1e012e39d60c53e7df403bd617d20bacf3afa806704d2ce411501d52fa38d",
+        "bytes_identical": false
+      },
+      "correspondences.csv": {
+        "original_sha256": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+        "replay_sha256": "65ec8db68ae9f33098fd7a9b9a2e43c35b9bd6e8a08b4ef2c9595fa2981a56e6",
+        "bytes_identical": true
+      },
+      "membership.csv": {
+        "original_sha256": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+        "replay_sha256": "23c7f2afc51379a23d6141ab66b4886b8195d55f10c8d2b9cb70b9eb93b673c5",
+        "bytes_identical": true
+      },
+      "fused.csv": {
+        "original_sha256": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d",
+        "replay_sha256": "5d76e2bdda743b21b423d9324ffb1f616f05d9d7dc44d1c973baef6daf78f07d",
+        "bytes_identical": true
+      }
+    },
+    "originals_unchanged": true,
+    "status": "executed"
+  }
+}

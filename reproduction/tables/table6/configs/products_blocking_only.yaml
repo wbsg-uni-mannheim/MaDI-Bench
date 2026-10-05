@@ -1,0 +1,132 @@
+# Blocking-only copy (Table 6, P2 re-scoring): pipelines/configs/products.yaml with sm/norm/refinement/fusion enabled: false; em stays enabled (blocking + matching are one joint pipeline stage; p2_blocking_only.py runs its blocking phase only, the matchers are never executed). Nothing else changed.
+# Best-of-breed pipeline config for products.
+#
+# The BoB pipeline (P2) runs products on the public MaDI-Bench task folders
+# (v2 fusion gold):
+#   - base (--variant baseline): use cases/products/base/ via
+#     pipelines/lib/canonical_loader.py
+#       sources  input/data/dataset_<n>.json (raw source-native column names,
+#                ids prefixed products_<n>_ in memory)
+#       EM gold  input/entitymatching/prod1_to_prod<m>_{train,val,test,all}.csv
+#       SM gold  input/schemamatching/sm_mapping_gold.json (100 rows)
+#       fusion   input/fusion/fusion_{test,validation}_set.csv (source_ids +
+#                the 19 graded attributes; v2 blanked cells empty)
+#   - variants (--variant easy|medium|hard): use cases/products/<level>/ via
+#     usecases_synthetic variant_loader.load_variant (fusion gold
+#     input/fusion/{test,validation}_set.xml with <source_ids>, no <id>).
+# Both paths are finished by canonical_loader.finalize_products_bundle:
+#   - the source column cluster_id (the WDC gold grouping) is
+#     dropped before any stage runs: never a matcher / blocker feature, never
+#     a fused value;
+#   - every fusion-gold record is keyed on the anchor of its source_ids
+#     (madi_bench.evaluation.fusion_gold.pick_anchor: first products_1_
+#     member, else the smallest id of the next source in priority order).
+#
+# All stages enabled by default. ``norm`` is scored but does NOT
+# transform downstream frames.
+
+domain: products
+
+# Bundle source. See pipelines/lib/bundle.py::load_pipeline_bundle
+# for the dispatch rules.
+#   - canonical: base task use cases/products/base/ via canonical_loader
+#     (in-memory id prefix + label normalize + source_ids anchoring);
+#     variants always come from use cases/products/<level>/.
+#   - synthetic_baseline: the generator's copy usecases_synthetic/usecases/
+#     products/ via variant_loader.load_variant. Kept for A/B tests.
+bundle_source: canonical
+
+# Key column of the e2e panel's gold (SilverStandard.fused): the anchor
+# of each gold record's source_ids (pipelines/lib/canonical_loader.py
+# load_products_workflow_silver). Deliberately not "cluster_id", the name of
+# the gold-grouping column of the products sources.
+gold_id_column: _anchor_id
+
+# Stage chain. Each stage may be disabled but order is fixed.
+stages:
+  sm:
+    enabled: false
+    selection_metric: f1            # mean over per-source SM mapping F1
+  norm:
+    enabled: false
+    selection_metric: macro_f1
+    apply_winner: false             # scoring-only
+    vacuous_epsilon: 0.005          # max_f1 - min_f1 below this => "vacuous"
+    # Score normalized outputs against the target_schema's
+    # JSON-Schema constraints + x-pydi-consistency rules (units,
+    # ranges, enums, open taxonomies, field applicability) rather
+    # than the narrow fusion-XML target list. See
+    # pipelines/lib/schema_constraint_scorer.py.
+    scoring_surface: schema_constraints
+  em:
+    enabled: true
+    blocking_selection_metric: reduction_ratio   # handled by composition block in YAML
+    matching_selection_metric: f1
+    clustering: greedy              # within-EM-committee clustering for matcher inputs
+  refinement:
+    enabled: false
+    methods: [baseline, greedy, mbm]
+    selection_metric: f1
+  fusion:
+    enabled: false
+    selection_metric: macro_accuracy
+
+# Column type config for the e2e panel (PyDI.evaluation.panel), drawn from
+# target_schema.json. No cluster_id: it is the gold grouping, dropped from
+# the sources at load time, so it is never a fused column.
+column_types:
+  id: identifier
+  url: identifier
+  title: text
+  brand: categorical
+  description: text
+  price: numerical
+  priceCurrency: categorical
+  product_type: categorical
+  model: text
+  model_number: text
+  chipset_name: text
+  vram_gb: numerical
+  storage_gb: numerical
+  read_speed_mb_s: numerical
+  write_speed_mb_s: numerical
+  bus_type: categorical
+  interface_type: categorical
+  width_mm: numerical
+  length_mm: numerical
+  height_mm: numerical
+  weight_g: numerical
+  storage_connection_type: categorical
+  memory_type: categorical
+  color: categorical
+  form_factor: categorical
+
+# Panel numerical tolerance defaults.
+panel_tolerance:
+  default: 0.04
+  overrides:
+    price: 0.10
+    vram_gb: 0.10
+    storage_gb: 0.10
+    read_speed_mb_s: 0.15
+    write_speed_mb_s: 0.15
+
+# Composite subscore weights — passed through to compute_e2e_panel.
+# Default matches PyDI/evaluation/composite.DEFAULT_WEIGHTS so can be
+# omitted; kept explicit so per-domain overrides are obvious.
+composite_weights:
+  entity_coverage: 0.10
+  fact_coverage: 0.10
+  source_based_fact_coverage: 0.10
+  consistency: 0.10
+  cluster_correctness: 0.30
+  fact_correctness: 0.30
+
+# Optional: source-id prefix → source name mapping. Used by the e2e
+# panel's source-composition diagnostics. The synthetic-side products
+# tree uses these prefixes; the bundle loader supplies them.
+source_prefix_map:
+  products_1_: products_1
+  products_2_: products_2
+  products_3_: products_3
+  products_4_: products_4

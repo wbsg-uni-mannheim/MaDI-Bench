@@ -1,0 +1,15 @@
+{
+  "rule_per_attribute_optimal": {
+    "ESRB": "text_clean",
+    "criticScore": "number_locale",
+    "developer": "text_clean",
+    "genres": "taxonomy_lookup",
+    "id": "_passthrough",
+    "name": "text_clean",
+    "platform": "text_clean",
+    "publisher": "_passthrough",
+    "releaseYear": "date_iso",
+    "series": "_passthrough",
+    "userScore": "number_locale"
+  }
+}

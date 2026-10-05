@@ -1,7 +1,6 @@
 # Knob 05 — Format/Unit Diversity: Papers domain config.
 #
-# Seeded from music 2026-06-01; rate tables are UNTUNED starting points,
-# to be validated/tuned before a real papers run. The numeric VALUES
+# Seeded from music; rate tables are UNTUNED for papers. The numeric VALUES
 # below (normalize_down_threshold, level pool structure) are carried over
 # verbatim from the music K5 config as seeds, NOT papers-tuned figures.
 #
@@ -20,8 +19,7 @@
 #     would fabricate "2018-01-01"-style full dates from a year-only
 #     value. Net effect: the date branch is effectively identity at
 #     baseline (year already equals "%Y") and degrades gracefully —
-#     publication_year carries no format heterogeneity until the year
-#     format pool / operators are widened.
+#     publication_year carries no format heterogeneity.
 #   - first_page, last_page, referenced_works_count, cited_by_count are
 #     numeric (page locators are MOSTLY numeric; the counts are plain
 #     integers up to ~100000). They route through the "number" family for

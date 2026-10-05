@@ -11,11 +11,7 @@ discogs,tracks,music,tracks,1.0
 lastfm,id,music,id,1.0
 lastfm,t_nm,music,name,1.0
 lastfm,ar_nm,music,artist,1.0
-lastfm,rd,music,release-date,1.0
-lastfm,cc,music,release-country,1.0
 lastfm,dur_s,music,duration,1.0
-lastfm,lb_nm,music,label,1.0
-lastfm,gn,music,genre,1.0
 lastfm,tnms,music,tracks,1.0
 musicbrainz,id,music,id,1.0
 musicbrainz,rel_nm,music,name,1.0
@@ -23,6 +19,4 @@ musicbrainz,art,music,artist,1.0
 musicbrainz,rel_dt,music,release-date,1.0
 musicbrainz,rel_ctry,music,release-country,1.0
 musicbrainz,dur,music,duration,1.0
-musicbrainz,lbl,music,label,1.0
-musicbrainz,gnr,music,genre,1.0
 musicbrainz,trks,music,tracks,1.0

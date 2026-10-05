@@ -1,0 +1,23 @@
+       source attribute  non_null  canonical  unmapped  canonical_rate
+0     dbpedia  platform     46170      38834      7336           0.841
+1     dbpedia      year     45171      45171         0           1.000
+2     dbpedia      ESRB         0          0         0           0.000
+3  metacritic  platform     20494      20494         0           1.000
+4  metacritic      year     20494      20494         0           1.000
+5  metacritic      ESRB     18218      18218         0           1.000
+6       sales  platform      7877       7877         0           1.000
+7       sales      year      7877       7877         0           1.000
+8       sales      ESRB      7877       7877         0           1.000
+source   pkey
+dbpedia  pc      5938
+         mac     2152
+         ps2     2128
+         ios     2085
+         x360    1920
+                 ... 
+sales    3ds      165
+         xone     161
+         vita     119
+         wiiu      90
+         dc        14
+Name: count, Length: 64, dtype: int64

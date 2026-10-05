@@ -1,0 +1,31 @@
+{
+  "case": "papers",
+  "data_dir": "DI-Bench/usecases/papers/input/data",
+  "schema": "DI-Bench/usecases/papers/input/schemamatching/target_schema.json",
+  "schema_gold": "DI-Bench/usecases/papers/input/schemamatching/sm_mapping_gold.json",
+  "entitymatching_dir": "DI-Bench/usecases/papers/input/entitymatching",
+  "fusion_dir": "DI-Bench/usecases/papers/input/fusion",
+  "excluded_columns": [
+    "doi"
+  ],
+  "fusion_alignment_columns": [
+    "doi"
+  ],
+  "pairs": [
+    {
+      "left": "dblp",
+      "right": "crossref",
+      "test_set": "DI-Bench/usecases/papers/input/entitymatching/dblp_2_crossref_test.csv"
+    },
+    {
+      "left": "dblp",
+      "right": "open_alex",
+      "test_set": "DI-Bench/usecases/papers/input/entitymatching/dblp_2_open_alex_test.csv"
+    }
+  ],
+  "notes": [
+    "Pairs are restricted to source combinations with provided ground-truth labels.",
+    "JSON/JSONL source files were converted to CSV where needed for the local automatic pipeline.",
+    "Non-XML fusion validation/test files were converted to XML during import."
+  ]
+}

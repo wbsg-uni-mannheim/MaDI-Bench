@@ -1,36 +1,14 @@
 {
   "attribute_rules": {
     "brand": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "bus_type": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
-    },
-    "chipset_name": {
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {
-        "trust_key": "trust_score"
-      },
-      "resolver": "prefer_higher_trust"
-    },
-    "color": {
-      "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "description": {
+    "chipset_name": {
       "kwargs": {
         "sources": [
           "products_1"
@@ -38,9 +16,25 @@
       },
       "resolver": "favour_sources"
     },
-    "form_factor": {
+    "color": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
+    },
+    "description": {
       "kwargs": {},
-      "resolver": "voting"
+      "resolver": "longest_string"
+    },
+    "form_factor": {
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      },
+      "resolver": "favour_sources"
     },
     "height_mm": {
       "kwargs": {},
@@ -55,28 +49,20 @@
       "resolver": "median"
     },
     "memory_type": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "model": {
       "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "longest_string"
     },
     "model_number": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "voting"
     },
     "price": {
       "kwargs": {},
-      "resolver": "minimum"
+      "resolver": "median"
     },
     "priceCurrency": {
       "kwargs": {},
@@ -99,18 +85,10 @@
       "resolver": "longest_string"
     },
     "storage_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "title": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
-    "title_description": {
       "kwargs": {},
       "resolver": "longest_string"
     },
@@ -121,12 +99,8 @@
       "resolver": "prefer_higher_trust"
     },
     "vram_gb": {
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      },
-      "resolver": "favour_sources"
+      "kwargs": {},
+      "resolver": "median"
     },
     "weight_g": {
       "kwargs": {},

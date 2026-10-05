@@ -1,4 +1,4 @@
-"""Functional tests for the C3.4 fusion adapters (batch-mode + LLM-judge).
+"""Functional tests for the fusion adapters (batch-mode + LLM-judge).
 
 Covers:
 
@@ -21,9 +21,7 @@ a similarity-aware vote. The batch factories run ``prepare_for_fusion`` +
 lookup closure keyed by ``group_id``. These tests exercise the corpus-walk +
 batch fit + lookup paths end-to-end.
 
-Per §Process-requirement item 2 in
-[plans/plan_committee_finalization.md](../../plans/plan_committee_finalization.md):
-each adapter has a real-code-path test on realistic inputs, plus determinism,
+Each adapter has a real-code-path test on realistic inputs, plus determinism,
 NaN tolerance, sanity (corpus-wide majority wins), and edge-case coverage.
 """
 
@@ -591,7 +589,7 @@ class TestLLMJudge:
         assert metadata["synthesized"] is False
 
     def test_synthesis_allowed_under_v2(self, tmp_path: Path) -> None:
-        """v2 lifts the v1 verbatim-only constraint."""
+        """v2 accepts a value that is not a verbatim candidate."""
 
         def synthesizer(system: str, user: str, model: str) -> str:
             return json.dumps(

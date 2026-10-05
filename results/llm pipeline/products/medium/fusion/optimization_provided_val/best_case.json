@@ -1,115 +1,107 @@
 {
   "best_case_key": "llm_no_val",
   "best_case_name": "llm_no_val",
-  "best_validation_accuracy": 0.5384615384615384,
-  "best_test_accuracy": 0.4587929915639195,
-  "best_case_dir": "DI-Bench/runs/augmented/products/medium/fusion/optimization_provided_val/case_llm_no_val",
+  "best_validation_accuracy": 0.41147741147741146,
+  "best_test_accuracy": 0.5239234449760766,
+  "best_case_dir": "p3_products_rerun_20260927/results/medium/fusion/optimization_provided_val/case_llm_no_val",
   "rules": {
     "brand": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "bus_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "chipset_name": {
-      "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "most_complete",
+      "kwargs": {}
     },
     "color": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "description": {
-      "kwargs": {},
-      "resolver": "longest_string"
+      "resolver": "most_complete",
+      "kwargs": {}
     },
     "form_factor": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "height_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "interface_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "length_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "memory_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "model": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "most_complete",
+      "kwargs": {}
     },
     "model_number": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "resolver": "most_complete",
+      "kwargs": {}
     },
     "price": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "priceCurrency": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "product_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "read_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "storage_connection_type": {
-      "kwargs": {},
-      "resolver": "voting"
+      "resolver": "voting",
+      "kwargs": {}
     },
     "storage_gb": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "title": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
-    "title_description": {
-      "kwargs": {},
-      "resolver": "longest_string"
+      "resolver": "longest_string",
+      "kwargs": {}
     },
     "url": {
+      "resolver": "union",
       "kwargs": {
         "separator": "|"
-      },
-      "resolver": "union"
+      }
     },
     "vram_gb": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "weight_g": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "width_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     },
     "write_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "median"
+      "resolver": "median",
+      "kwargs": {}
     }
   }
 }

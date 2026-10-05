@@ -1,0 +1,19 @@
+{
+ "description": "Games ground-truth clustering cells (entity recovery, BCubed precision/recall/F1). The games fusion gold lists one anchor record per entity; for these four rows the gold clusters were extended with verified links to the other sources.",
+ "P2": {
+  "entity_recovery": 0.46,
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.6663426763110307,
+  "bcubed_f1": 0.799766681588193,
+  "gold_records": 316,
+  "gold_record_coverage": 1.0
+ },
+ "P4": {
+  "entity_recovery": 0.85,
+  "bcubed_precision": 1.0,
+  "bcubed_recall": 0.8920886075949367,
+  "bcubed_f1": 0.9429670513463789,
+  "gold_records": 316,
+  "gold_record_coverage": 1.0
+ }
+}

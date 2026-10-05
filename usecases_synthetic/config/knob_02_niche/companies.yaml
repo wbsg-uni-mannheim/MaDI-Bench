@@ -36,15 +36,14 @@ primary_column_per_source:
 #   industry  dbpedia  --   forbes  98%  fullcontact  --
 #   sector    dbpedia  68%  forbes  --   fullcontact  --
 #   founded   dbpedia 100%  forbes  --   fullcontact  55%
-# R10-N (2026-06-02): widened to the 8-attr target_schema scope (was a
-# narrow 6 that dropped assets/revenue/keypeople and carried a phantom
-# `sector`). Mirrors the committee column_mapping (fusion_committee.yaml):
+# The canonical schema is the 8-attr target_schema scope and mirrors the
+# committee column_mapping (fusion_committee.yaml):
 # industry<-forbes.business_segment, keypeople<-dbpedia.keypeople_name +
 # fullcontact.Attribute_5, assets/revenue from both dbpedia + forbes.
 # dbpedia.`sector` is matching-only (kept in the committee column_mapping,
-# NOT a scored canonical attr) so it is intentionally absent here. `website`
-# dropped 2026-06-02 (degenerate: forbes.url == id in all rows, no real
-# source).
+# NOT a scored canonical attr) so it is intentionally absent here.
+# `website` is not in scope (degenerate: forbes.url == id in all rows, no
+# real source).
 canonical_schema:
   - name
   - country
@@ -200,22 +199,17 @@ max_interp_fraction: 0.60
 # corner pairs (metric_top_k=20), yielding a small interp budget. On
 # companies-small post-2026-05-04, realised corner ratio plateaued at
 # ~0.17 across all levels — a 60-80% under-shoot vs target 0.5 / 0.8.
-# Lowering to 0.05 makes the budget gap-realistic (per_interp_corner=1)
-# at the cost of more LLM calls per run. Mirrors music's 0.05 (F4,
-# plan_s1_final.md).
-# Bumped 2026-05-27 from 0.05 to 0.10 (companies-only) per step 4h
-# sign-off — companies-small realised under 50% of configured ratio
-# targets at all levels; doubled budget halves the LLM-call count to
-# close the gap.
+# A factor of 0.05 (the music value) makes the budget gap-realistic
+# (per_interp_corner=1) at the cost of more LLM calls per run; with it,
+# companies-small realised under 50% of the configured ratio targets at
+# all levels (2026-05-27). Companies uses 0.10 (per_interp_corner=2),
+# which halves the LLM-call count relative to 0.05.
 interp_pair_factor: 0.10
 
 # Fraction of interpolated entities placed across two sources rather
 # than within a single source. Cross-source placement creates new EM
 # corner-case pairs that didn't exist in the gold; within-source
 # placement creates SM/duplicate-detection challenge.
-# 2026-05-27 (step 4h): equal train/test split for newly-mined corner pairs.
-# Was 0.6 (60% test / 40% train); user signed off equal distribution so the
-# regen splits have the same corner-case shape on both sides.
 placement_split: 0.5
 
 # Pair pool cap per class (same/cross) before stratified sampling —
@@ -226,28 +220,24 @@ em_test_regeneration:
 
 # Hard-path LLM config. See cross_cutting.md §"LLM hygiene". Bumping
 # model_id invalidates the on-disk LLM cache (cache key carries
-# model_id). The api_client adapter is wired by generate_variant.py;
-# until a GPT adapter lands, K2-hard runs use the deterministic
-# fallback in lib/entity_interpolation.py.
+# model_id). generate_variant.py wires an OpenAI interpolation client
+# when OPENAI_API_KEY is set (outside strict-cache mode); without it,
+# cache misses fall back to the deterministic blender in
+# lib/entity_interpolation.py.
 #
 # Default model is gpt-5.4-mini for cost reasons (~5x cheaper than full
-# gpt-5.4). Before each K2 run, ask the user whether to bump to gpt-5.4
-# for higher-fidelity hard-negative interpolation; bumping invalidates
+# gpt-5.4). Bumping to gpt-5.4 gives higher-fidelity
+# hard-negative interpolation but invalidates the
 # cache.
-# 2026-05-27 (step 4h): prompt v1 -> v2 — interpolate_v2.txt broadens
-# the lead-sentence domain enumeration to include products (GPUs / SSDs /
-# HDDs / etc.) and carries a domain-extension maintenance note.
-# Invalidates the existing K2 LLM cache by construction.
+# The prompt version is part of the K2 LLM cache key.
 llm_prompt_version: v2
 llm_model_id: gpt-5.4-mini
 llm_temperature: 0.0
 
-# Step 4i (2026-05-27): drop-corner-touching operator + non-corner
-# refill. New K2 dispatch branch at baseline_ratio > target_ratio
-# replaces the legacy noop_baseline_above_target path — K2 now actually
-# moves the ratio downward when configured. Each drop pairs with a
-# 1-for-1 LLM-synthesized non-corner entity refill so canonical set
-# size stays stable.
+# Drop-corner-touching operator + non-corner refill: when the baseline
+# ratio is above the target, K2 drops corner-touching entities to move
+# the ratio downward. Each drop pairs with a 1-for-1 LLM-synthesized
+# non-corner entity refill so canonical set size stays stable.
 non_corner_refill:
   enabled: true
   reference_count: 5            # K reference entities for the dissimilarity anchor
@@ -259,17 +249,17 @@ non_corner_prompt_version: v1
 pool_quality: two_system
 
 # ----------------------------------------------------------------------------
-# Hard-negative score-margin gate (S3 in plans/plan_s1_scale.md)
+# Hard-negative score-margin gate
 # ----------------------------------------------------------------------------
 # Applied to corner-case hard_non_match record pairs before they are
 # promoted into the regenerated EM test set. The gate requires an
-# honest PLM (Ditto checkpoint from R2) to agree the pair is not a
+# honest PLM (the companies Ditto checkpoint) to agree the pair is not a
 # match; pairs the PLM thinks are matches are dropped as likely hidden
 # positives. The LLM adjudicator rescues the narrow ambiguity band
 # [theta - delta, theta).
 #
 # theta = 0.5 (fixed, no per-checkpoint tuning) comes from
-# run_20260504_150510 (R2.2 8-run sweep on ADI training data with
+# run_20260504_150510 (winner of an 8-run sweep on ADI training data with
 # `--fixed-threshold 0.5`). Recipe: roberta-base, lr=1e-5, batch_size=32,
 # max_len=256, max_field_len=350, epochs=50 with early-stopping patience=5
 # (early-stopped at epoch 9), warmup_ratio=0.06, MixDA --da del, no
@@ -296,11 +286,9 @@ hard_negative_gate:
   plm_max_field_len: 350
   plm_batch_size: 32
   plm_margin_delta: 0.08
-  # 2026-05-27 (step 4h option a): full LLM adjudication on every
-  # gate decision via new gate_mode field. Mirrors bucket-C policy:
-  # PLM score becomes audit telemetry, not a decision shortcut.
-  # Insurance against transitional-state Ditto calibration on
-  # music / companies / products (pre-R7 padding fix).
+  # full_llm: the LLM adjudicates every gate decision; the PLM score is
+  # recorded as audit telemetry only, so decisions do not depend on the
+  # Ditto checkpoint's calibration (the pool builder's bucket-C policy).
   gate_mode: full_llm
   per_level:
     easy:

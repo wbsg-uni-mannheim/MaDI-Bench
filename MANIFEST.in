@@ -1,4 +1,4 @@
-recursive-include usecases_synthetic/config *.yaml
+recursive-include usecases_synthetic/config *.yaml *.txt
 recursive-include usecases_synthetic/pools *.csv *.json
 recursive-include usecases_synthetic/statistics *.md
 recursive-include usecases_synthetic/third_party *.md LICENSE LICENSE*

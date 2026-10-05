@@ -2,39 +2,32 @@
   "case_name": "iterative",
   "rules": {
     "brand": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1",
-          "products_2"
-        ]
-      }
-    },
-    "bus_type": {
       "resolver": "voting",
       "kwargs": {}
     },
-    "chipset_name": {
+    "bus_type": {
       "resolver": "longest_string",
       "kwargs": {}
     },
-    "cluster_id": {
-      "resolver": "prefer_higher_trust",
-      "kwargs": {
-        "trust_key": "trust_score"
-      }
-    },
-    "color": {
-      "resolver": "most_complete",
-      "kwargs": {}
-    },
-    "description": {
+    "chipset_name": {
       "resolver": "favour_sources",
       "kwargs": {
         "sources": [
           "products_1"
         ]
       }
+    },
+    "color": {
+      "resolver": "favour_sources",
+      "kwargs": {
+        "sources": [
+          "products_1"
+        ]
+      }
+    },
+    "description": {
+      "resolver": "longest_string",
+      "kwargs": {}
     },
     "form_factor": {
       "resolver": "favour_sources",
@@ -69,28 +62,16 @@
       "kwargs": {}
     },
     "model_number": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
+      "resolver": "voting",
+      "kwargs": {}
     },
     "price": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
+      "resolver": "median",
+      "kwargs": {}
     },
     "priceCurrency": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
+      "resolver": "voting",
+      "kwargs": {}
     },
     "product_type": {
       "resolver": "voting",
@@ -100,37 +81,26 @@
       "resolver": "favour_sources",
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_2"
         ]
       }
     },
     "storage_connection_type": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
+      "resolver": "longest_string",
+      "kwargs": {}
     },
     "storage_gb": {
       "resolver": "favour_sources",
       "kwargs": {
         "sources": [
-          "products_1"
+          "products_4",
+          "products_2"
         ]
       }
     },
     "title": {
       "resolver": "longest_string",
       "kwargs": {}
-    },
-    "title_description": {
-      "resolver": "favour_sources",
-      "kwargs": {
-        "sources": [
-          "products_1"
-        ]
-      }
     },
     "url": {
       "resolver": "prefer_higher_trust",
@@ -142,6 +112,8 @@
       "resolver": "favour_sources",
       "kwargs": {
         "sources": [
+          "products_2",
+          "products_3",
           "products_1"
         ]
       }
@@ -165,150 +137,102 @@
   },
   "accuracy_by_mode": {},
   "source_stats": {
-    "title": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "title",
-        "correct": 5,
-        "total": 43,
-        "accuracy": 0.1163
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "title",
-        "correct": 47,
-        "total": 100,
-        "accuracy": 0.47
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "title",
-        "correct": 4,
-        "total": 51,
-        "accuracy": 0.0784
-      }
-    },
     "brand": {
       "products_2": {
         "source_name": "products_2",
         "attribute": "brand",
-        "correct": 37,
-        "total": 39,
-        "accuracy": 0.9487
+        "correct": 73,
+        "total": 91,
+        "accuracy": 0.8022
       },
       "products_1": {
         "source_name": "products_1",
         "attribute": "brand",
-        "correct": 95,
-        "total": 100,
-        "accuracy": 0.95
+        "correct": 81,
+        "total": 92,
+        "accuracy": 0.8804
       },
-      "products_4": {
-        "source_name": "products_4",
+      "products_3": {
+        "source_name": "products_3",
         "attribute": "brand",
-        "correct": 36,
-        "total": 45,
+        "correct": 68,
+        "total": 85,
         "accuracy": 0.8
-      }
-    },
-    "description": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "description",
-        "correct": 3,
-        "total": 43,
-        "accuracy": 0.0698
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "description",
-        "correct": 44,
-        "total": 100,
-        "accuracy": 0.44
       },
       "products_4": {
         "source_name": "products_4",
-        "attribute": "description",
-        "correct": 3,
-        "total": 51,
-        "accuracy": 0.0588
+        "attribute": "brand",
+        "correct": 68,
+        "total": 73,
+        "accuracy": 0.9315
       }
     },
-    "price": {
+    "model": {
       "products_2": {
         "source_name": "products_2",
-        "attribute": "price",
-        "correct": 10,
-        "total": 43,
-        "accuracy": 0.2326
+        "attribute": "model",
+        "correct": 30,
+        "total": 62,
+        "accuracy": 0.4839
       },
       "products_1": {
         "source_name": "products_1",
-        "attribute": "price",
-        "correct": 49,
-        "total": 100,
-        "accuracy": 0.49
+        "attribute": "model",
+        "correct": 51,
+        "total": 64,
+        "accuracy": 0.7969
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "model",
+        "correct": 21,
+        "total": 60,
+        "accuracy": 0.35
       },
       "products_4": {
         "source_name": "products_4",
-        "attribute": "price",
-        "correct": 6,
-        "total": 51,
-        "accuracy": 0.1176
+        "attribute": "model",
+        "correct": 23,
+        "total": 49,
+        "accuracy": 0.4694
       }
     },
-    "priceCurrency": {
+    "model_number": {
       "products_2": {
         "source_name": "products_2",
-        "attribute": "priceCurrency",
-        "correct": 14,
-        "total": 42,
-        "accuracy": 0.3333
+        "attribute": "model_number",
+        "correct": 66,
+        "total": 73,
+        "accuracy": 0.9041
       },
       "products_1": {
         "source_name": "products_1",
-        "attribute": "priceCurrency",
-        "correct": 72,
-        "total": 100,
-        "accuracy": 0.72
+        "attribute": "model_number",
+        "correct": 73,
+        "total": 79,
+        "accuracy": 0.9241
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "model_number",
+        "correct": 63,
+        "total": 69,
+        "accuracy": 0.913
       },
       "products_4": {
         "source_name": "products_4",
-        "attribute": "priceCurrency",
-        "correct": 8,
-        "total": 50,
-        "accuracy": 0.16
-      }
-    },
-    "title_description": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "title_description",
-        "correct": 4,
-        "total": 43,
-        "accuracy": 0.093
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "title_description",
-        "correct": 40,
-        "total": 100,
-        "accuracy": 0.4
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "title_description",
-        "correct": 2,
-        "total": 51,
-        "accuracy": 0.0392
+        "attribute": "model_number",
+        "correct": 50,
+        "total": 56,
+        "accuracy": 0.8929
       }
     },
     "product_type": {
       "products_2": {
         "source_name": "products_2",
         "attribute": "product_type",
-        "correct": 43,
-        "total": 43,
+        "correct": 98,
+        "total": 98,
         "accuracy": 1.0
       },
       "products_1": {
@@ -318,219 +242,439 @@
         "total": 100,
         "accuracy": 1.0
       },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "product_type",
+        "correct": 92,
+        "total": 92,
+        "accuracy": 1.0
+      },
       "products_4": {
         "source_name": "products_4",
         "attribute": "product_type",
-        "correct": 51,
-        "total": 51,
+        "correct": 78,
+        "total": 78,
         "accuracy": 1.0
-      }
-    },
-    "model": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "model",
-        "correct": 9,
-        "total": 40,
-        "accuracy": 0.225
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "model",
-        "correct": 45,
-        "total": 98,
-        "accuracy": 0.4592
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "model",
-        "correct": 10,
-        "total": 46,
-        "accuracy": 0.2174
-      }
-    },
-    "model_number": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "model_number",
-        "correct": 15,
-        "total": 31,
-        "accuracy": 0.4839
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "model_number",
-        "correct": 75,
-        "total": 85,
-        "accuracy": 0.8824
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "model_number",
-        "correct": 12,
-        "total": 38,
-        "accuracy": 0.3158
       }
     },
     "storage_gb": {
       "products_1": {
         "source_name": "products_1",
         "attribute": "storage_gb",
-        "correct": 0,
-        "total": 74,
-        "accuracy": 0.0
+        "correct": 52,
+        "total": 73,
+        "accuracy": 0.7123
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "storage_gb",
+        "correct": 33,
+        "total": 54,
+        "accuracy": 0.6111
+      },
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "storage_gb",
+        "correct": 43,
+        "total": 49,
+        "accuracy": 0.8776
       },
       "products_4": {
         "source_name": "products_4",
         "attribute": "storage_gb",
-        "correct": 0,
-        "total": 23,
-        "accuracy": 0.0
-      },
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "storage_gb",
-        "correct": 0,
-        "total": 19,
-        "accuracy": 0.0
-      }
-    },
-    "bus_type": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "bus_type",
-        "correct": 28,
-        "total": 41,
-        "accuracy": 0.6829
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "bus_type",
-        "correct": 67,
-        "total": 99,
-        "accuracy": 0.6768
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "bus_type",
-        "correct": 29,
-        "total": 43,
-        "accuracy": 0.6744
-      }
-    },
-    "interface_type": {
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "interface_type",
-        "correct": 2,
-        "total": 19,
-        "accuracy": 0.1053
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "interface_type",
-        "correct": 7,
-        "total": 20,
-        "accuracy": 0.35
-      },
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "interface_type",
-        "correct": 27,
-        "total": 69,
-        "accuracy": 0.3913
+        "correct": 38,
+        "total": 40,
+        "accuracy": 0.95
       }
     },
     "read_speed_mb_s": {
       "products_2": {
         "source_name": "products_2",
         "attribute": "read_speed_mb_s",
-        "correct": 0,
-        "total": 15,
-        "accuracy": 0.0
+        "correct": 24,
+        "total": 33,
+        "accuracy": 0.7273
       },
       "products_1": {
         "source_name": "products_1",
         "attribute": "read_speed_mb_s",
-        "correct": 0,
-        "total": 38,
-        "accuracy": 0.0
+        "correct": 24,
+        "total": 35,
+        "accuracy": 0.6857
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "read_speed_mb_s",
+        "correct": 23,
+        "total": 33,
+        "accuracy": 0.697
       },
       "products_4": {
         "source_name": "products_4",
         "attribute": "read_speed_mb_s",
-        "correct": 0,
-        "total": 17,
-        "accuracy": 0.0
+        "correct": 17,
+        "total": 27,
+        "accuracy": 0.6296
       }
     },
     "write_speed_mb_s": {
       "products_2": {
         "source_name": "products_2",
         "attribute": "write_speed_mb_s",
-        "correct": 0,
-        "total": 13,
-        "accuracy": 0.0
+        "correct": 20,
+        "total": 28,
+        "accuracy": 0.7143
       },
       "products_1": {
         "source_name": "products_1",
         "attribute": "write_speed_mb_s",
-        "correct": 0,
-        "total": 32,
-        "accuracy": 0.0
+        "correct": 22,
+        "total": 29,
+        "accuracy": 0.7586
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "write_speed_mb_s",
+        "correct": 18,
+        "total": 27,
+        "accuracy": 0.6667
       },
       "products_4": {
         "source_name": "products_4",
         "attribute": "write_speed_mb_s",
-        "correct": 0,
-        "total": 17,
-        "accuracy": 0.0
+        "correct": 17,
+        "total": 23,
+        "accuracy": 0.7391
+      }
+    },
+    "bus_type": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "bus_type",
+        "correct": 18,
+        "total": 57,
+        "accuracy": 0.3158
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "bus_type",
+        "correct": 28,
+        "total": 58,
+        "accuracy": 0.4828
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "bus_type",
+        "correct": 19,
+        "total": 54,
+        "accuracy": 0.3519
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "bus_type",
+        "correct": 15,
+        "total": 43,
+        "accuracy": 0.3488
+      }
+    },
+    "width_mm": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "width_mm",
+        "correct": 9,
+        "total": 12,
+        "accuracy": 0.75
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "width_mm",
+        "correct": 9,
+        "total": 12,
+        "accuracy": 0.75
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "width_mm",
+        "correct": 9,
+        "total": 12,
+        "accuracy": 0.75
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "width_mm",
+        "correct": 7,
+        "total": 10,
+        "accuracy": 0.7
+      }
+    },
+    "length_mm": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "length_mm",
+        "correct": 14,
+        "total": 15,
+        "accuracy": 0.9333
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "length_mm",
+        "correct": 14,
+        "total": 15,
+        "accuracy": 0.9333
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "length_mm",
+        "correct": 14,
+        "total": 15,
+        "accuracy": 0.9333
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "length_mm",
+        "correct": 12,
+        "total": 13,
+        "accuracy": 0.9231
+      }
+    },
+    "height_mm": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "height_mm",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "height_mm",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "height_mm",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "height_mm",
+        "correct": 10,
+        "total": 14,
+        "accuracy": 0.7143
+      }
+    },
+    "weight_g": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "weight_g",
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8889
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "weight_g",
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8889
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "weight_g",
+        "correct": 8,
+        "total": 9,
+        "accuracy": 0.8889
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "weight_g",
+        "correct": 6,
+        "total": 7,
+        "accuracy": 0.8571
+      }
+    },
+    "color": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "color",
+        "correct": 17,
+        "total": 23,
+        "accuracy": 0.7391
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "color",
+        "correct": 25,
+        "total": 25,
+        "accuracy": 1.0
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "color",
+        "correct": 18,
+        "total": 22,
+        "accuracy": 0.8182
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "color",
+        "correct": 11,
+        "total": 15,
+        "accuracy": 0.7333
+      }
+    },
+    "interface_type": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "interface_type",
+        "correct": 3,
+        "total": 29,
+        "accuracy": 0.1034
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "interface_type",
+        "correct": 4,
+        "total": 28,
+        "accuracy": 0.1429
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "interface_type",
+        "correct": 5,
+        "total": 35,
+        "accuracy": 0.1429
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "interface_type",
+        "correct": 2,
+        "total": 23,
+        "accuracy": 0.087
       }
     },
     "storage_connection_type": {
-      "products_2": {
-        "source_name": "products_2",
+      "products_1": {
+        "source_name": "products_1",
         "attribute": "storage_connection_type",
-        "correct": 6,
-        "total": 13,
-        "accuracy": 0.4615
+        "correct": 31,
+        "total": 51,
+        "accuracy": 0.6078
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "storage_connection_type",
+        "correct": 27,
+        "total": 45,
+        "accuracy": 0.6
       },
       "products_4": {
         "source_name": "products_4",
         "attribute": "storage_connection_type",
         "correct": 11,
-        "total": 16,
-        "accuracy": 0.6875
+        "total": 21,
+        "accuracy": 0.5238
       },
-      "products_1": {
-        "source_name": "products_1",
+      "products_2": {
+        "source_name": "products_2",
         "attribute": "storage_connection_type",
-        "correct": 48,
-        "total": 58,
-        "accuracy": 0.8276
+        "correct": 24,
+        "total": 44,
+        "accuracy": 0.5455
       }
     },
     "form_factor": {
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "form_factor",
+        "correct": 14,
+        "total": 47,
+        "accuracy": 0.2979
+      },
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "form_factor",
+        "correct": 16,
+        "total": 52,
+        "accuracy": 0.3077
+      },
       "products_2": {
         "source_name": "products_2",
         "attribute": "form_factor",
-        "correct": 16,
-        "total": 20,
-        "accuracy": 0.8
+        "correct": 8,
+        "total": 49,
+        "accuracy": 0.1633
       },
       "products_4": {
         "source_name": "products_4",
         "attribute": "form_factor",
-        "correct": 16,
-        "total": 20,
-        "accuracy": 0.8
+        "correct": 7,
+        "total": 36,
+        "accuracy": 0.1944
+      }
+    },
+    "chipset_name": {
+      "products_1": {
+        "source_name": "products_1",
+        "attribute": "chipset_name",
+        "correct": 9,
+        "total": 25,
+        "accuracy": 0.36
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "chipset_name",
+        "correct": 1,
+        "total": 11,
+        "accuracy": 0.0909
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "chipset_name",
+        "correct": 1,
+        "total": 15,
+        "accuracy": 0.0667
+      },
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "chipset_name",
+        "correct": 3,
+        "total": 13,
+        "accuracy": 0.2308
+      }
+    },
+    "vram_gb": {
+      "products_2": {
+        "source_name": "products_2",
+        "attribute": "vram_gb",
+        "correct": 17,
+        "total": 17,
+        "accuracy": 1.0
       },
       "products_1": {
         "source_name": "products_1",
-        "attribute": "form_factor",
-        "correct": 51,
-        "total": 56,
-        "accuracy": 0.9107
+        "attribute": "vram_gb",
+        "correct": 24,
+        "total": 25,
+        "accuracy": 0.96
+      },
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "vram_gb",
+        "correct": 8,
+        "total": 8,
+        "accuracy": 1.0
+      },
+      "products_4": {
+        "source_name": "products_4",
+        "attribute": "vram_gb",
+        "correct": 6,
+        "total": 8,
+        "accuracy": 0.75
       }
     },
     "memory_type": {
@@ -544,62 +688,23 @@
       "products_4": {
         "source_name": "products_4",
         "attribute": "memory_type",
-        "correct": 6,
-        "total": 9,
-        "accuracy": 0.6667
+        "correct": 15,
+        "total": 16,
+        "accuracy": 0.9375
       },
       "products_2": {
         "source_name": "products_2",
         "attribute": "memory_type",
-        "correct": 9,
-        "total": 11,
-        "accuracy": 0.8182
-      }
-    },
-    "chipset_name": {
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "chipset_name",
-        "correct": 6,
-        "total": 25,
-        "accuracy": 0.24
+        "correct": 13,
+        "total": 14,
+        "accuracy": 0.9286
       },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "chipset_name",
-        "correct": 1,
-        "total": 8,
-        "accuracy": 0.125
-      },
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "chipset_name",
-        "correct": 3,
-        "total": 8,
-        "accuracy": 0.375
-      }
-    },
-    "vram_gb": {
-      "products_1": {
-        "source_name": "products_1",
-        "attribute": "vram_gb",
-        "correct": 0,
-        "total": 25,
-        "accuracy": 0.0
-      },
-      "products_4": {
-        "source_name": "products_4",
-        "attribute": "vram_gb",
-        "correct": 0,
-        "total": 4,
-        "accuracy": 0.0
-      },
-      "products_2": {
-        "source_name": "products_2",
-        "attribute": "vram_gb",
-        "correct": 0,
-        "total": 7,
-        "accuracy": 0.0
+      "products_3": {
+        "source_name": "products_3",
+        "attribute": "memory_type",
+        "correct": 11,
+        "total": 14,
+        "accuracy": 0.7857
       }
     }
   },

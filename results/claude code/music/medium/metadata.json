@@ -1,0 +1,336 @@
+{
+ "task_id": "music_medium",
+ "system": "claudecode",
+ "claude_code_version": "2.1.280 (Claude Code)",
+ "session_id": "7d7991f3-c1a0-4be5-90a3-f5ca1ec958b8",
+ "model": "claude-opus-5-5",
+ "effort": null,
+ "provider": "anthropic",
+ "auth_mode": "subscription",
+ "isolation": "bwrap",
+ "gpu": false,
+ "kit": "full",
+ "labeling_enabled": false,
+ "ditto_training_enabled": false,
+ "denied_tools": [
+  "WebSearch",
+  "WebFetch"
+ ],
+ "pydi_available": false,
+ "pydi_docs": false,
+ "exit_reason": "completed",
+ "returncode": 0,
+ "run_dir": "<p4-run:music_medium>",
+ "workspace_build": {
+  "sanitizer": {
+   "task_id": "music_medium",
+   "dest": "<p4-run:music_medium>/workspace/task",
+   "manifest_tree_sha256": "1e4d1e31a335e699e7b7ce3e154d1e099cc7fc7a21dde188803d9a7292cd3569",
+   "n_copied": 5,
+   "n_hidden_withheld": 78,
+   "copied": [
+    {
+     "path": "input/data/discogs.csv",
+     "sha256": "502e16c130dd44cd8d9971397d39fddba4e89f01c368867b47d8e8b884ea66fe",
+     "size": 6595535
+    },
+    {
+     "path": "input/data/lastfm.csv",
+     "sha256": "d6bf330d815acc72d39063315cc9718415ea5a4e25b8e8b9d5c222c1143f67f0",
+     "size": 1386885
+    },
+    {
+     "path": "input/data/musicbrainz.csv",
+     "sha256": "cb68300f938dac700430e0cbfdaefe7f0bad98238a1e78074b466a50aa8f2a0d",
+     "size": 1352805
+    },
+    {
+     "path": "input/schemamatching/Music_Genres_Taxonomy.csv",
+     "sha256": "be785bdc1941ab83bae13ecef63637bca3079ad573d9bc52711f758a9a624a26",
+     "size": 18462
+    },
+    {
+     "path": "input/schemamatching/target_schema.json",
+     "sha256": "e92a9fc9e39a50b3bbf34c941f954048f6fa2921d7e33d0f66bfd002c15edfa3",
+     "size": 2691
+    }
+   ]
+  },
+  "brief_chars": 1861,
+  "entity_definition_version": 1,
+  "entity_definition_sha256": "82a4d949f998e41d062bbb789ab04c67f94668cb687e28d07e7f25aa630466cd",
+  "n_skills": 7,
+  "kit": "minimal",
+  "n_scripts": 1,
+  "pydi_docs": null,
+  "advice": false,
+  "provided_validation": "self_made",
+  "provided_validation_files": {},
+  "provided_validation_health": null,
+  "official_fusion_validation": null,
+  "profile": "claudecode_label_free",
+  "labeling_enabled": false,
+  "ditto_training_enabled": false,
+  "skills_variant": "label_free",
+  "pydi_available": false
+ },
+ "resume_archive": null,
+ "openai_key_exposed": false,
+ "archive_errors": [],
+ "agent_openai": {
+  "access": "embeddings",
+  "route": "proxy"
+ },
+ "embeddings_proxy": {
+  "forwarded": 0,
+  "pinned": 0,
+  "errors": 0,
+  "cache_hits": 0,
+  "client_gone": 0,
+  "refused": 0,
+  "prompt_tokens": 0,
+  "total_tokens": 0,
+  "spend_usd": 0.0,
+  "unpriced_calls": 0,
+  "unpriced_models": [],
+  "allow": [
+   "embeddings"
+  ],
+  "refused_paths": [],
+  "by_kind": {},
+  "route": "proxy"
+ },
+ "stream": {
+  "n_events": 1099,
+  "n_tool_calls": 80,
+  "tools": {
+   "Bash": 74,
+   "Write": 6
+  },
+  "result": {
+   "subtype": "success",
+   "is_error": false,
+   "num_turns": 81,
+   "duration_ms": 3162597,
+   "total_cost_usd": 6.314490199999998,
+   "session_id": "7d7991f3-c1a0-4be5-90a3-f5ca1ec958b8",
+   "usage": {
+    "input_tokens": 162,
+    "cache_creation_input_tokens": 240660,
+    "cache_read_input_tokens": 11026611,
+    "output_tokens": 109162,
+    "output_tokens_details": {
+     "thinking_tokens": 38927
+    },
+    "server_tool_use": {
+     "web_search_requests": 0,
+     "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 240660,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "not_available",
+    "iterations": [
+     {
+      "input_tokens": 2,
+      "output_tokens": 998,
+      "cache_read_input_tokens": 254626,
+      "cache_creation_input_tokens": 526,
+      "cache_creation": {
+       "ephemeral_5m_input_tokens": 0,
+       "ephemeral_1h_input_tokens": 526
+      },
+      "type": "message",
+      "model": null
+     }
+    ],
+    "speed": "standard"
+   },
+   "modelUsage": {
+    "claude-opus-5-5": {
+     "inputTokens": 162,
+     "outputTokens": 109162,
+     "cacheReadInputTokens": 11026611,
+     "cacheCreationInputTokens": 240660,
+     "webSearchRequests": 0,
+     "costUSD": 6.314490199999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 38927,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    }
+   }
+  }
+ },
+ "is_error": false,
+ "gold_timeline": {
+  "stage_revisions": {
+   "schema_matching": 1,
+   "entity_matching": 1,
+   "blocking": 1,
+   "fusion": 1,
+   "e2e_panel": 1
+  },
+  "last_headline_per_stage": {
+   "schema_matching": "F1=1.000",
+   "entity_matching": "F1(pair-mean)=0.962 (pooled=0.962)",
+   "blocking": "PC=1.000",
+   "fusion": "acc[strict]=0.814 (all gold) | 0.814 on 100/100 evaluated",
+   "e2e_panel": "GR=0.667"
+  },
+  "n_revisions_mirrored": 0,
+  "n_revision_names": 0,
+  "n_revisions_unmirrored_budget": 0,
+  "n_blobs": 0,
+  "blob_bytes": 0,
+  "mirror_bytes": 0,
+  "mirror_byte_budget": 1500000000,
+  "mirror_errors": []
+ },
+ "submission": {
+  "n_files": 6,
+  "files": [
+   "candidates.csv",
+   "correspondences.csv",
+   "fused.csv",
+   "membership.csv",
+   "report.md",
+   "sm_mapping.csv"
+  ]
+ },
+ "self_check": {
+  "ok": true,
+  "problems": [],
+  "warnings": []
+ },
+ "leak_scan": {
+  "task_mirror_ok": true,
+  "outputs_ok": true,
+  "violations": []
+ },
+ "n_turns": 81,
+ "cost_usd_cli": 6.314490199999998,
+ "pricing": null,
+ "cli_budget_usd": 100.0,
+ "budget_scale": 1.0,
+ "cost_usd_real": null,
+ "cost_usd": 6.314490199999998,
+ "broker_summaries": {},
+ "cost_accounting": {
+  "auth_mode": "subscription",
+  "billing_basis": "subscription",
+  "billed_solver_usd": null,
+  "billing_note": "Not an invoice. Subscription allowance is not a dollar balance. Zero extra solver charges requires included usage and usage credits disabled. No API-key fallback is configured; auxiliary APIs are billed separately.",
+  "cli_api_equivalent_usd": 6.314490199999998,
+  "standard_api_equivalent_usd_range": [
+   6.31449,
+   6.31449
+  ],
+  "estimate_note": "Range reflects unknown cache-write TTL; no fast/residency surcharges included.",
+  "usage": {
+   "input_tokens": 162,
+   "cache_creation_input_tokens": 240660,
+   "cache_read_input_tokens": 11026611,
+   "output_tokens": 109162,
+   "output_tokens_details": {
+    "thinking_tokens": 38927
+   },
+   "server_tool_use": {
+    "web_search_requests": 0,
+    "web_fetch_requests": 0
+   },
+   "service_tier": "standard",
+   "cache_creation": {
+    "ephemeral_1h_input_tokens": 240660,
+    "ephemeral_5m_input_tokens": 0
+   },
+   "inference_geo": "not_available",
+   "iterations": [
+    {
+     "input_tokens": 2,
+     "output_tokens": 998,
+     "cache_read_input_tokens": 254626,
+     "cache_creation_input_tokens": 526,
+     "cache_creation": {
+      "ephemeral_5m_input_tokens": 0,
+      "ephemeral_1h_input_tokens": 526
+     },
+     "type": "message",
+     "model": null
+    }
+   ],
+   "speed": "standard"
+  },
+  "models": {
+   "claude-opus-5-5": {
+    "usage": {
+     "inputTokens": 162,
+     "outputTokens": 109162,
+     "cacheReadInputTokens": 11026611,
+     "cacheCreationInputTokens": 240660,
+     "webSearchRequests": 0,
+     "costUSD": 6.314490199999998,
+     "contextWindow": 1000000,
+     "maxOutputTokens": 128000,
+     "thinkingTokens": 38927,
+     "canonicalModel": "claude-opus-5-5",
+     "provider": "firstParty",
+     "costBasis": "list"
+    },
+    "cli_estimate_usd": 6.314490199999998,
+    "standard_api_equivalent_usd_range": [
+     6.31449,
+     6.31449
+    ]
+   }
+  },
+  "pricing_snapshot": {
+   "date": "2026-09-23",
+   "source": "https://platform.claude.com/docs/en/about-claude/pricing",
+   "basis": "standard global API list prices, USD per million tokens",
+   "models": {
+    "claude-opus-5-5": [
+     4.0,
+     20.0,
+     0.2,
+     5.0,
+     8.0
+    ],
+    "claude-sonnet-5": [
+     2.0,
+     10.0,
+     0.2,
+     2.5,
+     4.0
+    ],
+    "claude-haiku-4-5-20251001": [
+     1.0,
+     5.0,
+     0.1,
+     1.25,
+     2.0
+    ]
+   },
+   "columns": [
+    "input",
+    "output",
+    "cache_read",
+    "cache_write_5m",
+    "cache_write_1h"
+   ]
+  },
+  "auxiliary_api_estimate_usd": 0.0,
+  "auxiliary_breakdown": {
+   "brokers": {},
+   "embeddings_proxy": 0.0
+  },
+  "complete": true
+ },
+ "segment_wall_seconds": 3214.4,
+ "wall_seconds": 3214.4,
+ "submission_ready": true
+}

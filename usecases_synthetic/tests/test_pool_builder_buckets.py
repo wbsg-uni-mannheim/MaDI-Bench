@@ -1,11 +1,9 @@
-"""Tests for ``build_buckets`` after the 2026-05-26 policy tightening.
+"""Tests for ``build_buckets``.
 
-Per plan_revision_step4g_findings.md follow-up: the LLM adjudicator
-now arbitrates **every** bucket-C disagreement. The legacy
-``score >= theta + delta`` auto-include and ``score < theta - delta``
-auto-drop paths were removed because Ditto's per-domain precision on
-raw data is too low to overrule the human-baseline matcher on
-confidence alone.
+The LLM adjudicator arbitrates **every** bucket-C disagreement: there is
+no ``score >= theta + delta`` auto-include and no ``score < theta - delta``
+auto-drop path, because Ditto's per-domain precision on raw data is too
+low to overrule the human-baseline matcher on confidence alone.
 """
 
 from __future__ import annotations

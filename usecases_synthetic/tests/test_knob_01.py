@@ -1153,7 +1153,7 @@ class TestAttrsPreserved:
 
 
 class TestRealisedAudit:
-    """Cover the K1 realised-CSV writer (plan_revision.md R-1 / G9 / step 4f).
+    """Cover the K1 realised-CSV writer.
 
     Two layers of coverage:
 
@@ -1377,11 +1377,11 @@ class TestRealisedAudit:
         assert not realised_path.exists()
 
 
-# ---- R10-D: v2 prompts + post-filter + <UNCHANGED> sentinel ----------------
+# ---- v2 prompts + post-filter + <UNCHANGED> sentinel -----------------------
 
 
 class TestNearIdentityHelper:
-    """Cover ``_is_near_identity`` corner cases (R10-D post-filter primitive)."""
+    """Cover ``_is_near_identity`` corner cases (post-filter primitive)."""
 
     def test_identical_strings(self) -> None:
         assert _is_near_identity("Apple Inc.", "Apple Inc.") is True
@@ -1411,7 +1411,7 @@ class TestNearIdentityHelper:
 
 
 class TestLLMParaphraseV2Behavior:
-    """Cover R10-D ``<UNCHANGED>`` and near-identity handling in llm_paraphrase."""
+    """Cover ``<UNCHANGED>`` and near-identity handling in llm_paraphrase."""
 
     def _put(
         self,
@@ -1517,7 +1517,7 @@ class TestLLMParaphraseV2Behavior:
 
 
 class TestRealisedAuditV2Counters:
-    """Cover the new R10-D realised columns (unchanged / near_identity)."""
+    """Cover the realised columns (unchanged / near_identity)."""
 
     def test_counters_default_to_zero(self) -> None:
         prov_df = pd.DataFrame(columns=PROVENANCE_COLUMNS)
@@ -1590,7 +1590,7 @@ class TestRealisedAuditV2Counters:
 
 
 class TestPromptVersionDispatch:
-    """Cover R10-D prompt template loading + per-attribute-class dispatch."""
+    """Cover prompt template loading + per-attribute-class dispatch."""
 
     def test_v2_prompts_exist_on_disk(self) -> None:
         from usecases_synthetic.scripts.apply_knob_01_surface import (
@@ -1610,7 +1610,7 @@ class TestPromptVersionDispatch:
 
     def test_all_four_domain_yamls_pin_v2(self) -> None:
         # The four production K1 YAMLs must all carry ``llm_prompt_version: v2``
-        # so the next variant regen uses the new prompts.
+        # so variant generation uses the v2 prompts.
         from usecases_synthetic.scripts.apply_knob_01_surface import (
             load_knob_01_config,
         )
@@ -1619,11 +1619,11 @@ class TestPromptVersionDispatch:
             cfg = load_knob_01_config(domain)
             assert (
                 cfg.get("llm_prompt_version") == "v2"
-            ), f"K1 YAML for {domain} must pin llm_prompt_version: v2 (R10-D)"
+            ), f"K1 YAML for {domain} must pin llm_prompt_version: v2"
 
 
 class TestBuildOpenAIParaphraseClient:
-    """Unit tests for the K1 live paraphrase client (Fix A, 2026-05-30).
+    """Unit tests for the K1 live paraphrase client.
 
     The client is the ``(prompt_template, value) -> paraphrase`` callable
     that :func:`llm_paraphrase` invokes on cache miss. Before the fix the

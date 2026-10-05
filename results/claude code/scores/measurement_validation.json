@@ -1,0 +1,471 @@
+{
+  "scope_domains": [
+    "games",
+    "companies",
+    "music",
+    "products",
+    "papers"
+  ],
+  "passed": true,
+  "inputs_unchanged": true,
+  "domains": {
+    "games": {
+      "silver": {
+        "P4": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 21274,
+          "reference_records": 21274,
+          "pipeline_records": 74951,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P2": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 21274,
+          "reference_records": 21274,
+          "pipeline_records": 74951,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P3": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 21274,
+          "reference_records": 21274,
+          "pipeline_records": 74951,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        }
+      },
+      "runtime": {
+        "artifact_fidelity": {
+          "sm_mapping.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "blocking/candidates.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "correspondences.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "membership.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "fused.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          }
+        },
+        "complete_rebuild": true,
+        "fresh_state": true,
+        "wall_seconds": 373.54554978059605
+      }
+    },
+    "companies": {
+      "silver": {
+        "P4": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 4238,
+          "reference_records": 4238,
+          "pipeline_records": 14016,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P2": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 4238,
+          "reference_records": 4238,
+          "pipeline_records": 14016,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P3": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 4238,
+          "reference_records": 4238,
+          "pipeline_records": 14016,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        }
+      },
+      "runtime": {
+        "artifact_fidelity": {
+          "sm_mapping.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "blocking/candidates.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "correspondences.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "membership.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "fused.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          }
+        },
+        "complete_rebuild": true,
+        "fresh_state": true,
+        "wall_seconds": 179.79065548395738
+      }
+    },
+    "music": {
+      "silver": {
+        "P4": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 11557,
+          "reference_records": 11557,
+          "pipeline_records": 37255,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P2": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 11557,
+          "reference_records": 11557,
+          "pipeline_records": 37255,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P3": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 11557,
+          "reference_records": 11557,
+          "pipeline_records": 37255,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        }
+      },
+      "runtime": {
+        "artifact_fidelity": {
+          "sm_mapping.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "blocking/candidates.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "correspondences.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "membership.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "fused.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          }
+        },
+        "complete_rebuild": true,
+        "fresh_state": true,
+        "wall_seconds": 290.2268538228236
+      }
+    },
+    "products": {
+      "silver": {
+        "P4": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 2727,
+          "reference_records": 2727,
+          "pipeline_records": 3012,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P2": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 2727,
+          "reference_records": 2727,
+          "pipeline_records": 3012,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P3": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 2727,
+          "reference_records": 2727,
+          "pipeline_records": 3012,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        }
+      },
+      "runtime": {
+        "artifact_fidelity": {
+          "sm_mapping.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "blocking/candidates.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "correspondences.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "membership.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "fused.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          }
+        },
+        "complete_rebuild": true,
+        "fresh_state": true,
+        "wall_seconds": 22.47946181287989
+      }
+    },
+    "papers": {
+      "silver": {
+        "P4": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 164171,
+          "reference_records": 164171,
+          "pipeline_records": 182059,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P2": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 164171,
+          "reference_records": 164171,
+          "pipeline_records": 182059,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        },
+        "P3": {
+          "bcubed_independent_contingency_counts": true,
+          "shared_records": 164171,
+          "reference_records": 164171,
+          "pipeline_records": 182059,
+          "fusion_macro_independent_csv_aggregation": true,
+          "fully_correct_independent_csv_aggregation": true,
+          "entity_recovery_denominator_checked": true
+        }
+      },
+      "runtime": {
+        "artifact_fidelity": {
+          "sm_mapping.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "blocking/candidates.csv": {
+            "bytes_identical": false,
+            "table_equal": false,
+            "original_rows": 1182375,
+            "replay_rows": 1182384,
+            "different_rows": 1513,
+            "accepted_intermediate_difference": true,
+            "reason": "Only the intermediate candidate pool differs; final correspondence, membership and fused artifacts remain byte-identical. PC is identical and RR is identical at paper precision. Table 5 retains the archived original candidate score.",
+            "original_only": 1513,
+            "replay_only": 1522,
+            "blocking_pc_checks": {
+              "dblp_crossref": {
+                "positive_gold": 1666,
+                "original_covered": 1663,
+                "replay_covered": 1663
+              },
+              "dblp_openalex": {
+                "positive_gold": 1666,
+                "original_covered": 1665,
+                "replay_covered": 1665
+              }
+            },
+            "original_rr": 0.9998935045436694,
+            "replay_rr": 0.9998935034564919
+          },
+          "correspondences.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "membership.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          },
+          "fused.csv": {
+            "bytes_identical": true,
+            "table_equal": true
+          }
+        },
+        "complete_rebuild": true,
+        "fresh_state": true,
+        "wall_seconds": 921.916126254946
+      }
+    }
+  },
+  "alignment_equivalence": {
+    "original_sha256": "c41b4d8636b50dcb327aae4f39872dcc25238aa00bacb286ba660ed3e660d68d",
+    "optimized_sha256": "25e558eef6f1fb955b2bc441cd3b37184c547903cc5d35a4c53cb6bd1f5ea864",
+    "equivalence": "Only zero-overlap pairs are skipped. Every positive-overlap candidate is evaluated in the original pipe-cluster iteration order; all scoring, tie-breaking, coverage and purity code is unchanged.",
+    "passed": true,
+    "synthetic_original_vs_sparse_cases": 120,
+    "completed_original_panel_crosschecks": [
+      {
+        "domain": "games",
+        "pipeline": "P4",
+        "rows": 6972,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "games",
+        "pipeline": "P2",
+        "rows": 6972,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "games",
+        "pipeline": "P3",
+        "rows": 6972,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "companies",
+        "pipeline": "P4",
+        "rows": 1738,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "companies",
+        "pipeline": "P2",
+        "rows": 1738,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "companies",
+        "pipeline": "P3",
+        "rows": 1738,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "music",
+        "pipeline": "P4",
+        "rows": 3624,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "music",
+        "pipeline": "P2",
+        "rows": 3624,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "music",
+        "pipeline": "P3",
+        "rows": 3624,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "products",
+        "pipeline": "P4",
+        "rows": 753,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "products",
+        "pipeline": "P2",
+        "rows": 753,
+        "all_alignment_fields_equal": true
+      },
+      {
+        "domain": "products",
+        "pipeline": "P3",
+        "rows": 753,
+        "all_alignment_fields_equal": true
+      }
+    ]
+  },
+  "runtime_environment": {
+    "hostname": "dws-08.informatik.uni-mannheim.de",
+    "platform": "Linux-6.12.0-211.38.1.el10_2.x86_64-x86_64-with-glibc2.39",
+    "python": "3.12.13 (main, Jul 23 2026, 14:43:28) [Clang 22.1.3 ]",
+    "affinity": [
+      13,
+      14,
+      16,
+      18,
+      33,
+      34,
+      36,
+      38
+    ],
+    "cpuinfo": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  40\nOn-line CPU(s) list:                     0-39\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Silver 4114 CPU @ 2.20GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      2\nCore(s) per socket:                      10\nSocket(s):                               2\nStepping:                                4\nCPU(s) scaling MHz:                      96%\nCPU max MHz:                             3000.0000\nCPU min MHz:                             800.0000\nBogoMIPS:                                4400.00\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts vnmi pku ospke md_clear flush_l1d arch_capabilities\nVirtualization:                          VT-x\nL1d cache:                               640 KiB (20 instances)\nL1i cache:                               640 KiB (20 instances)\nL2 cache:                                20 MiB (20 instances)\nL3 cache:                                27.5 MiB (2 instances)\nNUMA node(s):                            2\nNUMA node0 CPU(s):                       0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38\nNUMA node1 CPU(s):                       1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39\nVulnerability Gather data sampling:      Mitigation; Microcode\nVulnerability Indirect target selection: Not affected\nVulnerability Itlb multihit:             KVM: Mitigation: Split huge pages\nVulnerability L1tf:                      Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable\nVulnerability Mds:                       Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Meltdown:                  Mitigation; PTI\nVulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Mitigation; IBRS\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; IBRS; IBPB conditional; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Mitigation; Clear CPU buffers; SMT vulnerable\nVulnerability Vmscape:                   Mitigation; IBPB before exit to userspace\n",
+    "slurm": {
+      "SLURM_JOB_USER": "aasteine",
+      "SLURM_TASKS_PER_NODE": "1",
+      "SLURM_JOB_UID": "1197",
+      "SLURM_TASK_PID": "1520727",
+      "SLURM_LOCALID": "0",
+      "SLURM_SUBMIT_DIR": "<harness>",
+      "SLURM_JOB_START_TIME": "1790327675",
+      "SLURM_CLUSTER_NAME": "dws-cluster",
+      "SLURM_JOB_END_TIME": "1790333075",
+      "SLURM_CPUS_ON_NODE": "8",
+      "SLURM_JOB_CPUS_PER_NODE": "8",
+      "SLURM_GTIDS": "0",
+      "SLURM_JOB_PARTITION": "cpu",
+      "SLURM_TRES_PER_TASK": "cpu=8",
+      "SLURM_OOM_KILL_STEP": "0",
+      "SLURM_JOB_NUM_NODES": "1",
+      "SLURM_JOBID": "351025",
+      "SLURM_JOB_QOS": "walltime5d",
+      "SLURM_PROCID": "0",
+      "SLURM_CPUS_PER_TASK": "8",
+      "SLURM_NTASKS": "1",
+      "SLURM_TOPOLOGY_ADDR": "dws-08",
+      "SLURM_TOPOLOGY_ADDR_PATTERN": "node",
+      "SLURM_SCRIPT_CONTEXT": "prolog_task",
+      "SLURM_MEM_PER_NODE": "65536",
+      "SLURM_NODELIST": "dws-08",
+      "SLURM_JOB_ACCOUNT": "wifo5-staff",
+      "SLURM_PRIO_PROCESS": "0",
+      "SLURM_NPROCS": "1",
+      "SLURM_NNODES": "1",
+      "SLURM_SUBMIT_HOST": "dws-login-01.informatik.uni-mannheim.de",
+      "SLURM_JOB_ID": "351025",
+      "SLURM_NODEID": "0",
+      "SLURM_CONF": "/var/spool/slurmd/conf-cache/slurm.conf",
+      "SLURM_JOB_NAME": "p4_replay_complete",
+      "SLURM_JOB_GID": "100",
+      "SLURM_JOB_NODELIST": "dws-08"
+    },
+    "thread_environment": {
+      "OMP_NUM_THREADS": "8",
+      "OPENBLAS_NUM_THREADS": "8",
+      "MKL_NUM_THREADS": "8",
+      "NUMEXPR_NUM_THREADS": "8",
+      "PYTHONHASHSEED": "0"
+    },
+    "packages": "see package_versions.json"
+  },
+  "runtime_caveat": "P4 measured once on the recorded node with 8 CPUs. P1-P3 historical hardware was not established, so timings are not controlled hardware comparisons.",
+  "silver_policy": "All P2/P3/P4 silver metrics use the same frozen 2026-09-24 P1 outputs and the same current panel rules. Silver fusion is panel macro accuracy, not strict/v2 gold fusion.",
+  "excluded_preflight": "Incomplete stage-only timing attempt 351019 excluded. Only complete rebuild job 351025 is eligible."
+}

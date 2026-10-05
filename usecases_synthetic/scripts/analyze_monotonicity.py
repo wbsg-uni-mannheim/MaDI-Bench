@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""M8 — cross-level monotonicity + collapse analyzer.
+"""Cross-level monotonicity + collapse analyzer.
 
-Consumes the baseline (M5) and per-level validation (M7) metrics for
+Consumes the baseline (``measure_baseline.py``) and per-level validation (``validate_variant.py``) metrics for
 one domain and answers:
 
 1. Is each knob's predicted signal monotone across
@@ -18,7 +18,7 @@ Writes
 - ``usecases_synthetic/validation/<domain>/monotonicity_report.md``
 - ``usecases_synthetic/validation/<domain>/monotonicity_report.csv``
 
-M8 surfaces problems. M10 does the triage. No knob re-configuration
+This script surfaces problems; triage is manual. No knob re-configuration
 happens here.
 
 Usage
@@ -123,7 +123,7 @@ def _fmt_range(
 
 
 def _check_symbol(ok: bool) -> str:
-    """ASCII-only check / cross glyphs (no emoji per CLAUDE.md)."""
+    """ASCII-only check / cross glyphs (no emoji)."""
     return "[ok]" if ok else "[!!]"
 
 
@@ -234,7 +234,7 @@ def build_collapse_rows(collapses: list[Collapse]) -> list[dict[str, Any]]:
 
 
 # Per-stage load-bearing committee metric for the cumulative cross-level
-# slope. This is the C2-contract verdict: committee scores decrease weakly
+# slope. This is the monotonicity-contract verdict: committee scores decrease weakly
 # easy -> medium -> hard, with baseline a reference value that must land no
 # harder than medium. Read from the cumulative all-knobs-on variant levels,
 # so it is the honest difficulty signal -- unlike the per-knob expectations,
@@ -261,7 +261,7 @@ def build_cross_level_slope(
     """Per-stage load-bearing committee metric across baseline/easy/medium/hard.
 
     The honest difficulty verdict on the **cumulative** variants (all knobs
-    on per level): the C2 contract asks committee scores to decrease weakly
+    on per level): the monotonicity contract asks committee scores to decrease weakly
     across ``easy -> medium -> hard``, with baseline a reference that must
     land no harder than medium (i.e. baseline score >= medium score). Makes
     no single-knob isolation assumption, so it -- not the per-knob signals --
@@ -328,7 +328,7 @@ def render_markdown(
     lines.append("")
     lines.append(
         "Per-stage committee metric across the **cumulative** variant levels "
-        "(every knob on at each level). This is the C2-contract verdict: "
+        "(every knob on at each level). This is the monotonicity-contract verdict: "
         "committee scores should weakly decrease easy -> medium -> hard, and "
         "baseline (a reference value) should land no harder than medium. It "
         "makes no single-knob isolation assumption, so this -- not the "
@@ -457,9 +457,9 @@ def render_markdown(
             )
     lines.append("")
 
-    # ---------- Best-member-F1 monotonicity (P8) ----------
+    # ---------- Best-member-F1 monotonicity ----------
     if best_member_checks:
-        lines.append("## Best-Member Ceiling (P8)")
+        lines.append("## Best-Member Ceiling")
         lines.append("")
         lines.append(
             "Per-stage best-member F1 across baseline -> easy -> medium -> "
@@ -502,7 +502,7 @@ def render_markdown(
     if qualitative_fails:
         lines.append(
             "Signals that are direction-correct but magnitude-unspecified "
-            "by the knob card. M10 should decide whether the measured "
+            "by the knob card. Decide manually whether the measured "
             "delta is 'strong enough' to count as validation."
         )
         lines.append("")
@@ -545,7 +545,7 @@ def analyze_domain(
     expectations_path: Path = EXPECTATIONS_YAML,
     out_dir: Path | None = None,
 ) -> dict[str, Any]:
-    """Run the full M8 pipeline for one domain.
+    """Run the full monotonicity analysis for one domain.
 
     Parameters
     ----------
@@ -574,12 +574,12 @@ def analyze_domain(
     level_metrics = _load_level_metrics(domain)
     checks = match_signals(level_metrics, all_expectations)
     collapses = detect_collapses(level_metrics)
-    # P8: best-member-F1 ceiling per stage. Surfaces difficulty signals
+    # Best-member-F1 ceiling per stage. Surfaces difficulty signals
     # that depress committee macro_f1 while leaving the user-attainable
     # best member flat. Stages match the SM/Norm/EM-blocking/EM-matching
     # /Fusion roster emitted by measure_baseline.py + validate_variant.py.
     best_member_checks = match_best_member_monotonicity(level_metrics)
-    # C6: per-(knob, signal, stage) Pearson r between the signal's
+    # Ceiling responsiveness: per-(knob, signal, stage) Pearson r between the signal's
     # per-level realised metric and the stage's best-member F1. Near-0
     # values flag noop knobs for the ceiling that the user actually
     # consumes (vs. the committee mean).
@@ -681,7 +681,7 @@ def _write_collapse_csv(path: Path, collapses: list[Collapse]) -> None:
 
 
 def _write_best_member_csv(path: Path, checks: list[BestMemberCheck]) -> None:
-    """Write best-member-F1 check rows to ``path`` (P8)."""
+    """Write best-member-F1 check rows to ``path``."""
     fieldnames = ["stage"]
     for level in LEVELS:
         fieldnames.extend([f"{level}_value", f"{level}_winner"])
@@ -725,7 +725,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     """Parse CLI args."""
     parser = argparse.ArgumentParser(
         description=(
-            "Cross-level monotonicity + collapse analyzer (M8). "
+            "Cross-level monotonicity + collapse analyzer. "
             "Reads baseline metrics and per-level validation outputs; "
             "writes monotonicity_report.md + .csv."
         )

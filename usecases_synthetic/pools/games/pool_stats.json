@@ -27,7 +27,7 @@
     "percentile": 90.0,
     "raw_percentile": 0.4967323492746801
   },
-  "ditto_checkpoint": "/Users/ralph/Dev/PyDI/cache/ditto_checkpoints/games/best",
+  "ditto_checkpoint": "cache/ditto_checkpoints/games/best",
   "ditto_threshold": 0.5,
   "domain": "games",
   "llm_model_id": "gpt-5.4",

@@ -1,6 +1,6 @@
 """Tests for Knob 04 — Per-entity Source Coverage Skew.
 
-Acceptance criteria (post-2026-05-07 K4 sign-off Pending #5 wire-up):
+Acceptance criteria:
 
 1. Hard: no entity drops to zero sources (fusion-gold floor at the
    *entity* level — individual fusion-gold records may be removed when
@@ -411,10 +411,10 @@ class TestHardRemoval:
                 view.coverage(entity_id) >= 1
             ), f"Entity {entity_id} dropped to zero sources"
         # Every entity that contains any fusion-gold record must still
-        # have ≥1 surviving source. (Per K4 sign-off Pending #5 wire-up,
-        # individual fusion-gold *records* are no longer blanket-protected;
-        # the entity-level floor + closeness-aware survivor selection
-        # together guarantee the fusion-protected universe stays evaluable.)
+        # have ≥1 surviving source. (Individual fusion-gold *records* are
+        # not blanket-protected; the entity-level floor + closeness-aware
+        # survivor selection together guarantee the fusion-protected
+        # universe stays evaluable.)
         for entity_id, members in three_source_linkage.groups.items():
             entity_has_gold = any(rid in fusion_gold_ids for _, rid in members)
             if not entity_has_gold:
@@ -637,3 +637,82 @@ class TestStochasticDominance:
             assert (
                 cdf_med <= cdf_hard + 1e-6
             ), f"CDF medium > hard at k={k}: {cdf_med:.3f} > {cdf_hard:.3f}"
+
+
+class TestFabricationAcrossNativeColumnNames:
+    """K4 fabrication when the sources name the same attribute differently
+    (sibling values were once copied only between identically named
+    columns, so fabricated rows shipped with nothing but their id, and missing
+    cells were paraphrased into the string "<NA>")."""
+
+    MAPS = {
+        "src_a": {"id": "id", "manufacturer": "brand", "product_name": "title", "cluster_id": "cluster_id"},
+        "src_b": {"id": "id", "brandName": "brand", "name": "title", "colour": "color"},
+    }
+
+    def test_column_map_follows_the_target_attribute(self) -> None:
+        from usecases_synthetic.scripts.apply_knob_04_coverage import fabrication_column_map
+
+        cmap = fabrication_column_map(self.MAPS, "src_b", "src_a",
+                                      ["id", "brandName", "name", "colour"],
+                                      ["id", "manufacturer", "product_name", "cluster_id"])
+        # colour's attribute (color) has no column in src_a: explicitly empty,
+        # never a same-named fallback
+        assert cmap == {"brandName": "manufacturer", "name": "product_name", "colour": None}
+
+    def test_fabricated_row_carries_the_sibling_values(self) -> None:
+        from usecases_synthetic.lib.coverage_ops import fabricate_row_by_paraphrase
+
+        sibling = pd.Series({"id": "a_1", "manufacturer": "ACME", "product_name": "Widget 3000",
+                             "cluster_id": "c7"})
+        row, _ = fabricate_row_by_paraphrase(
+            sibling_row=sibling,
+            target_source_columns=["id", "brandName", "name", "colour", "cluster_id"],
+            managed_columns=["name"],
+            paraphrase_fn=lambda col, val, rng: (val.upper(), {"op": "upper"}),
+            rng=np.random.default_rng(0),
+            new_record_id="k04__fab__src_b__x",
+            target_id_column="id",
+            column_map={"brandName": "manufacturer", "name": "product_name"},
+        )
+        assert row["id"] == "k04__fab__src_b__x"
+        assert row["brandName"] == "ACME"
+        assert row["name"] == "WIDGET 3000"           # paraphrased managed column
+        assert row["cluster_id"] == "c7"              # same-named fallback
+        assert pd.isna(row["colour"]) and not isinstance(row["colour"], str)
+
+    def test_missing_cells_are_not_paraphrased_into_na_strings(self) -> None:
+        from usecases_synthetic.lib.coverage_ops import fabricate_row_by_paraphrase
+
+        row, params = fabricate_row_by_paraphrase(
+            sibling_row=pd.Series({"id": "a_1"}),
+            target_source_columns=["id", "name"],
+            managed_columns=["name"],
+            paraphrase_fn=lambda col, val, rng: (f"<{val}>", {}),
+            rng=np.random.default_rng(0),
+            new_record_id="k04__fab__src_b__y",
+            target_id_column="id",
+        )
+        assert pd.isna(row["name"]) and "name" not in params
+
+    def test_mapped_but_absent_attribute_gets_no_same_name_fallback(self) -> None:
+        from usecases_synthetic.lib.coverage_ops import fabricate_row_by_paraphrase
+
+        # the sibling happens to have a column called "colour" with another meaning
+        sibling = pd.Series({"id": "a_1", "manufacturer": "ACME", "colour": "not-a-colour"})
+        row, _ = fabricate_row_by_paraphrase(
+            sibling_row=sibling, target_source_columns=["id", "brandName", "colour"], managed_columns=[],
+            paraphrase_fn=lambda col, val, rng: (val, {}), rng=np.random.default_rng(0),
+            new_record_id="k04__fab__src_b__z", target_id_column="id",
+            column_map={"brandName": "manufacturer", "colour": None})
+        assert row["brandName"] == "ACME" and pd.isna(row["colour"])
+
+    def test_copied_numbers_take_the_target_column_form(self) -> None:
+        from usecases_synthetic.scripts.apply_knob_04_coverage import _coerce_like_column
+
+        assert _coerce_like_column(240560000000.0, pd.Series([3124900000000], dtype="int64")) == 240560000000
+        assert isinstance(_coerce_like_column(240560000000.0, pd.Series([1], dtype="int64")), int)
+        assert _coerce_like_column(2.5, pd.Series([1], dtype="int64")) == 2.5          # not lossless: unchanged
+        assert isinstance(_coerce_like_column(3, pd.Series([1.5])), float)
+        assert _coerce_like_column("x", pd.Series([1], dtype="int64")) == "x"
+

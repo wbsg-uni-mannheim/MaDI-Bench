@@ -156,10 +156,10 @@ class TestCacheKey:
         assert before != after
 
     def test_value_change_invalidates(self, tmp_path: Path) -> None:
-        """R10-F: same pairs + perturbed source values => different key.
+        """Same pairs + perturbed source values => different key.
 
-        This is the load-bearing fix — pre-R10-F the same (id1, id2) pair
-        scored against perturbed records across variant levels reused the
+        This is load-bearing: otherwise the same (id1, id2) pair scored
+        against perturbed records across variant levels would reuse the
         first level's cached score (flat ditto_plm curve).
         """
         ck = _checkpoint_dir(tmp_path)

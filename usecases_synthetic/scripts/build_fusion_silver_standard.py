@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the per-domain fusion silver standard (plan_revision.md C9 / step 4b).
+"""Build the per-domain fusion silver standard.
 
 Runs the human-baseline notebook's fusion stack against every cluster
 in the pool, persisting the per-cluster fused value per attribute as

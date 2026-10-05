@@ -12,10 +12,6 @@
       "kwargs": {},
       "resolver": "longest_string"
     },
-    "cluster_id": {
-      "kwargs": {},
-      "resolver": "median"
-    },
     "color": {
       "kwargs": {},
       "resolver": "most_complete"
@@ -31,16 +27,20 @@
       "resolver": "most_complete"
     },
     "height_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "interface_type": {
       "kwargs": {},
       "resolver": "most_complete"
     },
     "length_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "memory_type": {
       "kwargs": {},
@@ -55,8 +55,10 @@
       "resolver": "most_complete"
     },
     "price": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "priceCurrency": {
       "kwargs": {},
@@ -67,46 +69,52 @@
       "resolver": "most_complete"
     },
     "read_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "storage_connection_type": {
       "kwargs": {},
       "resolver": "most_complete"
     },
     "storage_gb": {
-      "kwargs": {},
-      "resolver": "most_complete"
-    },
-    "title": {
-      "kwargs": {},
-      "resolver": "longest_string"
-    },
-    "title_description": {
       "kwargs": {
         "separator": ","
       },
       "resolver": "union"
+    },
+    "title": {
+      "kwargs": {},
+      "resolver": "longest_string"
     },
     "url": {
       "kwargs": {},
       "resolver": "most_complete"
     },
     "vram_gb": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "weight_g": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "width_mm": {
-      "kwargs": {},
-      "resolver": "median"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     },
     "write_speed_mb_s": {
-      "kwargs": {},
-      "resolver": "most_complete"
+      "kwargs": {
+        "separator": ","
+      },
+      "resolver": "union"
     }
   }
 }

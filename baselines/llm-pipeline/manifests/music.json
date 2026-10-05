@@ -1,0 +1,22 @@
+{
+  "case": "music",
+  "data_dir": "DI-Bench/usecases/music/input/data",
+  "schema": "DI-Bench/usecases/music/input/schemamatching/target_schema.json",
+  "entitymatching_dir": "DI-Bench/usecases/music/input/entitymatching",
+  "fusion_dir": "DI-Bench/usecases/music/input/fusion",
+  "pairs": [
+    {
+      "left": "musicbrainz",
+      "right": "discogs"
+    },
+    {
+      "left": "musicbrainz",
+      "right": "lastfm"
+    }
+  ],
+  "notes": [
+    "Pairs are restricted to source combinations with provided ground-truth labels.",
+    "JSON/JSONL source files were converted to CSV where needed for the local automatic pipeline.",
+    "Non-XML fusion validation/test files were converted to XML during import."
+  ]
+}

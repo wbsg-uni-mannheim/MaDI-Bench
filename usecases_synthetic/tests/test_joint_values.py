@@ -1,6 +1,6 @@
-"""Tests for the joint value-perturbation orchestrator (Module 7).
+"""Tests for the joint value-perturbation orchestrator.
 
-Acceptance criteria (from ``plans/module_07_joint_values.md``):
+Acceptance criteria:
 
 1. No ``(entity_id, source, attribute)`` triple appears in more than one
    of K1/K5 provenance outputs.
@@ -510,11 +510,11 @@ class TestApplyValuesJoint:
         ), "K5 should have skipped db_0.annual_income due to K1 collision"
 
 
-# ---- R10-A: cross-level cell-selection nesting -----------------------------
+# ---- Cross-level cell-selection nesting ------------------------------------
 
 
 class TestLevelNesting:
-    """R10-A: K1/K6 cell selection nests across levels (easy in medium in hard).
+    """K1/K6 cell selection nests across levels (easy in medium in hard).
 
     Cell selection is driven by ``lib.rng.cell_selection_uniform``, keyed on
     cell identity but *not* on the difficulty level. With monotone per-level

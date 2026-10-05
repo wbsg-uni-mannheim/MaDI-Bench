@@ -2,8 +2,8 @@
 
 Focused on the ``value_normalize`` hook on ``_canonical_record`` and the
 ``normalize`` flag on ``build_ditto_pair_records_from_gold`` — the
-plumbing that makes the Ditto A/B retrain on normalized games data
-runnable (plan_revision_step4g_findings.md §2).
+plumbing that makes a Ditto A/B retrain on normalized games data
+runnable.
 """
 
 from __future__ import annotations
@@ -271,7 +271,7 @@ class TestBuildDittoPairRecordsNormalize:
 
 
 # ---------------------------------------------------------------------------
-# R10-I: committee-scope (wide) WDC record builder + helpers.
+# Committee-scope (wide) WDC record builder + helpers.
 # ---------------------------------------------------------------------------
 
 
@@ -283,7 +283,9 @@ class TestCommitteeDittoFields:
 
         fields = committee_ditto_fields("products")
         assert fields == DOMAIN_TEXT_COLS["products"]
-        assert "price" in fields and "form_factor" in fields and len(fields) == 19
+        # 18 since the as-extracted sources dropped the derived
+        # title_description column: the committee YAMLs' field list
+        assert "price" in fields and "form_factor" in fields and len(fields) == 18
 
     def test_music_drops_reserved_label(self) -> None:
         from usecases_synthetic.lib.sc_block_train import DOMAIN_TEXT_COLS
@@ -321,10 +323,17 @@ class TestCommitteeColumnMapping:
         assert cm["dbpedia"]["nation"] == "country"
         assert cm["forbes"]["company"] == "name"
 
-    def test_products_is_identity(self) -> None:
+    def test_products_maps_native_columns(self) -> None:
         cm = committee_column_mapping("products")
-        # products sources share the canonical schema → empty per-source map.
-        assert all(m == {} for m in cm.values())
+        # since the source-native schema adoption (the as-extracted
+        # sources keep it) every products source carries its own
+        # vocabulary, mapped onto the canonical schema: 25 columns per source
+        # (everything but id).
+        assert set(cm) == {"products_1", "products_2", "products_3", "products_4"}
+        assert all(len(m) == 25 for m in cm.values())
+        assert cm["products_1"]["video_memory_gb"] == "vram_gb"
+        assert cm["products_3"]["MemorySizeGB"] == "vram_gb"
+        assert cm["products_4"]["rd_mbs"] == "read_speed_mb_s"
 
 
 class TestBuildCommitteeScope:
@@ -453,7 +462,7 @@ class TestFieldsSidecar:
 
 
 class TestTrainInferenceSerializationEquivalence:
-    """The load-bearing R10-I property: a WDC record built for training
+    """The load-bearing property: a WDC record built for training
     serializes byte-identically to what :class:`DittoMatcher` emits at
     inference off the same column-mapped sources. If this drifts, the
     checkpoint trains on a different surface than it scores."""

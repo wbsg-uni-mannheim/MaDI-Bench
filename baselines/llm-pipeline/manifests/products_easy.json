@@ -1,0 +1,32 @@
+{
+  "base_case": "products",
+  "case": "products-augmented-easy",
+  "data_dir": "../../use cases/products/easy/input/data",
+  "entitymatching_dir": "../../use cases/products/easy/input/entitymatching",
+  "entitymatching_tests_strict": true,
+  "fusion_dir": "../../use cases/products/easy/input/fusion",
+  "notes": [
+    "Entity matching test sets: the test_corner_filled files where configured."
+  ],
+  "output_dir": "DI-Bench/runs/augmented/products/easy",
+  "pairs": [
+    {
+      "left": "products_1",
+      "right": "products_2",
+      "test_set": "../../use cases/products/easy/input/entitymatching/products_1_2_products_2_test_corner_filled.csv"
+    },
+    {
+      "left": "products_1",
+      "right": "products_3",
+      "test_set": "../../use cases/products/easy/input/entitymatching/products_1_2_products_3_test_corner_filled.csv"
+    },
+    {
+      "left": "products_1",
+      "right": "products_4",
+      "test_set": "../../use cases/products/easy/input/entitymatching/products_1_2_products_4_test_corner_filled.csv"
+    }
+  ],
+  "schema": "../../use cases/products/easy/input/schemamatching/target_schema.json",
+  "schema_gold": "../../use cases/products/easy/input/schemamatching/sm_mapping.csv",
+  "variant": "easy"
+}

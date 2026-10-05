@@ -9,7 +9,8 @@ Vendored from:
 
 ## Vendored changes
 
-Only import-path rewrites were applied — no logic changes. Upstream uses
+Import paths were rewritten, and one local patch in `magneto/utils/utils.py` skips values whose hash
+priority is zero (upstream divides by it); otherwise there are no logic changes. Upstream uses
 absolute imports (`from magneto.xxx import ...`) that work when the
 package is installed via `pip install -e algorithms/magneto/`. Those are
 rewritten to relative form (`from .xxx import ...`) so the package

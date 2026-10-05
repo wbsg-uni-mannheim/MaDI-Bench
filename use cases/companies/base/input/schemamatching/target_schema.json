@@ -18,12 +18,12 @@
     "name": {
       "type": "string",
       "title": "Company Name",
-      "description": "Official name of the company including company suffixes such as Ltd, Inc, Corp, LLC, SE, GmbH, AG, SARL, or SAS.",
+      "description": "Name of the company without legal-form suffixes such as Ltd, Inc, Corp, LLC, SE, GmbH, AG, SARL, or SAS.",
       "minLength": 1,
       "maxLength": 200,
       "examples": [
-        "SAP SE",
-        "Acme Corp"
+        "SAP",
+        "Acme"
       ]
     },
     "founded": {
@@ -112,7 +112,7 @@
     "keypeople": {
       "type": "array",
       "title": "Key People",
-      "description": "List of key people associated with the company, such as founders, executives, and board members. For fusion evaluation this value uses 2016 as the task-level temporal target (gold curated on 2026-04-26) and should not be replaced by a current company profile.",
+      "description": "The people, or predecessor companies, that founded the company. Not current executives or board members. For fusion evaluation this value uses 2016 as the task-level temporal target (gold curated on 2026-04-26) and should not be replaced by a current company profile.",
       "minItems": 1,
       "maxItems": 20,
       "items": {

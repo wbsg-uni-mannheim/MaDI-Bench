@@ -1,13 +1,13 @@
 {
   "case": "products",
-  "manifest": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/products.json",
+  "manifest": "DI-Bench/manifests/products.json",
   "pipeline_output_dir": "DI-Bench/runs/products",
-  "timing_dir": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products",
+  "timing_dir": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products",
   "command": [
-    "/opt/homebrew/Caskroom/miniconda/base/bin/python3",
+    "python3",
     "scripts/run_pipeline.py",
     "--manifest",
-    "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/manifests/products.json",
+    "DI-Bench/manifests/products.json",
     "--training-set-construction",
     "active",
     "--fusion-case",
@@ -32,10 +32,10 @@
   "wall_hms": "16m 35s",
   "pipeline_metric_total_seconds": 981.57,
   "pipeline_metric_total_hms": "16m 22s",
-  "metrics_csv": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline_metrics.csv",
-  "metrics_json": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline_metrics.json",
-  "pipeline_log": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline.log",
-  "console_log": "/Users/aaronsteiner/Documents/GitHub/unsupervised-data-integration/DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/console.log",
+  "metrics_csv": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline_metrics.csv",
+  "metrics_json": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline_metrics.json",
+  "pipeline_log": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/pipeline.log",
+  "console_log": "DI-Bench/runs/timing/base_cached_cacheonly_20260609/products/console.log",
   "steps": [
     {
       "step": "Step 2: Validation & Training",
